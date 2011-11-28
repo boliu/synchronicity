@@ -68,6 +68,7 @@ Access:
  * QTSound: added support for all QTKit-compatible audio input devices
  * X11 Screen: support for capturing partially hidden windows
  * MPEG DASH (Dynamic Adaptive Streaming over HTTP) support
+ * Support for HTTPS is now fixed for the Windows port
 
 Codecs:
  * You can now use ffmpeg-mt in conjunction with vlc
@@ -123,6 +124,7 @@ Interfaces:
  * webUI/http: path values for input and output are deprecated in favour of uri
  * Qt/Win32: the update system now downloads the updates in the temp folder
  * Qt: preferences are now searchable
+ * Qt: the fullscreen controller is now stackable, full-width, at the bottom
 
 Video Output:
  * New video output based on Direct2D for Windows 7 and Vista (with Platform Update)
