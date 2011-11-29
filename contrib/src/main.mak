@@ -108,6 +108,7 @@ endif
 
 ifdef HAVE_MACOSX
 MACOSX_SDK=/Developer/SDKs/MacOSX$(OSX_VERSION).sdk
+PATH :=$(abspath ../../extras/tools/build/bin):$(abspath ../$(BUILD)/bin):$(PATH)
 CC=gcc-4.2
 CXX=g++-4.2
 AR=ar
