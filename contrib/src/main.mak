@@ -266,6 +266,9 @@ CMAKE = cmake . -DCMAKE_TOOLCHAIN_FILE=$(abspath toolchain.cmake) \
 PKGS_FOUND :=
 include $(SRC)/*/rules.mak
 
+ifeq ($(PKGS_DISABLE), all)
+PKGS :=
+endif
 #
 # Targets
 #
