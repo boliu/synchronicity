@@ -167,7 +167,7 @@ case "${host_os}" in
     AC_ARG_WITH(macosx-sdk,
       [AS_HELP_STRING([--with-macosx-sdk=DIR],
         [compile using the SDK in DIR])])
-    test "${with_macosx_sdk}" = "" && with_macosx_sdk=/Developer/SDKs/MacOSX10.5.sdk
+    test "${with_macosx_sdk}" = "" && with_macosx_sdk=/Developer/SDKs/MacOSX10.6.sdk
     ! test -d "${with_macosx_sdk}" && AC_MSG_ERROR([SDK "${with_macosx_sdk}" not found])
     CPP="${CPP} -isysroot ${with_macosx_sdk}"
     CC="${CC} -isysroot ${with_macosx_sdk}"
