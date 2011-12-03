@@ -428,6 +428,12 @@ int Open_LuaHTTP( vlc_object_t *p_this )
 
 int Open_LuaCLI( vlc_object_t *p_this )
 {
+    /* Hack to work around submodule brokenness */
+    intf_thread_t *p_intf = (intf_thread_t*)p_this;
+    if( !strcmp( p_intf->psz_intf, "lua" )
+        || !strncmp( p_intf->psz_intf, "lua,", 4 ) )
+        return VLC_EGENERIC;
+
     return Start_LuaIntf( p_this, "cli" );
 }
 
