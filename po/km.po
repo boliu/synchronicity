@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vlc\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2011-11-24 23:30+0000\n"
+"POT-Creation-Date: 2011-12-10 00:07+0000\n"
 "PO-Revision-Date: 2010-04-07 09:04+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -32,7 +32,7 @@ msgstr ""
 "ចំពោះ​ព័ត៌មាន​លម្អិត ​សូម​មើល​ឯកសារ​​ឈ្មោះ COPYING ។\n"
 "បង្កើត​ដោយ​ក្រុម VideoLAN  ។ សូម​មើល​ឯកសារ​អ្នក​និពន្ធ ។\n"
 
-#: include/vlc_config_cat.h:32 modules/audio_output/alsa.c:822
+#: include/vlc_config_cat.h:32 modules/audio_output/alsa.c:826
 msgid "VLC preferences"
 msgstr "ចំណូលចិត្ត VLC"
 
@@ -40,9 +40,9 @@ msgstr "ចំណូលចិត្ត VLC"
 msgid "Select \"Advanced Options\" to see all options."
 msgstr "ជ្រើស \"ជម្រើស​កម្រិត​ខ្ពស់\" ដើម្បី​មើល​ជម្រើស​ទាំងអស់ ។"
 
-#: include/vlc_config_cat.h:37 modules/gui/macosx/simple_prefs.m:175
+#: include/vlc_config_cat.h:37 modules/gui/macosx/simple_prefs.m:173
 #: modules/gui/qt4/components/simple_preferences.cpp:86
-#: modules/gui/qt4/menus.cpp:1040
+#: modules/gui/qt4/menus.cpp:1055
 msgid "Interface"
 msgstr "ចំណុច​ប្រទាក់"
 
@@ -71,14 +71,14 @@ msgid "Settings for VLC's control interfaces"
 msgstr "ការ​កំណត់​សម្រាប់​ចំណុច​ប្រទាក់​គ្រប់គ្រង VLC"
 
 #: include/vlc_config_cat.h:48 include/vlc_config_cat.h:49
-#: modules/gui/macosx/simple_prefs.m:195
+#: modules/gui/macosx/simple_prefs.m:193
 msgid "Hotkeys settings"
 msgstr "ការ​កំណត់​គ្រាប់ចុច​រហ័ស"
 
 #: include/vlc_config_cat.h:52 src/input/es_out.c:2893 src/input/es_out.c:2934
 #: src/libvlc-module.c:1580 modules/access/imem.c:64
 #: modules/gui/macosx/MainMenu.m:282 modules/gui/macosx/output.m:170
-#: modules/gui/macosx/playlistinfo.m:116 modules/gui/macosx/simple_prefs.m:179
+#: modules/gui/macosx/playlistinfo.m:116 modules/gui/macosx/simple_prefs.m:177
 #: modules/gui/macosx/wizard.m:382
 #: modules/gui/qt4/components/info_panels.cpp:516
 #: modules/gui/qt4/components/simple_preferences.cpp:88
@@ -135,14 +135,14 @@ msgstr "ម៉ូឌុល និង​ការ​កំណត់​អូឌ�
 #: include/vlc_config_cat.h:70 src/input/es_out.c:2896 src/input/es_out.c:2981
 #: src/libvlc-module.c:1631 modules/access/imem.c:64
 #: modules/gui/macosx/MainMenu.m:295 modules/gui/macosx/output.m:160
-#: modules/gui/macosx/playlistinfo.m:106 modules/gui/macosx/simple_prefs.m:183
+#: modules/gui/macosx/playlistinfo.m:106 modules/gui/macosx/simple_prefs.m:181
 #: modules/gui/macosx/wizard.m:383
 #: modules/gui/qt4/components/info_panels.cpp:517
 #: modules/gui/qt4/components/simple_preferences.cpp:90
 #: modules/services_discovery/mediadirs.c:70 modules/stream_out/es.c:101
 #: modules/stream_out/transcode/transcode.c:161
 #: share/lua/http/dialogs/create_stream.html:147
-#: modules/gui/qt4/ui/profiles.h:476 modules/gui/qt4/ui/sprefs_video.h:317
+#: modules/gui/qt4/ui/profiles.h:476 modules/gui/qt4/ui/sprefs_video.h:356
 msgid "Video"
 msgstr "វីដេអូ"
 
@@ -351,7 +351,7 @@ msgstr "ការ​ប្រតិបត្តិ​របស់ VLC របស�
 #: modules/gui/qt4/components/controller.hpp:112
 #: modules/gui/qt4/components/playlist/playlist.cpp:198
 #: modules/gui/qt4/components/playlist/selector.cpp:188
-#: modules/gui/qt4/dialogs/playlist.cpp:41 modules/gui/qt4/menus.cpp:1069
+#: modules/gui/qt4/dialogs/playlist.cpp:41 modules/gui/qt4/menus.cpp:1084
 #: modules/gui/qt4/ui/sprefs_interface.h:529
 msgid "Playlist"
 msgstr "បញ្ជី​ចាក់"
@@ -402,7 +402,7 @@ msgid "Advanced settings"
 msgstr "ការ​កំណត់​កម្រិត​ខ្ពស់"
 
 #: include/vlc_config_cat.h:198 modules/gui/macosx/open.m:122
-#: modules/gui/macosx/open.m:476 modules/gui/macosx/simple_prefs.m:255
+#: modules/gui/macosx/open.m:476 modules/gui/macosx/simple_prefs.m:253
 #: modules/gui/qt4/ui/sprefs_input.h:356
 msgid "Network"
 msgstr "បណ្ដាញ"
@@ -459,7 +459,7 @@ msgstr "គ្មាន​ជំនួយ"
 msgid "There is no help available for these modules."
 msgstr "មិនមាន​ជំនួយ​សម្រាប់​ម៉ូឌុល​នេះ​ទេ ។"
 
-#: include/vlc_interface.h:126
+#: include/vlc_interface.h:124
 #, fuzzy
 msgid ""
 "\n"
@@ -532,7 +532,7 @@ msgstr "អំពី"
 #: modules/gui/macosx/MainMenu.m:808 modules/gui/macosx/MainMenu.m:809
 #: modules/gui/macosx/MainWindow.m:823 modules/gui/macosx/playlist.m:466
 #: modules/gui/qt4/components/controller.hpp:110
-#: modules/gui/qt4/dialogs/vlm.cpp:550 modules/gui/qt4/menus.cpp:783
+#: modules/gui/qt4/dialogs/vlm.cpp:550 modules/gui/qt4/menus.cpp:786
 #: modules/gui/qt4/ui/open.h:253 share/lua/http/index.html:203
 #: share/lua/http/mobile.html:97 share/lua/http/dialogs/stream_window.html:59
 msgid "Play"
@@ -832,7 +832,7 @@ msgstr "ស្តេរ៉េអូ"
 
 #: src/audio_output/output.c:105 src/audio_output/output.c:142
 #: src/libvlc-module.c:415 src/libvlc-module.c:493
-#: modules/audio_filter/channel_mixer/mono.c:95 modules/codec/dvbsub.c:102
+#: modules/audio_filter/channel_mixer/mono.c:94 modules/codec/dvbsub.c:102
 #: modules/codec/subsdec.c:160 modules/codec/zvbi.c:77
 #: modules/control/gestures.c:97 modules/gui/fbosd.c:163
 #: modules/gui/macosx/VideoEffects.m:88 modules/gui/macosx/VideoEffects.m:150
@@ -848,7 +848,7 @@ msgstr "ឆ្វេង"
 
 #: src/audio_output/output.c:107 src/audio_output/output.c:144
 #: src/libvlc-module.c:415 src/libvlc-module.c:493
-#: modules/audio_filter/channel_mixer/mono.c:95 modules/codec/dvbsub.c:102
+#: modules/audio_filter/channel_mixer/mono.c:94 modules/codec/dvbsub.c:102
 #: modules/codec/subsdec.c:160 modules/codec/zvbi.c:77
 #: modules/control/gestures.c:97 modules/gui/fbosd.c:163
 #: modules/gui/macosx/VideoEffects.m:89 modules/gui/macosx/VideoEffects.m:152
@@ -1060,7 +1060,7 @@ msgstr ""
 
 #: src/input/es_out.c:954 src/input/es_out.c:959 src/libvlc-module.c:359
 #: modules/access/vcdx/access.c:458 modules/access/vcdx/info.c:226
-#: modules/gui/qt4/components/open_panels.cpp:478
+#: modules/gui/qt4/components/open_panels.cpp:480
 msgid "Track"
 msgstr "បទ"
 
@@ -1113,7 +1113,7 @@ msgid "Codec"
 msgstr "កូដិក"
 
 #: src/input/es_out.c:2925 src/input/meta.c:65 src/libvlc-module.c:219
-#: modules/access/imem.c:71 modules/gui/macosx/simple_prefs.m:268
+#: modules/access/imem.c:71 modules/gui/macosx/simple_prefs.m:266
 #: modules/stream_out/setid.c:49 modules/gui/qt4/ui/sprefs_interface.h:527
 msgid "Language"
 msgstr "ភាសា"
@@ -1144,7 +1144,7 @@ msgstr "ប៊ីត ក្នុង​មួយ​គំរូ"
 
 #: src/input/es_out.c:2960 modules/access_output/shout.c:92
 #: modules/access/pvr.c:90 modules/demux/playlist/shoutcast.c:334
-#: modules/gui/qt4/components/open_panels.cpp:882
+#: modules/gui/qt4/components/open_panels.cpp:884
 #: modules/gui/qt4/ui/profiles.h:478 modules/gui/qt4/ui/profiles.h:497
 msgid "Bitrate"
 msgstr "អត្រា​​ប៊ីត"
@@ -1209,8 +1209,8 @@ msgstr "មិនអាច​លុប​ទ្រង់ទ្រាយ '%s' ប
 #: modules/gui/macosx/MainMenu.m:278 modules/gui/macosx/open.m:157
 #: modules/gui/macosx/open.m:159 modules/gui/macosx/playlistinfo.m:78
 #: modules/gui/macosx/wizard.m:350
-#: modules/gui/qt4/components/open_panels.cpp:439
-#: modules/gui/qt4/components/open_panels.cpp:452 modules/mux/asf.c:56
+#: modules/gui/qt4/components/open_panels.cpp:441
+#: modules/gui/qt4/components/open_panels.cpp:454 modules/mux/asf.c:56
 #: modules/gui/qt4/ui/open_disk.h:309
 msgid "Title"
 msgstr "ចំណងជើង"
@@ -1460,8 +1460,8 @@ msgstr "ជ្រើស​វត្ថុ​ណាមួយ​ដែលគួរ
 #: src/libvlc-module.c:204
 #, fuzzy
 msgid ""
-"This is a ',' separated string, each objects should be prefixed by a '+' or "
-"a '-' to respectively enable or disable it. The keyword 'all' refers to all "
+"This is a ',' separated string, each object should be prefixed by a '+' or a "
+"'-' to respectively enable or disable it. The keyword 'all' refers to all "
 "objects. Objects can be referred to by their type or module name. Rules "
 "applying to named objects take precedence over rules applying to object "
 "types. Note that you still need to use -vvv to actually display debug "
@@ -1645,7 +1645,7 @@ msgstr ""
 "វា​កំណត់​របៀប​ឆានែល​លទ្ធផល​អូឌីយ៉ូ ដែល​នឹង​ត្រូវបាន​ប្រើ​ជា​លំនាំដើម នៅពេល​ដែល​អាច (មានន័យ​ថា ប្រសិន​បើ​ផ្នែក​"
 "រឹង​របស់​អ្នក​គាំទ្រ​វា នោះ​ស្ទ្រីម​អូឌីយ៉ូ​ក៏​ត្រូវបាន​ចាក់​ផងដែរ) ។"
 
-#: src/libvlc-module.c:304 modules/gui/macosx/simple_prefs.m:230
+#: src/libvlc-module.c:304 modules/gui/macosx/simple_prefs.m:228
 #: modules/gui/qt4/ui/sprefs_audio.h:439
 msgid "Use S/PDIF when available"
 msgstr "ប្រើ S/PDIF នៅពេល​ដែល​មាន"
@@ -1658,7 +1658,7 @@ msgstr ""
 "S/PDIF អាច​ប្រើ​តាម​លំនាំដើម នៅពេល​ដែល​ផ្នែក​រឹង​របស់​អ្នក​គាំទ្រ​វា ព្រមទាំង​ស្ទ្រីម​អូឌីយ៉ូដែល​បាន​ចាក់​"
 "ផងដែរ ។"
 
-#: src/libvlc-module.c:309 modules/gui/macosx/simple_prefs.m:222
+#: src/libvlc-module.c:309 modules/gui/macosx/simple_prefs.m:220
 msgid "Force detection of Dolby Surround"
 msgstr "តម្រូវ​ឲ្យ​ប្រើ​ការ​រកឃើញ Dolby Surround"
 
@@ -1751,7 +1751,7 @@ msgstr "វា​អនុញ្ញាត​ឲ្យ​បង្ហាញ​អ
 #: modules/codec/avcodec/avcodec.c:71 modules/codec/kate.c:202
 #: modules/gui/macosx/open.m:214
 #: modules/gui/qt4/components/interface_widgets.cpp:299
-#: modules/text_renderer/freetype.c:160
+#: modules/text_renderer/freetype.c:175
 msgid "None"
 msgstr "គ្មាន"
 
@@ -1779,7 +1779,7 @@ msgstr ""
 "នេះ​ជា​វិធីសាស្ដ្រ​បង្ហាញ​វីដេអូ​ដោយ VLC ។ ឥរិយាបទ​លំនាំដើម​គឺ​ត្រូវ​ជ្រើស​វិធីសាស្ដ្រ​ល្អ​បំផុត​ដែល​មាន ។"
 
 #: src/libvlc-module.c:378 modules/stream_out/display.c:42
-#: modules/gui/qt4/ui/sprefs_video.h:306
+#: modules/gui/qt4/ui/sprefs_video.h:342
 msgid "Enable video"
 msgstr "បើក​វីដេអូ"
 
@@ -1864,7 +1864,7 @@ msgstr ""
 "ដូចជា ៦=៤+២ គឺ​មាន​ន័យ​ថា​កំពូល​ខាង​ស្ដាំ) ។"
 
 #: src/libvlc-module.c:415 src/libvlc-module.c:493
-#: modules/audio_filter/channel_mixer/mono.c:95 modules/codec/dvbsub.c:102
+#: modules/audio_filter/channel_mixer/mono.c:96 modules/codec/dvbsub.c:102
 #: modules/codec/subsdec.c:160 modules/codec/zvbi.c:77 modules/gui/fbosd.c:163
 #: modules/gui/macosx/VideoEffects.m:148
 #: modules/video_filter/audiobargraph_v.c:73 modules/video_filter/logo.c:79
@@ -1981,7 +1981,7 @@ msgstr ""
 "ផ្ទាល់) ។ VLC នឹង​ប្រើ​វា​ជា​លំនាំដើម ។"
 
 #: src/libvlc-module.c:440 src/video_output/vout_intf.c:292
-#: modules/gui/macosx/simple_prefs.m:297 modules/gui/qt4/ui/sprefs_video.h:309
+#: modules/gui/macosx/simple_prefs.m:295 modules/gui/qt4/ui/sprefs_video.h:345
 msgid "Always on top"
 msgstr "នៅលើ​គេ​ជានិច្ច"
 
@@ -2097,7 +2097,7 @@ msgid ""
 msgstr ""
 "រារាំង​ដេមិន​គ្រប់គ្រង​ថាមពល​នៅពេល​ចាក់ឡើងវិញ ដើម្បី​ជៀសវាង​ការ​ផ្អាក ដោយសារ​តែ​ភាព​មិន​សកម្ម ។"
 
-#: src/libvlc-module.c:503 modules/gui/qt4/ui/sprefs_video.h:311
+#: src/libvlc-module.c:503 modules/gui/qt4/ui/sprefs_video.h:347
 msgid "Window decorations"
 msgstr "ការ​តុបតែង​បង្អួច"
 
@@ -2288,7 +2288,7 @@ msgstr ""
 "វា​តម្រូវ​ឲ្យ​ប្រើ​សមាមាត្រ​ទិដ្ឋភាព​ម៉ូនីទ័រ ។ ម៉ូនីទ័រ​ភាគច្រើន​មាន​ភីកសែល​ការ៉េ (1:1) ។ ប្រសិន​បើ​អ្នក​មាន​"
 "អេក្រង់ 16:9 អ្នក​អាច​ត្រូវការ​ផ្លាស់ប្ដូរ​វា​ទៅកាន់ 4:3 ដើម្បី​រក្សា​នូវ​សមាមាត្រ ។"
 
-#: src/libvlc-module.c:597 modules/gui/macosx/simple_prefs.m:299
+#: src/libvlc-module.c:597 modules/gui/macosx/simple_prefs.m:297
 msgid "Skip frames"
 msgstr "រំលង​ស៊ុម"
 
@@ -2436,10 +2436,10 @@ msgstr ""
 #: src/video_output/vout_intf.c:112 modules/access/dshow/dshow.cpp:88
 #: modules/access/dshow/dshow.cpp:91 modules/access/dshow/dshow.cpp:95
 #: modules/access/dshow/dshow.cpp:102 modules/access/dshow/dshow.cpp:122
-#: modules/audio_output/alsa.c:71 modules/audio_output/alsa.c:815
+#: modules/audio_output/alsa.c:71 modules/audio_output/alsa.c:819
 #: modules/gui/fbosd.c:172 modules/gui/macosx/prefs_widgets.m:1325
-#: modules/gui/macosx/simple_prefs.m:416 modules/gui/macosx/simple_prefs.m:539
-#: modules/gui/macosx/simple_prefs.m:767 modules/gui/macosx/VideoView.m:105
+#: modules/gui/macosx/simple_prefs.m:414 modules/gui/macosx/simple_prefs.m:535
+#: modules/gui/macosx/simple_prefs.m:763 modules/gui/macosx/VideoView.m:105
 #: modules/gui/qt4/components/preferences_widgets.cpp:626
 #: modules/video_filter/marq.c:59 modules/video_filter/rss.c:71
 #: modules/video_filter/rss.c:184 modules/video_output/msw/directx.c:88
@@ -2690,12 +2690,12 @@ msgstr ""
 "អ្នក​អាច​ផ្ដល់​បញ្ជី​ចំណាំ​ដោយ​ដៃ​សម្រាប់​ស្ទ្រីម​នៅ​ក្នុង​ទម្រង់ \"{name=bookmark-name,time=optional-"
 "time-offset,bytes=optional-byte-offset},{...}\""
 
-#: src/libvlc-module.c:790 modules/gui/macosx/simple_prefs.m:245
+#: src/libvlc-module.c:790 modules/gui/macosx/simple_prefs.m:243
 #: modules/gui/qt4/ui/sprefs_input.h:352
 msgid "Record directory or filename"
 msgstr "ថត ឬ​ឈ្មោះ​ឯកសារ​នៃ​ការថត"
 
-#: src/libvlc-module.c:792 modules/gui/macosx/simple_prefs.m:247
+#: src/libvlc-module.c:792 modules/gui/macosx/simple_prefs.m:245
 msgid "Directory or filename where the records will be stored"
 msgstr "ថត ឬ​ឈ្មោះ​ឯកសារ​ដែល​ថត​នឹង​ត្រូវ​បាន​តម្រៀប ។"
 
@@ -2776,7 +2776,7 @@ msgid "You can completely disable the sub-picture processing."
 msgstr "អ្នក​អាច​បិទ​ដំណើរការ​រូបភាព​រង​ទាំងស្រុង ។"
 
 #: src/libvlc-module.c:831 src/libvlc-module.c:1761 src/text/iso-639_def.h:145
-#: modules/gui/macosx/simple_prefs.m:285
+#: modules/gui/macosx/simple_prefs.m:283
 #: modules/stream_out/transcode/transcode.c:219
 #: modules/gui/qt4/ui/sprefs_subtitles.h:271
 msgid "On Screen Display"
@@ -3700,9 +3700,9 @@ msgstr "ការ​កំណត់​ទាំងនេះ​គឺ​ជា​
 #: src/libvlc-module.c:1321 src/video_output/vout_intf.c:303
 #: modules/gui/macosx/MainMenu.m:300 modules/gui/macosx/MainMenu.m:367
 #: modules/gui/macosx/MainMenu.m:1217 modules/gui/macosx/MainMenu.m:1237
-#: modules/gui/macosx/simple_prefs.m:296
+#: modules/gui/macosx/simple_prefs.m:294
 #: modules/gui/qt4/components/controller.hpp:111
-#: modules/gui/qt4/ui/sprefs_video.h:308
+#: modules/gui/qt4/ui/sprefs_video.h:344
 msgid "Fullscreen"
 msgstr "ពេញ​អេក្រង់"
 
@@ -3770,11 +3770,11 @@ msgstr "អត្រា​ធម្មតា"
 msgid "Select the hotkey to set the playback rate back to normal."
 msgstr "ជ្រើស​គ្រាប់ចុច​រហ័ស ដើម្បី​កំណត់​អត្រាចាក់​ទៅ​ធម្មតា​វិញ ។"
 
-#: src/libvlc-module.c:1337 modules/gui/qt4/menus.cpp:812
+#: src/libvlc-module.c:1337 modules/gui/qt4/menus.cpp:817
 msgid "Faster (fine)"
 msgstr "លឿន​ជាង (ល្អ)"
 
-#: src/libvlc-module.c:1339 modules/gui/qt4/menus.cpp:820
+#: src/libvlc-module.c:1339 modules/gui/qt4/menus.cpp:825
 msgid "Slower (fine)"
 msgstr "យឺត​ជាង (ល្អ)"
 
@@ -3812,7 +3812,7 @@ msgstr "ជ្រើស​គ្រប់ចុច​រហ័ស​ដើម្
 #: modules/gui/macosx/MainMenu.m:354 modules/gui/macosx/MainMenu.m:361
 #: modules/gui/macosx/MainMenu.m:1153 modules/gui/macosx/MainWindow.m:116
 #: modules/gui/qt4/components/controller.hpp:110
-#: modules/gui/qt4/dialogs/vlm.cpp:556 modules/notify/xosd.c:230
+#: modules/gui/qt4/dialogs/vlm.cpp:556 modules/notify/xosd.c:234
 #: modules/gui/qt4/ui/streampanel.h:181 share/lua/http/index.html:206
 #: share/lua/http/mobile.html:99 share/lua/http/dialogs/stream_window.html:58
 msgid "Stop"
@@ -3941,7 +3941,7 @@ msgstr "ប្រវែង​លោត​វែង គិត​ជា​វិ�
 
 #: src/libvlc-module.c:1388 modules/control/hotkeys.c:183
 #: modules/gui/qt4/components/controller.hpp:114
-#: modules/gui/qt4/components/controller.hpp:126 modules/gui/qt4/menus.cpp:899
+#: modules/gui/qt4/components/controller.hpp:126 modules/gui/qt4/menus.cpp:914
 #: modules/gui/skins2/commands/cmd_quit.cpp:44
 msgid "Quit"
 msgstr "ចេញ"
@@ -4049,7 +4049,7 @@ msgstr "ជ្រើស​គ្រាប់ចុច ដើម្បី​ប�
 #: src/libvlc-module.c:1414 modules/access/v4l2/video.c:189
 #: modules/gui/macosx/MainMenu.m:285 modules/gui/macosx/MainMenu.m:357
 #: modules/gui/macosx/MainMenu.m:366 modules/gui/macosx/MainMenu.m:1207
-#: modules/gui/macosx/MainWindow.m:124 modules/gui/qt4/menus.cpp:575
+#: modules/gui/macosx/MainWindow.m:124 modules/gui/qt4/menus.cpp:578
 msgid "Mute"
 msgstr "ស្ងាត់"
 
@@ -4660,10 +4660,10 @@ msgstr "កំពុង​ទាញយក..."
 #: modules/gui/macosx/coredialogs.m:62 modules/gui/macosx/coredialogs.m:64
 #: modules/gui/macosx/coredialogs.m:181 modules/gui/macosx/open.m:118
 #: modules/gui/macosx/open.m:172 modules/gui/macosx/prefs.m:206
-#: modules/gui/macosx/prefs.m:226 modules/gui/macosx/simple_prefs.m:237
-#: modules/gui/macosx/simple_prefs.m:309 modules/gui/macosx/simple_prefs.m:696
+#: modules/gui/macosx/prefs.m:226 modules/gui/macosx/simple_prefs.m:235
+#: modules/gui/macosx/simple_prefs.m:307 modules/gui/macosx/simple_prefs.m:692
 #: modules/gui/macosx/wizard.m:322
-#: modules/gui/qt4/components/open_panels.cpp:1279
+#: modules/gui/qt4/components/open_panels.cpp:1281
 #: modules/gui/qt4/components/preferences_widgets.cpp:1515
 #: modules/gui/qt4/components/sout/profile_selector.cpp:253
 #: share/lua/http/dialogs/create_stream.html:83
@@ -5832,7 +5832,7 @@ msgid "DSS"
 msgstr "DSS"
 
 #: modules/access/dshow/dshow.cpp:133
-#: modules/gui/qt4/components/open_panels.cpp:754
+#: modules/gui/qt4/components/open_panels.cpp:756
 msgid "Video device name"
 msgstr "ឈ្មោះ​ឧបករណ៍​វីដេអូ"
 
@@ -5845,7 +5845,7 @@ msgstr ""
 "ឧបករណ៍​លំនាំដើម​នឹង​ត្រូវបាន​ប្រើ ។"
 
 #: modules/access/dshow/dshow.cpp:138
-#: modules/gui/qt4/components/open_panels.cpp:763
+#: modules/gui/qt4/components/open_panels.cpp:765
 msgid "Audio device name"
 msgstr "ឈ្មោះ​ឧបករណ៍​អូឌីយ៉ូ"
 
@@ -5858,7 +5858,7 @@ msgstr ""
 "ឧបករណ៍​លំនាំដើម​នឹង​ត្រូវបាន​ប្រើ ។ "
 
 #: modules/access/dshow/dshow.cpp:143
-#: modules/gui/qt4/components/open_panels.cpp:728
+#: modules/gui/qt4/components/open_panels.cpp:730
 msgid "Video size"
 msgstr "ទំហំ​វីដេអូ"
 
@@ -6133,7 +6133,7 @@ msgid ""
 msgstr ""
 
 #: modules/access/dtv/access.c:57
-#: modules/gui/qt4/components/open_panels.cpp:961
+#: modules/gui/qt4/components/open_panels.cpp:963
 #, fuzzy
 msgid "Modulation / Constellation"
 msgstr "ប្រភេទ​ម៉ូឌុល"
@@ -6185,7 +6185,7 @@ msgstr ""
 #: modules/access/dtv/access.c:111 modules/access/dtv/access.c:119
 #: modules/access/dtv/access.c:128 modules/access/dtv/access.c:136
 #: modules/access/dtv/access.c:154 modules/access/pvr.c:113
-#: modules/gui/qt4/components/open_panels.cpp:965
+#: modules/gui/qt4/components/open_panels.cpp:967
 msgid "Automatic"
 msgstr "ស្វ័យប្រវត្តិ"
 
@@ -6719,7 +6719,7 @@ msgstr "ព័ត៌មាន​បញ្ចូល​វីដេអូ"
 msgid "File"
 msgstr "ឯកសារ"
 
-#: modules/access/fs.c:62 modules/gui/qt4/ui/sprefs_video.h:323
+#: modules/access/fs.c:62 modules/gui/qt4/ui/sprefs_video.h:362
 #, fuzzy
 msgid "Directory"
 msgstr "ឯកសារ/ថត"
@@ -6975,7 +6975,7 @@ msgstr "ធ្វើការ​ស្ទ្រីម​នូវ​ស្ទ្
 #: modules/access/imem.c:83 modules/access/pvr.c:68
 #: modules/access/v4l2/video.c:75 modules/demux/rawvid.c:48
 #: modules/gui/macosx/AudioEffects.m:91
-#: modules/gui/qt4/components/extended_panels.cpp:1338
+#: modules/gui/qt4/components/extended_panels.cpp:1339
 #: modules/video_filter/mosaic.c:94 modules/video_output/vmem.c:42
 #: modules/gui/qt4/ui/profiles.h:486
 msgid "Width"
@@ -7051,7 +7051,7 @@ msgid "Address of the release callback function"
 msgstr "អាសយដ្ឋាន​នៃ​ការ​ដោះ​សោ​មុខងារ​ហៅ​ទៅវិញ"
 
 #: modules/access/imem.c:113 modules/gui/macosx/AudioEffects.m:90
-#: modules/gui/qt4/components/extended_panels.cpp:1337
+#: modules/gui/qt4/components/extended_panels.cpp:1338
 #, fuzzy
 msgid "Size"
 msgstr "ទំហំ"
@@ -7259,23 +7259,23 @@ msgid "File stream output"
 msgstr "លទ្ធផល​ស្ទ្រីម​ឯកសារ"
 
 #: modules/access_output/http.c:62 modules/misc/audioscrobbler.c:115
-#: modules/stream_out/rtp.c:178
+#: modules/stream_out/rtp.c:180
 msgid "Username"
 msgstr "ឈ្មោះ​អ្នក​ប្រើ"
 
-#: modules/access_output/http.c:63 modules/stream_out/rtp.c:179
+#: modules/access_output/http.c:63 modules/stream_out/rtp.c:181
 msgid "User name that will be requested to access the stream."
 msgstr "ឈ្មោះ​អ្នកប្រើ​ដែល​នឹង​ត្រូវបាន​ស្នើ​ឲ្យ​ចូល​ដំណើរការ​ស្ទ្រីម ។"
 
 #: modules/access_output/http.c:65 modules/gui/macosx/coredialogs.m:61
-#: modules/gui/macosx/simple_prefs.m:228
+#: modules/gui/macosx/simple_prefs.m:226
 #: modules/gui/qt4/dialogs/external.cpp:125 modules/lua/vlc.c:75
 #: modules/misc/audioscrobbler.c:117 modules/stream_out/raop.c:154
-#: modules/stream_out/rtp.c:181
+#: modules/stream_out/rtp.c:183
 msgid "Password"
 msgstr "ពាក្យ​សម្ងាត់"
 
-#: modules/access_output/http.c:66 modules/stream_out/rtp.c:182
+#: modules/access_output/http.c:66 modules/stream_out/rtp.c:184
 msgid "Password that will be requested to access the stream."
 msgstr "ពាក្យ​សម្ងាត់​ដែល​នឹង​ត្រូវបាន​ស្នើ​ឲ្យ​ចូល​ដំណើរការ​ស្ទ្រីម ។"
 
@@ -7536,7 +7536,7 @@ msgstr "ឧបករណ៍​វិទ្យុ"
 msgid "PVR radio device"
 msgstr "ឧបករណ៍​វិទ្យុ PVR"
 
-#: modules/access/pvr.c:64 modules/gui/qt4/components/open_panels.cpp:866
+#: modules/access/pvr.c:64 modules/gui/qt4/components/open_panels.cpp:868
 msgid "Norm"
 msgstr "បទដ្ឋាន"
 
@@ -7553,7 +7553,7 @@ msgid "Height of the stream to capture (-1 for autodetection)."
 msgstr "កម្ពស់​របស់​ស្ទ្រីម​ដែល​ត្រូវ​ចាប់យក (-1 សម្រាប់​ការ​រកឃើញ​ស្វ័យប្រវត្តិ) ។"
 
 #: modules/access/pvr.c:76 modules/access/v4l2/video.c:207
-#: modules/gui/qt4/components/open_panels.cpp:873
+#: modules/gui/qt4/components/open_panels.cpp:875
 msgid "Frequency"
 msgstr "ប្រេកង់"
 
@@ -7745,42 +7745,46 @@ msgid "SRTP key (hexadecimal)"
 msgstr "សោ SRTP (គោល​ដប់​ប្រាំមួយ)"
 
 #: modules/access/rtp/rtp.c:51
+#, fuzzy
 msgid ""
 "RTP packets will be authenticated and deciphered with this Secure RTP master "
-"shared secret key."
+"shared secret key. This must be a 32-character-long hexadecimal string."
 msgstr ""
 "កញ្ចប់ RTP នឹង​ត្រូវបាន​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ និង​​បកស្រាយ​សម្ងាត់​ជាមួយ​នឹង​សោ​សម្ងាត់​ដែល​ចែក​រំលែក​របស់ "
 "Secure RTP master ។"
 
-#: modules/access/rtp/rtp.c:54 modules/stream_out/rtp.c:149
+#: modules/access/rtp/rtp.c:55 modules/stream_out/rtp.c:150
 msgid "SRTP salt (hexadecimal)"
 msgstr "SRTP salt (ប្រព័ន្ធ​គោល ១៦)"
 
-#: modules/access/rtp/rtp.c:56 modules/stream_out/rtp.c:151
-msgid "Secure RTP requires a (non-secret) master salt value."
+#: modules/access/rtp/rtp.c:57 modules/stream_out/rtp.c:152
+#, fuzzy
+msgid ""
+"Secure RTP requires a (non-secret) master salt value. This must be a 28-"
+"character-long hexadecimal string."
 msgstr "ធ្វើ​ឲ្យ RTP មាន​សុវត្ថិភាព គឺ​ត្រូវការ (មិន​សម្ងាត់) តម្លៃ master salt ។"
 
-#: modules/access/rtp/rtp.c:58
+#: modules/access/rtp/rtp.c:60
 msgid "Maximum RTP sources"
 msgstr "ធនធាន RTP អតិបរមា"
 
-#: modules/access/rtp/rtp.c:60
+#: modules/access/rtp/rtp.c:62
 msgid "How many distinct active RTP sources are allowed at a time."
 msgstr "ចំនួន​ប្រភព RTP សកម្ម​ផ្សេងៗ ត្រូវបាន​អនុញ្ញាត​នៅ​ពេល​មួយ ។"
 
-#: modules/access/rtp/rtp.c:62
+#: modules/access/rtp/rtp.c:64
 msgid "RTP source timeout (sec)"
 msgstr "អស់ពេល​ធនធាន RTP (វិ.)"
 
-#: modules/access/rtp/rtp.c:64
+#: modules/access/rtp/rtp.c:66
 msgid "How long to wait for any packet before a source is expired."
 msgstr "រយៈពេល​​ដែល​ត្រូវ​រង់ចាំ​កញ្ចប់ មុនពេល​ធនធាន​ផុត​កំណត់ ។"
 
-#: modules/access/rtp/rtp.c:66
+#: modules/access/rtp/rtp.c:68
 msgid "Maximum RTP sequence number dropout"
 msgstr "ចំនួន​ជួរ RTP អតិបរមា ដែល​បាន​ប្ដូរ"
 
-#: modules/access/rtp/rtp.c:68
+#: modules/access/rtp/rtp.c:70
 msgid ""
 "RTP packets will be discarded if they are too much ahead (i.e. in the "
 "future) by this many packets from the last received packet."
@@ -7788,11 +7792,11 @@ msgstr ""
 "កញ្ចប់ RTP នឹង​ត្រូវបាន​បោះបង់​ចោល នៅពេល​ដែល​ពួកវា​នៅ​ខាង​មុខ​ឆ្ងាយ​ពេក (មាន​ន័យថា នៅពេល​ខាង​មុខ) ដោយ​"
 "កញ្ចប់​ជាច្រើន ពី​កញ្ចប់​ដែល​បាន​ទទួល​ចុងក្រោយ ។"
 
-#: modules/access/rtp/rtp.c:71
+#: modules/access/rtp/rtp.c:73
 msgid "Maximum RTP sequence number misordering"
 msgstr "លេខ​ជួរ RTP អតិបរមា​ដែល​តម្រៀប​ខុស​លំដាប់"
 
-#: modules/access/rtp/rtp.c:73
+#: modules/access/rtp/rtp.c:75
 msgid ""
 "RTP packets will be discarded if they are too far behind (i.e. in the past) "
 "by this many packets from the last received packet."
@@ -7800,29 +7804,29 @@ msgstr ""
 "កញ្ចប់ RTP នឹង​ត្រូវបាន​បោះបង់​ចោល នៅពេល​ដែល​ពួកវា​នៅ​ពីក្រោយ​ឆ្ងាយ​ពេក (មាន​ន័យថា នៅពេល​មុន) ដោយ​"
 "កញ្ចប់​ជាច្រើន ពី​កញ្ចប់​ដែល​បាន​ទទួល​ចុងក្រោយ ។"
 
-#: modules/access/rtp/rtp.c:76
+#: modules/access/rtp/rtp.c:78
 msgid "RTP payload format assumed for dynamic payloads"
 msgstr ""
 
-#: modules/access/rtp/rtp.c:79
+#: modules/access/rtp/rtp.c:81
 msgid ""
 "This payload format will be assumed for dynamic payload types (between 96 "
 "and 127) if it can't be determined otherwise with out-of-band mappings (SDP)"
 msgstr ""
 
-#: modules/access/rtp/rtp.c:93 modules/stream_out/rtp.c:192
+#: modules/access/rtp/rtp.c:95 modules/stream_out/rtp.c:194
 msgid "RTP"
 msgstr "RTP"
 
-#: modules/access/rtp/rtp.c:94
+#: modules/access/rtp/rtp.c:96
 msgid "Real-Time Protocol (RTP) input"
 msgstr "ករ​បញ្ចូល​ពិធីការ Real-Time (RTP)​"
 
-#: modules/access/rtp/rtp.c:726
+#: modules/access/rtp/rtp.c:728
 msgid "SDP required"
 msgstr ""
 
-#: modules/access/rtp/rtp.c:727
+#: modules/access/rtp/rtp.c:729
 #, c-format
 msgid ""
 "A description in SDP format is required to receive the RTP stream. Note that "
@@ -7851,7 +7855,7 @@ msgid "The requested RTSP session could not be established."
 msgstr "មិនអាច​បង្កើត​សម័យ RTSP ដែល​បាន​ស្នើ​បានទេ ។"
 
 #: modules/access/screen/screen.c:43
-#: modules/gui/qt4/components/open_panels.cpp:1034
+#: modules/gui/qt4/components/open_panels.cpp:1036
 msgid "Desired frame rate for the capture."
 msgstr "អត្រាស៊ុម​ដែល​ចង់បាន​សម្រាប់​ការ​ចាប់យក ។"
 
@@ -7911,7 +7915,7 @@ msgstr "ព័ត៌មាន​បញ្ចូល​អេក្រង់"
 
 #: modules/access/screen/screen.c:88 modules/access/screen/xcb.c:65
 #: modules/gui/macosx/open.m:189 modules/gui/macosx/open.m:423
-#: modules/gui/macosx/open.m:1183 modules/gui/macosx/simple_prefs.m:545
+#: modules/gui/macosx/open.m:1183 modules/gui/macosx/simple_prefs.m:541
 #: modules/gui/macosx/VideoView.m:114
 msgid "Screen"
 msgstr "អេក្រង់"
@@ -8656,7 +8660,7 @@ msgstr "[vcd:][device][@[title][,[chapter]]]"
 
 #: modules/access/vcdx/access.c:272 modules/access/vcdx/access.c:352
 #: modules/access/vcdx/access.c:674 modules/access/vcdx/info.c:229
-#: modules/gui/qt4/components/open_panels.cpp:465
+#: modules/gui/qt4/components/open_panels.cpp:467
 msgid "Entry"
 msgstr "ធាតុ"
 
@@ -9064,26 +9068,42 @@ msgid "Select channel to keep"
 msgstr "ជ្រើស​ឆានែល​ដែល​ត្រូវ​ទុក"
 
 #: modules/audio_filter/channel_mixer/mono.c:89
-msgid ""
-"This option silences all other channels except the selected channel. Choose "
-"one from (0=left, 1=right, 2=rear left, 3=rear right, 4=center, 5=left front)"
+#, fuzzy
+msgid "This option silences all other channels except the selected channel."
 msgstr ""
 "ជម្រើស​នេះ នឹង​បិទ​សំឡេង​ឆានែល​ផ្សេងទៀត លើកលែង​តែ​ឆានែល​ដែល​បាន​ជ្រើស​ប៉ុណ្ណោះ ។ ជ្រើស​ឆានែល​មួយ​ពី "
 "(០=ឆ្វេង, ១=ស្ដាំ, ២=ឆ្វេង​ក្រោយ, ៣=ស្ដាំ​ខាងក្រោយ, ៤=កណ្ដាល, ៥=ឆ្វេង​ខាង​​មុខ)"
 
 #: modules/audio_filter/channel_mixer/mono.c:95
-msgid "Left rear"
-msgstr "ឆ្វេង​ខាងក្រោយ"
+#, fuzzy
+msgid "Rear left"
+msgstr "តំបន់ ៣ ៖ ខាង​​ឆ្វេង"
 
 #: modules/audio_filter/channel_mixer/mono.c:95
-msgid "Right rear"
-msgstr "ស្ដាំ​ខាងក្រោយ"
+#, fuzzy
+msgid "Rear right"
+msgstr "ស្ដាំ"
 
 #: modules/audio_filter/channel_mixer/mono.c:96
-msgid "Left front"
-msgstr "ឆ្វេង​ខាង​មុខ"
+msgid "Low-frequency effects"
+msgstr ""
 
-#: modules/audio_filter/channel_mixer/mono.c:108
+#: modules/audio_filter/channel_mixer/mono.c:97
+#, fuzzy
+msgid "Side left"
+msgstr "រុករក​ទៅ​ឆ្វេង"
+
+#: modules/audio_filter/channel_mixer/mono.c:97
+#, fuzzy
+msgid "Side right"
+msgstr "កម្ពស់​វីដេអូ"
+
+#: modules/audio_filter/channel_mixer/mono.c:97
+#, fuzzy
+msgid "Rear center"
+msgstr "ភាគរយ"
+
+#: modules/audio_filter/channel_mixer/mono.c:113
 msgid "Audio filter for stereo to mono conversion"
 msgstr "តម្រង​អូឌីយ៉ូ​សម្រាប់​ស្តេរ៉េអូ​​ទៅកាន់​ការ​បម្លែង​ម៉ូណូ"
 
@@ -9161,7 +9181,7 @@ msgid "Level of input signal"
 msgstr "កម្រិត​សញ្ញា​ចូល"
 
 #: modules/audio_filter/compressor.c:155 modules/gui/macosx/AudioEffects.m:79
-#: modules/gui/qt4/components/extended_panels.cpp:1181
+#: modules/gui/qt4/components/extended_panels.cpp:1182
 msgid "RMS/peak"
 msgstr ""
 
@@ -9199,7 +9219,7 @@ msgid "Set the threshold level in dB (-30 ... 0)."
 msgstr "កំណត់​ការ​កើនឡើង​សកល​ជា dB (-20 ... 20) ។"
 
 #: modules/audio_filter/compressor.c:169 modules/gui/macosx/AudioEffects.m:83
-#: modules/gui/qt4/components/extended_panels.cpp:1185
+#: modules/gui/qt4/components/extended_panels.cpp:1186
 #, fuzzy
 msgid "Ratio"
 msgstr "អត្រា"
@@ -9537,7 +9557,7 @@ msgstr ""
 
 #: modules/audio_filter/resampler/src.c:34
 msgid ""
-"Different resampling algorithm are supported. The best one is slower, while "
+"Different resampling algorithms are supported. The best one is slower, while "
 "the fast one exhibits low quality."
 msgstr ""
 
@@ -9605,18 +9625,18 @@ msgstr "ទទឹង​បន្ទប់​និម្មិត"
 
 #: modules/audio_filter/spatializer/spatializer.cpp:61
 #: modules/gui/macosx/AudioEffects.m:92
-#: modules/gui/qt4/components/extended_panels.cpp:1339
+#: modules/gui/qt4/components/extended_panels.cpp:1340
 msgid "Wet"
 msgstr "សើម"
 
 #: modules/audio_filter/spatializer/spatializer.cpp:64
 #: modules/gui/macosx/AudioEffects.m:93
-#: modules/gui/qt4/components/extended_panels.cpp:1340
+#: modules/gui/qt4/components/extended_panels.cpp:1341
 msgid "Dry"
 msgstr "ស្ងួត"
 
 #: modules/audio_filter/spatializer/spatializer.cpp:67
-#: modules/gui/qt4/components/extended_panels.cpp:1341
+#: modules/gui/qt4/components/extended_panels.cpp:1342
 msgid "Damp"
 msgstr "បិទ​"
 
@@ -10200,7 +10220,7 @@ msgid ""
 "processing power"
 msgstr "ឌិកូដ​តែ​កំណែ​គុណភាព​បង្ហាញ​ទាប​របស់​វីដេអូ​ប៉ុណ្ណោះ ។ វា​ត្រូវការ​ថាមពល​ដំណើរការ​តិច"
 
-#: modules/codec/avcodec/avcodec.h:135 modules/gui/macosx/simple_prefs.m:258
+#: modules/codec/avcodec/avcodec.h:135 modules/gui/macosx/simple_prefs.m:256
 msgid "Skip the loop filter for H.264 decoding"
 msgstr "រំលង​​តម្រង​រង្វិល​ជុំ​សម្រាប់​ការ​អ៊ិនកូដ H.264"
 
@@ -10913,35 +10933,35 @@ msgid "Outline"
 msgstr "គ្រោង"
 
 #: modules/codec/kate.c:210 modules/gui/fbosd.c:172
-#: modules/text_renderer/freetype.c:152 modules/text_renderer/quartztext.c:108
+#: modules/text_renderer/freetype.c:167 modules/text_renderer/quartztext.c:108
 #: modules/text_renderer/win32text.c:89 modules/video_filter/marq.c:59
 #: modules/video_filter/rss.c:71
 msgid "Black"
 msgstr "ខ្មៅ"
 
 #: modules/codec/kate.c:210 modules/gui/fbosd.c:173
-#: modules/text_renderer/freetype.c:152 modules/text_renderer/quartztext.c:108
+#: modules/text_renderer/freetype.c:167 modules/text_renderer/quartztext.c:108
 #: modules/text_renderer/win32text.c:89 modules/video_filter/marq.c:59
 #: modules/video_filter/rss.c:72
 msgid "Gray"
 msgstr "ប្រផេះ"
 
 #: modules/codec/kate.c:210 modules/gui/fbosd.c:173
-#: modules/text_renderer/freetype.c:152 modules/text_renderer/quartztext.c:108
+#: modules/text_renderer/freetype.c:167 modules/text_renderer/quartztext.c:108
 #: modules/text_renderer/win32text.c:89 modules/video_filter/marq.c:60
 #: modules/video_filter/rss.c:72
 msgid "Silver"
 msgstr "ប្រាក់"
 
 #: modules/codec/kate.c:210 modules/gui/fbosd.c:173
-#: modules/text_renderer/freetype.c:152 modules/text_renderer/quartztext.c:108
+#: modules/text_renderer/freetype.c:167 modules/text_renderer/quartztext.c:108
 #: modules/text_renderer/win32text.c:89 modules/video_filter/ball.c:121
 #: modules/video_filter/marq.c:60 modules/video_filter/rss.c:72
 msgid "White"
 msgstr "ស"
 
 #: modules/codec/kate.c:210 modules/gui/fbosd.c:173
-#: modules/text_renderer/freetype.c:152 modules/text_renderer/quartztext.c:108
+#: modules/text_renderer/freetype.c:167 modules/text_renderer/quartztext.c:108
 #: modules/text_renderer/win32text.c:89 modules/video_filter/marq.c:60
 #: modules/video_filter/rss.c:72
 msgid "Maroon"
@@ -10949,7 +10969,7 @@ msgstr "ត្នោត​ចាស់"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:173
 #: modules/gui/macosx/controls.m:189 modules/gui/macosx/MainMenu.m:323
-#: modules/text_renderer/freetype.c:153 modules/text_renderer/quartztext.c:109
+#: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/ball.c:120
 #: modules/video_filter/colorthres.c:64 modules/video_filter/marq.c:60
 #: modules/video_filter/rss.c:72
@@ -10957,7 +10977,7 @@ msgid "Red"
 msgstr "ក្រហម"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
-#: modules/text_renderer/freetype.c:153 modules/text_renderer/quartztext.c:109
+#: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/colorthres.c:64
 #: modules/video_filter/marq.c:61 modules/video_filter/rss.c:73
 msgid "Fuchsia"
@@ -10965,14 +10985,14 @@ msgstr "ស៊ីជម្ពូរ"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
 #: modules/gui/macosx/controls.m:193 modules/gui/macosx/MainMenu.m:325
-#: modules/text_renderer/freetype.c:153 modules/text_renderer/quartztext.c:109
+#: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/colorthres.c:64
 #: modules/video_filter/marq.c:61 modules/video_filter/rss.c:73
 msgid "Yellow"
 msgstr "លឿង"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
-#: modules/text_renderer/freetype.c:153 modules/text_renderer/quartztext.c:109
+#: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/marq.c:61
 #: modules/video_filter/rss.c:73
 msgid "Olive"
@@ -10980,35 +11000,35 @@ msgstr "អូលីវ"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
 #: modules/gui/macosx/controls.m:191 modules/gui/macosx/MainMenu.m:324
-#: modules/text_renderer/freetype.c:153 modules/text_renderer/quartztext.c:109
+#: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/ball.c:120
 #: modules/video_filter/marq.c:61 modules/video_filter/rss.c:73
 msgid "Green"
 msgstr "បៃតង"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:175
-#: modules/text_renderer/freetype.c:153 modules/text_renderer/quartztext.c:109
+#: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/marq.c:62
 #: modules/video_filter/rss.c:74
 msgid "Teal"
 msgstr "ខៀវ​បៃតង​ក្រម៉ៅ"
 
 #: modules/codec/kate.c:212 modules/gui/fbosd.c:175
-#: modules/text_renderer/freetype.c:154 modules/text_renderer/quartztext.c:110
+#: modules/text_renderer/freetype.c:169 modules/text_renderer/quartztext.c:110
 #: modules/text_renderer/win32text.c:91 modules/video_filter/colorthres.c:64
 #: modules/video_filter/marq.c:62 modules/video_filter/rss.c:74
 msgid "Lime"
 msgstr "បៃតង"
 
 #: modules/codec/kate.c:212 modules/gui/fbosd.c:175
-#: modules/text_renderer/freetype.c:154 modules/text_renderer/quartztext.c:110
+#: modules/text_renderer/freetype.c:169 modules/text_renderer/quartztext.c:110
 #: modules/text_renderer/win32text.c:91 modules/video_filter/marq.c:62
 #: modules/video_filter/rss.c:74
 msgid "Purple"
 msgstr "ស្វាយ"
 
 #: modules/codec/kate.c:212 modules/gui/fbosd.c:175
-#: modules/text_renderer/freetype.c:154 modules/text_renderer/quartztext.c:110
+#: modules/text_renderer/freetype.c:169 modules/text_renderer/quartztext.c:110
 #: modules/text_renderer/win32text.c:91 modules/video_filter/marq.c:62
 #: modules/video_filter/rss.c:74
 msgid "Navy"
@@ -11016,7 +11036,7 @@ msgstr "ខៀវ​ចាស់"
 
 #: modules/codec/kate.c:212 modules/gui/fbosd.c:175
 #: modules/gui/macosx/controls.m:195 modules/gui/macosx/MainMenu.m:326
-#: modules/text_renderer/freetype.c:154 modules/text_renderer/quartztext.c:110
+#: modules/text_renderer/freetype.c:169 modules/text_renderer/quartztext.c:110
 #: modules/text_renderer/win32text.c:91 modules/video_filter/ball.c:121
 #: modules/video_filter/colorthres.c:64 modules/video_filter/marq.c:62
 #: modules/video_filter/rss.c:74
@@ -11024,7 +11044,7 @@ msgid "Blue"
 msgstr "ខៀវ"
 
 #: modules/codec/kate.c:212 modules/gui/fbosd.c:176
-#: modules/text_renderer/freetype.c:154 modules/text_renderer/quartztext.c:110
+#: modules/text_renderer/freetype.c:169 modules/text_renderer/quartztext.c:110
 #: modules/text_renderer/win32text.c:91 modules/video_filter/colorthres.c:64
 #: modules/video_filter/marq.c:63 modules/video_filter/rss.c:75
 msgid "Aqua"
@@ -11164,7 +11184,7 @@ msgstr "ចំណងជើង​រង (កម្រិត​ខ្ពស់)"
 msgid "Subtitle renderers using libass"
 msgstr "កម្មវិធី​បង្ហាញ​ចំណងជើង​រង​ដោយប្រើ libass"
 
-#: modules/codec/libass.c:220 modules/text_renderer/freetype.c:442
+#: modules/codec/libass.c:220 modules/text_renderer/freetype.c:461
 msgid "Building font cache"
 msgstr "ស្ថាបនា​ឃ្លាំងសម្ងាត់​ពុម្ពអក្សរ"
 
@@ -11349,7 +11369,7 @@ msgstr "ប្រវែង​អតិបរមា"
 
 #: modules/codec/schroedinger.c:130
 msgid ""
-"Number of pictures between successive sequenence headers i.e. length of the "
+"Number of pictures between successive sequence headers i.e. length of the "
 "group of pictures"
 msgstr ""
 
@@ -11375,7 +11395,7 @@ msgstr "តម្រង​វីដេអូ​ព្រិល​ហ្គូស
 
 #: modules/codec/schroedinger.c:152
 #, fuzzy
-msgid "Low Pass Ffilter"
+msgid "Low Pass Filter"
 msgstr "តម្រង​រង​ឡូហ្គោ"
 
 #: modules/codec/schroedinger.c:173
@@ -11560,7 +11580,7 @@ msgstr "អ៊ិនកូដឌ័រ​អូឌីយ៉ូ​ចំណុច
 
 #: modules/codec/speex.c:57 modules/codec/speex.c:797
 #: modules/gui/macosx/open.m:175 modules/gui/macosx/VideoEffects.m:120
-#: modules/gui/qt4/ui/sprefs_video.h:320
+#: modules/gui/qt4/ui/sprefs_video.h:359
 #: modules/gui/qt4/ui/video_effects.h:1328
 msgid "Mode"
 msgstr "របៀប​"
@@ -12980,14 +13000,14 @@ msgstr "ចំណុច​ប្រទាក់​ឧបករណ៍​បញ្
 
 #: modules/control/dbus/dbus_root.c:77 modules/gui/macosx/MainWindow.m:233
 #: modules/gui/macosx/MainWindow.m:741 modules/gui/qt4/dialogs/help.cpp:99
-#: modules/gui/qt4/main_interface.cpp:949
-#: modules/gui/qt4/main_interface.cpp:953
-#: modules/gui/qt4/main_interface.cpp:992
-#: modules/gui/qt4/main_interface.cpp:994
-#: modules/gui/qt4/main_interface.cpp:1094
-#: modules/gui/qt4/main_interface.cpp:1111
-#: modules/gui/qt4/main_interface.cpp:1118
-#: modules/gui/qt4/main_interface.cpp:1141
+#: modules/gui/qt4/main_interface.cpp:957
+#: modules/gui/qt4/main_interface.cpp:961
+#: modules/gui/qt4/main_interface.cpp:1000
+#: modules/gui/qt4/main_interface.cpp:1002
+#: modules/gui/qt4/main_interface.cpp:1102
+#: modules/gui/qt4/main_interface.cpp:1119
+#: modules/gui/qt4/main_interface.cpp:1126
+#: modules/gui/qt4/main_interface.cpp:1149
 #: modules/video_output/xcb/window.c:313
 msgid "VLC media player"
 msgstr "កម្មវិធី​ចាក់​មេឌៀ VLC"
@@ -13057,12 +13077,12 @@ msgstr "វត្ថុ​បញ្ជា​កម្រិត​សំឡេង
 msgid "Position Control"
 msgstr "វត្ថុ​បញ្ជា​ទីតាំង"
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1803
-#: modules/gui/macosx/intf.m:1974
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1799
+#: modules/gui/macosx/intf.m:1970
 msgid "Ignore"
 msgstr "មិន​អើពើ"
 
-#: modules/control/hotkeys.c:100 modules/gui/macosx/simple_prefs.m:195
+#: modules/control/hotkeys.c:100 modules/gui/macosx/simple_prefs.m:193
 #: modules/gui/qt4/components/simple_preferences.cpp:96
 msgid "Hotkeys"
 msgstr "គ្រាប់ចុច​រហ័ស"
@@ -13213,8 +13233,8 @@ msgstr "នាឡិកា​មេ​បណ្ដាញ"
 #: modules/control/netsync.c:58
 #, fuzzy
 msgid ""
-"When set then This VLC instance shall dictate its clock for synchronization "
-"over clients listening on the masters network ip address"
+"When set, this VLC instance will act as the master clock for synchronization "
+"for clients listening"
 msgstr ""
 "នៅពេល​បាន​កំណត់ នោះ​ធាតុ vlc នេះ​បញ្ជា​នាឡិកា​សម្រាប់​ការ​ធ្វើ​សមកាលកម្ម​លើ​​ម៉ាស៊ីន​ភ្ញៀវ ដោយ​ស្ដាប់​នៅ​លើ​"
 "អាសយដ្ឋាន ip បណ្ដាញ​មេ"
@@ -13226,7 +13246,7 @@ msgstr "អាសយដ្ឋាន ip របស់​ម៉ាស៊ីន​�
 #: modules/control/netsync.c:63
 #, fuzzy
 msgid ""
-"The IP address of The network master clock to use for clock synchronization."
+"The IP address of the network master clock to use for clock synchronization."
 msgstr "អាសយដ្ឋាន IP របស់នាឡិកា​មេ​បណ្ដាញ​​ ដើម្បី​ប្រើ​សម្រាប់​កា​រធ្វើ​សមកាលកម្ម​នាឡិកា ។"
 
 #: modules/control/netsync.c:66
@@ -13312,8 +13332,8 @@ msgstr "បើក"
 
 #: modules/control/rc.c:73 modules/gui/macosx/MainMenu.m:814
 #: modules/gui/macosx/MainMenu.m:815 modules/gui/macosx/MainMenu.m:816
-#: modules/gui/macosx/MainWindow.m:815 modules/gui/qt4/menus.cpp:791
-#: modules/notify/xosd.c:234
+#: modules/gui/macosx/MainWindow.m:815 modules/gui/qt4/menus.cpp:794
+#: modules/notify/xosd.c:238
 msgid "Pause"
 msgstr "ផ្អាក"
 
@@ -14003,12 +14023,12 @@ msgstr ""
 
 #: modules/demux/image.c:60
 #, fuzzy
-msgid "Duration in second"
+msgid "Duration in seconds"
 msgstr "ថិរវេលា​គិត​ជា​មិ.វិ. ។"
 
 #: modules/demux/image.c:62
 msgid ""
-"Duration in second before simulating an end of file. A negative value means "
+"Duration in seconds before simulating an end of file. A negative value means "
 "an unlimited play time."
 msgstr ""
 
@@ -14063,7 +14083,7 @@ msgid "Transcript"
 msgstr "សំស្ក្រឹត"
 
 #: modules/demux/kate_categories.c:49 modules/demux/kate_categories.c:56
-#: modules/demux/mp4/mp4.c:978
+#: modules/demux/mp4/mp4.c:981
 msgid "Lyrics"
 msgstr "អត្ថបទ​ចម្រៀង"
 
@@ -14149,7 +14169,7 @@ msgid "RTSP/RTP access and demux"
 msgstr "ដំណើរការ RTSP/RTP និង demux"
 
 #: modules/demux/live555.cpp:108 modules/demux/live555.cpp:109
-#: modules/gui/macosx/simple_prefs.m:257
+#: modules/gui/macosx/simple_prefs.m:255
 msgid "Use RTP over RTSP (TCP)"
 msgstr "ប្រើ RTP លើ RTSP (TCP)"
 
@@ -14652,91 +14672,91 @@ msgstr "demuxer ស្ទ្រីម MP4"
 msgid "MP4"
 msgstr "MP4"
 
-#: modules/demux/mp4/mp4.c:963
+#: modules/demux/mp4/mp4.c:966
 msgid "Writer"
 msgstr ""
 
-#: modules/demux/mp4/mp4.c:964
+#: modules/demux/mp4/mp4.c:967
 msgid "Composr"
 msgstr ""
 
-#: modules/demux/mp4/mp4.c:965
+#: modules/demux/mp4/mp4.c:968
 msgid "Producer"
 msgstr ""
 
-#: modules/demux/mp4/mp4.c:966 modules/gui/macosx/playlistinfo.m:381
+#: modules/demux/mp4/mp4.c:969 modules/gui/macosx/playlistinfo.m:381
 #: modules/gui/qt4/components/controller.hpp:115
 #: modules/gui/qt4/components/controller.hpp:127
 msgid "Information"
 msgstr "ព័ត៌មាន"
 
-#: modules/demux/mp4/mp4.c:967
+#: modules/demux/mp4/mp4.c:970
 #, fuzzy
 msgid "Director"
 msgstr "ឯកសារ/ថត"
 
-#: modules/demux/mp4/mp4.c:968
+#: modules/demux/mp4/mp4.c:971
 #, fuzzy
 msgid "Disclaimer"
 msgstr "បោះបង់"
 
-#: modules/demux/mp4/mp4.c:969
+#: modules/demux/mp4/mp4.c:972
 #, fuzzy
 msgid "Requirements"
 msgstr "ចម្រៀក"
 
-#: modules/demux/mp4/mp4.c:970
+#: modules/demux/mp4/mp4.c:973
 #, fuzzy
 msgid "Original Format"
 msgstr "លេខ​សម្គាល់​ដើម"
 
-#: modules/demux/mp4/mp4.c:971
+#: modules/demux/mp4/mp4.c:974
 #, fuzzy
 msgid "Display Source As"
 msgstr "កំណត់​ការ​បង្ហាញ"
 
-#: modules/demux/mp4/mp4.c:972
+#: modules/demux/mp4/mp4.c:975
 #, fuzzy
 msgid "Host Computer"
 msgstr "កុំព្យូទ័រ​ខ្ញុំ"
 
-#: modules/demux/mp4/mp4.c:973
+#: modules/demux/mp4/mp4.c:976
 #, fuzzy
 msgid "Performers"
 msgstr "ជម្រើស​ដំណើរការ"
 
-#: modules/demux/mp4/mp4.c:974
+#: modules/demux/mp4/mp4.c:977
 #, fuzzy
 msgid "Original Performer"
 msgstr "ទំហំ​ដើម"
 
-#: modules/demux/mp4/mp4.c:975
+#: modules/demux/mp4/mp4.c:978
 msgid "Providers Source Content"
 msgstr ""
 
-#: modules/demux/mp4/mp4.c:976
-msgid "Warning"
-msgstr ""
-
-#: modules/demux/mp4/mp4.c:977
-#, fuzzy
-msgid "Software"
-msgstr "កម្មវិធី AtmoWin"
-
 #: modules/demux/mp4/mp4.c:979
-msgid "Make"
+msgid "Warning"
 msgstr ""
 
 #: modules/demux/mp4/mp4.c:980
 #, fuzzy
+msgid "Software"
+msgstr "កម្មវិធី AtmoWin"
+
+#: modules/demux/mp4/mp4.c:982
+msgid "Make"
+msgstr ""
+
+#: modules/demux/mp4/mp4.c:983
+#, fuzzy
 msgid "Model"
 msgstr "របៀប​"
 
-#: modules/demux/mp4/mp4.c:981
+#: modules/demux/mp4/mp4.c:984
 msgid "Product"
 msgstr ""
 
-#: modules/demux/mp4/mp4.c:982
+#: modules/demux/mp4/mp4.c:985
 #, fuzzy
 msgid "Grouping"
 msgstr "ឈ្មោះ​ក្រុម"
@@ -15258,7 +15278,7 @@ msgstr ""
 #: modules/demux/ts.c:143
 msgid ""
 "Seek and position based on a percent byte position, not a PCR generated time "
-"position. If seeking doesn't work propery, turn on this option."
+"position. If seeking doesn't work property, turn on this option."
 msgstr ""
 
 #: modules/demux/ts.c:148
@@ -15429,7 +15449,7 @@ msgstr ""
 "អ្នក​អាច​តម្រូវ​ឲ្យ​ប្រើ​ទីតាំង​រូបភាព​នៅ​លើ​ការ​ត្រួត​គ្នា​បាន (0=កណ្ដាល, 1=ឆ្វេង, 2=ស្ដាំ, 4=កំពូល, "
 "8=បាត អ្នក​អាច​ប្រើ​ការ​បន្សំ​រវាង​តម្លៃ​ទាំង​នេះ​បាន ឧ. 6=ស្ដាំ​កំពូល) ។"
 
-#: modules/gui/fbosd.c:134 modules/gui/macosx/simple_prefs.m:287
+#: modules/gui/fbosd.c:134 modules/gui/macosx/simple_prefs.m:285
 #: modules/text_renderer/win32text.c:66 modules/video_filter/marq.c:115
 #: modules/video_filter/rss.c:146
 msgid "Opacity"
@@ -15454,7 +15474,7 @@ msgstr "ទំហំ​ពុម្ព​អក្សរ គិត​ជា​�
 
 #: modules/gui/fbosd.c:142 modules/gui/macosx/VideoEffects.m:71
 #: modules/gui/macosx/VideoEffects.m:113 modules/gui/macosx/VideoEffects.m:128
-#: modules/gui/macosx/VideoEffects.m:131 modules/notify/xosd.c:82
+#: modules/gui/macosx/VideoEffects.m:131 modules/notify/xosd.c:83
 #: modules/video_filter/colorthres.c:54 modules/video_filter/marq.c:122
 #: modules/video_filter/rss.c:154 modules/gui/qt4/ui/video_effects.h:1323
 #: modules/gui/qt4/ui/video_effects.h:1329
@@ -15504,8 +15524,8 @@ msgid ""
 "All rendered images and text will be displayed on the overlay framebuffer."
 msgstr "រូបភាព និង​អត្ថបទ​ដែល​បាន​បង្ហាញ​នឹង​ត្រូវបាន​បង្ហាញ​​ណោលើ​សតិ​បណ្ដោះ​អាសន្ន​ស៊ុម​ត្រួត​គ្នា ។"
 
-#: modules/gui/fbosd.c:204 modules/gui/macosx/simple_prefs.m:282
-#: modules/notify/xosd.c:80 modules/text_renderer/freetype.c:101
+#: modules/gui/fbosd.c:204 modules/gui/macosx/simple_prefs.m:280
+#: modules/notify/xosd.c:81 modules/text_renderer/freetype.c:116
 #: modules/text_renderer/quartztext.c:90 modules/text_renderer/win32text.c:59
 #: modules/video_filter/marq.c:163 modules/video_filter/rss.c:206
 #: modules/gui/qt4/ui/sprefs_subtitles.h:279
@@ -15556,7 +15576,7 @@ msgid "Preamp"
 msgstr "អាំភ្លី​អេឡិចត្រូនិក"
 
 #: modules/gui/macosx/AudioEffects.m:77
-#: modules/gui/qt4/components/extended_panels.cpp:1198
+#: modules/gui/qt4/components/extended_panels.cpp:1199
 #, fuzzy
 msgid "Enable dynamic range compressor"
 msgstr "ការ​បង្ហាប់​ជួរ​ថាមវន្ដ DTS"
@@ -15570,18 +15590,18 @@ msgid "Reset"
 msgstr "កំណត់​ឡើងវិញ​ទាំងអស់"
 
 #: modules/gui/macosx/AudioEffects.m:80
-#: modules/gui/qt4/components/extended_panels.cpp:1182
+#: modules/gui/qt4/components/extended_panels.cpp:1183
 msgid "Attack"
 msgstr ""
 
 #: modules/gui/macosx/AudioEffects.m:81
-#: modules/gui/qt4/components/extended_panels.cpp:1183
+#: modules/gui/qt4/components/extended_panels.cpp:1184
 #, fuzzy
 msgid "Release"
 msgstr "កំណត់​ស្ថិតិ​មុខងារ demux"
 
 #: modules/gui/macosx/AudioEffects.m:82
-#: modules/gui/qt4/components/extended_panels.cpp:1184
+#: modules/gui/qt4/components/extended_panels.cpp:1185
 #, fuzzy
 msgid "Threshold"
 msgstr "កម្រិត​ពន្លឺ​ពណ៌"
@@ -15628,7 +15648,7 @@ msgid "Add"
 msgstr "បន្ថែម"
 
 #: modules/gui/macosx/bookmarks.m:86 modules/gui/macosx/MainMenu.m:252
-#: modules/gui/macosx/simple_prefs.m:239
+#: modules/gui/macosx/simple_prefs.m:237
 #: modules/gui/qt4/dialogs/bookmarks.cpp:51
 #: modules/gui/qt4/dialogs/sout.cpp:70 modules/gui/qt4/ui/vlm.h:301
 msgid "Clear"
@@ -15659,13 +15679,13 @@ msgstr "ពេលវេលា"
 #: modules/gui/macosx/coredialogs.m:63 modules/gui/macosx/coredialogs.m:100
 #: modules/gui/macosx/coredialogs.m:158 modules/gui/macosx/open.m:318
 #: modules/gui/macosx/output.m:138 modules/gui/macosx/playlistinfo.m:358
-#: modules/gui/macosx/simple_prefs.m:238 modules/gui/macosx/wizard.m:602
+#: modules/gui/macosx/simple_prefs.m:236 modules/gui/macosx/wizard.m:602
 #: modules/gui/macosx/wizard.m:665 modules/gui/macosx/wizard.m:1038
 #: modules/gui/macosx/wizard.m:1123 modules/gui/macosx/wizard.m:1130
 #: modules/gui/macosx/wizard.m:1656 modules/gui/macosx/wizard.m:1664
 #: modules/gui/macosx/wizard.m:1844 modules/gui/macosx/wizard.m:1855
 #: modules/gui/macosx/wizard.m:1868
-#: modules/gui/qt4/components/open_panels.cpp:1278
+#: modules/gui/qt4/components/open_panels.cpp:1280
 #: modules/gui/qt4/components/preferences_widgets.cpp:1514
 msgid "OK"
 msgstr "យល់ព្រម"
@@ -15729,7 +15749,7 @@ msgstr "វិ."
 msgid "Jump to time"
 msgstr "លោត​ទៅ​ពេលវេលា"
 
-#: modules/gui/macosx/coredialogs.m:60 modules/gui/macosx/simple_prefs.m:229
+#: modules/gui/macosx/coredialogs.m:60 modules/gui/macosx/simple_prefs.m:227
 #: modules/gui/qt4/dialogs/external.cpp:120
 msgid "User name"
 msgstr "ឈ្មោះ​អ្នក​ប្រើ"
@@ -15768,33 +15788,33 @@ msgstr "កុំ​បង្ហាញ​ប្រអប់ ដែលមិន�
 msgid "(no item is being played)"
 msgstr "(គ្មាន​ធាតុ​ដែល​កំពង់​ចាក់​នោះ​ទេ)"
 
-#: modules/gui/macosx/intf.m:647 modules/gui/qt4/dialogs/messages.cpp:75
+#: modules/gui/macosx/intf.m:645 modules/gui/qt4/dialogs/messages.cpp:75
 #: modules/gui/qt4/ui/messages_panel.h:141
 #: modules/gui/qt4/ui/messages_panel.h:146
 msgid "Messages"
 msgstr "សារ"
 
-#: modules/gui/macosx/intf.m:648
+#: modules/gui/macosx/intf.m:646
 msgid "Open CrashLog..."
 msgstr "បើក​កំណត់ហេតុ​ការ​គាំអ..."
 
-#: modules/gui/macosx/intf.m:649
+#: modules/gui/macosx/intf.m:647
 msgid "Save this Log..."
 msgstr "រក្សាទុក​កំណត់​ហេតុ​នេះ..."
 
-#: modules/gui/macosx/intf.m:652 share/lua/http/dialogs/batch_window.html:9
+#: modules/gui/macosx/intf.m:650 share/lua/http/dialogs/batch_window.html:9
 msgid "Send"
 msgstr "ផ្ញើ"
 
-#: modules/gui/macosx/intf.m:653
+#: modules/gui/macosx/intf.m:651
 msgid "Don't Send"
 msgstr "កុំ​ផ្ញើ"
 
-#: modules/gui/macosx/intf.m:654 modules/gui/macosx/intf.m:655
+#: modules/gui/macosx/intf.m:652 modules/gui/macosx/intf.m:653
 msgid "VLC crashed previously"
 msgstr "VLC ដែល​បាន​គាំង​ពី​មុន"
 
-#: modules/gui/macosx/intf.m:656
+#: modules/gui/macosx/intf.m:654
 msgid ""
 "Do you want to send details on the crash to VLC's development team?\n"
 "\n"
@@ -15807,11 +15827,11 @@ msgstr ""
 "ប្រសិន​បើ​អ្នក​ចង់ អ្នក​អាច​វាយ​បញ្ចូល​ប៉ុន្មាន​បន្ទាត់​អំពី​អ្វីដែល​អ្នក​បាន​ធ្វើ​មុនពេល​ដែល VLC គាំង ជាមួយ​នឹង​"
 "ព័ត៌មាន​មាន​ប្រយោជន៍​ផ្សេងទៀត​ដូចជា ៖ តំណ ដែល​ត្រូវ​ទាញយក​ឯកសារ​គំរូ, URL របស់​ស្ទ្រីម​បណ្ដាញ ..."
 
-#: modules/gui/macosx/intf.m:657
+#: modules/gui/macosx/intf.m:655
 msgid "I agree to be possibly contacted about this bugreport."
 msgstr "ខ្ញុំ​យល់ព្រម​ទទួល​ការ​ទាក់ទង​អំពី​ការ​រាយការណ៍​កំហុស ។"
 
-#: modules/gui/macosx/intf.m:658
+#: modules/gui/macosx/intf.m:656
 msgid ""
 "Only your default E-Mail address will be submitted, including no further "
 "information."
@@ -15819,51 +15839,51 @@ msgstr ""
 "មាន​តែ​អាសយដ្ឋាន​អ៊ីមែល​លំនាំដើម​របស់​អ្នក​ប៉ុណ្ណោះ ដែល​នឹង​ត្រូវបាន​ដាក់​ស្នើ ដោយ​មិន​មាន​ព័ត៌មាន​បន្ថែម​អ្វី​ទៀត​"
 "ទេ ។"
 
-#: modules/gui/macosx/intf.m:1683
+#: modules/gui/macosx/intf.m:1679
 msgid "Error when sending the Crash Report"
 msgstr "មាន​កំហុស នៅពេល​ផ្ញើ​របាយការណ៍​គាំង"
 
-#: modules/gui/macosx/intf.m:1774
+#: modules/gui/macosx/intf.m:1770
 msgid "No CrashLog found"
 msgstr "គ្មាន​កំណត់ហេតុ​ការ​គាំង​ដែល​បានរកឃើញ​ទេ"
 
-#: modules/gui/macosx/intf.m:1774 modules/gui/macosx/prefs.m:227
-#: modules/gui/macosx/simple_prefs.m:697
+#: modules/gui/macosx/intf.m:1770 modules/gui/macosx/prefs.m:227
+#: modules/gui/macosx/simple_prefs.m:693
 msgid "Continue"
 msgstr "បន្ត"
 
-#: modules/gui/macosx/intf.m:1774
+#: modules/gui/macosx/intf.m:1770
 msgid "Couldn't find any trace of a previous crash."
 msgstr "មិនអាច​ស្វែងរក​ដាន​នៃ​ការ​គាំង​ពី​មុន​ទេ ។"
 
-#: modules/gui/macosx/intf.m:1801
+#: modules/gui/macosx/intf.m:1797
 msgid "Remove old preferences?"
 msgstr "ផ្លាស់ទី​ចំណង់ចំណូលចិត្ត​ចាស់​ចោល ?"
 
-#: modules/gui/macosx/intf.m:1802
+#: modules/gui/macosx/intf.m:1798
 msgid "We just found an older version of VLC's preferences files."
 msgstr "យើង​ទើបតែ​រកឃើញ​កំណែ​ឯកសារ​ចំណង់ចំណូលចិត្ត VLC ចាស់ ។"
 
-#: modules/gui/macosx/intf.m:1803
+#: modules/gui/macosx/intf.m:1799
 msgid "Move To Trash and Relaunch VLC"
 msgstr "ផ្លាស់ទី​ទៅ​ធុង​សំរាម និង​ចាប់ផ្ដើម VLC ឡើងវិញ"
 
-#: modules/gui/macosx/intf.m:1911
+#: modules/gui/macosx/intf.m:1907
 #, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr "កំណត់​ហេតុ​បំបាត់​កំហុស VLC (%s).rtfd"
 
-#: modules/gui/macosx/intf.m:1972
+#: modules/gui/macosx/intf.m:1968
 msgid "Relaunch required"
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1973
+#: modules/gui/macosx/intf.m:1969
 msgid ""
 "To make sure that VLC no longer listens to your media key events, it needs "
 "to be restarted."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1974
+#: modules/gui/macosx/intf.m:1970
 msgid "Relaunch VLC"
 msgstr ""
 
@@ -15925,7 +15945,7 @@ msgid ""
 msgstr ""
 "តាម​លំនាំដើម VLC រក្សាទុក​បញ្ជី​ ១០ ធាតុ​ចុងក្រោយ ។ លក្ខណៈ​ពិសេស​នេះ អាច​ត្រូវបាន​បិទ​នៅ​ទីនេះ ។"
 
-#: modules/gui/macosx/macosx.m:80 modules/gui/macosx/simple_prefs.m:270
+#: modules/gui/macosx/macosx.m:80 modules/gui/macosx/simple_prefs.m:268
 msgid "Control playback with the Apple Remote"
 msgstr "ត្រួតពិនិត្យ​ការ​ចាក់​ឡើងវិញ​ដោយ​ប្រើ​វត្ថុ​បញ្ជា​ពី​ចម្ងាយ​របស់ Apple"
 
@@ -15933,7 +15953,7 @@ msgstr "ត្រួតពិនិត្យ​ការ​ចាក់​ឡើ
 msgid "By default, VLC can be remotely controlled with the Apple Remote."
 msgstr "តាម​លំនាំដើម VLC អាច​ត្រូវ​បាន​ត្រួតពិនិត្យ​ពីចម្ងាយ​ដោយ​ប្រើ​ Apple ពី​ចម្ងាយ ។"
 
-#: modules/gui/macosx/macosx.m:83 modules/gui/macosx/simple_prefs.m:271
+#: modules/gui/macosx/macosx.m:83 modules/gui/macosx/simple_prefs.m:269
 msgid "Control playback with media keys"
 msgstr "ត្រួតពិនិត្យ​ការ​ចាក់​ឡើង​វិញ​ជា​មួយ​នឹង​សោ​មេឌៀ"
 
@@ -15952,7 +15972,7 @@ msgstr ""
 msgid "By default, VLC will use the dark interface style."
 msgstr ""
 
-#: modules/gui/macosx/macosx.m:90 modules/gui/macosx/simple_prefs.m:266
+#: modules/gui/macosx/macosx.m:90 modules/gui/macosx/simple_prefs.m:264
 msgid "Use the native fullscreen mode on OS X Lion"
 msgstr ""
 
@@ -15986,7 +16006,7 @@ msgstr "លាក់ VLC"
 msgid "Hide Others"
 msgstr "លាក់​ផ្សេងទៀត"
 
-#: modules/gui/macosx/MainMenu.m:235 modules/gui/macosx/simple_prefs.m:308
+#: modules/gui/macosx/MainMenu.m:235 modules/gui/macosx/simple_prefs.m:306
 msgid "Show All"
 msgstr "បង្ហាញ​ទាំងអស់​"
 
@@ -16003,7 +16023,7 @@ msgid "Advanced Open File..."
 msgstr "បើក​ឯកសារ​កម្រិត​ខ្ពស់..."
 
 #: modules/gui/macosx/MainMenu.m:240 modules/gui/macosx/MainMenu.m:313
-#: modules/gui/macosx/MainMenu.m:996 modules/gui/qt4/menus.cpp:620
+#: modules/gui/macosx/MainMenu.m:996 modules/gui/qt4/menus.cpp:623
 msgid "Open File..."
 msgstr "បើក​ឯកសារ..."
 
@@ -16056,10 +16076,10 @@ msgstr "ចាក់​ឡើងវិញ"
 msgid "Playback Speed"
 msgstr "ល្បឿន​ចាក់​ឡើងវិញ"
 
-#: modules/gui/macosx/MainMenu.m:263 modules/gui/macosx/simple_prefs.m:574
+#: modules/gui/macosx/MainMenu.m:263 modules/gui/macosx/simple_prefs.m:570
 #: modules/gui/qt4/components/simple_preferences.cpp:501
-#: modules/misc/gnutls.c:83 modules/text_renderer/freetype.c:141
-#: modules/text_renderer/freetype.c:160 modules/text_renderer/quartztext.c:114
+#: modules/misc/gnutls.c:83 modules/text_renderer/freetype.c:156
+#: modules/text_renderer/freetype.c:175 modules/text_renderer/quartztext.c:114
 #: modules/text_renderer/win32text.c:82
 msgid "Normal"
 msgstr "ធម្មតា"
@@ -16082,11 +16102,11 @@ msgstr "ទៅមុខ"
 msgid "Step Backward"
 msgstr "ថយ​ក្រោយ"
 
-#: modules/gui/macosx/MainMenu.m:283 modules/gui/qt4/menus.cpp:569
+#: modules/gui/macosx/MainMenu.m:283 modules/gui/qt4/menus.cpp:572
 msgid "Increase Volume"
 msgstr "បង្កើន​កម្រិត​សំឡេង"
 
-#: modules/gui/macosx/MainMenu.m:284 modules/gui/qt4/menus.cpp:572
+#: modules/gui/macosx/MainMenu.m:284 modules/gui/qt4/menus.cpp:575
 msgid "Decrease Volume"
 msgstr "បន្ថយ​កម្រិត​សំឡេង"
 
@@ -16113,7 +16133,7 @@ msgid "Float on Top"
 msgstr "អណ្ដែត​នៅលើ​កំពូល"
 
 #: modules/gui/macosx/MainMenu.m:309 modules/gui/macosx/MainMenu.m:310
-#: modules/gui/macosx/simple_prefs.m:293 modules/gui/macosx/VideoView.m:99
+#: modules/gui/macosx/simple_prefs.m:291 modules/gui/macosx/VideoView.m:99
 msgid "Fullscreen Video Device"
 msgstr "ឧបករណ៍​វីដេអូ​ពេញ​អេក្រង់"
 
@@ -16177,7 +16197,7 @@ msgid "Bring All to Front"
 msgstr "នាំទៅ​ខាង​មុខ​ទាំងអស់"
 
 #: modules/gui/macosx/MainMenu.m:343 modules/gui/qt4/dialogs/help.cpp:54
-#: modules/gui/qt4/menus.cpp:895
+#: modules/gui/qt4/menus.cpp:910
 msgid "Help"
 msgstr "ជំនួយ"
 
@@ -16242,7 +16262,7 @@ msgstr "ចាក់​ឡើងវិញ ៖"
 msgid "Shuffle"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:120 modules/gui/macosx/simple_prefs.m:223
+#: modules/gui/macosx/MainWindow.m:120 modules/gui/macosx/simple_prefs.m:221
 #: modules/gui/qt4/ui/sprefs_audio.h:440
 msgid "Effects"
 msgstr "បែបផែន"
@@ -16293,9 +16313,9 @@ msgstr "គ្មាន​ឯកសារ​ដែល​បាន​ជ្រើ
 
 #: modules/gui/macosx/open.m:56
 msgid ""
-"Any device is not selected.\n"
+"No device is selected.\n"
 "\n"
-"Chose abailable device in above pull-down menu\n"
+"Choose available device in above pull-down menu\n"
 "."
 msgstr ""
 
@@ -16327,13 +16347,13 @@ msgstr "ជ្រើស​ព័ត៌មាន​បញ្ចូល"
 
 #: modules/gui/macosx/open.m:128 modules/gui/macosx/open.m:306
 #: modules/gui/macosx/output.m:145 modules/gui/macosx/prefs_widgets.m:1208
-#: modules/gui/macosx/simple_prefs.m:246 modules/gui/macosx/simple_prefs.m:301
+#: modules/gui/macosx/simple_prefs.m:244 modules/gui/macosx/simple_prefs.m:299
 #: modules/gui/qt4/components/preferences_widgets.cpp:269
 #: modules/gui/qt4/components/simple_preferences.cpp:289
 #: modules/gui/qt4/components/sout/sout_widgets.cpp:102
 #: modules/gui/qt4/ui/open.h:243 modules/gui/qt4/ui/open_disk.h:307
 #: modules/gui/qt4/ui/open_file.h:177 modules/gui/qt4/ui/sprefs_audio.h:438
-#: modules/gui/qt4/ui/sprefs_input.h:353 modules/gui/qt4/ui/sprefs_video.h:322
+#: modules/gui/qt4/ui/sprefs_input.h:353 modules/gui/qt4/ui/sprefs_video.h:361
 msgid "Browse..."
 msgstr "រក​មើល..."
 
@@ -16346,7 +16366,7 @@ msgid "Play another media synchronously"
 msgstr "ចាក់​មេឌៀ​ផ្សេង​ទៀត​ដំណាល​គ្នា"
 
 #: modules/gui/macosx/open.m:132 modules/gui/macosx/open.m:305
-#: modules/gui/macosx/simple_prefs.m:279 modules/gui/macosx/wizard.m:348
+#: modules/gui/macosx/simple_prefs.m:277 modules/gui/macosx/wizard.m:348
 #: modules/gui/macosx/wizard.m:416 modules/gui/qt4/ui/sprefs_interface.h:550
 msgid "Choose..."
 msgstr "ជ្រើស..."
@@ -16661,7 +16681,7 @@ msgid "Save File"
 msgstr "រក្សាទុក​ឯកសារ"
 
 #: modules/gui/macosx/output.m:520 modules/gui/macosx/playlist.m:697
-#: modules/gui/macosx/prefs.m:205 modules/gui/macosx/simple_prefs.m:311
+#: modules/gui/macosx/prefs.m:205 modules/gui/macosx/simple_prefs.m:309
 #: modules/gui/qt4/components/sout/profile_selector.cpp:250
 #: modules/gui/qt4/ui/vlm.h:302
 msgid "Save"
@@ -16825,13 +16845,13 @@ msgstr "រក្សាទុក​បញ្ជី​ចាក់"
 msgid "Meta-information"
 msgstr "ព័ត៌មាន​មេតា"
 
-#: modules/gui/macosx/prefs.m:204 modules/gui/macosx/simple_prefs.m:312
+#: modules/gui/macosx/prefs.m:204 modules/gui/macosx/simple_prefs.m:310
 #: modules/gui/qt4/components/simple_preferences.cpp:76
 #: modules/gui/qt4/dialogs/preferences.cpp:49
 msgid "Preferences"
 msgstr "ចំណូល​ចិត្ត"
 
-#: modules/gui/macosx/prefs.m:207 modules/gui/macosx/simple_prefs.m:310
+#: modules/gui/macosx/prefs.m:207 modules/gui/macosx/simple_prefs.m:308
 msgid "Reset All"
 msgstr "កំណត់​ឡើងវិញ​ទាំងអស់"
 
@@ -16840,12 +16860,12 @@ msgstr "កំណត់​ឡើងវិញ​ទាំងអស់"
 msgid "Show Basic"
 msgstr "មូលដ្ឋាន"
 
-#: modules/gui/macosx/prefs.m:226 modules/gui/macosx/simple_prefs.m:696
+#: modules/gui/macosx/prefs.m:226 modules/gui/macosx/simple_prefs.m:692
 #: modules/gui/qt4/dialogs/preferences.cpp:339
 msgid "Reset Preferences"
 msgstr "កំណត់​ចំណង់ចំណូលចិត្ត​ឡើងវិញ"
 
-#: modules/gui/macosx/prefs.m:229 modules/gui/macosx/simple_prefs.m:699
+#: modules/gui/macosx/prefs.m:229 modules/gui/macosx/simple_prefs.m:695
 msgid ""
 "Beware this will reset the VLC media player preferences.\n"
 "Are you sure you want to continue?"
@@ -16865,98 +16885,98 @@ msgstr "ជ្រើស​​ឯកសារ"
 msgid "Select"
 msgstr "ជ្រើស"
 
-#: modules/gui/macosx/simple_prefs.m:119
+#: modules/gui/macosx/simple_prefs.m:117
 msgid "Not Set"
 msgstr "មិន​បាន​កំណត់"
 
-#: modules/gui/macosx/simple_prefs.m:175
+#: modules/gui/macosx/simple_prefs.m:173
 #: modules/gui/qt4/components/simple_preferences.cpp:525
 msgid "Interface Settings"
 msgstr "ការ​កំណត់​ចំណុច​ប្រទាក់"
 
-#: modules/gui/macosx/simple_prefs.m:179
+#: modules/gui/macosx/simple_prefs.m:177
 msgid "General Audio Settings"
 msgstr "ការ​កំណត់​អូឌីយ៉ូ​ទូទៅ"
 
-#: modules/gui/macosx/simple_prefs.m:183
+#: modules/gui/macosx/simple_prefs.m:181
 msgid "General Video Settings"
 msgstr "ការ​កំណត់​វីដេអូ​ទូទៅ"
 
-#: modules/gui/macosx/simple_prefs.m:187
+#: modules/gui/macosx/simple_prefs.m:185
 msgid "Subtitles & OSD"
 msgstr "ចំណងជើង​រង & OSD"
 
-#: modules/gui/macosx/simple_prefs.m:187
+#: modules/gui/macosx/simple_prefs.m:185
 #: modules/gui/qt4/components/simple_preferences.cpp:641
 msgid "Subtitles & On Screen Display Settings"
 msgstr "ការ​កំណត់​ការ​បង្ហាញ​ចំណងជើង​រង & នៅ​លើ​អេក្រង់"
 
-#: modules/gui/macosx/simple_prefs.m:191
+#: modules/gui/macosx/simple_prefs.m:189
 msgid "Input & Codecs"
 msgstr "ព័ត៌មាន​បញ្ចូល & កូដិក"
 
-#: modules/gui/macosx/simple_prefs.m:191
+#: modules/gui/macosx/simple_prefs.m:189
 msgid "Input & Codec settings"
 msgstr "ការ​កំណត់​ព័ត៌មាន​បញ្ចូល & កូដិក"
 
-#: modules/gui/macosx/simple_prefs.m:224
+#: modules/gui/macosx/simple_prefs.m:222
 msgid "Enable Audio"
 msgstr "បើក​អូឌីយ៉ូ"
 
-#: modules/gui/macosx/simple_prefs.m:225
+#: modules/gui/macosx/simple_prefs.m:223
 msgid "General Audio"
 msgstr "អូឌីយ៉ូ​ទូទៅ"
 
-#: modules/gui/macosx/simple_prefs.m:226
+#: modules/gui/macosx/simple_prefs.m:224
 msgid "Preferred Audio language"
 msgstr "ភាសា​អូឌីយ៉ូ​ដែល​ចូលចិត្ត"
 
-#: modules/gui/macosx/simple_prefs.m:227
+#: modules/gui/macosx/simple_prefs.m:225
 msgid "Enable Last.fm submissions"
 msgstr "បើក​ការ​ដាក់​ស្នើ Last.fm"
 
-#: modules/gui/macosx/simple_prefs.m:231
+#: modules/gui/macosx/simple_prefs.m:229
 msgid "Visualization"
 msgstr "រូបភាព​មើល​ឃើញ"
 
-#: modules/gui/macosx/simple_prefs.m:232
+#: modules/gui/macosx/simple_prefs.m:230
 msgid "Default Volume"
 msgstr "កម្រិត​សំឡេង​លំនាំដើម"
 
-#: modules/gui/macosx/simple_prefs.m:235 modules/gui/qt4/dialogs/vlm.cpp:506
+#: modules/gui/macosx/simple_prefs.m:233 modules/gui/qt4/dialogs/vlm.cpp:506
 msgid "Change"
 msgstr "ផ្លាស់ប្ដូរ"
 
-#: modules/gui/macosx/simple_prefs.m:236
+#: modules/gui/macosx/simple_prefs.m:234
 msgid "Change Hotkey"
 msgstr "ផ្លាស់ប្ដូរ​គ្រាប់ចុច​រហ័ស"
 
-#: modules/gui/macosx/simple_prefs.m:240
+#: modules/gui/macosx/simple_prefs.m:238
 msgid "Select an action to change the associated hotkey:"
 msgstr "ជ្រើស​សកម្មភាព ដើម្បី​ផ្លាស់ប្ដូរ​គ្រាប់ចុច​រហ័ស​ដែល​បាន​ភ្ជាប់ ។"
 
-#: modules/gui/macosx/simple_prefs.m:241
+#: modules/gui/macosx/simple_prefs.m:239
 #: modules/gui/qt4/components/preferences_widgets.cpp:1302
 msgid "Action"
 msgstr "អំពើ"
 
-#: modules/gui/macosx/simple_prefs.m:242
+#: modules/gui/macosx/simple_prefs.m:240
 msgid "Shortcut"
 msgstr "ផ្លូវកាត់"
 
-#: modules/gui/macosx/simple_prefs.m:248
+#: modules/gui/macosx/simple_prefs.m:246
 msgid "Repair AVI Files"
 msgstr "ជួសជុល​ឯកសារ AVI"
 
-#: modules/gui/macosx/simple_prefs.m:249
+#: modules/gui/macosx/simple_prefs.m:247
 msgid "Default Caching Level"
 msgstr "កម្រិត​ឃ្លាំង​សម្ងាត់​លំនាំដើម"
 
-#: modules/gui/macosx/simple_prefs.m:250 modules/gui/qt4/ui/open.h:232
+#: modules/gui/macosx/simple_prefs.m:248 modules/gui/qt4/ui/open.h:232
 msgid "Caching"
 msgstr "ដាក់​ក្នុង​ឃ្លាំង"
 
-#: modules/gui/macosx/simple_prefs.m:251
+#: modules/gui/macosx/simple_prefs.m:249
 msgid ""
 "Use the complete preferences to configure custom caching values for each "
 "access module."
@@ -16964,188 +16984,188 @@ msgstr ""
 "ប្រើ​ចំណង់ចំណូលចិត្ត​ពេញលេញ​ ដើម្បី​កំណត់​រចនា​សម្ព័ន្ធ​តម្លៃ​ឃ្លាំង​សម្ងាត់​ផ្ទាល់ខ្លួន​សម្រាប់​ម៉ូឌុល​ចូល​ដំណើរការ​"
 "នីមួយៗ ។"
 
-#: modules/gui/macosx/simple_prefs.m:252
+#: modules/gui/macosx/simple_prefs.m:250
 msgid "HTTP Proxy"
 msgstr "ប្រូកស៊ី HTTP"
 
-#: modules/gui/macosx/simple_prefs.m:253
+#: modules/gui/macosx/simple_prefs.m:251
 msgid "Password for HTTP Proxy"
 msgstr "ពាក្យ​សម្ងាត់​សម្រាប់​ប្រូកស៊ី HTTP"
 
-#: modules/gui/macosx/simple_prefs.m:254
+#: modules/gui/macosx/simple_prefs.m:252
 msgid "Codecs / Muxers"
 msgstr "កូដិក / Muxers"
 
-#: modules/gui/macosx/simple_prefs.m:256
+#: modules/gui/macosx/simple_prefs.m:254
 msgid "Post-Processing Quality"
 msgstr "គុណភាព​ដំណើរការ​តាមក្រោយ"
 
-#: modules/gui/macosx/simple_prefs.m:261
+#: modules/gui/macosx/simple_prefs.m:259
 #, fuzzy
 msgid "Interface style"
 msgstr "ម៉ូឌុល​ចំណុច​ប្រទាក់"
 
-#: modules/gui/macosx/simple_prefs.m:262
+#: modules/gui/macosx/simple_prefs.m:260
 #, fuzzy
 msgid "Dark"
 msgstr "Darkwave"
 
-#: modules/gui/macosx/simple_prefs.m:263
+#: modules/gui/macosx/simple_prefs.m:261
 #, fuzzy
 msgid "Bright"
 msgstr "ពន្លឺ"
 
-#: modules/gui/macosx/simple_prefs.m:264
+#: modules/gui/macosx/simple_prefs.m:262
 msgid "Album art download policy"
 msgstr "គោលការ​ទាញយក​សិល្បៈ​អាល់ប៊ុម"
 
-#: modules/gui/macosx/simple_prefs.m:265
+#: modules/gui/macosx/simple_prefs.m:263
 #, fuzzy
 msgid "Show video within the main window"
 msgstr "គូសវាស​វីដេអូ ដើម្បី​បំពេញ​បង្អួច"
 
-#: modules/gui/macosx/simple_prefs.m:267
+#: modules/gui/macosx/simple_prefs.m:265
 msgid "Show Fullscreen Controller"
 msgstr "បង្ហាញ​វត្ថុ​ត្រួតពិនិត្យ​ពេញអេក្រង់"
 
-#: modules/gui/macosx/simple_prefs.m:269
+#: modules/gui/macosx/simple_prefs.m:267
 #: modules/gui/qt4/ui/sprefs_interface.h:517
 msgid "Privacy / Network Interaction"
 msgstr "អន្ដរ​អំពើ​ភាព​ឯកជន / បណ្ដាញ"
 
-#: modules/gui/macosx/simple_prefs.m:272
+#: modules/gui/macosx/simple_prefs.m:270
 msgid "Automatically check for updates"
 msgstr "ពិនិត្យ​រក​ភាព​ទាន់សម័យ​ដោយ​ស្វ័យប្រវត្តិ"
 
-#: modules/gui/macosx/simple_prefs.m:274
+#: modules/gui/macosx/simple_prefs.m:272
 msgid "Enable Growl notifications (on playlist item change)"
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:277
+#: modules/gui/macosx/simple_prefs.m:275
 msgid "Default Encoding"
 msgstr "ការ​អ៊ិនកូដ​លំនាំដើម"
 
-#: modules/gui/macosx/simple_prefs.m:278
+#: modules/gui/macosx/simple_prefs.m:276
 msgid "Display Settings"
 msgstr "កំណត់​ការ​បង្ហាញ"
 
-#: modules/gui/macosx/simple_prefs.m:280
+#: modules/gui/macosx/simple_prefs.m:278
 msgid "Font Color"
 msgstr "ពណ៌​ពុម្ពអក្សរ"
 
-#: modules/gui/macosx/simple_prefs.m:281
+#: modules/gui/macosx/simple_prefs.m:279
 msgid "Font Size"
 msgstr "ទំហំ​ពុម្ពអក្សរ"
 
-#: modules/gui/macosx/simple_prefs.m:283
+#: modules/gui/macosx/simple_prefs.m:281
 msgid "Subtitle Languages"
 msgstr "ភាសា​ចំណងជើង​រង"
 
-#: modules/gui/macosx/simple_prefs.m:284
+#: modules/gui/macosx/simple_prefs.m:282
 msgid "Preferred Subtitle Language"
 msgstr "ភាសា​ចំណងជើង​រង​ដែល​ចូលចិត្ត"
 
-#: modules/gui/macosx/simple_prefs.m:286
+#: modules/gui/macosx/simple_prefs.m:284
 msgid "Enable OSD"
 msgstr "បើក OSD"
 
-#: modules/gui/macosx/simple_prefs.m:288
+#: modules/gui/macosx/simple_prefs.m:286
 #, fuzzy
 msgid "Force Bold"
 msgstr "តម្រូវ​ឲ្យ​ប្រើ​អូឌីយ៉ូ​ម៉ូណូ"
 
-#: modules/gui/macosx/simple_prefs.m:289
+#: modules/gui/macosx/simple_prefs.m:287
 msgid ""
 "More options on background, shadow and outline are available in the advanced "
 "preferences."
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:292
+#: modules/gui/macosx/simple_prefs.m:290
 msgid "Black screens in Fullscreen mode"
 msgstr "អេក្រង់​ខ្មៅ​នៅ​ក្នុង​របៀប​ពេញ​អេក្រង់"
 
-#: modules/gui/macosx/simple_prefs.m:294 modules/stream_out/display.c:53
-#: modules/gui/qt4/ui/sprefs_video.h:307
+#: modules/gui/macosx/simple_prefs.m:292 modules/stream_out/display.c:53
+#: modules/gui/qt4/ui/sprefs_video.h:343
 msgid "Display"
 msgstr "បង្ហាញ"
 
-#: modules/gui/macosx/simple_prefs.m:295
+#: modules/gui/macosx/simple_prefs.m:293
 msgid "Enable Video"
 msgstr "បើក​វីដេអូ"
 
-#: modules/gui/macosx/simple_prefs.m:298
+#: modules/gui/macosx/simple_prefs.m:296
 msgid "Output module"
 msgstr "ម៉ូឌុល​លទ្ធផល"
 
-#: modules/gui/macosx/simple_prefs.m:300 modules/gui/qt4/ui/sprefs_video.h:321
+#: modules/gui/macosx/simple_prefs.m:298 modules/gui/qt4/ui/sprefs_video.h:360
 msgid "Video snapshots"
 msgstr "ថត​យក​រូបភាព​អេក្រង់​វីដេអូ"
 
-#: modules/gui/macosx/simple_prefs.m:302 modules/meta_engine/folder.c:62
+#: modules/gui/macosx/simple_prefs.m:300 modules/meta_engine/folder.c:62
 msgid "Folder"
 msgstr "ថត"
 
-#: modules/gui/macosx/simple_prefs.m:303 modules/gui/qt4/ui/sprefs_video.h:326
+#: modules/gui/macosx/simple_prefs.m:301 modules/gui/qt4/ui/sprefs_video.h:365
 msgid "Format"
 msgstr "ទ្រង់ទ្រាយ"
 
-#: modules/gui/macosx/simple_prefs.m:304 modules/gui/qt4/ui/sprefs_video.h:324
+#: modules/gui/macosx/simple_prefs.m:302 modules/gui/qt4/ui/sprefs_video.h:363
 msgid "Prefix"
 msgstr "បុព្វបទ"
 
-#: modules/gui/macosx/simple_prefs.m:305 modules/gui/qt4/ui/sprefs_video.h:327
+#: modules/gui/macosx/simple_prefs.m:303 modules/gui/qt4/ui/sprefs_video.h:366
 msgid "Sequential numbering"
 msgstr "ការ​ដាក់​លេខរៀងតាម​លំដាប់"
 
-#: modules/gui/macosx/simple_prefs.m:464
+#: modules/gui/macosx/simple_prefs.m:461
 msgid "Last check on: %@"
 msgstr "បាន​ពិនិត្យ​មើល​ចុងក្រោយ​នៅ ៖ %@"
 
-#: modules/gui/macosx/simple_prefs.m:467
+#: modules/gui/macosx/simple_prefs.m:463
 msgid "No check was performed yet."
 msgstr "គ្មាន​ការ​ត្រួតពិនិត្យ​ត្រូវ​បាន​អនុវត្ត​នៅ​ឡើយ​ទេ ។"
 
-#: modules/gui/macosx/simple_prefs.m:574 modules/gui/macosx/simple_prefs.m:605
-#: modules/gui/macosx/simple_prefs.m:1113
+#: modules/gui/macosx/simple_prefs.m:570 modules/gui/macosx/simple_prefs.m:601
+#: modules/gui/macosx/simple_prefs.m:1109
 #: modules/gui/qt4/components/simple_preferences.cpp:498
 msgid "Custom"
 msgstr "ផ្ទាល់ខ្លួន"
 
-#: modules/gui/macosx/simple_prefs.m:574
+#: modules/gui/macosx/simple_prefs.m:570
 #: modules/gui/qt4/components/simple_preferences.cpp:499
 msgid "Lowest latency"
 msgstr "ភាព​មើល​មិន​ឃើញ​ទាប​បំផុត"
 
-#: modules/gui/macosx/simple_prefs.m:574
+#: modules/gui/macosx/simple_prefs.m:570
 #: modules/gui/qt4/components/simple_preferences.cpp:500
 msgid "Low latency"
 msgstr "ភាព​មើលមិនឃើញ​ទាប"
 
-#: modules/gui/macosx/simple_prefs.m:575
+#: modules/gui/macosx/simple_prefs.m:571
 #: modules/gui/qt4/components/simple_preferences.cpp:502
 msgid "High latency"
 msgstr "ភាព​មើល​មិន​ឃើញ​ខ្ពស់"
 
-#: modules/gui/macosx/simple_prefs.m:575
+#: modules/gui/macosx/simple_prefs.m:571
 #: modules/gui/qt4/components/simple_preferences.cpp:503
 msgid "Higher latency"
 msgstr "ភាព​មើល​មិនឃើញ​ខ្ពស់​ជាង"
 
-#: modules/gui/macosx/simple_prefs.m:1035
+#: modules/gui/macosx/simple_prefs.m:1031
 msgid "Choose the folder to save your video snapshots to."
 msgstr "ជ្រើស​ថត​ដែលត្រូវ​រក្សាទុក​រូបថត​អក្រង់​វីដេអូ​របស់​អ្នក ។"
 
-#: modules/gui/macosx/simple_prefs.m:1037
-#: modules/gui/macosx/simple_prefs.m:1127
+#: modules/gui/macosx/simple_prefs.m:1033
+#: modules/gui/macosx/simple_prefs.m:1123
 msgid "Choose"
 msgstr "ជ្រើស"
 
-#: modules/gui/macosx/simple_prefs.m:1125
+#: modules/gui/macosx/simple_prefs.m:1121
 #, fuzzy
 msgid "Choose the directory or filename where the records will be stored."
 msgstr "ថត ឬ​ឈ្មោះ​ឯកសារ​ដែល​ថត​នឹង​ត្រូវ​បាន​តម្រៀប ។"
 
-#: modules/gui/macosx/simple_prefs.m:1147
+#: modules/gui/macosx/simple_prefs.m:1143
 msgid ""
 "Press new keys for\n"
 "\"%@\""
@@ -17153,21 +17173,21 @@ msgstr ""
 "ចុង​គ្រាប់ចុច​ថ្មី​សម្រាប់\n"
 "\"%@\""
 
-#: modules/gui/macosx/simple_prefs.m:1231
+#: modules/gui/macosx/simple_prefs.m:1227
 msgid "Invalid combination"
 msgstr "បន្សំ​មិនត្រឹមត្រូវ"
 
-#: modules/gui/macosx/simple_prefs.m:1232
+#: modules/gui/macosx/simple_prefs.m:1228
 msgid "Regrettably, these keys cannot be assigned as hotkey shortcuts."
 msgstr "គួរ​ឲ្យ​ស្ដាយ គ្រាប់ចុច​ទាំងនេះ​មិនអាច​កំណត់​ជា​ផ្លូវ​កាត់​គ្រាប់ចុច​រហ័ស​បានទេ ។"
 
+#: modules/gui/macosx/simple_prefs.m:1240
 #: modules/gui/macosx/simple_prefs.m:1244
-#: modules/gui/macosx/simple_prefs.m:1248
 msgid "This combination is already taken by \"%@\"."
 msgstr "ការ​បន្សំ​នេះ​គឺ​ត្រូវបាន​ជ្រើស​រួចហើយ \"%@\" ។"
 
 #: modules/gui/macosx/TrackSynchronization.m:54
-#: modules/gui/qt4/components/extended_panels.cpp:1529
+#: modules/gui/qt4/components/extended_panels.cpp:1530
 msgid "Audio/Video"
 msgstr "អូឌីយ៉ូ/វីដេអូ"
 
@@ -17188,7 +17208,7 @@ msgstr ""
 "អូឌីយ៉ូ​គឺ​នៅ​ខាង​មុខ​វីដេអូ"
 
 #: modules/gui/macosx/TrackSynchronization.m:58
-#: modules/gui/qt4/components/extended_panels.cpp:1541
+#: modules/gui/qt4/components/extended_panels.cpp:1542
 msgid "Subtitles/Video"
 msgstr "ចំណងជើង​រង/វីដេអូ"
 
@@ -18059,349 +18079,349 @@ msgstr ""
 msgid "Ncurses interface"
 msgstr "ចំណុច​ប្រទាក់ Ncurses"
 
-#: modules/gui/ncurses.c:768
+#: modules/gui/ncurses.c:770
 #, c-format
 msgid "  [%s]"
 msgstr "  [%s]"
 
-#: modules/gui/ncurses.c:772
+#: modules/gui/ncurses.c:774
 #, c-format
 msgid "      %s: %s"
 msgstr "      %s ៖ %s"
 
-#: modules/gui/ncurses.c:806
+#: modules/gui/ncurses.c:808
 #, fuzzy
 msgid "  [Incoming]"
 msgstr "+-[Incoming]"
 
-#: modules/gui/ncurses.c:808
+#: modules/gui/ncurses.c:810
 #, fuzzy, c-format
 msgid "      input bytes read : %8.0f KiB"
 msgstr "| បញ្ចូល​ការ​អាន​ជា​បៃ ៖ %8.0f KiB"
 
-#: modules/gui/ncurses.c:810
+#: modules/gui/ncurses.c:812
 #, fuzzy, c-format
 msgid "      input bitrate    :   %6.0f kb/s"
 msgstr "អត្រា​ប៊ីត​ព័ត៌មាន​បញ្ចូល​របស់ |    ៖   %6.0f kb/s"
 
-#: modules/gui/ncurses.c:812
+#: modules/gui/ncurses.c:814
 #, fuzzy, c-format
 msgid "      demux bytes read : %8.0f KiB"
 msgstr "| អាន​បៃ demux ៖ %8.0f KiB"
 
-#: modules/gui/ncurses.c:814
+#: modules/gui/ncurses.c:816
 #, fuzzy, c-format
 msgid "      demux bitrate    :   %6.0f kb/s"
 msgstr "អត្រា​ប៊ីត demux |    ៖   %6.0f kb/s"
 
-#: modules/gui/ncurses.c:820
+#: modules/gui/ncurses.c:822
 #, fuzzy
 msgid "  [Video Decoding]"
 msgstr "+-[Video Decoding]"
 
-#: modules/gui/ncurses.c:822
+#: modules/gui/ncurses.c:824
 #, fuzzy, c-format
 msgid "      video decoded    :    %<PRId64>"
 msgstr "ឌិកូដ​វីដេអូ​របស់ |     ៖    %5i"
 
-#: modules/gui/ncurses.c:824
+#: modules/gui/ncurses.c:826
 #, fuzzy, c-format
 msgid "      frames displayed :    %<PRId64>"
 msgstr "បាន​បង្ហាញ​ស៊ុម​របស់ | ៖    %5i"
 
-#: modules/gui/ncurses.c:826
+#: modules/gui/ncurses.c:828
 #, fuzzy, c-format
 msgid "      frames lost      :    %<PRId64>"
 msgstr "បាត់បង់​ស៊ុម​របស់ |       ៖    %5i"
 
-#: modules/gui/ncurses.c:832
+#: modules/gui/ncurses.c:834
 #, fuzzy
 msgid "  [Audio Decoding]"
 msgstr "+-[Audio Decoding]"
 
-#: modules/gui/ncurses.c:834
+#: modules/gui/ncurses.c:836
 #, fuzzy, c-format
 msgid "      audio decoded    :    %<PRId64>"
 msgstr "បាន​ឌិកូដ​អូឌីយ៉ូរបស់ |     ៖    %5i"
 
-#: modules/gui/ncurses.c:836
+#: modules/gui/ncurses.c:838
 #, fuzzy, c-format
 msgid "      buffers played   :    %<PRId64>"
 msgstr "បាន​ចាក់​សតិបណ្ដោះ​អាសន្ន |   ៖    %5i"
 
-#: modules/gui/ncurses.c:838
+#: modules/gui/ncurses.c:840
 #, fuzzy, c-format
 msgid "      buffers lost     :    %<PRId64>"
 msgstr "បាត់បង់​សតិបណ្ដោះ​អាសន្ន |      ៖    %5i"
 
-#: modules/gui/ncurses.c:843
+#: modules/gui/ncurses.c:845
 #, fuzzy
 msgid "  [Streaming]"
 msgstr "+-[Streaming]"
 
-#: modules/gui/ncurses.c:845
+#: modules/gui/ncurses.c:847
 #, fuzzy, c-format
 msgid "      packets sent     :    %5i"
 msgstr "| បាន​ផ្ញើ​កញ្ចប់     ៖    %5i"
 
-#: modules/gui/ncurses.c:846
+#: modules/gui/ncurses.c:848
 #, fuzzy, c-format
 msgid "      bytes sent       : %8.0f KiB"
 msgstr "| បៃ​បានផ្ញើ       : %8.0f KiB"
 
-#: modules/gui/ncurses.c:848
+#: modules/gui/ncurses.c:850
 #, fuzzy, c-format
 msgid "      sending bitrate  :   %6.0f kb/s"
 msgstr "អត្រា​ប៊ីត​នៃ​ការ​ផ្ញើ​របស់ |  :   %6.0f kb/s"
 
-#: modules/gui/ncurses.c:866
+#: modules/gui/ncurses.c:868
 msgid "[Display]"
 msgstr "[បង្ហាញ]"
 
-#: modules/gui/ncurses.c:868
+#: modules/gui/ncurses.c:870
 #, fuzzy
 msgid " h,H                    Show/Hide help box"
 msgstr "     h,H         បង្ហាញ/​លាក់​ប្រអប់​ជំនួយ"
 
-#: modules/gui/ncurses.c:869
+#: modules/gui/ncurses.c:871
 #, fuzzy
 msgid " i                      Show/Hide info box"
 msgstr "     i           បង្ហាញ​/​លាក់​ប្រអប់​ព័ត៌មាន"
 
-#: modules/gui/ncurses.c:870
+#: modules/gui/ncurses.c:872
 #, fuzzy
 msgid " m                      Show/Hide metadata box"
 msgstr "     m           បង្ហាញ​/​លាក់​ប្រអប់​ទិន្នន័យ​មេតា"
 
-#: modules/gui/ncurses.c:871
+#: modules/gui/ncurses.c:873
 #, fuzzy
 msgid " L                      Show/Hide messages box"
 msgstr "     L           បង្ហាញ​/លាក់​ប្រអប់​សារ"
 
-#: modules/gui/ncurses.c:872
+#: modules/gui/ncurses.c:874
 #, fuzzy
 msgid " P                      Show/Hide playlist box"
 msgstr "     P           បង្ហាញ​/​លាក់​ប្រអប់​បញ្ជី​ចាក់"
 
-#: modules/gui/ncurses.c:873
+#: modules/gui/ncurses.c:875
 #, fuzzy
 msgid " B                      Show/Hide filebrowser"
 msgstr "     B           បង្ហាញ​/​លាក់​កម្មវិធី​រុករក​ឯកសារ"
 
-#: modules/gui/ncurses.c:874
+#: modules/gui/ncurses.c:876
 #, fuzzy
 msgid " x                      Show/Hide objects box"
 msgstr "     x           បង្ហាញ​/​លាក់​ប្រអប់​វត្ថុ"
 
-#: modules/gui/ncurses.c:875
+#: modules/gui/ncurses.c:877
 #, fuzzy
 msgid " S                      Show/Hide statistics box"
 msgstr "     S           បង្ហាញ/​លាក់​ប្រអប់​ស្ថិតិ"
 
-#: modules/gui/ncurses.c:876
+#: modules/gui/ncurses.c:878
 #, fuzzy
 msgid " Esc                    Close Add/Search entry"
 msgstr "     Esc         បិទ​ធាតុ បន្ថែម/​ស្វែងរក"
 
-#: modules/gui/ncurses.c:877
+#: modules/gui/ncurses.c:879
 #, fuzzy
 msgid " Ctrl-l                 Refresh the screen"
 msgstr "     Ctrl-l          ធ្វើ​ឲ្យ​អេក្រង់​ស្រស់"
 
-#: modules/gui/ncurses.c:881
+#: modules/gui/ncurses.c:883
 msgid "[Global]"
 msgstr "[សកល]"
 
-#: modules/gui/ncurses.c:883
+#: modules/gui/ncurses.c:885
 #, fuzzy
 msgid " q, Q, Esc              Quit"
 msgstr "     q, Q, Esc   ចេញ"
 
-#: modules/gui/ncurses.c:884
+#: modules/gui/ncurses.c:886
 #, fuzzy
 msgid " s                      Stop"
 msgstr "     s           បញ្ឈប់"
 
-#: modules/gui/ncurses.c:885
+#: modules/gui/ncurses.c:887
 #, fuzzy
 msgid " <space>                Pause/Play"
 msgstr "     <space>     ផ្អាក​/​ចាក់"
 
-#: modules/gui/ncurses.c:886
+#: modules/gui/ncurses.c:888
 #, fuzzy
 msgid " f                      Toggle Fullscreen"
 msgstr "     f           បិទ​/​បើក​ពេញ​អេក្រង់"
 
-#: modules/gui/ncurses.c:887
+#: modules/gui/ncurses.c:889
 #, fuzzy
 msgid " n, p                   Next/Previous playlist item"
 msgstr "     n, p        ធាតុ​បញ្ជី​ចាក់​បន្ទាប់/មុន"
 
-#: modules/gui/ncurses.c:888
+#: modules/gui/ncurses.c:890
 #, fuzzy
 msgid " [, ]                   Next/Previous title"
 msgstr "     [, ]        ចំណង​ជើង​បន្ទាប់​/​មុន"
 
-#: modules/gui/ncurses.c:889
+#: modules/gui/ncurses.c:891
 #, fuzzy
 msgid " <, >                   Next/Previous chapter"
 msgstr "     <, >        ជំពូក​បន្ទាប់/​មុន"
 
 #. xgettext: You can use ← and → characters
-#: modules/gui/ncurses.c:891
+#: modules/gui/ncurses.c:893
 #, fuzzy, c-format
 msgid " <left>,<right>         Seek -/+ 1%%"
 msgstr "     <right>     រកមើល +1%%"
 
-#: modules/gui/ncurses.c:892
+#: modules/gui/ncurses.c:894
 #, fuzzy
 msgid " a, z                   Volume Up/Down"
 msgstr "     z           បន្ថយ​សំឡេង"
 
 #. xgettext: You can use ↑ and ↓ characters
-#: modules/gui/ncurses.c:894
+#: modules/gui/ncurses.c:896
 #, fuzzy
 msgid " <up>,<down>            Navigate through the box line by line"
 msgstr "     <up>,<down>     រុករក​តាម​ប្រអប់​មួយ​បន្ទាត់ៗ"
 
 #. xgettext: You can use ⇞ and ⇟ characters
-#: modules/gui/ncurses.c:896
+#: modules/gui/ncurses.c:898
 #, fuzzy
 msgid " <pageup>,<pagedown>    Navigate through the box page by page"
 msgstr "     <pgup>,<pgdown> រុករក​​តាម​ប្រអប់​មួយ​ទំព័រ​ៗ"
 
 #. xgettext: You can use ↖ and ↘ characters
-#: modules/gui/ncurses.c:898
+#: modules/gui/ncurses.c:900
 msgid " <start>,<end>          Navigate to start/end of box"
 msgstr ""
 
-#: modules/gui/ncurses.c:902
+#: modules/gui/ncurses.c:904
 msgid "[Playlist]"
 msgstr "[បញ្ជី​ចាក់]"
 
-#: modules/gui/ncurses.c:904
+#: modules/gui/ncurses.c:906
 #, fuzzy
 msgid " r                      Toggle Random playing"
 msgstr "     r           បិទ​/​បើក​ការ​ចាក់​ចៃដន្យ"
 
-#: modules/gui/ncurses.c:905
+#: modules/gui/ncurses.c:907
 #, fuzzy
 msgid " l                      Toggle Loop Playlist"
 msgstr "     l           បិទ​​/​បើក​ការ​ចាក់​រង្វិល​ជុំ"
 
-#: modules/gui/ncurses.c:906
+#: modules/gui/ncurses.c:908
 #, fuzzy
 msgid " R                      Toggle Repeat item"
 msgstr "     R           បិទ​/​បើក​ការ​ចាក់​ឡើងវិញ"
 
-#: modules/gui/ncurses.c:907
+#: modules/gui/ncurses.c:909
 #, fuzzy
 msgid " o                      Order Playlist by title"
 msgstr "     o           តម្រៀប​បញ្ជី​ចាក់​តាម​ចំណង​ជើង"
 
-#: modules/gui/ncurses.c:908
+#: modules/gui/ncurses.c:910
 #, fuzzy
 msgid " O                      Reverse order Playlist by title"
 msgstr "     O           ច្រាស​លំដាប់​បញ្ជី​ចាក់​តាម​ចំណងជើង"
 
-#: modules/gui/ncurses.c:909
+#: modules/gui/ncurses.c:911
 #, fuzzy
 msgid " g                      Go to the current playing item"
 msgstr "     g           ទៅកាន់​ធាតុ​កំពុង​ចាក់​បច្ចុប្បន្ន"
 
-#: modules/gui/ncurses.c:910
+#: modules/gui/ncurses.c:912
 #, fuzzy
 msgid " /                      Look for an item"
 msgstr "     /           រក​មើល​ធាតុ​មួយ"
 
-#: modules/gui/ncurses.c:911
+#: modules/gui/ncurses.c:913
 #, fuzzy
 msgid " A                      Add an entry"
 msgstr "     A           បន្ថែម​ធាតុ"
 
 #. xgettext: You can use ⌫ character to translate <backspace>
-#: modules/gui/ncurses.c:913
+#: modules/gui/ncurses.c:915
 #, fuzzy
 msgid " D, <backspace>, <del>  Delete an entry"
 msgstr "     <backspace> លុប​ធាតុ"
 
-#: modules/gui/ncurses.c:914
+#: modules/gui/ncurses.c:916
 #, fuzzy
 msgid " e                      Eject (if stopped)"
 msgstr "     e           ច្រាន​ចេញ (នៅពេល​ឈប់)"
 
-#: modules/gui/ncurses.c:918
+#: modules/gui/ncurses.c:920
 msgid "[Filebrowser]"
 msgstr "[កម្មវិធី​រុករក​ឯកសារ]"
 
-#: modules/gui/ncurses.c:920
+#: modules/gui/ncurses.c:922
 #, fuzzy
 msgid " <enter>                Add the selected file to the playlist"
 msgstr "     <enter>     បន្ថែម​ឯកសារ​ដែល​បាន​ជ្រើស​ទៅកាន់​បញ្ជី​ចាក់"
 
-#: modules/gui/ncurses.c:921
+#: modules/gui/ncurses.c:923
 #, fuzzy
 msgid " <space>                Add the selected directory to the playlist"
 msgstr "     <space>     បន្ថែម​ថត​ដែល​បាន​ជ្រើស​ទៅកាន់​បញ្ជី​ចាក់"
 
-#: modules/gui/ncurses.c:922
+#: modules/gui/ncurses.c:924
 #, fuzzy
 msgid " .                      Show/Hide hidden files"
 msgstr "     .           បង្ហាញ/​លាក់​ឯកសារ​ដែល​បាន​លាក់"
 
-#: modules/gui/ncurses.c:926
+#: modules/gui/ncurses.c:928
 msgid "[Player]"
 msgstr "[កម្មវិធី​ចាក់]"
 
 #. xgettext: You can use ↑ and ↓ characters
-#: modules/gui/ncurses.c:929
+#: modules/gui/ncurses.c:931
 #, fuzzy, c-format
 msgid " <up>,<down>            Seek +/-5%%"
 msgstr "     <up>,<down>     Seek +/-5%%"
 
-#: modules/gui/ncurses.c:1049
+#: modules/gui/ncurses.c:1051
 msgid "[Repeat] "
 msgstr "[ចាក់​ឡើងវិញ] "
 
-#: modules/gui/ncurses.c:1050
+#: modules/gui/ncurses.c:1052
 msgid "[Random] "
 msgstr "[ចៃដន្យ] "
 
-#: modules/gui/ncurses.c:1051
+#: modules/gui/ncurses.c:1053
 msgid "[Loop]"
 msgstr "[វិល​ជុំ]"
 
-#: modules/gui/ncurses.c:1060
+#: modules/gui/ncurses.c:1062
 #, c-format
 msgid " Source   : %s"
 msgstr " ប្រភព    ៖ %s"
 
-#: modules/gui/ncurses.c:1093
+#: modules/gui/ncurses.c:1095
 #, fuzzy, c-format
 msgid " Position : %s/%s"
 msgstr " ទីតាំង ៖ %s/%s (%.2f%%)"
 
-#: modules/gui/ncurses.c:1096
+#: modules/gui/ncurses.c:1098
 #, fuzzy, c-format
 msgid " Volume   : %u%%"
 msgstr " កម្រិត​សំឡេង    ៖ %i%%"
 
-#: modules/gui/ncurses.c:1102
+#: modules/gui/ncurses.c:1104
 #, fuzzy, c-format
 msgid " Title    : %<PRId64>/%d"
 msgstr " ចំណងជើង​រង     ៖ %d/%d"
 
-#: modules/gui/ncurses.c:1108
+#: modules/gui/ncurses.c:1110
 #, fuzzy, c-format
 msgid " Chapter  : %<PRId64>/%d"
 msgstr " ជំពូក   ៖ %d/%d"
 
-#: modules/gui/ncurses.c:1113
+#: modules/gui/ncurses.c:1115
 #, fuzzy
 msgid " Source: <no current item> "
 msgstr " ប្រភព ៖ <គ្មាន​ធាតុ​បច្ចុប្បន្ន​ទេ> %s"
 
-#: modules/gui/ncurses.c:1115
+#: modules/gui/ncurses.c:1117
 msgid " [ h for help ]"
 msgstr " [ h សម្រាប់​ជំនួយ ]"
 
@@ -18488,7 +18508,7 @@ msgstr "របៀប​រង្វិល​ជុំ/ធ្វើ​ម្ដ�
 
 #: modules/gui/qt4/components/controller.hpp:116
 #: modules/gui/qt4/components/controller.hpp:129
-#: modules/gui/qt4/components/open_panels.cpp:250
+#: modules/gui/qt4/components/open_panels.cpp:252
 msgid "Open subtitles file"
 msgstr "បើក​ឯកសារ​ចំណងជើង​រង"
 
@@ -18611,92 +18631,92 @@ msgid ""
 "Controls will automatically appear here."
 msgstr ""
 
-#: modules/gui/qt4/components/extended_panels.cpp:1042
-#: modules/gui/qt4/components/extended_panels.cpp:1098
+#: modules/gui/qt4/components/extended_panels.cpp:1043
+#: modules/gui/qt4/components/extended_panels.cpp:1099
 msgid "Preamp\n"
 msgstr "អាំភ្លី​អេឡិចទ្រិចត្រូនិក\n"
 
-#: modules/gui/qt4/components/extended_panels.cpp:1043
-#: modules/gui/qt4/components/extended_panels.cpp:1099
+#: modules/gui/qt4/components/extended_panels.cpp:1044
+#: modules/gui/qt4/components/extended_panels.cpp:1100
 msgid "dB"
 msgstr "dB"
 
-#: modules/gui/qt4/components/extended_panels.cpp:1182
 #: modules/gui/qt4/components/extended_panels.cpp:1183
+#: modules/gui/qt4/components/extended_panels.cpp:1184
 #: modules/gui/qt4/ui/open.h:236
 msgid " ms"
 msgstr ""
 
-#: modules/gui/qt4/components/extended_panels.cpp:1184
-#: modules/gui/qt4/components/extended_panels.cpp:1186
+#: modules/gui/qt4/components/extended_panels.cpp:1185
 #: modules/gui/qt4/components/extended_panels.cpp:1187
+#: modules/gui/qt4/components/extended_panels.cpp:1188
 #, fuzzy
 msgid " dB"
 msgstr "dB"
 
-#: modules/gui/qt4/components/extended_panels.cpp:1186
+#: modules/gui/qt4/components/extended_panels.cpp:1187
 msgid ""
 "Knee\n"
 "radius"
 msgstr ""
 
-#: modules/gui/qt4/components/extended_panels.cpp:1187
+#: modules/gui/qt4/components/extended_panels.cpp:1188
 msgid ""
 "Makeup\n"
 "gain"
 msgstr ""
 
-#: modules/gui/qt4/components/extended_panels.cpp:1352
+#: modules/gui/qt4/components/extended_panels.cpp:1353
 msgid "Enable spatializer"
 msgstr "អនុញ្ញាត spatializer"
 
-#: modules/gui/qt4/components/extended_panels.cpp:1505
+#: modules/gui/qt4/components/extended_panels.cpp:1506
 #, fuzzy
 msgid "(Hastened)"
 msgstr "លឿន​ជាង (ល្អ)"
 
-#: modules/gui/qt4/components/extended_panels.cpp:1507
+#: modules/gui/qt4/components/extended_panels.cpp:1508
 #, fuzzy
 msgid "(Delayed)"
 msgstr "ពន្យារ​​ពេល"
 
-#: modules/gui/qt4/components/extended_panels.cpp:1533
+#: modules/gui/qt4/components/extended_panels.cpp:1534
 #, fuzzy
 msgid "Audio track synchronization:"
 msgstr "ការ​ធ្វើសមកាលកម្មវ​បទ"
 
-#: modules/gui/qt4/components/extended_panels.cpp:1545
+#: modules/gui/qt4/components/extended_panels.cpp:1546
 #, fuzzy
 msgid "Subtitle track syncronization:"
 msgstr "ការ​ធ្វើសមកាលកម្មវ​បទ"
 
-#: modules/gui/qt4/components/extended_panels.cpp:1552
+#: modules/gui/qt4/components/extended_panels.cpp:1553
 #, fuzzy
 msgid "Subtitles speed:"
 msgstr "អ៊ិនកូឌ័រ​ចំណងជើង​រង"
 
-#: modules/gui/qt4/components/extended_panels.cpp:1566
+#: modules/gui/qt4/components/extended_panels.cpp:1567
 #, fuzzy
 msgid "Subtitles duration factor:"
 msgstr "ការ​លៃតម្រូវ​ចំណងជើង​រង"
 
-#: modules/gui/qt4/components/extended_panels.cpp:1594
+#: modules/gui/qt4/components/extended_panels.cpp:1595
 msgid "Force update of this dialog's values"
 msgstr "តម្រូវ​ឲ្យ​ប្រើ​ភាព​ទាន់សម័យ​របស់​តម្លៃ​របស់​ប្រអប់​នេះ"
 
-#: modules/gui/qt4/components/extended_panels.cpp:1677
+#: modules/gui/qt4/components/extended_panels.cpp:1678
 msgid ""
 "Extend subtitles duration by this value.\n"
 "Set 0 to disable."
 msgstr ""
 
-#: modules/gui/qt4/components/extended_panels.cpp:1682
+#: modules/gui/qt4/components/extended_panels.cpp:1683
 msgid ""
 "Multiply subtitles duration by this value.\n"
 "Set 0 to disable."
 msgstr ""
 
-#: modules/gui/qt4/components/extended_panels.cpp:1687
+#: modules/gui/qt4/components/extended_panels.cpp:1688
 msgid ""
 "Recalculate subtitles duration according\n"
 "to their content and this value.\n"
@@ -18833,93 +18853,93 @@ msgstr "ជ្រើស​ឧបករណ៍​ ឬ​ថត VIDEO_TS"
 msgid "Select a device or a VIDEO_TS folder"
 msgstr "ជ្រើស​ឧបករណ៍ ឬ​ថត VIDEO_TS"
 
-#: modules/gui/qt4/components/open_panels.cpp:142
-#: modules/gui/qt4/components/open_panels.cpp:220
+#: modules/gui/qt4/components/open_panels.cpp:144
+#: modules/gui/qt4/components/open_panels.cpp:222
 msgid "Select one or multiple files"
 msgstr "ជ្រើស​ឯកសារ​មួយ ឬ​ច្រើន"
 
-#: modules/gui/qt4/components/open_panels.cpp:157
+#: modules/gui/qt4/components/open_panels.cpp:159
 msgid "File names:"
 msgstr "ឈ្មោះ​ឯកសារ ៖"
 
-#: modules/gui/qt4/components/open_panels.cpp:159
+#: modules/gui/qt4/components/open_panels.cpp:161
 #: modules/gui/qt4/ui/messages_panel.h:144
 #: modules/gui/qt4/ui/sprefs_interface.h:520
 msgid "Filter:"
 msgstr "តម្រង ៖"
 
-#: modules/gui/qt4/components/open_panels.cpp:346
+#: modules/gui/qt4/components/open_panels.cpp:348
 msgid "Eject the disc"
 msgstr "ច្រាន​ឌីស​ចេញ"
 
-#: modules/gui/qt4/components/open_panels.cpp:783
+#: modules/gui/qt4/components/open_panels.cpp:785
 #, fuzzy
 msgid "Video standard"
 msgstr "កម្មវិធី​គ្រប់គ្រង​វីដេអូ"
 
-#: modules/gui/qt4/components/open_panels.cpp:810
+#: modules/gui/qt4/components/open_panels.cpp:812
 msgid "Channels:"
 msgstr "ឆានែល ៖"
 
-#: modules/gui/qt4/components/open_panels.cpp:821
+#: modules/gui/qt4/components/open_panels.cpp:823
 msgid "Selected ports:"
 msgstr "ច្រក​ដែល​បាន​ជ្រើស ៖"
 
-#: modules/gui/qt4/components/open_panels.cpp:824
+#: modules/gui/qt4/components/open_panels.cpp:826
 msgid ".*"
 msgstr ".*"
 
-#: modules/gui/qt4/components/open_panels.cpp:831
+#: modules/gui/qt4/components/open_panels.cpp:833
 msgid "Use VLC pace"
 msgstr "ប្រើ​ជំហាន VLC"
 
-#: modules/gui/qt4/components/open_panels.cpp:835
+#: modules/gui/qt4/components/open_panels.cpp:837
 msgid "Auto connection"
 msgstr "ការ​​តភ្ជាប់​ស្វ័យប្រវត្តិ"
 
-#: modules/gui/qt4/components/open_panels.cpp:853
+#: modules/gui/qt4/components/open_panels.cpp:855
 msgid "Device name"
 msgstr "ឈ្មោះ​ឧបករណ៍"
 
-#: modules/gui/qt4/components/open_panels.cpp:859
+#: modules/gui/qt4/components/open_panels.cpp:861
 msgid "Radio device name"
 msgstr "ឈ្មោះ​ឧបករណ៍​វិទ្យុ"
 
-#: modules/gui/qt4/components/open_panels.cpp:908
+#: modules/gui/qt4/components/open_panels.cpp:910
 msgid "TV (digital)"
 msgstr ""
 
-#: modules/gui/qt4/components/open_panels.cpp:911
+#: modules/gui/qt4/components/open_panels.cpp:913
 #, fuzzy
 msgid "Tuner card"
 msgstr "លេខ​សម្គាល់​ប៊ូតុង​មួល"
 
-#: modules/gui/qt4/components/open_panels.cpp:912
+#: modules/gui/qt4/components/open_panels.cpp:914
 msgid "Delivery system"
 msgstr ""
 
-#: modules/gui/qt4/components/open_panels.cpp:942
+#: modules/gui/qt4/components/open_panels.cpp:944
 msgid "Transponder/multiplex frequency"
 msgstr "ប្រេកង់ Transponder/multiplex"
 
-#: modules/gui/qt4/components/open_panels.cpp:952
+#: modules/gui/qt4/components/open_panels.cpp:954
 msgid "Transponder symbol rate"
 msgstr "អត្រា​សញ្ញា​ឧបករណ៍​ទទួល​/​បញ្ជូន​សញ្ញា"
 
-#: modules/gui/qt4/components/open_panels.cpp:985
+#: modules/gui/qt4/components/open_panels.cpp:987
 msgid "Bandwidth"
 msgstr "កម្រិត​បញ្ជូន"
 
-#: modules/gui/qt4/components/open_panels.cpp:1028
+#: modules/gui/qt4/components/open_panels.cpp:1030
 msgid "Your display will be opened and played in order to stream or save it."
 msgstr "កា​របង្ហាញ​របស់​អ្នក​នឹង​ត្រូវ​បានបើក​ ហើយ​ចាក់​ ដើម្បី​ស្ទ្រីម ឬ​រក្សាវា​ទុក ។"
 
 #. xgettext: frames per second
-#: modules/gui/qt4/components/open_panels.cpp:1042
+#: modules/gui/qt4/components/open_panels.cpp:1044
 msgid " f/s"
 msgstr " f/s"
 
-#: modules/gui/qt4/components/open_panels.cpp:1245
+#: modules/gui/qt4/components/open_panels.cpp:1247
 msgid "Advanced Options"
 msgstr "ជម្រើស​កម្រិត​ខ្ពស់"
 
@@ -19142,17 +19162,17 @@ msgid "Configure Hotkeys"
 msgstr "កំណត់​រចនា​សម្ព័ន្ធ​គ្រាប់ចុច​រហ័ស"
 
 #: modules/gui/qt4/components/simple_preferences.cpp:956
-#: modules/gui/qt4/dialogs_provider.hpp:51
+#: modules/gui/qt4/dialogs_provider.hpp:42
 msgid "Audio Files"
 msgstr "ឯកសារ​អូឌីយ៉ូ"
 
 #: modules/gui/qt4/components/simple_preferences.cpp:957
-#: modules/gui/qt4/dialogs_provider.hpp:46
+#: modules/gui/qt4/dialogs_provider.hpp:41
 msgid "Video Files"
 msgstr "ឯកសារ​វីដេអូ"
 
 #: modules/gui/qt4/components/simple_preferences.cpp:958
-#: modules/gui/qt4/dialogs_provider.hpp:56
+#: modules/gui/qt4/dialogs_provider.hpp:43
 msgid "Playlist Files"
 msgstr "ឯកសារ​បញ្ជី​ចាក់"
 
@@ -19744,15 +19764,15 @@ msgstr "រក្សាទុក​បញ្ជីចាក់​ជា​..."
 msgid "Open subtitles..."
 msgstr "បើក​ចំណង​ជើង​រង..."
 
-#: modules/gui/qt4/dialogs_provider.hpp:41
+#: modules/gui/qt4/dialogs_provider.hpp:40
 msgid "Media Files"
 msgstr "ឯកសារ​មេឌៀ"
 
-#: modules/gui/qt4/dialogs_provider.hpp:61
+#: modules/gui/qt4/dialogs_provider.hpp:44
 msgid "Subtitles Files"
 msgstr "ឯកសារ​ចំណងជើង​រង"
 
-#: modules/gui/qt4/dialogs_provider.hpp:66
+#: modules/gui/qt4/dialogs_provider.hpp:45
 msgid "All Files"
 msgstr "ឯកសារ​ទាំង​អស់"
 
@@ -19960,349 +19980,349 @@ msgstr "កាលវិភាគ ៖ "
 msgid "VOD: "
 msgstr "VOD ៖ "
 
-#: modules/gui/qt4/main_interface.cpp:1095
+#: modules/gui/qt4/main_interface.cpp:1103
 msgid "Control menu for the player"
 msgstr "គ្រប់គ្រង​ម៉ឺនុយ​សម្រាប់​កម្មវិធី​ចាក់"
 
-#: modules/gui/qt4/main_interface.cpp:1138
+#: modules/gui/qt4/main_interface.cpp:1146
 msgid "Paused"
 msgstr "បាន​ផ្អាក"
 
-#: modules/gui/qt4/menus.cpp:314
+#: modules/gui/qt4/menus.cpp:317
 msgid "&Media"
 msgstr "មេឌៀ"
 
-#: modules/gui/qt4/menus.cpp:317
+#: modules/gui/qt4/menus.cpp:320
 msgid "P&layback"
 msgstr "ចាក់​ឡើងវិញ"
 
-#: modules/gui/qt4/menus.cpp:318 modules/gui/qt4/menus.cpp:1005
+#: modules/gui/qt4/menus.cpp:321 modules/gui/qt4/menus.cpp:1020
 msgid "&Audio"
 msgstr "អូឌីយ៉ូ"
 
-#: modules/gui/qt4/menus.cpp:319 modules/gui/qt4/menus.cpp:1012
+#: modules/gui/qt4/menus.cpp:322 modules/gui/qt4/menus.cpp:1027
 msgid "&Video"
 msgstr "វីដេអូ"
 
-#: modules/gui/qt4/menus.cpp:321
+#: modules/gui/qt4/menus.cpp:324
 msgid "&Tools"
 msgstr "ឧបករណ៍"
 
-#: modules/gui/qt4/menus.cpp:324 modules/gui/qt4/menus.cpp:1061
+#: modules/gui/qt4/menus.cpp:327 modules/gui/qt4/menus.cpp:1076
 msgid "V&iew"
 msgstr "មើល"
 
-#: modules/gui/qt4/menus.cpp:326
+#: modules/gui/qt4/menus.cpp:329
 msgid "&Help"
 msgstr "ជំនួយ"
 
-#: modules/gui/qt4/menus.cpp:339
+#: modules/gui/qt4/menus.cpp:342
 #, fuzzy
 msgid "Open &File..."
 msgstr "បើក​ឯកសារ..."
 
-#: modules/gui/qt4/menus.cpp:343 modules/gui/qt4/menus.cpp:884
+#: modules/gui/qt4/menus.cpp:346 modules/gui/qt4/menus.cpp:899
 msgid "Open &Disc..."
 msgstr "បើក​ថាស..."
 
-#: modules/gui/qt4/menus.cpp:345
+#: modules/gui/qt4/menus.cpp:348
 msgid "Open &Network Stream..."
 msgstr "បើកស្ទ្រីម​បណ្ដាញ..."
 
-#: modules/gui/qt4/menus.cpp:347 modules/gui/qt4/menus.cpp:888
+#: modules/gui/qt4/menus.cpp:350 modules/gui/qt4/menus.cpp:903
 msgid "Open &Capture Device..."
 msgstr "បើក​ឧបករណ៍​ចាប់យក..."
 
-#: modules/gui/qt4/menus.cpp:352
+#: modules/gui/qt4/menus.cpp:355
 #, fuzzy
 msgid "&Open (advanced)..."
 msgstr "បើក​ឯកសារ..."
 
-#: modules/gui/qt4/menus.cpp:356
+#: modules/gui/qt4/menus.cpp:359
 msgid "Open &Location from clipboard"
 msgstr "បើក​ទីតាំង​ពី​ក្ដារ​តម្បៀតខ្ទាស់"
 
-#: modules/gui/qt4/menus.cpp:361
+#: modules/gui/qt4/menus.cpp:364
 #, fuzzy
 msgid "Open &Recent Media"
 msgstr "មេឌៀ​បច្ចុប្បន្ន"
 
-#: modules/gui/qt4/menus.cpp:372
+#: modules/gui/qt4/menus.cpp:375
 msgid "Conve&rt / Save..."
 msgstr "បម្លែង / រក្សាទុក..."
 
-#: modules/gui/qt4/menus.cpp:374
+#: modules/gui/qt4/menus.cpp:377
 #, fuzzy
 msgid "&Stream..."
 msgstr "ស្ទ្រីម..."
 
-#: modules/gui/qt4/menus.cpp:379
+#: modules/gui/qt4/menus.cpp:382
 #, fuzzy
 msgid "Quit at the end of playlist"
 msgstr "គ្មាន​ធាតុ​នៅ​ក្នុង​បញ្ជី​ចាក់"
 
-#: modules/gui/qt4/menus.cpp:386
+#: modules/gui/qt4/menus.cpp:389
 msgid "Close to systray"
 msgstr ""
 
-#: modules/gui/qt4/menus.cpp:390 modules/gui/qt4/menus.cpp:1125
+#: modules/gui/qt4/menus.cpp:393 modules/gui/qt4/menus.cpp:1140
 msgid "&Quit"
 msgstr "ចេញ"
 
-#: modules/gui/qt4/menus.cpp:400
+#: modules/gui/qt4/menus.cpp:403
 msgid "&Effects and Filters"
 msgstr "បែបផែន និង​តម្រង"
 
-#: modules/gui/qt4/menus.cpp:403
+#: modules/gui/qt4/menus.cpp:406
 msgid "&Track Synchronization"
 msgstr "ការ​ធ្វើសមកាលកម្មវ​បទ"
 
-#: modules/gui/qt4/menus.cpp:416
+#: modules/gui/qt4/menus.cpp:419
 msgid "Program Guide"
 msgstr "មគ្គុទ្ទេសក៏​កម្មវិធី"
 
-#: modules/gui/qt4/menus.cpp:422
+#: modules/gui/qt4/menus.cpp:425
 msgid "Plu&gins and extensions"
 msgstr "កម្មវិធី​ជំនួយ និង​ផ្នែកបន្ថែម"
 
-#: modules/gui/qt4/menus.cpp:426
+#: modules/gui/qt4/menus.cpp:429
 msgid "Customi&ze Interface..."
 msgstr "ធ្វើ​ចំណុច​ប្រទាក់ផ្ទាល់ខ្លួន..."
 
-#: modules/gui/qt4/menus.cpp:429
+#: modules/gui/qt4/menus.cpp:432
 msgid "&Preferences"
 msgstr "ចំណូល​ចិត្ត"
 
-#: modules/gui/qt4/menus.cpp:450
+#: modules/gui/qt4/menus.cpp:453
 msgid "&View"
 msgstr "មើល"
 
-#: modules/gui/qt4/menus.cpp:471
+#: modules/gui/qt4/menus.cpp:474
 msgid "Play&list"
 msgstr "បញ្ជី​ចាក់"
 
-#: modules/gui/qt4/menus.cpp:472
+#: modules/gui/qt4/menus.cpp:475
 msgid "Ctrl+L"
 msgstr "បញ្ជា(Ctrl)+L"
 
-#: modules/gui/qt4/menus.cpp:477
+#: modules/gui/qt4/menus.cpp:480
 #, fuzzy
 msgid "Mi&nimal Interface"
 msgstr "ចំណុច​ប្រទាក់​ដែល​អាច​ដាក់​ស្បែក​បាន"
 
-#: modules/gui/qt4/menus.cpp:478
+#: modules/gui/qt4/menus.cpp:481
 msgid "Ctrl+H"
 msgstr "បញ្ជា (Ctrl)+H"
 
-#: modules/gui/qt4/menus.cpp:486
+#: modules/gui/qt4/menus.cpp:489
 msgid "&Fullscreen Interface"
 msgstr "ចំណុច​ប្រទាក់​ពេញ​អេក្រង់"
 
-#: modules/gui/qt4/menus.cpp:494
+#: modules/gui/qt4/menus.cpp:497
 msgid "&Advanced Controls"
 msgstr "កម្មវិធី​បញ្ជា​កម្រិត​ខ្ពស់"
 
-#: modules/gui/qt4/menus.cpp:501
+#: modules/gui/qt4/menus.cpp:504
 msgid "Docked Playlist"
 msgstr "បញ្ជី​ចាក់​បាន​ចូលផែ"
 
-#: modules/gui/qt4/menus.cpp:506
+#: modules/gui/qt4/menus.cpp:509
 #, fuzzy
 msgid "Status Bar"
 msgstr "ស្ថានភាព"
 
-#: modules/gui/qt4/menus.cpp:511
+#: modules/gui/qt4/menus.cpp:514
 msgid "Visualizations selector"
 msgstr "ឧបករណ៍​ជ្រើស​រូបភាព​តន្ដ្រី"
 
-#: modules/gui/qt4/menus.cpp:592
+#: modules/gui/qt4/menus.cpp:595
 msgid "Audio &Track"
 msgstr "បទ​អូឌីយ៉ូ"
 
-#: modules/gui/qt4/menus.cpp:593
+#: modules/gui/qt4/menus.cpp:596
 msgid "Audio &Channels"
 msgstr "ឆានែល​អូឌីយ៉ូ"
 
-#: modules/gui/qt4/menus.cpp:594
+#: modules/gui/qt4/menus.cpp:597
 msgid "Audio &Device"
 msgstr "ឧបករណ៍​អូឌីយ៉ូ"
 
-#: modules/gui/qt4/menus.cpp:597
+#: modules/gui/qt4/menus.cpp:600
 msgid "&Visualizations"
 msgstr "រូបភាព​មើល​ឃើញ"
 
-#: modules/gui/qt4/menus.cpp:617
+#: modules/gui/qt4/menus.cpp:620
 msgid "&Subtitles Track"
 msgstr "ដាក់​ចំណងជើង​រង​ឲ្យ​បទ"
 
-#: modules/gui/qt4/menus.cpp:639
+#: modules/gui/qt4/menus.cpp:642
 msgid "Video &Track"
 msgstr "បទ​វីដេអូ"
 
-#: modules/gui/qt4/menus.cpp:645
+#: modules/gui/qt4/menus.cpp:648
 msgid "&Fullscreen"
 msgstr "ពេញ​អេក្រង់"
 
-#: modules/gui/qt4/menus.cpp:646
+#: modules/gui/qt4/menus.cpp:649
 #, fuzzy
 msgid "Always Fit &Window"
 msgstr "នៅ​លើ​គេ​ជា​និច្ច"
 
-#: modules/gui/qt4/menus.cpp:647
+#: modules/gui/qt4/menus.cpp:650
 #, fuzzy
 msgid "Always &on Top"
 msgstr "នៅ​លើ​គេ​ជា​និច្ច"
 
-#: modules/gui/qt4/menus.cpp:649
+#: modules/gui/qt4/menus.cpp:652
 #, fuzzy
 msgid "Display on &Desktop"
 msgstr "គុណភាព​បង្ហាញ"
 
-#: modules/gui/qt4/menus.cpp:653
+#: modules/gui/qt4/menus.cpp:656
 #, fuzzy
 msgid "Set as Wall&paper"
 msgstr "ផ្ទាំង​រូបភាព DirectX"
 
-#: modules/gui/qt4/menus.cpp:657
+#: modules/gui/qt4/menus.cpp:660
 msgid "&Zoom"
 msgstr "ពង្រីក"
 
-#: modules/gui/qt4/menus.cpp:658
+#: modules/gui/qt4/menus.cpp:661
 msgid "&Aspect Ratio"
 msgstr "សមាមាត្រ​ទិដ្ឋភាព"
 
-#: modules/gui/qt4/menus.cpp:659
+#: modules/gui/qt4/menus.cpp:662
 msgid "&Crop"
 msgstr "ច្រឹប"
 
-#: modules/gui/qt4/menus.cpp:663
+#: modules/gui/qt4/menus.cpp:666
 msgid "&Deinterlace"
 msgstr "មិន​ត្របាញ់"
 
-#: modules/gui/qt4/menus.cpp:664
+#: modules/gui/qt4/menus.cpp:667
 msgid "&Deinterlace mode"
 msgstr "របៀប​មិន​ត្របាញ់​ចូល​គ្នា"
 
-#: modules/gui/qt4/menus.cpp:665
+#: modules/gui/qt4/menus.cpp:668
 msgid "&Post processing"
 msgstr "ការ​ដំណើរការ​តាម​ក្រោយ"
 
-#: modules/gui/qt4/menus.cpp:669
+#: modules/gui/qt4/menus.cpp:672
 #, fuzzy
 msgid "Take &Snapshot"
 msgstr "ថត​យក​រូបភាព"
 
-#: modules/gui/qt4/menus.cpp:692
+#: modules/gui/qt4/menus.cpp:695
 msgid "T&itle"
 msgstr "ចំណង​ជើង"
 
-#: modules/gui/qt4/menus.cpp:693
+#: modules/gui/qt4/menus.cpp:696
 msgid "&Chapter"
 msgstr "ជំពូក"
 
-#: modules/gui/qt4/menus.cpp:694
+#: modules/gui/qt4/menus.cpp:697
 msgid "&Navigation"
 msgstr "ការ​រុករក"
 
-#: modules/gui/qt4/menus.cpp:696
+#: modules/gui/qt4/menus.cpp:699
 msgid "&Program"
 msgstr "កម្មវិធី"
 
-#: modules/gui/qt4/menus.cpp:699
+#: modules/gui/qt4/menus.cpp:702
 #, fuzzy
 msgid "Custom &Bookmarks"
 msgstr "ចំណាំ"
 
-#: modules/gui/qt4/menus.cpp:701
+#: modules/gui/qt4/menus.cpp:704
 #, fuzzy
 msgid "&Manage"
 msgstr "កម្មវិធី​គ្រប់គ្រង​វីដេអូ"
 
-#: modules/gui/qt4/menus.cpp:745
+#: modules/gui/qt4/menus.cpp:748
 msgid "&Help..."
 msgstr "ជំនួយ..."
 
-#: modules/gui/qt4/menus.cpp:748
+#: modules/gui/qt4/menus.cpp:751
 msgid "Check for &Updates..."
 msgstr "ពិនិត្យ​រក​មើល​ភាព​ទាន់សម័យ..."
 
-#: modules/gui/qt4/menus.cpp:804
+#: modules/gui/qt4/menus.cpp:809
 msgid "&Faster"
 msgstr "លឿន​ជាង"
 
-#: modules/gui/qt4/menus.cpp:816
+#: modules/gui/qt4/menus.cpp:821
 msgid "N&ormal Speed"
 msgstr "ល្បឿន​ធម្មតា"
 
-#: modules/gui/qt4/menus.cpp:826
+#: modules/gui/qt4/menus.cpp:831
 msgid "Slo&wer"
 msgstr "យឺត​ជាង"
 
-#: modules/gui/qt4/menus.cpp:838
+#: modules/gui/qt4/menus.cpp:846
 msgid "&Jump Forward"
 msgstr "ទៅ​មុខ"
 
-#: modules/gui/qt4/menus.cpp:845
+#: modules/gui/qt4/menus.cpp:853
 msgid "Jump Bac&kward"
 msgstr "ថយ​ក្រោយ"
 
-#: modules/gui/qt4/menus.cpp:862
+#: modules/gui/qt4/menus.cpp:870
 msgid "&Stop"
 msgstr "បញ្ឈប់"
 
-#: modules/gui/qt4/menus.cpp:869
+#: modules/gui/qt4/menus.cpp:877
 msgid "Pre&vious"
 msgstr "មុន"
 
-#: modules/gui/qt4/menus.cpp:871
+#: modules/gui/qt4/menus.cpp:883
 msgid "Ne&xt"
 msgstr "បន្ទាប់"
 
-#: modules/gui/qt4/menus.cpp:879
+#: modules/gui/qt4/menus.cpp:894
 #, fuzzy
 msgid "Open a Media"
 msgstr "បើក​មេឌៀ"
 
-#: modules/gui/qt4/menus.cpp:880
+#: modules/gui/qt4/menus.cpp:895
 msgid "&Open File..."
 msgstr "បើក​ឯកសារ..."
 
-#: modules/gui/qt4/menus.cpp:886
+#: modules/gui/qt4/menus.cpp:901
 msgid "Open &Network..."
 msgstr "បើក​បណ្ដាញ..."
 
-#: modules/gui/qt4/menus.cpp:991
+#: modules/gui/qt4/menus.cpp:1006
 msgid "Leave Fullscreen"
 msgstr "ចេញ​ពី​ពេញ​អេក្រង់"
 
-#: modules/gui/qt4/menus.cpp:1017
+#: modules/gui/qt4/menus.cpp:1032
 #, fuzzy
 msgid "Subti&tle"
 msgstr "ចំណង​ជើង​រង"
 
-#: modules/gui/qt4/menus.cpp:1023
+#: modules/gui/qt4/menus.cpp:1038
 msgid "&Playback"
 msgstr "ចាក់​ឡើងវិញ"
 
-#: modules/gui/qt4/menus.cpp:1033
+#: modules/gui/qt4/menus.cpp:1048
 #, fuzzy
 msgid "Tools"
 msgstr "ឧបករណ៍"
 
-#: modules/gui/qt4/menus.cpp:1105
+#: modules/gui/qt4/menus.cpp:1120
 msgid "Hide VLC media player in taskbar"
 msgstr "លាក់​កម្មវិធី​ចាក់​មេឌៀ VLC នៅ​ក្នុង​របារ​ភារកិច្ច"
 
-#: modules/gui/qt4/menus.cpp:1111
+#: modules/gui/qt4/menus.cpp:1126
 msgid "Show VLC media player"
 msgstr "បង្ហាញ​កម្មវិធី​ចាក់​មេឌៀ VLC"
 
-#: modules/gui/qt4/menus.cpp:1123
+#: modules/gui/qt4/menus.cpp:1138
 #, fuzzy
 msgid "&Open a Media"
 msgstr "បើក​មេឌៀ"
 
-#: modules/gui/qt4/menus.cpp:1536 modules/gui/qt4/ui/messages_panel.h:143
+#: modules/gui/qt4/menus.cpp:1551 modules/gui/qt4/ui/messages_panel.h:143
 msgid "&Clear"
 msgstr "ជម្រះ"
 
@@ -20514,7 +20534,7 @@ msgstr "ពណ៌​ផ្ទៃ​ខាងក្រោយ​លំនាំដ
 
 #: modules/gui/qt4/qt4.cpp:165
 msgid ""
-"Display background cone or current album art when not playing.Can be "
+"Display background cone or current album art when not playing. Can be "
 "disabled to prevent burning screen."
 msgstr ""
 
@@ -21122,11 +21142,11 @@ msgstr ""
 "នឹង​យក​ជម្រើស​អស់ពេល​ទាំងស្រុង​ចេញ ។ វា​គឺ​ត្រូវការ​ដោយ IPTV STB (ដូចជា​ដែល​បាន​បង្កើត​ដោយ "
 "HansunTech) ដែល​វា​យល់ច្រឡំ ។ លំនាំដើម​គឺ ៥ ។"
 
-#: modules/misc/rtsp.c:75 modules/stream_out/rtp.c:249
+#: modules/misc/rtsp.c:75 modules/stream_out/rtp.c:251
 msgid "RTSP VoD"
 msgstr "RTSP VoD"
 
-#: modules/misc/rtsp.c:76 modules/stream_out/rtp.c:250
+#: modules/misc/rtsp.c:76 modules/stream_out/rtp.c:252
 msgid "RTSP VoD server"
 msgstr "ម៉ាស៊ីន​បម្រើR TSP VoD"
 
@@ -21539,19 +21559,19 @@ msgstr "កម្មវិធី​ជំនួយ​ការ​ជូន​ដ
 msgid "Telepathy \"Now Playing\" (MissionControl)"
 msgstr "Telepathy \"ចាក់ឥឡូវ\" (MissionControl)"
 
-#: modules/notify/xosd.c:67
+#: modules/notify/xosd.c:68
 msgid "Flip vertical position"
 msgstr "ទីតាំង​​បញ្ឈរ​ត្រឡប់"
 
-#: modules/notify/xosd.c:68
+#: modules/notify/xosd.c:69
 msgid "Display XOSD output at the bottom of the screen instead of the top."
 msgstr "បង្ហាញ​លទ្ធផល XOSD នៅ​បាត​របស់​អេក្រង់​ជំនួស​កំពូល ។"
 
-#: modules/notify/xosd.c:71
+#: modules/notify/xosd.c:72
 msgid "Vertical offset"
 msgstr "អុហ្វសិត​បញ្ឈរ"
 
-#: modules/notify/xosd.c:72
+#: modules/notify/xosd.c:73
 msgid ""
 "Vertical offset between the border of the screen and the displayed text (in "
 "pixels, defaults to 30 pixels)."
@@ -21559,24 +21579,24 @@ msgstr ""
 "អុហ្វសិត​បញ្ឈរ​រវាង​រវាង​ស៊ុម​របស់​អេក្រង់ និង​អត្ថបទ​ដែល​បាន​បង្ហាញ (គិត​ជា​ភីកសែល, កំណត់​លំនាំដើម​​ទៅ ៣០ "
 "ភីកសែល) ។"
 
-#: modules/notify/xosd.c:76
+#: modules/notify/xosd.c:77
 msgid "Shadow offset"
 msgstr "អុហ្វសិត​ស្រមោល"
 
-#: modules/notify/xosd.c:77
+#: modules/notify/xosd.c:78
 msgid ""
 "Offset between the text and the shadow (in pixels, defaults to 2 pixels)."
 msgstr "អុហ្វសិត​រវាង​អត្ថបទ និង​ស្រមោល (គិត​ជា​ភីកសែល កំណត់​លំនាំដើម​ទៅ ២ ភីកសែល) ។"
 
-#: modules/notify/xosd.c:81
+#: modules/notify/xosd.c:82
 msgid "Font used to display text in the XOSD output."
 msgstr "ពុម្ពអក្សរ​ដែល​បាន​ប្រើ​ដើម្បី​បង្ហាញ​អត្ថបទ​នៅក្នុង​ការ​បង្ហាញ XOSD ។"
 
-#: modules/notify/xosd.c:83
+#: modules/notify/xosd.c:84
 msgid "Color used to display text in the XOSD output."
 msgstr "ពណ៌​ដែល​បាន​ប្រើ​ដើម្បី​បង្ហាញ​អត្ថបទ​នៅ​ក្នុង​លទ្ធផល XOSD ។"
 
-#: modules/notify/xosd.c:88
+#: modules/notify/xosd.c:89
 msgid "XOSD interface"
 msgstr "ចំណុច​ប្រទាក់ XOSD"
 
@@ -22403,26 +22423,28 @@ msgid "This selects which transport protocol to use for RTP."
 msgstr "វា​ជ្រើស​ពិធីការ​បញ្ជូន​ណា​មួយ​​ដែល​ត្រូវប្រើ​សម្រាប់ RTP ។"
 
 #: modules/stream_out/rtp.c:146
+#, fuzzy
 msgid ""
 "RTP packets will be integrity-protected and ciphered with this Secure RTP "
-"master shared secret key."
+"master shared secret key. This must be a 32-character-long hexadecimal "
+"string."
 msgstr ""
 "កញ្ចប់ RTP នឹង​ត្រូវបាន​ការពារ​យ៉ាង​​ល្អ និង​ដាក់​ពាក្យ​សម្ងាត់​ដោយ​​មេ RTP សុវត្ថិភាព​ ដែល​បាន​ចែករំលែក​"
 "សោសម្ងាត់ ។"
 
-#: modules/stream_out/rtp.c:161
+#: modules/stream_out/rtp.c:163
 msgid "MP4A LATM"
 msgstr "MP4A LATM"
 
-#: modules/stream_out/rtp.c:163
+#: modules/stream_out/rtp.c:165
 msgid "This allows you to stream MPEG4 LATM audio streams (see RFC3016)."
 msgstr "វា​អនុញ្ញាត​ឲ្យ​អ្នក​ស្ទ្រីម​អូឌីយ៉ូ MPEG4 LATM (សូម​មើល RFC3016) ។"
 
-#: modules/stream_out/rtp.c:165
+#: modules/stream_out/rtp.c:167
 msgid "RTSP host address"
 msgstr "អាសយដ្ឋាន​ម៉ាស៊ីន RTSP"
 
-#: modules/stream_out/rtp.c:167
+#: modules/stream_out/rtp.c:169
 msgid ""
 "This defines the address, port and path the RTSP VOD server will listen on.\n"
 "Syntax is address:port/path. The default is to listen on all interfaces "
@@ -22434,19 +22456,19 @@ msgstr ""
 "0.0.0.0), នៅ​លើ​ច្រក 554, ដែល​គ្មាន​ផ្លូវ ។\n"
 "ដើម្បី​ស្ដាប់​លើ​ចំណុច​ប្រទាក់​មូលដ្ឋាន សូម​ប្រើ \"localhost\" ជា​អាសយដ្ឋាន ។"
 
-#: modules/stream_out/rtp.c:172
+#: modules/stream_out/rtp.c:174
 #, fuzzy
 msgid "RTSP session timeout (s)"
 msgstr "អស់ពេល​ធនធាន RTP (វិ.)"
 
-#: modules/stream_out/rtp.c:173
+#: modules/stream_out/rtp.c:175
 msgid ""
 "RTSP sessions will be closed after not receiving any RTSP request for this "
 "long. Setting it to a negative value or zero disables timeouts. The default "
 "is 60 (one minute)."
 msgstr ""
 
-#: modules/stream_out/rtp.c:193
+#: modules/stream_out/rtp.c:195
 msgid "RTP stream output"
 msgstr "លទ្ធផល​ស្ទ្រីម RTP"
 
@@ -22947,20 +22969,20 @@ msgstr "បម្លែង​លទ្ធផល​ស្ទ្រីម​ត្
 msgid "Overlays/Subtitles"
 msgstr "ត្រួត​គ្នា/​ចំណងជើង​រង"
 
-#: modules/text_renderer/freetype.c:103
+#: modules/text_renderer/freetype.c:118
 msgid "Font family for the font you want to use"
 msgstr "ក្រុមពុម្ពអក្សរ​សម្រាប់​ពុម្ពអក្សរ​ដែល​អ្នក​ចង់​ប្រើ"
 
-#: modules/text_renderer/freetype.c:104
+#: modules/text_renderer/freetype.c:119
 #, fuzzy
 msgid "Font file for the font you want to use"
 msgstr "ឯកសារ​ពុម្ពអក្សរ​សម្រាប់​ពុម្ពអក្សរ​ដែល​អ្នក​ចង់​ប្រើ"
 
-#: modules/text_renderer/freetype.c:106 modules/text_renderer/win32text.c:61
+#: modules/text_renderer/freetype.c:121 modules/text_renderer/win32text.c:61
 msgid "Font size in pixels"
 msgstr "ទំហំ​ពុម្ព​អក្សរ​គិត​ជា​ភីកសែល"
 
-#: modules/text_renderer/freetype.c:107 modules/text_renderer/win32text.c:62
+#: modules/text_renderer/freetype.c:122 modules/text_renderer/win32text.c:62
 msgid ""
 "This is the default size of the fonts that will be rendered on the video. If "
 "set to something different than 0 this option will override the relative "
@@ -22969,12 +22991,12 @@ msgstr ""
 "នេះ​ជា​ទំហំ​​ពុម្ព​អក្សរ​លំនាំដើម ដែល​នឹង​ត្រូវ​បាន​បង្ហាញ​នៅ​លើ​វីដេអូ ។ ប្រសិន​បើ​កំណត់​អ្វី​ផ្សេង​ក្រៅ​ពី ០ នោះ​"
 "ជម្រើស​នេះ​នឹង​បដិសេធន៍​នូវ​ទំហំ​ពុម្ព​អក្សរ​ដែល​ទាក់ទង ។"
 
-#: modules/text_renderer/freetype.c:111
+#: modules/text_renderer/freetype.c:126
 #, fuzzy
 msgid "Text opacity"
 msgstr "គ្រោង"
 
-#: modules/text_renderer/freetype.c:112 modules/text_renderer/win32text.c:67
+#: modules/text_renderer/freetype.c:127 modules/text_renderer/win32text.c:67
 msgid ""
 "The opacity (inverse of transparency) of the text that will be rendered on "
 "the video. 0 = transparent, 255 = totally opaque. "
@@ -22982,12 +23004,12 @@ msgstr ""
 "ភាព​ស្រអាប់ (ច្រាស​ពី​ភាព​ថ្លា) របស់​អត្ថបទ​ដែល​នឹង​ត្រូវបាន​បង្ហាញ​នៅលើ​វីដេអូ ។ 0 = ថ្លា, 255 = "
 "ស្រអាប់​ទាំង​ស្រុង ។"
 
-#: modules/text_renderer/freetype.c:115 modules/text_renderer/quartztext.c:96
+#: modules/text_renderer/freetype.c:130 modules/text_renderer/quartztext.c:96
 #: modules/text_renderer/win32text.c:70
 msgid "Text default color"
 msgstr "ពណ៌​អត្ថបទ​លំនាំដើម"
 
-#: modules/text_renderer/freetype.c:116 modules/text_renderer/quartztext.c:97
+#: modules/text_renderer/freetype.c:131 modules/text_renderer/quartztext.c:97
 #: modules/text_renderer/win32text.c:71
 msgid ""
 "The color of the text that will be rendered on the video. This must be an "
@@ -23000,12 +23022,12 @@ msgstr ""
 "#FF0000 = ពណ៌​ក្រហម, #00FF00 = បៃតង, #FFFF00 = ពណ៌​លឿង (ក្រហម + បៃតង), #FFFFFF = ពណ៌​"
 "សe"
 
-#: modules/text_renderer/freetype.c:120 modules/text_renderer/quartztext.c:92
+#: modules/text_renderer/freetype.c:135 modules/text_renderer/quartztext.c:92
 #: modules/text_renderer/win32text.c:75
 msgid "Relative font size"
 msgstr "ទំហំ​ពុម្ព​អក្សរ​ដែល​ទាក់ទង"
 
-#: modules/text_renderer/freetype.c:121 modules/text_renderer/quartztext.c:93
+#: modules/text_renderer/freetype.c:136 modules/text_renderer/quartztext.c:93
 #: modules/text_renderer/win32text.c:76
 msgid ""
 "This is the relative default size of the fonts that will be rendered on the "
@@ -23014,82 +23036,82 @@ msgstr ""
 "នេះ​ជា​ ទំហំ​លំនាំដើម​ដែល​ទាក់ទង​របស់​ពុម្ពអក្សរ ដែល​នឹង​ត្រូវ​បាន​បង្ហាញ​នៅ​លើ​វីដេអូ ។ ប្រសិន​បើ​ទំហំ​ពុម្ពអក្សរ​"
 "ជាក់លាក់​ត្រូវ​បានកំណត់ ទំហំ​ដែល​ទាក់ទង​នឹង​ត្រូវ​បានបដិសេធ​ ។"
 
-#: modules/text_renderer/freetype.c:124
+#: modules/text_renderer/freetype.c:139
 #, fuzzy
 msgid "Force bold"
 msgstr "តម្រូវ​ឲ្យ​ប្រើ​អូឌីយ៉ូ​ម៉ូណូ"
 
-#: modules/text_renderer/freetype.c:126
+#: modules/text_renderer/freetype.c:141
 #, fuzzy
 msgid "Background opacity"
 msgstr "ផ្ទៃ​ខាង​ក្រោយ"
 
-#: modules/text_renderer/freetype.c:127
+#: modules/text_renderer/freetype.c:142
 #, fuzzy
 msgid "Background color"
 msgstr "ផ្ទៃ​ខាង​ក្រោយ"
 
-#: modules/text_renderer/freetype.c:129
+#: modules/text_renderer/freetype.c:144
 #, fuzzy
 msgid "Outline opacity"
 msgstr "គ្រោង"
 
-#: modules/text_renderer/freetype.c:130
+#: modules/text_renderer/freetype.c:145
 #: modules/gui/qt4/ui/sprefs_subtitles.h:283
 #, fuzzy
 msgid "Outline color"
 msgstr "គ្រោង"
 
-#: modules/text_renderer/freetype.c:131
+#: modules/text_renderer/freetype.c:146
 #: modules/gui/qt4/ui/sprefs_subtitles.h:282
 msgid "Outline thickness"
 msgstr ""
 
-#: modules/text_renderer/freetype.c:133
+#: modules/text_renderer/freetype.c:148
 #, fuzzy
 msgid "Shadow opacity"
 msgstr "អុហ្វសិត​ស្រមោល"
 
-#: modules/text_renderer/freetype.c:134
+#: modules/text_renderer/freetype.c:149
 #, fuzzy
 msgid "Shadow color"
 msgstr "​ស្រមោល"
 
-#: modules/text_renderer/freetype.c:135
+#: modules/text_renderer/freetype.c:150
 #, fuzzy
 msgid "Shadow angle"
 msgstr "​ស្រមោល"
 
-#: modules/text_renderer/freetype.c:136
+#: modules/text_renderer/freetype.c:151
 #, fuzzy
 msgid "Shadow distance"
 msgstr "អុហ្វសិត​ស្រមោល"
 
-#: modules/text_renderer/freetype.c:141 modules/text_renderer/quartztext.c:114
+#: modules/text_renderer/freetype.c:156 modules/text_renderer/quartztext.c:114
 #: modules/text_renderer/win32text.c:82
 msgid "Smaller"
 msgstr "តូចជាង"
 
-#: modules/text_renderer/freetype.c:141 modules/text_renderer/quartztext.c:114
+#: modules/text_renderer/freetype.c:156 modules/text_renderer/quartztext.c:114
 #: modules/text_renderer/win32text.c:82
 msgid "Small"
 msgstr "តូច"
 
-#: modules/text_renderer/freetype.c:141 modules/text_renderer/quartztext.c:114
+#: modules/text_renderer/freetype.c:156 modules/text_renderer/quartztext.c:114
 #: modules/text_renderer/win32text.c:82
 msgid "Large"
 msgstr "ធំ"
 
-#: modules/text_renderer/freetype.c:141 modules/text_renderer/quartztext.c:114
+#: modules/text_renderer/freetype.c:156 modules/text_renderer/quartztext.c:114
 #: modules/text_renderer/win32text.c:82
 msgid "Larger"
 msgstr "ធម​ជាង"
 
-#: modules/text_renderer/freetype.c:142
+#: modules/text_renderer/freetype.c:157
 msgid "Use YUVP renderer"
 msgstr "ប្រើ​កម្មវិធី​បង្ហាញ YUVP"
 
-#: modules/text_renderer/freetype.c:143
+#: modules/text_renderer/freetype.c:158
 msgid ""
 "This renders the font using \"paletized YUV\". This option is only needed if "
 "you want to encode into DVB subtitles"
@@ -23097,23 +23119,23 @@ msgstr ""
 "វា​បង្ហាញ​ពុម្ពអក្សរ​ដោយប្រើ \"paletized YUV\" ។ ជម្រើស​នេះ គឺ​ត្រូវការ ប្រសិន​បើ​អ្នក​ចង់​អ៊ិនកូដ​ទៅ​"
 "ក្នុង​ចំណងជើង​រង DVB"
 
-#: modules/text_renderer/freetype.c:160
+#: modules/text_renderer/freetype.c:175
 msgid "Thin"
 msgstr ""
 
-#: modules/text_renderer/freetype.c:160
+#: modules/text_renderer/freetype.c:175
 msgid "Thick"
 msgstr ""
 
-#: modules/text_renderer/freetype.c:164 modules/text_renderer/win32text.c:94
+#: modules/text_renderer/freetype.c:179 modules/text_renderer/win32text.c:94
 msgid "Text renderer"
 msgstr "កម្មវិធី​បង្ហាញ​អត្ថបទ"
 
-#: modules/text_renderer/freetype.c:165
+#: modules/text_renderer/freetype.c:180
 msgid "Freetype2 font renderer"
 msgstr "កម្មវិធី​បង្ហាញ​ពុម្ពអក្សរ Freetype2"
 
-#: modules/text_renderer/freetype.c:443
+#: modules/text_renderer/freetype.c:462
 msgid ""
 "Please wait while your font cache is rebuilt.\n"
 "This should take less than a few minutes."
@@ -23173,11 +23195,11 @@ msgstr "ការ​បម្លែង MMX I420,IYUV,YV12 to RV15,RV16,RV24,RV32
 msgid "SSE2 I420,IYUV,YV12 to RV15,RV16,RV24,RV32 conversions"
 msgstr "ការ​បម្លែង SSE2 I420,IYUV,YV12 to RV15,RV16,RV24,RV32"
 
-#: modules/video_chroma/i420_yuy2.c:93 modules/video_chroma/i422_yuy2.c:76
+#: modules/video_chroma/i420_yuy2.c:93 modules/video_chroma/i422_yuy2.c:77
 msgid "MMX conversions from "
 msgstr "ការ​បម្លែង MMX ពី "
 
-#: modules/video_chroma/i420_yuy2.c:97 modules/video_chroma/i422_yuy2.c:80
+#: modules/video_chroma/i420_yuy2.c:97 modules/video_chroma/i422_yuy2.c:82
 msgid "SSE2 conversions from "
 msgstr "ការ​បម្លែង SSE2 ពី "
 
@@ -26327,7 +26349,7 @@ msgstr "ការ​បង្ហាញ​វីដេអូ OpenGL"
 msgid "iOS OpenGL ES video output (requires UIView)"
 msgstr "លទ្ធផល​វីដេអូ Mac OS X OpenGL អប្បបរមា (បើក​បង្អួច​ដែល​គ្មាន​ស៊ុម)"
 
-#: modules/video_output/kva.c:50
+#: modules/video_output/kva.c:50 modules/gui/qt4/ui/sprefs_video.h:355
 msgid "Enable a workaround for T23"
 msgstr ""
 
@@ -26337,7 +26359,7 @@ msgid ""
 "size is equal to or smaller than the movie size."
 msgstr ""
 
-#: modules/video_output/kva.c:55
+#: modules/video_output/kva.c:55 modules/gui/qt4/ui/sprefs_video.h:354
 #, fuzzy
 msgid "Video mode"
 msgstr "កូដិក​វីដេអូ"
@@ -26414,7 +26436,7 @@ msgstr "លទ្ធផល​វីដេអូ​ដែល​បានផ្ដ
 msgid "Direct3D video output"
 msgstr "លទ្ធផល​វីដេអូ Direct3D"
 
-#: modules/video_output/msw/directx.c:61 modules/gui/qt4/ui/sprefs_video.h:313
+#: modules/video_output/msw/directx.c:61 modules/gui/qt4/ui/sprefs_video.h:349
 msgid "Use hardware YUV->RGB conversions"
 msgstr "ប្រើ​ការ​បម្លែង​ផ្នែក​រឹង YUV->RGB"
 
@@ -26958,7 +26980,7 @@ msgid "Stream Name"
 msgstr "ឈ្មោះ​ស្ទ្រីម"
 
 #: share/lua/http/dialogs/create_stream.html:156
-#: modules/gui/qt4/ui/sprefs_audio.h:435 modules/gui/qt4/ui/sprefs_video.h:310
+#: modules/gui/qt4/ui/sprefs_audio.h:435 modules/gui/qt4/ui/sprefs_video.h:346
 #, fuzzy
 msgid "Output"
 msgstr "URL លទ្ធផល"
@@ -27229,7 +27251,7 @@ msgstr "អាជ្ញាបណ្ណ"
 #: modules/gui/qt4/ui/sprefs_audio.h:429 modules/gui/qt4/ui/sprefs_input.h:341
 #: modules/gui/qt4/ui/sprefs_interface.h:513
 #: modules/gui/qt4/ui/sprefs_subtitles.h:270
-#: modules/gui/qt4/ui/sprefs_video.h:305 modules/gui/qt4/ui/streampanel.h:168
+#: modules/gui/qt4/ui/sprefs_video.h:341 modules/gui/qt4/ui/streampanel.h:168
 msgid "Form"
 msgstr "សំណុំ​បែបបទ"
 
@@ -27906,36 +27928,40 @@ msgstr "ផ្ទៃ​ខាង​ក្រោយ"
 msgid " px"
 msgstr ""
 
-#: modules/gui/qt4/ui/sprefs_video.h:312
+#: modules/gui/qt4/ui/sprefs_video.h:348
 msgid "Accelerated video output (Overlay)"
 msgstr ""
 
-#: modules/gui/qt4/ui/sprefs_video.h:314
+#: modules/gui/qt4/ui/sprefs_video.h:350
 #, fuzzy
 msgid "DirectX"
 msgstr "កា​រនាំផ្លូវ"
 
-#: modules/gui/qt4/ui/sprefs_video.h:315
+#: modules/gui/qt4/ui/sprefs_video.h:351
 #, fuzzy
 msgid "Display device"
 msgstr "បានបង្ហាញ"
 
-#: modules/gui/qt4/ui/sprefs_video.h:316
+#: modules/gui/qt4/ui/sprefs_video.h:352
 #, fuzzy
 msgid "Enable wallpaper mode"
 msgstr "បើក​របៀប​ផ្ទាំង​រូបភាព "
 
-#: modules/gui/qt4/ui/sprefs_video.h:318
+#: modules/gui/qt4/ui/sprefs_video.h:353
+msgid "KVA"
+msgstr ""
+
+#: modules/gui/qt4/ui/sprefs_video.h:357
 #, fuzzy
 msgid "Deinterlacing"
 msgstr "មិន​អង្កាញ់"
 
-#: modules/gui/qt4/ui/sprefs_video.h:319
+#: modules/gui/qt4/ui/sprefs_video.h:358
 #, fuzzy
 msgid "Force Aspect Ratio"
 msgstr "ចាក់សោ​សមាមាត្រ"
 
-#: modules/gui/qt4/ui/sprefs_video.h:325
+#: modules/gui/qt4/ui/sprefs_video.h:364
 msgid "vlc-snap"
 msgstr ""
 
@@ -28348,6 +28374,15 @@ msgstr "ពេលវេលា​ធ្វើ​ឲ្យ​ស្រស់"
 #, fuzzy
 msgid "Enqueue"
 msgstr "ដាក់​ជា​ជួរ"
+
+#~ msgid "Left rear"
+#~ msgstr "ឆ្វេង​ខាងក្រោយ"
+
+#~ msgid "Right rear"
+#~ msgstr "ស្ដាំ​ខាងក្រោយ"
+
+#~ msgid "Left front"
+#~ msgstr "ឆ្វេង​ខាង​មុខ"
 
 #~ msgid ""
 #~ "The specified sound font file (%s) is incorrect.\n"
