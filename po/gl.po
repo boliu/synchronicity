@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: vlc 1.2\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2011-12-10 00:07+0000\n"
-"PO-Revision-Date: 2011-11-29 22:23+0100\n"
+"PO-Revision-Date: 2011-12-10 22:09+0100\n"
 "Last-Translator: Gonçalo Cordeiro <gzcordeiro@gmail.com>\n"
 "Language-Team: Galician <gzcordeiro@gmail.com>\n"
 "Language: gl\n"
@@ -1507,7 +1507,6 @@ msgstr ""
 "Seleccione os obxectos que deberían imprimir unha mensaxe de depuración"
 
 #: src/libvlc-module.c:204
-#, fuzzy
 msgid ""
 "This is a ',' separated string, each object should be prefixed by a '+' or a "
 "'-' to respectively enable or disable it. The keyword 'all' refers to all "
@@ -1518,8 +1517,8 @@ msgid ""
 msgstr ""
 "Esta é unha cadea separada por ','. Cada obxecto debería ir prefixado por un "
 "'+' ou '-' para activalo ou desactivalo, respectivamente. A palabra chave "
-"'all' refírese a todos os obxectos. Os obxectos poden ser referidos polo seu "
-"tipo o nome de módulo. As regras aplicábeis aos obxectos nomeados gañan "
+"«all» refírese a todos os obxectos. Os obxectos poden ser referidos polo seu "
+"tipo ou nome de módulo. As regras aplicábeis aos obxectos nomeados gañan "
 "precedencia sobre as regras aplicábeis aos tipos de obxecto. Observe que "
 "aínda precisa usar a opción -vvv para mostrar realmente a mensaxe de "
 "depuración."
@@ -7945,28 +7944,28 @@ msgid "SRTP key (hexadecimal)"
 msgstr "Chave SRTP (hexadecimal)"
 
 #: modules/access/rtp/rtp.c:51
-#, fuzzy
 msgid ""
 "RTP packets will be authenticated and deciphered with this Secure RTP master "
 "shared secret key. This must be a 32-character-long hexadecimal string."
 msgstr ""
 "Os paquetes RTP autenticaranse e descifraranse con esta chave principal "
-"Secure RTP secreta e compartida."
+"Secure RTP secreta e compartida. Débese escribir como unha cadea hexadecimal"
+"cunha lonxitude de 32 caracteres."
 
 #: modules/access/rtp/rtp.c:55 modules/stream_out/rtp.c:150
 msgid "SRTP salt (hexadecimal)"
 msgstr "SRTP salt (hexadecimal)"
 
 #: modules/access/rtp/rtp.c:57 modules/stream_out/rtp.c:152
-#, fuzzy
 msgid ""
 "Secure RTP requires a (non-secret) master salt value. This must be a 28-"
 "character-long hexadecimal string."
 msgstr "Secure RTP require un valor salt principal (que non sexa secreto)."
+"Débese escribir como unha cadea hexadecimal cunha lonxitude de 32 caracteres."
 
 #: modules/access/rtp/rtp.c:60
 msgid "Maximum RTP sources"
-msgstr "Fontes RTP máximas"
+msgstr "Máximo de fontes RTP"
 
 #: modules/access/rtp/rtp.c:62
 msgid "How many distinct active RTP sources are allowed at a time."
@@ -9260,41 +9259,32 @@ msgid "Select channel to keep"
 msgstr "Seleccionar a canle que hai que manter"
 
 #: modules/audio_filter/channel_mixer/mono.c:89
-#, fuzzy
 msgid "This option silences all other channels except the selected channel."
-msgstr ""
-"Esta opción silencia todas as canles menos a seleccionada. Escolla unha "
-"entre (0=esquerda, 1=dereita, 2=traseira esquerda, 3=traseira dereita, "
-"4=central, 5=dianteira esquerda)"
+msgstr "Esta opción silencia todas as canles menos a seleccionada."
 
 #: modules/audio_filter/channel_mixer/mono.c:95
-#, fuzzy
 msgid "Rear left"
-msgstr "Zona 3: esquerda"
+msgstr "Traseira esquerda"
 
 #: modules/audio_filter/channel_mixer/mono.c:95
-#, fuzzy
 msgid "Rear right"
-msgstr "Dereita"
+msgstr "Traseira dereita"
 
 #: modules/audio_filter/channel_mixer/mono.c:96
 msgid "Low-frequency effects"
-msgstr ""
+msgstr "Efectos de baixa frecuencia"
 
 #: modules/audio_filter/channel_mixer/mono.c:97
-#, fuzzy
 msgid "Side left"
-msgstr "Cara á esquerda"
+msgstr "Lateral esquerda"
 
 #: modules/audio_filter/channel_mixer/mono.c:97
-#, fuzzy
 msgid "Side right"
-msgstr "Altura de vídeo"
+msgstr "Lateral dereita"
 
 #: modules/audio_filter/channel_mixer/mono.c:97
-#, fuzzy
 msgid "Rear center"
-msgstr "Altofalantes traseiros"
+msgstr "Traseira central"
 
 #: modules/audio_filter/channel_mixer/mono.c:113
 msgid "Audio filter for stereo to mono conversion"
@@ -9743,7 +9733,6 @@ msgid "Sample rate converter type"
 msgstr "Tipo de conversor de taxa de mostra"
 
 #: modules/audio_filter/resampler/src.c:34
-#, fuzzy
 msgid ""
 "Different resampling algorithms are supported. The best one is slower, while "
 "the fast one exhibits low quality."
@@ -11599,7 +11588,6 @@ msgid "GOP length"
 msgstr "Lonxitude de GOP"
 
 #: modules/codec/schroedinger.c:130
-#, fuzzy
 msgid ""
 "Number of pictures between successive sequence headers i.e. length of the "
 "group of pictures"
@@ -11624,7 +11612,6 @@ msgid "Gaussian Adaptive Low Pass Filter"
 msgstr "Filtro de pasa baixas gausiano adaptábel"
 
 #: modules/codec/schroedinger.c:152
-#, fuzzy
 msgid "Low Pass Filter"
 msgstr "Filtro de pasa baixas"
 
@@ -13527,25 +13514,22 @@ msgid "Network master clock"
 msgstr "Reloxo principal da rede"
 
 #: modules/control/netsync.c:58
-#, fuzzy
 msgid ""
 "When set, this VLC instance will act as the master clock for synchronization "
 "for clients listening"
 msgstr ""
-"Cando estea definida, esta instancia do VLC ditará o seu reloxo para a "
-"sincronización dos clientes que estean escoitando nos enderezos IP "
-"principais de rede"
+"Cando estea configurado, esta instancia do VLC actuará como o reloxo "
+"principal para a sincronización dos clientes que estean escoitando"
 
 #: modules/control/netsync.c:62
 msgid "Master server ip address"
 msgstr "Enderezo IP do servidor principal"
 
 #: modules/control/netsync.c:63
-#, fuzzy
 msgid ""
 "The IP address of the network master clock to use for clock synchronization."
 msgstr ""
-"O enderezo IP do reloxo principal da rede que se usará para a sincronización "
+"O enderezo IP do reloxo principal de rede que se usará para a sincronización "
 "de reloxos."
 
 #: modules/control/netsync.c:66
@@ -14331,12 +14315,10 @@ msgstr ""
 "á crominancia especificada."
 
 #: modules/demux/image.c:60
-#, fuzzy
 msgid "Duration in seconds"
 msgstr "Duración en segundos"
 
 #: modules/demux/image.c:62
-#, fuzzy
 msgid ""
 "Duration in seconds before simulating an end of file. A negative value means "
 "an unlimited play time."
@@ -15589,7 +15571,6 @@ msgstr ""
 "desactivar esta opción cando se use a saída de fluxo."
 
 #: modules/demux/ts.c:143
-#, fuzzy
 msgid ""
 "Seek and position based on a percent byte position, not a PCR generated time "
 "position. If seeking doesn't work property, turn on this option."
@@ -16647,7 +16628,6 @@ msgid "No device is selected"
 msgstr "Non hai ningún dispositivo seleccionado"
 
 #: modules/gui/macosx/open.m:56
-#, fuzzy
 msgid ""
 "No device is selected.\n"
 "\n"
@@ -20829,7 +20809,6 @@ msgid "Display background cone or art"
 msgstr "Mostrar o cono ou as imaxes de álbum de fondo"
 
 #: modules/gui/qt4/qt4.cpp:165
-#, fuzzy
 msgid ""
 "Display background cone or current album art when not playing. Can be "
 "disabled to prevent burning screen."
@@ -22759,14 +22738,14 @@ msgid "This selects which transport protocol to use for RTP."
 msgstr "Isto selecciona o protocolo de transporte que se vai usar para RTP."
 
 #: modules/stream_out/rtp.c:146
-#, fuzzy
 msgid ""
 "RTP packets will be integrity-protected and ciphered with this Secure RTP "
 "master shared secret key. This must be a 32-character-long hexadecimal "
 "string."
 msgstr ""
 "Protexerase a integridade dos paquetes RTP e cifraranse con esta chave "
-"mestra secreta compartida Secure RTP."
+"mestra secreta compartida Secure RTP. Débese escribir como unha cadea "
+"hexadecimal cunha lonxitude de 32 caracteres."
 
 #: modules/stream_out/rtp.c:163
 msgid "MP4A LATM"
@@ -28312,9 +28291,8 @@ msgid "Enable wallpaper mode"
 msgstr "Activar o modo de imaxe de fondo"
 
 #: modules/gui/qt4/ui/sprefs_video.h:353
-#, fuzzy
 msgid "KVA"
-msgstr "MKV"
+msgstr "KVA"
 
 #: modules/gui/qt4/ui/sprefs_video.h:357
 msgid "Deinterlacing"
