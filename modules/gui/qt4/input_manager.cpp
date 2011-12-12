@@ -737,17 +737,6 @@ void InputManager::sliderUpdate( float new_pos )
     emit seekRequested( new_pos );
 }
 
-/* User togglePlayPause */
-void InputManager::togglePlayPause()
-{
-    if( hasInput() )
-    {
-        int state = var_GetInteger( p_input, "state" );
-        state = ( state != PLAYING_S ) ? PLAYING_S : PAUSE_S;
-        var_SetInteger( p_input, "state", state );
-    }
-}
-
 void InputManager::sectionPrev()
 {
     if( hasInput() )
@@ -1121,7 +1110,7 @@ void MainInputManager::togglePlayPause()
     if( !p_input )
         playlist_Play( THEPL );
     else
-        getIM()->togglePlayPause();
+        playlist_Pause( THEPL );
 }
 
 void MainInputManager::play()
@@ -1133,7 +1122,7 @@ void MainInputManager::play()
     {
         if( PLAYING_S != var_GetInteger( p_input, "state" ) )
         {
-            getIM()->togglePlayPause();
+            playlist_Pause( THEPL );
         }
     }
 }
@@ -1142,7 +1131,7 @@ void MainInputManager::pause()
 {
     if(p_input && PLAYING_S == var_GetInteger( p_input, "state" ) )
     {
-        getIM()->togglePlayPause();
+        playlist_Pause( THEPL );
     }
 }
 
