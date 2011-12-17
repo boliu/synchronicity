@@ -62,11 +62,10 @@ VLC-tmp: vlc
 	done
 	printf "APPLVLC#" >| $@/Contents/PkgInfo
 
-package-macosx: VLC.app ChangeLog
+package-macosx: VLC.app
 	mkdir -p "$(top_builddir)/vlc-$(VERSION)/Goodies/"
 	cp -R "$(top_builddir)/VLC.app" "$(top_builddir)/vlc-$(VERSION)/VLC.app"
 	cd $(srcdir); cp AUTHORS COPYING README THANKS NEWS $(abs_top_builddir)/vlc-$(VERSION)/Goodies/
-	cp $(top_builddir)/ChangeLog $(top_builddir)/vlc-$(VERSION)/Goodies/
 	cp -R  $(srcdir)/extras/package/macosx/Delete_Preferences.app $(top_builddir)/vlc-$(VERSION)/Goodies/Delete\ VLC\ Preferences.app
 	cp $(srcdir)/extras/package/macosx/README.MacOSX.rtf $(top_builddir)/vlc-$(VERSION)/Read\ Me.rtf
 	mkdir -p $(top_builddir)/vlc-$(VERSION)/.background/
@@ -86,20 +85,18 @@ package-macosx: VLC.app ChangeLog
 	rm -f "$(top_builddir)/vlc-$(VERSION)-rw.dmg"
 	rm -rf "$(top_builddir)/vlc-$(VERSION)"
 
-package-macosx-zip: VLC.app ChangeLog
+package-macosx-zip: VLC.app
 	mkdir -p $(top_builddir)/vlc-$(VERSION)/Goodies/
 	cp -R $(top_builddir)/VLC.app $(top_builddir)/vlc-$(VERSION)/VLC.app
-	cp $(top_builddir)/ChangeLog $(top_builddir)/vlc-$(VERSION)/Goodies/
 	cd $(srcdir); cp -R AUTHORS COPYING README THANKS NEWS extras/package/macosx/Delete_Preferences.app/ \
 		$(abs_top_builddir)/vlc-$(VERSION)/Goodies/
 	cp $(srcdir)/extras/package/macosx/README.MacOSX.rtf $(top_builddir)/vlc-$(VERSION)/Read\ Me.rtf
 	zip -r -y -9 $(top_builddir)/vlc-$(VERSION).zip $(top_builddir)/vlc-$(VERSION)
 	rm -rf "$(top_builddir)/vlc-$(VERSION)"
 
-package-macosx-framework-zip: ChangeLog
+package-macosx-framework-zip:
 	mkdir -p $(top_builddir)/vlckit-$(VERSION)/Goodies/
 	cp -R $(srcdir)/projects/macosx/framework/build/Debug/VLCKit.framework $(top_builddir)/vlckit-$(VERSION)/
-	cp $(top_builddir)/ChangeLog $(top_builddir)/vlckit-$(VERSION)/Goodies/
 	cd $(srcdir); cp AUTHORS COPYING README THANKS NEWS $(abs_top_builddir)/vlckit-$(VERSION)/Goodies/
 	zip -r -y -9 $(top_builddir)/vlckit-$(VERSION).zip $(top_builddir)/vlckit-$(VERSION)
 
