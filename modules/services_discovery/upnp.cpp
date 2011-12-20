@@ -38,6 +38,7 @@
 #include <vlc_services_discovery.h>
 
 #include <assert.h>
+#include <limits.h>
 
 /*
  * Constants
@@ -132,6 +133,18 @@ static int Open( vlc_object_t *p_this )
     if( i_res != UPNP_E_SUCCESS )
     {
         msg_Err( p_sd, "Error sending search request: %s", UpnpGetErrorMessage( i_res ) );
+        Close( (vlc_object_t*) p_sd );
+        return VLC_EGENERIC;
+    }
+
+    /* libupnp does not treat a maximum content length of 0 as unlimited
+     * until 64dedf (~ pupnp v1.6.7) and provides no sane way to discriminate
+     * between versions */
+    if( (i_res = UpnpSetMaxContentLength( INT_MAX )) != UPNP_E_SUCCESS )
+    {
+        msg_Err( p_sd, "Failed to set maximum content length: %s",
+                UpnpGetErrorMessage( i_res ));
+
         Close( (vlc_object_t*) p_sd );
         return VLC_EGENERIC;
     }
