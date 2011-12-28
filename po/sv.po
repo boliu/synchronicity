@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vlc\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2011-12-10 00:07+0000\n"
+"POT-Creation-Date: 2011-12-28 03:13+0100\n"
 "PO-Revision-Date: 2011-10-18 08:14+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -74,8 +74,8 @@ msgid "Hotkeys settings"
 msgstr "Inställningar för snabbtangenter"
 
 #: include/vlc_config_cat.h:52 src/input/es_out.c:2893 src/input/es_out.c:2934
-#: src/libvlc-module.c:1580 modules/access/imem.c:64
-#: modules/gui/macosx/MainMenu.m:282 modules/gui/macosx/output.m:170
+#: src/libvlc-module.c:1587 modules/access/imem.c:64
+#: modules/gui/macosx/MainMenu.m:281 modules/gui/macosx/output.m:170
 #: modules/gui/macosx/playlistinfo.m:116 modules/gui/macosx/simple_prefs.m:177
 #: modules/gui/macosx/wizard.m:382
 #: modules/gui/qt4/components/info_panels.cpp:516
@@ -104,7 +104,7 @@ msgid "Audio filters are used to process the audio stream."
 msgstr "Ljudfilter används för att bearbeta ljudströmmen."
 
 #: include/vlc_config_cat.h:60 src/audio_output/common.c:82
-#: modules/gui/macosx/MainMenu.m:292 modules/gui/macosx/MainMenu.m:293
+#: modules/gui/macosx/MainMenu.m:291 modules/gui/macosx/MainMenu.m:292
 msgid "Visualizations"
 msgstr "Visualiseringar"
 
@@ -120,7 +120,7 @@ msgstr "Utmatningsmoduler"
 msgid "General settings for audio output modules."
 msgstr "Allmänna inställningar för ljudutmatningsmoduler."
 
-#: include/vlc_config_cat.h:66 src/libvlc-module.c:2093
+#: include/vlc_config_cat.h:66 src/libvlc-module.c:2100
 #: modules/gui/macosx/VideoEffects.m:72
 #: modules/stream_out/transcode/transcode.c:223
 msgid "Miscellaneous"
@@ -131,8 +131,8 @@ msgid "Miscellaneous audio settings and modules."
 msgstr "Diverse ljudinställningar och moduler."
 
 #: include/vlc_config_cat.h:70 src/input/es_out.c:2896 src/input/es_out.c:2981
-#: src/libvlc-module.c:1631 modules/access/imem.c:64
-#: modules/gui/macosx/MainMenu.m:295 modules/gui/macosx/output.m:160
+#: src/libvlc-module.c:1638 modules/access/imem.c:64
+#: modules/gui/macosx/MainMenu.m:294 modules/gui/macosx/output.m:160
 #: modules/gui/macosx/playlistinfo.m:106 modules/gui/macosx/simple_prefs.m:181
 #: modules/gui/macosx/wizard.m:383
 #: modules/gui/qt4/components/info_panels.cpp:517
@@ -245,7 +245,7 @@ msgstr "Allmän inmatning"
 msgid "General input settings. Use with care..."
 msgstr "Allmänna inmatningsinställningar. Använd med försiktighet..."
 
-#: include/vlc_config_cat.h:124 src/libvlc-module.c:2025
+#: include/vlc_config_cat.h:124 src/libvlc-module.c:2032
 msgid "Stream output"
 msgstr "Strömutmatning"
 
@@ -350,9 +350,9 @@ msgstr "VOD"
 msgid "VLC's implementation of Video On Demand"
 msgstr "VLC:s implementering av Video på begäran (VOD)"
 
-#: include/vlc_config_cat.h:175 src/libvlc-module.c:2142
+#: include/vlc_config_cat.h:175 src/libvlc-module.c:2149
 #: src/playlist/engine.c:217 modules/demux/playlist/playlist.c:63
-#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:277
+#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:302
 #: modules/gui/qt4/components/controller.hpp:112
 #: modules/gui/qt4/components/playlist/playlist.cpp:198
 #: modules/gui/qt4/components/playlist/selector.cpp:188
@@ -387,7 +387,7 @@ msgstr ""
 "Tjänsteidentifieringsmoduler är funktioner som automatiskt lägger till "
 "objekt till spellistan."
 
-#: include/vlc_config_cat.h:186 src/libvlc-module.c:1926
+#: include/vlc_config_cat.h:186 src/libvlc-module.c:1933
 #: modules/gui/qt4/ui/video_effects.h:1395
 msgid "Advanced"
 msgstr "Avancerat"
@@ -542,14 +542,13 @@ msgid "&About"
 msgstr "&Om"
 
 #: include/vlc_intf_strings.h:65 modules/control/rc.c:72
-#: modules/gui/macosx/MainMenu.m:256 modules/gui/macosx/MainMenu.m:353
-#: modules/gui/macosx/MainMenu.m:360 modules/gui/macosx/MainMenu.m:807
-#: modules/gui/macosx/MainMenu.m:808 modules/gui/macosx/MainMenu.m:809
-#: modules/gui/macosx/MainWindow.m:823 modules/gui/macosx/playlist.m:466
+#: modules/gui/macosx/MainMenu.m:255 modules/gui/macosx/MainMenu.m:352
+#: modules/gui/macosx/MainMenu.m:359 modules/gui/macosx/MainMenu.m:791
+#: modules/gui/macosx/MainMenu.m:792 modules/gui/macosx/MainMenu.m:793
+#: modules/gui/macosx/MainWindow.m:1003 modules/gui/macosx/playlist.m:466
 #: modules/gui/qt4/components/controller.hpp:110
 #: modules/gui/qt4/dialogs/vlm.cpp:550 modules/gui/qt4/menus.cpp:786
-#: modules/gui/qt4/ui/open.h:253 share/lua/http/index.html:203
-#: share/lua/http/mobile.html:97 share/lua/http/dialogs/stream_window.html:59
+#: modules/gui/qt4/ui/open.h:253
 msgid "Play"
 msgstr "Spela upp"
 
@@ -594,12 +593,12 @@ msgid "Save..."
 msgstr "Spara..."
 
 #: include/vlc_intf_strings.h:80 modules/gui/macosx/CoreInteraction.m:354
-#: modules/gui/macosx/MainMenu.m:270 modules/gui/macosx/MainMenu.m:1182
+#: modules/gui/macosx/MainMenu.m:269 modules/gui/macosx/MainMenu.m:1127
 msgid "Repeat All"
 msgstr "Upprepa alla"
 
 #: include/vlc_intf_strings.h:81 modules/gui/macosx/CoreInteraction.m:371
-#: modules/gui/macosx/MainMenu.m:269 modules/gui/macosx/MainMenu.m:1175
+#: modules/gui/macosx/MainMenu.m:268 modules/gui/macosx/MainMenu.m:1120
 msgid "Repeat One"
 msgstr "Repetera en gång"
 
@@ -607,8 +606,8 @@ msgstr "Repetera en gång"
 msgid "No Repeat"
 msgstr "Upprepa inte"
 
-#: include/vlc_intf_strings.h:84 src/libvlc-module.c:1502
-#: modules/gui/macosx/MainMenu.m:268 modules/gui/macosx/MainMenu.m:1168
+#: include/vlc_intf_strings.h:84 src/libvlc-module.c:1509
+#: modules/gui/macosx/MainMenu.m:267 modules/gui/macosx/MainMenu.m:1113
 #: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/components/controller.hpp:127
 msgid "Random"
@@ -650,8 +649,8 @@ msgstr "Spara spellista till &fil..."
 msgid "Open Play&list..."
 msgstr "Öppna spe&llista..."
 
-#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:122
-#: modules/gui/qt4/components/preferences_widgets.cpp:1297
+#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:133
+#: modules/gui/qt4/components/preferences_widgets.cpp:1300
 msgid "Search"
 msgstr "Sök"
 
@@ -815,8 +814,7 @@ msgid "Vu meter"
 msgstr "Vu-mätare"
 
 #: src/audio_output/common.c:122 modules/audio_filter/equalizer.c:76
-#: modules/gui/macosx/AudioEffects.m:102 share/lua/http/index.html:215
-#: share/lua/http/mobile.html:76
+#: modules/gui/macosx/AudioEffects.m:102
 msgid "Equalizer"
 msgstr "Equalizer"
 
@@ -838,8 +836,8 @@ msgid "The maximum number of filters (%u) was reached."
 msgstr "Det maximala antalet filter (%d) nåddes."
 
 #: src/audio_output/output.c:100 src/audio_output/output.c:128
-#: modules/access/vcdx/info.c:86 modules/gui/macosx/MainMenu.m:288
-#: modules/gui/macosx/MainMenu.m:289
+#: modules/access/vcdx/info.c:86 modules/gui/macosx/MainMenu.m:287
+#: modules/gui/macosx/MainMenu.m:288
 #: share/lua/http/dialogs/create_stream.html:316
 msgid "Audio Channels"
 msgstr "Ljudkanaler"
@@ -1099,8 +1097,8 @@ msgid "%s [%s %d]"
 msgstr "%s [%s %d]"
 
 #: src/input/es_out.c:1165 src/input/es_out.c:1170 src/input/var.c:167
-#: src/libvlc-module.c:693 modules/gui/macosx/MainMenu.m:275
-#: modules/gui/macosx/MainMenu.m:276
+#: src/libvlc-module.c:693 modules/gui/macosx/MainMenu.m:274
+#: modules/gui/macosx/MainMenu.m:275
 msgid "Program"
 msgstr "Program"
 
@@ -1108,7 +1106,7 @@ msgstr "Program"
 msgid "Scrambled"
 msgstr "Kodad"
 
-#: src/input/es_out.c:1368 share/lua/http/index.html:163
+#: src/input/es_out.c:1368
 msgid "Yes"
 msgstr "Ja"
 
@@ -1240,8 +1238,8 @@ msgstr ""
 "Formatet för \"%s\" kunde inte identifieras. Se efter i loggen för mer "
 "information."
 
-#: src/input/meta.c:54 src/input/var.c:177 modules/gui/macosx/MainMenu.m:277
-#: modules/gui/macosx/MainMenu.m:278 modules/gui/macosx/open.m:157
+#: src/input/meta.c:54 src/input/var.c:177 modules/gui/macosx/MainMenu.m:276
+#: modules/gui/macosx/MainMenu.m:277 modules/gui/macosx/open.m:157
 #: modules/gui/macosx/open.m:159 modules/gui/macosx/playlistinfo.m:78
 #: modules/gui/macosx/wizard.m:350
 #: modules/gui/qt4/components/open_panels.cpp:441
@@ -1317,8 +1315,8 @@ msgstr "Bokmärke"
 msgid "Programs"
 msgstr "Program"
 
-#: src/input/var.c:182 modules/gui/macosx/MainMenu.m:279
-#: modules/gui/macosx/MainMenu.m:280 modules/gui/macosx/open.m:158
+#: src/input/var.c:182 modules/gui/macosx/MainMenu.m:278
+#: modules/gui/macosx/MainMenu.m:279 modules/gui/macosx/open.m:158
 #: modules/gui/macosx/open.m:160 modules/gui/qt4/ui/open_disk.h:310
 msgid "Chapter"
 msgstr "Kapitel"
@@ -1327,19 +1325,19 @@ msgstr "Kapitel"
 msgid "Navigation"
 msgstr "Navigering"
 
-#: src/input/var.c:200 modules/gui/macosx/MainMenu.m:303
-#: modules/gui/macosx/MainMenu.m:304
+#: src/input/var.c:200 modules/gui/macosx/MainMenu.m:302
+#: modules/gui/macosx/MainMenu.m:303
 msgid "Video Track"
 msgstr "Videospår"
 
-#: src/input/var.c:205 modules/gui/macosx/MainMenu.m:286
-#: modules/gui/macosx/MainMenu.m:287
+#: src/input/var.c:205 modules/gui/macosx/MainMenu.m:285
+#: modules/gui/macosx/MainMenu.m:286
 msgid "Audio Track"
 msgstr "Ljudspår"
 
-#: src/input/var.c:210 modules/gui/macosx/MainMenu.m:311
-#: modules/gui/macosx/MainMenu.m:312 modules/gui/macosx/MainMenu.m:993
-#: modules/gui/macosx/MainMenu.m:1051
+#: src/input/var.c:210 modules/gui/macosx/MainMenu.m:310
+#: modules/gui/macosx/MainMenu.m:311 modules/gui/macosx/MainMenu.m:986
+#: modules/gui/macosx/MainMenu.m:1044
 msgid "Subtitles Track"
 msgstr "Undertextspår"
 
@@ -1361,11 +1359,11 @@ msgstr "Titel %i%s"
 msgid "Chapter %i"
 msgstr "Kapitel %i"
 
-#: src/input/var.c:376 modules/gui/qt4/dialogs/toolbar.cpp:390
+#: src/input/var.c:376 modules/gui/qt4/dialogs/toolbar.cpp:395
 msgid "Next chapter"
 msgstr "Nästa kapitel"
 
-#: src/input/var.c:381 modules/gui/qt4/dialogs/toolbar.cpp:380
+#: src/input/var.c:381 modules/gui/qt4/dialogs/toolbar.cpp:385
 msgid "Previous chapter"
 msgstr "Föregående kapitel"
 
@@ -1412,24 +1410,24 @@ msgstr ""
 "Kör vlc med standardgränssnittet. Använd \"cvlc\" för att använda vlc utan "
 "gränssnitt."
 
-#: src/libvlc.h:154 src/libvlc-module.c:1505 src/libvlc-module.c:1506
-#: src/libvlc-module.c:2655 src/video_output/vout_intf.c:182
+#: src/libvlc.h:154 src/libvlc-module.c:1512 src/libvlc-module.c:1513
+#: src/libvlc-module.c:2662 src/video_output/vout_intf.c:182
 msgid "Zoom"
 msgstr "Zoom"
 
-#: src/libvlc.h:155 src/libvlc-module.c:1429 src/video_output/vout_intf.c:83
+#: src/libvlc.h:155 src/libvlc-module.c:1436 src/video_output/vout_intf.c:83
 msgid "1:4 Quarter"
 msgstr "1:4 Kvarts"
 
-#: src/libvlc.h:156 src/libvlc-module.c:1430 src/video_output/vout_intf.c:84
+#: src/libvlc.h:156 src/libvlc-module.c:1437 src/video_output/vout_intf.c:84
 msgid "1:2 Half"
 msgstr "1:2 Halv"
 
-#: src/libvlc.h:157 src/libvlc-module.c:1431 src/video_output/vout_intf.c:85
+#: src/libvlc.h:157 src/libvlc-module.c:1438 src/video_output/vout_intf.c:85
 msgid "1:1 Original"
 msgstr "1:1 Original"
 
-#: src/libvlc.h:158 src/libvlc-module.c:1432 src/video_output/vout_intf.c:86
+#: src/libvlc.h:158 src/libvlc-module.c:1439 src/video_output/vout_intf.c:86
 msgid "2:1 Double"
 msgstr "2:1 Dubbel"
 
@@ -2090,15 +2088,15 @@ msgid "Hide mouse cursor and fullscreen controller after n milliseconds."
 msgstr "Dölj muspekare och helskärmskontroller efter x millisekunder"
 
 #: src/libvlc-module.c:467 src/libvlc-module.c:469
-#: src/video_output/interlacing.c:180 modules/gui/macosx/MainMenu.m:314
-#: modules/gui/macosx/MainMenu.m:315 modules/gui/qt4/dialogs/convert.cpp:86
+#: src/video_output/interlacing.c:180 modules/gui/macosx/MainMenu.m:313
+#: modules/gui/macosx/MainMenu.m:314 modules/gui/qt4/dialogs/convert.cpp:86
 #: modules/video_filter/deinterlace/deinterlace.c:98
 #: share/lua/http/dialogs/create_stream.html:346
 msgid "Deinterlace"
 msgstr "Avfläta"
 
 #: src/libvlc-module.c:477 src/video_output/interlacing.c:195
-#: modules/gui/macosx/MainMenu.m:316 modules/gui/macosx/MainMenu.m:317
+#: modules/gui/macosx/MainMenu.m:315 modules/gui/macosx/MainMenu.m:316
 #: modules/video_filter/deinterlace/deinterlace.c:53
 msgid "Deinterlace mode"
 msgstr "Avflätningsläge"
@@ -2843,7 +2841,7 @@ msgstr "Aktivera underbilder"
 msgid "You can completely disable the sub-picture processing."
 msgstr ""
 
-#: src/libvlc-module.c:831 src/libvlc-module.c:1761 src/text/iso-639_def.h:145
+#: src/libvlc-module.c:831 src/libvlc-module.c:1768 src/text/iso-639_def.h:145
 #: modules/gui/macosx/simple_prefs.m:283
 #: modules/stream_out/transcode/transcode.c:219
 #: modules/gui/qt4/ui/sprefs_subtitles.h:271
@@ -3006,97 +3004,106 @@ msgstr "Standardvärde för tidsgräns av TCP-anslutning (i millisekunder)."
 msgid "HTTP server address"
 msgstr "HTTP-värdadress"
 
-#: src/libvlc-module.c:918
-#, fuzzy
-msgid "RTSP server address"
-msgstr "RTSP-värdadress"
-
-#: src/libvlc-module.c:920
+#: src/libvlc-module.c:919
 msgid ""
 "By default, the server will listen on any local IP address. Specify an IP "
 "address (e.g. ::1 or 127.0.0.1) or a host name (e.g. localhost) to restrict "
 "them to a specific network interface."
 msgstr ""
 
-#: src/libvlc-module.c:924
+#: src/libvlc-module.c:923
+#, fuzzy
+msgid "RTSP server address"
+msgstr "RTSP-värdadress"
+
+#: src/libvlc-module.c:925
+msgid ""
+"This defines the address the RTSP server will listen on, along with the base "
+"path of the RTSP VOD media. Syntax is address/path. By default, the server "
+"will listen on any local IP address. Specify an IP address (e.g. ::1 or "
+"127.0.0.1) or a host name (e.g. localhost) to restrict them to a specific "
+"network interface."
+msgstr ""
+
+#: src/libvlc-module.c:931
 #, fuzzy
 msgid "HTTP server port"
 msgstr "HTTP-server"
 
-#: src/libvlc-module.c:926
+#: src/libvlc-module.c:933
 msgid ""
 "The HTTP server will listen on this TCP port. The standard HTTP port number "
 "is 80. However allocation of port numbers below 1025 is usually restricted "
 "by the operating system."
 msgstr ""
 
-#: src/libvlc-module.c:931
+#: src/libvlc-module.c:938
 #, fuzzy
 msgid "HTTPS server port"
 msgstr "HTTP-server"
 
-#: src/libvlc-module.c:933
+#: src/libvlc-module.c:940
 msgid ""
 "The HTTPS server will listen on this TCP port. The standard HTTPS port "
 "number is 443. However allocation of port numbers below 1025 is usually "
 "restricted by the operating system."
 msgstr ""
 
-#: src/libvlc-module.c:938
+#: src/libvlc-module.c:945
 #, fuzzy
 msgid "RTSP server port"
 msgstr "CDDB-serverport"
 
-#: src/libvlc-module.c:940
+#: src/libvlc-module.c:947
 msgid ""
 "The RTSP server will listen on this TCP port. The standard RTSP port number "
 "is 554. However allocation of port numbers below 1025 is usually restricted "
 "by the operating system."
 msgstr ""
 
-#: src/libvlc-module.c:945
+#: src/libvlc-module.c:952
 #, fuzzy
 msgid "HTTP/TLS server certificate"
 msgstr "Kontrollera giltighet för TLS/SSL-servercertifikat"
 
-#: src/libvlc-module.c:947
+#: src/libvlc-module.c:954
 msgid "This X.509 certicate file (PEM format) is used for server-side TLS."
 msgstr ""
 
-#: src/libvlc-module.c:949
+#: src/libvlc-module.c:956
 msgid "HTTP/TLS server private key"
 msgstr ""
 
-#: src/libvlc-module.c:951
+#: src/libvlc-module.c:958
 msgid "This private key file (PEM format) is used for server-side TLS."
 msgstr ""
 
-#: src/libvlc-module.c:953
+#: src/libvlc-module.c:960
 msgid "HTTP/TLS Certificate Authority"
 msgstr ""
 
-#: src/libvlc-module.c:955
+#: src/libvlc-module.c:962
 msgid ""
 "This X.509 certificate file (PEM format) can optionally be used to "
 "authenticate remote clients in TLS sessions."
 msgstr ""
 
-#: src/libvlc-module.c:958
+#: src/libvlc-module.c:965
 #, fuzzy
 msgid "HTTP/TLS Certificate Revocation List"
 msgstr "HTTP-gränssnitt x509 PEM privat nyckelfil"
 
-#: src/libvlc-module.c:960
+#: src/libvlc-module.c:967
 msgid ""
 "This file countains an optional CRL to prevent remove clients from using "
 "revoked certificates in TLS sessions."
 msgstr ""
 
-#: src/libvlc-module.c:963
+#: src/libvlc-module.c:970
 msgid "SOCKS server"
 msgstr "SOCKS-server"
 
-#: src/libvlc-module.c:965
+#: src/libvlc-module.c:972
 msgid ""
 "SOCKS proxy server to use. This must be of the form address:port. It will be "
 "used for all TCP connections"
@@ -3104,116 +3111,116 @@ msgstr ""
 "SOCKS-proxyserver att använda. Detta måste vara i formatet adress:port. Den "
 "kommer att användas för alla TCP-anslutningar"
 
-#: src/libvlc-module.c:968
+#: src/libvlc-module.c:975
 msgid "SOCKS user name"
 msgstr "SOCKS-användarnamn"
 
-#: src/libvlc-module.c:970
+#: src/libvlc-module.c:977
 msgid "User name to be used for connection to the SOCKS proxy."
 msgstr "Användarnamn att använda för anslutning till SOCKS-proxyn."
 
-#: src/libvlc-module.c:972
+#: src/libvlc-module.c:979
 msgid "SOCKS password"
 msgstr "SOCKS-lösenord"
 
-#: src/libvlc-module.c:974
+#: src/libvlc-module.c:981
 msgid "Password to be used for connection to the SOCKS proxy."
 msgstr "Lösenord att använda för anslutning till SOCKS-proxyn."
 
-#: src/libvlc-module.c:976
+#: src/libvlc-module.c:983
 msgid "Title metadata"
 msgstr "Titel"
 
-#: src/libvlc-module.c:978
+#: src/libvlc-module.c:985
 msgid "Allows you to specify a \"title\" metadata for an input."
 msgstr "Låter dig ange en \"title\" metadata för en inmatning."
 
-#: src/libvlc-module.c:980
+#: src/libvlc-module.c:987
 msgid "Author metadata"
 msgstr "Upphovsman"
 
-#: src/libvlc-module.c:982
+#: src/libvlc-module.c:989
 msgid "Allows you to specify an \"author\" metadata for an input."
 msgstr "Låter dig ange \"author\" metadata för en inmatning."
 
-#: src/libvlc-module.c:984
+#: src/libvlc-module.c:991
 msgid "Artist metadata"
 msgstr "Artist"
 
-#: src/libvlc-module.c:986
+#: src/libvlc-module.c:993
 msgid "Allows you to specify an \"artist\" metadata for an input."
 msgstr "Låter dig ange \"artist\" metadata för en inmatning."
 
-#: src/libvlc-module.c:988
+#: src/libvlc-module.c:995
 msgid "Genre metadata"
 msgstr "Genre"
 
-#: src/libvlc-module.c:990
+#: src/libvlc-module.c:997
 msgid "Allows you to specify a \"genre\" metadata for an input."
 msgstr "Låter dig ange \"genre\" metadata för en inmatning."
 
-#: src/libvlc-module.c:992
+#: src/libvlc-module.c:999
 msgid "Copyright metadata"
 msgstr "Copyright"
 
-#: src/libvlc-module.c:994
+#: src/libvlc-module.c:1001
 msgid "Allows you to specify a \"copyright\" metadata for an input."
 msgstr "Låter dig ange \"copyright\" metadata för en inmatning."
 
-#: src/libvlc-module.c:996
+#: src/libvlc-module.c:1003
 msgid "Description metadata"
 msgstr "Beskrivning"
 
-#: src/libvlc-module.c:998
+#: src/libvlc-module.c:1005
 msgid "Allows you to specify a \"description\" metadata for an input."
 msgstr "Låter dig ange \"description\" metadata för en inmatning."
 
-#: src/libvlc-module.c:1000
+#: src/libvlc-module.c:1007
 msgid "Date metadata"
 msgstr "Datum"
 
-#: src/libvlc-module.c:1002
+#: src/libvlc-module.c:1009
 msgid "Allows you to specify a \"date\" metadata for an input."
 msgstr "Låter dig ange \"date\" metadata för en inmatning."
 
-#: src/libvlc-module.c:1004
+#: src/libvlc-module.c:1011
 msgid "URL metadata"
 msgstr "URL"
 
-#: src/libvlc-module.c:1006
+#: src/libvlc-module.c:1013
 msgid "Allows you to specify a \"url\" metadata for an input."
 msgstr "Låter dig ange \"url\" metadata för en inmatning."
 
-#: src/libvlc-module.c:1010
+#: src/libvlc-module.c:1017
 msgid ""
 "This option can be used to alter the way VLC selects its codecs "
 "(decompression methods). Only advanced users should alter this option as it "
 "can break playback of all your streams."
 msgstr ""
 
-#: src/libvlc-module.c:1014
+#: src/libvlc-module.c:1021
 msgid "Preferred decoders list"
 msgstr "Lista på föredragna avkodare"
 
-#: src/libvlc-module.c:1016
+#: src/libvlc-module.c:1023
 msgid ""
 "List of codecs that VLC will use in priority. For instance, 'dummy,a52' will "
 "try the dummy and a52 codecs before trying the other ones. Only advanced "
 "users should alter this option as it can break playback of all your streams."
 msgstr ""
 
-#: src/libvlc-module.c:1021
+#: src/libvlc-module.c:1028
 msgid "Preferred encoders list"
 msgstr "Lista på föredragna kodare"
 
-#: src/libvlc-module.c:1023
+#: src/libvlc-module.c:1030
 msgid ""
 "This allows you to select a list of encoders that VLC will use in priority."
 msgstr ""
 "Det här låter dig välja en lista över kodare som VLC kommer att använda i "
 "prioritetsordning."
 
-#: src/libvlc-module.c:1032
+#: src/libvlc-module.c:1039
 msgid ""
 "These options allow you to set default global options for the stream output "
 "subsystem."
@@ -3221,80 +3228,80 @@ msgstr ""
 "Dessa alternativ låter dig ställa in standardvärden för globala alternativ "
 "för undersystemet för strömutmatning."
 
-#: src/libvlc-module.c:1035
+#: src/libvlc-module.c:1042
 msgid "Default stream output chain"
 msgstr ""
 
-#: src/libvlc-module.c:1037
+#: src/libvlc-module.c:1044
 msgid ""
 "You can enter here a default stream output chain. Refer to the documentation "
 "to learn how to build such chains. Warning: this chain will be enabled for "
 "all streams."
 msgstr ""
 
-#: src/libvlc-module.c:1041
+#: src/libvlc-module.c:1048
 msgid "Enable streaming of all ES"
 msgstr "Aktivera strömning för alla ES"
 
-#: src/libvlc-module.c:1043
+#: src/libvlc-module.c:1050
 msgid "Stream all elementary streams (video, audio and subtitles)"
 msgstr "Strömma alla elementära strömmar (video, ljud och undertexter)"
 
-#: src/libvlc-module.c:1045
+#: src/libvlc-module.c:1052
 msgid "Display while streaming"
 msgstr "Visa under strömning"
 
-#: src/libvlc-module.c:1047
+#: src/libvlc-module.c:1054
 msgid "Play locally the stream while streaming it."
 msgstr "Spela upp strömmen lokalt när den strömmas."
 
-#: src/libvlc-module.c:1049
+#: src/libvlc-module.c:1056
 msgid "Enable video stream output"
 msgstr "Aktivera videoströmutmatning"
 
-#: src/libvlc-module.c:1051
+#: src/libvlc-module.c:1058
 msgid ""
 "Choose whether the video stream should be redirected to the stream output "
 "facility when this last one is enabled."
 msgstr ""
 
-#: src/libvlc-module.c:1054
+#: src/libvlc-module.c:1061
 msgid "Enable audio stream output"
 msgstr "Aktivera ljudströmutmatning"
 
-#: src/libvlc-module.c:1056
+#: src/libvlc-module.c:1063
 msgid ""
 "Choose whether the audio stream should be redirected to the stream output "
 "facility when this last one is enabled."
 msgstr ""
 
-#: src/libvlc-module.c:1059
+#: src/libvlc-module.c:1066
 msgid "Enable SPU stream output"
 msgstr "Aktivera SPU-strömutmatning"
 
-#: src/libvlc-module.c:1061
+#: src/libvlc-module.c:1068
 msgid ""
 "Choose whether the SPU streams should be redirected to the stream output "
 "facility when this last one is enabled."
 msgstr ""
 
-#: src/libvlc-module.c:1064
+#: src/libvlc-module.c:1071
 msgid "Keep stream output open"
 msgstr "Håll strömutmatning öppen"
 
-#: src/libvlc-module.c:1066
+#: src/libvlc-module.c:1073
 msgid ""
 "This allows you to keep an unique stream output instance across multiple "
 "playlist item (automatically insert the gather stream output if not "
 "specified)"
 msgstr ""
 
-#: src/libvlc-module.c:1070
+#: src/libvlc-module.c:1077
 #, fuzzy
 msgid "Stream output muxer caching (ms)"
 msgstr "Paus"
 
-#: src/libvlc-module.c:1072
+#: src/libvlc-module.c:1079
 #, fuzzy
 msgid ""
 "This allow you to configure the initial caching amount for stream output  "
@@ -3303,70 +3310,70 @@ msgstr ""
 "Låter dig ändra standardmellanlagringsvärdet för RTSP-strömmar. Detta värde "
 "ska vara i millisekunder."
 
-#: src/libvlc-module.c:1075
+#: src/libvlc-module.c:1082
 msgid "Preferred packetizer list"
 msgstr "Lista på föredragna paketerare"
 
-#: src/libvlc-module.c:1077
+#: src/libvlc-module.c:1084
 msgid ""
 "This allows you to select the order in which VLC will choose its packetizers."
 msgstr ""
 "Detta låter dig att välja ordningen i vilken VLC kommer att välja sina "
 "paketerare."
 
-#: src/libvlc-module.c:1080
+#: src/libvlc-module.c:1087
 msgid "Mux module"
 msgstr ""
 
-#: src/libvlc-module.c:1082
+#: src/libvlc-module.c:1089
 msgid "This is a legacy entry to let you configure mux modules"
 msgstr ""
 
-#: src/libvlc-module.c:1084
+#: src/libvlc-module.c:1091
 msgid "Access output module"
 msgstr ""
 
-#: src/libvlc-module.c:1086
+#: src/libvlc-module.c:1093
 msgid "This is a legacy entry to let you configure access output modules"
 msgstr ""
 
-#: src/libvlc-module.c:1088
+#: src/libvlc-module.c:1095
 msgid "Control SAP flow"
 msgstr "Kontrollera SAP-flöde"
 
-#: src/libvlc-module.c:1090
+#: src/libvlc-module.c:1097
 msgid ""
 "If this option is enabled, the flow on the SAP multicast address will be "
 "controlled. This is needed if you want to make announcements on the MBone."
 msgstr ""
 
-#: src/libvlc-module.c:1094
+#: src/libvlc-module.c:1101
 msgid "SAP announcement interval"
 msgstr "SAP-annonseringsintervall"
 
-#: src/libvlc-module.c:1096
+#: src/libvlc-module.c:1103
 msgid ""
 "When the SAP flow control is disabled, this lets you set the fixed interval "
 "between SAP announcements."
 msgstr ""
 
-#: src/libvlc-module.c:1105
+#: src/libvlc-module.c:1112
 msgid ""
 "These options allow you to enable special CPU optimizations. You should "
 "always leave all these enabled."
 msgstr ""
 
-#: src/libvlc-module.c:1110
+#: src/libvlc-module.c:1117
 msgid ""
 "These options allow you to select default modules. Leave these alone unless "
 "you really know what you are doing."
 msgstr ""
 
-#: src/libvlc-module.c:1113
+#: src/libvlc-module.c:1120
 msgid "Memory copy module"
 msgstr "Minneskopieringsmodul"
 
-#: src/libvlc-module.c:1115
+#: src/libvlc-module.c:1122
 msgid ""
 "You can select which memory copy module you want to use. By default VLC will "
 "select the fastest one supported by your hardware."
@@ -3374,31 +3381,31 @@ msgstr ""
 "Du kan välja vilken minneskopieringsmodul som du vill använda. Som standard "
 "väljer VLC den snabbaste som stöds av din hårdvara."
 
-#: src/libvlc-module.c:1118
+#: src/libvlc-module.c:1125
 msgid "Access module"
 msgstr "Åtkomstmodul"
 
-#: src/libvlc-module.c:1120
+#: src/libvlc-module.c:1127
 msgid ""
 "This allows you to force an access module. You can use it if the correct "
 "access is not automatically detected. You should not set this as a global "
 "option unless you really know what you are doing."
 msgstr ""
 
-#: src/libvlc-module.c:1124
+#: src/libvlc-module.c:1131
 #, fuzzy
 msgid "Stream filter module"
 msgstr "Videofiltermodul"
 
-#: src/libvlc-module.c:1126
+#: src/libvlc-module.c:1133
 msgid "Stream filters are used to modify the stream that is being read. "
 msgstr "Strömningsfilter används för att ändra strömmen som läses."
 
-#: src/libvlc-module.c:1128
+#: src/libvlc-module.c:1135
 msgid "Demux module"
 msgstr "Demux-modul"
 
-#: src/libvlc-module.c:1130
+#: src/libvlc-module.c:1137
 msgid ""
 "Demultiplexers are used to separate the \"elementary\" streams (like audio "
 "and video streams). You can use it if the correct demuxer is not "
@@ -3410,22 +3417,22 @@ msgstr ""
 "automatiskt kan identifieras. Du bör inte ställa in det här som ett globalt "
 "alternativ såvida du inte vet vad du gör."
 
-#: src/libvlc-module.c:1135
+#: src/libvlc-module.c:1142
 #, fuzzy
 msgid "VoD server module"
 msgstr "Videofiltermodul"
 
-#: src/libvlc-module.c:1137
+#: src/libvlc-module.c:1144
 msgid ""
 "You can select which VoD server module you want to use. Set this to "
 "`vod_rtsp' to switch back to the old, legacy module."
 msgstr ""
 
-#: src/libvlc-module.c:1140
+#: src/libvlc-module.c:1147
 msgid "Allow real-time priority"
 msgstr "Tillåt realtidsprioritet"
 
-#: src/libvlc-module.c:1142
+#: src/libvlc-module.c:1149
 msgid ""
 "Running VLC in real-time priority will allow for much more precise "
 "scheduling and yield better, especially when streaming content. It can "
@@ -3433,31 +3440,31 @@ msgid ""
 "only activate this if you know what you're doing."
 msgstr ""
 
-#: src/libvlc-module.c:1148
+#: src/libvlc-module.c:1155
 msgid "Adjust VLC priority"
 msgstr "Justera VLC-prioritet"
 
-#: src/libvlc-module.c:1150
+#: src/libvlc-module.c:1157
 msgid ""
 "This option adds an offset (positive or negative) to VLC default priorities. "
 "You can use it to tune VLC priority against other programs, or against other "
 "VLC instances."
 msgstr ""
 
-#: src/libvlc-module.c:1154
+#: src/libvlc-module.c:1161
 msgid "(Experimental) Don't do caching at the access level."
 msgstr ""
 
-#: src/libvlc-module.c:1156
+#: src/libvlc-module.c:1163
 msgid ""
 "This option is useful if you want to lower the latency when reading a stream"
 msgstr ""
 
-#: src/libvlc-module.c:1159
+#: src/libvlc-module.c:1166
 msgid "Modules search path"
 msgstr "Sökväg för moduler"
 
-#: src/libvlc-module.c:1161
+#: src/libvlc-module.c:1168
 msgid ""
 "Additional path for VLC to look for its modules. You can add several paths "
 "by concatenating them using \" PATH_SEP \" as separator"
@@ -3465,78 +3472,78 @@ msgstr ""
 "Ytterligare sökväg för VLC att leta efter sina moduler. Du kan lägga till "
 "flera sökvägar genom att sammanfoga dem med \" PATH_SEP \" som avgränsare"
 
-#: src/libvlc-module.c:1164
+#: src/libvlc-module.c:1171
 #, fuzzy
 msgid "Data search path"
 msgstr "Sökväg för moduler"
 
-#: src/libvlc-module.c:1166
+#: src/libvlc-module.c:1173
 msgid "Override the default data/share search path."
 msgstr ""
 
-#: src/libvlc-module.c:1168
+#: src/libvlc-module.c:1175
 msgid "VLM configuration file"
 msgstr "VLM-konfigurationsfil"
 
-#: src/libvlc-module.c:1170
+#: src/libvlc-module.c:1177
 msgid "Read a VLM configuration file as soon as VLM is started."
 msgstr "Läs en VLM-konfigurationsfil så snart som VLM har startat."
 
-#: src/libvlc-module.c:1172
+#: src/libvlc-module.c:1179
 msgid "Use a plugins cache"
 msgstr "Använd mellanlagring av insticksmoduler"
 
-#: src/libvlc-module.c:1174
+#: src/libvlc-module.c:1181
 msgid "Use a plugins cache which will greatly improve the startup time of VLC."
 msgstr ""
 "Använd mellanlagring av insticksmoduler för att minimera uppstartstiden för "
 "VLC."
 
-#: src/libvlc-module.c:1176
+#: src/libvlc-module.c:1183
 msgid "Locally collect statistics"
 msgstr "Samla in statistik lokalt"
 
-#: src/libvlc-module.c:1178
+#: src/libvlc-module.c:1185
 msgid "Collect miscellaneous local statistics about the playing media."
 msgstr "Samla in diverse lokal statistik om uppspelande media."
 
-#: src/libvlc-module.c:1180
+#: src/libvlc-module.c:1187
 msgid "Run as daemon process"
 msgstr "Kör som bakgrundsprocess"
 
-#: src/libvlc-module.c:1182
+#: src/libvlc-module.c:1189
 msgid "Runs VLC as a background daemon process."
 msgstr "Kör VLC som en bakgrundsprocess."
 
-#: src/libvlc-module.c:1184
+#: src/libvlc-module.c:1191
 msgid "Write process id to file"
 msgstr "Skriv process-id till fil"
 
-#: src/libvlc-module.c:1186
+#: src/libvlc-module.c:1193
 msgid "Writes process id into specified file."
 msgstr "Skriver process-id till angiven fil."
 
-#: src/libvlc-module.c:1188
+#: src/libvlc-module.c:1195
 msgid "Log to file"
 msgstr "Logga till fil"
 
-#: src/libvlc-module.c:1190
+#: src/libvlc-module.c:1197
 msgid "Log all VLC messages to a text file."
 msgstr "Logga alla VLC-meddelanden till en textfil."
 
-#: src/libvlc-module.c:1192
+#: src/libvlc-module.c:1199
 msgid "Log to syslog"
 msgstr "Logga till syslog"
 
-#: src/libvlc-module.c:1194
+#: src/libvlc-module.c:1201
 msgid "Log all VLC messages to syslog (UNIX systems)."
 msgstr "Logga alla VLC-meddelanden till syslog (UNIX-system)."
 
-#: src/libvlc-module.c:1196
+#: src/libvlc-module.c:1203
 msgid "Allow only one running instance"
 msgstr "Tillåt endast en körande instans"
 
-#: src/libvlc-module.c:1199
+#: src/libvlc-module.c:1206
 msgid ""
 "Allowing only one running instance of VLC can sometimes be useful, for "
 "example if you associated VLC with some media types and you don't want a new "
@@ -3550,7 +3557,7 @@ msgstr ""
 "utforskaren. Det här alternativet kommer att låta dig spela upp filen med "
 "den redan körande instansen eller att kölägga den."
 
-#: src/libvlc-module.c:1206
+#: src/libvlc-module.c:1213
 #, fuzzy
 msgid ""
 "Allowing only one running instance of VLC can sometimes be useful, for "
@@ -3568,29 +3575,29 @@ msgstr ""
 "Bus-sessionsdemonen är aktiv och den körande instansen av VLC för att "
 "använda D-Bus kontrollgränssnitt."
 
-#: src/libvlc-module.c:1215
+#: src/libvlc-module.c:1222
 msgid "VLC is started from file association"
 msgstr "VLC är startad från filassociering"
 
-#: src/libvlc-module.c:1217
+#: src/libvlc-module.c:1224
 msgid "Tell VLC that it is being launched due to a file association in the OS"
 msgstr ""
 "Tala om för VLC att den startas på grund av en filassociering i "
 "operativsystemet"
 
-#: src/libvlc-module.c:1220
+#: src/libvlc-module.c:1227
 msgid "One instance when started from file"
 msgstr "En instans om startad från fil"
 
-#: src/libvlc-module.c:1222
+#: src/libvlc-module.c:1229
 msgid "Allow only one running instance when started from file."
 msgstr "Tillåt endast en körande instans när startad från fil."
 
-#: src/libvlc-module.c:1224
+#: src/libvlc-module.c:1231
 msgid "Increase the priority of the process"
 msgstr "Öka prioriteten för processen"
 
-#: src/libvlc-module.c:1226
+#: src/libvlc-module.c:1233
 msgid ""
 "Increasing the priority of the process will very likely improve your playing "
 "experience as it allows VLC not to be disturbed by other applications that "
@@ -3606,11 +3613,11 @@ msgstr ""
 "all processortid och göra att hela systemet inte svarar på anrop som kan "
 "innebära att du måste starta om din dator."
 
-#: src/libvlc-module.c:1234
+#: src/libvlc-module.c:1241
 msgid "Enqueue items to playlist when in one instance mode"
 msgstr "Kölägg objekt i spellistan när ett instansläge används"
 
-#: src/libvlc-module.c:1236
+#: src/libvlc-module.c:1243
 msgid ""
 "When using the one instance only option, enqueue items to playlist and keep "
 "playing current item."
@@ -3618,7 +3625,7 @@ msgstr ""
 "Kölägg objekt i spellistan och fortsätt spela upp aktuellt objekt när "
 "alternativet för en instans används."
 
-#: src/libvlc-module.c:1245
+#: src/libvlc-module.c:1252
 msgid ""
 "These options define the behavior of the playlist. Some of them can be "
 "overridden in the playlist dialog box."
@@ -3626,11 +3633,11 @@ msgstr ""
 "Dessa alternativ definierar beteendet för spellistan. Några av dem kan "
 "åsidosättas i spellistans dialogruta."
 
-#: src/libvlc-module.c:1248
+#: src/libvlc-module.c:1255
 msgid "Automatically preparse files"
 msgstr "Automatisk förtolkning av filer"
 
-#: src/libvlc-module.c:1250
+#: src/libvlc-module.c:1257
 msgid ""
 "Automatically preparse files added to the playlist (to retrieve some "
 "metadata)."
@@ -3638,31 +3645,31 @@ msgstr ""
 "Automatisk förtolkning av filer som läggs till i spellistan (för att hämta "
 "viss metadata)."
 
-#: src/libvlc-module.c:1253
+#: src/libvlc-module.c:1260
 msgid "Album art policy"
 msgstr "Policy för omslagsbilder"
 
-#: src/libvlc-module.c:1255
+#: src/libvlc-module.c:1262
 msgid "Choose how album art will be downloaded."
 msgstr "Välj hur omslagsbilder ska hämtas."
 
-#: src/libvlc-module.c:1261
+#: src/libvlc-module.c:1268
 msgid "Manual download only"
 msgstr "Endast manuell hämtning"
 
-#: src/libvlc-module.c:1262
+#: src/libvlc-module.c:1269
 msgid "When track starts playing"
 msgstr "När spåret börjar spelas"
 
-#: src/libvlc-module.c:1263
+#: src/libvlc-module.c:1270
 msgid "As soon as track is added"
 msgstr "Så snart som spåret läggs till"
 
-#: src/libvlc-module.c:1265
+#: src/libvlc-module.c:1272
 msgid "Services discovery modules"
 msgstr "Moduler för tjänsteidentifiering"
 
-#: src/libvlc-module.c:1267
+#: src/libvlc-module.c:1274
 #, fuzzy
 msgid ""
 "Specifies the services discovery modules to preload, separated by colons. "
@@ -3671,89 +3678,89 @@ msgstr ""
 "Specificerar tjänsteidentifieringsmodulerna att läsa in, separerade med "
 "semikolon. Vanliga värden är sap, hal, ..."
 
-#: src/libvlc-module.c:1270
+#: src/libvlc-module.c:1277
 msgid "Play files randomly forever"
 msgstr "Spela filer slumpmässigt för alltid"
 
-#: src/libvlc-module.c:1272
+#: src/libvlc-module.c:1279
 msgid "VLC will randomly play files in the playlist until interrupted."
 msgstr ""
 "VLC kommer att slumpmässigt spela upp filer i spellistan tills de avbryts."
 
-#: src/libvlc-module.c:1274
+#: src/libvlc-module.c:1281
 msgid "Repeat all"
 msgstr "Upprepa alla"
 
-#: src/libvlc-module.c:1276
+#: src/libvlc-module.c:1283
 msgid "VLC will keep playing the playlist indefinitely."
 msgstr "VLC kommer att spela upp spellistan oändligt."
 
-#: src/libvlc-module.c:1278
+#: src/libvlc-module.c:1285
 msgid "Repeat current item"
 msgstr "Upprepa aktuellt objekt"
 
-#: src/libvlc-module.c:1280
+#: src/libvlc-module.c:1287
 msgid "VLC will keep playing the current playlist item."
 msgstr "VLC kommer att fortsätta spela upp aktuell spellista."
 
-#: src/libvlc-module.c:1282
+#: src/libvlc-module.c:1289
 msgid "Play and stop"
 msgstr "Spela upp och stoppa"
 
-#: src/libvlc-module.c:1284
+#: src/libvlc-module.c:1291
 msgid "Stop the playlist after each played playlist item."
 msgstr "Stoppa spellistan efter varje spelat objekt i spellistan."
 
-#: src/libvlc-module.c:1286
+#: src/libvlc-module.c:1293
 msgid "Play and exit"
 msgstr "Spela upp och avsluta"
 
-#: src/libvlc-module.c:1288
+#: src/libvlc-module.c:1295
 msgid "Exit if there are no more items in the playlist."
 msgstr "Avsluta om det inte finns fler objekt i spellistan."
 
-#: src/libvlc-module.c:1290
+#: src/libvlc-module.c:1297
 msgid "Play and pause"
 msgstr "Spela upp och gör paus"
 
-#: src/libvlc-module.c:1292
+#: src/libvlc-module.c:1299
 #, fuzzy
 msgid "Pause each item in the playlist on the last frame."
 msgstr "Lägger in en fördröjning i visningen av strömmen."
 
-#: src/libvlc-module.c:1294
+#: src/libvlc-module.c:1301
 msgid "Auto start"
 msgstr "Autostart"
 
-#: src/libvlc-module.c:1295
+#: src/libvlc-module.c:1302
 msgid "Automatically start playing the playlist content once it's loaded."
 msgstr "Börja spela upp spellistans innehåll automatiskt när den har lästs in."
 
-#: src/libvlc-module.c:1298
+#: src/libvlc-module.c:1305
 msgid "Use media library"
 msgstr "Använd mediabibliotek"
 
-#: src/libvlc-module.c:1300
+#: src/libvlc-module.c:1307
 msgid ""
 "The media library is automatically saved and reloaded each time you start "
 "VLC."
 msgstr ""
 "Mediabiblioteket sparas automatiskt och läses om varje gång du startar VLC."
 
-#: src/libvlc-module.c:1303
+#: src/libvlc-module.c:1310
 #, fuzzy
 msgid "Load Media Library"
 msgstr "Mediabibliotek"
 
-#: src/libvlc-module.c:1305
+#: src/libvlc-module.c:1312
 msgid "Enable this option to load the SQL-based Media Library at VLC startup"
 msgstr ""
 
-#: src/libvlc-module.c:1307 modules/gui/qt4/ui/sprefs_interface.h:530
+#: src/libvlc-module.c:1314 modules/gui/qt4/ui/sprefs_interface.h:530
 msgid "Display playlist tree"
 msgstr "Visa spellistträd"
 
-#: src/libvlc-module.c:1309
+#: src/libvlc-module.c:1316
 msgid ""
 "The playlist can use a tree to categorize some items, like the contents of a "
 "directory."
@@ -3761,890 +3768,887 @@ msgstr ""
 "Spellistan kan använda en trädstruktur för att kategorisera vissa objekt, "
 "som exempelvis innehållet i en katalog."
 
-#: src/libvlc-module.c:1318
+#: src/libvlc-module.c:1325
 msgid "These settings are the global VLC key bindings, known as \"hotkeys\"."
 msgstr ""
 "Dessa inställningar är de globala VLC-tangentbindningarna, kända som "
 "\"snabbtangenter\"."
 
-#: src/libvlc-module.c:1321 src/video_output/vout_intf.c:303
-#: modules/gui/macosx/MainMenu.m:300 modules/gui/macosx/MainMenu.m:367
-#: modules/gui/macosx/MainMenu.m:1217 modules/gui/macosx/MainMenu.m:1237
+#: src/libvlc-module.c:1328 src/video_output/vout_intf.c:303
+#: modules/gui/macosx/MainMenu.m:299 modules/gui/macosx/MainMenu.m:366
+#: modules/gui/macosx/MainMenu.m:1162 modules/gui/macosx/MainMenu.m:1182
 #: modules/gui/macosx/simple_prefs.m:294
 #: modules/gui/qt4/components/controller.hpp:111
 #: modules/gui/qt4/ui/sprefs_video.h:344
 msgid "Fullscreen"
 msgstr "Helskärm"
 
-#: src/libvlc-module.c:1322
+#: src/libvlc-module.c:1329
 msgid "Select the hotkey to use to swap fullscreen state."
 msgstr "Välj snabbtangent att använda för att växla helskärmsläge."
 
-#: src/libvlc-module.c:1323
+#: src/libvlc-module.c:1330
 msgid "Leave fullscreen"
 msgstr "Lämna helskärmsläget"
 
-#: src/libvlc-module.c:1324
+#: src/libvlc-module.c:1331
 msgid "Select the hotkey to use to leave fullscreen state."
 msgstr "Välj snabbtangent att använda för att lämna helskärmsläge."
 
-#: src/libvlc-module.c:1325 modules/gui/macosx/MainWindow.m:113
+#: src/libvlc-module.c:1332 modules/gui/macosx/MainWindow.m:124
 msgid "Play/Pause"
 msgstr "Spela upp/Gör paus"
 
-#: src/libvlc-module.c:1326
+#: src/libvlc-module.c:1333
 msgid "Select the hotkey to use to swap paused state."
 msgstr "Välj snabbtangent att använda för att växla pausat läge."
 
-#: src/libvlc-module.c:1327
+#: src/libvlc-module.c:1334
 msgid "Pause only"
 msgstr "Pausa endast"
 
-#: src/libvlc-module.c:1328
+#: src/libvlc-module.c:1335
 msgid "Select the hotkey to use to pause."
 msgstr "Välj snabbtangent att använda för att pausa."
 
-#: src/libvlc-module.c:1329
+#: src/libvlc-module.c:1336
 msgid "Play only"
 msgstr "Spela endast"
 
-#: src/libvlc-module.c:1330
+#: src/libvlc-module.c:1337
 msgid "Select the hotkey to use to play."
 msgstr "Välj snabbtangent att använda för att spela upp."
 
-#: src/libvlc-module.c:1331 modules/gui/macosx/MainMenu.m:264
+#: src/libvlc-module.c:1338 modules/gui/macosx/MainMenu.m:263
 #: modules/gui/qt4/components/controller.hpp:111
 #: modules/gui/qt4/components/controller.hpp:121
 msgid "Faster"
 msgstr "Snabbare"
 
-#: src/libvlc-module.c:1332 src/libvlc-module.c:1338
+#: src/libvlc-module.c:1339 src/libvlc-module.c:1345
 msgid "Select the hotkey to use for fast forward playback."
 msgstr "Välj snabbtangent att använda för att spela upp snabbt."
 
-#: src/libvlc-module.c:1333 modules/gui/macosx/MainMenu.m:262
+#: src/libvlc-module.c:1340 modules/gui/macosx/MainMenu.m:261
 #: modules/gui/qt4/components/controller.hpp:111
 #: modules/gui/qt4/components/controller.hpp:121
 msgid "Slower"
 msgstr "Långsammare"
 
-#: src/libvlc-module.c:1334 src/libvlc-module.c:1340
+#: src/libvlc-module.c:1341 src/libvlc-module.c:1347
 msgid "Select the hotkey to use for slow motion playback."
 msgstr "Välj snabbtangent att använda för att spela upp långsamt."
 
-#: src/libvlc-module.c:1335
+#: src/libvlc-module.c:1342
 msgid "Normal rate"
 msgstr "Normal hastighet"
 
-#: src/libvlc-module.c:1336
+#: src/libvlc-module.c:1343
 #, fuzzy
 msgid "Select the hotkey to set the playback rate back to normal."
 msgstr "Ange tangenten för att ange det här spellistbokmärket."
 
-#: src/libvlc-module.c:1337 modules/gui/qt4/menus.cpp:817
+#: src/libvlc-module.c:1344 modules/gui/qt4/menus.cpp:817
 msgid "Faster (fine)"
 msgstr "Snabbare (fin)"
 
-#: src/libvlc-module.c:1339 modules/gui/qt4/menus.cpp:825
+#: src/libvlc-module.c:1346 modules/gui/qt4/menus.cpp:825
 msgid "Slower (fine)"
 msgstr "Långsammare (fin)"
 
-#: src/libvlc-module.c:1341 modules/control/hotkeys.c:696
-#: modules/gui/macosx/about.m:223 modules/gui/macosx/MainMenu.m:267
-#: modules/gui/macosx/MainMenu.m:355 modules/gui/macosx/MainMenu.m:363
-#: modules/gui/macosx/MainMenu.m:1162 modules/gui/macosx/wizard.m:311
+#: src/libvlc-module.c:1348 modules/control/hotkeys.c:687
+#: modules/gui/macosx/about.m:223 modules/gui/macosx/MainMenu.m:266
+#: modules/gui/macosx/MainMenu.m:354 modules/gui/macosx/MainMenu.m:362
+#: modules/gui/macosx/MainMenu.m:1107 modules/gui/macosx/wizard.m:311
 #: modules/gui/macosx/wizard.m:323 modules/gui/macosx/wizard.m:1601
 #: modules/gui/qt4/components/controller.hpp:115 modules/notify/notify.c:341
 #: modules/gui/qt4/ui/sout.h:327 modules/gui/qt4/ui/sout.h:338
-#: modules/gui/qt4/ui/streampanel.h:182 share/lua/http/index.html:204
-#: share/lua/http/mobile.html:98
+#: modules/gui/qt4/ui/streampanel.h:182
 msgid "Next"
 msgstr "Nästa"
 
-#: src/libvlc-module.c:1342
+#: src/libvlc-module.c:1349
 msgid "Select the hotkey to use to skip to the next item in the playlist."
 msgstr ""
 "Välj snabbtangent att använda för att hoppa till nästa objekt i spellistan."
 
-#: src/libvlc-module.c:1343 modules/control/hotkeys.c:702
-#: modules/gui/macosx/about.m:224 modules/gui/macosx/MainMenu.m:266
-#: modules/gui/macosx/MainMenu.m:356 modules/gui/macosx/MainMenu.m:362
-#: modules/gui/macosx/MainMenu.m:1161
+#: src/libvlc-module.c:1350 modules/control/hotkeys.c:693
+#: modules/gui/macosx/about.m:224 modules/gui/macosx/MainMenu.m:265
+#: modules/gui/macosx/MainMenu.m:355 modules/gui/macosx/MainMenu.m:361
+#: modules/gui/macosx/MainMenu.m:1106
 #: modules/gui/qt4/components/controller.hpp:115 modules/notify/notify.c:339
 #: modules/gui/qt4/ui/sout.h:337 modules/gui/qt4/ui/sout.h:346
-#: share/lua/http/index.html:202 share/lua/http/mobile.html:96
 msgid "Previous"
 msgstr "Föregående"
 
-#: src/libvlc-module.c:1344
+#: src/libvlc-module.c:1351
 msgid "Select the hotkey to use to skip to the previous item in the playlist."
 msgstr ""
 "Välj snabbtangent att använda för att hoppa till föregående objekt i "
 "spellistan."
 
-#: src/libvlc-module.c:1345 modules/gui/macosx/MainMenu.m:257
-#: modules/gui/macosx/MainMenu.m:354 modules/gui/macosx/MainMenu.m:361
-#: modules/gui/macosx/MainMenu.m:1153 modules/gui/macosx/MainWindow.m:116
+#: src/libvlc-module.c:1352 modules/gui/macosx/MainMenu.m:256
+#: modules/gui/macosx/MainMenu.m:353 modules/gui/macosx/MainMenu.m:360
+#: modules/gui/macosx/MainMenu.m:1098 modules/gui/macosx/MainWindow.m:127
 #: modules/gui/qt4/components/controller.hpp:110
 #: modules/gui/qt4/dialogs/vlm.cpp:556 modules/notify/xosd.c:234
-#: modules/gui/qt4/ui/streampanel.h:181 share/lua/http/index.html:206
-#: share/lua/http/mobile.html:99 share/lua/http/dialogs/stream_window.html:58
+#: modules/gui/qt4/ui/streampanel.h:181
 msgid "Stop"
 msgstr "Stoppa"
 
-#: src/libvlc-module.c:1346
+#: src/libvlc-module.c:1353
 msgid "Select the hotkey to stop playback."
 msgstr "Välj snabbtangent att använda för att stoppa uppspelning."
 
-#: src/libvlc-module.c:1347 modules/gui/fbosd.c:128 modules/gui/fbosd.c:196
+#: src/libvlc-module.c:1354 modules/gui/fbosd.c:128 modules/gui/fbosd.c:196
 #: modules/gui/macosx/bookmarks.m:93 modules/gui/macosx/bookmarks.m:102
-#: modules/gui/macosx/MainWindow.m:126 modules/gui/macosx/VideoEffects.m:146
+#: modules/gui/macosx/MainWindow.m:137 modules/gui/macosx/VideoEffects.m:146
 #: modules/video_filter/marq.c:157 modules/video_filter/rss.c:200
 #: modules/gui/qt4/ui/sprefs_subtitles.h:274
 #: modules/gui/qt4/ui/video_effects.h:1362
 msgid "Position"
 msgstr "Position"
 
-#: src/libvlc-module.c:1348
+#: src/libvlc-module.c:1355
 msgid "Select the hotkey to display the position."
 msgstr "Välj snabbtangent att använda för att visa positionen."
 
-#: src/libvlc-module.c:1350
+#: src/libvlc-module.c:1357
 msgid "Very short backwards jump"
 msgstr "Mycket kort hopp bakåt"
 
-#: src/libvlc-module.c:1352
+#: src/libvlc-module.c:1359
 msgid "Select the hotkey to make a very short backwards jump."
 msgstr "Välj snabbtangent att använda för att göra ett mycket kort hopp bakåt."
 
-#: src/libvlc-module.c:1353
+#: src/libvlc-module.c:1360
 msgid "Short backwards jump"
 msgstr "Kort hopp bakåt"
 
-#: src/libvlc-module.c:1355
+#: src/libvlc-module.c:1362
 msgid "Select the hotkey to make a short backwards jump."
 msgstr "Välj snabbtangent att använda för att göra ett kort hopp bakåt."
 
-#: src/libvlc-module.c:1356
+#: src/libvlc-module.c:1363
 msgid "Medium backwards jump"
 msgstr "Medellångt hopp bakåt"
 
-#: src/libvlc-module.c:1358
+#: src/libvlc-module.c:1365
 msgid "Select the hotkey to make a medium backwards jump."
 msgstr "Välj snabbtangent att använda för att göra ett medellångt hopp bakåt."
 
-#: src/libvlc-module.c:1359
+#: src/libvlc-module.c:1366
 msgid "Long backwards jump"
 msgstr "Långt hopp bakåt"
 
-#: src/libvlc-module.c:1361
+#: src/libvlc-module.c:1368
 msgid "Select the hotkey to make a long backwards jump."
 msgstr "Välj snabbtangent att använda för att göra ett långt hopp bakåt."
 
-#: src/libvlc-module.c:1363
+#: src/libvlc-module.c:1370
 msgid "Very short forward jump"
 msgstr "Mycket kort hopp framåt"
 
-#: src/libvlc-module.c:1365
+#: src/libvlc-module.c:1372
 msgid "Select the hotkey to make a very short forward jump."
 msgstr ""
 "Välj snabbtangent att använda för att göra ett mycket kort hopp framåt."
 
-#: src/libvlc-module.c:1366
+#: src/libvlc-module.c:1373
 msgid "Short forward jump"
 msgstr "Kort hopp framåt"
 
-#: src/libvlc-module.c:1368
+#: src/libvlc-module.c:1375
 msgid "Select the hotkey to make a short forward jump."
 msgstr "Välj snabbtangent att använda för att göra ett kort hopp framåt."
 
-#: src/libvlc-module.c:1369
+#: src/libvlc-module.c:1376
 msgid "Medium forward jump"
 msgstr "Medellångt hopp framåt"
 
-#: src/libvlc-module.c:1371
+#: src/libvlc-module.c:1378
 msgid "Select the hotkey to make a medium forward jump."
 msgstr "Välj snabbtangent att använda för att göra ett medellångt hopp framåt."
 
-#: src/libvlc-module.c:1372
+#: src/libvlc-module.c:1379
 msgid "Long forward jump"
 msgstr "Långt hopp framåt"
 
-#: src/libvlc-module.c:1374
+#: src/libvlc-module.c:1381
 msgid "Select the hotkey to make a long forward jump."
 msgstr "Välj snabbtangent att använda för att göra ett långt hopp framåt."
 
-#: src/libvlc-module.c:1375 modules/control/hotkeys.c:713
+#: src/libvlc-module.c:1382 modules/control/hotkeys.c:704
 msgid "Next frame"
 msgstr "Nästa bildruta"
 
-#: src/libvlc-module.c:1377
+#: src/libvlc-module.c:1384
 #, fuzzy
 msgid "Select the hotkey to got to the next video frame."
 msgstr "Välj tangent för att välja nästa titel från dvd:n"
 
-#: src/libvlc-module.c:1379
+#: src/libvlc-module.c:1386
 msgid "Very short jump length"
 msgstr "Mycket kort hopplängd"
 
-#: src/libvlc-module.c:1380
+#: src/libvlc-module.c:1387
 msgid "Very short jump length, in seconds."
 msgstr "Mycket kort hopplängd, i sekunder."
 
-#: src/libvlc-module.c:1381
+#: src/libvlc-module.c:1388
 msgid "Short jump length"
 msgstr "Kort hopplängd"
 
-#: src/libvlc-module.c:1382
+#: src/libvlc-module.c:1389
 msgid "Short jump length, in seconds."
 msgstr "Kort hopplängd, i sekunder."
 
-#: src/libvlc-module.c:1383
+#: src/libvlc-module.c:1390
 msgid "Medium jump length"
 msgstr "Medellång hopplängd"
 
-#: src/libvlc-module.c:1384
+#: src/libvlc-module.c:1391
 msgid "Medium jump length, in seconds."
 msgstr "Medellängd hopplängd, i sekunder."
 
-#: src/libvlc-module.c:1385
+#: src/libvlc-module.c:1392
 msgid "Long jump length"
 msgstr "Lång hopplängd"
 
-#: src/libvlc-module.c:1386
+#: src/libvlc-module.c:1393
 msgid "Long jump length, in seconds."
 msgstr "Lång hopplängd, i sekunder."
 
-#: src/libvlc-module.c:1388 modules/control/hotkeys.c:183
+#: src/libvlc-module.c:1395 modules/control/hotkeys.c:183
 #: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/components/controller.hpp:126 modules/gui/qt4/menus.cpp:914
 #: modules/gui/skins2/commands/cmd_quit.cpp:44
 msgid "Quit"
 msgstr "Avsluta"
 
-#: src/libvlc-module.c:1389
+#: src/libvlc-module.c:1396
 msgid "Select the hotkey to quit the application."
 msgstr "Välj snabbtangent att använda för att avsluta programmet."
 
-#: src/libvlc-module.c:1390
+#: src/libvlc-module.c:1397
 msgid "Navigate up"
 msgstr "Navigera upp"
 
-#: src/libvlc-module.c:1391
+#: src/libvlc-module.c:1398
 msgid "Select the key to move the selector up in DVD menus."
 msgstr "Välj tangent för att flytta väljaren upp i dvd-menyer."
 
-#: src/libvlc-module.c:1392
+#: src/libvlc-module.c:1399
 msgid "Navigate down"
 msgstr "Navigera ned"
 
-#: src/libvlc-module.c:1393
+#: src/libvlc-module.c:1400
 msgid "Select the key to move the selector down in DVD menus."
 msgstr "Välj tangent för att flytta väljaren ned i dvd-menyer."
 
-#: src/libvlc-module.c:1394
+#: src/libvlc-module.c:1401
 msgid "Navigate left"
 msgstr "Navigera vänster"
 
-#: src/libvlc-module.c:1395
+#: src/libvlc-module.c:1402
 msgid "Select the key to move the selector left in DVD menus."
 msgstr "Välj tangent för att flytta väljaren vänster i dvd-menyer."
 
-#: src/libvlc-module.c:1396
+#: src/libvlc-module.c:1403
 msgid "Navigate right"
 msgstr "Navigera höger"
 
-#: src/libvlc-module.c:1397
+#: src/libvlc-module.c:1404
 msgid "Select the key to move the selector right in DVD menus."
 msgstr "Välj tangent för att flytta väljaren höger i dvd-menyer."
 
-#: src/libvlc-module.c:1398
+#: src/libvlc-module.c:1405
 msgid "Activate"
 msgstr "Aktivera"
 
-#: src/libvlc-module.c:1399
+#: src/libvlc-module.c:1406
 msgid "Select the key to activate selected item in DVD menus."
 msgstr "Välj tangent för att aktivera valt objekt i dvd-menyer."
 
-#: src/libvlc-module.c:1400 modules/gui/qt4/dialogs/toolbar.cpp:385
+#: src/libvlc-module.c:1407 modules/gui/qt4/dialogs/toolbar.cpp:390
 msgid "Go to the DVD menu"
 msgstr "Gå till dvd-meny"
 
-#: src/libvlc-module.c:1401
+#: src/libvlc-module.c:1408
 msgid "Select the key to take you to the DVD menu"
 msgstr "Välj tangent för att ta dig till dvd-menyn"
 
-#: src/libvlc-module.c:1402
+#: src/libvlc-module.c:1409
 msgid "Select previous DVD title"
 msgstr "Välj föregående dvd-titel"
 
-#: src/libvlc-module.c:1403
+#: src/libvlc-module.c:1410
 msgid "Select the key to choose the previous title from the DVD"
 msgstr "Välj tangent för att välja föregående titel från dvd:n"
 
-#: src/libvlc-module.c:1404
+#: src/libvlc-module.c:1411
 msgid "Select next DVD title"
 msgstr "Välj nästa dvd-titel"
 
-#: src/libvlc-module.c:1405
+#: src/libvlc-module.c:1412
 msgid "Select the key to choose the next title from the DVD"
 msgstr "Välj tangent för att välja nästa titel från dvd:n"
 
-#: src/libvlc-module.c:1406
+#: src/libvlc-module.c:1413
 msgid "Select prev DVD chapter"
 msgstr "Välj föreg dvd-kapitel"
 
-#: src/libvlc-module.c:1407
+#: src/libvlc-module.c:1414
 msgid "Select the key to choose the previous chapter from the DVD"
 msgstr "Välj tangent för att välja föregående kapitel från dvd:n"
 
-#: src/libvlc-module.c:1408
+#: src/libvlc-module.c:1415
 msgid "Select next DVD chapter"
 msgstr "Välj nästa dvd-kapitel"
 
-#: src/libvlc-module.c:1409
+#: src/libvlc-module.c:1416
 msgid "Select the key to choose the next chapter from the DVD"
 msgstr "Välj tangent för att välja nästa kapitel från dvd:n"
 
-#: src/libvlc-module.c:1410
+#: src/libvlc-module.c:1417
 msgid "Volume up"
 msgstr "Volym upp"
 
-#: src/libvlc-module.c:1411
+#: src/libvlc-module.c:1418
 msgid "Select the key to increase audio volume."
 msgstr "Välj tangent för att höja ljudvolymen."
 
-#: src/libvlc-module.c:1412
+#: src/libvlc-module.c:1419
 msgid "Volume down"
 msgstr "Volym ned"
 
-#: src/libvlc-module.c:1413
+#: src/libvlc-module.c:1420
 msgid "Select the key to decrease audio volume."
 msgstr "Välj tangent för att sänka ljudvolymen."
 
-#: src/libvlc-module.c:1414 modules/access/v4l2/video.c:189
-#: modules/gui/macosx/MainMenu.m:285 modules/gui/macosx/MainMenu.m:357
-#: modules/gui/macosx/MainMenu.m:366 modules/gui/macosx/MainMenu.m:1207
-#: modules/gui/macosx/MainWindow.m:124 modules/gui/qt4/menus.cpp:578
+#: src/libvlc-module.c:1421 modules/access/v4l2/video.c:189
+#: modules/gui/macosx/MainMenu.m:284 modules/gui/macosx/MainMenu.m:356
+#: modules/gui/macosx/MainMenu.m:365 modules/gui/macosx/MainMenu.m:1152
+#: modules/gui/macosx/MainWindow.m:135 modules/gui/qt4/menus.cpp:578
 msgid "Mute"
 msgstr "Tyst"
 
-#: src/libvlc-module.c:1415
+#: src/libvlc-module.c:1422
 msgid "Select the key to mute audio."
 msgstr "Välj tangent för att stänga av ljudet."
 
-#: src/libvlc-module.c:1416
+#: src/libvlc-module.c:1423
 msgid "Subtitle delay up"
 msgstr "Öka fördröjning på undertext"
 
-#: src/libvlc-module.c:1417
+#: src/libvlc-module.c:1424
 msgid "Select the key to increase the subtitle delay."
 msgstr "Välj tangent för att öka fördröjning på undertexten."
 
-#: src/libvlc-module.c:1418
+#: src/libvlc-module.c:1425
 msgid "Subtitle delay down"
 msgstr "Sänk fördröjning på undertext"
 
-#: src/libvlc-module.c:1419
+#: src/libvlc-module.c:1426
 msgid "Select the key to decrease the subtitle delay."
 msgstr "Välj tangent för att sänka fördröjning på undertexten."
 
-#: src/libvlc-module.c:1420
+#: src/libvlc-module.c:1427
 #, fuzzy
 msgid "Subtitle position up"
 msgstr "Position för underbild"
 
-#: src/libvlc-module.c:1421
+#: src/libvlc-module.c:1428
 #, fuzzy
 msgid "Select the key to move subtitles higher."
 msgstr "Välj tangent för att stänga av ljudet."
 
-#: src/libvlc-module.c:1422
+#: src/libvlc-module.c:1429
 #, fuzzy
 msgid "Subtitle position down"
 msgstr "Position för underbild"
 
-#: src/libvlc-module.c:1423
+#: src/libvlc-module.c:1430
 #, fuzzy
 msgid "Select the key to move subtitles lower."
 msgstr "Välj tangent för att stänga av ljudet."
 
-#: src/libvlc-module.c:1424
+#: src/libvlc-module.c:1431
 msgid "Audio delay up"
 msgstr "Ljudfördröjning mer"
 
-#: src/libvlc-module.c:1425
+#: src/libvlc-module.c:1432
 msgid "Select the key to increase the audio delay."
 msgstr "Välj tangent för att öka fördröjning på ljudet."
 
-#: src/libvlc-module.c:1426
+#: src/libvlc-module.c:1433
 msgid "Audio delay down"
 msgstr "Ljudfördröjning mindre"
 
-#: src/libvlc-module.c:1427
+#: src/libvlc-module.c:1434
 msgid "Select the key to decrease the audio delay."
 msgstr "Välj tangent för att minska fördröjning på ljudet."
 
-#: src/libvlc-module.c:1434
+#: src/libvlc-module.c:1441
 msgid "Play playlist bookmark 1"
 msgstr "Spela spellistbokmärke 1"
 
-#: src/libvlc-module.c:1435
+#: src/libvlc-module.c:1442
 msgid "Play playlist bookmark 2"
 msgstr "Spela spellistbokmärke 2"
 
-#: src/libvlc-module.c:1436
+#: src/libvlc-module.c:1443
 msgid "Play playlist bookmark 3"
 msgstr "Spela spellistbokmärke 3"
 
-#: src/libvlc-module.c:1437
+#: src/libvlc-module.c:1444
 msgid "Play playlist bookmark 4"
 msgstr "Spela spellistbokmärke 4"
 
-#: src/libvlc-module.c:1438
+#: src/libvlc-module.c:1445
 msgid "Play playlist bookmark 5"
 msgstr "Spela spellistbokmärke 5"
 
-#: src/libvlc-module.c:1439
+#: src/libvlc-module.c:1446
 msgid "Play playlist bookmark 6"
 msgstr "Spela spellistbokmärke 6"
 
-#: src/libvlc-module.c:1440
+#: src/libvlc-module.c:1447
 msgid "Play playlist bookmark 7"
 msgstr "Spela spellistbokmärke 7"
 
-#: src/libvlc-module.c:1441
+#: src/libvlc-module.c:1448
 msgid "Play playlist bookmark 8"
 msgstr "Spela spellistbokmärke 8"
 
-#: src/libvlc-module.c:1442
+#: src/libvlc-module.c:1449
 msgid "Play playlist bookmark 9"
 msgstr "Spela spellistbokmärke 9"
 
-#: src/libvlc-module.c:1443
+#: src/libvlc-module.c:1450
 msgid "Play playlist bookmark 10"
 msgstr "Spela spellistbokmärke 10"
 
-#: src/libvlc-module.c:1444
+#: src/libvlc-module.c:1451
 msgid "Select the key to play this bookmark."
 msgstr "Välj tangent för att spela upp detta bokmärke."
 
-#: src/libvlc-module.c:1445
+#: src/libvlc-module.c:1452
 msgid "Set playlist bookmark 1"
 msgstr "Ange spellistbokmärke 1"
 
-#: src/libvlc-module.c:1446
+#: src/libvlc-module.c:1453
 msgid "Set playlist bookmark 2"
 msgstr "Ange spellistbokmärke 2"
 
-#: src/libvlc-module.c:1447
+#: src/libvlc-module.c:1454
 msgid "Set playlist bookmark 3"
 msgstr "Ange spellistbokmärke 3"
 
-#: src/libvlc-module.c:1448
+#: src/libvlc-module.c:1455
 msgid "Set playlist bookmark 4"
 msgstr "Ange spellistbokmärke 4"
 
-#: src/libvlc-module.c:1449
+#: src/libvlc-module.c:1456
 msgid "Set playlist bookmark 5"
 msgstr "Ange spellistbokmärke 5"
 
-#: src/libvlc-module.c:1450
+#: src/libvlc-module.c:1457
 msgid "Set playlist bookmark 6"
 msgstr "Ange spellistbokmärke 6"
 
-#: src/libvlc-module.c:1451
+#: src/libvlc-module.c:1458
 msgid "Set playlist bookmark 7"
 msgstr "Ange spellistbokmärke 7"
 
-#: src/libvlc-module.c:1452
+#: src/libvlc-module.c:1459
 msgid "Set playlist bookmark 8"
 msgstr "Ange spellistbokmärke 8"
 
-#: src/libvlc-module.c:1453
+#: src/libvlc-module.c:1460
 msgid "Set playlist bookmark 9"
 msgstr "Ange spellistbokmärke 9"
 
-#: src/libvlc-module.c:1454
+#: src/libvlc-module.c:1461
 msgid "Set playlist bookmark 10"
 msgstr "Ange spellistbokmärke 10"
 
-#: src/libvlc-module.c:1455
+#: src/libvlc-module.c:1462
 msgid "Select the key to set this playlist bookmark."
 msgstr "Ange tangenten för att ange det här spellistbokmärket."
 
-#: src/libvlc-module.c:1457
+#: src/libvlc-module.c:1464
 msgid "Playlist bookmark 1"
 msgstr "Spellistbokmärke 1"
 
-#: src/libvlc-module.c:1458
+#: src/libvlc-module.c:1465
 msgid "Playlist bookmark 2"
 msgstr "Spellistbokmärke 2"
 
-#: src/libvlc-module.c:1459
+#: src/libvlc-module.c:1466
 msgid "Playlist bookmark 3"
 msgstr "Spellistbokmärke 3"
 
-#: src/libvlc-module.c:1460
+#: src/libvlc-module.c:1467
 msgid "Playlist bookmark 4"
 msgstr "Spellistbokmärke 4"
 
-#: src/libvlc-module.c:1461
+#: src/libvlc-module.c:1468
 msgid "Playlist bookmark 5"
 msgstr "Spellistbokmärke 5"
 
-#: src/libvlc-module.c:1462
+#: src/libvlc-module.c:1469
 msgid "Playlist bookmark 6"
 msgstr "Spellistbokmärke 6"
 
-#: src/libvlc-module.c:1463
+#: src/libvlc-module.c:1470
 msgid "Playlist bookmark 7"
 msgstr "Spellistbokmärke 7"
 
-#: src/libvlc-module.c:1464
+#: src/libvlc-module.c:1471
 msgid "Playlist bookmark 8"
 msgstr "Spellistbokmärke 8"
 
-#: src/libvlc-module.c:1465
+#: src/libvlc-module.c:1472
 msgid "Playlist bookmark 9"
 msgstr "Spellistbokmärke 9"
 
-#: src/libvlc-module.c:1466
+#: src/libvlc-module.c:1473
 msgid "Playlist bookmark 10"
 msgstr "Spellistbokmärke 10"
 
-#: src/libvlc-module.c:1468
+#: src/libvlc-module.c:1475
 msgid "This allows you to define playlist bookmarks."
 msgstr "Detta låter dig definiera spellistbokmärken."
 
-#: src/libvlc-module.c:1470
+#: src/libvlc-module.c:1477
 msgid "Cycle audio track"
 msgstr "Växla ljudspår"
 
-#: src/libvlc-module.c:1471
+#: src/libvlc-module.c:1478
 msgid "Cycle through the available audio tracks(languages)."
 msgstr "Växla genom tillgängliga ljudspår(språk)."
 
-#: src/libvlc-module.c:1472
+#: src/libvlc-module.c:1479
 msgid "Cycle subtitle track"
 msgstr "Växla undertextspår"
 
-#: src/libvlc-module.c:1473
+#: src/libvlc-module.c:1480
 msgid "Cycle through the available subtitle tracks."
 msgstr "Växla mellan tillgängliga undertextspår."
 
-#: src/libvlc-module.c:1474
+#: src/libvlc-module.c:1481
 msgid "Cycle source aspect ratio"
 msgstr "Växla källbildförhållande"
 
-#: src/libvlc-module.c:1475
+#: src/libvlc-module.c:1482
 msgid "Cycle through a predefined list of source aspect ratios."
 msgstr "Växla genom en fördefinierad lista över källbildförhållanden."
 
-#: src/libvlc-module.c:1476
+#: src/libvlc-module.c:1483
 msgid "Cycle video crop"
 msgstr "Växla videobeskäring"
 
-#: src/libvlc-module.c:1477
+#: src/libvlc-module.c:1484
 msgid "Cycle through a predefined list of crop formats."
 msgstr "Växla genom en fördefinierad lista över beskäringsformat."
 
-#: src/libvlc-module.c:1478
+#: src/libvlc-module.c:1485
 msgid "Toggle autoscaling"
 msgstr "Växla automatisk skalning"
 
-#: src/libvlc-module.c:1479
+#: src/libvlc-module.c:1486
 msgid "Activate or deactivate autoscaling."
 msgstr "Aktivera eller inaktivera automatisk skalning."
 
-#: src/libvlc-module.c:1480
+#: src/libvlc-module.c:1487
 msgid "Increase scale factor"
 msgstr "Öka skalningsfaktorn"
 
-#: src/libvlc-module.c:1481
+#: src/libvlc-module.c:1488
 msgid "Increase scale factor."
 msgstr "Öka skalningsfaktorn."
 
-#: src/libvlc-module.c:1482
+#: src/libvlc-module.c:1489
 msgid "Decrease scale factor"
 msgstr "Minska skalningsfaktorn"
 
-#: src/libvlc-module.c:1483
+#: src/libvlc-module.c:1490
 msgid "Decrease scale factor."
 msgstr "Minska skalningsfaktorn."
 
-#: src/libvlc-module.c:1484
+#: src/libvlc-module.c:1491
 msgid "Cycle deinterlace modes"
 msgstr "Växla avflätningslägen"
 
-#: src/libvlc-module.c:1485
+#: src/libvlc-module.c:1492
 msgid "Cycle through deinterlace modes."
 msgstr "Växla mellan avflätningslägen"
 
-#: src/libvlc-module.c:1486
+#: src/libvlc-module.c:1493
 #, fuzzy
 msgid "Show controller in fullscreen"
 msgstr "Visa en kontroller i helskärm"
 
-#: src/libvlc-module.c:1487
+#: src/libvlc-module.c:1494
 msgid "Show interface"
 msgstr "Visa gränssnitt"
 
-#: src/libvlc-module.c:1488
+#: src/libvlc-module.c:1495
 msgid "Raise the interface above all other windows."
 msgstr "Höj gränssnittet över alla andra fönster."
 
-#: src/libvlc-module.c:1489
+#: src/libvlc-module.c:1496
 msgid "Hide interface"
 msgstr "Dölj gränssnitt"
 
-#: src/libvlc-module.c:1490
+#: src/libvlc-module.c:1497
 msgid "Lower the interface below all other windows."
 msgstr "Sänk gränssnittet under alla andra fönster."
 
-#: src/libvlc-module.c:1491
+#: src/libvlc-module.c:1498
 #, fuzzy
 msgid "Boss key"
 msgstr "Snabbtangenter"
 
-#: src/libvlc-module.c:1492
+#: src/libvlc-module.c:1499
 #, fuzzy
 msgid "Hide the interface and pause playback."
 msgstr "Avflätningsmetod att använda för lokal uppspelning."
 
-#: src/libvlc-module.c:1493
+#: src/libvlc-module.c:1500
 msgid "Take video snapshot"
 msgstr "Ta videoskärmbild"
 
-#: src/libvlc-module.c:1494
+#: src/libvlc-module.c:1501
 msgid "Takes a video snapshot and writes it to disk."
 msgstr "Tar en videoskärmbild och skriver den till disk."
 
-#: src/libvlc-module.c:1496 modules/gui/macosx/MainMenu.m:258
+#: src/libvlc-module.c:1503 modules/gui/macosx/MainMenu.m:257
 #: modules/gui/qt4/components/controller.hpp:113
 #: modules/gui/qt4/components/controller.hpp:124
 #: modules/stream_out/record.c:60
 msgid "Record"
 msgstr "Inspelning"
 
-#: src/libvlc-module.c:1497
+#: src/libvlc-module.c:1504
 msgid "Record access filter start/stop."
 msgstr ""
 
-#: src/libvlc-module.c:1499
+#: src/libvlc-module.c:1506
 msgid "Normal/Repeat/Loop"
 msgstr "Normal/Upprepa/Slinga"
 
-#: src/libvlc-module.c:1500
+#: src/libvlc-module.c:1507
 msgid "Toggle Normal/Repeat/Loop playlist modes"
 msgstr "Växla spellistläge mellan Normal/Upprepa/Slinga"
 
-#: src/libvlc-module.c:1503
+#: src/libvlc-module.c:1510
 msgid "Toggle random playlist playback"
 msgstr "Växla slumpmässig uppspelning av spellista"
 
-#: src/libvlc-module.c:1508 src/libvlc-module.c:1509
+#: src/libvlc-module.c:1515 src/libvlc-module.c:1516
 msgid "Un-Zoom"
 msgstr "Ingen zoom"
 
-#: src/libvlc-module.c:1511 src/libvlc-module.c:1512
+#: src/libvlc-module.c:1518 src/libvlc-module.c:1519
 msgid "Crop one pixel from the top of the video"
 msgstr "Beskär en bildpunkt från överkant i videon"
 
-#: src/libvlc-module.c:1513 src/libvlc-module.c:1514
+#: src/libvlc-module.c:1520 src/libvlc-module.c:1521
 msgid "Uncrop one pixel from the top of the video"
 msgstr "Ångra beskäring av en bildpunkt från överkant i videon"
 
-#: src/libvlc-module.c:1516 src/libvlc-module.c:1517
+#: src/libvlc-module.c:1523 src/libvlc-module.c:1524
 msgid "Crop one pixel from the left of the video"
 msgstr "Beskär en bildpunkt från vänster i videon"
 
-#: src/libvlc-module.c:1518 src/libvlc-module.c:1519
+#: src/libvlc-module.c:1525 src/libvlc-module.c:1526
 msgid "Uncrop one pixel from the left of the video"
 msgstr "Ångra beskäring av en bildpunkt från vänster i videon"
 
-#: src/libvlc-module.c:1521 src/libvlc-module.c:1522
+#: src/libvlc-module.c:1528 src/libvlc-module.c:1529
 msgid "Crop one pixel from the bottom of the video"
 msgstr "Beskär en bildpunkt från nederkant i videon"
 
-#: src/libvlc-module.c:1523 src/libvlc-module.c:1524
+#: src/libvlc-module.c:1530 src/libvlc-module.c:1531
 msgid "Uncrop one pixel from the bottom of the video"
 msgstr "Ångra beskäring av en bildpunkt från nederkant i videon"
 
-#: src/libvlc-module.c:1526 src/libvlc-module.c:1527
+#: src/libvlc-module.c:1533 src/libvlc-module.c:1534
 msgid "Crop one pixel from the right of the video"
 msgstr "Beskär en bildpunkt från höger i videon"
 
-#: src/libvlc-module.c:1528 src/libvlc-module.c:1529
+#: src/libvlc-module.c:1535 src/libvlc-module.c:1536
 msgid "Uncrop one pixel from the right of the video"
 msgstr "Ångra beskäring av en bildpunkt från höger i videon"
 
-#: src/libvlc-module.c:1531
+#: src/libvlc-module.c:1538
 msgid "Toggle wallpaper mode in video output"
 msgstr "Växla skrivbordsbakgrundsläge i videoutmatning"
 
-#: src/libvlc-module.c:1533
+#: src/libvlc-module.c:1540
 #, fuzzy
 msgid "Toggle wallpaper mode in video output."
 msgstr "Växla skrivbordsbakgrundsläge i videoutmatning"
 
-#: src/libvlc-module.c:1535 src/libvlc-module.c:1536
+#: src/libvlc-module.c:1542 src/libvlc-module.c:1543
 msgid "Display OSD menu on top of video output"
 msgstr "Visa skärmtextmeny över videoutmatning"
 
-#: src/libvlc-module.c:1537
+#: src/libvlc-module.c:1544
 msgid "Do not display OSD menu on video output"
 msgstr "Visa inte skärmtextmeny vid videoutmatning"
 
-#: src/libvlc-module.c:1538
+#: src/libvlc-module.c:1545
 msgid "Do not display OSD menu on top of video output"
 msgstr "Visa inte skärmtextmeny över videoutmatning"
 
-#: src/libvlc-module.c:1539
+#: src/libvlc-module.c:1546
 msgid "Highlight widget on the right"
 msgstr "Markera widget till höger"
 
-#: src/libvlc-module.c:1541
+#: src/libvlc-module.c:1548
 msgid "Move OSD menu highlight to the widget on the right"
 msgstr ""
 
-#: src/libvlc-module.c:1542
+#: src/libvlc-module.c:1549
 msgid "Highlight widget on the left"
 msgstr "Markera widget till vänster"
 
-#: src/libvlc-module.c:1544
+#: src/libvlc-module.c:1551
 msgid "Move OSD menu highlight to the widget on the left"
 msgstr ""
 
-#: src/libvlc-module.c:1545
+#: src/libvlc-module.c:1552
 msgid "Highlight widget on top"
 msgstr "Markera widget överst"
 
-#: src/libvlc-module.c:1547
+#: src/libvlc-module.c:1554
 msgid "Move OSD menu highlight to the widget on top"
 msgstr ""
 
-#: src/libvlc-module.c:1548
+#: src/libvlc-module.c:1555
 msgid "Highlight widget below"
 msgstr "Markera widget nedanför"
 
-#: src/libvlc-module.c:1550
+#: src/libvlc-module.c:1557
 msgid "Move OSD menu highlight to the widget below"
 msgstr ""
 
-#: src/libvlc-module.c:1551
+#: src/libvlc-module.c:1558
 msgid "Select current widget"
 msgstr "Välj aktuell widget"
 
-#: src/libvlc-module.c:1553
+#: src/libvlc-module.c:1560
 msgid "Selecting current widget performs the associated action."
 msgstr ""
 
-#: src/libvlc-module.c:1555
+#: src/libvlc-module.c:1562
 msgid "Cycle through audio devices"
 msgstr "Växla mellan ljudenheter"
 
-#: src/libvlc-module.c:1556
+#: src/libvlc-module.c:1563
 msgid "Cycle through available audio devices"
 msgstr "Växla mellan tillgängliga ljudenheter"
 
-#: src/libvlc-module.c:1687 src/video_output/vout_intf.c:309
-#: modules/gui/macosx/MainMenu.m:302 modules/gui/macosx/MainMenu.m:368
-#: modules/gui/macosx/MainMenu.m:1216
+#: src/libvlc-module.c:1694 src/video_output/vout_intf.c:309
+#: modules/gui/macosx/MainMenu.m:301 modules/gui/macosx/MainMenu.m:367
+#: modules/gui/macosx/MainMenu.m:1161
 #: modules/gui/qt4/components/controller.hpp:112
 msgid "Snapshot"
 msgstr "Skärmbild"
 
-#: src/libvlc-module.c:1704
+#: src/libvlc-module.c:1711
 msgid "Window properties"
 msgstr "Fönsteregenskaper"
 
-#: src/libvlc-module.c:1762
+#: src/libvlc-module.c:1769
 msgid "Subpictures"
 msgstr "Underbilder"
 
-#: src/libvlc-module.c:1770 modules/codec/subsdec.c:177
+#: src/libvlc-module.c:1777 modules/codec/subsdec.c:177
 #: modules/demux/kate_categories.c:41 modules/demux/kate_categories.c:54
 #: modules/demux/subtitle.c:73 share/lua/http/dialogs/create_stream.html:153
 #: modules/gui/qt4/ui/profiles.h:502 modules/gui/qt4/ui/profiles.h:504
 msgid "Subtitles"
 msgstr "Undertexter"
 
-#: src/libvlc-module.c:1787 modules/stream_out/transcode/transcode.c:115
+#: src/libvlc-module.c:1794 modules/stream_out/transcode/transcode.c:115
 msgid "Overlays"
 msgstr "Overlays"
 
-#: src/libvlc-module.c:1797
+#: src/libvlc-module.c:1804
 msgid "Track settings"
 msgstr "Spårinställningar"
 
-#: src/libvlc-module.c:1829
+#: src/libvlc-module.c:1836
 msgid "Playback control"
 msgstr "Uppspelningskontroll"
 
-#: src/libvlc-module.c:1857
+#: src/libvlc-module.c:1864
 msgid "Default devices"
 msgstr "Standardenheter"
 
-#: src/libvlc-module.c:1866
+#: src/libvlc-module.c:1873
 msgid "Network settings"
 msgstr "Nätverksinställningar"
 
-#: src/libvlc-module.c:1891
+#: src/libvlc-module.c:1898
 msgid "Socks proxy"
 msgstr "Socksproxy"
 
-#: src/libvlc-module.c:1900 modules/demux/kate_categories.c:47
+#: src/libvlc-module.c:1907 modules/demux/kate_categories.c:47
 msgid "Metadata"
 msgstr "Metadata"
 
-#: src/libvlc-module.c:2000
+#: src/libvlc-module.c:2007
 msgid "Decoders"
 msgstr "Avkodare"
 
-#: src/libvlc-module.c:2007 modules/access/v4l2/video.c:69
+#: src/libvlc-module.c:2014 modules/access/v4l2/video.c:69
 #: modules/gui/macosx/playlistinfo.m:100
 msgid "Input"
 msgstr "Inmatning"
 
-#: src/libvlc-module.c:2043
+#: src/libvlc-module.c:2050
 msgid "VLM"
 msgstr "VLM"
 
-#: src/libvlc-module.c:2073
+#: src/libvlc-module.c:2080
 msgid "CPU"
 msgstr "Processor"
 
-#: src/libvlc-module.c:2092
+#: src/libvlc-module.c:2099
 msgid "Special modules"
 msgstr "Specialmoduler"
 
-#: src/libvlc-module.c:2098 modules/gui/qt4/dialogs/plugins.cpp:70
+#: src/libvlc-module.c:2105 modules/gui/qt4/dialogs/plugins.cpp:70
 msgid "Plugins"
 msgstr "Insticksmoduler"
 
-#: src/libvlc-module.c:2105
+#: src/libvlc-module.c:2112
 msgid "Performance options"
 msgstr "Prestandainställningar"
 
-#: src/libvlc-module.c:2234
+#: src/libvlc-module.c:2241
 msgid "Hot keys"
 msgstr "Snabbtangenter"
 
-#: src/libvlc-module.c:2665
+#: src/libvlc-module.c:2672
 msgid "Jump sizes"
 msgstr "Hoppstorlekar"
 
-#: src/libvlc-module.c:2742
+#: src/libvlc-module.c:2749
 msgid "print help for VLC (can be combined with --advanced and --help-verbose)"
 msgstr ""
 "skriv ut hjälp för VLC (kan kombineras med --advanced och --help-verbose)"
 
-#: src/libvlc-module.c:2745
+#: src/libvlc-module.c:2752
 msgid "Exhaustive help for VLC and its modules"
 msgstr "Utökad hjälp för VLC och dess moduler"
 
-#: src/libvlc-module.c:2747
+#: src/libvlc-module.c:2754
 msgid ""
 "print help for VLC and all its modules (can be combined with --advanced and "
 "--help-verbose)"
@@ -4652,19 +4656,19 @@ msgstr ""
 "skriv ut hjälp för VLC och alla dess moduler (kan kombineras med --advanced "
 "och --help-verbose)"
 
-#: src/libvlc-module.c:2750
+#: src/libvlc-module.c:2757
 msgid "ask for extra verbosity when displaying help"
 msgstr "fråga efter extra information när hjälp visas"
 
-#: src/libvlc-module.c:2752
+#: src/libvlc-module.c:2759
 msgid "print a list of available modules"
 msgstr "skriv ut en lista av tillgängliga moduler"
 
-#: src/libvlc-module.c:2754
+#: src/libvlc-module.c:2761
 msgid "print a list of available modules with extra detail"
 msgstr "skriv ut en lista över tillgängliga moduler med extra detaljer"
 
-#: src/libvlc-module.c:2756
+#: src/libvlc-module.c:2763
 #, fuzzy
 msgid ""
 "print help on a specific module (can be combined with --advanced and --help-"
@@ -4673,29 +4677,29 @@ msgstr ""
 "skriv ut hjälp för en specifik modul (kan kombineras med --advanced och --"
 "help-verbose). Inled modulnamnet med = för exakta träffar."
 
-#: src/libvlc-module.c:2760
+#: src/libvlc-module.c:2767
 msgid "no configuration option will be loaded nor saved to config file"
 msgstr ""
 "inga konfigurationsalternativ kommer att läsas in eller sparas till "
 "konfigurationsfilen"
 
-#: src/libvlc-module.c:2762
+#: src/libvlc-module.c:2769
 msgid "reset the current config to the default values"
 msgstr "nollställ aktuell konfiguration till standardvärden"
 
-#: src/libvlc-module.c:2764
+#: src/libvlc-module.c:2771
 msgid "use alternate config file"
 msgstr "använd alternativ konfigurationsfil"
 
-#: src/libvlc-module.c:2766
+#: src/libvlc-module.c:2773
 msgid "resets the current plugins cache"
 msgstr "nollställer aktuell mellanlagring av insticksmoduler"
 
-#: src/libvlc-module.c:2768
+#: src/libvlc-module.c:2775
 msgid "print version information"
 msgstr "skriv ut versionsinformation"
 
-#: src/libvlc-module.c:2806
+#: src/libvlc-module.c:2813
 msgid "main program"
 msgstr "huvudprogram"
 
@@ -4750,13 +4754,8 @@ msgstr "Hämtar ..."
 #: modules/gui/macosx/simple_prefs.m:307 modules/gui/macosx/simple_prefs.m:692
 #: modules/gui/macosx/wizard.m:322
 #: modules/gui/qt4/components/open_panels.cpp:1281
-#: modules/gui/qt4/components/preferences_widgets.cpp:1515
+#: modules/gui/qt4/components/preferences_widgets.cpp:1536
 #: modules/gui/qt4/components/sout/profile_selector.cpp:253
-#: share/lua/http/dialogs/create_stream.html:83
-#: share/lua/http/dialogs/mosaic_window.html:15
-#: share/lua/http/dialogs/batch_window.html:18
-#: share/lua/http/dialogs/stream_config_window.html:14
-#: share/lua/http/dialogs/browse_window.html:28
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -5504,20 +5503,20 @@ msgstr "Zhuang"
 msgid "Zulu"
 msgstr "Zulu"
 
-#: src/video_output/postprocessing.c:87 modules/gui/macosx/MainMenu.m:318
-#: modules/gui/macosx/MainMenu.m:319 modules/video_filter/postproc.c:194
+#: src/video_output/postprocessing.c:87 modules/gui/macosx/MainMenu.m:317
+#: modules/gui/macosx/MainMenu.m:318 modules/video_filter/postproc.c:194
 msgid "Post processing"
 msgstr "Efterbehandling"
 
-#: src/video_output/vout_intf.c:215 modules/gui/macosx/MainMenu.m:307
-#: modules/gui/macosx/MainMenu.m:308 modules/gui/macosx/VideoEffects.m:69
+#: src/video_output/vout_intf.c:215 modules/gui/macosx/MainMenu.m:306
+#: modules/gui/macosx/MainMenu.m:307 modules/gui/macosx/VideoEffects.m:69
 #: modules/video_filter/crop.c:105 modules/video_filter/croppadd.c:86
 #: modules/gui/qt4/ui/video_effects.h:1321
 msgid "Crop"
 msgstr "Beskär"
 
-#: src/video_output/vout_intf.c:249 modules/gui/macosx/MainMenu.m:305
-#: modules/gui/macosx/MainMenu.m:306 modules/gui/macosx/MainMenu.m:981
+#: src/video_output/vout_intf.c:249 modules/gui/macosx/MainMenu.m:304
+#: modules/gui/macosx/MainMenu.m:305 modules/gui/macosx/MainMenu.m:974
 msgid "Aspect-ratio"
 msgstr "Bildförhållande"
 
@@ -5691,27 +5690,27 @@ msgstr ""
 msgid "Blu-Ray Disc support (libbluray)"
 msgstr ""
 
-#: modules/access/bluray.c:140
+#: modules/access/bluray.c:142
 msgid ""
 "This Blu-Ray Disc needs a library for AACS decoding, and your system does "
 "not have it."
 msgstr ""
 
-#: modules/access/bluray.c:145
+#: modules/access/bluray.c:147
 msgid "Your system AACS decoding library does not work. Missing keys?"
 msgstr ""
 
-#: modules/access/bluray.c:154
+#: modules/access/bluray.c:156
 msgid ""
 "This Blu-Ray Disc needs a library for BD+ decoding, and your system does not "
 "have it."
 msgstr ""
 
-#: modules/access/bluray.c:159
+#: modules/access/bluray.c:161
 msgid "Your system BD+ decoding library does not work. Missing configuration?"
 msgstr ""
 
-#: modules/access/bluray.c:196
+#: modules/access/bluray.c:198
 #, fuzzy
 msgid "Blu-Ray error"
 msgstr "Blu-Ray"
@@ -6112,13 +6111,12 @@ msgid "DirectShow input"
 msgstr "DirectShow-inmatning"
 
 #: modules/access/dshow/dshow.cpp:230 modules/access/dshow/dshow.cpp:235
-#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:137
+#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:138
 #: modules/audio_output/waveout.c:99 modules/video_output/msw/directx.c:109
 msgid "Refresh list"
 msgstr "Uppdatera lista"
 
 #: modules/access/dshow/dshow.cpp:231 modules/access/dshow/dshow.cpp:236
-#: share/lua/http/view.html:67
 msgid "Configure"
 msgstr "Konfigurera"
 
@@ -6132,6 +6130,7 @@ msgid "No video or audio device selected."
 msgstr "Ingen video- eller ljudenhet har valts."
 
 #: modules/access/dshow/dshow.cpp:602
+#, fuzzy
 msgid "VLC cannot open ANY capture device.Check the error log for details."
 msgstr ""
 "VLC kan inte öppna NÅGON fångstenhet. Kontrollera felloggen för mer detaljer."
@@ -6689,12 +6688,12 @@ msgid "EyeTV input"
 msgstr "EyeTV-inmatning"
 
 #: modules/access/file.c:180 modules/access/file.c:301
-#: modules/access/mtp.c:213 modules/access/mtp.c:302 modules/access/vdr.c:385
-#: modules/access/vdr.c:555
+#: modules/access/mtp.c:213 modules/access/mtp.c:302 modules/access/vdr.c:378
+#: modules/access/vdr.c:548
 msgid "File reading failed"
 msgstr "Filläsning misslyckades"
 
-#: modules/access/file.c:181 modules/access/mtp.c:303 modules/access/vdr.c:555
+#: modules/access/file.c:181 modules/access/mtp.c:303 modules/access/vdr.c:548
 #, c-format
 msgid "VLC could not open the file \"%s\". (%m)"
 msgstr "VLC kunde inte öppna filen \"%s\". (%m)"
@@ -7258,7 +7257,7 @@ msgstr "MTP-inmatning"
 msgid "MTP"
 msgstr "MTP"
 
-#: modules/access/mtp.c:214 modules/access/vdr.c:386
+#: modules/access/mtp.c:214 modules/access/vdr.c:379
 msgid "VLC could not read the file."
 msgstr "VLC kunde inte läsa filen."
 
@@ -7296,11 +7295,11 @@ msgid "File stream output"
 msgstr ""
 
 #: modules/access_output/http.c:62 modules/misc/audioscrobbler.c:115
-#: modules/stream_out/rtp.c:180
+#: modules/stream_out/rtp.c:173
 msgid "Username"
 msgstr "Användarnamn"
 
-#: modules/access_output/http.c:63 modules/stream_out/rtp.c:181
+#: modules/access_output/http.c:63 modules/stream_out/rtp.c:174
 msgid "User name that will be requested to access the stream."
 msgstr "Användarnamnet som kommer att begäras för att komma åt strömmen."
 
@@ -7308,11 +7307,11 @@ msgstr "Användarnamnet som kommer att begäras för att komma åt strömmen."
 #: modules/gui/macosx/simple_prefs.m:226
 #: modules/gui/qt4/dialogs/external.cpp:125 modules/lua/vlc.c:75
 #: modules/misc/audioscrobbler.c:117 modules/stream_out/raop.c:154
-#: modules/stream_out/rtp.c:183
+#: modules/stream_out/rtp.c:176
 msgid "Password"
 msgstr "Lösenord"
 
-#: modules/access_output/http.c:66 modules/stream_out/rtp.c:184
+#: modules/access_output/http.c:66 modules/stream_out/rtp.c:177
 msgid "Password that will be requested to access the stream."
 msgstr "Lösenordet som kommer att begäras för att komma åt strömmen."
 
@@ -7650,7 +7649,7 @@ msgid "Bitmask that will get used by the audio part of the card."
 msgstr ""
 
 #: modules/access/pvr.c:103 modules/access/vcdx/info.c:69
-#: modules/gui/macosx/MainWindow.m:123 modules/gui/qt4/dialogs/toolbar.cpp:353
+#: modules/gui/macosx/MainWindow.m:134 modules/gui/qt4/dialogs/toolbar.cpp:358
 #: modules/stream_out/raop.c:150 modules/gui/qt4/ui/sprefs_audio.h:431
 msgid "Volume"
 msgstr "Volym"
@@ -7841,7 +7840,7 @@ msgid ""
 "and 127) if it can't be determined otherwise with out-of-band mappings (SDP)"
 msgstr ""
 
-#: modules/access/rtp/rtp.c:95 modules/stream_out/rtp.c:194
+#: modules/access/rtp/rtp.c:95 modules/stream_out/rtp.c:187
 msgid "RTP"
 msgstr "RTP"
 
@@ -8651,7 +8650,7 @@ msgstr "Videoinmatning"
 msgid "Tuner"
 msgstr "Tuner"
 
-#: modules/access/v4l2/video.c:358 share/lua/http/index.html:198
+#: modules/access/v4l2/video.c:358
 msgid "Controls"
 msgstr "Kontroller"
 
@@ -8688,7 +8687,7 @@ msgid "Segments"
 msgstr "Segment"
 
 #: modules/access/vcdx/access.c:414 modules/access/vcdx/access.c:693
-#: modules/access/vcdx/info.c:232 modules/demux/mkv/demux.cpp:675
+#: modules/access/vcdx/info.c:232 modules/demux/mkv/demux.cpp:678
 msgid "Segment"
 msgstr "Segment"
 
@@ -8865,11 +8864,11 @@ msgstr "VOD"
 msgid "VDR recordings"
 msgstr "Inspelning"
 
-#: modules/access/vdr.c:852
+#: modules/access/vdr.c:824
 msgid "VDR Cut Marks"
 msgstr ""
 
-#: modules/access/vdr.c:913
+#: modules/access/vdr.c:887
 #, fuzzy
 msgid "Start"
 msgstr "&Starta"
@@ -9718,7 +9717,7 @@ msgstr "ALSA-enhet"
 #: modules/audio_output/auhal.c:967 modules/audio_output/directx.c:342
 #: modules/audio_output/kai.c:215 modules/audio_output/oss.c:121
 #: modules/audio_output/portaudio.c:386 modules/audio_output/waveout.c:364
-#: modules/gui/macosx/MainMenu.m:290 modules/gui/macosx/MainMenu.m:291
+#: modules/gui/macosx/MainMenu.m:289 modules/gui/macosx/MainMenu.m:290
 msgid "Audio Device"
 msgstr "Ljudenhet"
 
@@ -9787,25 +9786,25 @@ msgstr ""
 msgid "%s (Encoded Output)"
 msgstr "%s (kodad utmatning)"
 
-#: modules/audio_output/directx.c:119 modules/audio_output/portaudio.c:107
+#: modules/audio_output/directx.c:120 modules/audio_output/portaudio.c:107
 msgid "Output device"
 msgstr "Utmatningsenhet"
 
-#: modules/audio_output/directx.c:120
+#: modules/audio_output/directx.c:121
 msgid "Select your audio output device"
 msgstr "Välj ljudutgångsenhet"
 
-#: modules/audio_output/directx.c:122
+#: modules/audio_output/directx.c:123
 msgid "Speaker configuration"
 msgstr "Högtalarkonfiguration"
 
-#: modules/audio_output/directx.c:123
+#: modules/audio_output/directx.c:124
 msgid ""
 "Select speaker configuration you want to use. This option doesn't upmix! So "
 "NO e.g. Stereo -> 5.1 conversion."
 msgstr ""
 
-#: modules/audio_output/directx.c:127
+#: modules/audio_output/directx.c:128
 msgid "DirectX audio output"
 msgstr "DirectX-ljudutmatning"
 
@@ -10053,11 +10052,11 @@ msgstr ""
 msgid "FFmpeg audio/video decoder"
 msgstr "Avkodare för FFmpeg-ljud/video"
 
-#: modules/codec/avcodec/avcodec.c:100 modules/codec/omxil/omxil.c:107
+#: modules/codec/avcodec/avcodec.c:100 modules/codec/omxil/omxil.c:111
 msgid "Decoding"
 msgstr "Avkodning"
 
-#: modules/codec/avcodec/avcodec.c:143 modules/codec/omxil/omxil.c:112
+#: modules/codec/avcodec/avcodec.c:143 modules/codec/omxil/omxil.c:116
 #: modules/codec/schroedinger.c:370
 msgid "Encoding"
 msgstr "Kodning"
@@ -10832,7 +10831,7 @@ msgstr "Dummy-avkodare"
 msgid "AAC audio decoder (using libfaad2)"
 msgstr "Avkodare för AAC-ljud (använder libfaad2)"
 
-#: modules/codec/faad.c:391
+#: modules/codec/faad.c:432
 msgid "AAC extension"
 msgstr ""
 
@@ -10930,7 +10929,7 @@ msgid "Maroon"
 msgstr ""
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:173
-#: modules/gui/macosx/controls.m:189 modules/gui/macosx/MainMenu.m:323
+#: modules/gui/macosx/controls.m:189 modules/gui/macosx/MainMenu.m:322
 #: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/ball.c:120
 #: modules/video_filter/colorthres.c:64 modules/video_filter/marq.c:60
@@ -10946,7 +10945,7 @@ msgid "Fuchsia"
 msgstr "Fuchsia"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
-#: modules/gui/macosx/controls.m:193 modules/gui/macosx/MainMenu.m:325
+#: modules/gui/macosx/controls.m:193 modules/gui/macosx/MainMenu.m:324
 #: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/colorthres.c:64
 #: modules/video_filter/marq.c:61 modules/video_filter/rss.c:73
@@ -10961,7 +10960,7 @@ msgid "Olive"
 msgstr "Oliv"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
-#: modules/gui/macosx/controls.m:191 modules/gui/macosx/MainMenu.m:324
+#: modules/gui/macosx/controls.m:191 modules/gui/macosx/MainMenu.m:323
 #: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/ball.c:120
 #: modules/video_filter/marq.c:61 modules/video_filter/rss.c:73
@@ -10997,7 +10996,7 @@ msgid "Navy"
 msgstr "Marin"
 
 #: modules/codec/kate.c:212 modules/gui/fbosd.c:175
-#: modules/gui/macosx/controls.m:195 modules/gui/macosx/MainMenu.m:326
+#: modules/gui/macosx/controls.m:195 modules/gui/macosx/MainMenu.m:325
 #: modules/text_renderer/freetype.c:169 modules/text_renderer/quartztext.c:110
 #: modules/text_renderer/win32text.c:91 modules/video_filter/ball.c:121
 #: modules/video_filter/colorthres.c:64 modules/video_filter/marq.c:62
@@ -11178,11 +11177,11 @@ msgstr "MPEG-ljud layer I/II/III-avkodare"
 msgid "MPEG audio layer I/II/III packetizer"
 msgstr "Ljudpaketerare för MPEG Layer I/II/III"
 
-#: modules/codec/omxil/omxil.c:104
+#: modules/codec/omxil/omxil.c:108
 msgid "Audio/Video decoder (using OpenMAX IL)"
 msgstr "Video-/ljudavkodare (använder OpenMAX IL)"
 
-#: modules/codec/omxil/omxil.c:113
+#: modules/codec/omxil/omxil.c:117
 msgid "Video encoder (using OpenMAX IL)"
 msgstr "Videokodare (använder OpenMAX IL)"
 
@@ -12805,7 +12804,7 @@ msgstr "Teletext-sida"
 msgid "Open the indicated Teletext page.Default page is index 100"
 msgstr "Öppna den indikerade Teletext-sidan. Standardsidan är index 100"
 
-#: modules/codec/zvbi.c:61 modules/gui/qt4/dialogs/toolbar.cpp:409
+#: modules/codec/zvbi.c:61 modules/gui/qt4/dialogs/toolbar.cpp:414
 #, fuzzy
 msgid "Teletext transparency"
 msgstr "Växla transparens"
@@ -12866,8 +12865,8 @@ msgstr "dbus"
 msgid "D-Bus control interface"
 msgstr "Kontrollgränssnitt"
 
-#: modules/control/dbus/dbus_root.c:77 modules/gui/macosx/MainWindow.m:233
-#: modules/gui/macosx/MainWindow.m:741 modules/gui/qt4/dialogs/help.cpp:99
+#: modules/control/dbus/dbus_root.c:77 modules/gui/macosx/MainWindow.m:247
+#: modules/gui/macosx/MainWindow.m:918 modules/gui/qt4/dialogs/help.cpp:99
 #: modules/gui/qt4/main_interface.cpp:957
 #: modules/gui/qt4/main_interface.cpp:961
 #: modules/gui/qt4/main_interface.cpp:1000
@@ -12944,8 +12943,8 @@ msgstr "Volymkontroll"
 msgid "Position Control"
 msgstr "Position"
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1799
-#: modules/gui/macosx/intf.m:1970
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1805
+#: modules/gui/macosx/intf.m:1974
 msgid "Ignore"
 msgstr "Ignorera"
 
@@ -12969,89 +12968,89 @@ msgid ""
 "mousewheel event can be ignored"
 msgstr ""
 
-#: modules/control/hotkeys.c:375
+#: modules/control/hotkeys.c:366
 #, c-format
 msgid "Audio Device: %s"
 msgstr "Ljudenhet: %s"
 
-#: modules/control/hotkeys.c:471
+#: modules/control/hotkeys.c:462
 #, c-format
 msgid "Audio track: %s"
 msgstr "Ljudspår: %s"
 
-#: modules/control/hotkeys.c:488 modules/control/hotkeys.c:512
+#: modules/control/hotkeys.c:479 modules/control/hotkeys.c:503
 #, c-format
 msgid "Subtitle track: %s"
 msgstr "Undertextspår: %s"
 
-#: modules/control/hotkeys.c:488
+#: modules/control/hotkeys.c:479
 msgid "N/A"
 msgstr "-"
 
-#: modules/control/hotkeys.c:537
+#: modules/control/hotkeys.c:528
 #, c-format
 msgid "Aspect ratio: %s"
 msgstr "Bildförhållande: %s"
 
-#: modules/control/hotkeys.c:565
+#: modules/control/hotkeys.c:556
 #, c-format
 msgid "Crop: %s"
 msgstr "Beskär: %s"
 
-#: modules/control/hotkeys.c:579
+#: modules/control/hotkeys.c:570
 msgid "Zooming reset"
 msgstr ""
 
-#: modules/control/hotkeys.c:587
+#: modules/control/hotkeys.c:578
 msgid "Scaled to screen"
 msgstr "Skalad till skärm"
 
-#: modules/control/hotkeys.c:590
+#: modules/control/hotkeys.c:581
 msgid "Original Size"
 msgstr "Ursprunglig storlek"
 
-#: modules/control/hotkeys.c:618
+#: modules/control/hotkeys.c:609
 msgid "Deinterlace off"
 msgstr "Avflätning av"
 
-#: modules/control/hotkeys.c:638
+#: modules/control/hotkeys.c:629
 msgid "Deinterlace on"
 msgstr "Avflätning på"
 
-#: modules/control/hotkeys.c:671
+#: modules/control/hotkeys.c:662
 #, c-format
 msgid "Zoom mode: %s"
 msgstr "Zoomläge: %s"
 
-#: modules/control/hotkeys.c:773 modules/control/hotkeys.c:783
+#: modules/control/hotkeys.c:764 modules/control/hotkeys.c:774
 #, c-format
 msgid "Subtitle delay %i ms"
 msgstr "Undertextfördröjning %i ms"
 
-#: modules/control/hotkeys.c:797
+#: modules/control/hotkeys.c:788
 #, c-format
 msgid "Subtitle position %i px"
 msgstr "Undertextposition %i bildpunkter"
 
-#: modules/control/hotkeys.c:807 modules/control/hotkeys.c:817
+#: modules/control/hotkeys.c:798 modules/control/hotkeys.c:808
 #, c-format
 msgid "Audio delay %i ms"
 msgstr "Ljudfördröjning %i ms"
 
-#: modules/control/hotkeys.c:855
+#: modules/control/hotkeys.c:846
 msgid "Recording"
 msgstr "Inspelning"
 
-#: modules/control/hotkeys.c:857
+#: modules/control/hotkeys.c:848
 msgid "Recording done"
 msgstr "Inspelning färdig"
 
-#: modules/control/hotkeys.c:1039
+#: modules/control/hotkeys.c:1030
 #, c-format
 msgid "Volume %d%%"
 msgstr "Volym %d%%"
 
-#: modules/control/hotkeys.c:1045
+#: modules/control/hotkeys.c:1036
 #, c-format
 msgid "Speed: %.2fx"
 msgstr "Hastighet: %.2fx"
@@ -13194,9 +13193,9 @@ msgstr "Initierar"
 msgid "Opening"
 msgstr "Öppnar"
 
-#: modules/control/rc.c:73 modules/gui/macosx/MainMenu.m:814
-#: modules/gui/macosx/MainMenu.m:815 modules/gui/macosx/MainMenu.m:816
-#: modules/gui/macosx/MainWindow.m:815 modules/gui/qt4/menus.cpp:794
+#: modules/control/rc.c:73 modules/gui/macosx/MainMenu.m:798
+#: modules/gui/macosx/MainMenu.m:799 modules/gui/macosx/MainMenu.m:800
+#: modules/gui/macosx/MainWindow.m:995 modules/gui/qt4/menus.cpp:794
 #: modules/notify/xosd.c:238
 msgid "Pause"
 msgstr "Gör paus"
@@ -15126,8 +15125,8 @@ msgstr ""
 msgid "MPEG Transport Stream demuxer"
 msgstr "Demuxer för MPEG Transport Stream"
 
-#: modules/demux/ts.c:186 modules/gui/macosx/MainMenu.m:320
-#: modules/gui/macosx/MainMenu.m:1248 modules/gui/qt4/dialogs/toolbar.cpp:417
+#: modules/demux/ts.c:186 modules/gui/macosx/MainMenu.m:319
+#: modules/gui/macosx/MainMenu.m:1193 modules/gui/qt4/dialogs/toolbar.cpp:422
 msgid "Teletext"
 msgstr "Teletext"
 
@@ -15401,7 +15400,7 @@ msgid "Compiled by %@ with %@"
 msgstr "Byggd av %@ med %@"
 
 #: modules/gui/macosx/about.m:138 modules/gui/macosx/about.m:209
-#: modules/gui/macosx/MainMenu.m:346
+#: modules/gui/macosx/MainMenu.m:345
 msgid "License"
 msgstr "Licens"
 
@@ -15410,7 +15409,7 @@ msgid "VLC media player Help"
 msgstr "Hjälp för Mediaspelaren VLC"
 
 #: modules/gui/macosx/about.m:225 modules/gui/macosx/controls.m:187
-#: modules/gui/macosx/MainMenu.m:322
+#: modules/gui/macosx/MainMenu.m:321
 msgid "Index"
 msgstr "Index"
 
@@ -15430,7 +15429,6 @@ msgstr ""
 #: modules/gui/macosx/AudioEffects.m:78 modules/gui/macosx/AudioEffects.m:89
 #: modules/gui/macosx/TrackSynchronization.m:53
 #: modules/gui/qt4/dialogs/gototime.cpp:66
-#: share/lua/http/dialogs/equalizer_window.html:11
 msgid "Reset"
 msgstr "Återställ"
 
@@ -15488,14 +15486,14 @@ msgstr "Bokmärken"
 msgid "Add"
 msgstr "Lägg till"
 
-#: modules/gui/macosx/bookmarks.m:86 modules/gui/macosx/MainMenu.m:252
+#: modules/gui/macosx/bookmarks.m:86 modules/gui/macosx/MainMenu.m:251
 #: modules/gui/macosx/simple_prefs.m:237
 #: modules/gui/qt4/dialogs/bookmarks.cpp:51
 #: modules/gui/qt4/dialogs/sout.cpp:70 modules/gui/qt4/ui/vlm.h:301
 msgid "Clear"
 msgstr "Töm"
 
-#: modules/gui/macosx/bookmarks.m:87 modules/gui/macosx/MainMenu.m:248
+#: modules/gui/macosx/bookmarks.m:87 modules/gui/macosx/MainMenu.m:247
 msgid "Edit"
 msgstr "Redigera"
 
@@ -15510,7 +15508,7 @@ msgstr "Ta bort"
 
 #: modules/gui/macosx/bookmarks.m:95 modules/gui/macosx/bookmarks.m:101
 #: modules/gui/qt4/dialogs/bookmarks.cpp:75
-#: modules/gui/qt4/dialogs/toolbar.cpp:369
+#: modules/gui/qt4/dialogs/toolbar.cpp:374
 msgid "Time"
 msgstr "Tid"
 
@@ -15527,7 +15525,7 @@ msgstr "Tid"
 #: modules/gui/macosx/wizard.m:1844 modules/gui/macosx/wizard.m:1855
 #: modules/gui/macosx/wizard.m:1868
 #: modules/gui/qt4/components/open_panels.cpp:1280
-#: modules/gui/qt4/components/preferences_widgets.cpp:1514
+#: modules/gui/qt4/components/preferences_widgets.cpp:1535
 msgid "OK"
 msgstr "OK"
 
@@ -15577,7 +15575,7 @@ msgstr "Ingen inmatning hittad"
 msgid "The stream must be playing or paused for bookmarks to work."
 msgstr "Strömmen måste spelas upp eller pausas för att bokmärken ska fungera."
 
-#: modules/gui/macosx/controls.m:51 modules/gui/macosx/MainMenu.m:1198
+#: modules/gui/macosx/controls.m:51 modules/gui/macosx/MainMenu.m:1143
 msgid "Jump To Time"
 msgstr "Hoppa till tid"
 
@@ -15628,33 +15626,33 @@ msgstr ""
 msgid "(no item is being played)"
 msgstr "(inget objekt spelas upp)"
 
-#: modules/gui/macosx/intf.m:645 modules/gui/qt4/dialogs/messages.cpp:75
+#: modules/gui/macosx/intf.m:649 modules/gui/qt4/dialogs/messages.cpp:75
 #: modules/gui/qt4/ui/messages_panel.h:141
 #: modules/gui/qt4/ui/messages_panel.h:146
 msgid "Messages"
 msgstr "Meddelanden"
 
-#: modules/gui/macosx/intf.m:646
+#: modules/gui/macosx/intf.m:650
 msgid "Open CrashLog..."
 msgstr "Öppna kraschlogg..."
 
-#: modules/gui/macosx/intf.m:647
+#: modules/gui/macosx/intf.m:651
 msgid "Save this Log..."
 msgstr "Spara denna logg..."
 
-#: modules/gui/macosx/intf.m:650 share/lua/http/dialogs/batch_window.html:9
+#: modules/gui/macosx/intf.m:654
 msgid "Send"
 msgstr "Skicka"
 
-#: modules/gui/macosx/intf.m:651
+#: modules/gui/macosx/intf.m:655
 msgid "Don't Send"
 msgstr "Skicka inte"
 
-#: modules/gui/macosx/intf.m:652 modules/gui/macosx/intf.m:653
+#: modules/gui/macosx/intf.m:656 modules/gui/macosx/intf.m:657
 msgid "VLC crashed previously"
 msgstr "VLC har kraschat tidigare"
 
-#: modules/gui/macosx/intf.m:654
+#: modules/gui/macosx/intf.m:658
 msgid ""
 "Do you want to send details on the crash to VLC's development team?\n"
 "\n"
@@ -15668,62 +15666,62 @@ msgstr ""
 "kraschade tillsammans med annan behjälplig information: en länk till en "
 "exempelfil, en URL för en nätverksström, ..."
 
-#: modules/gui/macosx/intf.m:655
+#: modules/gui/macosx/intf.m:659
 msgid "I agree to be possibly contacted about this bugreport."
 msgstr "Jag godkänner att bli kontaktad angående denna felrapport."
 
-#: modules/gui/macosx/intf.m:656
+#: modules/gui/macosx/intf.m:660
 msgid ""
 "Only your default E-Mail address will be submitted, including no further "
 "information."
 msgstr ""
 "Endast din e-postadress kommer att skickas in och ingen annan information."
 
-#: modules/gui/macosx/intf.m:1679
+#: modules/gui/macosx/intf.m:1685
 msgid "Error when sending the Crash Report"
 msgstr "Fel vid sändning av kraschrapport"
 
-#: modules/gui/macosx/intf.m:1770
+#: modules/gui/macosx/intf.m:1776
 msgid "No CrashLog found"
 msgstr "Ingen kraschlogg hittad"
 
-#: modules/gui/macosx/intf.m:1770 modules/gui/macosx/prefs.m:227
+#: modules/gui/macosx/intf.m:1776 modules/gui/macosx/prefs.m:227
 #: modules/gui/macosx/simple_prefs.m:693
 msgid "Continue"
 msgstr "Fortsätt"
 
-#: modules/gui/macosx/intf.m:1770
+#: modules/gui/macosx/intf.m:1776
 msgid "Couldn't find any trace of a previous crash."
 msgstr "Kunde inte hitta några spår efter en tidigare krasch."
 
-#: modules/gui/macosx/intf.m:1797
+#: modules/gui/macosx/intf.m:1803
 msgid "Remove old preferences?"
 msgstr "Ta bort gamla inställningar?"
 
-#: modules/gui/macosx/intf.m:1798
+#: modules/gui/macosx/intf.m:1804
 msgid "We just found an older version of VLC's preferences files."
 msgstr "Vi hittade just en äldre version av VLC:s inställningsfiler."
 
-#: modules/gui/macosx/intf.m:1799
+#: modules/gui/macosx/intf.m:1805
 msgid "Move To Trash and Relaunch VLC"
 msgstr "Flytta till papperskorgen och starta om VLC"
 
-#: modules/gui/macosx/intf.m:1907
+#: modules/gui/macosx/intf.m:1911
 #, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr "VLC-felsökningslogg (%s).rtfd"
 
-#: modules/gui/macosx/intf.m:1968
+#: modules/gui/macosx/intf.m:1972
 msgid "Relaunch required"
 msgstr "Omstart krävs"
 
-#: modules/gui/macosx/intf.m:1969
+#: modules/gui/macosx/intf.m:1973
 msgid ""
 "To make sure that VLC no longer listens to your media key events, it needs "
 "to be restarted."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1970
+#: modules/gui/macosx/intf.m:1974
 msgid "Relaunch VLC"
 msgstr "Starta om VLC"
 
@@ -15862,8 +15860,8 @@ msgstr "1:Arkiv"
 msgid "Advanced Open File..."
 msgstr "Avancerad Öppna fil..."
 
-#: modules/gui/macosx/MainMenu.m:240 modules/gui/macosx/MainMenu.m:313
-#: modules/gui/macosx/MainMenu.m:996 modules/gui/qt4/menus.cpp:623
+#: modules/gui/macosx/MainMenu.m:240 modules/gui/macosx/MainMenu.m:312
+#: modules/gui/macosx/MainMenu.m:989 modules/gui/qt4/menus.cpp:623
 msgid "Open File..."
 msgstr "Öppna fil..."
 
@@ -15883,39 +15881,35 @@ msgstr "Öppna fångstenhet..."
 msgid "Open Recent"
 msgstr "Öppna tidigare"
 
-#: modules/gui/macosx/MainMenu.m:245 modules/gui/macosx/MainMenu.m:1106
-msgid "Clear Menu"
-msgstr "Töm meny"
-
-#: modules/gui/macosx/MainMenu.m:246
+#: modules/gui/macosx/MainMenu.m:245
 msgid "Streaming/Exporting Wizard..."
 msgstr "Strömning/Exporteringsguide..."
 
-#: modules/gui/macosx/MainMenu.m:249
+#: modules/gui/macosx/MainMenu.m:248
 msgid "Cut"
 msgstr "Klipp ut"
 
-#: modules/gui/macosx/MainMenu.m:250
+#: modules/gui/macosx/MainMenu.m:249
 msgid "Copy"
 msgstr "Kopiera"
 
-#: modules/gui/macosx/MainMenu.m:251
+#: modules/gui/macosx/MainMenu.m:250
 msgid "Paste"
 msgstr "Klistra in"
 
-#: modules/gui/macosx/MainMenu.m:253 modules/gui/macosx/playlist.m:469
+#: modules/gui/macosx/MainMenu.m:252 modules/gui/macosx/playlist.m:469
 msgid "Select All"
 msgstr "Markera allt"
 
-#: modules/gui/macosx/MainMenu.m:255
+#: modules/gui/macosx/MainMenu.m:254
 msgid "Playback"
 msgstr "Uppspelning"
 
-#: modules/gui/macosx/MainMenu.m:260 modules/gui/macosx/MainMenu.m:261
+#: modules/gui/macosx/MainMenu.m:259 modules/gui/macosx/MainMenu.m:260
 msgid "Playback Speed"
 msgstr "Uppspelningshastighet"
 
-#: modules/gui/macosx/MainMenu.m:263 modules/gui/macosx/simple_prefs.m:570
+#: modules/gui/macosx/MainMenu.m:262 modules/gui/macosx/simple_prefs.m:570
 #: modules/gui/qt4/components/simple_preferences.cpp:501
 #: modules/misc/gnutls.c:83 modules/text_renderer/freetype.c:156
 #: modules/text_renderer/freetype.c:175 modules/text_renderer/quartztext.c:114
@@ -15923,214 +15917,213 @@ msgstr "Uppspelningshastighet"
 msgid "Normal"
 msgstr "Normal"
 
-#: modules/gui/macosx/MainMenu.m:265
+#: modules/gui/macosx/MainMenu.m:264
 #: modules/gui/macosx/TrackSynchronization.m:52
 msgid "Track Synchronization"
 msgstr "Spårsynkronisering"
 
-#: modules/gui/macosx/MainMenu.m:271 modules/gui/macosx/MainMenu.m:1189
+#: modules/gui/macosx/MainMenu.m:270 modules/gui/macosx/MainMenu.m:1134
 msgid "Quit after Playback"
 msgstr "Avsluta efter uppspelning"
 
-#: modules/gui/macosx/MainMenu.m:272 modules/gui/macosx/MainMenu.m:1196
+#: modules/gui/macosx/MainMenu.m:271 modules/gui/macosx/MainMenu.m:1141
 msgid "Step Forward"
 msgstr "Stega framåt"
 
-#: modules/gui/macosx/MainMenu.m:273 modules/gui/macosx/MainMenu.m:1197
+#: modules/gui/macosx/MainMenu.m:272 modules/gui/macosx/MainMenu.m:1142
 msgid "Step Backward"
 msgstr "Stega bakåt"
 
-#: modules/gui/macosx/MainMenu.m:283 modules/gui/qt4/menus.cpp:572
+#: modules/gui/macosx/MainMenu.m:282 modules/gui/qt4/menus.cpp:572
 msgid "Increase Volume"
 msgstr "Höj volymen"
 
-#: modules/gui/macosx/MainMenu.m:284 modules/gui/qt4/menus.cpp:575
+#: modules/gui/macosx/MainMenu.m:283 modules/gui/qt4/menus.cpp:575
 msgid "Decrease Volume"
 msgstr "Sänk volymen"
 
-#: modules/gui/macosx/MainMenu.m:296 modules/gui/macosx/MainMenu.m:1212
+#: modules/gui/macosx/MainMenu.m:295 modules/gui/macosx/MainMenu.m:1157
 msgid "Half Size"
 msgstr "Halv storlek"
 
-#: modules/gui/macosx/MainMenu.m:297 modules/gui/macosx/MainMenu.m:1213
-#: modules/gui/macosx/MainMenu.m:1246
+#: modules/gui/macosx/MainMenu.m:296 modules/gui/macosx/MainMenu.m:1158
+#: modules/gui/macosx/MainMenu.m:1191
 msgid "Normal Size"
 msgstr "Normal storlek"
 
-#: modules/gui/macosx/MainMenu.m:298 modules/gui/macosx/MainMenu.m:1214
+#: modules/gui/macosx/MainMenu.m:297 modules/gui/macosx/MainMenu.m:1159
 msgid "Double Size"
 msgstr "Dubbel storlek"
 
-#: modules/gui/macosx/MainMenu.m:299 modules/gui/macosx/MainMenu.m:1215
+#: modules/gui/macosx/MainMenu.m:298 modules/gui/macosx/MainMenu.m:1160
 msgid "Fit to Screen"
 msgstr "Anpassa till skärm"
 
-#: modules/gui/macosx/MainMenu.m:301 modules/gui/macosx/MainMenu.m:1218
-#: modules/gui/macosx/MainMenu.m:1227
+#: modules/gui/macosx/MainMenu.m:300 modules/gui/macosx/MainMenu.m:1163
+#: modules/gui/macosx/MainMenu.m:1172
 msgid "Float on Top"
 msgstr "Flyt överst"
 
-#: modules/gui/macosx/MainMenu.m:309 modules/gui/macosx/MainMenu.m:310
+#: modules/gui/macosx/MainMenu.m:308 modules/gui/macosx/MainMenu.m:309
 #: modules/gui/macosx/simple_prefs.m:291 modules/gui/macosx/VideoView.m:99
 msgid "Fullscreen Video Device"
 msgstr "Enhet för helskärmsvideo"
 
-#: modules/gui/macosx/MainMenu.m:321
+#: modules/gui/macosx/MainMenu.m:320
 msgid "Transparent"
 msgstr "Transparent"
 
-#: modules/gui/macosx/MainMenu.m:328
+#: modules/gui/macosx/MainMenu.m:327
 msgid "Window"
 msgstr "Fönster"
 
-#: modules/gui/macosx/MainMenu.m:329
+#: modules/gui/macosx/MainMenu.m:328
 msgid "Minimize Window"
 msgstr "Minimera fönster"
 
-#: modules/gui/macosx/MainMenu.m:330
+#: modules/gui/macosx/MainMenu.m:329
 msgid "Close Window"
 msgstr "Stäng fönster"
 
-#: modules/gui/macosx/MainMenu.m:331
+#: modules/gui/macosx/MainMenu.m:330
 msgid "Player..."
 msgstr "Uppspelare..."
 
-#: modules/gui/macosx/MainMenu.m:332
+#: modules/gui/macosx/MainMenu.m:331
 msgid "Main Window..."
 msgstr "Huvudfönster..."
 
-#: modules/gui/macosx/MainMenu.m:333
+#: modules/gui/macosx/MainMenu.m:332
 msgid "Audio Effects..."
 msgstr "Ljudeffekter..."
 
-#: modules/gui/macosx/MainMenu.m:334
+#: modules/gui/macosx/MainMenu.m:333
 msgid "Video Filters..."
 msgstr "Videofilter..."
 
-#: modules/gui/macosx/MainMenu.m:335
+#: modules/gui/macosx/MainMenu.m:334
 msgid "Bookmarks..."
 msgstr "Bokmärken..."
 
-#: modules/gui/macosx/MainMenu.m:336
+#: modules/gui/macosx/MainMenu.m:335
 msgid "Playlist..."
 msgstr "Spellista..."
 
-#: modules/gui/macosx/MainMenu.m:337 modules/gui/macosx/playlist.m:470
+#: modules/gui/macosx/MainMenu.m:336 modules/gui/macosx/playlist.m:470
 msgid "Media Information..."
 msgstr "Mediainformation..."
 
-#: modules/gui/macosx/MainMenu.m:338
+#: modules/gui/macosx/MainMenu.m:337
 msgid "Messages..."
 msgstr "Meddelanden..."
 
-#: modules/gui/macosx/MainMenu.m:339
+#: modules/gui/macosx/MainMenu.m:338
 msgid "Errors and Warnings..."
 msgstr "Fel och varningar..."
 
-#: modules/gui/macosx/MainMenu.m:341
+#: modules/gui/macosx/MainMenu.m:340
 msgid "Bring All to Front"
 msgstr "Ta fram alla"
 
-#: modules/gui/macosx/MainMenu.m:343 modules/gui/qt4/dialogs/help.cpp:54
+#: modules/gui/macosx/MainMenu.m:342 modules/gui/qt4/dialogs/help.cpp:54
 #: modules/gui/qt4/menus.cpp:910
 msgid "Help"
 msgstr "Hjälp"
 
-#: modules/gui/macosx/MainMenu.m:344
+#: modules/gui/macosx/MainMenu.m:343
 msgid "VLC media player Help..."
 msgstr "Hjälp för Mediaspelaren VLC..."
 
-#: modules/gui/macosx/MainMenu.m:345
+#: modules/gui/macosx/MainMenu.m:344
 msgid "ReadMe / FAQ..."
 msgstr "LäsMig / Frågor och svar..."
 
-#: modules/gui/macosx/MainMenu.m:347
+#: modules/gui/macosx/MainMenu.m:346
 msgid "Online Documentation..."
 msgstr "Onlinedokumentation..."
 
-#: modules/gui/macosx/MainMenu.m:348
+#: modules/gui/macosx/MainMenu.m:347
 msgid "VideoLAN Website..."
 msgstr "VideoLAN:s webbplats..."
 
-#: modules/gui/macosx/MainMenu.m:349
+#: modules/gui/macosx/MainMenu.m:348
 msgid "Make a donation..."
 msgstr "Donera..."
 
-#: modules/gui/macosx/MainMenu.m:350
+#: modules/gui/macosx/MainMenu.m:349
 msgid "Online Forum..."
 msgstr "Onlineforum..."
 
-#: modules/gui/macosx/MainMenu.m:364
+#: modules/gui/macosx/MainMenu.m:363
 msgid "Volume Up"
 msgstr "Volym upp"
 
-#: modules/gui/macosx/MainMenu.m:365
+#: modules/gui/macosx/MainMenu.m:364
 msgid "Volume Down"
 msgstr "Volym ned"
 
-#: modules/gui/macosx/MainMenu.m:984
+#: modules/gui/macosx/MainMenu.m:977
 msgid "Lock Aspect Ratio"
 msgstr "Lås bildförhållande"
 
-#: modules/gui/macosx/MainWindow.m:114
+#: modules/gui/macosx/MainWindow.m:125
 msgid "Backward"
 msgstr "Bakåt"
 
-#: modules/gui/macosx/MainWindow.m:115
+#: modules/gui/macosx/MainWindow.m:126
 msgid "Forward"
 msgstr "Framåt"
 
-#: modules/gui/macosx/MainWindow.m:117
+#: modules/gui/macosx/MainWindow.m:128
 msgid "Show/Hide Playlist"
 msgstr "Visa/Dölj spellista"
 
-#: modules/gui/macosx/MainWindow.m:118 modules/gui/qt4/dialogs/vlm.cpp:560
-#: share/lua/http/index.html:248
+#: modules/gui/macosx/MainWindow.m:129 modules/gui/qt4/dialogs/vlm.cpp:560
 msgid "Repeat"
 msgstr "Upprepa"
 
-#: modules/gui/macosx/MainWindow.m:119 share/lua/http/index.html:246
+#: modules/gui/macosx/MainWindow.m:130
 msgid "Shuffle"
 msgstr "Blanda"
 
-#: modules/gui/macosx/MainWindow.m:120 modules/gui/macosx/simple_prefs.m:221
+#: modules/gui/macosx/MainWindow.m:131 modules/gui/macosx/simple_prefs.m:221
 #: modules/gui/qt4/ui/sprefs_audio.h:440
 msgid "Effects"
 msgstr "Effekter"
 
-#: modules/gui/macosx/MainWindow.m:121
+#: modules/gui/macosx/MainWindow.m:132
 msgid "Toggle Fullscreen mode"
 msgstr "Växla helskärmsläge"
 
-#: modules/gui/macosx/MainWindow.m:125
+#: modules/gui/macosx/MainWindow.m:136
 msgid "Full Volume"
 msgstr "Full volym"
 
-#: modules/gui/macosx/MainWindow.m:127
+#: modules/gui/macosx/MainWindow.m:138
 msgid "Open media..."
 msgstr "Öppna media..."
 
-#: modules/gui/macosx/MainWindow.m:128
+#: modules/gui/macosx/MainWindow.m:139
 msgid "Drop media here"
 msgstr "Släpp media här"
 
-#: modules/gui/macosx/MainWindow.m:276
+#: modules/gui/macosx/MainWindow.m:301
 msgid "LIBRARY"
 msgstr "BIBLIOTEK"
 
-#: modules/gui/macosx/MainWindow.m:279
+#: modules/gui/macosx/MainWindow.m:304
 msgid "MY COMPUTER"
 msgstr "MIN DATOR"
 
-#: modules/gui/macosx/MainWindow.m:280
+#: modules/gui/macosx/MainWindow.m:305
 msgid "DEVICES"
 msgstr "ENHETER"
 
-#: modules/gui/macosx/MainWindow.m:281
+#: modules/gui/macosx/MainWindow.m:306
 msgid "LOCAL NETWORK"
 msgstr "LOKALT NÄTVERK"
 
-#: modules/gui/macosx/MainWindow.m:282
+#: modules/gui/macosx/MainWindow.m:307
 msgid "INTERNET"
 msgstr "INTERNET"
 
@@ -16158,7 +16151,6 @@ msgstr "Media Resource Locator (MRL)"
 #: modules/gui/macosx/open.m:620 modules/gui/macosx/open.m:892
 #: modules/gui/macosx/open.m:1112 modules/gui/macosx/open.m:1365
 #: modules/gui/qt4/components/controller.hpp:110
-#: share/lua/http/dialogs/browse_window.html:12
 msgid "Open"
 msgstr "Öppna"
 
@@ -16370,7 +16362,8 @@ msgid "Load subtitles file:"
 msgstr "Läs in undertextfil:"
 
 #: modules/gui/macosx/open.m:307
-msgid "Override parametters"
+#, fuzzy
+msgid "Override parameters"
 msgstr "Åsidosätt parametrar"
 
 #: modules/gui/macosx/open.m:310
@@ -16765,7 +16758,7 @@ msgid "Select an action to change the associated hotkey:"
 msgstr "Välj en åtgärd för att ändra den associerade snabbtangenten:"
 
 #: modules/gui/macosx/simple_prefs.m:239
-#: modules/gui/qt4/components/preferences_widgets.cpp:1302
+#: modules/gui/qt4/components/preferences_widgets.cpp:1305
 msgid "Action"
 msgstr "Åtgärd"
 
@@ -18249,11 +18242,13 @@ msgstr ""
 "Om spellistan är tom, öppna ett media"
 
 #: modules/gui/qt4/components/controller.hpp:111
-msgid "Previous/Backward"
+#, fuzzy
+msgid "Previous / Backward"
 msgstr "Föregående/Bakåt"
 
 #: modules/gui/qt4/components/controller.hpp:111
-msgid "Next/Forward"
+#, fuzzy
+msgid "Next / Forward"
 msgstr "Nästa/Framåt"
 
 #: modules/gui/qt4/components/controller.hpp:112
@@ -18288,19 +18283,19 @@ msgid "Step forward"
 msgstr "Stega framåt"
 
 #: modules/gui/qt4/components/controller.hpp:115
-msgid "Loop/Repeat mode"
+#, fuzzy
+msgid "Loop / Repeat"
 msgstr "Slinga/Upprepningsläge"
 
 #: modules/gui/qt4/components/controller.hpp:116
-#: modules/gui/qt4/components/controller.hpp:129
-#: modules/gui/qt4/components/open_panels.cpp:252
-msgid "Open subtitles file"
-msgstr "Öppna undertextfil"
+#, fuzzy
+msgid "Open subtitles"
+msgstr "Öppna undertexter"
 
 #: modules/gui/qt4/components/controller.hpp:116
 #, fuzzy
-msgid "Fullscreen controller width toggle"
-msgstr "Helskärmskontroll"
+msgid "Dock fullscreen controller"
+msgstr "Visa helskärmskontroller"
 
 #: modules/gui/qt4/components/controller.hpp:119
 msgid "Stop playback"
@@ -18364,6 +18359,11 @@ msgstr "Föregående media i spellistan"
 #: modules/gui/qt4/components/controller.hpp:128
 msgid "Next media in the playlist"
 msgstr "Nästa media i spellistan"
+
+#: modules/gui/qt4/components/controller.hpp:129
+#: modules/gui/qt4/components/open_panels.cpp:252
+msgid "Open subtitles file"
+msgstr "Öppna undertextfil"
 
 #: modules/gui/qt4/components/controller.hpp:130
 msgid "Dock/undock fullscreen controller to/from bottom of screen"
@@ -18861,38 +18861,38 @@ msgstr ""
 msgid "Select File"
 msgstr "Välj fil"
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1295
+#: modules/gui/qt4/components/preferences_widgets.cpp:1298
 msgid "Select an action to change the associated hotkey"
 msgstr "Välj en åtgärd för att ändra den associerade snabbtangenten"
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1303
+#: modules/gui/qt4/components/preferences_widgets.cpp:1306
 msgid "Hotkey"
 msgstr "Snabbtangent"
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1304
-#: modules/gui/qt4/components/preferences_widgets.cpp:1501
+#: modules/gui/qt4/components/preferences_widgets.cpp:1307
+#: modules/gui/qt4/components/preferences_widgets.cpp:1522
 msgid "Global"
 msgstr "Allmänt"
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1436
+#: modules/gui/qt4/components/preferences_widgets.cpp:1449
 #: modules/gui/qt4/util/customwidgets.cpp:293
 msgid "Unset"
 msgstr "Inte angiven"
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1502
+#: modules/gui/qt4/components/preferences_widgets.cpp:1523
 msgid "Hotkey for "
 msgstr "Snabbtangent för "
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1506
+#: modules/gui/qt4/components/preferences_widgets.cpp:1527
 msgid "Press the new keys for "
 msgstr "Tryck på de nya tangenterna för "
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1537
+#: modules/gui/qt4/components/preferences_widgets.cpp:1558
 msgid "Warning: the key is already assigned to \""
 msgstr "Varning: tangenten är redan tilldelad till \""
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1557
-#: modules/gui/qt4/components/preferences_widgets.cpp:1565
+#: modules/gui/qt4/components/preferences_widgets.cpp:1578
+#: modules/gui/qt4/components/preferences_widgets.cpp:1586
 msgid "Key: "
 msgstr "Tangent: "
 
@@ -18944,26 +18944,31 @@ msgstr "Systemets standard"
 msgid "Configure Hotkeys"
 msgstr "Konfigurera snabbtangenter"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:956
+#: modules/gui/qt4/components/simple_preferences.cpp:948
+#, fuzzy
+msgid "File associations"
+msgstr "Filassocieringar"
+
+#: modules/gui/qt4/components/simple_preferences.cpp:957
 #: modules/gui/qt4/dialogs_provider.hpp:42
 msgid "Audio Files"
 msgstr "Ljudfiler"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:957
+#: modules/gui/qt4/components/simple_preferences.cpp:958
 #: modules/gui/qt4/dialogs_provider.hpp:41
 msgid "Video Files"
 msgstr "Videofiler"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:958
+#: modules/gui/qt4/components/simple_preferences.cpp:959
 #: modules/gui/qt4/dialogs_provider.hpp:43
 msgid "Playlist Files"
 msgstr "Spellistfiler"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:1010
+#: modules/gui/qt4/components/simple_preferences.cpp:1011
 msgid "&Apply"
 msgstr "&Tillämpa"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:1011
+#: modules/gui/qt4/components/simple_preferences.cpp:1012
 #: modules/gui/qt4/dialogs/convert.cpp:96
 #: modules/gui/qt4/dialogs/gototime.cpp:49
 #: modules/gui/qt4/dialogs/open.cpp:109 modules/gui/qt4/dialogs/openurl.cpp:60
@@ -19089,8 +19094,6 @@ msgid "Edit Bookmarks"
 msgstr "Redigera bokmärken"
 
 #: modules/gui/qt4/dialogs/bookmarks.cpp:45
-#: share/lua/http/dialogs/create_stream.html:42
-#: share/lua/http/dialogs/mosaic_window.html:12
 msgid "Create"
 msgstr "Skapa"
 
@@ -19356,8 +19359,7 @@ msgstr ""
 "Kan inte skriva till filen %1:\n"
 "%2."
 
-#: modules/gui/qt4/dialogs/open.cpp:79 share/lua/http/index.html:205
-#: share/lua/http/mobile.html:74
+#: modules/gui/qt4/dialogs/open.cpp:79
 msgid "Open Media"
 msgstr "Öppna media"
 
@@ -19663,36 +19665,41 @@ msgstr "Profilnamn"
 msgid "Please enter the new profile name."
 msgstr "Ange det nya profilnamnet."
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:304
+#: modules/gui/qt4/dialogs/toolbar.cpp:309
 #, fuzzy
 msgid "Spacer"
 msgstr "Space"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:309
+#: modules/gui/qt4/dialogs/toolbar.cpp:314
 msgid "Expanding Spacer"
 msgstr ""
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:338
+#: modules/gui/qt4/dialogs/toolbar.cpp:343
 #, fuzzy
 msgid "Splitter"
 msgstr "Spatializer"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:345
+#: modules/gui/qt4/dialogs/toolbar.cpp:350
 msgid "Time Slider"
 msgstr ""
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:358
+#: modules/gui/qt4/dialogs/toolbar.cpp:363
 #, fuzzy
 msgid "Small Volume"
 msgstr "Standardvolym"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:395
+#: modules/gui/qt4/dialogs/toolbar.cpp:400
 msgid "DVD menus"
 msgstr "Dvd-menyer"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:424
+#: modules/gui/qt4/dialogs/toolbar.cpp:429
 msgid "Advanced Buttons"
 msgstr "Avancerade knappar"
+
+#: modules/gui/qt4/dialogs/toolbar.cpp:442
+#, fuzzy
+msgid "Playback Buttons"
+msgstr "Uppspelning"
 
 #: modules/gui/qt4/dialogs/vlm.cpp:73
 msgid "Broadcast"
@@ -20010,6 +20017,10 @@ msgstr "&Hjälp..."
 #: modules/gui/qt4/menus.cpp:751
 msgid "Check for &Updates..."
 msgstr "Leta efter &uppdateringar..."
+
+#: modules/gui/qt4/menus.cpp:803
+msgid "Sp&eed"
+msgstr ""
 
 #: modules/gui/qt4/menus.cpp:809
 msgid "&Faster"
@@ -20893,11 +20904,11 @@ msgid ""
 "The default is 5."
 msgstr ""
 
-#: modules/misc/rtsp.c:75 modules/stream_out/rtp.c:251
+#: modules/misc/rtsp.c:75 modules/stream_out/rtp.c:244
 msgid "RTSP VoD"
 msgstr "RTSP VoD"
 
-#: modules/misc/rtsp.c:76 modules/stream_out/rtp.c:252
+#: modules/misc/rtsp.c:76 modules/stream_out/rtp.c:245
 msgid "RTSP VoD server"
 msgstr "RTSP VoD-server"
 
@@ -21549,7 +21560,7 @@ msgstr "HD DVD"
 msgid "Unknown type"
 msgstr "Okänd typ"
 
-#: modules/services_discovery/upnp.cpp:70
+#: modules/services_discovery/upnp.cpp:71
 msgid "Universal Plug'n'Play"
 msgstr ""
 
@@ -22142,30 +22153,18 @@ msgid "This allows you to stream MPEG4 LATM audio streams (see RFC3016)."
 msgstr ""
 
 #: modules/stream_out/rtp.c:167
-msgid "RTSP host address"
-msgstr "RTSP-värdadress"
-
-#: modules/stream_out/rtp.c:169
-msgid ""
-"This defines the address, port and path the RTSP VOD server will listen on.\n"
-"Syntax is address:port/path. The default is to listen on all interfaces "
-"(address 0.0.0.0), on port 554, with no path.\n"
-"To listen only on the local interface, use \"localhost\" as address."
-msgstr ""
-
-#: modules/stream_out/rtp.c:174
 #, fuzzy
 msgid "RTSP session timeout (s)"
 msgstr "SAP-tidsgräns (sekunder)"
 
-#: modules/stream_out/rtp.c:175
+#: modules/stream_out/rtp.c:168
 msgid ""
 "RTSP sessions will be closed after not receiving any RTSP request for this "
 "long. Setting it to a negative value or zero disables timeouts. The default "
 "is 60 (one minute)."
 msgstr ""
 
-#: modules/stream_out/rtp.c:195
+#: modules/stream_out/rtp.c:188
 msgid "RTP stream output"
 msgstr ""
 
@@ -25874,7 +25873,7 @@ msgstr "ASCII-konst"
 msgid "ASCII-art video output"
 msgstr ""
 
-#: modules/video_output/androidsurface.c:54
+#: modules/video_output/androidsurface.c:57
 #, fuzzy
 msgid "Android Surface video output"
 msgstr "Videoutmatning i gråskala"
@@ -26786,19 +26785,16 @@ msgid "Mosaic Tiles"
 msgstr "Mosaik"
 
 #: share/lua/http/dialogs/offset_window.html:68
-#: share/lua/http/dialogs/offset_window.html:69
 #, fuzzy
 msgid "Playback Rate"
 msgstr "Uppspelning"
 
 #: share/lua/http/dialogs/offset_window.html:72
-#: share/lua/http/dialogs/offset_window.html:73
 #, fuzzy
 msgid "Audio Delay"
 msgstr "Ljudfördröjning mer"
 
 #: share/lua/http/dialogs/offset_window.html:76
-#: share/lua/http/dialogs/offset_window.html:77
 #, fuzzy
 msgid "Subtitle Delay"
 msgstr "Fördröjning för undertexter"
@@ -26809,69 +26805,58 @@ msgid "Time:"
 msgstr "Tid"
 
 #: share/lua/http/index.html:26 share/lua/http/mobile_browse.html:25
-#: share/lua/http/mobile_equalizer.html:25 share/lua/http/mobile.html:25
-#: share/lua/http/mobile_view.html:25
+#: share/lua/http/mobile_equalizer.html:25 share/lua/http/mobile_view.html:25
 #, fuzzy
 msgid "VLC media player - Web Interface"
 msgstr "Mediaspelaren VLC "
 
-#: share/lua/http/index.html:234
-#, fuzzy
-msgid "Viewer"
-msgstr "&Visa"
-
-#: share/lua/http/index.html:237
+#: share/lua/http/index.html:248
 #, fuzzy
 msgid "Loading flowplayer..."
 msgstr "Läs in fil..."
 
-#: share/lua/http/index.html:237
+#: share/lua/http/index.html:248
 msgid "If nothing appears, check your internet connection."
 msgstr ""
 
-#: share/lua/http/index.html:243
-#, fuzzy
-msgid "Library"
-msgstr "Mediabibliotek"
-
-#: share/lua/http/index.html:264
+#: share/lua/http/index.html:259
 msgid ""
 "By creating a stream, the <i>Main Controls</i> will operate the stream "
 "instead of the main interface."
 msgstr ""
 
-#: share/lua/http/index.html:265
+#: share/lua/http/index.html:260
 msgid ""
 "The stream will be created using default settings, for more advanced "
 "configuration, or to modify the default settings, select the button to the "
 "right: <i>Manage Streams</i>"
 msgstr ""
 
-#: share/lua/http/index.html:269
+#: share/lua/http/index.html:264
 msgid ""
 "Once the stream is created, the <i>Media Viewer</i> window will display the "
 "stream."
 msgstr ""
 
-#: share/lua/http/index.html:270
+#: share/lua/http/index.html:265
 msgid ""
 "Volume will be controlled by the player, and not the <i>Main Controls</i>."
 msgstr ""
 
-#: share/lua/http/index.html:273
+#: share/lua/http/index.html:268
 msgid ""
 "The current playing item will be streamed. If there is no currently playing "
 "item, the first selected item from the <i>Library</i> will be the subject of "
 "the stream."
 msgstr ""
 
-#: share/lua/http/index.html:276
+#: share/lua/http/index.html:271
 msgid ""
 "To stop the stream and resume normal controls, click the <i>Open Stream</i> "
 "button again."
 msgstr ""
 
-#: share/lua/http/index.html:279
+#: share/lua/http/index.html:274
 msgid "Are you sure you wish to create the stream ?"
 msgstr ""
 
@@ -27786,8 +27771,7 @@ msgstr "Muxer:"
 msgid "AAAA; "
 msgstr "AAAA; "
 
-#: modules/gui/qt4/ui/vlm.h:299 share/lua/http/index.html:247
-#: share/lua/http/dialogs/stream_window.html:60
+#: modules/gui/qt4/ui/vlm.h:299
 msgid "Loop"
 msgstr "Slinga"
 
@@ -27796,162 +27780,132 @@ msgstr "Slinga"
 msgid "Media Manager List"
 msgstr "Mediainformation"
 
-#: share/lua/http/mobile_browse.html:45
-#: share/lua/http/dialogs/browse_window.html:37
-msgid "Media Browser"
-msgstr "Mediabläddrare "
+#~ msgid "Clear Menu"
+#~ msgstr "Töm meny"
 
-#: share/lua/http/index.html:177
-msgid "No"
-msgstr "Nej"
-
-#: share/lua/http/index.html:207 share/lua/http/mobile.html:75
 #, fuzzy
-msgid "Full Screen"
-msgstr "Helskärm"
+#~ msgid "Fullscreen controller width toggle"
+#~ msgstr "Helskärmskontroll"
 
-#: share/lua/http/index.html:208 share/lua/http/mobile.html:77
+#~ msgid "RTSP host address"
+#~ msgstr "RTSP-värdadress"
+
 #, fuzzy
-msgid "Easy Stream"
-msgstr "Paus"
+#~ msgid "Viewer"
+#~ msgstr "&Visa"
 
-#: share/lua/http/index.html:211
-msgid "Hide / Show Library"
-msgstr ""
-
-#: share/lua/http/index.html:212
-msgid "Hide / Show Viewer"
-msgstr ""
-
-#: share/lua/http/index.html:213 share/lua/http/index.html:266
-#: share/lua/http/dialogs/stream_window.html:69
 #, fuzzy
-msgid "Manage Streams"
-msgstr "Paus"
+#~ msgid "Library"
+#~ msgstr "Mediabibliotek"
 
-#: share/lua/http/index.html:214 share/lua/http/dialogs/offset_window.html:67
+#~ msgid "Media Browser"
+#~ msgstr "Mediabläddrare "
+
+#~ msgid "No"
+#~ msgstr "Nej"
+
 #, fuzzy
-msgid "Track Synchronisation"
-msgstr "Spårsynkronisering"
+#~ msgid "Full Screen"
+#~ msgstr "Helskärm"
 
-#: share/lua/http/index.html:216 share/lua/http/dialogs/batch_window.html:26
 #, fuzzy
-msgid "VLM Batch Commands"
-msgstr "Kommandon"
+#~ msgid "Easy Stream"
+#~ msgstr "Paus"
 
-#: share/lua/http/index.html:227 share/lua/http/mobile.html:101
 #, fuzzy
-msgid "Seek Time"
-msgstr "Starttid"
+#~ msgid "Manage Streams"
+#~ msgstr "Paus"
 
-#: share/lua/http/index.html:249
 #, fuzzy
-msgid "Empty Playlist"
-msgstr "Öppna skiva"
+#~ msgid "Track Synchronisation"
+#~ msgstr "Spårsynkronisering"
 
-#: share/lua/http/index.html:250
 #, fuzzy
-msgid "Queue Selected"
-msgstr "Ta bort markerad"
+#~ msgid "VLM Batch Commands"
+#~ msgstr "Kommandon"
 
-#: share/lua/http/index.html:251
 #, fuzzy
-msgid "Play Selected"
-msgstr "Slow Motion"
+#~ msgid "Seek Time"
+#~ msgstr "Starttid"
 
-#: share/lua/http/index.html:252
 #, fuzzy
-msgid "Refresh List"
-msgstr "Uppdatera lista"
+#~ msgid "Empty Playlist"
+#~ msgstr "Öppna skiva"
 
-#: share/lua/http/mobile_equalizer.html:60
-#: share/lua/http/dialogs/equalizer_window.html:47
 #, fuzzy
-msgid "Graphical Equalizer"
-msgstr "Grafisk equalizer"
+#~ msgid "Queue Selected"
+#~ msgstr "Ta bort markerad"
 
-#: share/lua/http/view.html:26
 #, fuzzy
-msgid "VLC media player - Flash Viewer"
-msgstr "Mediaspelaren VLC "
+#~ msgid "Play Selected"
+#~ msgstr "Slow Motion"
 
-#: share/lua/http/view.html:65
 #, fuzzy
-msgid "Streaming Output"
-msgstr "Strömutmatning"
+#~ msgid "Refresh List"
+#~ msgstr "Uppdatera lista"
 
-#: share/lua/http/dialogs/create_stream.html:135
 #, fuzzy
-msgid "Create Stream"
-msgstr "Paus"
+#~ msgid "Graphical Equalizer"
+#~ msgstr "Grafisk equalizer"
 
-#: share/lua/http/dialogs/create_stream.html:359
 #, fuzzy
-msgid "Media File"
-msgstr "Mediafiler"
+#~ msgid "VLC media player - Flash Viewer"
+#~ msgstr "Mediaspelaren VLC "
 
-#: share/lua/http/dialogs/create_stream.html:360
 #, fuzzy
-msgid "Capture Screen"
-msgstr "Fångstenhet"
+#~ msgid "Streaming Output"
+#~ msgstr "Strömutmatning"
 
-#: share/lua/http/dialogs/error_window.html:8
-#: share/lua/http/dialogs/equalizer_window.html:22
-#: share/lua/http/dialogs/stream_window.html:16
-msgid "Close"
-msgstr "Stäng"
-
-#: share/lua/http/dialogs/error_window.html:16
 #, fuzzy
-msgid "Error!"
-msgstr "Fel"
+#~ msgid "Create Stream"
+#~ msgstr "Paus"
 
-#: share/lua/http/dialogs/mosaic_window.html:93
-#: share/lua/http/dialogs/stream_window.html:71
 #, fuzzy
-msgid "Create Mosaic"
-msgstr "Skapa"
+#~ msgid "Media File"
+#~ msgstr "Mediafiler"
 
-#: share/lua/http/dialogs/stream_config_window.html:8
-#: share/lua/http/dialogs/stream_window.html:26
-msgid "Okay"
-msgstr ""
-
-#: share/lua/http/dialogs/stream_config_window.html:21
-#: share/lua/http/dialogs/stream_window.html:80
 #, fuzzy
-msgid "Stream Input Configuration"
-msgstr "Högtalarkonfiguration"
+#~ msgid "Capture Screen"
+#~ msgstr "Fångstenhet"
 
-#: share/lua/http/dialogs/stream_window.html:61
-#, fuzzy
-msgid "Remove Stream"
-msgstr "Ta bort markerad"
+#~ msgid "Close"
+#~ msgstr "Stäng"
 
-#: share/lua/http/dialogs/stream_window.html:70
 #, fuzzy
-msgid "Create New Stream"
-msgstr "Paus"
+#~ msgid "Error!"
+#~ msgstr "Fel"
 
-#: share/lua/http/dialogs/stream_window.html:72
 #, fuzzy
-msgid "Delete All Streams"
-msgstr "Ta bort alla bokmärken"
+#~ msgid "Create Mosaic"
+#~ msgstr "Skapa"
 
-#: share/lua/http/dialogs/stream_window.html:73
 #, fuzzy
-msgid "Configure Stream Defaults"
-msgstr "Konfigurera snabbtangenter"
+#~ msgid "Stream Input Configuration"
+#~ msgstr "Högtalarkonfiguration"
 
-#: share/lua/http/dialogs/stream_window.html:74
 #, fuzzy
-msgid "Refresh Streams"
-msgstr "Uppdateringstid"
+#~ msgid "Remove Stream"
+#~ msgstr "Ta bort markerad"
 
-#: share/lua/http/dialogs/browse_window.html:17
 #, fuzzy
-msgid "Enqueue"
-msgstr "&Kölägg"
+#~ msgid "Create New Stream"
+#~ msgstr "Paus"
+
+#, fuzzy
+#~ msgid "Delete All Streams"
+#~ msgstr "Ta bort alla bokmärken"
+
+#, fuzzy
+#~ msgid "Configure Stream Defaults"
+#~ msgstr "Konfigurera snabbtangenter"
+
+#, fuzzy
+#~ msgid "Refresh Streams"
+#~ msgstr "Uppdateringstid"
+
+#, fuzzy
+#~ msgid "Enqueue"
+#~ msgstr "&Kölägg"
 
 #~ msgid "Left rear"
 #~ msgstr "Vänster bak"
@@ -29753,9 +29707,6 @@ msgstr "&Kölägg"
 
 #~ msgid "Open Disc"
 #~ msgstr "Öppna skiva"
-
-#~ msgid "Open Subtitles"
-#~ msgstr "Öppna undertexter"
 
 #~ msgid "Prev Title"
 #~ msgstr "Föreg titel"

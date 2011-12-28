@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vlc 1.1.0\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2011-12-10 00:07+0000\n"
+"POT-Creation-Date: 2011-12-28 03:13+0100\n"
 "PO-Revision-Date: 2011-11-04 15:59+0200\n"
 "Last-Translator: \n"
 "Language-Team: Bulgarian <bestran@mail.bg>\n"
@@ -74,8 +74,8 @@ msgid "Hotkeys settings"
 msgstr "Настройки на клавишните комбинации"
 
 #: include/vlc_config_cat.h:52 src/input/es_out.c:2893 src/input/es_out.c:2934
-#: src/libvlc-module.c:1580 modules/access/imem.c:64
-#: modules/gui/macosx/MainMenu.m:282 modules/gui/macosx/output.m:170
+#: src/libvlc-module.c:1587 modules/access/imem.c:64
+#: modules/gui/macosx/MainMenu.m:281 modules/gui/macosx/output.m:170
 #: modules/gui/macosx/playlistinfo.m:116 modules/gui/macosx/simple_prefs.m:177
 #: modules/gui/macosx/wizard.m:382
 #: modules/gui/qt4/components/info_panels.cpp:516
@@ -104,7 +104,7 @@ msgid "Audio filters are used to process the audio stream."
 msgstr "Аудио филтрите се използват за допълнителна обработка на звука."
 
 #: include/vlc_config_cat.h:60 src/audio_output/common.c:82
-#: modules/gui/macosx/MainMenu.m:292 modules/gui/macosx/MainMenu.m:293
+#: modules/gui/macosx/MainMenu.m:291 modules/gui/macosx/MainMenu.m:292
 msgid "Visualizations"
 msgstr "Визуализации"
 
@@ -120,7 +120,7 @@ msgstr "Модули за извеждане"
 msgid "General settings for audio output modules."
 msgstr "Основни настройки на модулите за аудио извеждане."
 
-#: include/vlc_config_cat.h:66 src/libvlc-module.c:2093
+#: include/vlc_config_cat.h:66 src/libvlc-module.c:2100
 #: modules/gui/macosx/VideoEffects.m:72
 #: modules/stream_out/transcode/transcode.c:223
 msgid "Miscellaneous"
@@ -131,8 +131,8 @@ msgid "Miscellaneous audio settings and modules."
 msgstr "Различни настройки за звука и модулите."
 
 #: include/vlc_config_cat.h:70 src/input/es_out.c:2896 src/input/es_out.c:2981
-#: src/libvlc-module.c:1631 modules/access/imem.c:64
-#: modules/gui/macosx/MainMenu.m:295 modules/gui/macosx/output.m:160
+#: src/libvlc-module.c:1638 modules/access/imem.c:64
+#: modules/gui/macosx/MainMenu.m:294 modules/gui/macosx/output.m:160
 #: modules/gui/macosx/playlistinfo.m:106 modules/gui/macosx/simple_prefs.m:181
 #: modules/gui/macosx/wizard.m:383
 #: modules/gui/qt4/components/info_panels.cpp:517
@@ -246,7 +246,7 @@ msgstr "Основни Входящи"
 msgid "General input settings. Use with care..."
 msgstr "Основни настройки на въвеждането. Използвайте ги внимателно..."
 
-#: include/vlc_config_cat.h:124 src/libvlc-module.c:2025
+#: include/vlc_config_cat.h:124 src/libvlc-module.c:2032
 msgid "Stream output"
 msgstr "Извеждане на поток"
 
@@ -350,9 +350,9 @@ msgstr ""
 msgid "VLC's implementation of Video On Demand"
 msgstr "Осъществяване на видео по поръчка (Video On Demand) с VLC."
 
-#: include/vlc_config_cat.h:175 src/libvlc-module.c:2142
+#: include/vlc_config_cat.h:175 src/libvlc-module.c:2149
 #: src/playlist/engine.c:217 modules/demux/playlist/playlist.c:63
-#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:277
+#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:302
 #: modules/gui/qt4/components/controller.hpp:112
 #: modules/gui/qt4/components/playlist/playlist.cpp:198
 #: modules/gui/qt4/components/playlist/selector.cpp:188
@@ -386,7 +386,7 @@ msgid ""
 msgstr ""
 "Модулите за откриване на услуги автоматично добавят елементи в плейлиста."
 
-#: include/vlc_config_cat.h:186 src/libvlc-module.c:1926
+#: include/vlc_config_cat.h:186 src/libvlc-module.c:1933
 #: modules/gui/qt4/ui/video_effects.h:1395
 msgid "Advanced"
 msgstr "Допълнителни"
@@ -538,14 +538,13 @@ msgid "&About"
 msgstr "Относно"
 
 #: include/vlc_intf_strings.h:65 modules/control/rc.c:72
-#: modules/gui/macosx/MainMenu.m:256 modules/gui/macosx/MainMenu.m:353
-#: modules/gui/macosx/MainMenu.m:360 modules/gui/macosx/MainMenu.m:807
-#: modules/gui/macosx/MainMenu.m:808 modules/gui/macosx/MainMenu.m:809
-#: modules/gui/macosx/MainWindow.m:823 modules/gui/macosx/playlist.m:466
+#: modules/gui/macosx/MainMenu.m:255 modules/gui/macosx/MainMenu.m:352
+#: modules/gui/macosx/MainMenu.m:359 modules/gui/macosx/MainMenu.m:791
+#: modules/gui/macosx/MainMenu.m:792 modules/gui/macosx/MainMenu.m:793
+#: modules/gui/macosx/MainWindow.m:1003 modules/gui/macosx/playlist.m:466
 #: modules/gui/qt4/components/controller.hpp:110
 #: modules/gui/qt4/dialogs/vlm.cpp:550 modules/gui/qt4/menus.cpp:786
-#: modules/gui/qt4/ui/open.h:253 share/lua/http/index.html:203
-#: share/lua/http/mobile.html:97 share/lua/http/dialogs/stream_window.html:59
+#: modules/gui/qt4/ui/open.h:253
 msgid "Play"
 msgstr "Възпроизвеждане"
 
@@ -590,12 +589,12 @@ msgid "Save..."
 msgstr "Запис..."
 
 #: include/vlc_intf_strings.h:80 modules/gui/macosx/CoreInteraction.m:354
-#: modules/gui/macosx/MainMenu.m:270 modules/gui/macosx/MainMenu.m:1182
+#: modules/gui/macosx/MainMenu.m:269 modules/gui/macosx/MainMenu.m:1127
 msgid "Repeat All"
 msgstr "Повторение на всички"
 
 #: include/vlc_intf_strings.h:81 modules/gui/macosx/CoreInteraction.m:371
-#: modules/gui/macosx/MainMenu.m:269 modules/gui/macosx/MainMenu.m:1175
+#: modules/gui/macosx/MainMenu.m:268 modules/gui/macosx/MainMenu.m:1120
 msgid "Repeat One"
 msgstr "Повторение на един"
 
@@ -603,8 +602,8 @@ msgstr "Повторение на един"
 msgid "No Repeat"
 msgstr "Без повторение"
 
-#: include/vlc_intf_strings.h:84 src/libvlc-module.c:1502
-#: modules/gui/macosx/MainMenu.m:268 modules/gui/macosx/MainMenu.m:1168
+#: include/vlc_intf_strings.h:84 src/libvlc-module.c:1509
+#: modules/gui/macosx/MainMenu.m:267 modules/gui/macosx/MainMenu.m:1113
 #: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/components/controller.hpp:127
 msgid "Random"
@@ -646,8 +645,8 @@ msgstr "Запис на плейлист..."
 msgid "Open Play&list..."
 msgstr "Отваряне на Плейлист..."
 
-#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:122
-#: modules/gui/qt4/components/preferences_widgets.cpp:1297
+#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:133
+#: modules/gui/qt4/components/preferences_widgets.cpp:1300
 msgid "Search"
 msgstr "Търсене"
 
@@ -785,8 +784,7 @@ msgid "Vu meter"
 msgstr ""
 
 #: src/audio_output/common.c:122 modules/audio_filter/equalizer.c:76
-#: modules/gui/macosx/AudioEffects.m:102 share/lua/http/index.html:215
-#: share/lua/http/mobile.html:76
+#: modules/gui/macosx/AudioEffects.m:102
 msgid "Equalizer"
 msgstr "Еквалайзер"
 
@@ -808,8 +806,8 @@ msgid "The maximum number of filters (%u) was reached."
 msgstr "Достигнати са максималния брой филтри (%u)."
 
 #: src/audio_output/output.c:100 src/audio_output/output.c:128
-#: modules/access/vcdx/info.c:86 modules/gui/macosx/MainMenu.m:288
-#: modules/gui/macosx/MainMenu.m:289
+#: modules/access/vcdx/info.c:86 modules/gui/macosx/MainMenu.m:287
+#: modules/gui/macosx/MainMenu.m:288
 #: share/lua/http/dialogs/create_stream.html:316
 msgid "Audio Channels"
 msgstr "Аудио канали"
@@ -1037,8 +1035,8 @@ msgid "%s [%s %d]"
 msgstr ""
 
 #: src/input/es_out.c:1165 src/input/es_out.c:1170 src/input/var.c:167
-#: src/libvlc-module.c:693 modules/gui/macosx/MainMenu.m:275
-#: modules/gui/macosx/MainMenu.m:276
+#: src/libvlc-module.c:693 modules/gui/macosx/MainMenu.m:274
+#: modules/gui/macosx/MainMenu.m:275
 msgid "Program"
 msgstr "Програма"
 
@@ -1046,7 +1044,7 @@ msgstr "Програма"
 msgid "Scrambled"
 msgstr ""
 
-#: src/input/es_out.c:1368 share/lua/http/index.html:163
+#: src/input/es_out.c:1368
 msgid "Yes"
 msgstr "Да"
 
@@ -1172,8 +1170,8 @@ msgid ""
 msgstr ""
 "Формата на '%s' не може да бъде намерен. Погледнете отчета за подробности."
 
-#: src/input/meta.c:54 src/input/var.c:177 modules/gui/macosx/MainMenu.m:277
-#: modules/gui/macosx/MainMenu.m:278 modules/gui/macosx/open.m:157
+#: src/input/meta.c:54 src/input/var.c:177 modules/gui/macosx/MainMenu.m:276
+#: modules/gui/macosx/MainMenu.m:277 modules/gui/macosx/open.m:157
 #: modules/gui/macosx/open.m:159 modules/gui/macosx/playlistinfo.m:78
 #: modules/gui/macosx/wizard.m:350
 #: modules/gui/qt4/components/open_panels.cpp:441
@@ -1248,8 +1246,8 @@ msgstr "Отметка"
 msgid "Programs"
 msgstr "Програми"
 
-#: src/input/var.c:182 modules/gui/macosx/MainMenu.m:279
-#: modules/gui/macosx/MainMenu.m:280 modules/gui/macosx/open.m:158
+#: src/input/var.c:182 modules/gui/macosx/MainMenu.m:278
+#: modules/gui/macosx/MainMenu.m:279 modules/gui/macosx/open.m:158
 #: modules/gui/macosx/open.m:160 modules/gui/qt4/ui/open_disk.h:310
 msgid "Chapter"
 msgstr "Глава"
@@ -1258,19 +1256,19 @@ msgstr "Глава"
 msgid "Navigation"
 msgstr "Навигация"
 
-#: src/input/var.c:200 modules/gui/macosx/MainMenu.m:303
-#: modules/gui/macosx/MainMenu.m:304
+#: src/input/var.c:200 modules/gui/macosx/MainMenu.m:302
+#: modules/gui/macosx/MainMenu.m:303
 msgid "Video Track"
 msgstr "Видео пътечка"
 
-#: src/input/var.c:205 modules/gui/macosx/MainMenu.m:286
-#: modules/gui/macosx/MainMenu.m:287
+#: src/input/var.c:205 modules/gui/macosx/MainMenu.m:285
+#: modules/gui/macosx/MainMenu.m:286
 msgid "Audio Track"
 msgstr "Аудио пътечка"
 
-#: src/input/var.c:210 modules/gui/macosx/MainMenu.m:311
-#: modules/gui/macosx/MainMenu.m:312 modules/gui/macosx/MainMenu.m:993
-#: modules/gui/macosx/MainMenu.m:1051
+#: src/input/var.c:210 modules/gui/macosx/MainMenu.m:310
+#: modules/gui/macosx/MainMenu.m:311 modules/gui/macosx/MainMenu.m:986
+#: modules/gui/macosx/MainMenu.m:1044
 msgid "Subtitles Track"
 msgstr "Пътечка със субтитри"
 
@@ -1292,11 +1290,11 @@ msgstr "Заглавие %i%s"
 msgid "Chapter %i"
 msgstr "Глава %i"
 
-#: src/input/var.c:376 modules/gui/qt4/dialogs/toolbar.cpp:390
+#: src/input/var.c:376 modules/gui/qt4/dialogs/toolbar.cpp:395
 msgid "Next chapter"
 msgstr "Следваща глава"
 
-#: src/input/var.c:381 modules/gui/qt4/dialogs/toolbar.cpp:380
+#: src/input/var.c:381 modules/gui/qt4/dialogs/toolbar.cpp:385
 msgid "Previous chapter"
 msgstr "Предишна глава"
 
@@ -1343,24 +1341,24 @@ msgstr ""
 "Стартиране на vlc със стандартния интерфейс. Използвайте 'cvlc', за да "
 "използвате vlc без интерфейс."
 
-#: src/libvlc.h:154 src/libvlc-module.c:1505 src/libvlc-module.c:1506
-#: src/libvlc-module.c:2655 src/video_output/vout_intf.c:182
+#: src/libvlc.h:154 src/libvlc-module.c:1512 src/libvlc-module.c:1513
+#: src/libvlc-module.c:2662 src/video_output/vout_intf.c:182
 msgid "Zoom"
 msgstr "Мащабиране"
 
-#: src/libvlc.h:155 src/libvlc-module.c:1429 src/video_output/vout_intf.c:83
+#: src/libvlc.h:155 src/libvlc-module.c:1436 src/video_output/vout_intf.c:83
 msgid "1:4 Quarter"
 msgstr "Мащаб 1:4 (четвърт)"
 
-#: src/libvlc.h:156 src/libvlc-module.c:1430 src/video_output/vout_intf.c:84
+#: src/libvlc.h:156 src/libvlc-module.c:1437 src/video_output/vout_intf.c:84
 msgid "1:2 Half"
 msgstr "Мащаб 1:2 (половин)"
 
-#: src/libvlc.h:157 src/libvlc-module.c:1431 src/video_output/vout_intf.c:85
+#: src/libvlc.h:157 src/libvlc-module.c:1438 src/video_output/vout_intf.c:85
 msgid "1:1 Original"
 msgstr "Мащаб 1:1 (оригинален)"
 
-#: src/libvlc.h:158 src/libvlc-module.c:1432 src/video_output/vout_intf.c:86
+#: src/libvlc.h:158 src/libvlc-module.c:1439 src/video_output/vout_intf.c:86
 msgid "2:1 Double"
 msgstr "Мащаб 2:1 (двоен)"
 
@@ -2028,15 +2026,15 @@ msgstr ""
 "Скриване на курсора и панела с регулаторите при цял екран след х милисекунди."
 
 #: src/libvlc-module.c:467 src/libvlc-module.c:469
-#: src/video_output/interlacing.c:180 modules/gui/macosx/MainMenu.m:314
-#: modules/gui/macosx/MainMenu.m:315 modules/gui/qt4/dialogs/convert.cpp:86
+#: src/video_output/interlacing.c:180 modules/gui/macosx/MainMenu.m:313
+#: modules/gui/macosx/MainMenu.m:314 modules/gui/qt4/dialogs/convert.cpp:86
 #: modules/video_filter/deinterlace/deinterlace.c:98
 #: share/lua/http/dialogs/create_stream.html:346
 msgid "Deinterlace"
 msgstr "Деинтерлейс"
 
 #: src/libvlc-module.c:477 src/video_output/interlacing.c:195
-#: modules/gui/macosx/MainMenu.m:316 modules/gui/macosx/MainMenu.m:317
+#: modules/gui/macosx/MainMenu.m:315 modules/gui/macosx/MainMenu.m:316
 #: modules/video_filter/deinterlace/deinterlace.c:53
 msgid "Deinterlace mode"
 msgstr "Вид на деинтерлейса"
@@ -2799,7 +2797,7 @@ msgstr "Включване на модула \"Слоеве\""
 msgid "You can completely disable the sub-picture processing."
 msgstr "Можете напълно да изключите обработката на слоевете."
 
-#: src/libvlc-module.c:831 src/libvlc-module.c:1761 src/text/iso-639_def.h:145
+#: src/libvlc-module.c:831 src/libvlc-module.c:1768 src/text/iso-639_def.h:145
 #: modules/gui/macosx/simple_prefs.m:283
 #: modules/stream_out/transcode/transcode.c:219
 #: modules/gui/qt4/ui/sprefs_subtitles.h:271
@@ -2967,11 +2965,7 @@ msgstr "Прекъсване на TCP връзката по подразбира
 msgid "HTTP server address"
 msgstr "HTTP адрес на сървър"
 
-#: src/libvlc-module.c:918
-msgid "RTSP server address"
-msgstr "RTSP адрес на сървър"
-
-#: src/libvlc-module.c:920
+#: src/libvlc-module.c:919
 msgid ""
 "By default, the server will listen on any local IP address. Specify an IP "
 "address (e.g. ::1 or 127.0.0.1) or a host name (e.g. localhost) to restrict "
@@ -2981,80 +2975,97 @@ msgstr ""
 "(например ::1 или 127.0.0.1) или име на хост (например localhost), за да се "
 "ограничат до определен мрежов интерфейс."
 
-#: src/libvlc-module.c:924
+#: src/libvlc-module.c:923
+msgid "RTSP server address"
+msgstr "RTSP адрес на сървър"
+
+#: src/libvlc-module.c:925
+#, fuzzy
+msgid ""
+"This defines the address the RTSP server will listen on, along with the base "
+"path of the RTSP VOD media. Syntax is address/path. By default, the server "
+"will listen on any local IP address. Specify an IP address (e.g. ::1 or "
+"127.0.0.1) or a host name (e.g. localhost) to restrict them to a specific "
+"network interface."
+msgstr ""
+"По подразбиране сървъра ще следи на всеки локален IP адрес. Задайте IP адрес "
+"(например ::1 или 127.0.0.1) или име на хост (например localhost), за да се "
+"ограничат до определен мрежов интерфейс."
+
+#: src/libvlc-module.c:931
 msgid "HTTP server port"
 msgstr "HTTP порт на сървър"
 
-#: src/libvlc-module.c:926
+#: src/libvlc-module.c:933
 msgid ""
 "The HTTP server will listen on this TCP port. The standard HTTP port number "
 "is 80. However allocation of port numbers below 1025 is usually restricted "
 "by the operating system."
 msgstr ""
 
-#: src/libvlc-module.c:931
+#: src/libvlc-module.c:938
 msgid "HTTPS server port"
 msgstr "HTTPS порт на сървър"
 
-#: src/libvlc-module.c:933
+#: src/libvlc-module.c:940
 msgid ""
 "The HTTPS server will listen on this TCP port. The standard HTTPS port "
 "number is 443. However allocation of port numbers below 1025 is usually "
 "restricted by the operating system."
 msgstr ""
 
-#: src/libvlc-module.c:938
+#: src/libvlc-module.c:945
 msgid "RTSP server port"
 msgstr "RTSP порт на сървър"
 
-#: src/libvlc-module.c:940
+#: src/libvlc-module.c:947
 msgid ""
 "The RTSP server will listen on this TCP port. The standard RTSP port number "
 "is 554. However allocation of port numbers below 1025 is usually restricted "
 "by the operating system."
 msgstr ""
 
-#: src/libvlc-module.c:945
+#: src/libvlc-module.c:952
 msgid "HTTP/TLS server certificate"
 msgstr ""
 
-#: src/libvlc-module.c:947
+#: src/libvlc-module.c:954
 msgid "This X.509 certicate file (PEM format) is used for server-side TLS."
 msgstr ""
 
-#: src/libvlc-module.c:949
+#: src/libvlc-module.c:956
 msgid "HTTP/TLS server private key"
 msgstr ""
 
-#: src/libvlc-module.c:951
+#: src/libvlc-module.c:958
 msgid "This private key file (PEM format) is used for server-side TLS."
 msgstr ""
 
-#: src/libvlc-module.c:953
+#: src/libvlc-module.c:960
 msgid "HTTP/TLS Certificate Authority"
 msgstr ""
 
-#: src/libvlc-module.c:955
+#: src/libvlc-module.c:962
 msgid ""
 "This X.509 certificate file (PEM format) can optionally be used to "
 "authenticate remote clients in TLS sessions."
 msgstr ""
 
-#: src/libvlc-module.c:958
+#: src/libvlc-module.c:965
 msgid "HTTP/TLS Certificate Revocation List"
 msgstr "HTTP/TLS списък на отменените сертификати (CRL)."
 
-#: src/libvlc-module.c:960
+#: src/libvlc-module.c:967
 msgid ""
 "This file countains an optional CRL to prevent remove clients from using "
 "revoked certificates in TLS sessions."
 msgstr ""
 
-#: src/libvlc-module.c:963
+#: src/libvlc-module.c:970
 msgid "SOCKS server"
 msgstr "SOCKS сървър"
 
-#: src/libvlc-module.c:965
+#: src/libvlc-module.c:972
 msgid ""
 "SOCKS proxy server to use. This must be of the form address:port. It will be "
 "used for all TCP connections"
@@ -3062,88 +3073,88 @@ msgstr ""
 "SOCKS прокси сървър, който да се използва. Това трябва да бъде във формата "
 "на адрес:порт. Това ще бъде използвано за всички TCP връзки."
 
-#: src/libvlc-module.c:968
+#: src/libvlc-module.c:975
 msgid "SOCKS user name"
 msgstr "SOCKS потребителско име"
 
-#: src/libvlc-module.c:970
+#: src/libvlc-module.c:977
 msgid "User name to be used for connection to the SOCKS proxy."
 msgstr ""
 "Потребителско име, което да се използва за свързване към SOCKS прокси сървър."
 
-#: src/libvlc-module.c:972
+#: src/libvlc-module.c:979
 msgid "SOCKS password"
 msgstr "SOCKS парола"
 
-#: src/libvlc-module.c:974
+#: src/libvlc-module.c:981
 msgid "Password to be used for connection to the SOCKS proxy."
 msgstr "Парола за свързване към SOCKS прокси сървър."
 
-#: src/libvlc-module.c:976
+#: src/libvlc-module.c:983
 msgid "Title metadata"
 msgstr "Мета-данни за заглавие"
 
-#: src/libvlc-module.c:978
+#: src/libvlc-module.c:985
 msgid "Allows you to specify a \"title\" metadata for an input."
 msgstr "Задаване на мета-данни \"заглавие\" за входния поток."
 
-#: src/libvlc-module.c:980
+#: src/libvlc-module.c:987
 msgid "Author metadata"
 msgstr "Мета-данни за автор"
 
-#: src/libvlc-module.c:982
+#: src/libvlc-module.c:989
 msgid "Allows you to specify an \"author\" metadata for an input."
 msgstr "Задаване на мета-данни \"автор\" за входния поток."
 
-#: src/libvlc-module.c:984
+#: src/libvlc-module.c:991
 msgid "Artist metadata"
 msgstr "Мета-данни за изпълнител"
 
-#: src/libvlc-module.c:986
+#: src/libvlc-module.c:993
 msgid "Allows you to specify an \"artist\" metadata for an input."
 msgstr "Задаване на мета-данни \"изпълнител\" за входния поток."
 
-#: src/libvlc-module.c:988
+#: src/libvlc-module.c:995
 msgid "Genre metadata"
 msgstr "Мета-данни за жанр"
 
-#: src/libvlc-module.c:990
+#: src/libvlc-module.c:997
 msgid "Allows you to specify a \"genre\" metadata for an input."
 msgstr "Задаване на мета-данни \"жанр\" за входния поток."
 
-#: src/libvlc-module.c:992
+#: src/libvlc-module.c:999
 msgid "Copyright metadata"
 msgstr "Мета-данни за авторско право"
 
-#: src/libvlc-module.c:994
+#: src/libvlc-module.c:1001
 msgid "Allows you to specify a \"copyright\" metadata for an input."
 msgstr "Задаване на мета-данни \"авторско право\" за входния поток."
 
-#: src/libvlc-module.c:996
+#: src/libvlc-module.c:1003
 msgid "Description metadata"
 msgstr "Мета-данни за описание"
 
-#: src/libvlc-module.c:998
+#: src/libvlc-module.c:1005
 msgid "Allows you to specify a \"description\" metadata for an input."
 msgstr "Задаване на мета-данни \"описание\" за входния поток."
 
-#: src/libvlc-module.c:1000
+#: src/libvlc-module.c:1007
 msgid "Date metadata"
 msgstr "Мета-данни за дата"
 
-#: src/libvlc-module.c:1002
+#: src/libvlc-module.c:1009
 msgid "Allows you to specify a \"date\" metadata for an input."
 msgstr "Задаване на мета-данни \"дата\" за входния поток."
 
-#: src/libvlc-module.c:1004
+#: src/libvlc-module.c:1011
 msgid "URL metadata"
 msgstr "Мета-данни за URL"
 
-#: src/libvlc-module.c:1006
+#: src/libvlc-module.c:1013
 msgid "Allows you to specify a \"url\" metadata for an input."
 msgstr "Задаване на мета-данни \"URL\" за входния поток."
 
-#: src/libvlc-module.c:1010
+#: src/libvlc-module.c:1017
 msgid ""
 "This option can be used to alter the way VLC selects its codecs "
 "(decompression methods). Only advanced users should alter this option as it "
@@ -3154,11 +3165,11 @@ msgstr ""
 "променят тази опция, тъй като може да прекъсне възпроизвеждането на всички "
 "потоци."
 
-#: src/libvlc-module.c:1014
+#: src/libvlc-module.c:1021
 msgid "Preferred decoders list"
 msgstr "Списък на предпочитаните декодери"
 
-#: src/libvlc-module.c:1016
+#: src/libvlc-module.c:1023
 msgid ""
 "List of codecs that VLC will use in priority. For instance, 'dummy,a52' will "
 "try the dummy and a52 codecs before trying the other ones. Only advanced "
@@ -3169,17 +3180,17 @@ msgstr ""
 "опитни потребители могат да променят тази опция, тъй като може да прекъсне "
 "възпроизвеждането на всички потоци."
 
-#: src/libvlc-module.c:1021
+#: src/libvlc-module.c:1028
 msgid "Preferred encoders list"
 msgstr "Списък на предпочитаните кодери"
 
-#: src/libvlc-module.c:1023
+#: src/libvlc-module.c:1030
 msgid ""
 "This allows you to select a list of encoders that VLC will use in priority."
 msgstr ""
 "Списък с кодери, които VLC ще използва в зависимост от техния приоритет."
 
-#: src/libvlc-module.c:1032
+#: src/libvlc-module.c:1039
 msgid ""
 "These options allow you to set default global options for the stream output "
 "subsystem."
@@ -3187,11 +3198,11 @@ msgstr ""
 "Тези опции позволяват да се настроят глобалните опции по подразбиране за "
 "потока на изходната субсистема."
 
-#: src/libvlc-module.c:1035
+#: src/libvlc-module.c:1042
 msgid "Default stream output chain"
 msgstr "Верига за извеждане на потока по подразбиране"
 
-#: src/libvlc-module.c:1037
+#: src/libvlc-module.c:1044
 msgid ""
 "You can enter here a default stream output chain. Refer to the documentation "
 "to learn how to build such chains. Warning: this chain will be enabled for "
@@ -3202,27 +3213,27 @@ msgstr ""
 "такава верига.\n"
 " Внимание: тази верига ще бъде включена за всички потоци."
 
-#: src/libvlc-module.c:1041
+#: src/libvlc-module.c:1048
 msgid "Enable streaming of all ES"
 msgstr "Извеждане на всички елементарни потоци"
 
-#: src/libvlc-module.c:1043
+#: src/libvlc-module.c:1050
 msgid "Stream all elementary streams (video, audio and subtitles)"
 msgstr "Извеждане на всички елементарни потоци (видео, аудио и субтитри)"
 
-#: src/libvlc-module.c:1045
+#: src/libvlc-module.c:1052
 msgid "Display while streaming"
 msgstr "Показване по време на изпращането на потока"
 
-#: src/libvlc-module.c:1047
+#: src/libvlc-module.c:1054
 msgid "Play locally the stream while streaming it."
 msgstr "Възпроизвеждане на потока локално по време на изпращането."
 
-#: src/libvlc-module.c:1049
+#: src/libvlc-module.c:1056
 msgid "Enable video stream output"
 msgstr "Извеждане на видео потока"
 
-#: src/libvlc-module.c:1051
+#: src/libvlc-module.c:1058
 msgid ""
 "Choose whether the video stream should be redirected to the stream output "
 "facility when this last one is enabled."
@@ -3230,11 +3241,11 @@ msgstr ""
 "Пренасочване на видео потока към съответния модул за извеждане, ако "
 "последния е включен."
 
-#: src/libvlc-module.c:1054
+#: src/libvlc-module.c:1061
 msgid "Enable audio stream output"
 msgstr "Извеждане на аудио потока"
 
-#: src/libvlc-module.c:1056
+#: src/libvlc-module.c:1063
 msgid ""
 "Choose whether the audio stream should be redirected to the stream output "
 "facility when this last one is enabled."
@@ -3242,11 +3253,11 @@ msgstr ""
 "Пренасочване на аудио потока към съответния модул за извеждане, ако "
 "последния е включен."
 
-#: src/libvlc-module.c:1059
+#: src/libvlc-module.c:1066
 msgid "Enable SPU stream output"
 msgstr "Извеждане на потока със субтитрите"
 
-#: src/libvlc-module.c:1061
+#: src/libvlc-module.c:1068
 msgid ""
 "Choose whether the SPU streams should be redirected to the stream output "
 "facility when this last one is enabled."
@@ -3254,11 +3265,11 @@ msgstr ""
 "Пренасочване на потока със субтитрите към съответния модул за извеждане, ако "
 "последния е включен."
 
-#: src/libvlc-module.c:1064
+#: src/libvlc-module.c:1071
 msgid "Keep stream output open"
 msgstr "Запазване на изходния поток отворен"
 
-#: src/libvlc-module.c:1066
+#: src/libvlc-module.c:1073
 msgid ""
 "This allows you to keep an unique stream output instance across multiple "
 "playlist item (automatically insert the gather stream output if not "
@@ -3267,11 +3278,11 @@ msgstr ""
 "Запазване на един и същ изходен поток сред няколко елемента от плейлиста "
 "(автоматично вмъкване на изходния поток, ако не е зададено)"
 
-#: src/libvlc-module.c:1070
+#: src/libvlc-module.c:1077
 msgid "Stream output muxer caching (ms)"
 msgstr "Кеширане в мултиплексора на изходния поток (ms)"
 
-#: src/libvlc-module.c:1072
+#: src/libvlc-module.c:1079
 msgid ""
 "This allow you to configure the initial caching amount for stream output  "
 "muxer. This value should be set in milliseconds."
@@ -3279,37 +3290,37 @@ msgstr ""
 "Задаване на началната стойност на кеширане за мултиплексора на изходния "
 "поток. Тази стойност трябва да бъде настроена в милисекунди."
 
-#: src/libvlc-module.c:1075
+#: src/libvlc-module.c:1082
 msgid "Preferred packetizer list"
 msgstr "Списък на предпочитаните опаковчици"
 
-#: src/libvlc-module.c:1077
+#: src/libvlc-module.c:1084
 msgid ""
 "This allows you to select the order in which VLC will choose its packetizers."
 msgstr "Определяне на реда в който VLC ще използва опаковчиците."
 
-#: src/libvlc-module.c:1080
+#: src/libvlc-module.c:1087
 msgid "Mux module"
 msgstr "Модул на мултиплексора"
 
-#: src/libvlc-module.c:1082
+#: src/libvlc-module.c:1089
 msgid "This is a legacy entry to let you configure mux modules"
 msgstr ""
 "Остарял параметър, който позволява да се настроят модулите за мултиплексора"
 
-#: src/libvlc-module.c:1084
+#: src/libvlc-module.c:1091
 msgid "Access output module"
 msgstr "Модул за извеждане"
 
-#: src/libvlc-module.c:1086
+#: src/libvlc-module.c:1093
 msgid "This is a legacy entry to let you configure access output modules"
 msgstr "Остарял параметър, който позволява да се настрои модула за извеждане"
 
-#: src/libvlc-module.c:1088
+#: src/libvlc-module.c:1095
 msgid "Control SAP flow"
 msgstr "Управление на потоците SAP"
 
-#: src/libvlc-module.c:1090
+#: src/libvlc-module.c:1097
 msgid ""
 "If this option is enabled, the flow on the SAP multicast address will be "
 "controlled. This is needed if you want to make announcements on the MBone."
@@ -3317,11 +3328,11 @@ msgstr ""
 "Ако тази опция е включена, се включва контрол над потока към multicast адрес "
 "SAP. Това е необходимо, ако искате да направите съобщения на MBone."
 
-#: src/libvlc-module.c:1094
+#: src/libvlc-module.c:1101
 msgid "SAP announcement interval"
 msgstr "Интервал на съобщенията от SAP"
 
-#: src/libvlc-module.c:1096
+#: src/libvlc-module.c:1103
 msgid ""
 "When the SAP flow control is disabled, this lets you set the fixed interval "
 "between SAP announcements."
@@ -3329,7 +3340,7 @@ msgstr ""
 "Когато контрола над потока SAP е изключен, това ви позволява да настроите "
 "фиксиран интервал между SAP съобщенията."
 
-#: src/libvlc-module.c:1105
+#: src/libvlc-module.c:1112
 msgid ""
 "These options allow you to enable special CPU optimizations. You should "
 "always leave all these enabled."
@@ -3337,7 +3348,7 @@ msgstr ""
 "Тези опции позволяват да се включи специални оптимизации на процесора. "
 "Трябва да ги оставите винаги включени."
 
-#: src/libvlc-module.c:1110
+#: src/libvlc-module.c:1117
 msgid ""
 "These options allow you to select default modules. Leave these alone unless "
 "you really know what you are doing."
@@ -3345,11 +3356,11 @@ msgstr ""
 "Тези опции позволяват да се изберат модулите по подразбиране. Не пипайте "
 "тези настройки, ако не знаете какво точно да направите."
 
-#: src/libvlc-module.c:1113
+#: src/libvlc-module.c:1120
 msgid "Memory copy module"
 msgstr "Модул за копиране на паметта"
 
-#: src/libvlc-module.c:1115
+#: src/libvlc-module.c:1122
 msgid ""
 "You can select which memory copy module you want to use. By default VLC will "
 "select the fastest one supported by your hardware."
@@ -3357,11 +3368,11 @@ msgstr ""
 "Изберете кой модул за копиране на паметта да се използва. По подразбиране "
 "VLC ще избере най-бързия поддържан от вашия хардуер."
 
-#: src/libvlc-module.c:1118
+#: src/libvlc-module.c:1125
 msgid "Access module"
 msgstr "Модул за въвеждане"
 
-#: src/libvlc-module.c:1120
+#: src/libvlc-module.c:1127
 msgid ""
 "This allows you to force an access module. You can use it if the correct "
 "access is not automatically detected. You should not set this as a global "
@@ -3371,20 +3382,20 @@ msgstr ""
 "е открит автоматично. Не настройвайте тази основна опция като глобална, ако "
 "не знаете какво точно да направите."
 
-#: src/libvlc-module.c:1124
+#: src/libvlc-module.c:1131
 msgid "Stream filter module"
 msgstr "Модул за филтъра на потока"
 
-#: src/libvlc-module.c:1126
+#: src/libvlc-module.c:1133
 msgid "Stream filters are used to modify the stream that is being read. "
 msgstr ""
 "Филтрите за въвеждане се използват за промяна на потока след прочитането."
 
-#: src/libvlc-module.c:1128
+#: src/libvlc-module.c:1135
 msgid "Demux module"
 msgstr "Модул на демултиплексора"
 
-#: src/libvlc-module.c:1130
+#: src/libvlc-module.c:1137
 msgid ""
 "Demultiplexers are used to separate the \"elementary\" streams (like audio "
 "and video streams). You can use it if the correct demuxer is not "
@@ -3396,21 +3407,21 @@ msgstr ""
 "демултиплексор не е открит автоматично. Не трябва да настройвате тази "
 "основна опция като глобална, ако не знаете какво точно да направите."
 
-#: src/libvlc-module.c:1135
+#: src/libvlc-module.c:1142
 msgid "VoD server module"
 msgstr "VoD модул на сървъра"
 
-#: src/libvlc-module.c:1137
+#: src/libvlc-module.c:1144
 msgid ""
 "You can select which VoD server module you want to use. Set this to "
 "`vod_rtsp' to switch back to the old, legacy module."
 msgstr ""
 
-#: src/libvlc-module.c:1140
+#: src/libvlc-module.c:1147
 msgid "Allow real-time priority"
 msgstr "Позволяване на приоритет real-time"
 
-#: src/libvlc-module.c:1142
+#: src/libvlc-module.c:1149
 msgid ""
 "Running VLC in real-time priority will allow for much more precise "
 "scheduling and yield better, especially when streaming content. It can "
@@ -3422,11 +3433,11 @@ msgstr ""
 "да блокира вашата машина или да я направи много бавна. Трябва да активирате "
 "това само ако знаете какво правите."
 
-#: src/libvlc-module.c:1148
+#: src/libvlc-module.c:1155
 msgid "Adjust VLC priority"
 msgstr "Настройка приоритета на VLC"
 
-#: src/libvlc-module.c:1150
+#: src/libvlc-module.c:1157
 msgid ""
 "This option adds an offset (positive or negative) to VLC default priorities. "
 "You can use it to tune VLC priority against other programs, or against other "
@@ -3436,22 +3447,22 @@ msgstr ""
 "подразбиране на VLC. Това може да се използва за настройка на приоритета на "
 "VLC спрямо други програми или спрямо други копия на VLC."
 
-#: src/libvlc-module.c:1154
+#: src/libvlc-module.c:1161
 msgid "(Experimental) Don't do caching at the access level."
 msgstr "(Експериментално) Без кеширане на входящия поток"
 
-#: src/libvlc-module.c:1156
+#: src/libvlc-module.c:1163
 msgid ""
 "This option is useful if you want to lower the latency when reading a stream"
 msgstr ""
 "Тази опция е полезна, ако искате по-малко задържане в кеша, когато се чете "
 "поток."
 
-#: src/libvlc-module.c:1159
+#: src/libvlc-module.c:1166
 msgid "Modules search path"
 msgstr "Път за търсене на модули"
 
-#: src/libvlc-module.c:1161
+#: src/libvlc-module.c:1168
 msgid ""
 "Additional path for VLC to look for its modules. You can add several paths "
 "by concatenating them using \" PATH_SEP \" as separator"
@@ -3460,78 +3471,78 @@ msgstr ""
 "пътя за последователно им използване, като за разделител използвайте \" "
 "PATH_SEP \"."
 
-#: src/libvlc-module.c:1164
+#: src/libvlc-module.c:1171
 msgid "Data search path"
 msgstr "Път за търсене на данни"
 
-#: src/libvlc-module.c:1166
+#: src/libvlc-module.c:1173
 msgid "Override the default data/share search path."
 msgstr "Подмяна на данните/споделянето на търсения път по подразбиране."
 
-#: src/libvlc-module.c:1168
+#: src/libvlc-module.c:1175
 msgid "VLM configuration file"
 msgstr "Конфигурационнен файл VLM"
 
-#: src/libvlc-module.c:1170
+#: src/libvlc-module.c:1177
 msgid "Read a VLM configuration file as soon as VLM is started."
 msgstr "Зареждане на посочения конфигурационен файл при стартирането на VLM."
 
-#: src/libvlc-module.c:1172
+#: src/libvlc-module.c:1179
 msgid "Use a plugins cache"
 msgstr "Използване на кеш плъгини"
 
-#: src/libvlc-module.c:1174
+#: src/libvlc-module.c:1181
 msgid "Use a plugins cache which will greatly improve the startup time of VLC."
 msgstr "Използването на кеш плъгини, съществено ще ускори стартирането на VLC."
 
-#: src/libvlc-module.c:1176
+#: src/libvlc-module.c:1183
 msgid "Locally collect statistics"
 msgstr "Събиране на локална статистика"
 
-#: src/libvlc-module.c:1178
+#: src/libvlc-module.c:1185
 msgid "Collect miscellaneous local statistics about the playing media."
 msgstr ""
 "Събиране на разнообразна локална статистика за възпроизвежданата медия."
 
-#: src/libvlc-module.c:1180
+#: src/libvlc-module.c:1187
 msgid "Run as daemon process"
 msgstr "Стартиране като daemon процес"
 
-#: src/libvlc-module.c:1182
+#: src/libvlc-module.c:1189
 msgid "Runs VLC as a background daemon process."
 msgstr "Стартиране на VLC като фонов daemon процес."
 
-#: src/libvlc-module.c:1184
+#: src/libvlc-module.c:1191
 msgid "Write process id to file"
 msgstr "Запис на id номера на процеса във файл"
 
-#: src/libvlc-module.c:1186
+#: src/libvlc-module.c:1193
 msgid "Writes process id into specified file."
 msgstr "Записване на id номера на процеса в определен файл."
 
-#: src/libvlc-module.c:1188
+#: src/libvlc-module.c:1195
 msgid "Log to file"
 msgstr "Съхраняване на отчета във файл"
 
-#: src/libvlc-module.c:1190
+#: src/libvlc-module.c:1197
 msgid "Log all VLC messages to a text file."
 msgstr "Съхраняване на всички съобщения на VLC в текстов файл."
 
-#: src/libvlc-module.c:1192
+#: src/libvlc-module.c:1199
 msgid "Log to syslog"
 msgstr "Изпращане на отчета в системния дневник"
 
-#: src/libvlc-module.c:1194
+#: src/libvlc-module.c:1201
 msgid "Log all VLC messages to syslog (UNIX systems)."
 msgstr ""
 "Запис на всички съобщения на VLC в отчет и изпращането им в системния "
 "дневник (UNIX системи)."
 
-#: src/libvlc-module.c:1196
+#: src/libvlc-module.c:1203
 msgid "Allow only one running instance"
 msgstr "Само едно стартирано копие на VLC"
 
-#: src/libvlc-module.c:1199
+#: src/libvlc-module.c:1206
 msgid ""
 "Allowing only one running instance of VLC can sometimes be useful, for "
 "example if you associated VLC with some media types and you don't want a new "
@@ -3545,7 +3556,7 @@ msgstr ""
 "ви позволи да възпроизвеждате файла с вече стартираното копие или да го "
 "поставите на опашката за изчакване в плейлиста."
 
-#: src/libvlc-module.c:1206
+#: src/libvlc-module.c:1213
 msgid ""
 "Allowing only one running instance of VLC can sometimes be useful, for "
 "example if you associated VLC with some media types and you don't want a new "
@@ -3562,27 +3573,27 @@ msgstr ""
 "session daemon, за да бъде активна и стартираното копие на VLC да използва "
 "управляващия интерфейс D-Bus."
 
-#: src/libvlc-module.c:1215
+#: src/libvlc-module.c:1222
 msgid "VLC is started from file association"
 msgstr "VLC е стартирано от асоциираните файлове"
 
-#: src/libvlc-module.c:1217
+#: src/libvlc-module.c:1224
 msgid "Tell VLC that it is being launched due to a file association in the OS"
 msgstr "Указва, че VLC е стартиран от асоцииран файл в ОС"
 
-#: src/libvlc-module.c:1220
+#: src/libvlc-module.c:1227
 msgid "One instance when started from file"
 msgstr "Едно копие на VLC при стартиране от файл"
 
-#: src/libvlc-module.c:1222
+#: src/libvlc-module.c:1229
 msgid "Allow only one running instance when started from file."
 msgstr "Разрешаване пускането само на едно копие, когато е стартиран от файл."
 
-#: src/libvlc-module.c:1224
+#: src/libvlc-module.c:1231
 msgid "Increase the priority of the process"
 msgstr "Увеличаване приоритета на процеса на VLC"
 
-#: src/libvlc-module.c:1226
+#: src/libvlc-module.c:1233
 msgid ""
 "Increasing the priority of the process will very likely improve your playing "
 "experience as it allows VLC not to be disturbed by other applications that "
@@ -3597,11 +3608,11 @@ msgstr ""
 "да вземе цялото процесорно време и системата да спре да отговаря, което може "
 "да изисква рестартиране на машината."
 
-#: src/libvlc-module.c:1234
+#: src/libvlc-module.c:1241
 msgid "Enqueue items to playlist when in one instance mode"
 msgstr "Добавяне на елементи в плейлиста в режим на едно копие"
 
-#: src/libvlc-module.c:1236
+#: src/libvlc-module.c:1243
 msgid ""
 "When using the one instance only option, enqueue items to playlist and keep "
 "playing current item."
@@ -3609,7 +3620,7 @@ msgstr ""
 "Когато е разрешено пускането само на едно копие на VLC, новите елементи се "
 "добавят в плейлиста и текущия елемент продължава да се възпроизвежда."
 
-#: src/libvlc-module.c:1245
+#: src/libvlc-module.c:1252
 msgid ""
 "These options define the behavior of the playlist. Some of them can be "
 "overridden in the playlist dialog box."
@@ -3617,11 +3628,11 @@ msgstr ""
 "Тези опции определят поведението на плейлиста. Някои от тях могат да бъдат "
 "променени в диалоговия прозорец за плейлиста."
 
-#: src/libvlc-module.c:1248
+#: src/libvlc-module.c:1255
 msgid "Automatically preparse files"
 msgstr "Автоматично зареждане на файловете"
 
-#: src/libvlc-module.c:1250
+#: src/libvlc-module.c:1257
 msgid ""
 "Automatically preparse files added to the playlist (to retrieve some "
 "metadata)."
@@ -3629,31 +3640,31 @@ msgstr ""
 "Автоматично зареждане на файловете, които се добавят в плейлиста (за "
 "получаването на мета-данни)."
 
-#: src/libvlc-module.c:1253
+#: src/libvlc-module.c:1260
 msgid "Album art policy"
 msgstr "Управление зареждането на обложка на албум"
 
-#: src/libvlc-module.c:1255
+#: src/libvlc-module.c:1262
 msgid "Choose how album art will be downloaded."
 msgstr "Изберете как да се зарежда обложка на албум"
 
-#: src/libvlc-module.c:1261
+#: src/libvlc-module.c:1268
 msgid "Manual download only"
 msgstr "Ръчно зареждане"
 
-#: src/libvlc-module.c:1262
+#: src/libvlc-module.c:1269
 msgid "When track starts playing"
 msgstr "При стартиране възпроизв. на файла"
 
-#: src/libvlc-module.c:1263
+#: src/libvlc-module.c:1270
 msgid "As soon as track is added"
 msgstr "При добавяне на файла в плейлиста"
 
-#: src/libvlc-module.c:1265
+#: src/libvlc-module.c:1272
 msgid "Services discovery modules"
 msgstr "Модули за откриване на услуги"
 
-#: src/libvlc-module.c:1267
+#: src/libvlc-module.c:1274
 msgid ""
 "Specifies the services discovery modules to preload, separated by colons. "
 "Typical value is \"sap\"."
@@ -3661,71 +3672,71 @@ msgstr ""
 "Определяне кои модули да се заредят за откриване на услуги разделени с "
 "двоеточие. Обичайните стойности са \"sap\"."
 
-#: src/libvlc-module.c:1270
+#: src/libvlc-module.c:1277
 msgid "Play files randomly forever"
 msgstr "Възпроизвеждане на елементите в разбъркан ред"
 
-#: src/libvlc-module.c:1272
+#: src/libvlc-module.c:1279
 msgid "VLC will randomly play files in the playlist until interrupted."
 msgstr ""
 "Елементите от плейлиста ще се възпроизвеждат в разбъркан ред, докато бъдат "
 "спрени."
 
-#: src/libvlc-module.c:1274
+#: src/libvlc-module.c:1281
 msgid "Repeat all"
 msgstr "Повторение на всички"
 
-#: src/libvlc-module.c:1276
+#: src/libvlc-module.c:1283
 msgid "VLC will keep playing the playlist indefinitely."
 msgstr "VLC ще възпроизвежда елементите от плейлиста безкрайно."
 
-#: src/libvlc-module.c:1278
+#: src/libvlc-module.c:1285
 msgid "Repeat current item"
 msgstr "Повторение на текущия елемент"
 
-#: src/libvlc-module.c:1280
+#: src/libvlc-module.c:1287
 msgid "VLC will keep playing the current playlist item."
 msgstr "VLC ще повтаря текущия елемент от плейлиста."
 
-#: src/libvlc-module.c:1282
+#: src/libvlc-module.c:1289
 msgid "Play and stop"
 msgstr "Възпроизвеждане и спиране"
 
-#: src/libvlc-module.c:1284
+#: src/libvlc-module.c:1291
 msgid "Stop the playlist after each played playlist item."
 msgstr "Спиране на възпроизвеждането след текущия елемент от плейлиста."
 
-#: src/libvlc-module.c:1286
+#: src/libvlc-module.c:1293
 msgid "Play and exit"
 msgstr "Възпроизвеждане и изход"
 
-#: src/libvlc-module.c:1288
+#: src/libvlc-module.c:1295
 msgid "Exit if there are no more items in the playlist."
 msgstr "Изход на VLC, ако няма повече елементи в плейлиста."
 
-#: src/libvlc-module.c:1290
+#: src/libvlc-module.c:1297
 msgid "Play and pause"
 msgstr "Възпроизвеждане и пауза"
 
-#: src/libvlc-module.c:1292
+#: src/libvlc-module.c:1299
 msgid "Pause each item in the playlist on the last frame."
 msgstr "Пауза на всеки елемент в плейлиста на последния кадър."
 
-#: src/libvlc-module.c:1294
+#: src/libvlc-module.c:1301
 msgid "Auto start"
 msgstr "Автоматично стартиране"
 
-#: src/libvlc-module.c:1295
+#: src/libvlc-module.c:1302
 msgid "Automatically start playing the playlist content once it's loaded."
 msgstr ""
 "Автоматично стартиране на възпроизвеждането, веднага след зареждането на "
 "плейлиста."
 
-#: src/libvlc-module.c:1298
+#: src/libvlc-module.c:1305
 msgid "Use media library"
 msgstr "Използване на медия библиотеката"
 
-#: src/libvlc-module.c:1300
+#: src/libvlc-module.c:1307
 msgid ""
 "The media library is automatically saved and reloaded each time you start "
 "VLC."
@@ -3733,19 +3744,19 @@ msgstr ""
 "Медия библиотеката автоматично се запазва и презарежда всеки път, когато се "
 "стартира VLC."
 
-#: src/libvlc-module.c:1303
+#: src/libvlc-module.c:1310
 msgid "Load Media Library"
 msgstr "Зареждане на медия библиотеката"
 
-#: src/libvlc-module.c:1305
+#: src/libvlc-module.c:1312
 msgid "Enable this option to load the SQL-based Media Library at VLC startup"
 msgstr ""
 
-#: src/libvlc-module.c:1307 modules/gui/qt4/ui/sprefs_interface.h:530
+#: src/libvlc-module.c:1314 modules/gui/qt4/ui/sprefs_interface.h:530
 msgid "Display playlist tree"
 msgstr "Показване на плейлиста в дървовиден изглед"
 
-#: src/libvlc-module.c:1309
+#: src/libvlc-module.c:1316
 msgid ""
 "The playlist can use a tree to categorize some items, like the contents of a "
 "directory."
@@ -3753,891 +3764,888 @@ msgstr ""
 "В плейлиста може да се използва дървовиден изглед, за категоризиране на "
 "някои елементи, като съдържанието на директория."
 
-#: src/libvlc-module.c:1318
+#: src/libvlc-module.c:1325
 msgid "These settings are the global VLC key bindings, known as \"hotkeys\"."
 msgstr ""
 "Тези настройки са глобални клавиши на VLC, известни като  \"клавишни "
 "комбинации\"."
 
-#: src/libvlc-module.c:1321 src/video_output/vout_intf.c:303
-#: modules/gui/macosx/MainMenu.m:300 modules/gui/macosx/MainMenu.m:367
-#: modules/gui/macosx/MainMenu.m:1217 modules/gui/macosx/MainMenu.m:1237
+#: src/libvlc-module.c:1328 src/video_output/vout_intf.c:303
+#: modules/gui/macosx/MainMenu.m:299 modules/gui/macosx/MainMenu.m:366
+#: modules/gui/macosx/MainMenu.m:1162 modules/gui/macosx/MainMenu.m:1182
 #: modules/gui/macosx/simple_prefs.m:294
 #: modules/gui/qt4/components/controller.hpp:111
 #: modules/gui/qt4/ui/sprefs_video.h:344
 msgid "Fullscreen"
 msgstr "На цял екран"
 
-#: src/libvlc-module.c:1322
+#: src/libvlc-module.c:1329
 msgid "Select the hotkey to use to swap fullscreen state."
 msgstr "Избор на клавишна комбинация за промяна на пълноекранния режим."
 
-#: src/libvlc-module.c:1323
+#: src/libvlc-module.c:1330
 msgid "Leave fullscreen"
 msgstr "Изход от цял екран"
 
-#: src/libvlc-module.c:1324
+#: src/libvlc-module.c:1331
 msgid "Select the hotkey to use to leave fullscreen state."
 msgstr "Избор на клавишна комбинация за изход от цял екран"
 
-#: src/libvlc-module.c:1325 modules/gui/macosx/MainWindow.m:113
+#: src/libvlc-module.c:1332 modules/gui/macosx/MainWindow.m:124
 msgid "Play/Pause"
 msgstr "Възпроизвеждане/Пауза"
 
-#: src/libvlc-module.c:1326
+#: src/libvlc-module.c:1333
 msgid "Select the hotkey to use to swap paused state."
 msgstr ""
 "Избор на клавишна комбинация за промяна на състоянието възпризвеждане/пауза."
 
-#: src/libvlc-module.c:1327
+#: src/libvlc-module.c:1334
 msgid "Pause only"
 msgstr "Само пауза"
 
-#: src/libvlc-module.c:1328
+#: src/libvlc-module.c:1335
 msgid "Select the hotkey to use to pause."
 msgstr "Избор на клавишна комбинация за пауза."
 
-#: src/libvlc-module.c:1329
+#: src/libvlc-module.c:1336
 msgid "Play only"
 msgstr "Само възпроизвеждане"
 
-#: src/libvlc-module.c:1330
+#: src/libvlc-module.c:1337
 msgid "Select the hotkey to use to play."
 msgstr "Избор на клавишна комбинация за възпроизвеждане."
 
-#: src/libvlc-module.c:1331 modules/gui/macosx/MainMenu.m:264
+#: src/libvlc-module.c:1338 modules/gui/macosx/MainMenu.m:263
 #: modules/gui/qt4/components/controller.hpp:111
 #: modules/gui/qt4/components/controller.hpp:121
 msgid "Faster"
 msgstr "По-бързо"
 
-#: src/libvlc-module.c:1332 src/libvlc-module.c:1338
+#: src/libvlc-module.c:1339 src/libvlc-module.c:1345
 msgid "Select the hotkey to use for fast forward playback."
 msgstr "Избор на клавишна комбинация за по-бързо въпроизвеждане."
 
-#: src/libvlc-module.c:1333 modules/gui/macosx/MainMenu.m:262
+#: src/libvlc-module.c:1340 modules/gui/macosx/MainMenu.m:261
 #: modules/gui/qt4/components/controller.hpp:111
 #: modules/gui/qt4/components/controller.hpp:121
 msgid "Slower"
 msgstr "По-бавно"
 
-#: src/libvlc-module.c:1334 src/libvlc-module.c:1340
+#: src/libvlc-module.c:1341 src/libvlc-module.c:1347
 msgid "Select the hotkey to use for slow motion playback."
 msgstr "Избор на клавишна комбинация за по-бавно възпроизвеждане."
 
-#: src/libvlc-module.c:1335
+#: src/libvlc-module.c:1342
 msgid "Normal rate"
 msgstr "Нормална скорост"
 
-#: src/libvlc-module.c:1336
+#: src/libvlc-module.c:1343
 msgid "Select the hotkey to set the playback rate back to normal."
 msgstr ""
 "Избор на клавишна комбинация за възстановяване на нормалната скорост на "
 "възпроизвеждане."
 
-#: src/libvlc-module.c:1337 modules/gui/qt4/menus.cpp:817
+#: src/libvlc-module.c:1344 modules/gui/qt4/menus.cpp:817
 msgid "Faster (fine)"
 msgstr "По-бързо (постепенно)"
 
-#: src/libvlc-module.c:1339 modules/gui/qt4/menus.cpp:825
+#: src/libvlc-module.c:1346 modules/gui/qt4/menus.cpp:825
 msgid "Slower (fine)"
 msgstr "По-бавно (постепенно)"
 
-#: src/libvlc-module.c:1341 modules/control/hotkeys.c:696
-#: modules/gui/macosx/about.m:223 modules/gui/macosx/MainMenu.m:267
-#: modules/gui/macosx/MainMenu.m:355 modules/gui/macosx/MainMenu.m:363
-#: modules/gui/macosx/MainMenu.m:1162 modules/gui/macosx/wizard.m:311
+#: src/libvlc-module.c:1348 modules/control/hotkeys.c:687
+#: modules/gui/macosx/about.m:223 modules/gui/macosx/MainMenu.m:266
+#: modules/gui/macosx/MainMenu.m:354 modules/gui/macosx/MainMenu.m:362
+#: modules/gui/macosx/MainMenu.m:1107 modules/gui/macosx/wizard.m:311
 #: modules/gui/macosx/wizard.m:323 modules/gui/macosx/wizard.m:1601
 #: modules/gui/qt4/components/controller.hpp:115 modules/notify/notify.c:341
 #: modules/gui/qt4/ui/sout.h:327 modules/gui/qt4/ui/sout.h:338
-#: modules/gui/qt4/ui/streampanel.h:182 share/lua/http/index.html:204
-#: share/lua/http/mobile.html:98
+#: modules/gui/qt4/ui/streampanel.h:182
 msgid "Next"
 msgstr "Следващ"
 
-#: src/libvlc-module.c:1342
+#: src/libvlc-module.c:1349
 msgid "Select the hotkey to use to skip to the next item in the playlist."
 msgstr ""
 "Избор на клавишна комбинация за избор на следващия елемент в плейлиста."
 
-#: src/libvlc-module.c:1343 modules/control/hotkeys.c:702
-#: modules/gui/macosx/about.m:224 modules/gui/macosx/MainMenu.m:266
-#: modules/gui/macosx/MainMenu.m:356 modules/gui/macosx/MainMenu.m:362
-#: modules/gui/macosx/MainMenu.m:1161
+#: src/libvlc-module.c:1350 modules/control/hotkeys.c:693
+#: modules/gui/macosx/about.m:224 modules/gui/macosx/MainMenu.m:265
+#: modules/gui/macosx/MainMenu.m:355 modules/gui/macosx/MainMenu.m:361
+#: modules/gui/macosx/MainMenu.m:1106
 #: modules/gui/qt4/components/controller.hpp:115 modules/notify/notify.c:339
 #: modules/gui/qt4/ui/sout.h:337 modules/gui/qt4/ui/sout.h:346
-#: share/lua/http/index.html:202 share/lua/http/mobile.html:96
 msgid "Previous"
 msgstr "Предишен"
 
-#: src/libvlc-module.c:1344
+#: src/libvlc-module.c:1351
 msgid "Select the hotkey to use to skip to the previous item in the playlist."
 msgstr ""
 "Избор на клавишна комбинация за избор на предишния елемент в плейлиста."
 
-#: src/libvlc-module.c:1345 modules/gui/macosx/MainMenu.m:257
-#: modules/gui/macosx/MainMenu.m:354 modules/gui/macosx/MainMenu.m:361
-#: modules/gui/macosx/MainMenu.m:1153 modules/gui/macosx/MainWindow.m:116
+#: src/libvlc-module.c:1352 modules/gui/macosx/MainMenu.m:256
+#: modules/gui/macosx/MainMenu.m:353 modules/gui/macosx/MainMenu.m:360
+#: modules/gui/macosx/MainMenu.m:1098 modules/gui/macosx/MainWindow.m:127
 #: modules/gui/qt4/components/controller.hpp:110
 #: modules/gui/qt4/dialogs/vlm.cpp:556 modules/notify/xosd.c:234
-#: modules/gui/qt4/ui/streampanel.h:181 share/lua/http/index.html:206
-#: share/lua/http/mobile.html:99 share/lua/http/dialogs/stream_window.html:58
+#: modules/gui/qt4/ui/streampanel.h:181
 msgid "Stop"
 msgstr "Спиране"
 
-#: src/libvlc-module.c:1346
+#: src/libvlc-module.c:1353
 msgid "Select the hotkey to stop playback."
 msgstr "Избор на клавишна комбинация за спиране на възпроизвеждането."
 
-#: src/libvlc-module.c:1347 modules/gui/fbosd.c:128 modules/gui/fbosd.c:196
+#: src/libvlc-module.c:1354 modules/gui/fbosd.c:128 modules/gui/fbosd.c:196
 #: modules/gui/macosx/bookmarks.m:93 modules/gui/macosx/bookmarks.m:102
-#: modules/gui/macosx/MainWindow.m:126 modules/gui/macosx/VideoEffects.m:146
+#: modules/gui/macosx/MainWindow.m:137 modules/gui/macosx/VideoEffects.m:146
 #: modules/video_filter/marq.c:157 modules/video_filter/rss.c:200
 #: modules/gui/qt4/ui/sprefs_subtitles.h:274
 #: modules/gui/qt4/ui/video_effects.h:1362
 msgid "Position"
 msgstr "Позиция"
 
-#: src/libvlc-module.c:1348
+#: src/libvlc-module.c:1355
 msgid "Select the hotkey to display the position."
 msgstr ""
 "Избор на клавишна комбинация за показване на позицията при възпроизвеждане."
 
-#: src/libvlc-module.c:1350
+#: src/libvlc-module.c:1357
 msgid "Very short backwards jump"
 msgstr "Много кратък преход назад"
 
-#: src/libvlc-module.c:1352
+#: src/libvlc-module.c:1359
 msgid "Select the hotkey to make a very short backwards jump."
 msgstr "Избор на клавишна комбинация за много краткия преход назад."
 
-#: src/libvlc-module.c:1353
+#: src/libvlc-module.c:1360
 msgid "Short backwards jump"
 msgstr "Кратък преход назад"
 
-#: src/libvlc-module.c:1355
+#: src/libvlc-module.c:1362
 msgid "Select the hotkey to make a short backwards jump."
 msgstr "Избор на клавишна комбинация за краткия преход назад."
 
-#: src/libvlc-module.c:1356
+#: src/libvlc-module.c:1363
 msgid "Medium backwards jump"
 msgstr "Среден преход назад"
 
-#: src/libvlc-module.c:1358
+#: src/libvlc-module.c:1365
 msgid "Select the hotkey to make a medium backwards jump."
 msgstr "Избор на клавишна комбинация за средния преход назад."
 
-#: src/libvlc-module.c:1359
+#: src/libvlc-module.c:1366
 msgid "Long backwards jump"
 msgstr "Дълъг преход назад"
 
-#: src/libvlc-module.c:1361
+#: src/libvlc-module.c:1368
 msgid "Select the hotkey to make a long backwards jump."
 msgstr "Избор на клавишна комбинация за дългия преход назад."
 
-#: src/libvlc-module.c:1363
+#: src/libvlc-module.c:1370
 msgid "Very short forward jump"
 msgstr "Много кратък преход напред"
 
-#: src/libvlc-module.c:1365
+#: src/libvlc-module.c:1372
 msgid "Select the hotkey to make a very short forward jump."
 msgstr "Избор на клавишна комбинация за много краткия преход напред."
 
-#: src/libvlc-module.c:1366
+#: src/libvlc-module.c:1373
 msgid "Short forward jump"
 msgstr "Кратък преход напред"
 
-#: src/libvlc-module.c:1368
+#: src/libvlc-module.c:1375
 msgid "Select the hotkey to make a short forward jump."
 msgstr "Избор на клавишна комбинация за краткия преход напред."
 
-#: src/libvlc-module.c:1369
+#: src/libvlc-module.c:1376
 msgid "Medium forward jump"
 msgstr "Среден преход напред"
 
-#: src/libvlc-module.c:1371
+#: src/libvlc-module.c:1378
 msgid "Select the hotkey to make a medium forward jump."
 msgstr "Избор на клавишна комбинация за средния преход напред."
 
-#: src/libvlc-module.c:1372
+#: src/libvlc-module.c:1379
 msgid "Long forward jump"
 msgstr "Дълъг преход напред"
 
-#: src/libvlc-module.c:1374
+#: src/libvlc-module.c:1381
 msgid "Select the hotkey to make a long forward jump."
 msgstr "Избор на клавишна комбинация за дългия преход напред."
 
-#: src/libvlc-module.c:1375 modules/control/hotkeys.c:713
+#: src/libvlc-module.c:1382 modules/control/hotkeys.c:704
 msgid "Next frame"
 msgstr "Следващ кадър"
 
-#: src/libvlc-module.c:1377
+#: src/libvlc-module.c:1384
 msgid "Select the hotkey to got to the next video frame."
 msgstr "Избор на клавишна комбинация за преминаване към следващия видео кадър."
 
-#: src/libvlc-module.c:1379
+#: src/libvlc-module.c:1386
 msgid "Very short jump length"
 msgstr "Дължина на много краткия преход"
 
-#: src/libvlc-module.c:1380
+#: src/libvlc-module.c:1387
 msgid "Very short jump length, in seconds."
 msgstr "Дължина на много краткия преход, в секунди."
 
-#: src/libvlc-module.c:1381
+#: src/libvlc-module.c:1388
 msgid "Short jump length"
 msgstr "Дължина на краткия преход"
 
-#: src/libvlc-module.c:1382
+#: src/libvlc-module.c:1389
 msgid "Short jump length, in seconds."
 msgstr "Дължина на краткия преход, в секунди."
 
-#: src/libvlc-module.c:1383
+#: src/libvlc-module.c:1390
 msgid "Medium jump length"
 msgstr "Дължина на средния преход"
 
-#: src/libvlc-module.c:1384
+#: src/libvlc-module.c:1391
 msgid "Medium jump length, in seconds."
 msgstr "Дължина на средния преход, в секунди."
 
-#: src/libvlc-module.c:1385
+#: src/libvlc-module.c:1392
 msgid "Long jump length"
 msgstr "Дължина на дългия преход"
 
-#: src/libvlc-module.c:1386
+#: src/libvlc-module.c:1393
 msgid "Long jump length, in seconds."
 msgstr "Дължина на дългия преход, в секунди."
 
-#: src/libvlc-module.c:1388 modules/control/hotkeys.c:183
+#: src/libvlc-module.c:1395 modules/control/hotkeys.c:183
 #: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/components/controller.hpp:126 modules/gui/qt4/menus.cpp:914
 #: modules/gui/skins2/commands/cmd_quit.cpp:44
 msgid "Quit"
 msgstr "Изход на VLC"
 
-#: src/libvlc-module.c:1389
+#: src/libvlc-module.c:1396
 msgid "Select the hotkey to quit the application."
 msgstr "Избор на клавишна комбинация за изход на програмата."
 
-#: src/libvlc-module.c:1390
+#: src/libvlc-module.c:1397
 msgid "Navigate up"
 msgstr "Навигация нагоре в DVD менюто"
 
-#: src/libvlc-module.c:1391
+#: src/libvlc-module.c:1398
 msgid "Select the key to move the selector up in DVD menus."
 msgstr ""
 "Избор на клавишна комбинация за навигация на селектора нагоре в DVD менюто."
 
-#: src/libvlc-module.c:1392
+#: src/libvlc-module.c:1399
 msgid "Navigate down"
 msgstr "Навигация надолу в DVD менюто"
 
-#: src/libvlc-module.c:1393
+#: src/libvlc-module.c:1400
 msgid "Select the key to move the selector down in DVD menus."
 msgstr ""
 "Избор на клавишна комбинация за навигация на селектора надолу в DVD менюто."
 
-#: src/libvlc-module.c:1394
+#: src/libvlc-module.c:1401
 msgid "Navigate left"
 msgstr "Навигация наляво в DVD менюто"
 
-#: src/libvlc-module.c:1395
+#: src/libvlc-module.c:1402
 msgid "Select the key to move the selector left in DVD menus."
 msgstr ""
 "Избор на клавишна комбинация за навигация на селектора наляво в DVD менюто."
 
-#: src/libvlc-module.c:1396
+#: src/libvlc-module.c:1403
 msgid "Navigate right"
 msgstr "Навигация надясно в DVD менюто"
 
-#: src/libvlc-module.c:1397
+#: src/libvlc-module.c:1404
 msgid "Select the key to move the selector right in DVD menus."
 msgstr ""
 "Избор на клавишна комбинация за навигация на селектора надясно в DVD менюто."
 
-#: src/libvlc-module.c:1398
+#: src/libvlc-module.c:1405
 msgid "Activate"
 msgstr "Активиране на избраното"
 
-#: src/libvlc-module.c:1399
+#: src/libvlc-module.c:1406
 msgid "Select the key to activate selected item in DVD menus."
 msgstr ""
 "Избор на клавишна комбинация за активиране на избрания елемент в DVD менюто."
 
-#: src/libvlc-module.c:1400 modules/gui/qt4/dialogs/toolbar.cpp:385
+#: src/libvlc-module.c:1407 modules/gui/qt4/dialogs/toolbar.cpp:390
 msgid "Go to the DVD menu"
 msgstr "Преминаване към DVD менюто"
 
-#: src/libvlc-module.c:1401
+#: src/libvlc-module.c:1408
 msgid "Select the key to take you to the DVD menu"
 msgstr "Избор на клавишна комбинация за показване на DVD менюто."
 
-#: src/libvlc-module.c:1402
+#: src/libvlc-module.c:1409
 msgid "Select previous DVD title"
 msgstr "Избиране на предишното DVD заглавие"
 
-#: src/libvlc-module.c:1403
+#: src/libvlc-module.c:1410
 msgid "Select the key to choose the previous title from the DVD"
 msgstr "Избор на клавишна комбинация за избор на предишно заглавие от DVD-то."
 
-#: src/libvlc-module.c:1404
+#: src/libvlc-module.c:1411
 msgid "Select next DVD title"
 msgstr "Избиране на следващото DVD заглавие"
 
-#: src/libvlc-module.c:1405
+#: src/libvlc-module.c:1412
 msgid "Select the key to choose the next title from the DVD"
 msgstr "Избор на клавишна комбинация за избор на следващо заглавие от DVD-то."
 
-#: src/libvlc-module.c:1406
+#: src/libvlc-module.c:1413
 msgid "Select prev DVD chapter"
 msgstr "Избиране на предишната DVD глава"
 
-#: src/libvlc-module.c:1407
+#: src/libvlc-module.c:1414
 msgid "Select the key to choose the previous chapter from the DVD"
 msgstr "Избор на клавишна комбинация за избор на предишна глава от DVD-то."
 
-#: src/libvlc-module.c:1408
+#: src/libvlc-module.c:1415
 msgid "Select next DVD chapter"
 msgstr "Избиране на следващата DVD глава"
 
-#: src/libvlc-module.c:1409
+#: src/libvlc-module.c:1416
 msgid "Select the key to choose the next chapter from the DVD"
 msgstr "Избор на клавишна комбинация за избор на следваща глава от DVD-то."
 
-#: src/libvlc-module.c:1410
+#: src/libvlc-module.c:1417
 msgid "Volume up"
 msgstr "Звук - Увеличаване"
 
-#: src/libvlc-module.c:1411
+#: src/libvlc-module.c:1418
 msgid "Select the key to increase audio volume."
 msgstr "Избор на клавишна комбинация за увеличаване на звука."
 
-#: src/libvlc-module.c:1412
+#: src/libvlc-module.c:1419
 msgid "Volume down"
 msgstr "Звук - Намаляване"
 
-#: src/libvlc-module.c:1413
+#: src/libvlc-module.c:1420
 msgid "Select the key to decrease audio volume."
 msgstr "Избор на клавишна комбинация за намаляване на звука."
 
-#: src/libvlc-module.c:1414 modules/access/v4l2/video.c:189
-#: modules/gui/macosx/MainMenu.m:285 modules/gui/macosx/MainMenu.m:357
-#: modules/gui/macosx/MainMenu.m:366 modules/gui/macosx/MainMenu.m:1207
-#: modules/gui/macosx/MainWindow.m:124 modules/gui/qt4/menus.cpp:578
+#: src/libvlc-module.c:1421 modules/access/v4l2/video.c:189
+#: modules/gui/macosx/MainMenu.m:284 modules/gui/macosx/MainMenu.m:356
+#: modules/gui/macosx/MainMenu.m:365 modules/gui/macosx/MainMenu.m:1152
+#: modules/gui/macosx/MainWindow.m:135 modules/gui/qt4/menus.cpp:578
 msgid "Mute"
 msgstr "Изключване на звука"
 
-#: src/libvlc-module.c:1415
+#: src/libvlc-module.c:1422
 msgid "Select the key to mute audio."
 msgstr "Избор на клавишна комбинация за изключване на звука."
 
-#: src/libvlc-module.c:1416
+#: src/libvlc-module.c:1423
 msgid "Subtitle delay up"
 msgstr "Увеличаване задържането на субтитрите"
 
-#: src/libvlc-module.c:1417
+#: src/libvlc-module.c:1424
 msgid "Select the key to increase the subtitle delay."
 msgstr "Избор на клавишна комбинация за увеличаване задържането на субтитрите."
 
-#: src/libvlc-module.c:1418
+#: src/libvlc-module.c:1425
 msgid "Subtitle delay down"
 msgstr "Намаляване задържането на субтитрите"
 
-#: src/libvlc-module.c:1419
+#: src/libvlc-module.c:1426
 msgid "Select the key to decrease the subtitle delay."
 msgstr "Избор на клавишна комбинация за намаляване задържането на субтитрите."
 
-#: src/libvlc-module.c:1420
+#: src/libvlc-module.c:1427
 msgid "Subtitle position up"
 msgstr "Позиция нагоре на субтитрите"
 
-#: src/libvlc-module.c:1421
+#: src/libvlc-module.c:1428
 msgid "Select the key to move subtitles higher."
 msgstr "Избор на клавишна комбинация за изместване на субтитрите нагоре."
 
-#: src/libvlc-module.c:1422
+#: src/libvlc-module.c:1429
 msgid "Subtitle position down"
 msgstr "Позиция надолу на субтитрите"
 
-#: src/libvlc-module.c:1423
+#: src/libvlc-module.c:1430
 msgid "Select the key to move subtitles lower."
 msgstr "Избор на клавишна комбинация за изместване на субтитрите надолу."
 
-#: src/libvlc-module.c:1424
+#: src/libvlc-module.c:1431
 msgid "Audio delay up"
 msgstr "Увеличаване задържането на аудиото"
 
-#: src/libvlc-module.c:1425
+#: src/libvlc-module.c:1432
 msgid "Select the key to increase the audio delay."
 msgstr "Избор на клавиш за увеличаване задържането на аудиото."
 
-#: src/libvlc-module.c:1426
+#: src/libvlc-module.c:1433
 msgid "Audio delay down"
 msgstr "Намаляване задържането на аудиото"
 
-#: src/libvlc-module.c:1427
+#: src/libvlc-module.c:1434
 msgid "Select the key to decrease the audio delay."
 msgstr "Изберете клавиш за намаляване на задържането на аудиото."
 
-#: src/libvlc-module.c:1434
+#: src/libvlc-module.c:1441
 msgid "Play playlist bookmark 1"
 msgstr "Възпроизвеждане на отметка 1"
 
-#: src/libvlc-module.c:1435
+#: src/libvlc-module.c:1442
 msgid "Play playlist bookmark 2"
 msgstr "Възпроизвеждане на отметка 2"
 
-#: src/libvlc-module.c:1436
+#: src/libvlc-module.c:1443
 msgid "Play playlist bookmark 3"
 msgstr "Възпроизвеждане на отметка 3"
 
-#: src/libvlc-module.c:1437
+#: src/libvlc-module.c:1444
 msgid "Play playlist bookmark 4"
 msgstr "Възпроизвеждане на отметка 4"
 
-#: src/libvlc-module.c:1438
+#: src/libvlc-module.c:1445
 msgid "Play playlist bookmark 5"
 msgstr "Възпроизвеждане на отметка 5"
 
-#: src/libvlc-module.c:1439
+#: src/libvlc-module.c:1446
 msgid "Play playlist bookmark 6"
 msgstr "Възпроизвеждане на отметка 6"
 
-#: src/libvlc-module.c:1440
+#: src/libvlc-module.c:1447
 msgid "Play playlist bookmark 7"
 msgstr "Възпроизвеждане на отметка 7"
 
-#: src/libvlc-module.c:1441
+#: src/libvlc-module.c:1448
 msgid "Play playlist bookmark 8"
 msgstr "Възпроизвеждане на отметка 8"
 
-#: src/libvlc-module.c:1442
+#: src/libvlc-module.c:1449
 msgid "Play playlist bookmark 9"
 msgstr "Възпроизвеждане на отметка 9"
 
-#: src/libvlc-module.c:1443
+#: src/libvlc-module.c:1450
 msgid "Play playlist bookmark 10"
 msgstr "Възпроизвеждане на отметка 10"
 
-#: src/libvlc-module.c:1444
+#: src/libvlc-module.c:1451
 msgid "Select the key to play this bookmark."
 msgstr "Избор на клавишна комбинация за възпроизвеждане на тази отметка."
 
-#: src/libvlc-module.c:1445
+#: src/libvlc-module.c:1452
 msgid "Set playlist bookmark 1"
 msgstr "Настройка на отметка 1"
 
-#: src/libvlc-module.c:1446
+#: src/libvlc-module.c:1453
 msgid "Set playlist bookmark 2"
 msgstr "Настройка на отметка 2"
 
-#: src/libvlc-module.c:1447
+#: src/libvlc-module.c:1454
 msgid "Set playlist bookmark 3"
 msgstr "Настройка на отметка 3"
 
-#: src/libvlc-module.c:1448
+#: src/libvlc-module.c:1455
 msgid "Set playlist bookmark 4"
 msgstr "Настройка на отметка 4"
 
-#: src/libvlc-module.c:1449
+#: src/libvlc-module.c:1456
 msgid "Set playlist bookmark 5"
 msgstr "Настройка на отметка 5"
 
-#: src/libvlc-module.c:1450
+#: src/libvlc-module.c:1457
 msgid "Set playlist bookmark 6"
 msgstr "Настройка на отметка 6"
 
-#: src/libvlc-module.c:1451
+#: src/libvlc-module.c:1458
 msgid "Set playlist bookmark 7"
 msgstr "Настройка на отметка 7"
 
-#: src/libvlc-module.c:1452
+#: src/libvlc-module.c:1459
 msgid "Set playlist bookmark 8"
 msgstr "Настройка на отметка 8"
 
-#: src/libvlc-module.c:1453
+#: src/libvlc-module.c:1460
 msgid "Set playlist bookmark 9"
 msgstr "Настройка на отметка 9"
 
-#: src/libvlc-module.c:1454
+#: src/libvlc-module.c:1461
 msgid "Set playlist bookmark 10"
 msgstr "Настройка на отметка 10"
 
-#: src/libvlc-module.c:1455
+#: src/libvlc-module.c:1462
 msgid "Select the key to set this playlist bookmark."
 msgstr ""
 "Избор на клавишна комбинация за добавяне на тази отметка в списъка с отметки."
 
-#: src/libvlc-module.c:1457
+#: src/libvlc-module.c:1464
 msgid "Playlist bookmark 1"
 msgstr "Задаване на отметка 1"
 
-#: src/libvlc-module.c:1458
+#: src/libvlc-module.c:1465
 msgid "Playlist bookmark 2"
 msgstr "Задаване на отметка 2"
 
-#: src/libvlc-module.c:1459
+#: src/libvlc-module.c:1466
 msgid "Playlist bookmark 3"
 msgstr "Задаване на отметка 3"
 
-#: src/libvlc-module.c:1460
+#: src/libvlc-module.c:1467
 msgid "Playlist bookmark 4"
 msgstr "Задаване на отметка 4"
 
-#: src/libvlc-module.c:1461
+#: src/libvlc-module.c:1468
 msgid "Playlist bookmark 5"
 msgstr "Задаване на отметка 5"
 
-#: src/libvlc-module.c:1462
+#: src/libvlc-module.c:1469
 msgid "Playlist bookmark 6"
 msgstr "Задаване на отметка 6"
 
-#: src/libvlc-module.c:1463
+#: src/libvlc-module.c:1470
 msgid "Playlist bookmark 7"
 msgstr "Задаване на отметка 7"
 
-#: src/libvlc-module.c:1464
+#: src/libvlc-module.c:1471
 msgid "Playlist bookmark 8"
 msgstr "Задаване на отметка 8"
 
-#: src/libvlc-module.c:1465
+#: src/libvlc-module.c:1472
 msgid "Playlist bookmark 9"
 msgstr "Задаване на отметка 9"
 
-#: src/libvlc-module.c:1466
+#: src/libvlc-module.c:1473
 msgid "Playlist bookmark 10"
 msgstr "Задаване на отметка 10"
 
-#: src/libvlc-module.c:1468
+#: src/libvlc-module.c:1475
 msgid "This allows you to define playlist bookmarks."
 msgstr "Задаване на отметка в списъка с отметки."
 
-#: src/libvlc-module.c:1470
+#: src/libvlc-module.c:1477
 msgid "Cycle audio track"
 msgstr "Превключване на аудио пътечка"
 
-#: src/libvlc-module.c:1471
+#: src/libvlc-module.c:1478
 msgid "Cycle through the available audio tracks(languages)."
 msgstr "Превключване между наличните аудио пътечки (езици)."
 
-#: src/libvlc-module.c:1472
+#: src/libvlc-module.c:1479
 msgid "Cycle subtitle track"
 msgstr "Превключване на пътечка със субтитри"
 
-#: src/libvlc-module.c:1473
+#: src/libvlc-module.c:1480
 msgid "Cycle through the available subtitle tracks."
 msgstr "Превключване между наличните пътечки със субтитри."
 
-#: src/libvlc-module.c:1474
+#: src/libvlc-module.c:1481
 msgid "Cycle source aspect ratio"
 msgstr "Превключване на пропорцията"
 
-#: src/libvlc-module.c:1475
+#: src/libvlc-module.c:1482
 msgid "Cycle through a predefined list of source aspect ratios."
 msgstr "Превключване между пропорциите от зададения списък."
 
-#: src/libvlc-module.c:1476
+#: src/libvlc-module.c:1483
 msgid "Cycle video crop"
 msgstr "Превключване изрязването на видеото"
 
-#: src/libvlc-module.c:1477
+#: src/libvlc-module.c:1484
 msgid "Cycle through a predefined list of crop formats."
 msgstr "Превключване между форматите за изрязване от зададения списък."
 
-#: src/libvlc-module.c:1478
+#: src/libvlc-module.c:1485
 msgid "Toggle autoscaling"
 msgstr "Превключване на автоматичното мащабиране"
 
-#: src/libvlc-module.c:1479
+#: src/libvlc-module.c:1486
 msgid "Activate or deactivate autoscaling."
 msgstr "Активиране или деактивиране на автоматичното мащабиране"
 
-#: src/libvlc-module.c:1480
+#: src/libvlc-module.c:1487
 msgid "Increase scale factor"
 msgstr "Увеличаване коефицента на мащабиране"
 
-#: src/libvlc-module.c:1481
+#: src/libvlc-module.c:1488
 msgid "Increase scale factor."
 msgstr "Increase scale factor."
 
-#: src/libvlc-module.c:1482
+#: src/libvlc-module.c:1489
 msgid "Decrease scale factor"
 msgstr "Намаляване коефицента на мащабиране"
 
-#: src/libvlc-module.c:1483
+#: src/libvlc-module.c:1490
 msgid "Decrease scale factor."
 msgstr "Намаляване коефицента на мащабиране."
 
-#: src/libvlc-module.c:1484
+#: src/libvlc-module.c:1491
 msgid "Cycle deinterlace modes"
 msgstr "Превключване на деинтерлейса"
 
-#: src/libvlc-module.c:1485
+#: src/libvlc-module.c:1492
 msgid "Cycle through deinterlace modes."
 msgstr "Превключване на деинтерлейс методите"
 
-#: src/libvlc-module.c:1486
+#: src/libvlc-module.c:1493
 msgid "Show controller in fullscreen"
 msgstr "Показване на панела с регулатори, когато е на цял екран"
 
-#: src/libvlc-module.c:1487
+#: src/libvlc-module.c:1494
 msgid "Show interface"
 msgstr "Показване на интерфейса"
 
-#: src/libvlc-module.c:1488
+#: src/libvlc-module.c:1495
 msgid "Raise the interface above all other windows."
 msgstr "Поставяне на интерфейса най-отгоре над всички други прозорци."
 
-#: src/libvlc-module.c:1489
+#: src/libvlc-module.c:1496
 msgid "Hide interface"
 msgstr "Скриване на интерфейса"
 
-#: src/libvlc-module.c:1490
+#: src/libvlc-module.c:1497
 msgid "Lower the interface below all other windows."
 msgstr "Поставяне на интерфейса под всички други прозорци."
 
-#: src/libvlc-module.c:1491
+#: src/libvlc-module.c:1498
 msgid "Boss key"
 msgstr "Главни клавиши"
 
-#: src/libvlc-module.c:1492
+#: src/libvlc-module.c:1499
 msgid "Hide the interface and pause playback."
 msgstr "Скриване на интерфейса и пауза на възпроизвеждането."
 
-#: src/libvlc-module.c:1493
+#: src/libvlc-module.c:1500
 msgid "Take video snapshot"
 msgstr "Снимане на кадъра"
 
-#: src/libvlc-module.c:1494
+#: src/libvlc-module.c:1501
 msgid "Takes a video snapshot and writes it to disk."
 msgstr "Снимане на кадъра и записване на диска."
 
-#: src/libvlc-module.c:1496 modules/gui/macosx/MainMenu.m:258
+#: src/libvlc-module.c:1503 modules/gui/macosx/MainMenu.m:257
 #: modules/gui/qt4/components/controller.hpp:113
 #: modules/gui/qt4/components/controller.hpp:124
 #: modules/stream_out/record.c:60
 msgid "Record"
 msgstr "Запис"
 
-#: src/libvlc-module.c:1497
+#: src/libvlc-module.c:1504
 msgid "Record access filter start/stop."
 msgstr "Филтър за запис старт/стоп."
 
-#: src/libvlc-module.c:1499
+#: src/libvlc-module.c:1506
 msgid "Normal/Repeat/Loop"
 msgstr "Без повторение/Повторение/Повторение на всички"
 
-#: src/libvlc-module.c:1500
+#: src/libvlc-module.c:1507
 msgid "Toggle Normal/Repeat/Loop playlist modes"
 msgstr ""
 "Превключване между режимите на плейлиста: Нормалek/Повторение на един/"
 "Повторение на всички"
 
-#: src/libvlc-module.c:1503
+#: src/libvlc-module.c:1510
 msgid "Toggle random playlist playback"
 msgstr "Превключване на разбърканото възпроизвеждане на плейлиста"
 
-#: src/libvlc-module.c:1508 src/libvlc-module.c:1509
+#: src/libvlc-module.c:1515 src/libvlc-module.c:1516
 msgid "Un-Zoom"
 msgstr "Възстановяване на мащаба"
 
-#: src/libvlc-module.c:1511 src/libvlc-module.c:1512
+#: src/libvlc-module.c:1518 src/libvlc-module.c:1519
 msgid "Crop one pixel from the top of the video"
 msgstr "Изрязване на един пиксел отгоре на видеото"
 
-#: src/libvlc-module.c:1513 src/libvlc-module.c:1514
+#: src/libvlc-module.c:1520 src/libvlc-module.c:1521
 msgid "Uncrop one pixel from the top of the video"
 msgstr "Възстановяване на един пиксел отгоре на видеото"
 
-#: src/libvlc-module.c:1516 src/libvlc-module.c:1517
+#: src/libvlc-module.c:1523 src/libvlc-module.c:1524
 msgid "Crop one pixel from the left of the video"
 msgstr "Изрязване на един пиксел отляво на видеото"
 
-#: src/libvlc-module.c:1518 src/libvlc-module.c:1519
+#: src/libvlc-module.c:1525 src/libvlc-module.c:1526
 msgid "Uncrop one pixel from the left of the video"
 msgstr "Възстановяване на един пиксел отляво на видеото"
 
-#: src/libvlc-module.c:1521 src/libvlc-module.c:1522
+#: src/libvlc-module.c:1528 src/libvlc-module.c:1529
 msgid "Crop one pixel from the bottom of the video"
 msgstr "Изрязване на един пиксел отдолу на видеото"
 
-#: src/libvlc-module.c:1523 src/libvlc-module.c:1524
+#: src/libvlc-module.c:1530 src/libvlc-module.c:1531
 msgid "Uncrop one pixel from the bottom of the video"
 msgstr "Възстановяване на един пиксел отдолу на видеото"
 
-#: src/libvlc-module.c:1526 src/libvlc-module.c:1527
+#: src/libvlc-module.c:1533 src/libvlc-module.c:1534
 msgid "Crop one pixel from the right of the video"
 msgstr "Изрязване на един пиксел отдясно на видеото"
 
-#: src/libvlc-module.c:1528 src/libvlc-module.c:1529
+#: src/libvlc-module.c:1535 src/libvlc-module.c:1536
 msgid "Uncrop one pixel from the right of the video"
 msgstr "Възстановяване на един пиксел отдясно на видеото"
 
-#: src/libvlc-module.c:1531
+#: src/libvlc-module.c:1538
 msgid "Toggle wallpaper mode in video output"
 msgstr "Възпроизвеждане на десктоп"
 
-#: src/libvlc-module.c:1533
+#: src/libvlc-module.c:1540
 msgid "Toggle wallpaper mode in video output."
 msgstr "Превключване на режима възпроизвеждане на десктоп при видео извеждане."
 
-#: src/libvlc-module.c:1535 src/libvlc-module.c:1536
+#: src/libvlc-module.c:1542 src/libvlc-module.c:1543
 msgid "Display OSD menu on top of video output"
 msgstr "Показване на екранно меню върху видеото"
 
-#: src/libvlc-module.c:1537
+#: src/libvlc-module.c:1544
 msgid "Do not display OSD menu on video output"
 msgstr "Скриване на екранното меню от видеото"
 
-#: src/libvlc-module.c:1538
+#: src/libvlc-module.c:1545
 msgid "Do not display OSD menu on top of video output"
 msgstr "Скриване на екранното меню от видеото"
 
-#: src/libvlc-module.c:1539
+#: src/libvlc-module.c:1546
 msgid "Highlight widget on the right"
 msgstr "Маркиране на елемента отдясно в екранното меню"
 
-#: src/libvlc-module.c:1541
+#: src/libvlc-module.c:1548
 msgid "Move OSD menu highlight to the widget on the right"
 msgstr "Маркиране на елемента отдясно в екранното меню"
 
-#: src/libvlc-module.c:1542
+#: src/libvlc-module.c:1549
 msgid "Highlight widget on the left"
 msgstr "Маркиране на елемента отляво в екранното меню"
 
-#: src/libvlc-module.c:1544
+#: src/libvlc-module.c:1551
 msgid "Move OSD menu highlight to the widget on the left"
 msgstr "Маркиране на елемента отляво в екранното меню"
 
-#: src/libvlc-module.c:1545
+#: src/libvlc-module.c:1552
 msgid "Highlight widget on top"
 msgstr "Маркиране на елемента отгоре в екранното меню"
 
-#: src/libvlc-module.c:1547
+#: src/libvlc-module.c:1554
 msgid "Move OSD menu highlight to the widget on top"
 msgstr "Маркиране на елемента отгоре в екранното меню"
 
-#: src/libvlc-module.c:1548
+#: src/libvlc-module.c:1555
 msgid "Highlight widget below"
 msgstr "Маркиране на елемента отдолу в екранното меню"
 
-#: src/libvlc-module.c:1550
+#: src/libvlc-module.c:1557
 msgid "Move OSD menu highlight to the widget below"
 msgstr "Маркиране на елемента отдолу в екранното меню"
 
-#: src/libvlc-module.c:1551
+#: src/libvlc-module.c:1558
 msgid "Select current widget"
 msgstr "Избор на текущия елемент в екранното меню"
 
-#: src/libvlc-module.c:1553
+#: src/libvlc-module.c:1560
 msgid "Selecting current widget performs the associated action."
 msgstr "Избор на текущия елемент изпълняващ асоциираното действие."
 
-#: src/libvlc-module.c:1555
+#: src/libvlc-module.c:1562
 msgid "Cycle through audio devices"
 msgstr "Превключване между аудио устройствата"
 
-#: src/libvlc-module.c:1556
+#: src/libvlc-module.c:1563
 msgid "Cycle through available audio devices"
 msgstr "Превключване между наличните аудио устройства"
 
-#: src/libvlc-module.c:1687 src/video_output/vout_intf.c:309
-#: modules/gui/macosx/MainMenu.m:302 modules/gui/macosx/MainMenu.m:368
-#: modules/gui/macosx/MainMenu.m:1216
+#: src/libvlc-module.c:1694 src/video_output/vout_intf.c:309
+#: modules/gui/macosx/MainMenu.m:301 modules/gui/macosx/MainMenu.m:367
+#: modules/gui/macosx/MainMenu.m:1161
 #: modules/gui/qt4/components/controller.hpp:112
 msgid "Snapshot"
 msgstr "Снимане на кадър"
 
-#: src/libvlc-module.c:1704
+#: src/libvlc-module.c:1711
 msgid "Window properties"
 msgstr "Настройки на прозореца"
 
-#: src/libvlc-module.c:1762
+#: src/libvlc-module.c:1769
 msgid "Subpictures"
 msgstr "Слоеве"
 
-#: src/libvlc-module.c:1770 modules/codec/subsdec.c:177
+#: src/libvlc-module.c:1777 modules/codec/subsdec.c:177
 #: modules/demux/kate_categories.c:41 modules/demux/kate_categories.c:54
 #: modules/demux/subtitle.c:73 share/lua/http/dialogs/create_stream.html:153
 #: modules/gui/qt4/ui/profiles.h:502 modules/gui/qt4/ui/profiles.h:504
 msgid "Subtitles"
 msgstr "Субтитри"
 
-#: src/libvlc-module.c:1787 modules/stream_out/transcode/transcode.c:115
+#: src/libvlc-module.c:1794 modules/stream_out/transcode/transcode.c:115
 msgid "Overlays"
 msgstr "Слоеве"
 
-#: src/libvlc-module.c:1797
+#: src/libvlc-module.c:1804
 msgid "Track settings"
 msgstr "Настройки на пътечка"
 
-#: src/libvlc-module.c:1829
+#: src/libvlc-module.c:1836
 msgid "Playback control"
 msgstr "Управление на възпроизвеждането"
 
-#: src/libvlc-module.c:1857
+#: src/libvlc-module.c:1864
 msgid "Default devices"
 msgstr "Устройства по подразбиране"
 
-#: src/libvlc-module.c:1866
+#: src/libvlc-module.c:1873
 msgid "Network settings"
 msgstr "Настройки на мрежата"
 
-#: src/libvlc-module.c:1891
+#: src/libvlc-module.c:1898
 msgid "Socks proxy"
 msgstr "Socks прокси сървър"
 
-#: src/libvlc-module.c:1900 modules/demux/kate_categories.c:47
+#: src/libvlc-module.c:1907 modules/demux/kate_categories.c:47
 msgid "Metadata"
 msgstr "Мета-данни"
 
-#: src/libvlc-module.c:2000
+#: src/libvlc-module.c:2007
 msgid "Decoders"
 msgstr "Декодери"
 
-#: src/libvlc-module.c:2007 modules/access/v4l2/video.c:69
+#: src/libvlc-module.c:2014 modules/access/v4l2/video.c:69
 #: modules/gui/macosx/playlistinfo.m:100
 msgid "Input"
 msgstr "Въвеждане"
 
-#: src/libvlc-module.c:2043
+#: src/libvlc-module.c:2050
 msgid "VLM"
 msgstr ""
 
-#: src/libvlc-module.c:2073
+#: src/libvlc-module.c:2080
 msgid "CPU"
 msgstr ""
 
-#: src/libvlc-module.c:2092
+#: src/libvlc-module.c:2099
 msgid "Special modules"
 msgstr "Специални модули"
 
-#: src/libvlc-module.c:2098 modules/gui/qt4/dialogs/plugins.cpp:70
+#: src/libvlc-module.c:2105 modules/gui/qt4/dialogs/plugins.cpp:70
 msgid "Plugins"
 msgstr "Плъгини"
 
-#: src/libvlc-module.c:2105
+#: src/libvlc-module.c:2112
 msgid "Performance options"
 msgstr "Настройки на производителността"
 
-#: src/libvlc-module.c:2234
+#: src/libvlc-module.c:2241
 msgid "Hot keys"
 msgstr "Клавишни комбинации"
 
-#: src/libvlc-module.c:2665
+#: src/libvlc-module.c:2672
 msgid "Jump sizes"
 msgstr "Размери на преходите"
 
-#: src/libvlc-module.c:2742
+#: src/libvlc-module.c:2749
 msgid "print help for VLC (can be combined with --advanced and --help-verbose)"
 msgstr ""
 "показване на помощ за VLC (може да се комбинира с --advanced and --help-"
 "verbose)"
 
-#: src/libvlc-module.c:2745
+#: src/libvlc-module.c:2752
 msgid "Exhaustive help for VLC and its modules"
 msgstr "Изчерпателна помощ за VLC и неговите модули"
 
-#: src/libvlc-module.c:2747
+#: src/libvlc-module.c:2754
 msgid ""
 "print help for VLC and all its modules (can be combined with --advanced and "
 "--help-verbose)"
@@ -4645,19 +4653,19 @@ msgstr ""
 "показване на помощ за VLC и всички негови модули (може да се комбинира с --"
 "advanced and --help-verbose)"
 
-#: src/libvlc-module.c:2750
+#: src/libvlc-module.c:2757
 msgid "ask for extra verbosity when displaying help"
 msgstr "искане за допълнителни обяснения, когато се показва помощ"
 
-#: src/libvlc-module.c:2752
+#: src/libvlc-module.c:2759
 msgid "print a list of available modules"
 msgstr "показване на списък с наличните модули"
 
-#: src/libvlc-module.c:2754
+#: src/libvlc-module.c:2761
 msgid "print a list of available modules with extra detail"
 msgstr "показване на списък на наличните модули с допълнителни подробности"
 
-#: src/libvlc-module.c:2756
+#: src/libvlc-module.c:2763
 msgid ""
 "print help on a specific module (can be combined with --advanced and --help-"
 "verbose). Prefix the module name with = for strict matches."
@@ -4666,29 +4674,29 @@ msgstr ""
 "and --help-verbose). Поставете представката = пред името на модула за точно "
 "съвпадение."
 
-#: src/libvlc-module.c:2760
+#: src/libvlc-module.c:2767
 msgid "no configuration option will be loaded nor saved to config file"
 msgstr ""
 "Няма да бъдат заредени конфигурационни опции, тъй като не са записани в "
 "конфигурационния файл"
 
-#: src/libvlc-module.c:2762
+#: src/libvlc-module.c:2769
 msgid "reset the current config to the default values"
 msgstr "Възстановяване на текущата конфигурация към стандартните стойности"
 
-#: src/libvlc-module.c:2764
+#: src/libvlc-module.c:2771
 msgid "use alternate config file"
 msgstr "използване на алтернативен конфигурационен файл"
 
-#: src/libvlc-module.c:2766
+#: src/libvlc-module.c:2773
 msgid "resets the current plugins cache"
 msgstr "нулиране на кеша за текущите плъгини"
 
-#: src/libvlc-module.c:2768
+#: src/libvlc-module.c:2775
 msgid "print version information"
 msgstr "показване на информация за версията"
 
-#: src/libvlc-module.c:2806
+#: src/libvlc-module.c:2813
 msgid "main program"
 msgstr "основна програма"
 
@@ -4743,13 +4751,8 @@ msgstr "Изтегляне ..."
 #: modules/gui/macosx/simple_prefs.m:307 modules/gui/macosx/simple_prefs.m:692
 #: modules/gui/macosx/wizard.m:322
 #: modules/gui/qt4/components/open_panels.cpp:1281
-#: modules/gui/qt4/components/preferences_widgets.cpp:1515
+#: modules/gui/qt4/components/preferences_widgets.cpp:1536
 #: modules/gui/qt4/components/sout/profile_selector.cpp:253
-#: share/lua/http/dialogs/create_stream.html:83
-#: share/lua/http/dialogs/mosaic_window.html:15
-#: share/lua/http/dialogs/batch_window.html:18
-#: share/lua/http/dialogs/stream_config_window.html:14
-#: share/lua/http/dialogs/browse_window.html:28
 msgid "Cancel"
 msgstr "Отказ"
 
@@ -5496,20 +5499,20 @@ msgstr ""
 msgid "Zulu"
 msgstr ""
 
-#: src/video_output/postprocessing.c:87 modules/gui/macosx/MainMenu.m:318
-#: modules/gui/macosx/MainMenu.m:319 modules/video_filter/postproc.c:194
+#: src/video_output/postprocessing.c:87 modules/gui/macosx/MainMenu.m:317
+#: modules/gui/macosx/MainMenu.m:318 modules/video_filter/postproc.c:194
 msgid "Post processing"
 msgstr "Допълнителна обработка"
 
-#: src/video_output/vout_intf.c:215 modules/gui/macosx/MainMenu.m:307
-#: modules/gui/macosx/MainMenu.m:308 modules/gui/macosx/VideoEffects.m:69
+#: src/video_output/vout_intf.c:215 modules/gui/macosx/MainMenu.m:306
+#: modules/gui/macosx/MainMenu.m:307 modules/gui/macosx/VideoEffects.m:69
 #: modules/video_filter/crop.c:105 modules/video_filter/croppadd.c:86
 #: modules/gui/qt4/ui/video_effects.h:1321
 msgid "Crop"
 msgstr "Изрязване"
 
-#: src/video_output/vout_intf.c:249 modules/gui/macosx/MainMenu.m:305
-#: modules/gui/macosx/MainMenu.m:306 modules/gui/macosx/MainMenu.m:981
+#: src/video_output/vout_intf.c:249 modules/gui/macosx/MainMenu.m:304
+#: modules/gui/macosx/MainMenu.m:305 modules/gui/macosx/MainMenu.m:974
 msgid "Aspect-ratio"
 msgstr "Пропорция"
 
@@ -5678,27 +5681,27 @@ msgstr ""
 msgid "Blu-Ray Disc support (libbluray)"
 msgstr "Въвеждане от Blu-Ray диск"
 
-#: modules/access/bluray.c:140
+#: modules/access/bluray.c:142
 msgid ""
 "This Blu-Ray Disc needs a library for AACS decoding, and your system does "
 "not have it."
 msgstr ""
 
-#: modules/access/bluray.c:145
+#: modules/access/bluray.c:147
 msgid "Your system AACS decoding library does not work. Missing keys?"
 msgstr ""
 
-#: modules/access/bluray.c:154
+#: modules/access/bluray.c:156
 msgid ""
 "This Blu-Ray Disc needs a library for BD+ decoding, and your system does not "
 "have it."
 msgstr ""
 
-#: modules/access/bluray.c:159
+#: modules/access/bluray.c:161
 msgid "Your system BD+ decoding library does not work. Missing configuration?"
 msgstr ""
 
-#: modules/access/bluray.c:196
+#: modules/access/bluray.c:198
 msgid "Blu-Ray error"
 msgstr ""
 
@@ -6105,13 +6108,12 @@ msgid "DirectShow input"
 msgstr "Източник DirectShow"
 
 #: modules/access/dshow/dshow.cpp:230 modules/access/dshow/dshow.cpp:235
-#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:137
+#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:138
 #: modules/audio_output/waveout.c:99 modules/video_output/msw/directx.c:109
 msgid "Refresh list"
 msgstr "Обновяване"
 
 #: modules/access/dshow/dshow.cpp:231 modules/access/dshow/dshow.cpp:236
-#: share/lua/http/view.html:67
 msgid "Configure"
 msgstr "Настройки"
 
@@ -6125,6 +6127,7 @@ msgid "No video or audio device selected."
 msgstr "Не е избрано видео или аудио устройство"
 
 #: modules/access/dshow/dshow.cpp:602
+#, fuzzy
 msgid "VLC cannot open ANY capture device.Check the error log for details."
 msgstr ""
 "VLC не може да отвори никакво устройство за захващане. Вижте отчета за "
@@ -6666,12 +6669,12 @@ msgid "EyeTV input"
 msgstr "Въвеждане от EyeTV"
 
 #: modules/access/file.c:180 modules/access/file.c:301
-#: modules/access/mtp.c:213 modules/access/mtp.c:302 modules/access/vdr.c:385
-#: modules/access/vdr.c:555
+#: modules/access/mtp.c:213 modules/access/mtp.c:302 modules/access/vdr.c:378
+#: modules/access/vdr.c:548
 msgid "File reading failed"
 msgstr "Грешка при четене на файла"
 
-#: modules/access/file.c:181 modules/access/mtp.c:303 modules/access/vdr.c:555
+#: modules/access/file.c:181 modules/access/mtp.c:303 modules/access/vdr.c:548
 #, c-format
 msgid "VLC could not open the file \"%s\". (%m)"
 msgstr "VLC не може да отвори файла \"%s\". (%m)"
@@ -7216,7 +7219,7 @@ msgstr "Въвеждане от MTP"
 msgid "MTP"
 msgstr ""
 
-#: modules/access/mtp.c:214 modules/access/vdr.c:386
+#: modules/access/mtp.c:214 modules/access/vdr.c:379
 msgid "VLC could not read the file."
 msgstr "VLC не може да прочете файла"
 
@@ -7253,11 +7256,11 @@ msgid "File stream output"
 msgstr "Извеждане на потока във файл"
 
 #: modules/access_output/http.c:62 modules/misc/audioscrobbler.c:115
-#: modules/stream_out/rtp.c:180
+#: modules/stream_out/rtp.c:173
 msgid "Username"
 msgstr "Потребителско име"
 
-#: modules/access_output/http.c:63 modules/stream_out/rtp.c:181
+#: modules/access_output/http.c:63 modules/stream_out/rtp.c:174
 msgid "User name that will be requested to access the stream."
 msgstr "Потребителско име, което ще бъде изисквано за достъп до потока."
 
@@ -7265,11 +7268,11 @@ msgstr "Потребителско име, което ще бъде изискв
 #: modules/gui/macosx/simple_prefs.m:226
 #: modules/gui/qt4/dialogs/external.cpp:125 modules/lua/vlc.c:75
 #: modules/misc/audioscrobbler.c:117 modules/stream_out/raop.c:154
-#: modules/stream_out/rtp.c:183
+#: modules/stream_out/rtp.c:176
 msgid "Password"
 msgstr "Парола"
 
-#: modules/access_output/http.c:66 modules/stream_out/rtp.c:184
+#: modules/access_output/http.c:66 modules/stream_out/rtp.c:177
 msgid "Password that will be requested to access the stream."
 msgstr "Парола, която ще бъде изисквана за достъп до потока."
 
@@ -7616,7 +7619,7 @@ msgid "Bitmask that will get used by the audio part of the card."
 msgstr "Битова маска, която ще се използва от аудио част на карта"
 
 #: modules/access/pvr.c:103 modules/access/vcdx/info.c:69
-#: modules/gui/macosx/MainWindow.m:123 modules/gui/qt4/dialogs/toolbar.cpp:353
+#: modules/gui/macosx/MainWindow.m:134 modules/gui/qt4/dialogs/toolbar.cpp:358
 #: modules/stream_out/raop.c:150 modules/gui/qt4/ui/sprefs_audio.h:431
 msgid "Volume"
 msgstr "Сила на звука"
@@ -7809,7 +7812,7 @@ msgid ""
 "and 127) if it can't be determined otherwise with out-of-band mappings (SDP)"
 msgstr ""
 
-#: modules/access/rtp/rtp.c:95 modules/stream_out/rtp.c:194
+#: modules/access/rtp/rtp.c:95 modules/stream_out/rtp.c:187
 msgid "RTP"
 msgstr ""
 
@@ -8581,7 +8584,7 @@ msgstr "Въвеждане на видео"
 msgid "Tuner"
 msgstr "Тунер"
 
-#: modules/access/v4l2/video.c:358 share/lua/http/index.html:198
+#: modules/access/v4l2/video.c:358
 msgid "Controls"
 msgstr "Управление"
 
@@ -8616,7 +8619,7 @@ msgid "Segments"
 msgstr "Сегменти"
 
 #: modules/access/vcdx/access.c:414 modules/access/vcdx/access.c:693
-#: modules/access/vcdx/info.c:232 modules/demux/mkv/demux.cpp:675
+#: modules/access/vcdx/info.c:232 modules/demux/mkv/demux.cpp:678
 msgid "Segment"
 msgstr "Сегмент"
 
@@ -8802,11 +8805,11 @@ msgstr ""
 msgid "VDR recordings"
 msgstr "Записване"
 
-#: modules/access/vdr.c:852
+#: modules/access/vdr.c:824
 msgid "VDR Cut Marks"
 msgstr ""
 
-#: modules/access/vdr.c:913
+#: modules/access/vdr.c:887
 #, fuzzy
 msgid "Start"
 msgstr "Стартиране"
@@ -9699,7 +9702,7 @@ msgstr "ALSA устройство"
 #: modules/audio_output/auhal.c:967 modules/audio_output/directx.c:342
 #: modules/audio_output/kai.c:215 modules/audio_output/oss.c:121
 #: modules/audio_output/portaudio.c:386 modules/audio_output/waveout.c:364
-#: modules/gui/macosx/MainMenu.m:290 modules/gui/macosx/MainMenu.m:291
+#: modules/gui/macosx/MainMenu.m:289 modules/gui/macosx/MainMenu.m:290
 msgid "Audio Device"
 msgstr "Аудио устройство"
 
@@ -9769,19 +9772,19 @@ msgstr ""
 msgid "%s (Encoded Output)"
 msgstr "%s (Кодирано извеждане)"
 
-#: modules/audio_output/directx.c:119 modules/audio_output/portaudio.c:107
+#: modules/audio_output/directx.c:120 modules/audio_output/portaudio.c:107
 msgid "Output device"
 msgstr "Изходно устройство"
 
-#: modules/audio_output/directx.c:120
+#: modules/audio_output/directx.c:121
 msgid "Select your audio output device"
 msgstr "Избор на изходно аудио устройство"
 
-#: modules/audio_output/directx.c:122
+#: modules/audio_output/directx.c:123
 msgid "Speaker configuration"
 msgstr "Конфигурация на високоговорителя"
 
-#: modules/audio_output/directx.c:123
+#: modules/audio_output/directx.c:124
 msgid ""
 "Select speaker configuration you want to use. This option doesn't upmix! So "
 "NO e.g. Stereo -> 5.1 conversion."
@@ -9790,7 +9793,7 @@ msgstr ""
 "Тази опция не миксира!. Така например няма да има конвертиране на Стерео -> "
 "5.1."
 
-#: modules/audio_output/directx.c:127
+#: modules/audio_output/directx.c:128
 msgid "DirectX audio output"
 msgstr "Извеждане на звука чрез DirectX"
 
@@ -10041,11 +10044,11 @@ msgstr ""
 msgid "FFmpeg audio/video decoder"
 msgstr "Аудио/видео декодер FFmpeg"
 
-#: modules/codec/avcodec/avcodec.c:100 modules/codec/omxil/omxil.c:107
+#: modules/codec/avcodec/avcodec.c:100 modules/codec/omxil/omxil.c:111
 msgid "Decoding"
 msgstr "Декодиране"
 
-#: modules/codec/avcodec/avcodec.c:143 modules/codec/omxil/omxil.c:112
+#: modules/codec/avcodec/avcodec.c:143 modules/codec/omxil/omxil.c:116
 #: modules/codec/schroedinger.c:370
 msgid "Encoding"
 msgstr "Кодиране"
@@ -10856,7 +10859,7 @@ msgstr ""
 msgid "AAC audio decoder (using libfaad2)"
 msgstr "AAC аудио декодер (използвайки libfaad2)"
 
-#: modules/codec/faad.c:391
+#: modules/codec/faad.c:432
 msgid "AAC extension"
 msgstr "AAC разширение"
 
@@ -10954,7 +10957,7 @@ msgid "Maroon"
 msgstr "Кестеняв"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:173
-#: modules/gui/macosx/controls.m:189 modules/gui/macosx/MainMenu.m:323
+#: modules/gui/macosx/controls.m:189 modules/gui/macosx/MainMenu.m:322
 #: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/ball.c:120
 #: modules/video_filter/colorthres.c:64 modules/video_filter/marq.c:60
@@ -10970,7 +10973,7 @@ msgid "Fuchsia"
 msgstr "Виолетов"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
-#: modules/gui/macosx/controls.m:193 modules/gui/macosx/MainMenu.m:325
+#: modules/gui/macosx/controls.m:193 modules/gui/macosx/MainMenu.m:324
 #: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/colorthres.c:64
 #: modules/video_filter/marq.c:61 modules/video_filter/rss.c:73
@@ -10985,7 +10988,7 @@ msgid "Olive"
 msgstr "Маслинено зелен"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
-#: modules/gui/macosx/controls.m:191 modules/gui/macosx/MainMenu.m:324
+#: modules/gui/macosx/controls.m:191 modules/gui/macosx/MainMenu.m:323
 #: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/ball.c:120
 #: modules/video_filter/marq.c:61 modules/video_filter/rss.c:73
@@ -11021,7 +11024,7 @@ msgid "Navy"
 msgstr "Морско син"
 
 #: modules/codec/kate.c:212 modules/gui/fbosd.c:175
-#: modules/gui/macosx/controls.m:195 modules/gui/macosx/MainMenu.m:326
+#: modules/gui/macosx/controls.m:195 modules/gui/macosx/MainMenu.m:325
 #: modules/text_renderer/freetype.c:169 modules/text_renderer/quartztext.c:110
 #: modules/text_renderer/win32text.c:91 modules/video_filter/ball.c:121
 #: modules/video_filter/colorthres.c:64 modules/video_filter/marq.c:62
@@ -11219,11 +11222,11 @@ msgstr "Аудио декодер MPEG layer I/II/III"
 msgid "MPEG audio layer I/II/III packetizer"
 msgstr "Опаковчик MPEG audio layer I/II/III"
 
-#: modules/codec/omxil/omxil.c:104
+#: modules/codec/omxil/omxil.c:108
 msgid "Audio/Video decoder (using OpenMAX IL)"
 msgstr "Аудио/Видео декодер (използвайки OpenMAX IL)"
 
-#: modules/codec/omxil/omxil.c:113
+#: modules/codec/omxil/omxil.c:117
 msgid "Video encoder (using OpenMAX IL)"
 msgstr "Видео кодер (използвайки OpenMAX IL)"
 
@@ -12930,7 +12933,7 @@ msgstr ""
 "Отваряне на посочената страница в телетекст. Страницата по подразбиране е "
 "index 100"
 
-#: modules/codec/zvbi.c:61 modules/gui/qt4/dialogs/toolbar.cpp:409
+#: modules/codec/zvbi.c:61 modules/gui/qt4/dialogs/toolbar.cpp:414
 msgid "Teletext transparency"
 msgstr "Прозрачност на телетекст"
 
@@ -12984,8 +12987,8 @@ msgstr ""
 msgid "D-Bus control interface"
 msgstr "Управляващ интерфейс D-Bus"
 
-#: modules/control/dbus/dbus_root.c:77 modules/gui/macosx/MainWindow.m:233
-#: modules/gui/macosx/MainWindow.m:741 modules/gui/qt4/dialogs/help.cpp:99
+#: modules/control/dbus/dbus_root.c:77 modules/gui/macosx/MainWindow.m:247
+#: modules/gui/macosx/MainWindow.m:918 modules/gui/qt4/dialogs/help.cpp:99
 #: modules/gui/qt4/main_interface.cpp:957
 #: modules/gui/qt4/main_interface.cpp:961
 #: modules/gui/qt4/main_interface.cpp:1000
@@ -13063,8 +13066,8 @@ msgstr "Регулиране силата на звука"
 msgid "Position Control"
 msgstr "Позиция на възпроизвеждане"
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1799
-#: modules/gui/macosx/intf.m:1970
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1805
+#: modules/gui/macosx/intf.m:1974
 msgid "Ignore"
 msgstr "Игнориране"
 
@@ -13091,89 +13094,89 @@ msgstr ""
 "С колелото на мишката може да се регулира силата на звука, позицията на "
 "възпроизвеждане или действията могат да се игнорират"
 
-#: modules/control/hotkeys.c:375
+#: modules/control/hotkeys.c:366
 #, c-format
 msgid "Audio Device: %s"
 msgstr "Аудио устройство: %s"
 
-#: modules/control/hotkeys.c:471
+#: modules/control/hotkeys.c:462
 #, c-format
 msgid "Audio track: %s"
 msgstr "Аудио пътечка: %s"
 
-#: modules/control/hotkeys.c:488 modules/control/hotkeys.c:512
+#: modules/control/hotkeys.c:479 modules/control/hotkeys.c:503
 #, c-format
 msgid "Subtitle track: %s"
 msgstr "Пътечка със субтитри: %s"
 
-#: modules/control/hotkeys.c:488
+#: modules/control/hotkeys.c:479
 msgid "N/A"
 msgstr ""
 
-#: modules/control/hotkeys.c:537
+#: modules/control/hotkeys.c:528
 #, c-format
 msgid "Aspect ratio: %s"
 msgstr "Пропорция: %s"
 
-#: modules/control/hotkeys.c:565
+#: modules/control/hotkeys.c:556
 #, c-format
 msgid "Crop: %s"
 msgstr "Изрязване: %s"
 
-#: modules/control/hotkeys.c:579
+#: modules/control/hotkeys.c:570
 msgid "Zooming reset"
 msgstr "Възстановяване на мащаба"
 
-#: modules/control/hotkeys.c:587
+#: modules/control/hotkeys.c:578
 msgid "Scaled to screen"
 msgstr "Мащабиране към екрана"
 
-#: modules/control/hotkeys.c:590
+#: modules/control/hotkeys.c:581
 msgid "Original Size"
 msgstr "Оригинален размер"
 
-#: modules/control/hotkeys.c:618
+#: modules/control/hotkeys.c:609
 msgid "Deinterlace off"
 msgstr "Изключване на деинтерлейс"
 
-#: modules/control/hotkeys.c:638
+#: modules/control/hotkeys.c:629
 msgid "Deinterlace on"
 msgstr "Включване на деинтерлейс"
 
-#: modules/control/hotkeys.c:671
+#: modules/control/hotkeys.c:662
 #, c-format
 msgid "Zoom mode: %s"
 msgstr "Режим на мащабиране: %s"
 
-#: modules/control/hotkeys.c:773 modules/control/hotkeys.c:783
+#: modules/control/hotkeys.c:764 modules/control/hotkeys.c:774
 #, c-format
 msgid "Subtitle delay %i ms"
 msgstr "Задържане на субтитрите %i ms"
 
-#: modules/control/hotkeys.c:797
+#: modules/control/hotkeys.c:788
 #, c-format
 msgid "Subtitle position %i px"
 msgstr "Позиция на субтитрите %i px"
 
-#: modules/control/hotkeys.c:807 modules/control/hotkeys.c:817
+#: modules/control/hotkeys.c:798 modules/control/hotkeys.c:808
 #, c-format
 msgid "Audio delay %i ms"
 msgstr "Задържане на аудиото %i ms"
 
-#: modules/control/hotkeys.c:855
+#: modules/control/hotkeys.c:846
 msgid "Recording"
 msgstr "Записване"
 
-#: modules/control/hotkeys.c:857
+#: modules/control/hotkeys.c:848
 msgid "Recording done"
 msgstr "Записването завърши"
 
-#: modules/control/hotkeys.c:1039
+#: modules/control/hotkeys.c:1030
 #, c-format
 msgid "Volume %d%%"
 msgstr "Сила на звука %d%%"
 
-#: modules/control/hotkeys.c:1045
+#: modules/control/hotkeys.c:1036
 #, c-format
 msgid "Speed: %.2fx"
 msgstr ""
@@ -13320,9 +13323,9 @@ msgstr ""
 msgid "Opening"
 msgstr "Отваряне"
 
-#: modules/control/rc.c:73 modules/gui/macosx/MainMenu.m:814
-#: modules/gui/macosx/MainMenu.m:815 modules/gui/macosx/MainMenu.m:816
-#: modules/gui/macosx/MainWindow.m:815 modules/gui/qt4/menus.cpp:794
+#: modules/control/rc.c:73 modules/gui/macosx/MainMenu.m:798
+#: modules/gui/macosx/MainMenu.m:799 modules/gui/macosx/MainMenu.m:800
+#: modules/gui/macosx/MainWindow.m:995 modules/gui/qt4/menus.cpp:794
 #: modules/notify/xosd.c:238
 msgid "Pause"
 msgstr "Пауза"
@@ -15269,8 +15272,8 @@ msgstr ""
 msgid "MPEG Transport Stream demuxer"
 msgstr "Демултиплексор MPEG TS (Transport Stream)"
 
-#: modules/demux/ts.c:186 modules/gui/macosx/MainMenu.m:320
-#: modules/gui/macosx/MainMenu.m:1248 modules/gui/qt4/dialogs/toolbar.cpp:417
+#: modules/demux/ts.c:186 modules/gui/macosx/MainMenu.m:319
+#: modules/gui/macosx/MainMenu.m:1193 modules/gui/qt4/dialogs/toolbar.cpp:422
 msgid "Teletext"
 msgstr "Телетекст"
 
@@ -15544,7 +15547,7 @@ msgid "Compiled by %@ with %@"
 msgstr "Компилирано от %@ с %@"
 
 #: modules/gui/macosx/about.m:138 modules/gui/macosx/about.m:209
-#: modules/gui/macosx/MainMenu.m:346
+#: modules/gui/macosx/MainMenu.m:345
 msgid "License"
 msgstr "Лиценз"
 
@@ -15553,7 +15556,7 @@ msgid "VLC media player Help"
 msgstr "Помощ за VLC media player"
 
 #: modules/gui/macosx/about.m:225 modules/gui/macosx/controls.m:187
-#: modules/gui/macosx/MainMenu.m:322
+#: modules/gui/macosx/MainMenu.m:321
 msgid "Index"
 msgstr "Индекс"
 
@@ -15573,7 +15576,6 @@ msgstr "Компресиране на динамичния диапазон DTS"
 #: modules/gui/macosx/AudioEffects.m:78 modules/gui/macosx/AudioEffects.m:89
 #: modules/gui/macosx/TrackSynchronization.m:53
 #: modules/gui/qt4/dialogs/gototime.cpp:66
-#: share/lua/http/dialogs/equalizer_window.html:11
 msgid "Reset"
 msgstr "Възстановяване"
 
@@ -15631,14 +15633,14 @@ msgstr "Отметки"
 msgid "Add"
 msgstr "Добавяне"
 
-#: modules/gui/macosx/bookmarks.m:86 modules/gui/macosx/MainMenu.m:252
+#: modules/gui/macosx/bookmarks.m:86 modules/gui/macosx/MainMenu.m:251
 #: modules/gui/macosx/simple_prefs.m:237
 #: modules/gui/qt4/dialogs/bookmarks.cpp:51
 #: modules/gui/qt4/dialogs/sout.cpp:70 modules/gui/qt4/ui/vlm.h:301
 msgid "Clear"
 msgstr "Изчистване"
 
-#: modules/gui/macosx/bookmarks.m:87 modules/gui/macosx/MainMenu.m:248
+#: modules/gui/macosx/bookmarks.m:87 modules/gui/macosx/MainMenu.m:247
 msgid "Edit"
 msgstr "Редактиране"
 
@@ -15653,7 +15655,7 @@ msgstr "Изтриване"
 
 #: modules/gui/macosx/bookmarks.m:95 modules/gui/macosx/bookmarks.m:101
 #: modules/gui/qt4/dialogs/bookmarks.cpp:75
-#: modules/gui/qt4/dialogs/toolbar.cpp:369
+#: modules/gui/qt4/dialogs/toolbar.cpp:374
 msgid "Time"
 msgstr "Време"
 
@@ -15670,7 +15672,7 @@ msgstr "Време"
 #: modules/gui/macosx/wizard.m:1844 modules/gui/macosx/wizard.m:1855
 #: modules/gui/macosx/wizard.m:1868
 #: modules/gui/qt4/components/open_panels.cpp:1280
-#: modules/gui/qt4/components/preferences_widgets.cpp:1514
+#: modules/gui/qt4/components/preferences_widgets.cpp:1535
 msgid "OK"
 msgstr ""
 
@@ -15725,7 +15727,7 @@ msgstr ""
 "Не е намерен входящ поток. Потокът трябва да се възпроизвежда или прекъснат "
 "за да работят отметките."
 
-#: modules/gui/macosx/controls.m:51 modules/gui/macosx/MainMenu.m:1198
+#: modules/gui/macosx/controls.m:51 modules/gui/macosx/MainMenu.m:1143
 msgid "Jump To Time"
 msgstr "Преход до време"
 
@@ -15778,33 +15780,33 @@ msgstr ""
 msgid "(no item is being played)"
 msgstr "(не се възпроизвежда елемент)"
 
-#: modules/gui/macosx/intf.m:645 modules/gui/qt4/dialogs/messages.cpp:75
+#: modules/gui/macosx/intf.m:649 modules/gui/qt4/dialogs/messages.cpp:75
 #: modules/gui/qt4/ui/messages_panel.h:141
 #: modules/gui/qt4/ui/messages_panel.h:146
 msgid "Messages"
 msgstr "Съобщения..."
 
-#: modules/gui/macosx/intf.m:646
+#: modules/gui/macosx/intf.m:650
 msgid "Open CrashLog..."
 msgstr "Отваряне на лого за срива"
 
-#: modules/gui/macosx/intf.m:647
+#: modules/gui/macosx/intf.m:651
 msgid "Save this Log..."
 msgstr "Запис на този отчет..."
 
-#: modules/gui/macosx/intf.m:650 share/lua/http/dialogs/batch_window.html:9
+#: modules/gui/macosx/intf.m:654
 msgid "Send"
 msgstr "Изпращане"
 
-#: modules/gui/macosx/intf.m:651
+#: modules/gui/macosx/intf.m:655
 msgid "Don't Send"
 msgstr "Без изпращане"
 
-#: modules/gui/macosx/intf.m:652 modules/gui/macosx/intf.m:653
+#: modules/gui/macosx/intf.m:656 modules/gui/macosx/intf.m:657
 msgid "VLC crashed previously"
 msgstr "VLC е имал предишен срив"
 
-#: modules/gui/macosx/intf.m:654
+#: modules/gui/macosx/intf.m:658
 msgid ""
 "Do you want to send details on the crash to VLC's development team?\n"
 "\n"
@@ -15818,12 +15820,12 @@ msgstr ""
 "да стане срива на VLC заедно с друга полезна информация като: линк за "
 "изтегляне на проблемния файл, URL на проблемния мрежов поток, ..."
 
-#: modules/gui/macosx/intf.m:655
+#: modules/gui/macosx/intf.m:659
 msgid "I agree to be possibly contacted about this bugreport."
 msgstr ""
 "Съгласен съм да бъда на разположение за контакт относно този доклад за бъг."
 
-#: modules/gui/macosx/intf.m:656
+#: modules/gui/macosx/intf.m:660
 msgid ""
 "Only your default E-Mail address will be submitted, including no further "
 "information."
@@ -15831,45 +15833,45 @@ msgstr ""
 "Само вашия E-Mail по подразбиране ще бъде изпратен, няма да включва никаква "
 "друга информация."
 
-#: modules/gui/macosx/intf.m:1679
+#: modules/gui/macosx/intf.m:1685
 msgid "Error when sending the Crash Report"
 msgstr "Грешка при изпращането на доклада за срива."
 
-#: modules/gui/macosx/intf.m:1770
+#: modules/gui/macosx/intf.m:1776
 msgid "No CrashLog found"
 msgstr "Не е намерен отчет за срив"
 
-#: modules/gui/macosx/intf.m:1770 modules/gui/macosx/prefs.m:227
+#: modules/gui/macosx/intf.m:1776 modules/gui/macosx/prefs.m:227
 #: modules/gui/macosx/simple_prefs.m:693
 msgid "Continue"
 msgstr "Продължаване"
 
-#: modules/gui/macosx/intf.m:1770
+#: modules/gui/macosx/intf.m:1776
 msgid "Couldn't find any trace of a previous crash."
 msgstr "Не може да се намери никаква следа от предишен срив."
 
-#: modules/gui/macosx/intf.m:1797
+#: modules/gui/macosx/intf.m:1803
 msgid "Remove old preferences?"
 msgstr "Да се изтрият ли старите настройки?"
 
-#: modules/gui/macosx/intf.m:1798
+#: modules/gui/macosx/intf.m:1804
 msgid "We just found an older version of VLC's preferences files."
 msgstr "Намерени са файлове с настройки на VLC за стари версии."
 
-#: modules/gui/macosx/intf.m:1799
+#: modules/gui/macosx/intf.m:1805
 msgid "Move To Trash and Relaunch VLC"
 msgstr "Изпращане в кошчето и рестартиране на VLC"
 
-#: modules/gui/macosx/intf.m:1907
+#: modules/gui/macosx/intf.m:1911
 #, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1968
+#: modules/gui/macosx/intf.m:1972
 msgid "Relaunch required"
 msgstr "Необходимо е рестартиране"
 
-#: modules/gui/macosx/intf.m:1969
+#: modules/gui/macosx/intf.m:1973
 msgid ""
 "To make sure that VLC no longer listens to your media key events, it needs "
 "to be restarted."
@@ -15877,7 +15879,7 @@ msgstr ""
 "За да е сигурно, че VLC повече няма да следи действията на медия клавишите, "
 "е необходимо да се рестартира."
 
-#: modules/gui/macosx/intf.m:1970
+#: modules/gui/macosx/intf.m:1974
 msgid "Relaunch VLC"
 msgstr "Рестартиране на VLC"
 
@@ -16026,8 +16028,8 @@ msgstr "1:Файл"
 msgid "Advanced Open File..."
 msgstr "Разширено отваряне на файл..."
 
-#: modules/gui/macosx/MainMenu.m:240 modules/gui/macosx/MainMenu.m:313
-#: modules/gui/macosx/MainMenu.m:996 modules/gui/qt4/menus.cpp:623
+#: modules/gui/macosx/MainMenu.m:240 modules/gui/macosx/MainMenu.m:312
+#: modules/gui/macosx/MainMenu.m:989 modules/gui/qt4/menus.cpp:623
 msgid "Open File..."
 msgstr "Отваряне на файл..."
 
@@ -16047,39 +16049,35 @@ msgstr "Отваряне на устр. за захващане"
 msgid "Open Recent"
 msgstr "Отваряне на последния"
 
-#: modules/gui/macosx/MainMenu.m:245 modules/gui/macosx/MainMenu.m:1106
-msgid "Clear Menu"
-msgstr "Изчистване на менюто"
-
-#: modules/gui/macosx/MainMenu.m:246
+#: modules/gui/macosx/MainMenu.m:245
 msgid "Streaming/Exporting Wizard..."
 msgstr "Помощник за Потока/Извеждането..."
 
-#: modules/gui/macosx/MainMenu.m:249
+#: modules/gui/macosx/MainMenu.m:248
 msgid "Cut"
 msgstr "Изрязване"
 
-#: modules/gui/macosx/MainMenu.m:250
+#: modules/gui/macosx/MainMenu.m:249
 msgid "Copy"
 msgstr "Копиране"
 
-#: modules/gui/macosx/MainMenu.m:251
+#: modules/gui/macosx/MainMenu.m:250
 msgid "Paste"
 msgstr "Вмъкване"
 
-#: modules/gui/macosx/MainMenu.m:253 modules/gui/macosx/playlist.m:469
+#: modules/gui/macosx/MainMenu.m:252 modules/gui/macosx/playlist.m:469
 msgid "Select All"
 msgstr "Избиране Всички"
 
-#: modules/gui/macosx/MainMenu.m:255
+#: modules/gui/macosx/MainMenu.m:254
 msgid "Playback"
 msgstr "Възпроизвеждане"
 
-#: modules/gui/macosx/MainMenu.m:260 modules/gui/macosx/MainMenu.m:261
+#: modules/gui/macosx/MainMenu.m:259 modules/gui/macosx/MainMenu.m:260
 msgid "Playback Speed"
 msgstr "Скорост на възпроизвеждане"
 
-#: modules/gui/macosx/MainMenu.m:263 modules/gui/macosx/simple_prefs.m:570
+#: modules/gui/macosx/MainMenu.m:262 modules/gui/macosx/simple_prefs.m:570
 #: modules/gui/qt4/components/simple_preferences.cpp:501
 #: modules/misc/gnutls.c:83 modules/text_renderer/freetype.c:156
 #: modules/text_renderer/freetype.c:175 modules/text_renderer/quartztext.c:114
@@ -16087,214 +16085,213 @@ msgstr "Скорост на възпроизвеждане"
 msgid "Normal"
 msgstr "Нормален"
 
-#: modules/gui/macosx/MainMenu.m:265
+#: modules/gui/macosx/MainMenu.m:264
 #: modules/gui/macosx/TrackSynchronization.m:52
 msgid "Track Synchronization"
 msgstr "Синхронизация на пътечка"
 
-#: modules/gui/macosx/MainMenu.m:271 modules/gui/macosx/MainMenu.m:1189
+#: modules/gui/macosx/MainMenu.m:270 modules/gui/macosx/MainMenu.m:1134
 msgid "Quit after Playback"
 msgstr "Изход след възпроизвеждането"
 
-#: modules/gui/macosx/MainMenu.m:272 modules/gui/macosx/MainMenu.m:1196
+#: modules/gui/macosx/MainMenu.m:271 modules/gui/macosx/MainMenu.m:1141
 msgid "Step Forward"
 msgstr "Стъпка напред"
 
-#: modules/gui/macosx/MainMenu.m:273 modules/gui/macosx/MainMenu.m:1197
+#: modules/gui/macosx/MainMenu.m:272 modules/gui/macosx/MainMenu.m:1142
 msgid "Step Backward"
 msgstr "Стъпка назад"
 
-#: modules/gui/macosx/MainMenu.m:283 modules/gui/qt4/menus.cpp:572
+#: modules/gui/macosx/MainMenu.m:282 modules/gui/qt4/menus.cpp:572
 msgid "Increase Volume"
 msgstr "Увеличаване на звука"
 
-#: modules/gui/macosx/MainMenu.m:284 modules/gui/qt4/menus.cpp:575
+#: modules/gui/macosx/MainMenu.m:283 modules/gui/qt4/menus.cpp:575
 msgid "Decrease Volume"
 msgstr "Намаляване на звука"
 
-#: modules/gui/macosx/MainMenu.m:296 modules/gui/macosx/MainMenu.m:1212
+#: modules/gui/macosx/MainMenu.m:295 modules/gui/macosx/MainMenu.m:1157
 msgid "Half Size"
 msgstr "Половин размер"
 
-#: modules/gui/macosx/MainMenu.m:297 modules/gui/macosx/MainMenu.m:1213
-#: modules/gui/macosx/MainMenu.m:1246
+#: modules/gui/macosx/MainMenu.m:296 modules/gui/macosx/MainMenu.m:1158
+#: modules/gui/macosx/MainMenu.m:1191
 msgid "Normal Size"
 msgstr "Нормален размер"
 
-#: modules/gui/macosx/MainMenu.m:298 modules/gui/macosx/MainMenu.m:1214
+#: modules/gui/macosx/MainMenu.m:297 modules/gui/macosx/MainMenu.m:1159
 msgid "Double Size"
 msgstr "Двоен размер"
 
-#: modules/gui/macosx/MainMenu.m:299 modules/gui/macosx/MainMenu.m:1215
+#: modules/gui/macosx/MainMenu.m:298 modules/gui/macosx/MainMenu.m:1160
 msgid "Fit to Screen"
 msgstr "Нагаждане към екрана"
 
-#: modules/gui/macosx/MainMenu.m:301 modules/gui/macosx/MainMenu.m:1218
-#: modules/gui/macosx/MainMenu.m:1227
+#: modules/gui/macosx/MainMenu.m:300 modules/gui/macosx/MainMenu.m:1163
+#: modules/gui/macosx/MainMenu.m:1172
 msgid "Float on Top"
 msgstr "Задържане отгоре"
 
-#: modules/gui/macosx/MainMenu.m:309 modules/gui/macosx/MainMenu.m:310
+#: modules/gui/macosx/MainMenu.m:308 modules/gui/macosx/MainMenu.m:309
 #: modules/gui/macosx/simple_prefs.m:291 modules/gui/macosx/VideoView.m:99
 msgid "Fullscreen Video Device"
 msgstr "Видео устройство за цял екран"
 
-#: modules/gui/macosx/MainMenu.m:321
+#: modules/gui/macosx/MainMenu.m:320
 msgid "Transparent"
 msgstr "Прозрачен"
 
-#: modules/gui/macosx/MainMenu.m:328
+#: modules/gui/macosx/MainMenu.m:327
 msgid "Window"
 msgstr ""
 
-#: modules/gui/macosx/MainMenu.m:329
+#: modules/gui/macosx/MainMenu.m:328
 msgid "Minimize Window"
 msgstr "Минимизиране на прозореца"
 
-#: modules/gui/macosx/MainMenu.m:330
+#: modules/gui/macosx/MainMenu.m:329
 msgid "Close Window"
 msgstr "Затваряна на прозореца"
 
-#: modules/gui/macosx/MainMenu.m:331
+#: modules/gui/macosx/MainMenu.m:330
 msgid "Player..."
 msgstr "Плейър..."
 
-#: modules/gui/macosx/MainMenu.m:332
+#: modules/gui/macosx/MainMenu.m:331
 msgid "Main Window..."
 msgstr "Главен прозорец..."
 
-#: modules/gui/macosx/MainMenu.m:333
+#: modules/gui/macosx/MainMenu.m:332
 msgid "Audio Effects..."
 msgstr "Аудио ефекти..."
 
-#: modules/gui/macosx/MainMenu.m:334
+#: modules/gui/macosx/MainMenu.m:333
 msgid "Video Filters..."
 msgstr "Видео филтър..."
 
-#: modules/gui/macosx/MainMenu.m:335
+#: modules/gui/macosx/MainMenu.m:334
 msgid "Bookmarks..."
 msgstr "Отметки..."
 
-#: modules/gui/macosx/MainMenu.m:336
+#: modules/gui/macosx/MainMenu.m:335
 msgid "Playlist..."
 msgstr "Плейлист..."
 
-#: modules/gui/macosx/MainMenu.m:337 modules/gui/macosx/playlist.m:470
+#: modules/gui/macosx/MainMenu.m:336 modules/gui/macosx/playlist.m:470
 msgid "Media Information..."
 msgstr "Инфо за медията..."
 
-#: modules/gui/macosx/MainMenu.m:338
+#: modules/gui/macosx/MainMenu.m:337
 msgid "Messages..."
 msgstr "Съобщения..."
 
-#: modules/gui/macosx/MainMenu.m:339
+#: modules/gui/macosx/MainMenu.m:338
 msgid "Errors and Warnings..."
 msgstr "Грешки и предупреждения"
 
-#: modules/gui/macosx/MainMenu.m:341
+#: modules/gui/macosx/MainMenu.m:340
 msgid "Bring All to Front"
 msgstr "Изнасяне всичко отпред"
 
-#: modules/gui/macosx/MainMenu.m:343 modules/gui/qt4/dialogs/help.cpp:54
+#: modules/gui/macosx/MainMenu.m:342 modules/gui/qt4/dialogs/help.cpp:54
 #: modules/gui/qt4/menus.cpp:910
 msgid "Help"
 msgstr "Помощ"
 
-#: modules/gui/macosx/MainMenu.m:344
+#: modules/gui/macosx/MainMenu.m:343
 msgid "VLC media player Help..."
 msgstr "Помощ за VLC media player"
 
-#: modules/gui/macosx/MainMenu.m:345
+#: modules/gui/macosx/MainMenu.m:344
 msgid "ReadMe / FAQ..."
 msgstr ""
 
-#: modules/gui/macosx/MainMenu.m:347
+#: modules/gui/macosx/MainMenu.m:346
 msgid "Online Documentation..."
 msgstr "Онлайн документация..."
 
-#: modules/gui/macosx/MainMenu.m:348
+#: modules/gui/macosx/MainMenu.m:347
 msgid "VideoLAN Website..."
 msgstr "Уеб сайт на VideoLAN..."
 
-#: modules/gui/macosx/MainMenu.m:349
+#: modules/gui/macosx/MainMenu.m:348
 msgid "Make a donation..."
 msgstr "Направете дарение..."
 
-#: modules/gui/macosx/MainMenu.m:350
+#: modules/gui/macosx/MainMenu.m:349
 msgid "Online Forum..."
 msgstr "Онлайн форум"
 
-#: modules/gui/macosx/MainMenu.m:364
+#: modules/gui/macosx/MainMenu.m:363
 msgid "Volume Up"
 msgstr "Звук - Увеличаване"
 
-#: modules/gui/macosx/MainMenu.m:365
+#: modules/gui/macosx/MainMenu.m:364
 msgid "Volume Down"
 msgstr "Звук - Намаляване"
 
-#: modules/gui/macosx/MainMenu.m:984
+#: modules/gui/macosx/MainMenu.m:977
 msgid "Lock Aspect Ratio"
 msgstr "Заключване на пропорция"
 
-#: modules/gui/macosx/MainWindow.m:114
+#: modules/gui/macosx/MainWindow.m:125
 msgid "Backward"
 msgstr "Стъпка назад"
 
-#: modules/gui/macosx/MainWindow.m:115
+#: modules/gui/macosx/MainWindow.m:126
 msgid "Forward"
 msgstr "Стъпка напред"
 
-#: modules/gui/macosx/MainWindow.m:117
+#: modules/gui/macosx/MainWindow.m:128
 msgid "Show/Hide Playlist"
 msgstr "Плейлист"
 
-#: modules/gui/macosx/MainWindow.m:118 modules/gui/qt4/dialogs/vlm.cpp:560
-#: share/lua/http/index.html:248
+#: modules/gui/macosx/MainWindow.m:129 modules/gui/qt4/dialogs/vlm.cpp:560
 msgid "Repeat"
 msgstr "Повторение"
 
-#: modules/gui/macosx/MainWindow.m:119 share/lua/http/index.html:246
+#: modules/gui/macosx/MainWindow.m:130
 msgid "Shuffle"
 msgstr "Разбъркано"
 
-#: modules/gui/macosx/MainWindow.m:120 modules/gui/macosx/simple_prefs.m:221
+#: modules/gui/macosx/MainWindow.m:131 modules/gui/macosx/simple_prefs.m:221
 #: modules/gui/qt4/ui/sprefs_audio.h:440
 msgid "Effects"
 msgstr "Ефекти"
 
-#: modules/gui/macosx/MainWindow.m:121
+#: modules/gui/macosx/MainWindow.m:132
 msgid "Toggle Fullscreen mode"
 msgstr "Превключване на режима на цял екран"
 
-#: modules/gui/macosx/MainWindow.m:125
+#: modules/gui/macosx/MainWindow.m:136
 msgid "Full Volume"
 msgstr "Максимална сила на звука"
 
-#: modules/gui/macosx/MainWindow.m:127
+#: modules/gui/macosx/MainWindow.m:138
 msgid "Open media..."
 msgstr "Отваряне на медия..."
 
-#: modules/gui/macosx/MainWindow.m:128
+#: modules/gui/macosx/MainWindow.m:139
 msgid "Drop media here"
 msgstr "Пуснете медията тук"
 
-#: modules/gui/macosx/MainWindow.m:276
+#: modules/gui/macosx/MainWindow.m:301
 msgid "LIBRARY"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:279
+#: modules/gui/macosx/MainWindow.m:304
 msgid "MY COMPUTER"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:280
+#: modules/gui/macosx/MainWindow.m:305
 msgid "DEVICES"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:281
+#: modules/gui/macosx/MainWindow.m:306
 msgid "LOCAL NETWORK"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:282
+#: modules/gui/macosx/MainWindow.m:307
 msgid "INTERNET"
 msgstr ""
 
@@ -16327,7 +16324,6 @@ msgstr "Media Resource Locator (MRL)"
 #: modules/gui/macosx/open.m:620 modules/gui/macosx/open.m:892
 #: modules/gui/macosx/open.m:1112 modules/gui/macosx/open.m:1365
 #: modules/gui/qt4/components/controller.hpp:110
-#: share/lua/http/dialogs/browse_window.html:12
 msgid "Open"
 msgstr "Отваряне"
 
@@ -16546,7 +16542,8 @@ msgid "Load subtitles file:"
 msgstr "Зареждане на файла със субтитри:"
 
 #: modules/gui/macosx/open.m:307
-msgid "Override parametters"
+#, fuzzy
+msgid "Override parameters"
 msgstr "Подмяна на параметрите"
 
 #: modules/gui/macosx/open.m:310
@@ -16941,7 +16938,7 @@ msgid "Select an action to change the associated hotkey:"
 msgstr "Изберете действие, за да промените асоциираната клавишна комбинация:"
 
 #: modules/gui/macosx/simple_prefs.m:239
-#: modules/gui/qt4/components/preferences_widgets.cpp:1302
+#: modules/gui/qt4/components/preferences_widgets.cpp:1305
 msgid "Action"
 msgstr "Действие"
 
@@ -18410,11 +18407,13 @@ msgstr ""
 "Отваряне на медия, ако плейлиста е празен"
 
 #: modules/gui/qt4/components/controller.hpp:111
-msgid "Previous/Backward"
+#, fuzzy
+msgid "Previous / Backward"
 msgstr "Предишен/назад"
 
 #: modules/gui/qt4/components/controller.hpp:111
-msgid "Next/Forward"
+#, fuzzy
+msgid "Next / Forward"
 msgstr "Следващ/напред"
 
 #: modules/gui/qt4/components/controller.hpp:112
@@ -18448,19 +18447,19 @@ msgid "Step forward"
 msgstr "Стъпка напред"
 
 #: modules/gui/qt4/components/controller.hpp:115
-msgid "Loop/Repeat mode"
+#, fuzzy
+msgid "Loop / Repeat"
 msgstr "Повторение"
 
 #: modules/gui/qt4/components/controller.hpp:116
-#: modules/gui/qt4/components/controller.hpp:129
-#: modules/gui/qt4/components/open_panels.cpp:252
-msgid "Open subtitles file"
-msgstr "Отваряне на файл със субтитри"
+#, fuzzy
+msgid "Open subtitles"
+msgstr "Отваряне на субтитри..."
 
 #: modules/gui/qt4/components/controller.hpp:116
 #, fuzzy
-msgid "Fullscreen controller width toggle"
-msgstr "Панел с регулатори при цял екран"
+msgid "Dock fullscreen controller"
+msgstr "Показване на панела с регулатори, когато е на цял екран"
 
 #: modules/gui/qt4/components/controller.hpp:119
 msgid "Stop playback"
@@ -18521,6 +18520,11 @@ msgstr "Предишна медия в плейлиста"
 #: modules/gui/qt4/components/controller.hpp:128
 msgid "Next media in the playlist"
 msgstr "Следваща медия в плейлиста"
+
+#: modules/gui/qt4/components/controller.hpp:129
+#: modules/gui/qt4/components/open_panels.cpp:252
+msgid "Open subtitles file"
+msgstr "Отваряне на файл със субтитри"
 
 #: modules/gui/qt4/components/controller.hpp:130
 msgid "Dock/undock fullscreen controller to/from bottom of screen"
@@ -19014,38 +19018,38 @@ msgstr ""
 msgid "Select File"
 msgstr "Избор на файл"
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1295
+#: modules/gui/qt4/components/preferences_widgets.cpp:1298
 msgid "Select an action to change the associated hotkey"
 msgstr "Избор на действие за промяна на асоциирания клавиш"
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1303
+#: modules/gui/qt4/components/preferences_widgets.cpp:1306
 msgid "Hotkey"
 msgstr "Клавишни комбинации"
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1304
-#: modules/gui/qt4/components/preferences_widgets.cpp:1501
+#: modules/gui/qt4/components/preferences_widgets.cpp:1307
+#: modules/gui/qt4/components/preferences_widgets.cpp:1522
 msgid "Global"
 msgstr "Глобален"
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1436
+#: modules/gui/qt4/components/preferences_widgets.cpp:1449
 #: modules/gui/qt4/util/customwidgets.cpp:293
 msgid "Unset"
 msgstr "Не е зададен"
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1502
+#: modules/gui/qt4/components/preferences_widgets.cpp:1523
 msgid "Hotkey for "
 msgstr "Клавиш за "
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1506
+#: modules/gui/qt4/components/preferences_widgets.cpp:1527
 msgid "Press the new keys for "
 msgstr "Натиснете нов клавиш за "
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1537
+#: modules/gui/qt4/components/preferences_widgets.cpp:1558
 msgid "Warning: the key is already assigned to \""
 msgstr "Внимание: клавиша вече е зададен за \""
 
-#: modules/gui/qt4/components/preferences_widgets.cpp:1557
-#: modules/gui/qt4/components/preferences_widgets.cpp:1565
+#: modules/gui/qt4/components/preferences_widgets.cpp:1578
+#: modules/gui/qt4/components/preferences_widgets.cpp:1586
 msgid "Key: "
 msgstr "Клавиш: "
 
@@ -19102,26 +19106,31 @@ msgstr "Системните по подразбиране"
 msgid "Configure Hotkeys"
 msgstr "Настройки на клавишните комбинации"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:956
+#: modules/gui/qt4/components/simple_preferences.cpp:948
+#, fuzzy
+msgid "File associations"
+msgstr "Асоцииране на файлове"
+
+#: modules/gui/qt4/components/simple_preferences.cpp:957
 #: modules/gui/qt4/dialogs_provider.hpp:42
 msgid "Audio Files"
 msgstr "Аудио файлове"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:957
+#: modules/gui/qt4/components/simple_preferences.cpp:958
 #: modules/gui/qt4/dialogs_provider.hpp:41
 msgid "Video Files"
 msgstr "Видео файлове"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:958
+#: modules/gui/qt4/components/simple_preferences.cpp:959
 #: modules/gui/qt4/dialogs_provider.hpp:43
 msgid "Playlist Files"
 msgstr "Файлове с плейлист"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:1010
+#: modules/gui/qt4/components/simple_preferences.cpp:1011
 msgid "&Apply"
 msgstr "Прилагане"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:1011
+#: modules/gui/qt4/components/simple_preferences.cpp:1012
 #: modules/gui/qt4/dialogs/convert.cpp:96
 #: modules/gui/qt4/dialogs/gototime.cpp:49
 #: modules/gui/qt4/dialogs/open.cpp:109 modules/gui/qt4/dialogs/openurl.cpp:60
@@ -19244,8 +19253,6 @@ msgid "Edit Bookmarks"
 msgstr "Редактиране на отметките"
 
 #: modules/gui/qt4/dialogs/bookmarks.cpp:45
-#: share/lua/http/dialogs/create_stream.html:42
-#: share/lua/http/dialogs/mosaic_window.html:12
 msgid "Create"
 msgstr "Добавяне"
 
@@ -19504,8 +19511,7 @@ msgstr ""
 "Файлът не може да се запише %1:\n"
 "%2."
 
-#: modules/gui/qt4/dialogs/open.cpp:79 share/lua/http/index.html:205
-#: share/lua/http/mobile.html:74
+#: modules/gui/qt4/dialogs/open.cpp:79
 msgid "Open Media"
 msgstr "Отваряне на медия"
 
@@ -19815,33 +19821,38 @@ msgstr "Име на профила"
 msgid "Please enter the new profile name."
 msgstr "Моля, въведете име на новия профил."
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:304
+#: modules/gui/qt4/dialogs/toolbar.cpp:309
 msgid "Spacer"
 msgstr "Пространство"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:309
+#: modules/gui/qt4/dialogs/toolbar.cpp:314
 msgid "Expanding Spacer"
 msgstr "Разширено пространство"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:338
+#: modules/gui/qt4/dialogs/toolbar.cpp:343
 msgid "Splitter"
 msgstr "Разделител"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:345
+#: modules/gui/qt4/dialogs/toolbar.cpp:350
 msgid "Time Slider"
 msgstr "Плъзгач за време"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:358
+#: modules/gui/qt4/dialogs/toolbar.cpp:363
 msgid "Small Volume"
 msgstr "Малък регулатор на звука"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:395
+#: modules/gui/qt4/dialogs/toolbar.cpp:400
 msgid "DVD menus"
 msgstr "DVD менюта"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:424
+#: modules/gui/qt4/dialogs/toolbar.cpp:429
 msgid "Advanced Buttons"
 msgstr "Допълнителни бутони"
+
+#: modules/gui/qt4/dialogs/toolbar.cpp:442
+#, fuzzy
+msgid "Playback Buttons"
+msgstr "Възпроизвеждане"
 
 #: modules/gui/qt4/dialogs/vlm.cpp:73
 msgid "Broadcast"
@@ -20159,6 +20170,10 @@ msgstr "Помощ..."
 #: modules/gui/qt4/menus.cpp:751
 msgid "Check for &Updates..."
 msgstr "Проверка за обновления..."
+
+#: modules/gui/qt4/menus.cpp:803
+msgid "Sp&eed"
+msgstr ""
 
 #: modules/gui/qt4/menus.cpp:809
 msgid "&Faster"
@@ -21066,11 +21081,11 @@ msgstr ""
 "изцяло. Това е необходимо за някои IPTV STB (като тези направени от "
 "HansunTech), които се объркват от това. По подразбиране е 5. "
 
-#: modules/misc/rtsp.c:75 modules/stream_out/rtp.c:251
+#: modules/misc/rtsp.c:75 modules/stream_out/rtp.c:244
 msgid "RTSP VoD"
 msgstr ""
 
-#: modules/misc/rtsp.c:76 modules/stream_out/rtp.c:252
+#: modules/misc/rtsp.c:76 modules/stream_out/rtp.c:245
 msgid "RTSP VoD server"
 msgstr "Сървър RTSP VoD"
 
@@ -21761,7 +21776,7 @@ msgstr ""
 msgid "Unknown type"
 msgstr "Неизвестен тип"
 
-#: modules/services_discovery/upnp.cpp:70
+#: modules/services_discovery/upnp.cpp:71
 msgid "Universal Plug'n'Play"
 msgstr "Универсално Plug'n'Play"
 
@@ -22375,33 +22390,17 @@ msgstr ""
 "Това ви позволява да изпълнявате аудио потоци MPEG4 LATM (вижте RFC3016)."
 
 #: modules/stream_out/rtp.c:167
-msgid "RTSP host address"
-msgstr "Хост адрес на RTSP"
-
-#: modules/stream_out/rtp.c:169
-msgid ""
-"This defines the address, port and path the RTSP VOD server will listen on.\n"
-"Syntax is address:port/path. The default is to listen on all interfaces "
-"(address 0.0.0.0), on port 554, with no path.\n"
-"To listen only on the local interface, use \"localhost\" as address."
-msgstr ""
-"Определяне на адреса, порта и пътя, който ще следи RTSP VOD сървъра.\n"
-" Пише се адрес:порт/път. По подразбиране следи на всички интерфейси (адрес "
-"0.0.0.0), на порт 554, без път.\n"
-" За да следи само на локален интерфейс, използвайте \"localhost\" като адрес."
-
-#: modules/stream_out/rtp.c:174
 msgid "RTSP session timeout (s)"
 msgstr "Прекъсване на RTP източник (сек.)"
 
-#: modules/stream_out/rtp.c:175
+#: modules/stream_out/rtp.c:168
 msgid ""
 "RTSP sessions will be closed after not receiving any RTSP request for this "
 "long. Setting it to a negative value or zero disables timeouts. The default "
 "is 60 (one minute)."
 msgstr ""
 
-#: modules/stream_out/rtp.c:195
+#: modules/stream_out/rtp.c:188
 msgid "RTP stream output"
 msgstr "Извеждане на потока по RTP"
 
@@ -26173,7 +26172,7 @@ msgstr ""
 msgid "ASCII-art video output"
 msgstr "Art видео извеждане ASCII"
 
-#: modules/video_output/androidsurface.c:54
+#: modules/video_output/androidsurface.c:57
 #, fuzzy
 msgid "Android Surface video output"
 msgstr "Извеждане на видеото в полутонове на сивото"
@@ -27087,19 +27086,16 @@ msgid "Mosaic Tiles"
 msgstr "Мост на мозайка"
 
 #: share/lua/http/dialogs/offset_window.html:68
-#: share/lua/http/dialogs/offset_window.html:69
 #, fuzzy
 msgid "Playback Rate"
 msgstr "Възпроизвеждане"
 
 #: share/lua/http/dialogs/offset_window.html:72
-#: share/lua/http/dialogs/offset_window.html:73
 #, fuzzy
 msgid "Audio Delay"
 msgstr "Увеличаване задържането на аудиото"
 
 #: share/lua/http/dialogs/offset_window.html:76
-#: share/lua/http/dialogs/offset_window.html:77
 #, fuzzy
 msgid "Subtitle Delay"
 msgstr "Задържане на субтитри"
@@ -27110,68 +27106,57 @@ msgid "Time:"
 msgstr "Време"
 
 #: share/lua/http/index.html:26 share/lua/http/mobile_browse.html:25
-#: share/lua/http/mobile_equalizer.html:25 share/lua/http/mobile.html:25
-#: share/lua/http/mobile_view.html:25
+#: share/lua/http/mobile_equalizer.html:25 share/lua/http/mobile_view.html:25
 #, fuzzy
 msgid "VLC media player - Web Interface"
 msgstr "VLC media player"
 
-#: share/lua/http/index.html:234
-#, fuzzy
-msgid "Viewer"
-msgstr "Изглед"
-
-#: share/lua/http/index.html:237
+#: share/lua/http/index.html:248
 msgid "Loading flowplayer..."
 msgstr ""
 
-#: share/lua/http/index.html:237
+#: share/lua/http/index.html:248
 msgid "If nothing appears, check your internet connection."
 msgstr ""
 
-#: share/lua/http/index.html:243
-#, fuzzy
-msgid "Library"
-msgstr "Медия библиотека"
-
-#: share/lua/http/index.html:264
+#: share/lua/http/index.html:259
 msgid ""
 "By creating a stream, the <i>Main Controls</i> will operate the stream "
 "instead of the main interface."
 msgstr ""
 
-#: share/lua/http/index.html:265
+#: share/lua/http/index.html:260
 msgid ""
 "The stream will be created using default settings, for more advanced "
 "configuration, or to modify the default settings, select the button to the "
 "right: <i>Manage Streams</i>"
 msgstr ""
 
-#: share/lua/http/index.html:269
+#: share/lua/http/index.html:264
 msgid ""
 "Once the stream is created, the <i>Media Viewer</i> window will display the "
 "stream."
 msgstr ""
 
-#: share/lua/http/index.html:270
+#: share/lua/http/index.html:265
 msgid ""
 "Volume will be controlled by the player, and not the <i>Main Controls</i>."
 msgstr ""
 
-#: share/lua/http/index.html:273
+#: share/lua/http/index.html:268
 msgid ""
 "The current playing item will be streamed. If there is no currently playing "
 "item, the first selected item from the <i>Library</i> will be the subject of "
 "the stream."
 msgstr ""
 
-#: share/lua/http/index.html:276
+#: share/lua/http/index.html:271
 msgid ""
 "To stop the stream and resume normal controls, click the <i>Open Stream</i> "
 "button again."
 msgstr ""
 
-#: share/lua/http/index.html:279
+#: share/lua/http/index.html:274
 msgid "Are you sure you wish to create the stream ?"
 msgstr ""
 
@@ -27394,8 +27379,9 @@ msgid "MPEG-TS"
 msgstr ""
 
 #: modules/gui/qt4/ui/profiles.h:463
+#, fuzzy
 msgid "MPEG-PS"
-msgstr ""
+msgstr "Демултиплекскор MPEG-PS"
 
 #: modules/gui/qt4/ui/profiles.h:464
 msgid "WAV"
@@ -27406,20 +27392,23 @@ msgid "Webm"
 msgstr ""
 
 #: modules/gui/qt4/ui/profiles.h:466
+#, fuzzy
 msgid "ASF/WMV"
-msgstr ""
+msgstr "Демултиплексор ASF/WMV"
 
 #: modules/gui/qt4/ui/profiles.h:467
+#, fuzzy
 msgid "Ogg/Ogm"
-msgstr ""
+msgstr "Мултиплексор Ogg/OGM"
 
 #: modules/gui/qt4/ui/profiles.h:468
 msgid "RAW"
 msgstr ""
 
 #: modules/gui/qt4/ui/profiles.h:469
+#, fuzzy
 msgid "MPEG 1"
-msgstr ""
+msgstr " Формат MPEG 1"
 
 #: modules/gui/qt4/ui/profiles.h:470
 msgid "FLV"
@@ -27430,8 +27419,9 @@ msgid "AVI"
 msgstr ""
 
 #: modules/gui/qt4/ui/profiles.h:472
+#, fuzzy
 msgid "MP4/MOV"
-msgstr ""
+msgstr "Мултиплексор MP4/MOV"
 
 #: modules/gui/qt4/ui/profiles.h:473
 msgid "MJPEG"
@@ -27567,8 +27557,9 @@ msgid "Enable Time-Stretching audio"
 msgstr "Запазване тоналността на звука при промяна на скоростта"
 
 #: modules/gui/qt4/ui/sprefs_audio.h:443
+#, fuzzy
 msgid "Dolby Surround:"
-msgstr ""
+msgstr "Откриване на Dolby Surround"
 
 #: modules/gui/qt4/ui/sprefs_audio.h:444
 msgid "Replay gain mode:"
@@ -27651,8 +27642,9 @@ msgid "RTP over RTSP (TCP)"
 msgstr "Използване на RTP над RTSP (TCP)"
 
 #: modules/gui/qt4/ui/sprefs_input.h:360
+#, fuzzy
 msgid "Live555 stream transport"
-msgstr ""
+msgstr "Извеждане на потока във файл"
 
 #: modules/gui/qt4/ui/sprefs_input.h:361
 msgid "Default caching policy"
@@ -27699,6 +27691,7 @@ msgid "Pause on the last frame of a video"
 msgstr "Пауза на последния кадър на видеото"
 
 #: modules/gui/qt4/ui/sprefs_interface.h:532
+#, fuzzy
 msgid "File extensions association"
 msgstr "Асоцииране на файлове"
 
@@ -27946,8 +27939,9 @@ msgstr "Черен слот"
 
 #: modules/gui/qt4/ui/video_effects.h:1353
 #: modules/gui/qt4/ui/video_effects.h:1370
+#, fuzzy
 msgid "..."
-msgstr ""
+msgstr "Добавяне..."
 
 #: modules/gui/qt4/ui/video_effects.h:1358
 msgid "full"
@@ -28053,8 +28047,7 @@ msgstr "Мултиплексор:"
 msgid "AAAA; "
 msgstr ""
 
-#: modules/gui/qt4/ui/vlm.h:299 share/lua/http/index.html:247
-#: share/lua/http/dialogs/stream_window.html:60
+#: modules/gui/qt4/ui/vlm.h:299
 msgid "Loop"
 msgstr "Повторение на плейлист"
 
@@ -28062,164 +28055,147 @@ msgstr "Повторение на плейлист"
 msgid "Media Manager List"
 msgstr "Управление на списъка с медии"
 
-#: share/lua/http/mobile_browse.html:45
-#: share/lua/http/dialogs/browse_window.html:37
-msgid "Media Browser"
-msgstr "Преглед на медия"
+#~ msgid "Clear Menu"
+#~ msgstr "Изчистване на менюто"
 
-#: share/lua/http/index.html:177
 #, fuzzy
-msgid "No"
-msgstr "Не"
+#~ msgid "Fullscreen controller width toggle"
+#~ msgstr "Панел с регулатори при цял екран"
 
-#: share/lua/http/index.html:207 share/lua/http/mobile.html:75
+#~ msgid "RTSP host address"
+#~ msgstr "Хост адрес на RTSP"
+
+#~ msgid ""
+#~ "This defines the address, port and path the RTSP VOD server will listen "
+#~ "on.\n"
+#~ "Syntax is address:port/path. The default is to listen on all interfaces "
+#~ "(address 0.0.0.0), on port 554, with no path.\n"
+#~ "To listen only on the local interface, use \"localhost\" as address."
+#~ msgstr ""
+#~ "Определяне на адреса, порта и пътя, който ще следи RTSP VOD сървъра.\n"
+#~ " Пише се адрес:порт/път. По подразбиране следи на всички интерфейси "
+#~ "(адрес 0.0.0.0), на порт 554, без път.\n"
+#~ " За да следи само на локален интерфейс, използвайте \"localhost\" като "
+#~ "адрес."
+
 #, fuzzy
-msgid "Full Screen"
-msgstr "На цял екран"
+#~ msgid "Viewer"
+#~ msgstr "Изглед"
 
-#: share/lua/http/index.html:208 share/lua/http/mobile.html:77
 #, fuzzy
-msgid "Easy Stream"
-msgstr "Поток"
+#~ msgid "Library"
+#~ msgstr "Медия библиотека"
 
-#: share/lua/http/index.html:211
-msgid "Hide / Show Library"
-msgstr ""
+#~ msgid "Media Browser"
+#~ msgstr "Преглед на медия"
 
-#: share/lua/http/index.html:212
-msgid "Hide / Show Viewer"
-msgstr ""
-
-#: share/lua/http/index.html:213 share/lua/http/index.html:266
-#: share/lua/http/dialogs/stream_window.html:69
 #, fuzzy
-msgid "Manage Streams"
-msgstr "Поток"
+#~ msgid "No"
+#~ msgstr "Не"
 
-#: share/lua/http/index.html:214 share/lua/http/dialogs/offset_window.html:67
 #, fuzzy
-msgid "Track Synchronisation"
-msgstr "Синхронизация на пътечка"
+#~ msgid "Full Screen"
+#~ msgstr "На цял екран"
 
-#: share/lua/http/index.html:216 share/lua/http/dialogs/batch_window.html:26
 #, fuzzy
-msgid "VLM Batch Commands"
-msgstr "Команди"
+#~ msgid "Easy Stream"
+#~ msgstr "Поток"
 
-#: share/lua/http/index.html:227 share/lua/http/mobile.html:101
 #, fuzzy
-msgid "Seek Time"
-msgstr "Начало на възпроизвеждане"
+#~ msgid "Manage Streams"
+#~ msgstr "Поток"
 
-#: share/lua/http/index.html:249
 #, fuzzy
-msgid "Empty Playlist"
-msgstr "Плейлист"
+#~ msgid "Track Synchronisation"
+#~ msgstr "Синхронизация на пътечка"
 
-#: share/lua/http/index.html:250
 #, fuzzy
-msgid "Queue Selected"
-msgstr "Изтриване на избраното"
+#~ msgid "VLM Batch Commands"
+#~ msgstr "Команди"
 
-#: share/lua/http/index.html:251
 #, fuzzy
-msgid "Play Selected"
-msgstr "Скорост на възпроизвеждане"
+#~ msgid "Seek Time"
+#~ msgstr "Начало на възпроизвеждане"
 
-#: share/lua/http/index.html:252
 #, fuzzy
-msgid "Refresh List"
-msgstr "Обновяване"
+#~ msgid "Empty Playlist"
+#~ msgstr "Плейлист"
 
-#: share/lua/http/mobile_equalizer.html:60
-#: share/lua/http/dialogs/equalizer_window.html:47
 #, fuzzy
-msgid "Graphical Equalizer"
-msgstr "Графичен Еквалайзер"
+#~ msgid "Queue Selected"
+#~ msgstr "Изтриване на избраното"
 
-#: share/lua/http/view.html:26
 #, fuzzy
-msgid "VLC media player - Flash Viewer"
-msgstr "VLC media player"
+#~ msgid "Play Selected"
+#~ msgstr "Скорост на възпроизвеждане"
 
-#: share/lua/http/view.html:65
 #, fuzzy
-msgid "Streaming Output"
-msgstr "Извеждане на поток"
+#~ msgid "Refresh List"
+#~ msgstr "Обновяване"
 
-#: share/lua/http/dialogs/create_stream.html:135
 #, fuzzy
-msgid "Create Stream"
-msgstr "Поток по подразбиране"
+#~ msgid "Graphical Equalizer"
+#~ msgstr "Графичен Еквалайзер"
 
-#: share/lua/http/dialogs/create_stream.html:359
 #, fuzzy
-msgid "Media File"
-msgstr "Аудио файлове"
+#~ msgid "VLC media player - Flash Viewer"
+#~ msgstr "VLC media player"
 
-#: share/lua/http/dialogs/create_stream.html:360
 #, fuzzy
-msgid "Capture Screen"
-msgstr "Устройство за захващане"
+#~ msgid "Streaming Output"
+#~ msgstr "Извеждане на поток"
 
-#: share/lua/http/dialogs/error_window.html:8
-#: share/lua/http/dialogs/equalizer_window.html:22
-#: share/lua/http/dialogs/stream_window.html:16
 #, fuzzy
-msgid "Close"
-msgstr "Затвори"
+#~ msgid "Create Stream"
+#~ msgstr "Поток по подразбиране"
 
-#: share/lua/http/dialogs/error_window.html:16
 #, fuzzy
-msgid "Error!"
-msgstr "Грешка"
+#~ msgid "Media File"
+#~ msgstr "Аудио файлове"
 
-#: share/lua/http/dialogs/mosaic_window.html:93
-#: share/lua/http/dialogs/stream_window.html:71
 #, fuzzy
-msgid "Create Mosaic"
-msgstr "Добавяне"
+#~ msgid "Capture Screen"
+#~ msgstr "Устройство за захващане"
 
-#: share/lua/http/dialogs/stream_config_window.html:8
-#: share/lua/http/dialogs/stream_window.html:26
-msgid "Okay"
-msgstr ""
-
-#: share/lua/http/dialogs/stream_config_window.html:21
-#: share/lua/http/dialogs/stream_window.html:80
 #, fuzzy
-msgid "Stream Input Configuration"
-msgstr "Конфигурация на високоговорителя"
+#~ msgid "Close"
+#~ msgstr "Затвори"
 
-#: share/lua/http/dialogs/stream_window.html:61
 #, fuzzy
-msgid "Remove Stream"
-msgstr "Изтриване на избраното"
+#~ msgid "Error!"
+#~ msgstr "Грешка"
 
-#: share/lua/http/dialogs/stream_window.html:70
 #, fuzzy
-msgid "Create New Stream"
-msgstr "Създаване на нов профил"
+#~ msgid "Create Mosaic"
+#~ msgstr "Добавяне"
 
-#: share/lua/http/dialogs/stream_window.html:72
 #, fuzzy
-msgid "Delete All Streams"
-msgstr "Изтриване на всички отметки"
+#~ msgid "Stream Input Configuration"
+#~ msgstr "Конфигурация на високоговорителя"
 
-#: share/lua/http/dialogs/stream_window.html:73
 #, fuzzy
-msgid "Configure Stream Defaults"
-msgstr "Настройки на клавишните комбинации"
+#~ msgid "Remove Stream"
+#~ msgstr "Изтриване на избраното"
 
-#: share/lua/http/dialogs/stream_window.html:74
 #, fuzzy
-msgid "Refresh Streams"
-msgstr "Време на обновяване"
+#~ msgid "Create New Stream"
+#~ msgstr "Създаване на нов профил"
 
-#: share/lua/http/dialogs/browse_window.html:17
 #, fuzzy
-msgid "Enqueue"
-msgstr "Изчакване на опашка"
+#~ msgid "Delete All Streams"
+#~ msgstr "Изтриване на всички отметки"
+
+#, fuzzy
+#~ msgid "Configure Stream Defaults"
+#~ msgstr "Настройки на клавишните комбинации"
+
+#, fuzzy
+#~ msgid "Refresh Streams"
+#~ msgstr "Време на обновяване"
+
+#, fuzzy
+#~ msgid "Enqueue"
+#~ msgstr "Изчакване на опашка"
 
 #~ msgid "Left rear"
 #~ msgstr "Заден ляв"
