@@ -2,12 +2,12 @@ dnl Autoconf settings for vlc
 
 AC_COPYRIGHT([Copyright 2002-2011 VLC authors and VideoLAN])
 
-AC_INIT(vlc, 1.2.0-pre3)
+AC_INIT(vlc, 1.2.0-rc1)
 VERSION_MAJOR=1
 VERSION_MINOR=2
 VERSION_REVISION=0
 VERSION_EXTRA=0
-VERSION_DEV=pre3
+VERSION_DEV=rc1
 
 PKGDIR="vlc"
 AC_SUBST(PKGDIR)
@@ -4164,7 +4164,7 @@ dnl
 dnl  Stuff used by the program
 dnl
 VERSION_MESSAGE="${VERSION} ${CODENAME}"
-COPYRIGHT_MESSAGE="Copyright © ${COPYRIGHT_YEARS} the VideoLAN team"
+COPYRIGHT_MESSAGE="Copyright © ${COPYRIGHT_YEARS} VLC authors and VideoLAN"
 AC_DEFINE_UNQUOTED(VERSION_MESSAGE, "${VERSION_MESSAGE}", [Simple version string])
 AC_DEFINE_UNQUOTED(COPYRIGHT_MESSAGE, "${COPYRIGHT_MESSAGE}", [Copyright string])
 AC_DEFINE_UNQUOTED(COPYRIGHT_YEARS, "${COPYRIGHT_YEARS}", [The copyright years])
