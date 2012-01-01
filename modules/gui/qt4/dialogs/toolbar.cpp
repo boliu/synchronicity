@@ -449,6 +449,10 @@ WidgetListing::WidgetListing( intf_thread_t *p_intf, QWidget *_parent )
             widget = new AspectRatioComboBox( p_intf );
             widgetItem->setText( qtr("Aspect ratio") );
             break;
+        case SPEED_LABEL:
+            widget = new SpeedLabel( p_intf, this );
+            widgetItem->setText( qtr("Playback speed") );
+            break;
         default:
             msg_Warn( p_intf, "This should not happen %i", i );
             break;
