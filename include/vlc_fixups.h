@@ -183,10 +183,7 @@ int fsync (int fd);
 
 /* dirent.h */
 #ifndef HAVE_DIRFD
-#if defined(__APPLE__) || defined(__OS2__)
-#undef dirfd
-#endif
-int dirfd (DIR *);
+int (dirfd) (DIR *);
 #endif
 
 #ifndef HAVE_FDOPENDIR
