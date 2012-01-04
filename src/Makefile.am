@@ -293,6 +293,7 @@ SOURCES_libvlc_other = \
 	posix/filesystem.c \
 	network/poll.c \
 	posix/thread.c \
+	posix/plugin.c \
 	posix/specific.c \
 	$(NULL)
 
