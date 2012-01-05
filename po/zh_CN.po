@@ -1,10 +1,10 @@
 # Translation to Simplified Chinese.
-# Copyright (C) 2008-2010 the VideoLAN team
+# Copyright (C) 2008-2011 the VideoLAN team
 # This file is distributed under the same license as the VLC package.
 #
 # Yoyo <admin@wisestudio.org>, 2008.
 # Wei Mingzhi <whistler@openoffice.org>, 2009.
-# Dean Lee <xslidian@gmail.com>, 2010.
+# Dean Lee <xslidian@gmail.com>, 2010-2011.
 #
 msgid ""
 msgstr ""
@@ -2866,7 +2866,6 @@ msgid "RTSP server address"
 msgstr "RTSP 服务器地址"
 
 #: src/libvlc-module.c:925
-#, fuzzy
 msgid ""
 "This defines the address the RTSP server will listen on, along with the base "
 "path of the RTSP VOD media. Syntax is address/path. By default, the server "
@@ -2874,8 +2873,9 @@ msgid ""
 "127.0.0.1) or a host name (e.g. localhost) to restrict them to a specific "
 "network interface."
 msgstr ""
-"服务器默认会监听所有本地 IP 地址。指定 IP 地址 (如 ::1 或 127.0.0.1) 或主机"
-"名 (如 localhost) 可限制特定的网络界面。"
+"可定义 RTSP 服务器将监听的地址，以及 RTSP VOD 媒体的基准路径。语法为 地址/路"
+"径。服务器默认会监听所有本地 IP 地址。指定 IP 地址 (如 ::1 或 127.0.0.1) 或主"
+"机名 (如 localhost) 可限制特定的网络界面。"
 
 #: src/libvlc-module.c:931
 msgid "HTTP server port"
@@ -5922,7 +5922,6 @@ msgid "No video or audio device selected."
 msgstr "未选定视频或音频设备。"
 
 #: modules/access/dshow/dshow.cpp:602
-#, fuzzy
 msgid "VLC cannot open ANY capture device.Check the error log for details."
 msgstr "VLC 无法打开任何捕获设备。请检查错误日志以获取详情。"
 
@@ -15999,7 +15998,6 @@ msgid "Load subtitles file:"
 msgstr "载入字幕文件:"
 
 #: modules/gui/macosx/open.m:307
-#, fuzzy
 msgid "Override parameters"
 msgstr "覆盖参数"
 
@@ -17799,14 +17797,12 @@ msgstr ""
 "如果播放列表为空则打开一个媒体"
 
 #: modules/gui/qt4/components/controller.hpp:111
-#, fuzzy
 msgid "Previous / Backward"
-msgstr "上一个/快退"
+msgstr "上一个 / 快退"
 
 #: modules/gui/qt4/components/controller.hpp:111
-#, fuzzy
 msgid "Next / Forward"
-msgstr "下一个/快进"
+msgstr "下一个 / 快进"
 
 #: modules/gui/qt4/components/controller.hpp:112
 msgid "De-Fullscreen"
@@ -17839,19 +17835,16 @@ msgid "Step forward"
 msgstr "向前步进"
 
 #: modules/gui/qt4/components/controller.hpp:115
-#, fuzzy
 msgid "Loop / Repeat"
-msgstr "循环/重复模式"
+msgstr "循环 / 重复模式"
 
 #: modules/gui/qt4/components/controller.hpp:116
-#, fuzzy
 msgid "Open subtitles"
 msgstr "打开字幕"
 
 #: modules/gui/qt4/components/controller.hpp:116
-#, fuzzy
 msgid "Dock fullscreen controller"
-msgstr "显示全屏控制器"
+msgstr "全屏控制器停靠"
 
 #: modules/gui/qt4/components/controller.hpp:119
 msgid "Stop playback"
@@ -18499,9 +18492,8 @@ msgid "Configure Hotkeys"
 msgstr "设置热键"
 
 #: modules/gui/qt4/components/simple_preferences.cpp:948
-#, fuzzy
 msgid "File associations"
-msgstr "文件扩展名关联"
+msgstr "文件关联"
 
 #: modules/gui/qt4/components/simple_preferences.cpp:957
 #: modules/gui/qt4/dialogs_provider.hpp:42
@@ -19240,9 +19232,8 @@ msgid "Advanced Buttons"
 msgstr "高级按钮"
 
 #: modules/gui/qt4/dialogs/toolbar.cpp:442
-#, fuzzy
 msgid "Playback Buttons"
-msgstr "回放速率"
+msgstr "回放按钮"
 
 #: modules/gui/qt4/dialogs/vlm.cpp:73
 msgid "Broadcast"
@@ -19563,7 +19554,7 @@ msgstr "检查更新(&U)..."
 
 #: modules/gui/qt4/menus.cpp:803
 msgid "Sp&eed"
-msgstr ""
+msgstr "速度(&E)"
 
 #: modules/gui/qt4/menus.cpp:809
 msgid "&Faster"
@@ -26751,7 +26742,6 @@ msgid "Pause on the last frame of a video"
 msgstr "在视频最后一帧处暂停"
 
 #: modules/gui/qt4/ui/sprefs_interface.h:532
-#, fuzzy
 msgid "File extensions association"
 msgstr "文件扩展名关联"
 
@@ -29593,8 +29583,9 @@ msgstr "媒体管理器列表"
 #~ msgid "Go to Chapter"
 #~ msgstr "转到章节"
 
+#, fuzzy
 #~ msgid "Speed"
-#~ msgstr "速度"
+#~ msgstr "Speex"
 
 #~ msgid "VLC media player: Open Media Files"
 #~ msgstr "VLC 媒体播放器: 打开媒体文件"
