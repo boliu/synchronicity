@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: vlc\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2011-12-28 03:13+0100\n"
-"PO-Revision-Date: 2011-12-10 08:06+0300\n"
+"PO-Revision-Date: 2011-12-28 22:38+0300\n"
 "Last-Translator: Alexander LAW <exclusion@gmail.com>\n"
 "Language-Team: Russian <translators@videolan.org>\n"
 "Language: ru\n"
@@ -526,7 +526,7 @@ msgstr "Информация о медиа-файле"
 
 #: include/vlc_intf_strings.h:56
 msgid "&Codec Information"
-msgstr "Информация кодека"
+msgstr "Информация о кодеке"
 
 #: include/vlc_intf_strings.h:57
 msgid "&Messages"
@@ -3046,7 +3046,6 @@ msgid "RTSP server address"
 msgstr "Адрес RTSP-сервера"
 
 #: src/libvlc-module.c:925
-#, fuzzy
 msgid ""
 "This defines the address the RTSP server will listen on, along with the base "
 "path of the RTSP VOD media. Syntax is address/path. By default, the server "
@@ -3054,10 +3053,11 @@ msgid ""
 "127.0.0.1) or a host name (e.g. localhost) to restrict them to a specific "
 "network interface."
 msgstr ""
-"По умолчанию сервер будет принимать подключение по всем локальным IP-"
-"адресам. Если вы хотите ограничиться определённым сетевым интерфейсом, "
-"укажите IP-адрес (например ::1 или 127.0.0.1) или имя узла (например, "
-"localhost)."
+"Здесь определяется адрес, к которому будет привязан RTSP-сервер, а также "
+"базовый путь медиа-ресурса RTSP VOD. Синтаксис параметра: адрес/путь. По "
+"умолчанию сервер будет принимать подключение по всем локальным IP-адресам. "
+"Если вы хотите ограничиться определённым сетевым интерфейсом, укажите IP-"
+"адрес (например ::1 или 127.0.0.1) или имя узла (например, localhost)."
 
 #: src/libvlc-module.c:931
 msgid "HTTP server port"
@@ -6213,7 +6213,6 @@ msgid "No video or audio device selected."
 msgstr "Не выделено ни одного видео- или аудио-устройства."
 
 #: modules/access/dshow/dshow.cpp:602
-#, fuzzy
 msgid "VLC cannot open ANY capture device.Check the error log for details."
 msgstr ""
 "Не удаётся обнаружить какое-либо устройство захвата. В журнал ошибок "
@@ -16702,7 +16701,6 @@ msgid "Load subtitles file:"
 msgstr "Загрузить файл субтитров:"
 
 #: modules/gui/macosx/open.m:307
-#, fuzzy
 msgid "Override parameters"
 msgstr "Переопределить параметры"
 
@@ -18555,14 +18553,12 @@ msgstr ""
 "Если плейлист пуст, открыть файл"
 
 #: modules/gui/qt4/components/controller.hpp:111
-#, fuzzy
 msgid "Previous / Backward"
-msgstr "Предыдущий/Назад"
+msgstr "Предыдущий / Назад"
 
 #: modules/gui/qt4/components/controller.hpp:111
-#, fuzzy
 msgid "Next / Forward"
-msgstr "Следующий/Вперёд"
+msgstr "Следующий / Вперёд"
 
 #: modules/gui/qt4/components/controller.hpp:112
 msgid "De-Fullscreen"
@@ -18595,19 +18591,16 @@ msgid "Step forward"
 msgstr "Шаг вперёд"
 
 #: modules/gui/qt4/components/controller.hpp:115
-#, fuzzy
 msgid "Loop / Repeat"
-msgstr "Режим повтора"
+msgstr "Цикл / Повторение"
 
 #: modules/gui/qt4/components/controller.hpp:116
-#, fuzzy
 msgid "Open subtitles"
-msgstr "Открыть субтитры..."
+msgstr "Открыть субтитры"
 
 #: modules/gui/qt4/components/controller.hpp:116
-#, fuzzy
 msgid "Dock fullscreen controller"
-msgstr "Панель в полноэкранном режиме"
+msgstr "Прикрепить панель полноэкранного режима"
 
 #: modules/gui/qt4/components/controller.hpp:119
 msgid "Stop playback"
@@ -19263,7 +19256,6 @@ msgid "Configure Hotkeys"
 msgstr "Конфигурация горячих клавиш"
 
 #: modules/gui/qt4/components/simple_preferences.cpp:948
-#, fuzzy
 msgid "File associations"
 msgstr "Привязки файлов"
 
@@ -19565,9 +19557,9 @@ msgid ""
 "platform.\n"
 "\n"
 msgstr ""
-"Медиа-проигрыватель VLC - это бесплатный проигрыватель, кодировщик, вещающая "
-"программа, которая может воспроизводить: файлы, CD, DVD, сетевые источники, "
-"захватывать изображение с карт и многое другое!\n"
+"Медиа-проигрыватель VLC - это бесплатный проигрыватель, кодировщик и "
+"потоковый сервер, который может воспроизводить файлы, CD, DVD, сетевые "
+"источники, захватывать изображение и многое другое!\n"
 "VLC использует собственные кодеки и работает на большинстве популярных "
 "платформ.\n"
 "\n"
@@ -20011,9 +20003,8 @@ msgid "Advanced Buttons"
 msgstr "Дополнительные кнопки"
 
 #: modules/gui/qt4/dialogs/toolbar.cpp:442
-#, fuzzy
 msgid "Playback Buttons"
-msgstr "Скорость воспроизведения"
+msgstr "Кнопки воспроизведения"
 
 #: modules/gui/qt4/dialogs/vlm.cpp:73
 msgid "Broadcast"
@@ -20134,7 +20125,7 @@ msgstr "Открыть устройство захвата..."
 
 #: modules/gui/qt4/menus.cpp:355
 msgid "&Open (advanced)..."
-msgstr "&Открыть (с параметрами)..."
+msgstr "&Открыть источник..."
 
 #: modules/gui/qt4/menus.cpp:359
 msgid "Open &Location from clipboard"
@@ -20150,11 +20141,11 @@ msgstr "Конвертировать/сохранить..."
 
 #: modules/gui/qt4/menus.cpp:377
 msgid "&Stream..."
-msgstr "&Поток..."
+msgstr "&Передавать..."
 
 #: modules/gui/qt4/menus.cpp:382
 msgid "Quit at the end of playlist"
-msgstr "Выйти по окончании плейлиста"
+msgstr "Выйти, отыграв плейлист"
 
 #: modules/gui/qt4/menus.cpp:389
 msgid "Close to systray"
@@ -20334,7 +20325,7 @@ msgstr "Проверить обновления..."
 
 #: modules/gui/qt4/menus.cpp:803
 msgid "Sp&eed"
-msgstr ""
+msgstr "&Скорость"
 
 #: modules/gui/qt4/menus.cpp:809
 msgid "&Faster"
@@ -27833,7 +27824,6 @@ msgid "Pause on the last frame of a video"
 msgstr "Пауза на последнем кадре видео"
 
 #: modules/gui/qt4/ui/sprefs_interface.h:532
-#, fuzzy
 msgid "File extensions association"
 msgstr "Привязки файлов"
 
