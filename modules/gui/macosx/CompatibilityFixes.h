@@ -1,7 +1,7 @@
 /*****************************************************************************
  * CompatibilityFixes.h: MacOS X interface module
  *****************************************************************************
- * Copyright (C) 2011 VLC authors and VideoLAN
+ * Copyright (C) 2011-2012 VLC authors and VideoLAN
  * $Id$
  *
  * Authors: Felix Paul Kühne <fkuehne -at- videolan -dot- org>
@@ -57,14 +57,21 @@ enum {
     NSApplicationPresentationDisableHideApplication     = (1 <<  8),
     NSApplicationPresentationDisableMenuBarTransparency = (1 <<  9)
 };
+typedef NSUInteger NSApplicationPresentationOptions;
 
 #if defined( __LP64__) && !defined(__POWER__) /* Bug in the 10.5.sdk in 64bits */
 extern OSErr UpdateSystemActivity(UInt8 activity);
 #define UsrActivity 1
 #endif
 
+/* the following is just to fix warnings, not for implementation! */
 @interface NSMenu (IntroducedInSnowLeopard)
 - (void)removeAllItems;
+@end
+
+@interface NSApplication (IntroducedInSnowLeopard)
+- (NSApplicationPresentationOptions)presentationOptions;
+- (void)setPresentationOptions:(NSApplicationPresentationOptions)newOptions;
 @end
 #endif
 
