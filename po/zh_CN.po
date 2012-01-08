@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vlc 1.x.x\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2011-12-28 03:13+0100\n"
+"POT-Creation-Date: 2012-01-08 22:05+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Dean Lee <xslidian@gmail.com>\n"
 "Language-Team: Simplified Chinese <xslidian+vlc@gmail.com>\n"
@@ -341,9 +341,9 @@ msgstr "VLC 的视频点播执行"
 #: include/vlc_config_cat.h:175 src/libvlc-module.c:2149
 #: src/playlist/engine.c:217 modules/demux/playlist/playlist.c:63
 #: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:302
-#: modules/gui/qt4/components/controller.hpp:112
-#: modules/gui/qt4/components/playlist/playlist.cpp:198
-#: modules/gui/qt4/components/playlist/selector.cpp:188
+#: modules/gui/qt4/components/controller.hpp:116
+#: modules/gui/qt4/components/playlist/playlist.cpp:191
+#: modules/gui/qt4/components/playlist/selector.cpp:187
 #: modules/gui/qt4/dialogs/playlist.cpp:41 modules/gui/qt4/menus.cpp:1084
 #: modules/gui/qt4/ui/sprefs_interface.h:529
 msgid "Playlist"
@@ -395,7 +395,7 @@ msgid "Advanced settings"
 msgstr "高级设置"
 
 #: include/vlc_config_cat.h:198 modules/gui/macosx/open.m:122
-#: modules/gui/macosx/open.m:476 modules/gui/macosx/simple_prefs.m:253
+#: modules/gui/macosx/open.m:486 modules/gui/macosx/simple_prefs.m:253
 #: modules/gui/qt4/ui/sprefs_input.h:356
 msgid "Network"
 msgstr "网络"
@@ -520,8 +520,8 @@ msgstr "关于(&A)"
 #: modules/gui/macosx/MainMenu.m:255 modules/gui/macosx/MainMenu.m:352
 #: modules/gui/macosx/MainMenu.m:359 modules/gui/macosx/MainMenu.m:791
 #: modules/gui/macosx/MainMenu.m:792 modules/gui/macosx/MainMenu.m:793
-#: modules/gui/macosx/MainWindow.m:1003 modules/gui/macosx/playlist.m:466
-#: modules/gui/qt4/components/controller.hpp:110
+#: modules/gui/macosx/MainWindow.m:1076 modules/gui/macosx/playlist.m:466
+#: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/dialogs/vlm.cpp:550 modules/gui/qt4/menus.cpp:786
 #: modules/gui/qt4/ui/open.h:253
 msgid "Play"
@@ -567,12 +567,12 @@ msgstr "串流..."
 msgid "Save..."
 msgstr "保存..."
 
-#: include/vlc_intf_strings.h:80 modules/gui/macosx/CoreInteraction.m:354
+#: include/vlc_intf_strings.h:80 modules/gui/macosx/CoreInteraction.m:371
 #: modules/gui/macosx/MainMenu.m:269 modules/gui/macosx/MainMenu.m:1127
 msgid "Repeat All"
 msgstr "全部重复"
 
-#: include/vlc_intf_strings.h:81 modules/gui/macosx/CoreInteraction.m:371
+#: include/vlc_intf_strings.h:81 modules/gui/macosx/CoreInteraction.m:388
 #: modules/gui/macosx/MainMenu.m:268 modules/gui/macosx/MainMenu.m:1120
 msgid "Repeat One"
 msgstr "重复一次"
@@ -583,12 +583,12 @@ msgstr "无重复"
 
 #: include/vlc_intf_strings.h:84 src/libvlc-module.c:1509
 #: modules/gui/macosx/MainMenu.m:267 modules/gui/macosx/MainMenu.m:1113
-#: modules/gui/qt4/components/controller.hpp:114
-#: modules/gui/qt4/components/controller.hpp:127
+#: modules/gui/qt4/components/controller.hpp:118
+#: modules/gui/qt4/components/controller.hpp:131
 msgid "Random"
 msgstr "随机顺序"
 
-#: include/vlc_intf_strings.h:85 modules/gui/macosx/CoreInteraction.m:335
+#: include/vlc_intf_strings.h:85 modules/gui/macosx/CoreInteraction.m:352
 msgid "Random Off"
 msgstr "随机关"
 
@@ -624,7 +624,7 @@ msgstr "保存播放列表为文件(&F)..."
 msgid "Open Play&list..."
 msgstr "打开播放列表(&L)..."
 
-#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:133
+#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:135
 #: modules/gui/qt4/components/preferences_widgets.cpp:1300
 msgid "Search"
 msgstr "搜索"
@@ -643,7 +643,7 @@ msgid ""
 "them."
 msgstr "某些选项是可用的，但是已被隐藏。请单击 \"高级选项\" 来查看它们。"
 
-#: include/vlc_intf_strings.h:110 modules/gui/macosx/VideoEffects.m:142
+#: include/vlc_intf_strings.h:110
 msgid "Image clone"
 msgstr "图像克隆"
 
@@ -661,7 +661,7 @@ msgid ""
 "be magnified."
 msgstr "缩放一部分视频。您可以选择要缩放图像的哪一部分。"
 
-#: include/vlc_intf_strings.h:117 modules/gui/macosx/VideoEffects.m:139
+#: include/vlc_intf_strings.h:117 modules/gui/macosx/VideoEffects.m:140
 #: modules/gui/qt4/ui/video_effects.h:1394
 msgid "Waves"
 msgstr "波浪"
@@ -821,8 +821,8 @@ msgstr "立体声"
 #: modules/audio_filter/channel_mixer/mono.c:94 modules/codec/dvbsub.c:102
 #: modules/codec/subsdec.c:160 modules/codec/zvbi.c:77
 #: modules/control/gestures.c:97 modules/gui/fbosd.c:163
-#: modules/gui/macosx/VideoEffects.m:88 modules/gui/macosx/VideoEffects.m:150
-#: modules/gui/macosx/VideoEffects.m:169
+#: modules/gui/macosx/VideoEffects.m:89 modules/gui/macosx/VideoEffects.m:149
+#: modules/gui/macosx/VideoEffects.m:171
 #: modules/video_filter/audiobargraph_v.c:73 modules/video_filter/logo.c:79
 #: modules/video_filter/marq.c:136 modules/video_filter/mosaic.c:170
 #: modules/video_filter/osdmenu.c:84 modules/video_filter/rss.c:173
@@ -837,7 +837,8 @@ msgstr "左"
 #: modules/audio_filter/channel_mixer/mono.c:94 modules/codec/dvbsub.c:102
 #: modules/codec/subsdec.c:160 modules/codec/zvbi.c:77
 #: modules/control/gestures.c:97 modules/gui/fbosd.c:163
-#: modules/gui/macosx/VideoEffects.m:89 modules/gui/macosx/VideoEffects.m:152
+#: modules/gui/macosx/VideoEffects.m:90 modules/gui/macosx/VideoEffects.m:151
+#: modules/gui/macosx/VideoEffects.m:173
 #: modules/video_filter/audiobargraph_v.c:73 modules/video_filter/logo.c:79
 #: modules/video_filter/marq.c:136 modules/video_filter/mosaic.c:170
 #: modules/video_filter/osdmenu.c:84 modules/video_filter/rss.c:173
@@ -1309,11 +1310,11 @@ msgstr "标题 %i%s"
 msgid "Chapter %i"
 msgstr "章节 %i"
 
-#: src/input/var.c:376 modules/gui/qt4/dialogs/toolbar.cpp:395
+#: src/input/var.c:376 modules/gui/qt4/dialogs/toolbar.cpp:399
 msgid "Next chapter"
 msgstr "下一个章节"
 
-#: src/input/var.c:381 modules/gui/qt4/dialogs/toolbar.cpp:385
+#: src/input/var.c:381 modules/gui/qt4/dialogs/toolbar.cpp:389
 msgid "Previous chapter"
 msgstr "上一个章节"
 
@@ -1711,7 +1712,7 @@ msgstr "这允许以稍低或稍高的速度播放音频而不影响音频音调
 #: modules/access/dshow/dshow.cpp:91 modules/access/dtv/access.c:103
 #: modules/access/dtv/access.c:137 modules/access/v4l2/video.c:171
 #: modules/codec/avcodec/avcodec.c:71 modules/codec/kate.c:202
-#: modules/gui/macosx/open.m:214
+#: modules/gui/macosx/open.m:233
 #: modules/gui/qt4/components/interface_widgets.cpp:299
 #: modules/text_renderer/freetype.c:175
 msgid "None"
@@ -1823,7 +1824,7 @@ msgstr ""
 #: src/libvlc-module.c:415 src/libvlc-module.c:493
 #: modules/audio_filter/channel_mixer/mono.c:96 modules/codec/dvbsub.c:102
 #: modules/codec/subsdec.c:160 modules/codec/zvbi.c:77 modules/gui/fbosd.c:163
-#: modules/gui/macosx/VideoEffects.m:148
+#: modules/gui/macosx/VideoEffects.m:147 modules/gui/macosx/VideoEffects.m:169
 #: modules/video_filter/audiobargraph_v.c:73 modules/video_filter/logo.c:79
 #: modules/video_filter/marq.c:136 modules/video_filter/mosaic.c:170
 #: modules/video_filter/osdmenu.c:84 modules/video_filter/rss.c:173
@@ -1832,8 +1833,8 @@ msgstr "居中"
 
 #: src/libvlc-module.c:415 src/libvlc-module.c:493 modules/codec/dvbsub.c:102
 #: modules/codec/zvbi.c:77 modules/gui/fbosd.c:163
-#: modules/gui/macosx/VideoEffects.m:87 modules/gui/macosx/VideoEffects.m:154
-#: modules/gui/macosx/VideoEffects.m:168
+#: modules/gui/macosx/VideoEffects.m:88 modules/gui/macosx/VideoEffects.m:153
+#: modules/gui/macosx/VideoEffects.m:175
 #: modules/video_filter/audiobargraph_v.c:73 modules/video_filter/logo.c:79
 #: modules/video_filter/marq.c:136 modules/video_filter/mosaic.c:170
 #: modules/video_filter/osdmenu.c:84 modules/video_filter/rss.c:173
@@ -1845,7 +1846,8 @@ msgstr "上"
 
 #: src/libvlc-module.c:415 src/libvlc-module.c:493 modules/codec/dvbsub.c:102
 #: modules/codec/zvbi.c:77 modules/gui/fbosd.c:163
-#: modules/gui/macosx/VideoEffects.m:90 modules/gui/macosx/VideoEffects.m:156
+#: modules/gui/macosx/VideoEffects.m:91 modules/gui/macosx/VideoEffects.m:155
+#: modules/gui/macosx/VideoEffects.m:177
 #: modules/video_filter/audiobargraph_v.c:73 modules/video_filter/logo.c:79
 #: modules/video_filter/marq.c:136 modules/video_filter/mosaic.c:170
 #: modules/video_filter/osdmenu.c:84 modules/video_filter/rss.c:173
@@ -1855,7 +1857,7 @@ msgstr "下"
 
 #: src/libvlc-module.c:416 src/libvlc-module.c:494 modules/codec/dvbsub.c:103
 #: modules/codec/zvbi.c:78 modules/gui/fbosd.c:164
-#: modules/gui/macosx/VideoEffects.m:158
+#: modules/gui/macosx/VideoEffects.m:157 modules/gui/macosx/VideoEffects.m:179
 #: modules/video_filter/audiobargraph_v.c:74 modules/video_filter/logo.c:80
 #: modules/video_filter/marq.c:137 modules/video_filter/mosaic.c:171
 #: modules/video_filter/osdmenu.c:85 modules/video_filter/rss.c:174
@@ -1864,7 +1866,7 @@ msgstr "左上"
 
 #: src/libvlc-module.c:416 src/libvlc-module.c:494 modules/codec/dvbsub.c:103
 #: modules/codec/zvbi.c:78 modules/gui/fbosd.c:164
-#: modules/gui/macosx/VideoEffects.m:160
+#: modules/gui/macosx/VideoEffects.m:159 modules/gui/macosx/VideoEffects.m:181
 #: modules/video_filter/audiobargraph_v.c:74 modules/video_filter/logo.c:80
 #: modules/video_filter/marq.c:137 modules/video_filter/mosaic.c:171
 #: modules/video_filter/osdmenu.c:85 modules/video_filter/rss.c:174
@@ -1873,7 +1875,7 @@ msgstr "右上"
 
 #: src/libvlc-module.c:416 src/libvlc-module.c:494 modules/codec/dvbsub.c:103
 #: modules/codec/zvbi.c:78 modules/gui/fbosd.c:164
-#: modules/gui/macosx/VideoEffects.m:162
+#: modules/gui/macosx/VideoEffects.m:161 modules/gui/macosx/VideoEffects.m:183
 #: modules/video_filter/audiobargraph_v.c:74 modules/video_filter/logo.c:80
 #: modules/video_filter/marq.c:137 modules/video_filter/mosaic.c:171
 #: modules/video_filter/osdmenu.c:85 modules/video_filter/rss.c:174
@@ -1882,7 +1884,7 @@ msgstr "左下"
 
 #: src/libvlc-module.c:416 src/libvlc-module.c:494 modules/codec/dvbsub.c:103
 #: modules/codec/zvbi.c:78 modules/gui/fbosd.c:164
-#: modules/gui/macosx/VideoEffects.m:164
+#: modules/gui/macosx/VideoEffects.m:163 modules/gui/macosx/VideoEffects.m:185
 #: modules/video_filter/audiobargraph_v.c:74 modules/video_filter/logo.c:80
 #: modules/video_filter/marq.c:137 modules/video_filter/mosaic.c:171
 #: modules/video_filter/osdmenu.c:85 modules/video_filter/rss.c:174
@@ -2572,7 +2574,7 @@ msgstr "快速寻找"
 msgid "Favor speed over precision while seeking"
 msgstr "跳转时相对于准确度更偏好速度"
 
-#: src/libvlc-module.c:769
+#: src/libvlc-module.c:769 modules/gui/qt4/dialogs/toolbar.cpp:454
 msgid "Playback speed"
 msgstr "回放速度"
 
@@ -3606,7 +3608,7 @@ msgstr "这些设置被绑定为全局的 VLC 按键，也被称作 \"热键\"�
 #: modules/gui/macosx/MainMenu.m:299 modules/gui/macosx/MainMenu.m:366
 #: modules/gui/macosx/MainMenu.m:1162 modules/gui/macosx/MainMenu.m:1182
 #: modules/gui/macosx/simple_prefs.m:294
-#: modules/gui/qt4/components/controller.hpp:111
+#: modules/gui/qt4/components/controller.hpp:115
 #: modules/gui/qt4/ui/sprefs_video.h:344
 msgid "Fullscreen"
 msgstr "全屏幕"
@@ -3623,7 +3625,7 @@ msgstr "离开全屏幕"
 msgid "Select the hotkey to use to leave fullscreen state."
 msgstr "选择用于离开全屏幕状态的热键。"
 
-#: src/libvlc-module.c:1332 modules/gui/macosx/MainWindow.m:124
+#: src/libvlc-module.c:1332 modules/gui/macosx/MainWindow.m:126
 msgid "Play/Pause"
 msgstr "播放/暂停"
 
@@ -3648,8 +3650,8 @@ msgid "Select the hotkey to use to play."
 msgstr "选择用于播放的热键。"
 
 #: src/libvlc-module.c:1338 modules/gui/macosx/MainMenu.m:263
-#: modules/gui/qt4/components/controller.hpp:111
-#: modules/gui/qt4/components/controller.hpp:121
+#: modules/gui/qt4/components/controller.hpp:115
+#: modules/gui/qt4/components/controller.hpp:125
 msgid "Faster"
 msgstr "较快"
 
@@ -3658,8 +3660,8 @@ msgid "Select the hotkey to use for fast forward playback."
 msgstr "选择由于快进播放的热键。"
 
 #: src/libvlc-module.c:1340 modules/gui/macosx/MainMenu.m:261
-#: modules/gui/qt4/components/controller.hpp:111
-#: modules/gui/qt4/components/controller.hpp:121
+#: modules/gui/qt4/components/controller.hpp:115
+#: modules/gui/qt4/components/controller.hpp:125
 msgid "Slower"
 msgstr "较慢"
 
@@ -3688,7 +3690,7 @@ msgstr "较慢 (好)"
 #: modules/gui/macosx/MainMenu.m:354 modules/gui/macosx/MainMenu.m:362
 #: modules/gui/macosx/MainMenu.m:1107 modules/gui/macosx/wizard.m:311
 #: modules/gui/macosx/wizard.m:323 modules/gui/macosx/wizard.m:1601
-#: modules/gui/qt4/components/controller.hpp:115 modules/notify/notify.c:341
+#: modules/gui/qt4/components/controller.hpp:119 modules/notify/notify.c:341
 #: modules/gui/qt4/ui/sout.h:327 modules/gui/qt4/ui/sout.h:338
 #: modules/gui/qt4/ui/streampanel.h:182
 msgid "Next"
@@ -3702,7 +3704,7 @@ msgstr "选择用于跳到下一个播放列表项目的热键。"
 #: modules/gui/macosx/about.m:224 modules/gui/macosx/MainMenu.m:265
 #: modules/gui/macosx/MainMenu.m:355 modules/gui/macosx/MainMenu.m:361
 #: modules/gui/macosx/MainMenu.m:1106
-#: modules/gui/qt4/components/controller.hpp:115 modules/notify/notify.c:339
+#: modules/gui/qt4/components/controller.hpp:119 modules/notify/notify.c:339
 #: modules/gui/qt4/ui/sout.h:337 modules/gui/qt4/ui/sout.h:346
 msgid "Previous"
 msgstr "上一个"
@@ -3713,8 +3715,8 @@ msgstr "选择用于跳到上一个播放列表项目的热键。"
 
 #: src/libvlc-module.c:1352 modules/gui/macosx/MainMenu.m:256
 #: modules/gui/macosx/MainMenu.m:353 modules/gui/macosx/MainMenu.m:360
-#: modules/gui/macosx/MainMenu.m:1098 modules/gui/macosx/MainWindow.m:127
-#: modules/gui/qt4/components/controller.hpp:110
+#: modules/gui/macosx/MainMenu.m:1098 modules/gui/macosx/MainWindow.m:129
+#: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/dialogs/vlm.cpp:556 modules/notify/xosd.c:234
 #: modules/gui/qt4/ui/streampanel.h:181
 msgid "Stop"
@@ -3726,9 +3728,9 @@ msgstr "选择用于停止播放的热键。"
 
 #: src/libvlc-module.c:1354 modules/gui/fbosd.c:128 modules/gui/fbosd.c:196
 #: modules/gui/macosx/bookmarks.m:93 modules/gui/macosx/bookmarks.m:102
-#: modules/gui/macosx/MainWindow.m:137 modules/gui/macosx/VideoEffects.m:146
-#: modules/video_filter/marq.c:157 modules/video_filter/rss.c:200
-#: modules/gui/qt4/ui/sprefs_subtitles.h:274
+#: modules/gui/macosx/MainWindow.m:139 modules/gui/macosx/VideoEffects.m:145
+#: modules/gui/macosx/VideoEffects.m:167 modules/video_filter/marq.c:157
+#: modules/video_filter/rss.c:200 modules/gui/qt4/ui/sprefs_subtitles.h:274
 #: modules/gui/qt4/ui/video_effects.h:1362
 msgid "Position"
 msgstr "位置"
@@ -3842,8 +3844,8 @@ msgid "Long jump length, in seconds."
 msgstr "长跳转长度，以秒为单位。"
 
 #: src/libvlc-module.c:1395 modules/control/hotkeys.c:183
-#: modules/gui/qt4/components/controller.hpp:114
-#: modules/gui/qt4/components/controller.hpp:126 modules/gui/qt4/menus.cpp:914
+#: modules/gui/qt4/components/controller.hpp:118
+#: modules/gui/qt4/components/controller.hpp:130 modules/gui/qt4/menus.cpp:914
 #: modules/gui/skins2/commands/cmd_quit.cpp:44
 msgid "Quit"
 msgstr "退出"
@@ -3892,7 +3894,7 @@ msgstr "激活"
 msgid "Select the key to activate selected item in DVD menus."
 msgstr "选择用于激活 DVD 菜单中选中项目的按键。"
 
-#: src/libvlc-module.c:1407 modules/gui/qt4/dialogs/toolbar.cpp:390
+#: src/libvlc-module.c:1407 modules/gui/qt4/dialogs/toolbar.cpp:394
 msgid "Go to the DVD menu"
 msgstr "转到 DVD 菜单"
 
@@ -3951,7 +3953,7 @@ msgstr "选择用于减小音量的按键。"
 #: src/libvlc-module.c:1421 modules/access/v4l2/video.c:189
 #: modules/gui/macosx/MainMenu.m:284 modules/gui/macosx/MainMenu.m:356
 #: modules/gui/macosx/MainMenu.m:365 modules/gui/macosx/MainMenu.m:1152
-#: modules/gui/macosx/MainWindow.m:135 modules/gui/qt4/menus.cpp:578
+#: modules/gui/macosx/MainWindow.m:137 modules/gui/qt4/menus.cpp:578
 msgid "Mute"
 msgstr "静音"
 
@@ -4240,8 +4242,8 @@ msgid "Takes a video snapshot and writes it to disk."
 msgstr "获取一张视频截图并将其写入到磁盘。"
 
 #: src/libvlc-module.c:1503 modules/gui/macosx/MainMenu.m:257
-#: modules/gui/qt4/components/controller.hpp:113
-#: modules/gui/qt4/components/controller.hpp:124
+#: modules/gui/qt4/components/controller.hpp:117
+#: modules/gui/qt4/components/controller.hpp:128
 #: modules/stream_out/record.c:60
 msgid "Record"
 msgstr "录制"
@@ -4369,7 +4371,7 @@ msgstr "在可用的音频设备之间切换"
 #: src/libvlc-module.c:1694 src/video_output/vout_intf.c:309
 #: modules/gui/macosx/MainMenu.m:301 modules/gui/macosx/MainMenu.m:367
 #: modules/gui/macosx/MainMenu.m:1161
-#: modules/gui/qt4/components/controller.hpp:112
+#: modules/gui/qt4/components/controller.hpp:116
 msgid "Snapshot"
 msgstr "截图"
 
@@ -4564,7 +4566,7 @@ msgstr "正在下载..."
 #: modules/gui/macosx/wizard.m:322
 #: modules/gui/qt4/components/open_panels.cpp:1281
 #: modules/gui/qt4/components/preferences_widgets.cpp:1536
-#: modules/gui/qt4/components/sout/profile_selector.cpp:253
+#: modules/gui/qt4/components/sout/profile_selector.cpp:255
 msgid "Cancel"
 msgstr "取消"
 
@@ -5590,7 +5592,7 @@ msgid ""
 "Audio sampling rate (in hertz) for DeckLink captures. 0 disables audio input."
 msgstr "DeckLink 捕获的音频采样率 (Hz)。0 可禁用音频输入。"
 
-#: modules/access/decklink.cpp:65 modules/access/dshow/dshow.cpp:201
+#: modules/access/decklink.cpp:65 modules/access/dshow/dshow.cpp:200
 msgid "Number of audio channels"
 msgstr "声道数量"
 
@@ -5650,7 +5652,7 @@ msgstr "模拟"
 
 #: modules/access/decklink.cpp:91 modules/access/linsys/linsys_hdsdi.c:78
 #: modules/access/linsys/linsys_sdi.c:73 modules/demux/rawvid.c:59
-#: modules/stream_out/switcher.c:98
+#: modules/gui/qt4/dialogs/toolbar.cpp:450 modules/stream_out/switcher.c:98
 msgid "Aspect ratio"
 msgstr "高宽比"
 
@@ -5794,38 +5796,34 @@ msgstr "调谐器频率"
 msgid "This overrides the channel. Measured in Hz."
 msgstr "这将覆盖声道设置。单位为 Hz。"
 
-#: modules/access/dshow/dshow.cpp:171 modules/access/v4l2/video.c:60
-#: modules/stream_out/standard.c:96
-msgid "Standard"
-msgstr "标准"
+#: modules/access/dshow/dshow.cpp:171
+#: modules/gui/qt4/components/open_panels.cpp:785
+msgid "Video standard"
+msgstr "视频标准"
 
 #: modules/access/dshow/dshow.cpp:172
-msgid "Video standard (Default, SECAM_D, PAL_B, NTSC_M, etc...)."
-msgstr "视频标准 (默认、SECAM_D、PAL_B、NTSC_M 等)。"
-
-#: modules/access/dshow/dshow.cpp:173
 msgid "Tuner country code"
 msgstr "调谐器国家代码"
 
-#: modules/access/dshow/dshow.cpp:175
+#: modules/access/dshow/dshow.cpp:174
 msgid ""
 "Set the tuner country code that establishes the current channel-to-frequency "
 "mapping (0 means default)."
 msgstr "设置用于确认当前频道映射频率的国家代码 (0 表示默认)。"
 
-#: modules/access/dshow/dshow.cpp:177
+#: modules/access/dshow/dshow.cpp:176
 msgid "Tuner input type"
 msgstr "调谐器输入类型"
 
-#: modules/access/dshow/dshow.cpp:179
+#: modules/access/dshow/dshow.cpp:178
 msgid "Select the tuner input type (Cable/Antenna)."
 msgstr "选择调谐器输入类型 (电缆/天线)。"
 
-#: modules/access/dshow/dshow.cpp:180
+#: modules/access/dshow/dshow.cpp:179
 msgid "Video input pin"
 msgstr "视频输入 pin"
 
-#: modules/access/dshow/dshow.cpp:182
+#: modules/access/dshow/dshow.cpp:181
 msgid ""
 "Select the video input source, such as composite, s-video, or tuner. Since "
 "these settings are hardware-specific, you should find good settings in the "
@@ -5836,35 +5834,35 @@ msgstr ""
 "该在 \"设备设置\" 区域查找较佳的设置。并在这里使用这些数值。-1 表示设置将不会"
 "被更改。"
 
-#: modules/access/dshow/dshow.cpp:186
+#: modules/access/dshow/dshow.cpp:185
 msgid "Audio input pin"
 msgstr "音频输入 pin"
 
-#: modules/access/dshow/dshow.cpp:188
+#: modules/access/dshow/dshow.cpp:187
 msgid "Select the audio input source. See the \"video input\" option."
 msgstr "选择音频输入源。请查看 \"视频输入\" 选项。"
 
-#: modules/access/dshow/dshow.cpp:189
+#: modules/access/dshow/dshow.cpp:188
 msgid "Video output pin"
 msgstr "视频输出 pin"
 
-#: modules/access/dshow/dshow.cpp:191
+#: modules/access/dshow/dshow.cpp:190
 msgid "Select the video output type. See the \"video input\" option."
 msgstr "选择视频输出类型。请查看 \"视频输入\" 选项。"
 
-#: modules/access/dshow/dshow.cpp:192
+#: modules/access/dshow/dshow.cpp:191
 msgid "Audio output pin"
 msgstr "音频输入 pin"
 
-#: modules/access/dshow/dshow.cpp:194
+#: modules/access/dshow/dshow.cpp:193
 msgid "Select the audio output type. See the \"video input\" option."
 msgstr "请选择音频输出类型。查看 \"视频输入\" 选项。"
 
-#: modules/access/dshow/dshow.cpp:196
+#: modules/access/dshow/dshow.cpp:195
 msgid "AM Tuner mode"
 msgstr "AM 调谐器模式"
 
-#: modules/access/dshow/dshow.cpp:198
+#: modules/access/dshow/dshow.cpp:197
 msgid ""
 "AM Tuner mode. Can be one of Default (0), TV (1),AM Radio (2), FM Radio (3) "
 "or DSS (4)."
@@ -5872,65 +5870,65 @@ msgstr ""
 "AM 调谐器模式。可以被设置为默认 (0), TV (1),AM 广播 (2), FM 广播 (3) 或 DSS "
 "(4)。"
 
-#: modules/access/dshow/dshow.cpp:203
+#: modules/access/dshow/dshow.cpp:202
 msgid ""
 "Select audio input format with the given number of audio channels (if non 0)"
 msgstr "按给予声道数选择音频输入格式 (如果非  0)"
 
-#: modules/access/dshow/dshow.cpp:205
+#: modules/access/dshow/dshow.cpp:204
 #: modules/stream_out/transcode/transcode.c:93
 msgid "Audio sample rate"
 msgstr "音频采样率"
 
-#: modules/access/dshow/dshow.cpp:207
+#: modules/access/dshow/dshow.cpp:206
 msgid "Select audio input format with the given sample rate (if non 0)"
 msgstr "使用给予的采样率选择音频输入格式 (如果非 0)"
 
-#: modules/access/dshow/dshow.cpp:209
+#: modules/access/dshow/dshow.cpp:208
 msgid "Audio bits per sample"
 msgstr "音频每采样未"
 
-#: modules/access/dshow/dshow.cpp:211
+#: modules/access/dshow/dshow.cpp:210
 msgid "Select audio input format with the given bits/sample (if non 0)"
 msgstr "使用给予的位/采样选择音频输入格式 (如果非 0)"
 
-#: modules/access/dshow/dshow.cpp:223
+#: modules/access/dshow/dshow.cpp:222
 msgid "DirectShow"
 msgstr "DirectShow"
 
-#: modules/access/dshow/dshow.cpp:224 modules/access/dshow/dshow.cpp:306
+#: modules/access/dshow/dshow.cpp:223 modules/access/dshow/dshow.cpp:305
 msgid "DirectShow input"
 msgstr "DirectShow 输入"
 
-#: modules/access/dshow/dshow.cpp:230 modules/access/dshow/dshow.cpp:235
+#: modules/access/dshow/dshow.cpp:229 modules/access/dshow/dshow.cpp:234
 #: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:138
 #: modules/audio_output/waveout.c:99 modules/video_output/msw/directx.c:109
 msgid "Refresh list"
 msgstr "刷新列表"
 
-#: modules/access/dshow/dshow.cpp:231 modules/access/dshow/dshow.cpp:236
+#: modules/access/dshow/dshow.cpp:230 modules/access/dshow/dshow.cpp:235
 msgid "Configure"
 msgstr "设置"
 
-#: modules/access/dshow/dshow.cpp:527 modules/access/dshow/dshow.cpp:601
-#: modules/access/dshow/dshow.cpp:1048 modules/access/dshow/dshow.cpp:1101
+#: modules/access/dshow/dshow.cpp:526 modules/access/dshow/dshow.cpp:600
+#: modules/access/dshow/dshow.cpp:1047 modules/access/dshow/dshow.cpp:1100
 msgid "Capture failed"
 msgstr "捕获失败"
 
-#: modules/access/dshow/dshow.cpp:528
+#: modules/access/dshow/dshow.cpp:527
 msgid "No video or audio device selected."
 msgstr "未选定视频或音频设备。"
 
-#: modules/access/dshow/dshow.cpp:602
+#: modules/access/dshow/dshow.cpp:601
 msgid "VLC cannot open ANY capture device.Check the error log for details."
 msgstr "VLC 无法打开任何捕获设备。请检查错误日志以获取详情。"
 
-#: modules/access/dshow/dshow.cpp:1049
+#: modules/access/dshow/dshow.cpp:1048
 #, c-format
 msgid "VLC cannot use the device \"%s\", because its type is not supported."
 msgstr "VLC 不能使用设备 \"%s\"，因为不支持其类型。"
 
-#: modules/access/dshow/dshow.cpp:1102
+#: modules/access/dshow/dshow.cpp:1101
 #, c-format
 msgid "The capture device \"%s\" does not support the required parameters."
 msgstr "捕获设备 \"%s\" 不支持请求的参数。"
@@ -6529,8 +6527,8 @@ msgid "File input"
 msgstr "文件输入"
 
 #: modules/access/fs.c:53 modules/access_output/file.c:73
-#: modules/audio_output/file.c:112 modules/gui/macosx/open.m:120
-#: modules/gui/macosx/open.m:468 modules/gui/macosx/output.m:142
+#: modules/audio_output/file.c:109 modules/gui/macosx/open.m:120
+#: modules/gui/macosx/open.m:478 modules/gui/macosx/output.m:142
 #: modules/gui/macosx/output.m:230 modules/gui/macosx/output.m:369
 #: modules/gui/qt4/dialogs/plugins.cpp:555 modules/gui/qt4/dialogs/sout.cpp:76
 #: modules/gui/qt4/dialogs/sout.cpp:154
@@ -7386,7 +7384,7 @@ msgid "Bitmask that will get used by the audio part of the card."
 msgstr "将被卡带使用的音频部分的位掩码。"
 
 #: modules/access/pvr.c:103 modules/access/vcdx/info.c:69
-#: modules/gui/macosx/MainWindow.m:134 modules/gui/qt4/dialogs/toolbar.cpp:358
+#: modules/gui/macosx/MainWindow.m:136 modules/gui/qt4/dialogs/toolbar.cpp:362
 #: modules/stream_out/raop.c:150 modules/gui/qt4/ui/sprefs_audio.h:431
 msgid "Volume"
 msgstr "音量"
@@ -7653,7 +7651,7 @@ msgid "Subscreen height"
 msgstr "子屏幕高度"
 
 #: modules/access/screen/screen.c:65 modules/access/screen/xcb.c:54
-#: modules/gui/macosx/open.m:197
+#: modules/gui/macosx/open.m:199
 msgid "Follow the mouse"
 msgstr "更随鼠标"
 
@@ -7675,8 +7673,8 @@ msgid "Screen Input"
 msgstr "屏幕输入"
 
 #: modules/access/screen/screen.c:88 modules/access/screen/xcb.c:65
-#: modules/gui/macosx/open.m:189 modules/gui/macosx/open.m:423
-#: modules/gui/macosx/open.m:1183 modules/gui/macosx/simple_prefs.m:541
+#: modules/gui/macosx/open.m:191 modules/gui/macosx/open.m:429
+#: modules/gui/macosx/open.m:1194 modules/gui/macosx/simple_prefs.m:541
 #: modules/gui/macosx/VideoView.m:114
 msgid "Screen"
 msgstr "屏幕"
@@ -7885,6 +7883,10 @@ msgstr "重置默认值"
 msgid "Video device (Default: /dev/video0)."
 msgstr "视频设备 (默认: /dev/video0)。"
 
+#: modules/access/v4l2/video.c:60 modules/stream_out/standard.c:96
+msgid "Standard"
+msgstr "标准"
+
 #: modules/access/v4l2/video.c:62
 msgid "Video standard (Default, SECAM, PAL, or NTSC)."
 msgstr "视频标准 (默认, SECAM, PAL, 或 NTSC)。"
@@ -7968,7 +7970,7 @@ msgid "Picture contrast or luma gain."
 msgstr "画面对比度或亮度增益。"
 
 #: modules/access/v4l2/video.c:100 modules/gui/macosx/VideoEffects.m:79
-#: modules/gui/macosx/VideoEffects.m:114
+#: modules/gui/macosx/VideoEffects.m:115
 #: modules/gui/qt4/ui/video_effects.h:1302
 #: modules/gui/qt4/ui/video_effects.h:1334
 msgid "Saturation"
@@ -8157,7 +8159,7 @@ msgstr "选择色彩效果。"
 msgid "Black & white"
 msgstr "黑白"
 
-#: modules/access/v4l2/video.c:172 modules/gui/macosx/VideoEffects.m:116
+#: modules/access/v4l2/video.c:172 modules/gui/macosx/VideoEffects.m:117
 #: modules/video_filter/sepia.c:64 modules/gui/qt4/ui/video_effects.h:1336
 msgid "Sepia"
 msgstr "深褐"
@@ -8376,7 +8378,7 @@ msgid "LID"
 msgstr "LID"
 
 #: modules/access/vcdx/info.c:54 modules/gui/macosx/open.m:121
-#: modules/gui/macosx/open.m:472
+#: modules/gui/macosx/open.m:482
 msgid "Disc"
 msgstr "光盘"
 
@@ -8803,7 +8805,7 @@ msgstr "用于弱音声道混合的音频滤镜"
 msgid "Sound Delay"
 msgstr "声音延迟"
 
-#: modules/audio_filter/chorus_flanger.c:78 modules/gui/macosx/open.m:308
+#: modules/audio_filter/chorus_flanger.c:78 modules/gui/macosx/open.m:314
 #: modules/stream_out/bridge.c:51 modules/stream_out/delay.c:54
 #: modules/video_filter/mosaic.c:154
 msgid "Delay"
@@ -9488,41 +9490,33 @@ msgstr "A/52 超过 S/PDIF"
 msgid "Output format"
 msgstr "输出格式"
 
-#: modules/audio_output/file.c:81
-msgid ""
-"One of \"u8\", \"s8\", \"u16\", \"s16\", \"u16_le\", \"s16_le\", \"u16_be\", "
-"\"s16_be\", \"fixed32\", \"float32\" or \"spdif\""
-msgstr ""
-"\"u8\", \"s8\", \"u16\", \"s16\", \"u16_le\", \"s16_le\", \"u16_be\", "
-"\"s16_be\", \"fixed32\", \"float32\" 或 \"spdif\" 中的一个"
-
-#: modules/audio_output/file.c:85
+#: modules/audio_output/file.c:82
 msgid "Number of output channels"
 msgstr "输出声道数"
 
-#: modules/audio_output/file.c:86
+#: modules/audio_output/file.c:83
 msgid ""
 "By default (0), all the channels of the incoming will be saved but you can "
 "restrict the number of channels here."
 msgstr "默认 (0) 所有输入声道都将被保存，但是您可以在这里限制声道数目。"
 
-#: modules/audio_output/file.c:89
+#: modules/audio_output/file.c:86
 msgid "Add WAVE header"
 msgstr "添加波形头部"
 
-#: modules/audio_output/file.c:90
+#: modules/audio_output/file.c:87
 msgid "Instead of writing a raw file, you can add a WAV header to the file."
 msgstr "您可以添加一个 WAV 头部到文件中而不是直接写入到一个原始文件。"
 
-#: modules/audio_output/file.c:107
+#: modules/audio_output/file.c:104
 msgid "Output file"
 msgstr "输出文件"
 
-#: modules/audio_output/file.c:108
+#: modules/audio_output/file.c:105
 msgid "File to which the audio samples will be written to. (\"-\" for stdout"
 msgstr "要写入音频采样的文件 (\"-\" 为标准输出"
 
-#: modules/audio_output/file.c:111
+#: modules/audio_output/file.c:108
 msgid "File audio output"
 msgstr "文件音频输出"
 
@@ -10855,11 +10849,11 @@ msgstr "PNG 视频解码器"
 msgid "QuickTime library decoder"
 msgstr "QuickTime 库解码器"
 
-#: modules/codec/rawvideo.c:71
+#: modules/codec/rawvideo.c:72
 msgid "Pseudo raw video decoder"
 msgstr "Pseudo raw 视频解码器"
 
-#: modules/codec/rawvideo.c:78
+#: modules/codec/rawvideo.c:79
 msgid "Pseudo raw video packetizer"
 msgstr "Pseudo raw 视频分包器"
 
@@ -11149,7 +11143,7 @@ msgid "MP3 fixed point audio encoder"
 msgstr "MP3 定点音频编码器"
 
 #: modules/codec/speex.c:57 modules/codec/speex.c:797
-#: modules/gui/macosx/open.m:175 modules/gui/macosx/VideoEffects.m:120
+#: modules/gui/macosx/open.m:175 modules/gui/macosx/VideoEffects.m:121
 #: modules/gui/qt4/ui/sprefs_video.h:359
 #: modules/gui/qt4/ui/video_effects.h:1328
 msgid "Mode"
@@ -12486,7 +12480,7 @@ msgstr "Teletext 页"
 msgid "Open the indicated Teletext page.Default page is index 100"
 msgstr "打开可能的 Teletext 页。默认的页是索引 100"
 
-#: modules/codec/zvbi.c:61 modules/gui/qt4/dialogs/toolbar.cpp:414
+#: modules/codec/zvbi.c:61 modules/gui/qt4/dialogs/toolbar.cpp:418
 msgid "Teletext transparency"
 msgstr "Teletext 透明度"
 
@@ -12544,16 +12538,16 @@ msgstr "dbus"
 msgid "D-Bus control interface"
 msgstr "D-Bus 控制界面"
 
-#: modules/control/dbus/dbus_root.c:77 modules/gui/macosx/MainWindow.m:247
-#: modules/gui/macosx/MainWindow.m:918 modules/gui/qt4/dialogs/help.cpp:99
-#: modules/gui/qt4/main_interface.cpp:957
-#: modules/gui/qt4/main_interface.cpp:961
-#: modules/gui/qt4/main_interface.cpp:1000
-#: modules/gui/qt4/main_interface.cpp:1002
-#: modules/gui/qt4/main_interface.cpp:1102
-#: modules/gui/qt4/main_interface.cpp:1119
-#: modules/gui/qt4/main_interface.cpp:1126
-#: modules/gui/qt4/main_interface.cpp:1149
+#: modules/control/dbus/dbus_root.c:77 modules/gui/macosx/MainWindow.m:248
+#: modules/gui/macosx/MainWindow.m:990 modules/gui/qt4/dialogs/help.cpp:99
+#: modules/gui/qt4/main_interface.cpp:973
+#: modules/gui/qt4/main_interface.cpp:977
+#: modules/gui/qt4/main_interface.cpp:1016
+#: modules/gui/qt4/main_interface.cpp:1018
+#: modules/gui/qt4/main_interface.cpp:1118
+#: modules/gui/qt4/main_interface.cpp:1135
+#: modules/gui/qt4/main_interface.cpp:1142
+#: modules/gui/qt4/main_interface.cpp:1165
 #: modules/video_output/xcb/window.c:313
 msgid "VLC media player"
 msgstr "VLC media player"
@@ -12621,8 +12615,8 @@ msgstr "音频控制"
 msgid "Position Control"
 msgstr "位置控制"
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1805
-#: modules/gui/macosx/intf.m:1974
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1808
+#: modules/gui/macosx/intf.m:1988
 msgid "Ignore"
 msgstr "忽略"
 
@@ -12866,7 +12860,7 @@ msgstr "正在打开"
 
 #: modules/control/rc.c:73 modules/gui/macosx/MainMenu.m:798
 #: modules/gui/macosx/MainMenu.m:799 modules/gui/macosx/MainMenu.m:800
-#: modules/gui/macosx/MainWindow.m:995 modules/gui/qt4/menus.cpp:794
+#: modules/gui/macosx/MainWindow.m:1068 modules/gui/qt4/menus.cpp:794
 #: modules/notify/xosd.c:238
 msgid "Pause"
 msgstr "暂停"
@@ -14009,7 +14003,7 @@ msgstr "音乐剪辑"
 msgid "Gospel"
 msgstr "圣经"
 
-#: modules/demux/mp4/id3genres.h:67 modules/gui/macosx/VideoEffects.m:118
+#: modules/demux/mp4/id3genres.h:67 modules/gui/macosx/VideoEffects.m:119
 msgid "Noise"
 msgstr "噪点"
 
@@ -14121,7 +14115,7 @@ msgstr "卡巴莱"
 msgid "New wave"
 msgstr "新潮"
 
-#: modules/demux/mp4/id3genres.h:95 modules/gui/macosx/VideoEffects.m:140
+#: modules/demux/mp4/id3genres.h:95 modules/gui/macosx/VideoEffects.m:141
 #: modules/video_filter/psychedelic.c:55
 #: modules/gui/qt4/ui/video_effects.h:1385
 msgid "Psychedelic"
@@ -14188,7 +14182,8 @@ msgid "Writer"
 msgstr "作词"
 
 #: modules/demux/mp4/mp4.c:967
-msgid "Composr"
+#, fuzzy
+msgid "Composer"
 msgstr "作曲"
 
 #: modules/demux/mp4/mp4.c:968
@@ -14196,8 +14191,8 @@ msgid "Producer"
 msgstr "监制"
 
 #: modules/demux/mp4/mp4.c:969 modules/gui/macosx/playlistinfo.m:381
-#: modules/gui/qt4/components/controller.hpp:115
-#: modules/gui/qt4/components/controller.hpp:127
+#: modules/gui/qt4/components/controller.hpp:119
+#: modules/gui/qt4/components/controller.hpp:131
 msgid "Information"
 msgstr "信息"
 
@@ -14765,7 +14760,7 @@ msgid "MPEG Transport Stream demuxer"
 msgstr "MPEG 传输流去复用器"
 
 #: modules/demux/ts.c:186 modules/gui/macosx/MainMenu.m:319
-#: modules/gui/macosx/MainMenu.m:1193 modules/gui/qt4/dialogs/toolbar.cpp:422
+#: modules/gui/macosx/MainMenu.m:1193 modules/gui/qt4/dialogs/toolbar.cpp:426
 msgid "Teletext"
 msgstr "电报"
 
@@ -14889,7 +14884,7 @@ msgstr ""
 "用于混合的新图像的透明值。默认是设置为完全不透明 (255)。(从 0 为完全透明到 "
 "255 为完全不透明)"
 
-#: modules/gui/fbosd.c:119 modules/gui/macosx/VideoEffects.m:145
+#: modules/gui/fbosd.c:119 modules/gui/macosx/VideoEffects.m:144
 #: modules/misc/logger.c:107 modules/video_filter/marq.c:86
 #: modules/gui/qt4/ui/video_effects.h:1363
 msgid "Text"
@@ -14951,8 +14946,8 @@ msgid "Font size, in pixels. Default is -1 (use default font size)."
 msgstr "以像素为单位的字体大小。默认是 -1 (使用默认字体大小)。"
 
 #: modules/gui/fbosd.c:142 modules/gui/macosx/VideoEffects.m:71
-#: modules/gui/macosx/VideoEffects.m:113 modules/gui/macosx/VideoEffects.m:128
-#: modules/gui/macosx/VideoEffects.m:131 modules/notify/xosd.c:83
+#: modules/gui/macosx/VideoEffects.m:114 modules/gui/macosx/VideoEffects.m:129
+#: modules/gui/macosx/VideoEffects.m:132 modules/notify/xosd.c:83
 #: modules/video_filter/colorthres.c:54 modules/video_filter/marq.c:122
 #: modules/video_filter/rss.c:154 modules/gui/qt4/ui/video_effects.h:1323
 #: modules/gui/qt4/ui/video_effects.h:1329
@@ -15059,6 +15054,7 @@ msgstr "启用动态范围压缩器"
 
 #: modules/gui/macosx/AudioEffects.m:78 modules/gui/macosx/AudioEffects.m:89
 #: modules/gui/macosx/TrackSynchronization.m:53
+#: modules/gui/macosx/VideoEffects.m:81
 #: modules/gui/qt4/dialogs/gototime.cpp:66
 msgid "Reset"
 msgstr "复位"
@@ -15139,7 +15135,7 @@ msgstr "移除"
 
 #: modules/gui/macosx/bookmarks.m:95 modules/gui/macosx/bookmarks.m:101
 #: modules/gui/qt4/dialogs/bookmarks.cpp:75
-#: modules/gui/qt4/dialogs/toolbar.cpp:374
+#: modules/gui/qt4/dialogs/toolbar.cpp:378
 msgid "Time"
 msgstr "时间"
 
@@ -15147,7 +15143,7 @@ msgstr "时间"
 #: modules/gui/macosx/bookmarks.m:218 modules/gui/macosx/bookmarks.m:268
 #: modules/gui/macosx/bookmarks.m:276 modules/gui/macosx/controls.m:53
 #: modules/gui/macosx/coredialogs.m:63 modules/gui/macosx/coredialogs.m:100
-#: modules/gui/macosx/coredialogs.m:158 modules/gui/macosx/open.m:318
+#: modules/gui/macosx/coredialogs.m:158 modules/gui/macosx/open.m:324
 #: modules/gui/macosx/output.m:138 modules/gui/macosx/playlistinfo.m:358
 #: modules/gui/macosx/simple_prefs.m:236 modules/gui/macosx/wizard.m:602
 #: modules/gui/macosx/wizard.m:665 modules/gui/macosx/wizard.m:1038
@@ -15235,11 +15231,11 @@ msgstr "清除"
 msgid "Show Details"
 msgstr "显示详细信息"
 
-#: modules/gui/macosx/CoreInteraction.m:326
+#: modules/gui/macosx/CoreInteraction.m:343
 msgid "Random On"
 msgstr "随机开"
 
-#: modules/gui/macosx/CoreInteraction.m:388
+#: modules/gui/macosx/CoreInteraction.m:405
 msgid "Repeat Off"
 msgstr "重复关"
 
@@ -15253,37 +15249,42 @@ msgid ""
 "panel)."
 msgstr "不要显示不需要用户操作的对话框 (关键信息与错误信息板)。"
 
-#: modules/gui/macosx/fspanel.m:436
+#: modules/gui/macosx/fspanel.m:437
 msgid "(no item is being played)"
 msgstr "(没有被播放的项目)"
 
-#: modules/gui/macosx/intf.m:649 modules/gui/qt4/dialogs/messages.cpp:75
+#: modules/gui/macosx/intf.m:660 modules/gui/qt4/dialogs/messages.cpp:75
 #: modules/gui/qt4/ui/messages_panel.h:141
 #: modules/gui/qt4/ui/messages_panel.h:146
 msgid "Messages"
 msgstr "消息"
 
-#: modules/gui/macosx/intf.m:650
+#: modules/gui/macosx/intf.m:661
 msgid "Open CrashLog..."
 msgstr "打开崩溃日志..."
 
-#: modules/gui/macosx/intf.m:651
+#: modules/gui/macosx/intf.m:662
 msgid "Save this Log..."
 msgstr "保存此记录..."
 
-#: modules/gui/macosx/intf.m:654
+#: modules/gui/macosx/intf.m:663
+#, fuzzy
+msgid "Live Update"
+msgstr "更新"
+
+#: modules/gui/macosx/intf.m:666
 msgid "Send"
 msgstr "发送"
 
-#: modules/gui/macosx/intf.m:655
+#: modules/gui/macosx/intf.m:667
 msgid "Don't Send"
 msgstr "不发送"
 
-#: modules/gui/macosx/intf.m:656 modules/gui/macosx/intf.m:657
+#: modules/gui/macosx/intf.m:668 modules/gui/macosx/intf.m:669
 msgid "VLC crashed previously"
 msgstr "VLC 上次崩溃了"
 
-#: modules/gui/macosx/intf.m:658
+#: modules/gui/macosx/intf.m:670
 msgid ""
 "Do you want to send details on the crash to VLC's development team?\n"
 "\n"
@@ -15296,61 +15297,61 @@ msgstr ""
 "如果您愿意，您可以输入几行文字，描述您在 VLC 崩溃之前做了什么，并附上其它有用"
 "的信息，如: 下载样本文件的链接、网络流的 URL ..."
 
-#: modules/gui/macosx/intf.m:659
+#: modules/gui/macosx/intf.m:671
 msgid "I agree to be possibly contacted about this bugreport."
 msgstr "我同意发送此错误报告。"
 
-#: modules/gui/macosx/intf.m:660
+#: modules/gui/macosx/intf.m:672
 msgid ""
 "Only your default E-Mail address will be submitted, including no further "
 "information."
 msgstr "仅会提交您的默认电子邮件地址，不会包含更多的信息。"
 
-#: modules/gui/macosx/intf.m:1685
+#: modules/gui/macosx/intf.m:1688
 msgid "Error when sending the Crash Report"
 msgstr "在发送崩溃报告时发生错误"
 
-#: modules/gui/macosx/intf.m:1776
+#: modules/gui/macosx/intf.m:1779
 msgid "No CrashLog found"
 msgstr "找不到崩溃日志"
 
-#: modules/gui/macosx/intf.m:1776 modules/gui/macosx/prefs.m:227
+#: modules/gui/macosx/intf.m:1779 modules/gui/macosx/prefs.m:227
 #: modules/gui/macosx/simple_prefs.m:693
 msgid "Continue"
 msgstr "继续"
 
-#: modules/gui/macosx/intf.m:1776
+#: modules/gui/macosx/intf.m:1779
 msgid "Couldn't find any trace of a previous crash."
 msgstr "找不到任何上次崩溃的痕迹。"
 
-#: modules/gui/macosx/intf.m:1803
+#: modules/gui/macosx/intf.m:1806
 msgid "Remove old preferences?"
 msgstr "要移除旧的参数吗?"
 
-#: modules/gui/macosx/intf.m:1804
+#: modules/gui/macosx/intf.m:1807
 msgid "We just found an older version of VLC's preferences files."
 msgstr "我们发现了一个旧版本的 VLC 参数文件。"
 
-#: modules/gui/macosx/intf.m:1805
+#: modules/gui/macosx/intf.m:1808
 msgid "Move To Trash and Relaunch VLC"
 msgstr "移动到回收站并重新启动 VLC"
 
-#: modules/gui/macosx/intf.m:1911
+#: modules/gui/macosx/intf.m:1925
 #, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr "VLC 调试记录 (%s).rtfd"
 
-#: modules/gui/macosx/intf.m:1972
+#: modules/gui/macosx/intf.m:1986
 msgid "Relaunch required"
 msgstr "需要重启"
 
-#: modules/gui/macosx/intf.m:1973
+#: modules/gui/macosx/intf.m:1987
 msgid ""
 "To make sure that VLC no longer listens to your media key events, it needs "
 "to be restarted."
 msgstr "要确保 VLC 不再监听您的媒体键事件，需要重新启动 VLC。"
 
-#: modules/gui/macosx/intf.m:1974
+#: modules/gui/macosx/intf.m:1988
 msgid "Relaunch VLC"
 msgstr "重新启动 VLC"
 
@@ -15694,44 +15695,44 @@ msgstr "减小音量"
 msgid "Lock Aspect Ratio"
 msgstr "锁定宽高比"
 
-#: modules/gui/macosx/MainWindow.m:125
+#: modules/gui/macosx/MainWindow.m:127
 msgid "Backward"
 msgstr "块退"
 
-#: modules/gui/macosx/MainWindow.m:126
+#: modules/gui/macosx/MainWindow.m:128
 msgid "Forward"
 msgstr "快进"
 
-#: modules/gui/macosx/MainWindow.m:128
+#: modules/gui/macosx/MainWindow.m:130
 msgid "Show/Hide Playlist"
 msgstr "显示/隐藏播放列表"
 
-#: modules/gui/macosx/MainWindow.m:129 modules/gui/qt4/dialogs/vlm.cpp:560
+#: modules/gui/macosx/MainWindow.m:131 modules/gui/qt4/dialogs/vlm.cpp:560
 msgid "Repeat"
 msgstr "重复"
 
-#: modules/gui/macosx/MainWindow.m:130
+#: modules/gui/macosx/MainWindow.m:132
 msgid "Shuffle"
 msgstr "随机"
 
-#: modules/gui/macosx/MainWindow.m:131 modules/gui/macosx/simple_prefs.m:221
+#: modules/gui/macosx/MainWindow.m:133 modules/gui/macosx/simple_prefs.m:221
 #: modules/gui/qt4/ui/sprefs_audio.h:440
 msgid "Effects"
 msgstr "效果"
 
-#: modules/gui/macosx/MainWindow.m:132
+#: modules/gui/macosx/MainWindow.m:134
 msgid "Toggle Fullscreen mode"
 msgstr "切换全屏模式"
 
-#: modules/gui/macosx/MainWindow.m:136
+#: modules/gui/macosx/MainWindow.m:138
 msgid "Full Volume"
 msgstr "最大音量"
 
-#: modules/gui/macosx/MainWindow.m:138
+#: modules/gui/macosx/MainWindow.m:140
 msgid "Open media..."
 msgstr "打开媒体..."
 
-#: modules/gui/macosx/MainWindow.m:139
+#: modules/gui/macosx/MainWindow.m:141
 msgid "Drop media here"
 msgstr "在此拖入媒体"
 
@@ -15780,22 +15781,22 @@ msgid "Media Resource Locator (MRL)"
 msgstr "媒体资源定位器 (MRL)"
 
 #: modules/gui/macosx/open.m:117 modules/gui/macosx/open.m:173
-#: modules/gui/macosx/open.m:620 modules/gui/macosx/open.m:892
-#: modules/gui/macosx/open.m:1112 modules/gui/macosx/open.m:1365
-#: modules/gui/qt4/components/controller.hpp:110
+#: modules/gui/macosx/open.m:630 modules/gui/macosx/open.m:903
+#: modules/gui/macosx/open.m:1123 modules/gui/macosx/open.m:1376
+#: modules/gui/qt4/components/controller.hpp:114
 msgid "Open"
 msgstr "打开"
 
-#: modules/gui/macosx/open.m:123 modules/gui/macosx/open.m:421
-#: modules/gui/macosx/open.m:480
+#: modules/gui/macosx/open.m:123 modules/gui/macosx/open.m:427
+#: modules/gui/macosx/open.m:490
 msgid "Capture"
 msgstr "捕获"
 
-#: modules/gui/macosx/open.m:126 modules/gui/macosx/open.m:302
+#: modules/gui/macosx/open.m:126 modules/gui/macosx/open.m:308
 msgid "Choose a file"
 msgstr "选择文件"
 
-#: modules/gui/macosx/open.m:128 modules/gui/macosx/open.m:306
+#: modules/gui/macosx/open.m:128 modules/gui/macosx/open.m:312
 #: modules/gui/macosx/output.m:145 modules/gui/macosx/prefs_widgets.m:1208
 #: modules/gui/macosx/simple_prefs.m:244 modules/gui/macosx/simple_prefs.m:299
 #: modules/gui/qt4/components/preferences_widgets.cpp:269
@@ -15815,7 +15816,7 @@ msgstr "目标传输代替作为一个文件"
 msgid "Play another media synchronously"
 msgstr "同时播放一个其它的媒体"
 
-#: modules/gui/macosx/open.m:132 modules/gui/macosx/open.m:305
+#: modules/gui/macosx/open.m:132 modules/gui/macosx/open.m:311
 #: modules/gui/macosx/simple_prefs.m:277 modules/gui/macosx/wizard.m:348
 #: modules/gui/macosx/wizard.m:416 modules/gui/qt4/ui/sprefs_interface.h:550
 msgid "Choose..."
@@ -15899,68 +15900,68 @@ msgstr "协议"
 msgid "Address"
 msgstr "地址"
 
-#: modules/gui/macosx/open.m:179 modules/gui/macosx/open.m:1008
-#: modules/gui/macosx/open.m:1066
+#: modules/gui/macosx/open.m:179 modules/gui/macosx/open.m:1019
+#: modules/gui/macosx/open.m:1077
 msgid "Unicast"
 msgstr "单播"
 
-#: modules/gui/macosx/open.m:180 modules/gui/macosx/open.m:1023
-#: modules/gui/macosx/open.m:1081
+#: modules/gui/macosx/open.m:180 modules/gui/macosx/open.m:1034
+#: modules/gui/macosx/open.m:1092
 msgid "Multicast"
 msgstr "多播"
 
-#: modules/gui/macosx/open.m:188 modules/gui/macosx/open.m:435
-#: modules/gui/macosx/open.m:1194
+#: modules/gui/macosx/open.m:188 modules/gui/macosx/open.m:441
+#: modules/gui/macosx/open.m:1205
 msgid "Capture Device"
 msgstr "捕获设备"
 
-#: modules/gui/macosx/open.m:191
+#: modules/gui/macosx/open.m:193
 msgid ""
 "This input allows you to save, stream or display your current screen "
 "contents."
 msgstr "此输入允许您保存、串流或显示您当前的屏幕内容。"
 
-#: modules/gui/macosx/open.m:192
+#: modules/gui/macosx/open.m:194
 msgid "Frames per Second:"
 msgstr "帧每秒:"
 
-#: modules/gui/macosx/open.m:193
+#: modules/gui/macosx/open.m:195
 msgid "Subscreen left:"
 msgstr "子屏幕最左位置:"
 
-#: modules/gui/macosx/open.m:194
+#: modules/gui/macosx/open.m:196
 msgid "Subscreen top:"
 msgstr "子屏幕最上位置:"
 
-#: modules/gui/macosx/open.m:195
+#: modules/gui/macosx/open.m:197
 msgid "Subscreen width:"
 msgstr "子屏幕宽度:"
 
-#: modules/gui/macosx/open.m:196
+#: modules/gui/macosx/open.m:198
 msgid "Subscreen height:"
 msgstr "子屏幕高度:"
 
-#: modules/gui/macosx/open.m:198
+#: modules/gui/macosx/open.m:200
 msgid "Current channel:"
 msgstr "当前的频道:"
 
-#: modules/gui/macosx/open.m:199
+#: modules/gui/macosx/open.m:201
 msgid "Previous Channel"
 msgstr "上一个频道"
 
-#: modules/gui/macosx/open.m:200
+#: modules/gui/macosx/open.m:202
 msgid "Next Channel"
 msgstr "下一个频道"
 
-#: modules/gui/macosx/open.m:201 modules/gui/macosx/open.m:1292
+#: modules/gui/macosx/open.m:203 modules/gui/macosx/open.m:1303
 msgid "Retrieving Channel Info..."
 msgstr "正在检索频道信息..."
 
-#: modules/gui/macosx/open.m:202
+#: modules/gui/macosx/open.m:204
 msgid "EyeTV is not launched"
 msgstr "EyeTV 未启动"
 
-#: modules/gui/macosx/open.m:203
+#: modules/gui/macosx/open.m:205
 msgid ""
 "VLC could not connect to EyeTV.\n"
 "Make sure that you installed VLC's EyeTV plugin."
@@ -15968,15 +15969,15 @@ msgstr ""
 "VLC 无法连接到 EyeTV。\n"
 "请确认您已经安装了 VLC 的 EyeTV 插件。"
 
-#: modules/gui/macosx/open.m:204
+#: modules/gui/macosx/open.m:206
 msgid "Launch EyeTV now"
 msgstr "立即启动 EyeTV"
 
-#: modules/gui/macosx/open.m:205
+#: modules/gui/macosx/open.m:207
 msgid "Download Plugin"
 msgstr "下载插件"
 
-#: modules/gui/macosx/open.m:206
+#: modules/gui/macosx/open.m:208
 msgid ""
 "This input allows you to process input signals from QuickTime-compatible "
 "video devices.\n"
@@ -15985,61 +15986,61 @@ msgstr ""
 "此输入允许您处理 QuickTime 兼容视频设备输入的信号。\n"
 "不支持 Live Audio 输入。"
 
-#: modules/gui/macosx/open.m:207
+#: modules/gui/macosx/open.m:209
 msgid "Image width:"
 msgstr "图像宽度:"
 
-#: modules/gui/macosx/open.m:208
+#: modules/gui/macosx/open.m:210
 msgid "Image height:"
 msgstr "图像高度:"
 
-#: modules/gui/macosx/open.m:301
+#: modules/gui/macosx/open.m:307
 msgid "Load subtitles file:"
 msgstr "载入字幕文件:"
 
-#: modules/gui/macosx/open.m:307
+#: modules/gui/macosx/open.m:313
 msgid "Override parameters"
 msgstr "覆盖参数"
 
-#: modules/gui/macosx/open.m:310
+#: modules/gui/macosx/open.m:316
 msgid "FPS"
 msgstr "FPS"
 
-#: modules/gui/macosx/open.m:312
+#: modules/gui/macosx/open.m:318
 msgid "Subtitles encoding"
 msgstr "字幕编码"
 
-#: modules/gui/macosx/open.m:314 modules/gui/qt4/ui/sprefs_subtitles.h:280
+#: modules/gui/macosx/open.m:320 modules/gui/qt4/ui/sprefs_subtitles.h:280
 msgid "Font size"
 msgstr "字体"
 
-#: modules/gui/macosx/open.m:316
+#: modules/gui/macosx/open.m:322
 msgid "Subtitles alignment"
 msgstr "字幕排列"
 
-#: modules/gui/macosx/open.m:319
+#: modules/gui/macosx/open.m:325
 msgid "Font Properties"
 msgstr "字体属性"
 
-#: modules/gui/macosx/open.m:320
+#: modules/gui/macosx/open.m:326
 msgid "Subtitle File"
 msgstr "字幕文件"
 
-#: modules/gui/macosx/open.m:619 modules/gui/macosx/open.m:1111
-#: modules/gui/macosx/open.m:1364 modules/gui/qt4/ui/open_file.h:162
+#: modules/gui/macosx/open.m:629 modules/gui/macosx/open.m:1122
+#: modules/gui/macosx/open.m:1375 modules/gui/qt4/ui/open_file.h:162
 msgid "Open File"
 msgstr "打开文件"
 
-#: modules/gui/macosx/open.m:823
+#: modules/gui/macosx/open.m:834
 #, c-format
 msgid "%i tracks"
 msgstr "%i 条轨道"
 
-#: modules/gui/macosx/open.m:1298
+#: modules/gui/macosx/open.m:1309
 msgid "Composite input"
 msgstr "混合输入"
 
-#: modules/gui/macosx/open.m:1301
+#: modules/gui/macosx/open.m:1312
 msgid "S-Video input"
 msgstr "S-Video 输入"
 
@@ -16120,7 +16121,7 @@ msgstr "保存文件"
 
 #: modules/gui/macosx/output.m:520 modules/gui/macosx/playlist.m:697
 #: modules/gui/macosx/prefs.m:205 modules/gui/macosx/simple_prefs.m:309
-#: modules/gui/qt4/components/sout/profile_selector.cpp:250
+#: modules/gui/qt4/components/sout/profile_selector.cpp:252
 #: modules/gui/qt4/ui/vlm.h:302
 msgid "Save"
 msgstr "保存"
@@ -16177,7 +16178,7 @@ msgid "Lost frames"
 msgstr "丢失的帧"
 
 #: modules/gui/macosx/playlistinfo.m:111 modules/gui/macosx/wizard.m:365
-#: modules/gui/qt4/dialogs_provider.cpp:650
+#: modules/gui/qt4/dialogs_provider.cpp:652
 msgid "Streaming"
 msgstr "流"
 
@@ -16677,190 +16678,185 @@ msgstr "图像调整"
 msgid "Brightness Threshold"
 msgstr "亮度阈值"
 
-#: modules/gui/macosx/VideoEffects.m:81 modules/video_filter/sharpen.c:67
+#: modules/gui/macosx/VideoEffects.m:82 modules/video_filter/sharpen.c:67
 #: modules/gui/qt4/ui/video_effects.h:1304
 msgid "Sharpen"
 msgstr "锐利"
 
-#: modules/gui/macosx/VideoEffects.m:82
+#: modules/gui/macosx/VideoEffects.m:83
 #: modules/gui/qt4/ui/video_effects.h:1305
 #: modules/gui/qt4/ui/video_effects.h:1392
 msgid "Sigma"
 msgstr "Sigma"
 
-#: modules/gui/macosx/VideoEffects.m:83
+#: modules/gui/macosx/VideoEffects.m:84
 #: modules/gui/qt4/ui/video_effects.h:1306
 msgid "Banding removal"
 msgstr "Banding 移除"
 
-#: modules/gui/macosx/VideoEffects.m:84 modules/video_filter/gradfun.c:47
+#: modules/gui/macosx/VideoEffects.m:85 modules/video_filter/gradfun.c:47
 #: modules/gui/qt4/ui/video_effects.h:1307
 msgid "Radius"
 msgstr "半径"
 
-#: modules/gui/macosx/VideoEffects.m:85
+#: modules/gui/macosx/VideoEffects.m:86
 #: modules/gui/qt4/ui/video_effects.h:1308
 msgid "Film Grain"
 msgstr "胶片颗粒"
 
-#: modules/gui/macosx/VideoEffects.m:86 modules/video_filter/grain.c:53
+#: modules/gui/macosx/VideoEffects.m:87 modules/video_filter/grain.c:53
 #: modules/gui/qt4/ui/video_effects.h:1309
 msgid "Variance"
 msgstr "差量"
 
-#: modules/gui/macosx/VideoEffects.m:91
+#: modules/gui/macosx/VideoEffects.m:92
 #: modules/gui/qt4/ui/video_effects.h:1317
 msgid "Synchronize top and bottom"
 msgstr "上下校准"
 
-#: modules/gui/macosx/VideoEffects.m:92
+#: modules/gui/macosx/VideoEffects.m:93
 #: modules/gui/qt4/ui/video_effects.h:1318
 msgid "Synchronize left and right"
 msgstr "左右校准"
 
-#: modules/gui/macosx/VideoEffects.m:94
+#: modules/gui/macosx/VideoEffects.m:95
 #: modules/gui/qt4/ui/video_effects.h:1343
 msgid "Transform"
 msgstr "传输"
 
-#: modules/gui/macosx/VideoEffects.m:96 modules/video_filter/transform.c:50
+#: modules/gui/macosx/VideoEffects.m:97 modules/video_filter/transform.c:50
 msgid "Rotate by 90 degrees"
 msgstr "旋转 90 度"
 
-#: modules/gui/macosx/VideoEffects.m:98 modules/video_filter/transform.c:51
+#: modules/gui/macosx/VideoEffects.m:99 modules/video_filter/transform.c:51
 msgid "Rotate by 180 degrees"
 msgstr "旋转 180 度"
 
-#: modules/gui/macosx/VideoEffects.m:100 modules/video_filter/transform.c:51
+#: modules/gui/macosx/VideoEffects.m:101 modules/video_filter/transform.c:51
 msgid "Rotate by 270 degrees"
 msgstr "旋转 270 度"
 
-#: modules/gui/macosx/VideoEffects.m:102 modules/video_filter/transform.c:52
+#: modules/gui/macosx/VideoEffects.m:103 modules/video_filter/transform.c:52
 msgid "Flip horizontally"
 msgstr "水平翻转"
 
-#: modules/gui/macosx/VideoEffects.m:104 modules/video_filter/transform.c:52
+#: modules/gui/macosx/VideoEffects.m:105 modules/video_filter/transform.c:52
 msgid "Flip vertically"
 msgstr "垂直倒转"
 
-#: modules/gui/macosx/VideoEffects.m:106
+#: modules/gui/macosx/VideoEffects.m:107
 msgid "Magnification/Zoom"
 msgstr "放大/扩大"
 
-#: modules/gui/macosx/VideoEffects.m:107
+#: modules/gui/macosx/VideoEffects.m:108
 #: modules/gui/qt4/ui/video_effects.h:1346
 msgid "Puzzle game"
 msgstr "智力游戏"
 
-#: modules/gui/macosx/VideoEffects.m:108
+#: modules/gui/macosx/VideoEffects.m:109
 #: modules/gui/qt4/ui/video_effects.h:1341
 #: modules/gui/qt4/ui/video_effects.h:1347
 msgid "Rows"
 msgstr "行"
 
-#: modules/gui/macosx/VideoEffects.m:109
+#: modules/gui/macosx/VideoEffects.m:110
 #: modules/gui/qt4/ui/video_effects.h:1342
 #: modules/gui/qt4/ui/video_effects.h:1348
 msgid "Columns"
 msgstr "列"
 
-#: modules/gui/macosx/VideoEffects.m:110
+#: modules/gui/macosx/VideoEffects.m:111
 msgid "Black Slot"
 msgstr "黑槽"
 
-#: modules/gui/macosx/VideoEffects.m:112 modules/video_filter/colorthres.c:70
+#: modules/gui/macosx/VideoEffects.m:113 modules/video_filter/colorthres.c:70
 #: modules/gui/qt4/ui/video_effects.h:1331
 msgid "Color threshold"
 msgstr "色彩阈值"
 
-#: modules/gui/macosx/VideoEffects.m:115
+#: modules/gui/macosx/VideoEffects.m:116
 #: modules/gui/qt4/ui/video_effects.h:1335
 msgid "Similarity"
 msgstr "相似"
 
-#: modules/gui/macosx/VideoEffects.m:117
+#: modules/gui/macosx/VideoEffects.m:118
 #: modules/gui/qt4/ui/video_effects.h:1337
 msgid "Intensity"
 msgstr "强度"
 
-#: modules/gui/macosx/VideoEffects.m:119 modules/gui/macosx/VideoEffects.m:122
+#: modules/gui/macosx/VideoEffects.m:120 modules/gui/macosx/VideoEffects.m:123
 #: modules/video_filter/gradient.c:76 modules/video_filter/gradient.c:82
 #: modules/gui/qt4/ui/video_effects.h:1327
 msgid "Gradient"
 msgstr "斜度"
 
-#: modules/gui/macosx/VideoEffects.m:124 modules/video_filter/gradient.c:76
+#: modules/gui/macosx/VideoEffects.m:125 modules/video_filter/gradient.c:76
 msgid "Edge"
 msgstr "边缘"
 
-#: modules/gui/macosx/VideoEffects.m:126 modules/video_filter/gradient.c:76
+#: modules/gui/macosx/VideoEffects.m:127 modules/video_filter/gradient.c:76
 msgid "Hough"
 msgstr "破碎"
 
-#: modules/gui/macosx/VideoEffects.m:129
+#: modules/gui/macosx/VideoEffects.m:130
 #: modules/gui/qt4/ui/video_effects.h:1330
 msgid "Cartoon"
 msgstr "卡通"
 
-#: modules/gui/macosx/VideoEffects.m:130
+#: modules/gui/macosx/VideoEffects.m:131
 #: modules/gui/qt4/ui/video_effects.h:1322
 msgid "Color extraction"
 msgstr "色彩提取"
 
-#: modules/gui/macosx/VideoEffects.m:132
+#: modules/gui/macosx/VideoEffects.m:133
 msgid "Invert colors"
 msgstr "反转色彩"
 
-#: modules/gui/macosx/VideoEffects.m:133 modules/video_filter/posterize.c:67
+#: modules/gui/macosx/VideoEffects.m:134 modules/video_filter/posterize.c:67
 #: modules/gui/qt4/ui/video_effects.h:1326
 msgid "Posterize"
 msgstr "色调分离"
 
-#: modules/gui/macosx/VideoEffects.m:134 modules/video_filter/posterize.c:59
+#: modules/gui/macosx/VideoEffects.m:135 modules/video_filter/posterize.c:59
 msgid "Posterize level"
 msgstr "色调分离层级"
 
-#: modules/gui/macosx/VideoEffects.m:135 modules/video_filter/motionblur.c:58
+#: modules/gui/macosx/VideoEffects.m:136 modules/video_filter/motionblur.c:58
 #: modules/gui/qt4/ui/video_effects.h:1382
 msgid "Motion blur"
 msgstr "动态模糊"
 
-#: modules/gui/macosx/VideoEffects.m:136
+#: modules/gui/macosx/VideoEffects.m:137
 #: modules/gui/qt4/ui/video_effects.h:1383
 msgid "Factor"
 msgstr "因素"
 
-#: modules/gui/macosx/VideoEffects.m:137
+#: modules/gui/macosx/VideoEffects.m:138
 #: modules/video_filter/motiondetect.c:49
 msgid "Motion Detect"
 msgstr "动态检测"
 
-#: modules/gui/macosx/VideoEffects.m:138
+#: modules/gui/macosx/VideoEffects.m:139
 #: modules/gui/qt4/ui/video_effects.h:1390
 msgid "Water effect"
 msgstr "水面效果"
 
-#: modules/gui/macosx/VideoEffects.m:143 modules/video_filter/clone.c:39
-#: modules/gui/qt4/ui/video_effects.h:1389
-msgid "Number of clones"
-msgstr "克隆数量"
-
-#: modules/gui/macosx/VideoEffects.m:144
+#: modules/gui/macosx/VideoEffects.m:143
 #: modules/gui/qt4/ui/video_effects.h:1361
 msgid "Add text"
 msgstr "添加文本"
 
-#: modules/gui/macosx/VideoEffects.m:166
+#: modules/gui/macosx/VideoEffects.m:165
 #: modules/gui/qt4/ui/video_effects.h:1351
 msgid "Add logo"
 msgstr "添加标志"
 
-#: modules/gui/macosx/VideoEffects.m:167
+#: modules/gui/macosx/VideoEffects.m:166
 #: modules/gui/qt4/ui/video_effects.h:1352
 msgid "Logo"
 msgstr "标志"
 
-#: modules/gui/macosx/VideoEffects.m:170
+#: modules/gui/macosx/VideoEffects.m:187
 #: modules/stream_out/mosaic_bridge.c:128 modules/video_filter/mosaic.c:87
 #: modules/gui/qt4/ui/video_effects.h:1359
 msgid "Transparency"
@@ -17768,23 +17764,23 @@ msgstr "Shift+L"
 msgid "Click to toggle between loop all, loop one and no loop"
 msgstr "单击可切换循环全部/循环单首/不循环"
 
-#: modules/gui/qt4/components/controller.cpp:519
+#: modules/gui/qt4/components/controller.cpp:531
 msgid "Previous Chapter/Title"
 msgstr "上一个章节/标题"
 
-#: modules/gui/qt4/components/controller.cpp:525
+#: modules/gui/qt4/components/controller.cpp:537
 msgid "Menu"
 msgstr "菜单"
 
-#: modules/gui/qt4/components/controller.cpp:531
+#: modules/gui/qt4/components/controller.cpp:543
 msgid "Next Chapter/Title"
 msgstr "下一个章节/标题"
 
-#: modules/gui/qt4/components/controller.cpp:564
+#: modules/gui/qt4/components/controller.cpp:576
 msgid "Teletext Activation"
 msgstr "Teletext 激活"
 
-#: modules/gui/qt4/components/controller.cpp:580
+#: modules/gui/qt4/components/controller.cpp:592
 msgid "Toggle Transparency "
 msgstr "打开或关闭透明度"
 
@@ -17796,122 +17792,122 @@ msgstr ""
 "播放\n"
 "如果播放列表为空则打开一个媒体"
 
-#: modules/gui/qt4/components/controller.hpp:111
+#: modules/gui/qt4/components/controller.hpp:115
 msgid "Previous / Backward"
 msgstr "上一个 / 快退"
 
-#: modules/gui/qt4/components/controller.hpp:111
+#: modules/gui/qt4/components/controller.hpp:115
 msgid "Next / Forward"
 msgstr "下一个 / 快进"
 
-#: modules/gui/qt4/components/controller.hpp:112
+#: modules/gui/qt4/components/controller.hpp:116
 msgid "De-Fullscreen"
 msgstr "取消全屏幕"
 
-#: modules/gui/qt4/components/controller.hpp:112
+#: modules/gui/qt4/components/controller.hpp:116
 msgid "Extended panel"
 msgstr "扩展面板"
 
-#: modules/gui/qt4/components/controller.hpp:113
+#: modules/gui/qt4/components/controller.hpp:117
 msgid "A->B Loop"
 msgstr "A->B 循环"
 
-#: modules/gui/qt4/components/controller.hpp:113
+#: modules/gui/qt4/components/controller.hpp:117
 msgid "Frame By Frame"
 msgstr "逐帧"
 
-#: modules/gui/qt4/components/controller.hpp:113
+#: modules/gui/qt4/components/controller.hpp:117
 msgid "Trickplay Reverse"
 msgstr "Trickplay 反序"
 
-#: modules/gui/qt4/components/controller.hpp:114
-#: modules/gui/qt4/components/controller.hpp:126
+#: modules/gui/qt4/components/controller.hpp:118
+#: modules/gui/qt4/components/controller.hpp:130
 msgid "Step backward"
 msgstr "往回步进"
 
-#: modules/gui/qt4/components/controller.hpp:114
-#: modules/gui/qt4/components/controller.hpp:126
+#: modules/gui/qt4/components/controller.hpp:118
+#: modules/gui/qt4/components/controller.hpp:130
 msgid "Step forward"
 msgstr "向前步进"
 
-#: modules/gui/qt4/components/controller.hpp:115
+#: modules/gui/qt4/components/controller.hpp:119
 msgid "Loop / Repeat"
 msgstr "循环 / 重复模式"
 
-#: modules/gui/qt4/components/controller.hpp:116
+#: modules/gui/qt4/components/controller.hpp:120
 msgid "Open subtitles"
 msgstr "打开字幕"
 
-#: modules/gui/qt4/components/controller.hpp:116
+#: modules/gui/qt4/components/controller.hpp:120
 msgid "Dock fullscreen controller"
 msgstr "全屏控制器停靠"
 
-#: modules/gui/qt4/components/controller.hpp:119
+#: modules/gui/qt4/components/controller.hpp:123
 msgid "Stop playback"
 msgstr "停止播放"
 
-#: modules/gui/qt4/components/controller.hpp:119
+#: modules/gui/qt4/components/controller.hpp:123
 msgid "Open a medium"
 msgstr "打开一个媒介"
 
-#: modules/gui/qt4/components/controller.hpp:120
+#: modules/gui/qt4/components/controller.hpp:124
 msgid "Previous media in the playlist, skip backward when keep-pressed"
 msgstr "播放列表中的上一个媒体，长按可快退"
 
-#: modules/gui/qt4/components/controller.hpp:121
+#: modules/gui/qt4/components/controller.hpp:125
 msgid "Next media in the playlist, skip forward when keep-pressed"
 msgstr "播放列表中的下一个媒体，长按可快进"
 
-#: modules/gui/qt4/components/controller.hpp:122
+#: modules/gui/qt4/components/controller.hpp:126
 msgid "Toggle the video in fullscreen"
 msgstr "切换全屏幕中的视频"
 
-#: modules/gui/qt4/components/controller.hpp:122
+#: modules/gui/qt4/components/controller.hpp:126
 msgid "Toggle the video out fullscreen"
 msgstr "将视频切换出全屏状态"
 
-#: modules/gui/qt4/components/controller.hpp:123
+#: modules/gui/qt4/components/controller.hpp:127
 msgid "Show extended settings"
 msgstr "显示扩展设置"
 
-#: modules/gui/qt4/components/controller.hpp:123
+#: modules/gui/qt4/components/controller.hpp:127
 msgid "Show playlist"
 msgstr "显示播放列表"
 
-#: modules/gui/qt4/components/controller.hpp:124
+#: modules/gui/qt4/components/controller.hpp:128
 msgid "Take a snapshot"
 msgstr "捕获截图"
 
-#: modules/gui/qt4/components/controller.hpp:125
+#: modules/gui/qt4/components/controller.hpp:129
 msgid "Loop from point A to point B continuously."
 msgstr "连续地从点 A 到点 B 循环。"
 
-#: modules/gui/qt4/components/controller.hpp:125
+#: modules/gui/qt4/components/controller.hpp:129
 msgid "Frame by frame"
 msgstr "逐帧"
 
-#: modules/gui/qt4/components/controller.hpp:126
+#: modules/gui/qt4/components/controller.hpp:130
 msgid "Reverse"
 msgstr "倒序"
 
-#: modules/gui/qt4/components/controller.hpp:127
+#: modules/gui/qt4/components/controller.hpp:131
 msgid "Change the loop and repeat modes"
 msgstr "更改循环与重复模式"
 
-#: modules/gui/qt4/components/controller.hpp:128
+#: modules/gui/qt4/components/controller.hpp:132
 msgid "Previous media in the playlist"
 msgstr "上一个在播放列表中的媒体"
 
-#: modules/gui/qt4/components/controller.hpp:128
+#: modules/gui/qt4/components/controller.hpp:132
 msgid "Next media in the playlist"
 msgstr "下一个在播放列表中的媒体"
 
-#: modules/gui/qt4/components/controller.hpp:129
+#: modules/gui/qt4/components/controller.hpp:133
 #: modules/gui/qt4/components/open_panels.cpp:252
 msgid "Open subtitles file"
 msgstr "打开字幕文件"
 
-#: modules/gui/qt4/components/controller.hpp:130
+#: modules/gui/qt4/components/controller.hpp:134
 msgid "Dock/undock fullscreen controller to/from bottom of screen"
 msgstr "将全屏控制器固定/取消固定到屏幕底部"
 
@@ -18169,19 +18165,36 @@ msgstr ""
 "当前回放速度: %1\n"
 "点击调整"
 
-#: modules/gui/qt4/components/interface_widgets.cpp:407
+#: modules/gui/qt4/components/interface_widgets.cpp:410
 msgid "Revert to normal play speed"
 msgstr "恢复普通播放速度"
 
-#: modules/gui/qt4/components/interface_widgets.cpp:480
+#: modules/gui/qt4/components/interface_widgets.cpp:517
 msgid "Download cover art"
 msgstr "下载封面"
 
-#: modules/gui/qt4/components/interface_widgets.cpp:523
+#: modules/gui/qt4/components/interface_widgets.cpp:560
+#: modules/gui/qt4/dialogs/toolbar.cpp:458
+#, fuzzy
+msgid "Elapsed time"
+msgstr "释放时间"
+
+#: modules/gui/qt4/components/interface_widgets.cpp:564
+#: modules/gui/qt4/dialogs/toolbar.cpp:462
+#, fuzzy
+msgid "Total/Remaining time"
+msgstr "剩余时间: %i 秒"
+
+#: modules/gui/qt4/components/interface_widgets.cpp:566
+#, fuzzy
+msgid "Click to toggle between total and remaining time"
+msgstr "点击可在已用和剩余时间之间切换"
+
+#: modules/gui/qt4/components/interface_widgets.cpp:572
 msgid "Click to toggle between elapsed and remaining time"
 msgstr "点击可在已用和剩余时间之间切换"
 
-#: modules/gui/qt4/components/interface_widgets.cpp:525
+#: modules/gui/qt4/components/interface_widgets.cpp:574
 msgid "Double click to jump to a chosen time position"
 msgstr "双击跳到选定时间位置"
 
@@ -18211,10 +18224,6 @@ msgstr "筛选:"
 #: modules/gui/qt4/components/open_panels.cpp:348
 msgid "Eject the disc"
 msgstr "弹出光盘"
-
-#: modules/gui/qt4/components/open_panels.cpp:785
-msgid "Video standard"
-msgstr "视频标准"
 
 #: modules/gui/qt4/components/open_panels.cpp:812
 msgid "Channels:"
@@ -18286,14 +18295,10 @@ msgid "Double click to get media information"
 msgstr "双击获取媒体信息"
 
 #: modules/gui/qt4/components/playlist/playlist.cpp:118
-msgid "Clear playlist"
-msgstr "清除播放列表"
-
-#: modules/gui/qt4/components/playlist/playlist.cpp:125
 msgid "Change playlistview"
 msgstr "更改播放列表视图"
 
-#: modules/gui/qt4/components/playlist/playlist.cpp:157
+#: modules/gui/qt4/components/playlist/playlist.cpp:150
 msgid "Search the playlist"
 msgstr "搜索播放列表"
 
@@ -18313,31 +18318,35 @@ msgstr "输入新目录名:"
 msgid "Enter name for new folder:"
 msgstr "输入新文件夹的名称:"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:961
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:974
 msgid "Add to playlist"
 msgstr "添加到播放列表"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:970
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:981
+msgid "Clear playlist"
+msgstr "清除播放列表"
+
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:987
 msgid "Sort by"
 msgstr "排列按"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:977
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:994
 msgid "Ascending"
 msgstr "升序"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:978
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:995
 msgid "Descending"
 msgstr "降序"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:989
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:1006
 msgid "Display size"
 msgstr "显示尺寸"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:990
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:1007
 msgid "Increase"
 msgstr "增加"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:991
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:1008
 msgid "Decrease"
 msgstr "减少"
 
@@ -18520,12 +18529,12 @@ msgstr "应用(&A)"
 #: modules/gui/qt4/dialogs/open.cpp:109 modules/gui/qt4/dialogs/openurl.cpp:60
 #: modules/gui/qt4/dialogs/podcast_configuration.cpp:37
 #: modules/gui/qt4/dialogs/preferences.cpp:89
-#: modules/gui/qt4/dialogs/sout.cpp:99 modules/gui/qt4/dialogs/toolbar.cpp:195
+#: modules/gui/qt4/dialogs/sout.cpp:99 modules/gui/qt4/dialogs/toolbar.cpp:199
 msgid "&Cancel"
 msgstr "取消(&C)"
 
 #: modules/gui/qt4/components/sout/profile_selector.cpp:41
-#: modules/gui/qt4/dialogs/toolbar.cpp:147
+#: modules/gui/qt4/dialogs/toolbar.cpp:151
 msgid "Profile"
 msgstr "档案"
 
@@ -18541,11 +18550,11 @@ msgstr "删除选中的档案"
 msgid "Create a new profile"
 msgstr "创建新档案"
 
-#: modules/gui/qt4/components/sout/profile_selector.cpp:402
+#: modules/gui/qt4/components/sout/profile_selector.cpp:404
 msgid " Profile Name Missing"
 msgstr " 档案名称缺失"
 
-#: modules/gui/qt4/components/sout/profile_selector.cpp:403
+#: modules/gui/qt4/components/sout/profile_selector.cpp:405
 msgid "You must set a name for the profile."
 msgstr "您必须为档案设定一个名称。"
 
@@ -19056,31 +19065,31 @@ msgstr "打开目录"
 msgid "Open Folder"
 msgstr "打开文件夹"
 
-#: modules/gui/qt4/dialogs_provider.cpp:551
+#: modules/gui/qt4/dialogs_provider.cpp:553
 msgid "Open playlist..."
 msgstr "打开播放列表..."
 
-#: modules/gui/qt4/dialogs_provider.cpp:567
+#: modules/gui/qt4/dialogs_provider.cpp:569
 msgid "XSPF playlist"
 msgstr "XSPF 播放列表"
 
-#: modules/gui/qt4/dialogs_provider.cpp:568
+#: modules/gui/qt4/dialogs_provider.cpp:570
 msgid "M3U playlist"
 msgstr "M3U 播放列表"
 
-#: modules/gui/qt4/dialogs_provider.cpp:569
+#: modules/gui/qt4/dialogs_provider.cpp:571
 msgid "M3U8 playlist"
 msgstr "M3U8 播放列表"
 
-#: modules/gui/qt4/dialogs_provider.cpp:570
+#: modules/gui/qt4/dialogs_provider.cpp:572
 msgid "HTML playlist"
 msgstr "HTML 播放列表"
 
-#: modules/gui/qt4/dialogs_provider.cpp:587
+#: modules/gui/qt4/dialogs_provider.cpp:589
 msgid "Save playlist as..."
 msgstr "播放列表另存为..."
 
-#: modules/gui/qt4/dialogs_provider.cpp:707
+#: modules/gui/qt4/dialogs_provider.cpp:709
 msgid "Open subtitles..."
 msgstr "打开字幕..."
 
@@ -19119,119 +19128,119 @@ msgstr ""
 "串流输出字串。\n"
 "在您更改上述值之前它是自动生成的，但是您也可以手动更改它。"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:55
+#: modules/gui/qt4/dialogs/toolbar.cpp:59
 msgid "Toolbars Editor"
 msgstr "工具栏编辑器"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:62
+#: modules/gui/qt4/dialogs/toolbar.cpp:66
 msgid "Toolbar Elements"
 msgstr "工具栏元素"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:67
+#: modules/gui/qt4/dialogs/toolbar.cpp:71
 msgid "Next widget style:"
 msgstr "下一个控件风格:"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:68
+#: modules/gui/qt4/dialogs/toolbar.cpp:72
 msgid "Flat Button"
 msgstr "平滑按钮"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:69
+#: modules/gui/qt4/dialogs/toolbar.cpp:73
 msgid "Big Button"
 msgstr "大按钮"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:70
+#: modules/gui/qt4/dialogs/toolbar.cpp:74
 msgid "Native Slider"
 msgstr "原生滚动条"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:81
+#: modules/gui/qt4/dialogs/toolbar.cpp:85
 msgid "Main Toolbar"
 msgstr "主工具栏"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:84
+#: modules/gui/qt4/dialogs/toolbar.cpp:88
 msgid "Toolbar position:"
 msgstr "工具栏位置:"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:88
+#: modules/gui/qt4/dialogs/toolbar.cpp:92
 msgid "Under the Video"
 msgstr "在视频下面"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:89
+#: modules/gui/qt4/dialogs/toolbar.cpp:93
 msgid "Above the Video"
 msgstr "在视频上面"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:94
+#: modules/gui/qt4/dialogs/toolbar.cpp:98
 msgid "Line 1:"
 msgstr "第一行:"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:102
+#: modules/gui/qt4/dialogs/toolbar.cpp:106
 msgid "Line 2:"
 msgstr "第二行:"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:111
+#: modules/gui/qt4/dialogs/toolbar.cpp:115
 msgid "Advanced Widget toolbar:"
 msgstr "高级控件工具条:"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:122
+#: modules/gui/qt4/dialogs/toolbar.cpp:126
 msgid "Time Toolbar"
 msgstr "时间工具条"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:134
+#: modules/gui/qt4/dialogs/toolbar.cpp:138
 msgid "Fullscreen Controller"
 msgstr "全屏幕控制器"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:151
+#: modules/gui/qt4/dialogs/toolbar.cpp:155
 msgid "Select profile:"
 msgstr "选择档案:"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:155
+#: modules/gui/qt4/dialogs/toolbar.cpp:159
 msgid "New profile"
 msgstr "新建配置文件"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:158
+#: modules/gui/qt4/dialogs/toolbar.cpp:162
 msgid "Delete the current profile"
 msgstr "删除当前档案"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:193
+#: modules/gui/qt4/dialogs/toolbar.cpp:197
 msgid "Cl&ose"
 msgstr "关闭(&O)"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:223 modules/gui/qt4/ui/profiles.h:461
+#: modules/gui/qt4/dialogs/toolbar.cpp:227 modules/gui/qt4/ui/profiles.h:461
 msgid "Profile Name"
 msgstr "档案名称"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:224
+#: modules/gui/qt4/dialogs/toolbar.cpp:228
 msgid "Please enter the new profile name."
 msgstr "请为新档案输入一个名称。"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:309
+#: modules/gui/qt4/dialogs/toolbar.cpp:313
 msgid "Spacer"
 msgstr "占位符"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:314
+#: modules/gui/qt4/dialogs/toolbar.cpp:318
 msgid "Expanding Spacer"
 msgstr "扩展占位符"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:343
+#: modules/gui/qt4/dialogs/toolbar.cpp:347
 msgid "Splitter"
 msgstr "分隔符"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:350
+#: modules/gui/qt4/dialogs/toolbar.cpp:354
 msgid "Time Slider"
 msgstr "时间轴"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:363
+#: modules/gui/qt4/dialogs/toolbar.cpp:367
 msgid "Small Volume"
 msgstr "小音量"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:400
+#: modules/gui/qt4/dialogs/toolbar.cpp:404
 msgid "DVD menus"
 msgstr "DVD 菜单"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:429
+#: modules/gui/qt4/dialogs/toolbar.cpp:433
 msgid "Advanced Buttons"
 msgstr "高级按钮"
 
-#: modules/gui/qt4/dialogs/toolbar.cpp:442
+#: modules/gui/qt4/dialogs/toolbar.cpp:446
 msgid "Playback Buttons"
 msgstr "回放按钮"
 
@@ -19300,11 +19309,11 @@ msgstr "计划:"
 msgid "VOD: "
 msgstr "VOD: "
 
-#: modules/gui/qt4/main_interface.cpp:1103
+#: modules/gui/qt4/main_interface.cpp:1119
 msgid "Control menu for the player"
 msgstr "用于播放器的控制菜单"
 
-#: modules/gui/qt4/main_interface.cpp:1146
+#: modules/gui/qt4/main_interface.cpp:1162
 msgid "Paused"
 msgstr "已暂停"
 
@@ -23355,6 +23364,10 @@ msgstr "Canvas 视频滤镜"
 msgid "Video filtering using a chain of video filter modules"
 msgstr "使用一个链式视频滤镜模块过滤视频"
 
+#: modules/video_filter/clone.c:39 modules/gui/qt4/ui/video_effects.h:1389
+msgid "Number of clones"
+msgstr "克隆数量"
+
 #: modules/video_filter/clone.c:40
 msgid "Number of video windows in which to clone the video."
 msgstr "要克隆的视频窗口数量。"
@@ -27099,6 +27112,20 @@ msgstr "循环"
 msgid "Media Manager List"
 msgstr "媒体管理器列表"
 
+#, fuzzy
+#~ msgid "Elasped time"
+#~ msgstr "释放时间"
+
+#~ msgid "Video standard (Default, SECAM_D, PAL_B, NTSC_M, etc...)."
+#~ msgstr "视频标准 (默认、SECAM_D、PAL_B、NTSC_M 等)。"
+
+#~ msgid ""
+#~ "One of \"u8\", \"s8\", \"u16\", \"s16\", \"u16_le\", \"s16_le\", \"u16_be"
+#~ "\", \"s16_be\", \"fixed32\", \"float32\" or \"spdif\""
+#~ msgstr ""
+#~ "\"u8\", \"s8\", \"u16\", \"s16\", \"u16_le\", \"s16_le\", \"u16_be\", "
+#~ "\"s16_be\", \"fixed32\", \"float32\" 或 \"spdif\" 中的一个"
+
 #~ msgid "Clear Menu"
 #~ msgstr "清除菜单"
 
@@ -28985,9 +29012,6 @@ msgstr "媒体管理器列表"
 #~ msgid "Vout filters"
 #~ msgstr "Vout 滤镜"
 
-#~ msgid "Update"
-#~ msgstr "更新"
-
 #~ msgid "Advanced video filter controls"
 #~ msgstr "高级视频滤镜控制"
 
@@ -30328,9 +30352,6 @@ msgstr "媒体管理器列表"
 
 #~ msgid "Login:"
 #~ msgstr "登录:"
-
-#~ msgid "Remaining time: %i seconds"
-#~ msgstr "剩余时间: %i 秒"
 
 #~ msgid "An error occured while saving your settings via SimplePrefs."
 #~ msgstr "在通过 SimplePrefs 保存您的设置时发生了一个错误。"
