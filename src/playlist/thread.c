@@ -27,6 +27,8 @@
 
 #include <assert.h>
 
+#include <synchronicity/syn_connection.h>
+#include <synchronicity/syn_parsing.h>
 #include <vlc_common.h>
 #include <vlc_es.h>
 #include <vlc_input.h>
@@ -73,6 +75,8 @@ void playlist_Deactivate( playlist_t *p_playlist )
     playlist_private_t *p_sys = pl_priv(p_playlist);
 
     msg_Dbg( p_playlist, "deactivating the playlist" );
+
+    playlist_SynDisconnect(p_playlist);
 
     PL_LOCK;
     vlc_object_kill( p_playlist );
@@ -207,6 +211,142 @@ static void ResetCurrentlyPlaying( playlist_t *p_playlist,
     stats_TimerStop( p_playlist, STATS_TIMER_PLAYLIST_BUILD );
 }
 
+// Debugging callback
+static int StateListener( vlc_object_t *p_this, const char *psz_var,
+                            vlc_value_t oldval, vlc_value_t newval, void *param ) {
+  VLC_UNUSED(oldval);
+  VLC_UNUSED(param);
+
+  msg_Info(p_this, "%s", psz_var);
+  SynCommand syn;
+  char buffer[80];
+  int numbytes;
+  switch (newval.i_int)
+  {
+  case PLAYING_S:
+    msg_Info(p_this, "Playing");
+    syn.type = SYNCOMMAND_PLAY;
+    input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &syn.data.i_time);
+    numbytes = StringFromCommand(syn, buffer, 80);
+    if(numbytes > 0) {
+      buffer[numbytes] = '\0';
+      msg_Info(p_this, "%s", buffer);
+      sprintf(buffer, "%d", syn.data.i_time);
+      msg_Info(p_this, "%s", buffer);
+    } else {
+      msg_Info(p_this, "Problem w/Play");
+    }
+    break;
+  case PAUSE_S:
+    msg_Info(p_this, "Paused");
+    break;
+  }
+  //var_SetFloat(p_this, "position", 0.5f);
+  return VLC_SUCCESS;
+}
+
+static int PositionListener( vlc_object_t *p_this, const char *psz_var,
+                            vlc_value_t oldval, vlc_value_t newval, void *param ) {
+  VLC_UNUSED(oldval);
+  VLC_UNUSED(param);
+
+  msg_Info(p_this, "%s", psz_var);
+  char formatted[30];
+  sprintf(formatted, "%f", newval.f_float);
+  msg_Info(p_this, "%s", formatted);
+  //var_SetInteger(p_this, "state", PAUSE_S);
+
+  SynCommand syn;
+  char buffer[80];
+  int numbytes;
+  syn.type = SYNCOMMAND_SEEK;
+  input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &syn.data.i_time);
+  numbytes = StringFromCommand(syn, buffer, 80);
+  if(numbytes > 0) {
+    buffer[numbytes] = '\0';
+    msg_Info(p_this, "%s", buffer);
+  }
+  SynCommand test;
+  test = CommandFromString(buffer, 80);
+  switch(test.type) {
+    case SYNCOMMAND_SEEK:
+      msg_Info(p_this, "Successful decode");
+      sprintf(formatted, "%i", test.data.i_time);
+      msg_Info(p_this, "%s", formatted);
+      break;
+    default:
+      msg_Info(p_this, "Problem");
+      break;
+  }
+  return VLC_SUCCESS;
+}
+
+/*****************************************
+ * Synchronicity callback functions
+ ****************************************/
+
+static void SynFreeMemory(int rv, void* param) {
+  VLC_UNUSED(rv);
+  free(param);
+}
+
+static int SendSynCommand(playlist_t* p_playlist, SynCommand syn) {
+  playlist_private_t *p_sys = pl_priv(p_playlist);
+  if(!p_sys->b_syn_can_send) {
+    return VLC_SUCCESS;
+  }
+  char* buffer = calloc(sizeof(char), 80);
+  int numbytes;
+  numbytes = StringFromCommand(syn, buffer, 80);
+  if (numbytes > 0) {
+    msg_Info(p_playlist, "SendSynCommand: Sending");
+    SynConnection_Send(
+        p_sys->syn_connection,
+        buffer, numbytes,
+        &SynFreeMemory, buffer);
+    return VLC_SUCCESS;
+  }
+  msg_Info(p_playlist, "SendSynCommand: Error");
+  return VLC_EGENERIC;
+}
+
+static int SynStateListener( vlc_object_t *p_this, const char *psz_var,
+                           vlc_value_t oldval, vlc_value_t newval,
+                           void *param ) {
+  msg_Dbg(p_this, "SynStateListener: Change");
+  VLC_UNUSED(p_this);
+  VLC_UNUSED(psz_var);
+  VLC_UNUSED(oldval);
+
+  SynCommand syn;
+  switch (newval.i_int) {
+    case PLAYING_S:
+      syn.type = SYNCOMMAND_PLAY;
+      break;
+    case PAUSE_S:
+      syn.type = SYNCOMMAND_PAUSE;
+      break;
+    default:
+      return VLC_EGENERIC;
+  }
+  input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &syn.data.i_time);
+  return SendSynCommand((playlist_t*)param, syn);
+}
+
+static int SynPositionListener( vlc_object_t *p_this, const char *psz_var,
+                           vlc_value_t oldval, vlc_value_t newval,
+                           void *param ) {
+  msg_Dbg(p_this, "SynPositionListener: Change");
+  VLC_UNUSED(p_this);
+  VLC_UNUSED(psz_var);
+  VLC_UNUSED(oldval);
+
+  SynCommand syn;
+  syn.type = SYNCOMMAND_SEEK;
+  input_Control((input_thread_t*)p_this, INPUT_GET_LENGTH, &syn.data.i_time);
+  syn.data.i_time = (int64_t)(syn.data.i_time * newval.f_float);
+  return SendSynCommand((playlist_t*)param, syn);
+}
 
 /**
  * Start the input for an item
@@ -240,6 +380,12 @@ static int PlayItem( playlist_t *p_playlist, playlist_item_t *p_item )
     {
         p_sys->p_input = p_input_thread;
         var_AddCallback( p_input_thread, "intf-event", InputEvent, p_playlist );
+
+        // Add Synchronicity callbacks
+        //var_AddCallback( p_input_thread, "state", StateListener, p_input_thread );
+        var_AddCallback( p_input_thread, "state", SynStateListener, p_playlist );
+        var_AddCallback( p_input_thread, "position", SynPositionListener, p_playlist );
+        //var_AddCallback( p_input_thread, "position", PositionListener, p_input_thread );
 
         var_SetAddress( p_playlist, "input-current", p_input_thread );
 
@@ -477,6 +623,12 @@ static int LoopInput( playlist_t *p_playlist )
 
         /* The DelCallback must be issued without playlist lock */
         var_DelCallback( p_input, "intf-event", InputEvent, p_playlist );
+
+        // Delete Synchronicity callbacks
+        //var_DelCallback( p_input, "state", StateListener, p_input );
+        var_DelCallback( p_input, "state", SynStateListener, p_playlist );
+        var_DelCallback( p_input, "position", SynPositionListener, p_playlist );
+        //var_DelCallback( p_input, "position", PositionListener, p_input );
 
         PL_LOCK;
 

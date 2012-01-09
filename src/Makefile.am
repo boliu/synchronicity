@@ -96,6 +96,9 @@ pluginsinclude_HEADERS = \
 	../include/vlc_vout_window.h \
 	../include/vlc_xml.h \
 	../include/vlc_xlib.h \
+	../include/synchronicity/syn_connection.h \
+	../include/synchronicity/syn_key.h \
+	../include/synchronicity/syn_parsing.h \
 	$(NULL)
 nodist_pluginsinclude_HEADERS = ../include/vlc_about.h
 
@@ -321,6 +324,7 @@ SOURCES_libvlc_common = \
 	playlist/item.c \
 	playlist/search.c \
 	playlist/services_discovery.c \
+	playlist/synchronicity.c \
 	input/item.c \
 	input/access.c \
 	input/clock.c \
@@ -457,6 +461,12 @@ SOURCES_libvlc_common = \
 	misc/text_style.c \
 	misc/subpicture.c \
 	misc/subpicture.h \
+	synchronicity/syn_connection.c \
+	synchronicity/syn_connection_internal.h \
+	synchronicity/syn_connection_establishment.c \
+	synchronicity/syn_connection_establishment.h \
+	synchronicity/syn_key.c \
+	synchronicity/syn_parsing.c \
 	$(NULL)
 
 SOURCES_libvlc_httpd = \

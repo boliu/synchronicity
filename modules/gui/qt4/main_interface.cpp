@@ -60,6 +60,13 @@
 
 #include <vlc_keys.h>                       /* Wheel event */
 #include <vlc_vout_display.h>               /* vout_thread_t and VOUT_ events */
+#include <vlc_vout_osd.h>
+#include <vlc_vout.h>
+#include <vlc_playlist.h>
+#include <synchronicity/syn_error_codes.h>  /* error codes for synchronicity */
+extern "C" {
+  #include <synchronicity/syn_key.h>
+}
 
 // #define DEBUG_INTF
 
@@ -292,6 +299,9 @@ MainInterface::~MainInterface()
                         getControlsVisibilityStatus() & CONTROLS_ADVANCED );
     settings->setValue( "status-bar-visible", b_statusbarVisible );
 
+    /* synchronicity bar visibility */
+    settings->setValue( "synchronicity-bar-visible", isSynchVisible );
+
     /* Save the stackCentralW sizes */
     settings->setValue( "bgSize", stackWidgetsSizes[bgWidget] );
     settings->setValue( "playlistSize", stackWidgetsSizes[playlistWidget] );
@@ -406,6 +416,40 @@ void MainInterface::createMainWidget( QSettings *settings )
     mainLayout->insertWidget( 2, inputC );
     mainLayout->insertWidget( settings->value( "MainWindow/ToolbarPos", 0 ).toInt() ? 0: 3,
                               controls );
+   
+    /*********************
+    * Synchronicity Bar  *
+    **********************/
+    synchWidget = new QWidget();
+    synchLayout = new QGridLayout( synchWidget );
+    connectionKey = new QLineEdit( "" );
+    synchronicityLabel = new QLabel( "" );
+    synchronicityLabel->setPixmap(QPixmap(":/synchronicity/graylight"));
+    hostButton = new QPushButton( "Host" );
+    connectButton = new QPushButton ( "Connect" );
+    copyButton = new QPushButton( "Copy" );
+    leaveButton = new QPushButton( "Leave" );
+    synchLayout->addWidget( hostButton, 0, 0 );
+    synchLayout->addWidget( leaveButton, 0 , 1 );
+    synchLayout->addWidget( copyButton, 0, 2 );
+    synchLayout->addWidget( connectionKey, 0, 3 );
+    synchLayout->addWidget( connectButton, 0, 4 );
+    synchLayout->addWidget( synchronicityLabel, 0, 5 );
+    synchWidget->setLayout( synchLayout );
+    mainLayout->addWidget( synchWidget );
+    CONNECT( THEMIM, synchronicityChanged( int ), this, updateSynchronicity ( int ) );
+    BUTTONACT( hostButton, hostButton_Click() );
+    BUTTONACT( connectButton, connectButton_Click() );
+    BUTTONACT( leaveButton, leaveButton_Click() );
+    BUTTONACT( copyButton, copyButton_Click() );
+    CONNECT( connectionKey, textEdited ( const QString& ), this, checkConnectionKey ( const QString& ) );
+    CONNECT( connectionKey, cursorPositionChanged ( int, int ), this, clearConnectionKey(int, int) );
+    CONNECT( connectionKey, editingFinished(), this, resetConnectionKey() );
+    isSynchVisible = getSettings()->value( "synchronicity-bar-visible", false ).toBool();
+    b_connectionKeyBlanked = false;
+    synchWidget->setVisible(isSynchVisible);
+    hostButtonVisible();
+    connectButton->setEnabled(false);
 
     /* Visualisation, disabled for now, they SUCK */
     #if 0
@@ -878,6 +922,7 @@ void MainInterface::setMinimalView( bool b_minimal )
     controls->setVisible( !b_minimal );
     statusBar()->setVisible( !b_minimal && b_statusbarVisible );
     inputC->setVisible( !b_minimal );
+    synchWidget->setVisible( !b_minimal );
 }
 
 /*
@@ -927,6 +972,12 @@ void MainInterface::setStatusBarVisibility( bool b_visible )
     statusBar()->setVisible( b_visible );
     b_statusbarVisible = b_visible;
     if( controls ) controls->setGripVisible( !b_statusbarVisible );
+}
+
+void MainInterface::setSynchronicityBarVisibility( bool b_visible )
+{
+    synchWidget->setVisible( b_visible );
+    isSynchVisible = b_visible;
 }
 
 #if 0
@@ -1081,7 +1132,112 @@ void MainInterface::toggleUpdateSystrayMenu()
         VLCMenuBar::updateSystrayMenu( this, p_intf );
 }
 
-/* First Item of the systray menu */
+void MainInterface::updateSynchronicity( int messageID ) {
+    if (messageID == CONNECTION_FAILURE ) {
+      synchronicityLabel->setPixmap(QPixmap(":/synchronicity/redlight"));
+      //enable buttons and text line
+      connectionKey->setReadOnly(false);
+      displayMessage( "Connection lost." );
+      hostButtonVisible();
+    } else if (messageID == HOST_SUCCESS) {
+      synchronicityLabel->setPixmap(QPixmap(":/synchronicity/yellowlight"));
+      //update string in connection key box
+      size_t len = playlist_SynGetHostAddrLen(THEPL);
+      char* addr = new char[len];
+      playlist_SynGetHostAddr(THEPL, addr, len);
+      connectionKey->setText(addr);
+      delete[] addr;
+      displayMessage( "Host success. Waiting on peer." );
+      leaveButtonVisible();
+      copyButton->setVisible(true);
+    } else if (messageID == CLIENT_CONNECTED) {
+      synchronicityLabel->setPixmap(QPixmap(":/synchronicity/greenlight"));
+      displayMessage( "Peer has connected. Synchronizing." );
+      copyButton->setVisible(false);
+    } else if (messageID == CONNECT_SUCCESS) {
+      synchronicityLabel->setPixmap(QPixmap(":/synchronicity/greenlight"));
+      displayMessage( "Connected to host. Synchronizing." );
+      leaveButtonVisible();
+    } else if (messageID == PEER_DISCONNECT) {
+      synchronicityLabel->setPixmap(QPixmap(":synchronicity/graylight"));
+      displayMessage( "Peer has disconnected." );
+      hostButtonVisible();
+    } else if (messageID == PEER_SNAP) {
+      displayMessage( "Synchronizing to peer." );
+    }
+}
+
+void MainInterface::hostButton_Click() {
+    playlist_SynHost( THEPL );
+    //disable buttons and text line
+    connectionKey->setReadOnly(true);
+    hostButton->setEnabled(false);
+    connectButton->setEnabled(false);
+    b_connectionKeyBlanked = true;
+}
+
+void MainInterface::connectButton_Click() {
+    playlist_t *p_playlist = THEPL;
+    playlist_SynConnect(p_playlist,
+       connectionKey->text().toAscii().data());
+     
+    //disable buttons and text line
+    connectionKey->setReadOnly(true);
+    hostButton->setEnabled(false);
+    connectButton->setEnabled(false);
+}
+
+void MainInterface::copyButton_Click() {
+  connectionKey->selectAll();
+  connectionKey->copy();
+  displayMessage( "Key copied to clipboard." );
+}
+
+void MainInterface::leaveButton_Click() {
+  playlist_SynDisconnect(THEPL);
+}
+
+void MainInterface::checkConnectionKey(const QString &text) {
+  if (SynConnection_IsAddrValid(text.toAscii().data())) {
+    connectButton->setEnabled(true);
+  } else {
+    connectButton->setEnabled(false);
+  }
+}
+
+void MainInterface::clearConnectionKey(int oldVal, int newVal) {
+  if (!b_connectionKeyBlanked) {
+    connectionKey->clear();
+    b_connectionKeyBlanked = true;
+  }
+}
+
+void MainInterface::resetConnectionKey() {
+  if(0 == connectionKey->text().length()) {
+    connectionKey->setText( "Enter key or click 'Host' to begin" );
+    b_connectionKeyBlanked = false;
+  }
+}
+
+void MainInterface::leaveButtonVisible() {
+  hostButton->setVisible(false);
+  hostButton->setEnabled(false);
+  leaveButton->setVisible(true);
+  leaveButton->setEnabled(true);
+  connectButton->setEnabled(false);
+}
+
+void MainInterface::hostButtonVisible() {
+  hostButton->setVisible(true);
+  hostButton->setEnabled(true);
+  leaveButton->setVisible(false);
+  leaveButton->setEnabled(false);
+  copyButton->setVisible(false);
+  connectionKey->setReadOnly(false);
+  connectionKey->setText("");
+  resetConnectionKey();
+}
+
 void MainInterface::showUpdateSystrayMenu()
 {
     if( isHidden() )
@@ -1396,6 +1552,22 @@ static int IntfShowCB( vlc_object_t *p_this, const char *psz_variable,
 
     /* Show event */
      return VLC_SUCCESS;
+}
+
+/*********************************************
+ * Display messages to vout thread
+ *********************************************/
+void MainInterface::displayMessage( const char* message ) {
+  input_thread_t *p_input = playlist_CurrentInput( THEPL );
+  /* Update the vout */
+  vout_thread_t *p_vout = p_input ? input_GetVout( p_input ) : NULL;
+  if (p_vout) { 
+    vout_OSDMessage(p_vout, SPU_DEFAULT_CHANNEL, "%s", message);
+    vlc_object_release( p_vout );
+  } 
+  if( p_input ) {
+    vlc_object_release( p_input );
+  }
 }
 
 /*****************************************************************************

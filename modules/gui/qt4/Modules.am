@@ -45,6 +45,7 @@ nodist_SOURCES_qt4 = \
 		dialogs/vlm.moc.cpp \
 		dialogs/firstrun.moc.cpp \
 		dialogs/extensions.moc.cpp \
+		dialogs/synchronicity.moc.cpp \
 		components/extended_panels.moc.cpp \
 		components/info_panels.moc.cpp \
 		components/preferences_widgets.moc.cpp \
@@ -156,6 +157,10 @@ DEPS_res = \
 	pixmaps/space.png \
 	pixmaps/stop.png \
 	pixmaps/stop_16px.png \
+	pixmaps/synchronicity/redlight.png \
+	pixmaps/synchronicity/graylight.png \
+	pixmaps/synchronicity/greenlight.png \
+	pixmaps/synchronicity/yellowlight.png \
 	pixmaps/toolbar/arrows.png \
 	pixmaps/toolbar/aspect-ratio.png \
 	pixmaps/toolbar/atob.png \
@@ -280,6 +285,7 @@ SOURCES_qt4 = 	qt4.cpp \
 		dialogs/firstrun.cpp \
 		dialogs/podcast_configuration.cpp \
 		dialogs/extensions.cpp \
+		dialogs/synchronicity.cpp \
 		components/extended_panels.cpp \
 		components/info_panels.cpp \
 		components/preferences_widgets.cpp \
@@ -350,6 +356,7 @@ noinst_HEADERS = \
 	dialogs/sout.hpp \
 	dialogs/convert.hpp \
 	dialogs/help.hpp \
+	dialogs/synchronicity.hpp \
 	dialogs/gototime.hpp \
 	dialogs/toolbar.hpp \
 	dialogs/open.hpp \

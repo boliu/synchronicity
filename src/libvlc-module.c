@@ -1261,6 +1261,12 @@ static const char *const ppsz_prefres[] = {
 #define ALBUM_ART_LONGTEXT N_( \
     "Choose how album art will be downloaded." )
 
+#define SYNCHRONICITY_SERVER_TEXT N_( "Relay server for viewing with friend." )
+#define SYNCHRONICITY_SERVER_LONGTEXT N_( "Domain name of server." )
+
+#define SYNCHRONICITY_PORT_TEXT N_( "Relay server port for viewing with friend." )
+#define SYNCHRONICITY_PORT_LONGTEXT N_( "Port number of server." )
+
 static const int pi_albumart_values[] = { ALBUM_ART_WHEN_ASKED,
                                           ALBUM_ART_WHEN_PLAYED,
                                           ALBUM_ART_ALL };
@@ -2179,6 +2185,14 @@ vlc_module_begin ()
                  ALBUM_ART_LONGTEXT, false )
         change_integer_list( pi_albumart_values,
                              ppsz_albumart_descriptions )
+
+    /* synchronicity variables */
+    add_string( "synchronicity-server", "ec2-107-22-43-136.compute-1.amazonaws.com",
+                SYNCHRONICITY_SERVER_TEXT,
+                SYNCHRONICITY_SERVER_LONGTEXT, true);
+
+    add_integer( "synchronicity-port", 56789, SYNCHRONICITY_PORT_TEXT,
+                SYNCHRONICITY_PORT_LONGTEXT, true);
 
     set_subcategory( SUBCAT_PLAYLIST_SD )
     add_string( "services-discovery", "", SD_TEXT, SD_LONGTEXT, true )

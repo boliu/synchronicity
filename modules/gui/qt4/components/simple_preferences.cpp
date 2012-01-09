@@ -635,6 +635,8 @@ SPrefsPanel::SPrefsPanel( intf_thread_t *_p_intf, QWidget *_parent,
             CONFIG_GENERIC( "qt-recentplay-filter", String, ui.filterLabel,
                     recentlyPlayedFilters );
 
+
+
         END_SPREFS_CAT;
 
         START_SPREFS_CAT( Subtitles,

@@ -35,6 +35,7 @@
 
 #include <QSystemTrayIcon>
 #include <QStackedWidget>
+#include <QLineEdit>
 
 class QSettings;
 class QCloseEvent;
@@ -86,6 +87,7 @@ public:
     int getControlsVisibilityStatus();
     bool isPlDocked() { return ( b_plDocked != false ); }
     bool isInterfaceFullScreen() { return b_interfaceFullScreen; }
+    bool isSynchVisible;
 
 protected:
     void dropEventPlay( QDropEvent* event, bool b_play ) { dropEventPlay(event, b_play, true); }
@@ -122,6 +124,10 @@ private:
     void setMinimalView( bool );
     void setInterfaceFullScreen( bool );
     void computeMinimumSize();
+
+    void displayMessage( const char* );
+    void hostButtonVisible();
+    void leaveButtonVisible();
 
     /* */
     QSettings           *settings;
@@ -169,6 +175,17 @@ private:
 
     bool                 b_hasPausedWhenMinimized;
     bool                 b_statusbarVisible;
+    bool                 b_connectionKeyBlanked;
+
+    /*Synchronicity Bar*/
+    QLabel *synchronicityLabel;
+    QPushButton *hostButton;
+    QPushButton *connectButton;
+    QPushButton *copyButton;
+    QPushButton *leaveButton;
+    QLineEdit *connectionKey;
+    QGridLayout *synchLayout;
+    QWidget *synchWidget;
 
 #ifdef WIN32
     HIMAGELIST himl;
@@ -189,6 +206,7 @@ public slots:
     void toggleFSC();
 
     void setStatusBarVisibility(bool b_visible);
+    void setSynchronicityBarVisibility(bool b_visible);
 
     void popupMenu( const QPoint& );
 #ifdef WIN32
@@ -199,6 +217,10 @@ public slots:
     void getVideoSlot( WId *p_id, int *pi_x, int *pi_y,
                        unsigned *pi_width, unsigned *pi_height );
     void releaseVideoSlot( void );
+    void updateSynchronicity ( int );
+    void checkConnectionKey( const QString& );
+    void clearConnectionKey( int, int );
+    void resetConnectionKey();
 
     void emitBoss();
     void emitRaise();
@@ -240,6 +262,10 @@ private slots:
     void setVideoSize( unsigned int, unsigned int );
     void setVideoFullScreen( bool );
     void setVideoOnTop( bool );
+    void hostButton_Click();
+    void connectButton_Click();
+    void copyButton_Click();
+    void leaveButton_Click();
     void setBoss();
     void setRaise();
 

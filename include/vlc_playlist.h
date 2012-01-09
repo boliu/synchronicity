@@ -388,6 +388,15 @@ static inline int playlist_CurrentSize( playlist_t *p_playlist )
     return p_playlist->current.i_size;
 }
 
+/***********************************************************************
+ * Synchronicity functions
+ ***********************************************************************/
+VLC_API void playlist_SynConnect(playlist_t*, const char*);
+VLC_API void playlist_SynHost(playlist_t*);
+VLC_API size_t playlist_SynGetHostAddrLen(playlist_t*);
+VLC_API void playlist_SynGetHostAddr(playlist_t*, char*, size_t);
+VLC_API void playlist_SynDisconnect(playlist_t*);
+
 /** @} */
 # ifdef __cplusplus
 }

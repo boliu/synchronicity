@@ -36,6 +36,7 @@
 
 #include "input/input_interface.h"
 #include <assert.h>
+#include <synchronicity/syn_connection.h>
 
 #include "art.h"
 #include "fetcher.h"
@@ -90,6 +91,13 @@ typedef struct playlist_private_t
     bool     b_doing_ml; /**< Doing media library stuff  get quicker */
     bool     b_auto_preparse;
     mtime_t  last_rebuild_date;
+
+    SynConnection syn_connection;
+    bool     b_syn_can_send;
+    bool     b_syn_created;
+    bool     b_syn_heartbeat;
+    char*    psz_syn_server_host;
+    int      i_syn_port;
 
 } playlist_private_t;
 

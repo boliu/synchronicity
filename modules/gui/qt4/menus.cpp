@@ -400,6 +400,10 @@ QMenu *VLCMenuBar::FileMenu( intf_thread_t *p_intf, QWidget *parent, MainInterfa
  **/
 QMenu *VLCMenuBar::ToolsMenu( QMenu *menu )
 {
+   // addDPStaticEntry( menu, qtr( "Synch..." ) ,
+     //   ":/menu/synch", SLOT( synchDialog() ), "F2" );
+   // menu->addSeparator();
+
     addDPStaticEntry( menu, qtr( "&Effects and Filters"), ":/menu/settings",
             SLOT( extendedDialog() ), "Ctrl+E" );
 
@@ -509,7 +513,13 @@ QMenu *VLCMenuBar::ViewMenu( intf_thread_t *p_intf, QMenu *current, MainInterfac
     action = menu->addAction( qtr( "Status Bar" ) );
     action->setCheckable( true );
     action->setChecked( mi->statusBar()->isVisible() );
-    CONNECT( action, triggered( bool ), mi, setStatusBarVisibility( bool) );
+    CONNECT( action, triggered( bool ), mi, setStatusBarVisibility( bool ) );
+
+    /*synchronicity menu*/
+    action = menu->addAction( qtr( "View with a friend..." ) );
+    action->setCheckable( true );
+    action->setChecked( mi->isSynchVisible );
+    CONNECT( action, triggered( bool ), mi, setSynchronicityBarVisibility( bool ) );
 #if 0 /* For Visualisations. Not yet working */
     adv = menu->addAction( qtr( "Visualizations selector" ), mi,
                            SLOT( visual() ) );

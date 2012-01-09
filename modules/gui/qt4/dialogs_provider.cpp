@@ -56,6 +56,7 @@
 #include "dialogs/external.hpp"
 #include "dialogs/epg.hpp"
 #include "dialogs/errors.hpp"
+#include "dialogs/synchronicity.hpp"
 
 #include <QEvent>
 #include <QApplication>
@@ -93,6 +94,7 @@ DialogsProvider::~DialogsProvider()
     MessagesDialog::killInstance();
     BookmarksDialog::killInstance();
     HelpDialog::killInstance();
+    SynchDialog::killInstance();
 #ifdef UPDATE_CHECK
     UpdateDialog::killInstance();
 #endif
@@ -112,6 +114,11 @@ void DialogsProvider::quit()
 {
     b_isDying = true;
     libvlc_Quit( p_intf->p_libvlc );
+}
+
+void DialogsProvider::synConnectionReady()
+{
+  SynchDialog::getInstance( p_intf )->synConnectionReady();
 }
 
 void DialogsProvider::customEvent( QEvent *event )
@@ -168,6 +175,8 @@ void DialogsProvider::customEvent( QEvent *event )
 #endif
         case INTF_DIALOG_EXIT:
             quit(); break;
+        case INTF_DIALOG_SYNCHRONICITY:
+            synConnectionReady(); break;
         default:
            msg_Warn( p_intf, "unimplemented dialog" );
         }
@@ -230,6 +239,11 @@ void DialogsProvider::vlmDialog()
 void DialogsProvider::helpDialog()
 {
     HelpDialog::getInstance( p_intf )->toggleVisible();
+}
+
+void DialogsProvider::synchDialog()
+{
+    SynchDialog::getInstance( p_intf )->toggleVisible();
 }
 
 #ifdef UPDATE_CHECK

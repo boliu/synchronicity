@@ -56,6 +56,10 @@ static int VolumeChanged( vlc_object_t *, const char *,
 static int SoundMuteChanged( vlc_object_t *, const char *,
                         vlc_value_t, vlc_value_t, void * );
 
+static int SynchronicityChanged( vlc_object_t *, const char *,
+                        vlc_value_t, vlc_value_t, void * );
+
+
 static int RandomChanged( vlc_object_t *, const char *,
                         vlc_value_t, vlc_value_t, void * );
 static int LoopChanged( vlc_object_t *, const char *,
@@ -950,6 +954,7 @@ MainInputManager::MainInputManager( intf_thread_t *_p_intf )
 
     var_AddCallback( THEPL, "volume", VolumeChanged, this );
     var_AddCallback( THEPL, "mute", SoundMuteChanged, this );
+    var_AddCallback( THEPL, "synchronicity", SynchronicityChanged, this );
 
     /* Warn our embedded IM about input changes */
     DCONNECT( this, inputChanged( input_thread_t * ),
@@ -968,6 +973,7 @@ MainInputManager::~MainInputManager()
 
     var_DelCallback( THEPL, "volume", VolumeChanged, this );
     var_DelCallback( THEPL, "mute", SoundMuteChanged, this );
+    var_DelCallback( THEPL, "synchronicity", SynchronicityChanged, this );
 
     var_DelCallback( THEPL, "activity", PLItemChanged, this );
     var_DelCallback( THEPL, "item-change", ItemChanged, im );
@@ -1036,6 +1042,9 @@ void MainInputManager::customEvent( QEvent *event )
     case LeafToParent_Type:
         plEv = static_cast<PLEvent*>( event );
         emit leafBecameParent( plEv->i_item );
+        return;
+    case SynchronicityChanged_Type:
+        emit synchronicityChanged( var_GetInteger( THEPL, "synchronicity" ) );
         return;
     default:
         if( type != ItemChanged_Type ) return;
@@ -1227,6 +1236,15 @@ static int SoundMuteChanged( vlc_object_t *p_this, const char *psz_var,
     MainInputManager *mim = (MainInputManager*)param;
 
     IMEvent *event = new IMEvent( SoundMuteChanged_Type );
+    QApplication::postEvent( mim, event );
+    return VLC_SUCCESS;
+}
+
+static int SynchronicityChanged (vlc_object_t *p_this, const char *psz_var,
+                            vlc_value_t oldval, vlc_value_t newval, void *param )
+{
+    MainInputManager *mim = (MainInputManager*)param;
+    IMEvent *event = new IMEvent( SynchronicityChanged_Type );
     QApplication::postEvent( mim, event );
     return VLC_SUCCESS;
 }

@@ -190,6 +190,14 @@ playlist_t * playlist_Create( vlc_object_t *p_parent )
     pl_priv(p_playlist)->b_auto_preparse =
         var_InheritBool( p_parent, "auto-preparse" );
 
+    pl_priv(p_playlist)->b_syn_can_send = false;
+    pl_priv(p_playlist)->b_syn_created = false;
+    pl_priv(p_playlist)->b_syn_heartbeat = false;
+    pl_priv(p_playlist)->psz_syn_server_host =
+      var_InheritString( p_parent, "synchronicity-server" );
+    pl_priv(p_playlist)->i_syn_port =
+      var_InheritInteger( p_parent, "synchronicity-port" );
+
     /* Fetcher */
     p->p_fetcher = playlist_fetcher_New( p_playlist );
     if( unlikely(p->p_fetcher == NULL) )
@@ -427,6 +435,10 @@ static void VariablesInit( playlist_t *p_playlist )
     /* FIXME: horrible hack for audio output interface code */
     var_Create( p_playlist, "find-input-callback", VLC_VAR_ADDRESS );
     var_SetAddress( p_playlist, "find-input-callback", playlist_FindInput );
+
+    /* Synchronicity Variable */
+    var_Create( p_playlist, "synchronicity", VLC_VAR_INTEGER );
+    var_SetInteger( p_playlist, "synchronicity", 0 );
 }
 
 playlist_item_t * playlist_CurrentPlayingItem( playlist_t * p_playlist )
