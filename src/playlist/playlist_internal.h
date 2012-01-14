@@ -100,6 +100,10 @@ typedef struct playlist_private_t
     char*    psz_syn_server_host;
     int      i_syn_port;
 
+    mtime_t  t_wall_minus_video;
+    bool     b_correcting;
+    mtime_t  t_last_correction_time;
+
 } playlist_private_t;
 
 #define pl_priv( pl ) ((playlist_private_t *)(pl))

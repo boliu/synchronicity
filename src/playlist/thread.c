@@ -292,6 +292,7 @@ static void SynFreeMemory(int rv, void* param) {
 
 static int SendSynCommand(playlist_t* p_playlist, SynCommand syn) {
   playlist_private_t *p_sys = pl_priv(p_playlist);
+  p_sys->t_wall_minus_video = mdate() - syn.data.i_time;
   if(!p_sys->b_syn_can_send) {
     return VLC_SUCCESS;
   }
@@ -331,16 +332,47 @@ static int SynStateListener( vlc_object_t *p_this, const char *psz_var,
   return SendSynCommand((playlist_t*)param, syn);
 }
 
-static int test_listener( vlc_object_t *p_this, const char *psz_var,
+static int SynEventListener( vlc_object_t *p_this, const char *psz_var,
                            vlc_value_t oldval, vlc_value_t newval,
                            void *param ) {
   playlist_private_t* p_playlist = pl_priv((playlist_t*)param);
-  if(INPUT_EVENT_POSITION == newval.i_int && p_playlist->b_need_send_seek) {
-    p_playlist->b_need_send_seek = false;
-    SynCommand syn;
-    syn.type = SYNCOMMAND_SEEK;
-    input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &syn.data.i_time);
-    return SendSynCommand((playlist_t*)param, syn);
+  if(!p_playlist->b_syn_can_send) {
+    return VLC_SUCCESS;
+  }
+  if(INPUT_EVENT_POSITION == newval.i_int ) {
+    if(p_playlist->b_need_send_seek) {
+      p_playlist->b_need_send_seek = false;
+      SynCommand syn;
+      syn.type = SYNCOMMAND_SEEK;
+      input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &syn.data.i_time);
+      return SendSynCommand((playlist_t*)param, syn);
+    } else {
+      // immediately after a position change, the difference is totally messed up, so
+      // this is in the else block
+      mtime_t current_wall = mdate();
+      int playpause;
+      input_Control((input_thread_t*)p_this, INPUT_GET_STATE, &playpause);
+      if(p_playlist->t_wall_minus_video
+        && !p_playlist->b_correcting
+        && PLAYING_S == playpause
+        //&& current_wall - p_playlist->t_last_correction_time > 200000
+        ) {
+        // calculate current wall clock - video time
+        mtime_t current_time;
+        input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &current_time);
+        mtime_t current_difference = current_wall - current_time;
+
+        mtime_t diff_diff = current_difference - p_playlist->t_wall_minus_video;
+        if(diff_diff > 50000) {
+          msg_Err(p_this, "off line sync %d", diff_diff);
+          p_playlist->t_last_correction_time = current_wall;
+
+          p_playlist->b_correcting = true;
+          input_Control((input_thread_t*)p_this, INPUT_SET_TIME, current_time + diff_diff + 25000);
+          p_playlist->b_correcting = false;
+        }
+      }
+    }
   }
   return VLC_SUCCESS;
 }
@@ -393,7 +425,7 @@ static int PlayItem( playlist_t *p_playlist, playlist_item_t *p_item )
         //var_AddCallback( p_input_thread, "state", StateListener, p_input_thread );
         var_AddCallback( p_input_thread, "state", SynStateListener, p_playlist );
         var_AddCallback( p_input_thread, "position", SynPositionListener, p_playlist );
-        var_AddCallback( p_input_thread, "intf-event", test_listener, p_playlist);
+        var_AddCallback( p_input_thread, "intf-event", SynEventListener, p_playlist);
         //var_AddCallback( p_input_thread, "position", PositionListener, p_input_thread );
 
         var_SetAddress( p_playlist, "input-current", p_input_thread );
@@ -637,7 +669,7 @@ static int LoopInput( playlist_t *p_playlist )
         //var_DelCallback( p_input, "state", StateListener, p_input );
         var_DelCallback( p_input, "state", SynStateListener, p_playlist );
         var_DelCallback( p_input, "position", SynPositionListener, p_playlist );
-        var_DelCallback( p_input, "intf-event", test_listener, p_playlist );
+        var_DelCallback( p_input, "intf-event", SynEventListener, p_playlist );
         //var_DelCallback( p_input, "position", PositionListener, p_input );
 
         PL_LOCK;

@@ -115,6 +115,7 @@ static void SynReceiveCallback(int rv, mtime_t delay, void* param, void* buffer,
         break;
     }
     if (0 != delay) {
+      pl_priv(p_playlist)->t_wall_minus_video = mdate() - (current + delay);
       var_SetInteger( p_playlist, "synchronicity", PEER_SNAP );
       input_Control(p_in, INPUT_SET_TIME, current + delay);
     }
@@ -130,6 +131,7 @@ static void SynFreeMemory(int rv, void* param) {
 
 static int SendSynCommand(playlist_t* p_playlist, SynCommand syn) {
   playlist_private_t *p_sys = pl_priv(p_playlist);
+  p_sys->t_wall_minus_video = mdate() - syn.data.i_time;
   if(!p_sys->b_syn_can_send) {
     return VLC_SUCCESS;
   }
