@@ -209,6 +209,8 @@ static int SkipFile(stream_t *s, int *count, rar_file_t ***file,
         current = NULL;
 
     if (!current) {
+        if (hdr->flags & RAR_BLOCK_FILE_HAS_PREVIOUS)
+            goto exit;
         current = malloc(sizeof(*current));
         if (!current)
             goto exit;
@@ -351,7 +353,8 @@ int RarParse(stream_t *s, int *count, rar_file_t ***file)
         if (vol != s)
             stream_Delete(vol);
 
-        if (!has_next || !pattern) {
+        if (!has_next || !pattern ||
+            (*count > 0 && !(*file)[*count -1]->is_complete)) {
             free(volume_mrl);
             return VLC_SUCCESS;
         }

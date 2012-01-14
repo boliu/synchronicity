@@ -233,9 +233,6 @@ static int VideoAutoMenuBuilder( vout_thread_t *p_object,
     PUSH_VAR( "fullscreen" );
     PUSH_VAR( "video-on-top" );
     PUSH_VAR( "video-wallpaper" );
-#ifdef WIN32
-    PUSH_VAR( "direct3d-desktop" );
-#endif
     PUSH_VAR( "video-snapshot" );
     PUSH_VAR( "zoom" );
     PUSH_VAR( "autoscale" );
@@ -658,13 +655,8 @@ QMenu *VLCMenuBar::VideoMenu( intf_thread_t *p_intf, QMenu *current, bool b_subt
         addActionWithCheckbox( current, "fullscreen", qtr( "&Fullscreen" ) );
         addActionWithCheckbox( current, "autoscale", qtr( "Always Fit &Window" ) );
         addActionWithCheckbox( current, "video-on-top", qtr( "Always &on Top" ) );
-#ifdef WIN32
-        addActionWithCheckbox( current, "direct3d-desktop", qtr( "Display on &Desktop" ) );
-#endif
-
-#ifdef WIN32
         addActionWithCheckbox( current, "video-wallpaper", qtr( "Set as Wall&paper" ) );
-#endif
+
         current->addSeparator();
         /* Size modifiers */
         addActionWithSubmenu( current, "zoom", qtr( "&Zoom" ) );
