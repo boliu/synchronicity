@@ -299,7 +299,6 @@ static int SendSynCommand(playlist_t* p_playlist, SynCommand syn) {
   int numbytes;
   numbytes = StringFromCommand(syn, buffer, 80);
   if (numbytes > 0) {
-    msg_Info(p_playlist, "SendSynCommand: Sending");
     SynConnection_Send(
         p_sys->syn_connection,
         buffer, numbytes,
@@ -313,7 +312,6 @@ static int SendSynCommand(playlist_t* p_playlist, SynCommand syn) {
 static int SynStateListener( vlc_object_t *p_this, const char *psz_var,
                            vlc_value_t oldval, vlc_value_t newval,
                            void *param ) {
-  msg_Dbg(p_this, "SynStateListener: Change");
   VLC_UNUSED(p_this);
   VLC_UNUSED(psz_var);
   VLC_UNUSED(oldval);
@@ -333,19 +331,29 @@ static int SynStateListener( vlc_object_t *p_this, const char *psz_var,
   return SendSynCommand((playlist_t*)param, syn);
 }
 
+static int test_listener( vlc_object_t *p_this, const char *psz_var,
+                           vlc_value_t oldval, vlc_value_t newval,
+                           void *param ) {
+  playlist_private_t* p_playlist = pl_priv((playlist_t*)param);
+  if(INPUT_EVENT_POSITION == newval.i_int && p_playlist->b_need_send_seek) {
+    p_playlist->b_need_send_seek = false;
+    SynCommand syn;
+    syn.type = SYNCOMMAND_SEEK;
+    input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &syn.data.i_time);
+    return SendSynCommand((playlist_t*)param, syn);
+  }
+  return VLC_SUCCESS;
+}
+
 static int SynPositionListener( vlc_object_t *p_this, const char *psz_var,
                            vlc_value_t oldval, vlc_value_t newval,
                            void *param ) {
-  msg_Dbg(p_this, "SynPositionListener: Change");
   VLC_UNUSED(p_this);
   VLC_UNUSED(psz_var);
   VLC_UNUSED(oldval);
 
-  SynCommand syn;
-  syn.type = SYNCOMMAND_SEEK;
-  input_Control((input_thread_t*)p_this, INPUT_GET_LENGTH, &syn.data.i_time);
-  syn.data.i_time = (int64_t)(syn.data.i_time * newval.f_float);
-  return SendSynCommand((playlist_t*)param, syn);
+  pl_priv((playlist_t*)param)->b_need_send_seek = true;
+  return VLC_SUCCESS;
 }
 
 /**
@@ -385,6 +393,7 @@ static int PlayItem( playlist_t *p_playlist, playlist_item_t *p_item )
         //var_AddCallback( p_input_thread, "state", StateListener, p_input_thread );
         var_AddCallback( p_input_thread, "state", SynStateListener, p_playlist );
         var_AddCallback( p_input_thread, "position", SynPositionListener, p_playlist );
+        var_AddCallback( p_input_thread, "intf-event", test_listener, p_playlist);
         //var_AddCallback( p_input_thread, "position", PositionListener, p_input_thread );
 
         var_SetAddress( p_playlist, "input-current", p_input_thread );
@@ -628,6 +637,7 @@ static int LoopInput( playlist_t *p_playlist )
         //var_DelCallback( p_input, "state", StateListener, p_input );
         var_DelCallback( p_input, "state", SynStateListener, p_playlist );
         var_DelCallback( p_input, "position", SynPositionListener, p_playlist );
+        var_DelCallback( p_input, "intf-event", test_listener, p_playlist );
         //var_DelCallback( p_input, "position", PositionListener, p_input );
 
         PL_LOCK;

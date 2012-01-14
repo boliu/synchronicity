@@ -96,6 +96,7 @@ typedef struct playlist_private_t
     bool     b_syn_can_send;
     bool     b_syn_created;
     bool     b_syn_heartbeat;
+    bool     b_need_send_seek;
     char*    psz_syn_server_host;
     int      i_syn_port;
 
