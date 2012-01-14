@@ -50,7 +50,6 @@ static void SynReceiveCallback(int rv, mtime_t delay, void* param, void* buffer,
   playlist_t* p_playlist = (playlist_t*)param;
   pl_priv(p_playlist)->b_syn_can_send = false;
   if (rv < 0) {
-msg_Info(p_playlist, "SynReceiveCallback: Break");
     // Connection closed.
     SynBreakConnection(p_playlist);
     return;
@@ -73,17 +72,14 @@ msg_Info(p_playlist, "SynReceiveCallback: Break");
     input_Control(p_in, INPUT_GET_TIME, &current);
     switch(syn.type) {
       case SYNCOMMAND_PLAY:
-        msg_Info(p_playlist, "SynReceiveCallback: Play");
         input_Control(p_in, INPUT_SET_STATE, PLAYING_S);
         delay = syn.data.i_time + delay - current;
         break;
       case SYNCOMMAND_PAUSE:
-        msg_Info(p_playlist, "SynReceiveCallback: Pause");
         input_Control(p_in, INPUT_SET_STATE, PAUSE_S);
         delay = syn.data.i_time - current;
         break;
       case SYNCOMMAND_SEEK:
-        msg_Info(p_playlist, "SynReceiveCallback: Seek");
         {
           int playpause;
           input_Control(p_in, INPUT_GET_STATE, &playpause);
@@ -102,7 +98,6 @@ msg_Info(p_playlist, "SynReceiveCallback: Break");
         }
         break;
       case SYNCOMMAND_BEAT:
-        msg_Info(p_playlist, "SynReceiveCallback: Beat");
         pl_priv(p_playlist)->b_syn_heartbeat = true;
         // Further-ahead snaps to user that is behind
         msg_Info(p_playlist, "SynReceiveCallback: RTT/2:%d, You - Them:%I64d", delay, current - syn.data.i_time);
@@ -121,7 +116,6 @@ msg_Info(p_playlist, "SynReceiveCallback: Break");
     }
     if (0 != delay) {
       var_SetInteger( p_playlist, "synchronicity", PEER_SNAP );
-      msg_Info(p_playlist, "SynReceiveCallback: Correcting delay of %d", delay);
       input_Control(p_in, INPUT_SET_TIME, current + delay);
     }
     vlc_object_release(p_in);
