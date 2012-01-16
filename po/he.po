@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vlc\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2012-01-08 22:05+0000\n"
+"POT-Creation-Date: 2012-01-16 03:53+0100\n"
 "PO-Revision-Date: 2011-08-14 18:20+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
@@ -40,9 +40,9 @@ msgstr "העדפות VLC"
 msgid "Select \"Advanced Options\" to see all options."
 msgstr "ניתן לבחור ב\"אפשרויות מתקדמות\" כדי לראות את כל האפשרויות."
 
-#: include/vlc_config_cat.h:37 modules/gui/macosx/simple_prefs.m:173
+#: include/vlc_config_cat.h:37 modules/gui/macosx/simple_prefs.m:176
 #: modules/gui/qt4/components/simple_preferences.cpp:86
-#: modules/gui/qt4/menus.cpp:1055
+#: modules/gui/qt4/menus.cpp:1058
 msgid "Interface"
 msgstr "מנשק"
 
@@ -72,14 +72,14 @@ msgid "Settings for VLC's control interfaces"
 msgstr "הגדרות לממשקי השליטה של VLC"
 
 #: include/vlc_config_cat.h:48 include/vlc_config_cat.h:49
-#: modules/gui/macosx/simple_prefs.m:193
+#: modules/gui/macosx/simple_prefs.m:196
 msgid "Hotkeys settings"
 msgstr "הגדרות קיצורי מקלדת"
 
 #: include/vlc_config_cat.h:52 src/input/es_out.c:2893 src/input/es_out.c:2934
 #: src/libvlc-module.c:1587 modules/access/imem.c:64
-#: modules/gui/macosx/MainMenu.m:281 modules/gui/macosx/output.m:170
-#: modules/gui/macosx/playlistinfo.m:116 modules/gui/macosx/simple_prefs.m:177
+#: modules/gui/macosx/MainMenu.m:292 modules/gui/macosx/output.m:170
+#: modules/gui/macosx/playlistinfo.m:116 modules/gui/macosx/simple_prefs.m:180
 #: modules/gui/macosx/wizard.m:382
 #: modules/gui/qt4/components/info_panels.cpp:516
 #: modules/gui/qt4/components/simple_preferences.cpp:88
@@ -108,7 +108,7 @@ msgid "Audio filters are used to process the audio stream."
 msgstr "מסנני שמע מופעלים לשם עיבוד מחדש של שטף נתוני השמע"
 
 #: include/vlc_config_cat.h:60 src/audio_output/common.c:82
-#: modules/gui/macosx/MainMenu.m:291 modules/gui/macosx/MainMenu.m:292
+#: modules/gui/macosx/MainMenu.m:302 modules/gui/macosx/MainMenu.m:303
 msgid "Visualizations"
 msgstr "אפקטים חזותיים"
 
@@ -137,15 +137,15 @@ msgstr "הגדרות ומודולי שמע שונים"
 
 #: include/vlc_config_cat.h:70 src/input/es_out.c:2896 src/input/es_out.c:2981
 #: src/libvlc-module.c:1638 modules/access/imem.c:64
-#: modules/gui/macosx/MainMenu.m:294 modules/gui/macosx/output.m:160
-#: modules/gui/macosx/playlistinfo.m:106 modules/gui/macosx/simple_prefs.m:181
+#: modules/gui/macosx/MainMenu.m:305 modules/gui/macosx/output.m:160
+#: modules/gui/macosx/playlistinfo.m:106 modules/gui/macosx/simple_prefs.m:184
 #: modules/gui/macosx/wizard.m:383
 #: modules/gui/qt4/components/info_panels.cpp:517
 #: modules/gui/qt4/components/simple_preferences.cpp:90
 #: modules/services_discovery/mediadirs.c:70 modules/stream_out/es.c:101
 #: modules/stream_out/transcode/transcode.c:161
 #: share/lua/http/dialogs/create_stream.html:147
-#: modules/gui/qt4/ui/profiles.h:476 modules/gui/qt4/ui/sprefs_video.h:356
+#: modules/gui/qt4/ui/profiles.h:476 modules/gui/qt4/ui/sprefs_video.h:348
 msgid "Video"
 msgstr "וידאו"
 
@@ -362,11 +362,11 @@ msgstr "יישום של VLC ל-\"וידאו בדרישה\" (Video On Demand)"
 
 #: include/vlc_config_cat.h:175 src/libvlc-module.c:2149
 #: src/playlist/engine.c:217 modules/demux/playlist/playlist.c:63
-#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:302
+#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:308
 #: modules/gui/qt4/components/controller.hpp:116
 #: modules/gui/qt4/components/playlist/playlist.cpp:191
 #: modules/gui/qt4/components/playlist/selector.cpp:187
-#: modules/gui/qt4/dialogs/playlist.cpp:41 modules/gui/qt4/menus.cpp:1084
+#: modules/gui/qt4/dialogs/playlist.cpp:41 modules/gui/qt4/menus.cpp:1087
 #: modules/gui/qt4/ui/sprefs_interface.h:529
 msgid "Playlist"
 msgstr "רשימת השמעה"
@@ -383,8 +383,8 @@ msgstr ""
 msgid "General playlist behaviour"
 msgstr "התנהגות כללית של רשימת ההשמעה"
 
-#: include/vlc_config_cat.h:181 modules/gui/macosx/playlist.m:478
-#: modules/gui/macosx/playlist.m:479
+#: include/vlc_config_cat.h:181 modules/gui/macosx/playlist.m:480
+#: modules/gui/macosx/playlist.m:481
 msgid "Services discovery"
 msgstr "גילוי שירותים"
 
@@ -423,7 +423,7 @@ msgid "Advanced settings"
 msgstr "הגדרות מתקדמות"
 
 #: include/vlc_config_cat.h:198 modules/gui/macosx/open.m:122
-#: modules/gui/macosx/open.m:486 modules/gui/macosx/simple_prefs.m:253
+#: modules/gui/macosx/open.m:486 modules/gui/macosx/simple_prefs.m:256
 #: modules/gui/qt4/ui/sprefs_input.h:356
 msgid "Network"
 msgstr "רשת"
@@ -548,12 +548,12 @@ msgid "&About"
 msgstr "על &אודות"
 
 #: include/vlc_intf_strings.h:65 modules/control/rc.c:72
-#: modules/gui/macosx/MainMenu.m:255 modules/gui/macosx/MainMenu.m:352
-#: modules/gui/macosx/MainMenu.m:359 modules/gui/macosx/MainMenu.m:791
-#: modules/gui/macosx/MainMenu.m:792 modules/gui/macosx/MainMenu.m:793
-#: modules/gui/macosx/MainWindow.m:1076 modules/gui/macosx/playlist.m:466
+#: modules/gui/macosx/MainMenu.m:266 modules/gui/macosx/MainMenu.m:363
+#: modules/gui/macosx/MainMenu.m:370 modules/gui/macosx/MainMenu.m:846
+#: modules/gui/macosx/MainMenu.m:847 modules/gui/macosx/MainMenu.m:848
+#: modules/gui/macosx/MainWindow.m:1095 modules/gui/macosx/playlist.m:468
 #: modules/gui/qt4/components/controller.hpp:114
-#: modules/gui/qt4/dialogs/vlm.cpp:550 modules/gui/qt4/menus.cpp:786
+#: modules/gui/qt4/dialogs/vlm.cpp:550 modules/gui/qt4/menus.cpp:790
 #: modules/gui/qt4/ui/open.h:253
 msgid "Play"
 msgstr "נגן"
@@ -599,12 +599,12 @@ msgid "Save..."
 msgstr "שמירה..."
 
 #: include/vlc_intf_strings.h:80 modules/gui/macosx/CoreInteraction.m:371
-#: modules/gui/macosx/MainMenu.m:269 modules/gui/macosx/MainMenu.m:1127
+#: modules/gui/macosx/MainMenu.m:280 modules/gui/macosx/MainMenu.m:1182
 msgid "Repeat All"
 msgstr "חזרה על הכול"
 
 #: include/vlc_intf_strings.h:81 modules/gui/macosx/CoreInteraction.m:388
-#: modules/gui/macosx/MainMenu.m:268 modules/gui/macosx/MainMenu.m:1120
+#: modules/gui/macosx/MainMenu.m:279 modules/gui/macosx/MainMenu.m:1175
 msgid "Repeat One"
 msgstr "חזור על אחד"
 
@@ -613,7 +613,7 @@ msgid "No Repeat"
 msgstr "ללא חזרה"
 
 #: include/vlc_intf_strings.h:84 src/libvlc-module.c:1509
-#: modules/gui/macosx/MainMenu.m:267 modules/gui/macosx/MainMenu.m:1113
+#: modules/gui/macosx/MainMenu.m:278 modules/gui/macosx/MainMenu.m:1168
 #: modules/gui/qt4/components/controller.hpp:118
 #: modules/gui/qt4/components/controller.hpp:131
 msgid "Random"
@@ -655,7 +655,7 @@ msgstr "שמירת רשימת ההשמעה ל&קובץ..."
 msgid "Open Play&list..."
 msgstr "&פתיחת רשימת השמעה..."
 
-#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:135
+#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:141
 #: modules/gui/qt4/components/preferences_widgets.cpp:1300
 msgid "Search"
 msgstr "חיפוש"
@@ -763,7 +763,8 @@ msgstr ""
 
 #: src/audio_output/common.c:85 src/audio_output/common.c:125
 #: src/input/es_out.c:934 src/libvlc-module.c:669
-#: src/video_output/postprocessing.c:98 modules/video_filter/postproc.c:228
+#: src/video_output/postprocessing.c:98 modules/gui/macosx/MainWindow.m:1918
+#: modules/video_filter/postproc.c:228
 msgid "Disable"
 msgstr "נטרול"
 
@@ -807,8 +808,8 @@ msgid "The maximum number of filters (%u) was reached."
 msgstr ""
 
 #: src/audio_output/output.c:100 src/audio_output/output.c:128
-#: modules/access/vcdx/info.c:86 modules/gui/macosx/MainMenu.m:287
-#: modules/gui/macosx/MainMenu.m:288
+#: modules/access/vcdx/info.c:86 modules/gui/macosx/MainMenu.m:298
+#: modules/gui/macosx/MainMenu.m:299
 #: share/lua/http/dialogs/create_stream.html:316
 msgid "Audio Channels"
 msgstr "ערוצי שמע"
@@ -1033,8 +1034,8 @@ msgid "%s [%s %d]"
 msgstr ""
 
 #: src/input/es_out.c:1165 src/input/es_out.c:1170 src/input/var.c:167
-#: src/libvlc-module.c:693 modules/gui/macosx/MainMenu.m:274
-#: modules/gui/macosx/MainMenu.m:275
+#: src/libvlc-module.c:693 modules/gui/macosx/MainMenu.m:285
+#: modules/gui/macosx/MainMenu.m:286
 msgid "Program"
 msgstr "תכנית"
 
@@ -1077,7 +1078,7 @@ msgid "Codec"
 msgstr "מקודד/מפענח"
 
 #: src/input/es_out.c:2925 src/input/meta.c:65 src/libvlc-module.c:219
-#: modules/access/imem.c:71 modules/gui/macosx/simple_prefs.m:266
+#: modules/access/imem.c:71 modules/gui/macosx/simple_prefs.m:270
 #: modules/stream_out/setid.c:49 modules/gui/qt4/ui/sprefs_interface.h:527
 msgid "Language"
 msgstr "שפה"
@@ -1169,8 +1170,8 @@ msgid ""
 "The format of '%s' cannot be detected. Have a look at the log for details."
 msgstr ""
 
-#: src/input/meta.c:54 src/input/var.c:177 modules/gui/macosx/MainMenu.m:276
-#: modules/gui/macosx/MainMenu.m:277 modules/gui/macosx/open.m:157
+#: src/input/meta.c:54 src/input/var.c:177 modules/gui/macosx/MainMenu.m:287
+#: modules/gui/macosx/MainMenu.m:288 modules/gui/macosx/open.m:157
 #: modules/gui/macosx/open.m:159 modules/gui/macosx/playlistinfo.m:78
 #: modules/gui/macosx/wizard.m:350
 #: modules/gui/qt4/components/open_panels.cpp:441
@@ -1180,7 +1181,7 @@ msgid "Title"
 msgstr "כותרת"
 
 #: src/input/meta.c:55 modules/gui/macosx/playlistinfo.m:79
-#: modules/gui/macosx/playlist.m:1185
+#: modules/gui/macosx/playlist.m:1171
 msgid "Artist"
 msgstr "אמן"
 
@@ -1247,8 +1248,8 @@ msgstr "סימנייה"
 msgid "Programs"
 msgstr "תכניות"
 
-#: src/input/var.c:182 modules/gui/macosx/MainMenu.m:278
-#: modules/gui/macosx/MainMenu.m:279 modules/gui/macosx/open.m:158
+#: src/input/var.c:182 modules/gui/macosx/MainMenu.m:289
+#: modules/gui/macosx/MainMenu.m:290 modules/gui/macosx/open.m:158
 #: modules/gui/macosx/open.m:160 modules/gui/qt4/ui/open_disk.h:310
 msgid "Chapter"
 msgstr "פרק"
@@ -1257,19 +1258,19 @@ msgstr "פרק"
 msgid "Navigation"
 msgstr "ניווט"
 
-#: src/input/var.c:200 modules/gui/macosx/MainMenu.m:302
-#: modules/gui/macosx/MainMenu.m:303
+#: src/input/var.c:200 modules/gui/macosx/MainMenu.m:313
+#: modules/gui/macosx/MainMenu.m:314
 msgid "Video Track"
 msgstr "רצועת וידאו"
 
-#: src/input/var.c:205 modules/gui/macosx/MainMenu.m:285
-#: modules/gui/macosx/MainMenu.m:286
+#: src/input/var.c:205 modules/gui/macosx/MainMenu.m:296
+#: modules/gui/macosx/MainMenu.m:297
 msgid "Audio Track"
 msgstr "רצועת שמע"
 
-#: src/input/var.c:210 modules/gui/macosx/MainMenu.m:310
-#: modules/gui/macosx/MainMenu.m:311 modules/gui/macosx/MainMenu.m:986
-#: modules/gui/macosx/MainMenu.m:1044
+#: src/input/var.c:210 modules/gui/macosx/MainMenu.m:321
+#: modules/gui/macosx/MainMenu.m:322 modules/gui/macosx/MainMenu.m:1041
+#: modules/gui/macosx/MainMenu.m:1099
 msgid "Subtitles Track"
 msgstr "רצועת כתוביות"
 
@@ -1304,8 +1305,8 @@ msgstr "הפרק הקודם"
 msgid "Media: %s"
 msgstr "מדיה: %s"
 
-#: src/interface/interface.c:84 modules/gui/macosx/MainMenu.m:230
-#: modules/gui/macosx/MainMenu.m:231
+#: src/interface/interface.c:84 modules/gui/macosx/MainMenu.m:239
+#: modules/gui/macosx/MainMenu.m:240
 msgid "Add Interface"
 msgstr "הוספת מנשק"
 
@@ -1590,7 +1591,7 @@ msgid ""
 "played)."
 msgstr ""
 
-#: src/libvlc-module.c:304 modules/gui/macosx/simple_prefs.m:228
+#: src/libvlc-module.c:304 modules/gui/macosx/simple_prefs.m:231
 #: modules/gui/qt4/ui/sprefs_audio.h:439
 msgid "Use S/PDIF when available"
 msgstr ""
@@ -1601,7 +1602,7 @@ msgid ""
 "audio stream being played."
 msgstr ""
 
-#: src/libvlc-module.c:309 modules/gui/macosx/simple_prefs.m:220
+#: src/libvlc-module.c:309 modules/gui/macosx/simple_prefs.m:223
 msgid "Force detection of Dolby Surround"
 msgstr ""
 
@@ -1713,7 +1714,7 @@ msgid ""
 msgstr ""
 
 #: src/libvlc-module.c:378 modules/stream_out/display.c:42
-#: modules/gui/qt4/ui/sprefs_video.h:342
+#: modules/gui/qt4/ui/sprefs_video.h:335
 msgid "Enable video"
 msgstr "הפעלת וידאו"
 
@@ -1906,7 +1907,7 @@ msgid ""
 msgstr ""
 
 #: src/libvlc-module.c:440 src/video_output/vout_intf.c:292
-#: modules/gui/macosx/simple_prefs.m:295 modules/gui/qt4/ui/sprefs_video.h:345
+#: modules/gui/macosx/simple_prefs.m:299 modules/gui/qt4/ui/sprefs_video.h:338
 msgid "Always on top"
 msgstr "תמיד עליון"
 
@@ -1960,15 +1961,15 @@ msgid "Hide mouse cursor and fullscreen controller after n milliseconds."
 msgstr ""
 
 #: src/libvlc-module.c:467 src/libvlc-module.c:469
-#: src/video_output/interlacing.c:180 modules/gui/macosx/MainMenu.m:313
-#: modules/gui/macosx/MainMenu.m:314 modules/gui/qt4/dialogs/convert.cpp:86
+#: src/video_output/interlacing.c:180 modules/gui/macosx/MainMenu.m:324
+#: modules/gui/macosx/MainMenu.m:325 modules/gui/qt4/dialogs/convert.cpp:86
 #: modules/video_filter/deinterlace/deinterlace.c:98
 #: share/lua/http/dialogs/create_stream.html:346
 msgid "Deinterlace"
 msgstr "יישור פסים"
 
 #: src/libvlc-module.c:477 src/video_output/interlacing.c:195
-#: modules/gui/macosx/MainMenu.m:315 modules/gui/macosx/MainMenu.m:316
+#: modules/gui/macosx/MainMenu.m:326 modules/gui/macosx/MainMenu.m:327
 #: modules/video_filter/deinterlace/deinterlace.c:53
 #, fuzzy
 msgid "Deinterlace mode"
@@ -2028,7 +2029,7 @@ msgid ""
 "computer being suspended because of inactivity."
 msgstr "מונע את הפעלת שומר המסך בזמן ניגון וידאו."
 
-#: src/libvlc-module.c:503 modules/gui/qt4/ui/sprefs_video.h:347
+#: src/libvlc-module.c:503 modules/gui/qt4/ui/sprefs_video.h:340
 msgid "Window decorations"
 msgstr "קישוטי חלון"
 
@@ -2202,7 +2203,7 @@ msgid ""
 "order to keep proportions."
 msgstr ""
 
-#: src/libvlc-module.c:597 modules/gui/macosx/simple_prefs.m:297
+#: src/libvlc-module.c:597 modules/gui/macosx/simple_prefs.m:301
 msgid "Skip frames"
 msgstr "דילוג על שקופיות"
 
@@ -2339,9 +2340,10 @@ msgstr ""
 #: modules/access/dshow/dshow.cpp:91 modules/access/dshow/dshow.cpp:95
 #: modules/access/dshow/dshow.cpp:102 modules/access/dshow/dshow.cpp:122
 #: modules/audio_output/alsa.c:71 modules/audio_output/alsa.c:819
-#: modules/gui/fbosd.c:172 modules/gui/macosx/prefs_widgets.m:1325
-#: modules/gui/macosx/simple_prefs.m:414 modules/gui/macosx/simple_prefs.m:535
-#: modules/gui/macosx/simple_prefs.m:763 modules/gui/macosx/VideoView.m:105
+#: modules/gui/fbosd.c:172 modules/gui/macosx/MainMenu.m:502
+#: modules/gui/macosx/prefs_widgets.m:1325
+#: modules/gui/macosx/simple_prefs.m:418 modules/gui/macosx/simple_prefs.m:539
+#: modules/gui/macosx/simple_prefs.m:769
 #: modules/gui/qt4/components/preferences_widgets.cpp:626
 #: modules/video_filter/marq.c:59 modules/video_filter/rss.c:71
 #: modules/video_filter/rss.c:184 modules/video_output/msw/directx.c:88
@@ -2349,8 +2351,8 @@ msgid "Default"
 msgstr "בררת מחדל"
 
 #: src/libvlc-module.c:669 modules/gui/macosx/AudioEffects.m:66
-#: modules/gui/macosx/wizard.m:356 modules/gui/qt4/ui/equalizer.h:133
-#: modules/gui/qt4/ui/vlm.h:290
+#: modules/gui/macosx/MainWindow.m:1916 modules/gui/macosx/wizard.m:356
+#: modules/gui/qt4/ui/equalizer.h:133 modules/gui/qt4/ui/vlm.h:290
 msgid "Enable"
 msgstr "הפעלה"
 
@@ -2576,12 +2578,12 @@ msgid ""
 "{...}\""
 msgstr ""
 
-#: src/libvlc-module.c:790 modules/gui/macosx/simple_prefs.m:243
+#: src/libvlc-module.c:790 modules/gui/macosx/simple_prefs.m:246
 #: modules/gui/qt4/ui/sprefs_input.h:352
 msgid "Record directory or filename"
 msgstr "תיקייה או שם הקובץ המשמשים להקלטות"
 
-#: src/libvlc-module.c:792 modules/gui/macosx/simple_prefs.m:245
+#: src/libvlc-module.c:792 modules/gui/macosx/simple_prefs.m:248
 #, fuzzy
 msgid "Directory or filename where the records will be stored"
 msgstr "מאפשר לבחור את התיקייה בה הקלטות יישמרו"
@@ -2656,7 +2658,7 @@ msgid "You can completely disable the sub-picture processing."
 msgstr ""
 
 #: src/libvlc-module.c:831 src/libvlc-module.c:1768 src/text/iso-639_def.h:145
-#: modules/gui/macosx/simple_prefs.m:283
+#: modules/gui/macosx/simple_prefs.m:287
 #: modules/stream_out/transcode/transcode.c:219
 #: modules/gui/qt4/ui/sprefs_subtitles.h:271
 msgid "On Screen Display"
@@ -3534,11 +3536,11 @@ msgid "These settings are the global VLC key bindings, known as \"hotkeys\"."
 msgstr ""
 
 #: src/libvlc-module.c:1328 src/video_output/vout_intf.c:303
-#: modules/gui/macosx/MainMenu.m:299 modules/gui/macosx/MainMenu.m:366
-#: modules/gui/macosx/MainMenu.m:1162 modules/gui/macosx/MainMenu.m:1182
-#: modules/gui/macosx/simple_prefs.m:294
+#: modules/gui/macosx/MainMenu.m:310 modules/gui/macosx/MainMenu.m:377
+#: modules/gui/macosx/MainMenu.m:1217 modules/gui/macosx/MainMenu.m:1237
+#: modules/gui/macosx/simple_prefs.m:298
 #: modules/gui/qt4/components/controller.hpp:115
-#: modules/gui/qt4/ui/sprefs_video.h:344
+#: modules/gui/qt4/ui/sprefs_video.h:337
 msgid "Fullscreen"
 msgstr "מסך מלא"
 
@@ -3554,7 +3556,7 @@ msgstr "יציאה ממסך מלא"
 msgid "Select the hotkey to use to leave fullscreen state."
 msgstr "נא לבחור את מקשי הקיצור שישמשו ליציאה ממצב מסך מלא."
 
-#: src/libvlc-module.c:1332 modules/gui/macosx/MainWindow.m:126
+#: src/libvlc-module.c:1332 modules/gui/macosx/MainWindow.m:132
 msgid "Play/Pause"
 msgstr "נגן/השהה"
 
@@ -3578,7 +3580,7 @@ msgstr "נגינה בלבד"
 msgid "Select the hotkey to use to play."
 msgstr "בחרו את קיצור המקלדת לנגינה."
 
-#: src/libvlc-module.c:1338 modules/gui/macosx/MainMenu.m:263
+#: src/libvlc-module.c:1338 modules/gui/macosx/MainMenu.m:274
 #: modules/gui/qt4/components/controller.hpp:115
 #: modules/gui/qt4/components/controller.hpp:125
 msgid "Faster"
@@ -3588,7 +3590,7 @@ msgstr "נגינה מהירה"
 msgid "Select the hotkey to use for fast forward playback."
 msgstr "בחרו את קיצור המקלדת לנגינה מהירה."
 
-#: src/libvlc-module.c:1340 modules/gui/macosx/MainMenu.m:261
+#: src/libvlc-module.c:1340 modules/gui/macosx/MainMenu.m:272
 #: modules/gui/qt4/components/controller.hpp:115
 #: modules/gui/qt4/components/controller.hpp:125
 msgid "Slower"
@@ -3607,18 +3609,18 @@ msgstr "קצב רגיל"
 msgid "Select the hotkey to set the playback rate back to normal."
 msgstr "בחרו את קיצור המקלדת ליציאה מהתכנית."
 
-#: src/libvlc-module.c:1344 modules/gui/qt4/menus.cpp:817
+#: src/libvlc-module.c:1344 modules/gui/qt4/menus.cpp:821
 msgid "Faster (fine)"
 msgstr "מהיר יותר (מעודן)"
 
-#: src/libvlc-module.c:1346 modules/gui/qt4/menus.cpp:825
+#: src/libvlc-module.c:1346 modules/gui/qt4/menus.cpp:829
 msgid "Slower (fine)"
 msgstr "אטי יותר (מעודן)"
 
 #: src/libvlc-module.c:1348 modules/control/hotkeys.c:687
-#: modules/gui/macosx/about.m:223 modules/gui/macosx/MainMenu.m:266
-#: modules/gui/macosx/MainMenu.m:354 modules/gui/macosx/MainMenu.m:362
-#: modules/gui/macosx/MainMenu.m:1107 modules/gui/macosx/wizard.m:311
+#: modules/gui/macosx/about.m:223 modules/gui/macosx/MainMenu.m:277
+#: modules/gui/macosx/MainMenu.m:365 modules/gui/macosx/MainMenu.m:373
+#: modules/gui/macosx/MainMenu.m:1162 modules/gui/macosx/wizard.m:311
 #: modules/gui/macosx/wizard.m:323 modules/gui/macosx/wizard.m:1601
 #: modules/gui/qt4/components/controller.hpp:119 modules/notify/notify.c:341
 #: modules/gui/qt4/ui/sout.h:327 modules/gui/qt4/ui/sout.h:338
@@ -3631,9 +3633,9 @@ msgid "Select the hotkey to use to skip to the next item in the playlist."
 msgstr "בחרו את קיצור המקלדת למעבר לפריט הבא ברשימת ההשמעה."
 
 #: src/libvlc-module.c:1350 modules/control/hotkeys.c:693
-#: modules/gui/macosx/about.m:224 modules/gui/macosx/MainMenu.m:265
-#: modules/gui/macosx/MainMenu.m:355 modules/gui/macosx/MainMenu.m:361
-#: modules/gui/macosx/MainMenu.m:1106
+#: modules/gui/macosx/about.m:224 modules/gui/macosx/MainMenu.m:276
+#: modules/gui/macosx/MainMenu.m:366 modules/gui/macosx/MainMenu.m:372
+#: modules/gui/macosx/MainMenu.m:1161
 #: modules/gui/qt4/components/controller.hpp:119 modules/notify/notify.c:339
 #: modules/gui/qt4/ui/sout.h:337 modules/gui/qt4/ui/sout.h:346
 msgid "Previous"
@@ -3643,9 +3645,9 @@ msgstr "הקודם"
 msgid "Select the hotkey to use to skip to the previous item in the playlist."
 msgstr "בחרו את קיצור המקלדת למעבר לפריט הקודם ברשימה."
 
-#: src/libvlc-module.c:1352 modules/gui/macosx/MainMenu.m:256
-#: modules/gui/macosx/MainMenu.m:353 modules/gui/macosx/MainMenu.m:360
-#: modules/gui/macosx/MainMenu.m:1098 modules/gui/macosx/MainWindow.m:129
+#: src/libvlc-module.c:1352 modules/gui/macosx/MainMenu.m:267
+#: modules/gui/macosx/MainMenu.m:364 modules/gui/macosx/MainMenu.m:371
+#: modules/gui/macosx/MainMenu.m:1153 modules/gui/macosx/MainWindow.m:135
 #: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/dialogs/vlm.cpp:556 modules/notify/xosd.c:234
 #: modules/gui/qt4/ui/streampanel.h:181
@@ -3658,7 +3660,7 @@ msgstr "נא לבחור את מקש הקיצור לעצירת הנגינה."
 
 #: src/libvlc-module.c:1354 modules/gui/fbosd.c:128 modules/gui/fbosd.c:196
 #: modules/gui/macosx/bookmarks.m:93 modules/gui/macosx/bookmarks.m:102
-#: modules/gui/macosx/MainWindow.m:139 modules/gui/macosx/VideoEffects.m:145
+#: modules/gui/macosx/MainWindow.m:145 modules/gui/macosx/VideoEffects.m:145
 #: modules/gui/macosx/VideoEffects.m:167 modules/video_filter/marq.c:157
 #: modules/video_filter/rss.c:200 modules/gui/qt4/ui/sprefs_subtitles.h:274
 #: modules/gui/qt4/ui/video_effects.h:1362
@@ -3776,7 +3778,7 @@ msgstr ""
 
 #: src/libvlc-module.c:1395 modules/control/hotkeys.c:183
 #: modules/gui/qt4/components/controller.hpp:118
-#: modules/gui/qt4/components/controller.hpp:130 modules/gui/qt4/menus.cpp:914
+#: modules/gui/qt4/components/controller.hpp:130 modules/gui/qt4/menus.cpp:917
 #: modules/gui/skins2/commands/cmd_quit.cpp:44
 msgid "Quit"
 msgstr "יציאה"
@@ -3882,9 +3884,9 @@ msgid "Select the key to decrease audio volume."
 msgstr "נא לבחור את קיצור המקלדת להנמכת עצמת הקול."
 
 #: src/libvlc-module.c:1421 modules/access/v4l2/video.c:189
-#: modules/gui/macosx/MainMenu.m:284 modules/gui/macosx/MainMenu.m:356
-#: modules/gui/macosx/MainMenu.m:365 modules/gui/macosx/MainMenu.m:1152
-#: modules/gui/macosx/MainWindow.m:137 modules/gui/qt4/menus.cpp:578
+#: modules/gui/macosx/MainMenu.m:295 modules/gui/macosx/MainMenu.m:367
+#: modules/gui/macosx/MainMenu.m:376 modules/gui/macosx/MainMenu.m:1207
+#: modules/gui/macosx/MainWindow.m:143 modules/gui/qt4/menus.cpp:575
 msgid "Mute"
 msgstr "השתקה"
 
@@ -4179,7 +4181,7 @@ msgstr ""
 msgid "Takes a video snapshot and writes it to disk."
 msgstr ""
 
-#: src/libvlc-module.c:1503 modules/gui/macosx/MainMenu.m:257
+#: src/libvlc-module.c:1503 modules/gui/macosx/MainMenu.m:268
 #: modules/gui/qt4/components/controller.hpp:117
 #: modules/gui/qt4/components/controller.hpp:128
 #: modules/stream_out/record.c:60
@@ -4309,8 +4311,8 @@ msgid "Cycle through available audio devices"
 msgstr ""
 
 #: src/libvlc-module.c:1694 src/video_output/vout_intf.c:309
-#: modules/gui/macosx/MainMenu.m:301 modules/gui/macosx/MainMenu.m:367
-#: modules/gui/macosx/MainMenu.m:1161
+#: modules/gui/macosx/MainMenu.m:312 modules/gui/macosx/MainMenu.m:378
+#: modules/gui/macosx/MainMenu.m:1216
 #: modules/gui/qt4/components/controller.hpp:116
 msgid "Snapshot"
 msgstr ""
@@ -4492,12 +4494,12 @@ msgid "Downloading ..."
 msgstr "בהורדה ..."
 
 #: src/misc/update.c:585 src/misc/update.c:710 modules/demux/avi/avi.c:2407
-#: modules/gui/macosx/bookmarks.m:99 modules/gui/macosx/controls.m:52
+#: modules/gui/macosx/bookmarks.m:99 modules/gui/macosx/controls.m:53
 #: modules/gui/macosx/coredialogs.m:62 modules/gui/macosx/coredialogs.m:64
 #: modules/gui/macosx/coredialogs.m:181 modules/gui/macosx/open.m:118
 #: modules/gui/macosx/open.m:172 modules/gui/macosx/prefs.m:206
-#: modules/gui/macosx/prefs.m:226 modules/gui/macosx/simple_prefs.m:235
-#: modules/gui/macosx/simple_prefs.m:307 modules/gui/macosx/simple_prefs.m:692
+#: modules/gui/macosx/prefs.m:226 modules/gui/macosx/simple_prefs.m:238
+#: modules/gui/macosx/simple_prefs.m:311 modules/gui/macosx/simple_prefs.m:698
 #: modules/gui/macosx/wizard.m:322
 #: modules/gui/qt4/components/open_panels.cpp:1281
 #: modules/gui/qt4/components/preferences_widgets.cpp:1536
@@ -5238,20 +5240,20 @@ msgstr ""
 msgid "Zulu"
 msgstr "זולו"
 
-#: src/video_output/postprocessing.c:87 modules/gui/macosx/MainMenu.m:317
-#: modules/gui/macosx/MainMenu.m:318 modules/video_filter/postproc.c:194
+#: src/video_output/postprocessing.c:87 modules/gui/macosx/MainMenu.m:328
+#: modules/gui/macosx/MainMenu.m:329 modules/video_filter/postproc.c:194
 msgid "Post processing"
 msgstr "עיבוד מאוחר"
 
-#: src/video_output/vout_intf.c:215 modules/gui/macosx/MainMenu.m:306
-#: modules/gui/macosx/MainMenu.m:307 modules/gui/macosx/VideoEffects.m:69
+#: src/video_output/vout_intf.c:215 modules/gui/macosx/MainMenu.m:317
+#: modules/gui/macosx/MainMenu.m:318 modules/gui/macosx/VideoEffects.m:69
 #: modules/video_filter/crop.c:105 modules/video_filter/croppadd.c:86
 #: modules/gui/qt4/ui/video_effects.h:1321
 msgid "Crop"
 msgstr "חיתוך"
 
-#: src/video_output/vout_intf.c:249 modules/gui/macosx/MainMenu.m:304
-#: modules/gui/macosx/MainMenu.m:305 modules/gui/macosx/MainMenu.m:974
+#: src/video_output/vout_intf.c:249 modules/gui/macosx/MainMenu.m:315
+#: modules/gui/macosx/MainMenu.m:316 modules/gui/macosx/MainMenu.m:1029
 msgid "Aspect-ratio"
 msgstr "יחס תצוגה"
 
@@ -6523,7 +6525,7 @@ msgstr "קלט FTP"
 msgid "File"
 msgstr "קובץ"
 
-#: modules/access/fs.c:62 modules/gui/qt4/ui/sprefs_video.h:362
+#: modules/access/fs.c:62 modules/gui/qt4/ui/sprefs_video.h:354
 #, fuzzy
 msgid "Directory"
 msgstr "תיקייה"
@@ -7078,7 +7080,7 @@ msgid "User name that will be requested to access the stream."
 msgstr ""
 
 #: modules/access_output/http.c:65 modules/gui/macosx/coredialogs.m:61
-#: modules/gui/macosx/simple_prefs.m:226
+#: modules/gui/macosx/simple_prefs.m:229
 #: modules/gui/qt4/dialogs/external.cpp:125 modules/lua/vlc.c:75
 #: modules/misc/audioscrobbler.c:117 modules/stream_out/raop.c:154
 #: modules/stream_out/rtp.c:176
@@ -7438,7 +7440,7 @@ msgid "Bitmask that will get used by the audio part of the card."
 msgstr ""
 
 #: modules/access/pvr.c:103 modules/access/vcdx/info.c:69
-#: modules/gui/macosx/MainWindow.m:136 modules/gui/qt4/dialogs/toolbar.cpp:362
+#: modules/gui/macosx/MainWindow.m:142 modules/gui/qt4/dialogs/toolbar.cpp:362
 #: modules/stream_out/raop.c:150 modules/gui/qt4/ui/sprefs_audio.h:431
 msgid "Volume"
 msgstr "עוצמה"
@@ -7724,9 +7726,9 @@ msgid "Screen Input"
 msgstr "קלט מסך"
 
 #: modules/access/screen/screen.c:88 modules/access/screen/xcb.c:65
-#: modules/gui/macosx/open.m:191 modules/gui/macosx/open.m:429
-#: modules/gui/macosx/open.m:1194 modules/gui/macosx/simple_prefs.m:541
-#: modules/gui/macosx/VideoView.m:114
+#: modules/gui/macosx/MainMenu.m:511 modules/gui/macosx/open.m:191
+#: modules/gui/macosx/open.m:429 modules/gui/macosx/open.m:1194
+#: modules/gui/macosx/simple_prefs.m:545
 msgid "Screen"
 msgstr "מסך"
 
@@ -9552,10 +9554,10 @@ msgid "ALSA device"
 msgstr "שם התקן ALSA"
 
 #: modules/audio_output/alsa.c:156 modules/audio_output/auhal.c:126
-#: modules/audio_output/auhal.c:967 modules/audio_output/directx.c:342
+#: modules/audio_output/auhal.c:970 modules/audio_output/directx.c:342
 #: modules/audio_output/kai.c:215 modules/audio_output/oss.c:121
 #: modules/audio_output/portaudio.c:386 modules/audio_output/waveout.c:364
-#: modules/gui/macosx/MainMenu.m:289 modules/gui/macosx/MainMenu.m:290
+#: modules/gui/macosx/MainMenu.m:300 modules/gui/macosx/MainMenu.m:301
 msgid "Audio Device"
 msgstr "התקן שמע"
 
@@ -9608,18 +9610,18 @@ msgid ""
 "The selected audio output device is exclusively in use by another program."
 msgstr ""
 
-#: modules/audio_output/auhal.c:438
+#: modules/audio_output/auhal.c:441
 #, fuzzy
 msgid "Audio device is not configured"
 msgstr "שם התקן שמע"
 
-#: modules/audio_output/auhal.c:439
+#: modules/audio_output/auhal.c:442
 msgid ""
 "You should configure your speaker layout with the \"Audio Midi Setup\" "
 "utility in /Applications/Utilities. Stereo mode is being used now."
 msgstr ""
 
-#: modules/audio_output/auhal.c:1010
+#: modules/audio_output/auhal.c:1013
 #, c-format
 msgid "%s (Encoded Output)"
 msgstr ""
@@ -10031,7 +10033,7 @@ msgid ""
 "processing power"
 msgstr "יפנעח גירסה בעלת רזולוציה נמוכה של הוידאו."
 
-#: modules/codec/avcodec/avcodec.h:135 modules/gui/macosx/simple_prefs.m:256
+#: modules/codec/avcodec/avcodec.h:135 modules/gui/macosx/simple_prefs.m:259
 msgid "Skip the loop filter for H.264 decoding"
 msgstr ""
 
@@ -10777,7 +10779,7 @@ msgid "Maroon"
 msgstr "ברטונית"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:173
-#: modules/gui/macosx/controls.m:189 modules/gui/macosx/MainMenu.m:322
+#: modules/gui/macosx/controls.m:190 modules/gui/macosx/MainMenu.m:333
 #: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/ball.c:120
 #: modules/video_filter/colorthres.c:64 modules/video_filter/marq.c:60
@@ -10793,7 +10795,7 @@ msgid "Fuchsia"
 msgstr "ורוד"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
-#: modules/gui/macosx/controls.m:193 modules/gui/macosx/MainMenu.m:324
+#: modules/gui/macosx/controls.m:194 modules/gui/macosx/MainMenu.m:335
 #: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/colorthres.c:64
 #: modules/video_filter/marq.c:61 modules/video_filter/rss.c:73
@@ -10808,7 +10810,7 @@ msgid "Olive"
 msgstr "זית"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
-#: modules/gui/macosx/controls.m:191 modules/gui/macosx/MainMenu.m:323
+#: modules/gui/macosx/controls.m:192 modules/gui/macosx/MainMenu.m:334
 #: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/ball.c:120
 #: modules/video_filter/marq.c:61 modules/video_filter/rss.c:73
@@ -10845,7 +10847,7 @@ msgid "Navy"
 msgstr "כחול נייבי"
 
 #: modules/codec/kate.c:212 modules/gui/fbosd.c:175
-#: modules/gui/macosx/controls.m:195 modules/gui/macosx/MainMenu.m:325
+#: modules/gui/macosx/controls.m:196 modules/gui/macosx/MainMenu.m:336
 #: modules/text_renderer/freetype.c:169 modules/text_renderer/quartztext.c:110
 #: modules/text_renderer/win32text.c:91 modules/video_filter/ball.c:121
 #: modules/video_filter/colorthres.c:64 modules/video_filter/marq.c:62
@@ -11384,7 +11386,7 @@ msgstr "מקודד שמע Vorbis"
 
 #: modules/codec/speex.c:57 modules/codec/speex.c:797
 #: modules/gui/macosx/open.m:175 modules/gui/macosx/VideoEffects.m:121
-#: modules/gui/qt4/ui/sprefs_video.h:359
+#: modules/gui/qt4/ui/sprefs_video.h:351
 #: modules/gui/qt4/ui/video_effects.h:1328
 msgid "Mode"
 msgstr "מצב"
@@ -12756,8 +12758,8 @@ msgstr ""
 msgid "D-Bus control interface"
 msgstr "ממשקי שליטה"
 
-#: modules/control/dbus/dbus_root.c:77 modules/gui/macosx/MainWindow.m:248
-#: modules/gui/macosx/MainWindow.m:990 modules/gui/qt4/dialogs/help.cpp:99
+#: modules/control/dbus/dbus_root.c:77 modules/gui/macosx/MainWindow.m:254
+#: modules/gui/macosx/MainWindow.m:1009 modules/gui/qt4/dialogs/help.cpp:99
 #: modules/gui/qt4/main_interface.cpp:973
 #: modules/gui/qt4/main_interface.cpp:977
 #: modules/gui/qt4/main_interface.cpp:1016
@@ -12837,12 +12839,12 @@ msgstr "בקרת עצמת השמע"
 msgid "Position Control"
 msgstr "שיטת המיקום"
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1808
-#: modules/gui/macosx/intf.m:1988
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1809
+#: modules/gui/macosx/intf.m:1991
 msgid "Ignore"
 msgstr "התעלמות"
 
-#: modules/control/hotkeys.c:100 modules/gui/macosx/simple_prefs.m:193
+#: modules/control/hotkeys.c:100 modules/gui/macosx/simple_prefs.m:196
 #: modules/gui/qt4/components/simple_preferences.cpp:96
 msgid "Hotkeys"
 msgstr "קיצורי מקלדת"
@@ -13099,9 +13101,9 @@ msgstr "איטלקית"
 msgid "Opening"
 msgstr "פתיחה"
 
-#: modules/control/rc.c:73 modules/gui/macosx/MainMenu.m:798
-#: modules/gui/macosx/MainMenu.m:799 modules/gui/macosx/MainMenu.m:800
-#: modules/gui/macosx/MainWindow.m:1068 modules/gui/qt4/menus.cpp:794
+#: modules/control/rc.c:73 modules/gui/macosx/MainMenu.m:853
+#: modules/gui/macosx/MainMenu.m:854 modules/gui/macosx/MainMenu.m:855
+#: modules/gui/macosx/MainWindow.m:1087 modules/gui/qt4/menus.cpp:798
 #: modules/notify/xosd.c:238
 msgid "Pause"
 msgstr "השהה"
@@ -13959,7 +13961,7 @@ msgid "RTSP/RTP access and demux"
 msgstr ""
 
 #: modules/demux/live555.cpp:108 modules/demux/live555.cpp:109
-#: modules/gui/macosx/simple_prefs.m:255
+#: modules/gui/macosx/simple_prefs.m:258
 msgid "Use RTP over RTSP (TCP)"
 msgstr "השמש ב-RTP במקום ב-RTSP (TCP)"
 
@@ -14053,7 +14055,8 @@ msgstr "מקודדים ומפענחים אחרים"
 msgid "Use chapter codecs found in the segment."
 msgstr ""
 
-#: modules/demux/mkv/mkv.cpp:62 modules/gui/qt4/ui/sprefs_input.h:355
+#: modules/demux/mkv/mkv.cpp:62 modules/gui/macosx/simple_prefs.m:260
+#: modules/gui/qt4/ui/sprefs_input.h:355
 msgid "Preload MKV files in the same directory"
 msgstr ""
 
@@ -15095,8 +15098,8 @@ msgstr ""
 msgid "MPEG Transport Stream demuxer"
 msgstr ""
 
-#: modules/demux/ts.c:186 modules/gui/macosx/MainMenu.m:319
-#: modules/gui/macosx/MainMenu.m:1193 modules/gui/qt4/dialogs/toolbar.cpp:426
+#: modules/demux/ts.c:186 modules/gui/macosx/MainMenu.m:330
+#: modules/gui/macosx/MainMenu.m:1248 modules/gui/qt4/dialogs/toolbar.cpp:426
 #, fuzzy
 msgid "Teletext"
 msgstr "מפענח כתוביות טקסט"
@@ -15271,7 +15274,7 @@ msgid ""
 "g. 6=top-right)."
 msgstr ""
 
-#: modules/gui/fbosd.c:134 modules/gui/macosx/simple_prefs.m:285
+#: modules/gui/fbosd.c:134 modules/gui/macosx/simple_prefs.m:289
 #: modules/text_renderer/win32text.c:66 modules/video_filter/marq.c:115
 #: modules/video_filter/rss.c:146
 msgid "Opacity"
@@ -15342,7 +15345,7 @@ msgid ""
 "All rendered images and text will be displayed on the overlay framebuffer."
 msgstr ""
 
-#: modules/gui/fbosd.c:204 modules/gui/macosx/simple_prefs.m:280
+#: modules/gui/fbosd.c:204 modules/gui/macosx/simple_prefs.m:284
 #: modules/notify/xosd.c:81 modules/text_renderer/freetype.c:116
 #: modules/text_renderer/quartztext.c:90 modules/text_renderer/win32text.c:59
 #: modules/video_filter/marq.c:163 modules/video_filter/rss.c:206
@@ -15364,7 +15367,7 @@ msgstr ""
 msgid "Maemo hildon interface"
 msgstr "ממשקים ראשיים"
 
-#: modules/gui/macosx/about.m:99 modules/gui/macosx/MainMenu.m:226
+#: modules/gui/macosx/about.m:99 modules/gui/macosx/MainMenu.m:235
 msgid "About VLC media player"
 msgstr "אודות נגן המדיה VLC"
 
@@ -15374,7 +15377,7 @@ msgid "Compiled by %@ with %@"
 msgstr "הודר ע\"י "
 
 #: modules/gui/macosx/about.m:138 modules/gui/macosx/about.m:209
-#: modules/gui/macosx/MainMenu.m:345
+#: modules/gui/macosx/MainMenu.m:356
 msgid "License"
 msgstr "רשיון"
 
@@ -15383,8 +15386,8 @@ msgstr "רשיון"
 msgid "VLC media player Help"
 msgstr "נגן המדיה VLC"
 
-#: modules/gui/macosx/about.m:225 modules/gui/macosx/controls.m:187
-#: modules/gui/macosx/MainMenu.m:321
+#: modules/gui/macosx/about.m:225 modules/gui/macosx/controls.m:188
+#: modules/gui/macosx/MainMenu.m:332
 msgid "Index"
 msgstr "אינדקס"
 
@@ -15471,14 +15474,14 @@ msgstr "סימניות"
 msgid "Add"
 msgstr "הוספה"
 
-#: modules/gui/macosx/bookmarks.m:86 modules/gui/macosx/MainMenu.m:251
-#: modules/gui/macosx/simple_prefs.m:237
+#: modules/gui/macosx/bookmarks.m:86 modules/gui/macosx/MainMenu.m:260
+#: modules/gui/macosx/simple_prefs.m:240
 #: modules/gui/qt4/dialogs/bookmarks.cpp:51
 #: modules/gui/qt4/dialogs/sout.cpp:70 modules/gui/qt4/ui/vlm.h:301
 msgid "Clear"
 msgstr "ניקוי"
 
-#: modules/gui/macosx/bookmarks.m:87 modules/gui/macosx/MainMenu.m:247
+#: modules/gui/macosx/bookmarks.m:87 modules/gui/macosx/MainMenu.m:256
 msgid "Edit"
 msgstr "עריכה"
 
@@ -15500,11 +15503,11 @@ msgstr "ירוק בהיר (ליים)"
 
 #: modules/gui/macosx/bookmarks.m:98 modules/gui/macosx/bookmarks.m:210
 #: modules/gui/macosx/bookmarks.m:218 modules/gui/macosx/bookmarks.m:268
-#: modules/gui/macosx/bookmarks.m:276 modules/gui/macosx/controls.m:53
+#: modules/gui/macosx/bookmarks.m:276 modules/gui/macosx/controls.m:54
 #: modules/gui/macosx/coredialogs.m:63 modules/gui/macosx/coredialogs.m:100
 #: modules/gui/macosx/coredialogs.m:158 modules/gui/macosx/open.m:324
 #: modules/gui/macosx/output.m:138 modules/gui/macosx/playlistinfo.m:358
-#: modules/gui/macosx/simple_prefs.m:236 modules/gui/macosx/wizard.m:602
+#: modules/gui/macosx/simple_prefs.m:239 modules/gui/macosx/wizard.m:602
 #: modules/gui/macosx/wizard.m:665 modules/gui/macosx/wizard.m:1038
 #: modules/gui/macosx/wizard.m:1123 modules/gui/macosx/wizard.m:1130
 #: modules/gui/macosx/wizard.m:1656 modules/gui/macosx/wizard.m:1664
@@ -15520,7 +15523,7 @@ msgstr "אישור"
 msgid "Name"
 msgstr "שם"
 
-#: modules/gui/macosx/bookmarks.m:123 modules/gui/macosx/playlist.m:694
+#: modules/gui/macosx/bookmarks.m:123 modules/gui/macosx/playlist.m:697
 msgid "Untitled"
 msgstr "ללא שם"
 
@@ -15560,21 +15563,21 @@ msgstr "לא נמצא קלט"
 msgid "The stream must be playing or paused for bookmarks to work."
 msgstr ""
 
-#: modules/gui/macosx/controls.m:51 modules/gui/macosx/MainMenu.m:1143
+#: modules/gui/macosx/controls.m:52 modules/gui/macosx/MainMenu.m:1198
 msgid "Jump To Time"
 msgstr ""
 
-#: modules/gui/macosx/controls.m:54
+#: modules/gui/macosx/controls.m:55
 #, fuzzy
 msgid "sec."
 msgstr "secam"
 
-#: modules/gui/macosx/controls.m:55
+#: modules/gui/macosx/controls.m:56
 #, fuzzy
 msgid "Jump to time"
 msgstr "לך לפרק"
 
-#: modules/gui/macosx/coredialogs.m:60 modules/gui/macosx/simple_prefs.m:227
+#: modules/gui/macosx/coredialogs.m:60 modules/gui/macosx/simple_prefs.m:230
 #: modules/gui/qt4/dialogs/external.cpp:120
 msgid "User name"
 msgstr "שם המשתמש"
@@ -15613,38 +15616,33 @@ msgstr ""
 msgid "(no item is being played)"
 msgstr "(לא התנגנו פריטים)"
 
-#: modules/gui/macosx/intf.m:660 modules/gui/qt4/dialogs/messages.cpp:75
+#: modules/gui/macosx/intf.m:662 modules/gui/qt4/dialogs/messages.cpp:75
 #: modules/gui/qt4/ui/messages_panel.h:141
 #: modules/gui/qt4/ui/messages_panel.h:146
 msgid "Messages"
 msgstr "הודעות"
 
-#: modules/gui/macosx/intf.m:661
+#: modules/gui/macosx/intf.m:663
 msgid "Open CrashLog..."
 msgstr "פתיחת יומן הקריסה..."
 
-#: modules/gui/macosx/intf.m:662
+#: modules/gui/macosx/intf.m:664
 msgid "Save this Log..."
 msgstr "שמירת יומן זה..."
 
-#: modules/gui/macosx/intf.m:663
-#, fuzzy
-msgid "Live Update"
-msgstr "עדכון"
-
-#: modules/gui/macosx/intf.m:666
+#: modules/gui/macosx/intf.m:667
 msgid "Send"
 msgstr "לשלוח"
 
-#: modules/gui/macosx/intf.m:667
+#: modules/gui/macosx/intf.m:668
 msgid "Don't Send"
 msgstr "לא לשלוח"
 
-#: modules/gui/macosx/intf.m:668 modules/gui/macosx/intf.m:669
+#: modules/gui/macosx/intf.m:669 modules/gui/macosx/intf.m:670
 msgid "VLC crashed previously"
 msgstr ""
 
-#: modules/gui/macosx/intf.m:670
+#: modules/gui/macosx/intf.m:671
 msgid ""
 "Do you want to send details on the crash to VLC's development team?\n"
 "\n"
@@ -15653,61 +15651,61 @@ msgid ""
 "URL of a network stream, ..."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:671
+#: modules/gui/macosx/intf.m:672
 msgid "I agree to be possibly contacted about this bugreport."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:672
+#: modules/gui/macosx/intf.m:673
 msgid ""
 "Only your default E-Mail address will be submitted, including no further "
 "information."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1688
+#: modules/gui/macosx/intf.m:1689
 msgid "Error when sending the Crash Report"
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1779
+#: modules/gui/macosx/intf.m:1780
 msgid "No CrashLog found"
 msgstr "לא נמצא דוח קריסות"
 
-#: modules/gui/macosx/intf.m:1779 modules/gui/macosx/prefs.m:227
-#: modules/gui/macosx/simple_prefs.m:693
+#: modules/gui/macosx/intf.m:1780 modules/gui/macosx/prefs.m:227
+#: modules/gui/macosx/simple_prefs.m:699
 msgid "Continue"
 msgstr "המשך"
 
-#: modules/gui/macosx/intf.m:1779
+#: modules/gui/macosx/intf.m:1780
 msgid "Couldn't find any trace of a previous crash."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1806
+#: modules/gui/macosx/intf.m:1807
 msgid "Remove old preferences?"
 msgstr "האם להסיר את ההעדפות הישנות?"
 
-#: modules/gui/macosx/intf.m:1807
+#: modules/gui/macosx/intf.m:1808
 msgid "We just found an older version of VLC's preferences files."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1808
+#: modules/gui/macosx/intf.m:1809
 msgid "Move To Trash and Relaunch VLC"
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1925
+#: modules/gui/macosx/intf.m:1920
 #, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1986
+#: modules/gui/macosx/intf.m:1989
 msgid "Relaunch required"
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1987
+#: modules/gui/macosx/intf.m:1990
 msgid ""
 "To make sure that VLC no longer listens to your media key events, it needs "
 "to be restarted."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1988
+#: modules/gui/macosx/intf.m:1991
 msgid "Relaunch VLC"
 msgstr ""
 
@@ -15767,7 +15765,7 @@ msgid ""
 "disabled here."
 msgstr ""
 
-#: modules/gui/macosx/macosx.m:80 modules/gui/macosx/simple_prefs.m:268
+#: modules/gui/macosx/macosx.m:80 modules/gui/macosx/simple_prefs.m:272
 msgid "Control playback with the Apple Remote"
 msgstr ""
 
@@ -15775,7 +15773,7 @@ msgstr ""
 msgid "By default, VLC can be remotely controlled with the Apple Remote."
 msgstr ""
 
-#: modules/gui/macosx/macosx.m:83 modules/gui/macosx/simple_prefs.m:269
+#: modules/gui/macosx/macosx.m:83 modules/gui/macosx/simple_prefs.m:273
 msgid "Control playback with media keys"
 msgstr ""
 
@@ -15793,7 +15791,7 @@ msgstr ""
 msgid "By default, VLC will use the dark interface style."
 msgstr ""
 
-#: modules/gui/macosx/macosx.m:90 modules/gui/macosx/simple_prefs.m:264
+#: modules/gui/macosx/macosx.m:90 modules/gui/macosx/simple_prefs.m:268
 #, fuzzy
 msgid "Use the native fullscreen mode on OS X Lion"
 msgstr "מסך מלא"
@@ -15808,320 +15806,324 @@ msgstr ""
 msgid "Mac OS X interface"
 msgstr "מנשק Mac OS X"
 
-#: modules/gui/macosx/MainMenu.m:228
+#: modules/gui/macosx/MainMenu.m:237
 msgid "Check for Update..."
 msgstr "חיפוש עדכונים..."
 
-#: modules/gui/macosx/MainMenu.m:229
+#: modules/gui/macosx/MainMenu.m:238
 msgid "Preferences..."
 msgstr "העדפות..."
 
-#: modules/gui/macosx/MainMenu.m:232
+#: modules/gui/macosx/MainMenu.m:241
 msgid "Services"
 msgstr "שירותים"
 
-#: modules/gui/macosx/MainMenu.m:233
+#: modules/gui/macosx/MainMenu.m:242
 msgid "Hide VLC"
 msgstr "הסתרת VLC"
 
-#: modules/gui/macosx/MainMenu.m:234
+#: modules/gui/macosx/MainMenu.m:243
 msgid "Hide Others"
 msgstr "הסתרת אחרים"
 
-#: modules/gui/macosx/MainMenu.m:235 modules/gui/macosx/simple_prefs.m:306
+#: modules/gui/macosx/MainMenu.m:244 modules/gui/macosx/simple_prefs.m:310
 msgid "Show All"
 msgstr "הצגת הכול"
 
-#: modules/gui/macosx/MainMenu.m:236
+#: modules/gui/macosx/MainMenu.m:245
 msgid "Quit VLC"
 msgstr "יציאה מ־VLC"
 
-#: modules/gui/macosx/MainMenu.m:238
+#: modules/gui/macosx/MainMenu.m:247
 #, fuzzy
 msgid "1:File"
 msgstr "קובץ"
 
-#: modules/gui/macosx/MainMenu.m:239
+#: modules/gui/macosx/MainMenu.m:248
 msgid "Advanced Open File..."
 msgstr "פתיחת קבצים מתקדמת..."
 
-#: modules/gui/macosx/MainMenu.m:240 modules/gui/macosx/MainMenu.m:312
-#: modules/gui/macosx/MainMenu.m:989 modules/gui/qt4/menus.cpp:623
+#: modules/gui/macosx/MainMenu.m:249 modules/gui/macosx/MainMenu.m:323
+#: modules/gui/macosx/MainMenu.m:1044 modules/gui/qt4/menus.cpp:620
 msgid "Open File..."
 msgstr "פתח קובץ..."
 
-#: modules/gui/macosx/MainMenu.m:241
+#: modules/gui/macosx/MainMenu.m:250
 msgid "Open Disc..."
 msgstr "פתח תקליטור..."
 
-#: modules/gui/macosx/MainMenu.m:242
+#: modules/gui/macosx/MainMenu.m:251
 msgid "Open Network..."
 msgstr "פתיחת מיקום רשת..."
 
-#: modules/gui/macosx/MainMenu.m:243
+#: modules/gui/macosx/MainMenu.m:252
 msgid "Open Capture Device..."
 msgstr "פתיחת התקן לכידה..."
 
-#: modules/gui/macosx/MainMenu.m:244
+#: modules/gui/macosx/MainMenu.m:253
 msgid "Open Recent"
 msgstr "האחרונים שנפתחו"
 
-#: modules/gui/macosx/MainMenu.m:245
+#: modules/gui/macosx/MainMenu.m:254
 msgid "Streaming/Exporting Wizard..."
 msgstr ""
 
-#: modules/gui/macosx/MainMenu.m:248
+#: modules/gui/macosx/MainMenu.m:257
 msgid "Cut"
 msgstr "חתוך"
 
-#: modules/gui/macosx/MainMenu.m:249
+#: modules/gui/macosx/MainMenu.m:258
 msgid "Copy"
 msgstr "העתק"
 
-#: modules/gui/macosx/MainMenu.m:250
+#: modules/gui/macosx/MainMenu.m:259
 msgid "Paste"
 msgstr "הדבק"
 
-#: modules/gui/macosx/MainMenu.m:252 modules/gui/macosx/playlist.m:469
+#: modules/gui/macosx/MainMenu.m:261 modules/gui/macosx/playlist.m:471
 msgid "Select All"
 msgstr "בחיר הכול"
 
-#: modules/gui/macosx/MainMenu.m:254
+#: modules/gui/macosx/MainMenu.m:263 modules/gui/qt4/dialogs/plugins.cpp:68
+msgid "Extensions"
+msgstr "הרחבות"
+
+#: modules/gui/macosx/MainMenu.m:265
 msgid "Playback"
 msgstr "נגינה"
 
-#: modules/gui/macosx/MainMenu.m:259 modules/gui/macosx/MainMenu.m:260
+#: modules/gui/macosx/MainMenu.m:270 modules/gui/macosx/MainMenu.m:271
 #, fuzzy
 msgid "Playback Speed"
 msgstr "נגן"
 
-#: modules/gui/macosx/MainMenu.m:262 modules/gui/macosx/simple_prefs.m:570
-#: modules/gui/qt4/components/simple_preferences.cpp:501
+#: modules/gui/macosx/MainMenu.m:273 modules/gui/macosx/simple_prefs.m:576
+#: modules/gui/qt4/components/simple_preferences.cpp:500
 #: modules/misc/gnutls.c:83 modules/text_renderer/freetype.c:156
 #: modules/text_renderer/freetype.c:175 modules/text_renderer/quartztext.c:114
 #: modules/text_renderer/win32text.c:82
 msgid "Normal"
 msgstr "רגיל"
 
-#: modules/gui/macosx/MainMenu.m:264
+#: modules/gui/macosx/MainMenu.m:275
 #: modules/gui/macosx/TrackSynchronization.m:52
 #, fuzzy
 msgid "Track Synchronization"
 msgstr "&סנכרון רצועות"
 
-#: modules/gui/macosx/MainMenu.m:270 modules/gui/macosx/MainMenu.m:1134
+#: modules/gui/macosx/MainMenu.m:281 modules/gui/macosx/MainMenu.m:1189
 msgid "Quit after Playback"
 msgstr "יציאה לאחר הנגינה"
 
-#: modules/gui/macosx/MainMenu.m:271 modules/gui/macosx/MainMenu.m:1141
+#: modules/gui/macosx/MainMenu.m:282 modules/gui/macosx/MainMenu.m:1196
 msgid "Step Forward"
 msgstr "קפיצה קדימה"
 
-#: modules/gui/macosx/MainMenu.m:272 modules/gui/macosx/MainMenu.m:1142
+#: modules/gui/macosx/MainMenu.m:283 modules/gui/macosx/MainMenu.m:1197
 msgid "Step Backward"
 msgstr "קפיצה אחורה"
 
-#: modules/gui/macosx/MainMenu.m:282 modules/gui/qt4/menus.cpp:572
+#: modules/gui/macosx/MainMenu.m:293 modules/gui/qt4/menus.cpp:569
 msgid "Increase Volume"
 msgstr "הגברת עצמת השמע"
 
-#: modules/gui/macosx/MainMenu.m:283 modules/gui/qt4/menus.cpp:575
+#: modules/gui/macosx/MainMenu.m:294 modules/gui/qt4/menus.cpp:572
 msgid "Decrease Volume"
 msgstr "הנמכת עצמת השמע"
 
-#: modules/gui/macosx/MainMenu.m:295 modules/gui/macosx/MainMenu.m:1157
+#: modules/gui/macosx/MainMenu.m:306 modules/gui/macosx/MainMenu.m:1212
 msgid "Half Size"
 msgstr "חצי גודל"
 
-#: modules/gui/macosx/MainMenu.m:296 modules/gui/macosx/MainMenu.m:1158
-#: modules/gui/macosx/MainMenu.m:1191
+#: modules/gui/macosx/MainMenu.m:307 modules/gui/macosx/MainMenu.m:1213
+#: modules/gui/macosx/MainMenu.m:1246
 msgid "Normal Size"
 msgstr "גודל רגיל"
 
-#: modules/gui/macosx/MainMenu.m:297 modules/gui/macosx/MainMenu.m:1159
+#: modules/gui/macosx/MainMenu.m:308 modules/gui/macosx/MainMenu.m:1214
 msgid "Double Size"
 msgstr "גודל כפול"
 
-#: modules/gui/macosx/MainMenu.m:298 modules/gui/macosx/MainMenu.m:1160
+#: modules/gui/macosx/MainMenu.m:309 modules/gui/macosx/MainMenu.m:1215
 msgid "Fit to Screen"
 msgstr "התאם למסך"
 
-#: modules/gui/macosx/MainMenu.m:300 modules/gui/macosx/MainMenu.m:1163
-#: modules/gui/macosx/MainMenu.m:1172
+#: modules/gui/macosx/MainMenu.m:311 modules/gui/macosx/MainMenu.m:1218
+#: modules/gui/macosx/MainMenu.m:1227
 #, fuzzy
 msgid "Float on Top"
 msgstr "תמיד למעלה"
 
-#: modules/gui/macosx/MainMenu.m:308 modules/gui/macosx/MainMenu.m:309
-#: modules/gui/macosx/simple_prefs.m:291 modules/gui/macosx/VideoView.m:99
+#: modules/gui/macosx/MainMenu.m:319 modules/gui/macosx/MainMenu.m:320
+#: modules/gui/macosx/simple_prefs.m:295
 msgid "Fullscreen Video Device"
 msgstr "התקן וידאו מסך מלא"
 
-#: modules/gui/macosx/MainMenu.m:320
+#: modules/gui/macosx/MainMenu.m:331
 msgid "Transparent"
 msgstr "שקוף"
 
-#: modules/gui/macosx/MainMenu.m:327
+#: modules/gui/macosx/MainMenu.m:338
 msgid "Window"
 msgstr "חלון"
 
-#: modules/gui/macosx/MainMenu.m:328
+#: modules/gui/macosx/MainMenu.m:339
 msgid "Minimize Window"
 msgstr "מזער חלון"
 
-#: modules/gui/macosx/MainMenu.m:329
+#: modules/gui/macosx/MainMenu.m:340
 msgid "Close Window"
 msgstr "סגירת החלון"
 
-#: modules/gui/macosx/MainMenu.m:330
+#: modules/gui/macosx/MainMenu.m:341
 msgid "Player..."
 msgstr "נגן..."
 
-#: modules/gui/macosx/MainMenu.m:331
+#: modules/gui/macosx/MainMenu.m:342
 #, fuzzy
 msgid "Main Window..."
 msgstr "מזער חלון"
 
-#: modules/gui/macosx/MainMenu.m:332
+#: modules/gui/macosx/MainMenu.m:343
 #, fuzzy
 msgid "Audio Effects..."
 msgstr "אפקטים של שמע"
 
-#: modules/gui/macosx/MainMenu.m:333
+#: modules/gui/macosx/MainMenu.m:344
 #, fuzzy
 msgid "Video Filters..."
 msgstr "גודל וידאו"
 
-#: modules/gui/macosx/MainMenu.m:334
+#: modules/gui/macosx/MainMenu.m:345
 msgid "Bookmarks..."
 msgstr "סימניות..."
 
-#: modules/gui/macosx/MainMenu.m:335
+#: modules/gui/macosx/MainMenu.m:346
 msgid "Playlist..."
 msgstr "רשימת השמעה..."
 
-#: modules/gui/macosx/MainMenu.m:336 modules/gui/macosx/playlist.m:470
+#: modules/gui/macosx/MainMenu.m:347 modules/gui/macosx/playlist.m:472
 msgid "Media Information..."
 msgstr "פרטי המדיה..."
 
-#: modules/gui/macosx/MainMenu.m:337
+#: modules/gui/macosx/MainMenu.m:348
 msgid "Messages..."
 msgstr "הודעות..."
 
-#: modules/gui/macosx/MainMenu.m:338
+#: modules/gui/macosx/MainMenu.m:349
 msgid "Errors and Warnings..."
 msgstr ""
 
-#: modules/gui/macosx/MainMenu.m:340
+#: modules/gui/macosx/MainMenu.m:351
 msgid "Bring All to Front"
 msgstr "קידום הכול לחזית"
 
-#: modules/gui/macosx/MainMenu.m:342 modules/gui/qt4/dialogs/help.cpp:54
-#: modules/gui/qt4/menus.cpp:910
+#: modules/gui/macosx/MainMenu.m:353 modules/gui/qt4/dialogs/help.cpp:54
+#: modules/gui/qt4/menus.cpp:913
 msgid "Help"
 msgstr "עזרה"
 
-#: modules/gui/macosx/MainMenu.m:343
+#: modules/gui/macosx/MainMenu.m:354
 msgid "VLC media player Help..."
 msgstr "עזרה לנגן המדיה VLC..."
 
-#: modules/gui/macosx/MainMenu.m:344
+#: modules/gui/macosx/MainMenu.m:355
 msgid "ReadMe / FAQ..."
 msgstr "מידע חיוני / שו״ת..."
 
-#: modules/gui/macosx/MainMenu.m:346
+#: modules/gui/macosx/MainMenu.m:357
 msgid "Online Documentation..."
 msgstr "תיעוד מקוון..."
 
-#: modules/gui/macosx/MainMenu.m:347
+#: modules/gui/macosx/MainMenu.m:358
 msgid "VideoLAN Website..."
 msgstr "האתר של VideoLAN..."
 
-#: modules/gui/macosx/MainMenu.m:348
+#: modules/gui/macosx/MainMenu.m:359
 msgid "Make a donation..."
 msgstr "מתן תרומה..."
 
-#: modules/gui/macosx/MainMenu.m:349
+#: modules/gui/macosx/MainMenu.m:360
 msgid "Online Forum..."
 msgstr "פורום מקוון"
 
-#: modules/gui/macosx/MainMenu.m:363
+#: modules/gui/macosx/MainMenu.m:374
 msgid "Volume Up"
 msgstr "הגבר עוצמה"
 
-#: modules/gui/macosx/MainMenu.m:364
+#: modules/gui/macosx/MainMenu.m:375
 msgid "Volume Down"
 msgstr "הנמך עוצמה"
 
-#: modules/gui/macosx/MainMenu.m:977
+#: modules/gui/macosx/MainMenu.m:1032
 #, fuzzy
 msgid "Lock Aspect Ratio"
 msgstr "יישום"
 
-#: modules/gui/macosx/MainWindow.m:127
+#: modules/gui/macosx/MainWindow.m:133
 #, fuzzy
 msgid "Backward"
 msgstr "קדימה"
 
-#: modules/gui/macosx/MainWindow.m:128
+#: modules/gui/macosx/MainWindow.m:134
 msgid "Forward"
 msgstr "קדימה"
 
-#: modules/gui/macosx/MainWindow.m:130
+#: modules/gui/macosx/MainWindow.m:136
 #, fuzzy
 msgid "Show/Hide Playlist"
 msgstr "שמור רשימת השמעה"
 
-#: modules/gui/macosx/MainWindow.m:131 modules/gui/qt4/dialogs/vlm.cpp:560
+#: modules/gui/macosx/MainWindow.m:137 modules/gui/qt4/dialogs/vlm.cpp:560
 #, fuzzy
 msgid "Repeat"
 msgstr "חזרה:"
 
-#: modules/gui/macosx/MainWindow.m:132
+#: modules/gui/macosx/MainWindow.m:138
 msgid "Shuffle"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:133 modules/gui/macosx/simple_prefs.m:221
+#: modules/gui/macosx/MainWindow.m:139 modules/gui/macosx/simple_prefs.m:224
 #: modules/gui/qt4/ui/sprefs_audio.h:440
 msgid "Effects"
 msgstr "אפקטים"
 
-#: modules/gui/macosx/MainWindow.m:134
+#: modules/gui/macosx/MainWindow.m:140
 #, fuzzy
 msgid "Toggle Fullscreen mode"
 msgstr "ממשק"
 
-#: modules/gui/macosx/MainWindow.m:138
+#: modules/gui/macosx/MainWindow.m:144
 #, fuzzy
 msgid "Full Volume"
 msgstr "עצמה נמוכה"
 
-#: modules/gui/macosx/MainWindow.m:140
+#: modules/gui/macosx/MainWindow.m:146
 #, fuzzy
 msgid "Open media..."
 msgstr "פתיחת מדיה"
 
-#: modules/gui/macosx/MainWindow.m:141
+#: modules/gui/macosx/MainWindow.m:147
 msgid "Drop media here"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:301
+#: modules/gui/macosx/MainWindow.m:307
 msgid "LIBRARY"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:304
+#: modules/gui/macosx/MainWindow.m:310
 msgid "MY COMPUTER"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:305
+#: modules/gui/macosx/MainWindow.m:311
 msgid "DEVICES"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:306
+#: modules/gui/macosx/MainWindow.m:312
 msgid "LOCAL NETWORK"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:307
+#: modules/gui/macosx/MainWindow.m:313
 msgid "INTERNET"
 msgstr ""
 
@@ -16165,13 +16167,13 @@ msgstr "בחר קובץ"
 
 #: modules/gui/macosx/open.m:128 modules/gui/macosx/open.m:312
 #: modules/gui/macosx/output.m:145 modules/gui/macosx/prefs_widgets.m:1208
-#: modules/gui/macosx/simple_prefs.m:244 modules/gui/macosx/simple_prefs.m:299
+#: modules/gui/macosx/simple_prefs.m:247 modules/gui/macosx/simple_prefs.m:303
 #: modules/gui/qt4/components/preferences_widgets.cpp:269
-#: modules/gui/qt4/components/simple_preferences.cpp:289
+#: modules/gui/qt4/components/simple_preferences.cpp:288
 #: modules/gui/qt4/components/sout/sout_widgets.cpp:102
 #: modules/gui/qt4/ui/open.h:243 modules/gui/qt4/ui/open_disk.h:307
 #: modules/gui/qt4/ui/open_file.h:177 modules/gui/qt4/ui/sprefs_audio.h:438
-#: modules/gui/qt4/ui/sprefs_input.h:353 modules/gui/qt4/ui/sprefs_video.h:361
+#: modules/gui/qt4/ui/sprefs_input.h:353 modules/gui/qt4/ui/sprefs_video.h:353
 msgid "Browse..."
 msgstr "עיון..."
 
@@ -16184,7 +16186,7 @@ msgid "Play another media synchronously"
 msgstr "נגינת מדיה אחרת בו זמנית"
 
 #: modules/gui/macosx/open.m:132 modules/gui/macosx/open.m:311
-#: modules/gui/macosx/simple_prefs.m:277 modules/gui/macosx/wizard.m:348
+#: modules/gui/macosx/simple_prefs.m:281 modules/gui/macosx/wizard.m:348
 #: modules/gui/macosx/wizard.m:416 modules/gui/qt4/ui/sprefs_interface.h:550
 msgid "Choose..."
 msgstr "בחירה..."
@@ -16498,8 +16500,8 @@ msgstr "URL"
 msgid "Save File"
 msgstr "שמור קובץ"
 
-#: modules/gui/macosx/output.m:520 modules/gui/macosx/playlist.m:697
-#: modules/gui/macosx/prefs.m:205 modules/gui/macosx/simple_prefs.m:309
+#: modules/gui/macosx/output.m:520 modules/gui/macosx/playlist.m:700
+#: modules/gui/macosx/prefs.m:205 modules/gui/macosx/simple_prefs.m:313
 #: modules/gui/qt4/components/sout/profile_selector.cpp:252
 #: modules/gui/qt4/ui/vlm.h:302
 msgid "Save"
@@ -16612,79 +16614,79 @@ msgstr "מחבר"
 msgid "Duration"
 msgstr "אורך"
 
-#: modules/gui/macosx/playlist.m:465
+#: modules/gui/macosx/playlist.m:467
 msgid "Save Playlist..."
 msgstr "שמור רשימת השמעה..."
 
-#: modules/gui/macosx/playlist.m:467 modules/gui/qt4/dialogs/bookmarks.cpp:48
+#: modules/gui/macosx/playlist.m:469 modules/gui/qt4/dialogs/bookmarks.cpp:48
 #: modules/gui/qt4/ui/podcast_configuration.h:105
 #: modules/gui/qt4/ui/streampanel.h:173
 msgid "Delete"
 msgstr "מחק"
 
-#: modules/gui/macosx/playlist.m:468
+#: modules/gui/macosx/playlist.m:470
 msgid "Expand Node"
 msgstr ""
 
-#: modules/gui/macosx/playlist.m:471
+#: modules/gui/macosx/playlist.m:473
 #, fuzzy
 msgid "Download Cover Art"
 msgstr "הורד כעת"
 
-#: modules/gui/macosx/playlist.m:472
+#: modules/gui/macosx/playlist.m:474
 #, fuzzy
 msgid "Fetch Meta Data"
 msgstr "הגדרות רצועה"
 
-#: modules/gui/macosx/playlist.m:473 modules/gui/macosx/playlist.m:474
+#: modules/gui/macosx/playlist.m:475 modules/gui/macosx/playlist.m:476
 msgid "Reveal in Finder"
 msgstr ""
 
-#: modules/gui/macosx/playlist.m:476
+#: modules/gui/macosx/playlist.m:478
 #, fuzzy
 msgid "Sort Node by Name"
 msgstr "מיין ע\"פ שם"
 
-#: modules/gui/macosx/playlist.m:477
+#: modules/gui/macosx/playlist.m:479
 #, fuzzy
 msgid "Sort Node by Author"
 msgstr "ממוין לפי אלבום"
 
-#: modules/gui/macosx/playlist.m:481 modules/gui/macosx/playlist.m:482
+#: modules/gui/macosx/playlist.m:483 modules/gui/macosx/playlist.m:484
 msgid "Search in Playlist"
 msgstr "חיפוש ברשימת ההשמעה"
 
-#: modules/gui/macosx/playlist.m:484
+#: modules/gui/macosx/playlist.m:486
 msgid "File Format:"
 msgstr "מבנה הקובץ:"
 
-#: modules/gui/macosx/playlist.m:485
+#: modules/gui/macosx/playlist.m:487
 msgid "Extended M3U"
 msgstr "M3U מורחב"
 
-#: modules/gui/macosx/playlist.m:486
+#: modules/gui/macosx/playlist.m:488
 msgid "XML Shareable Playlist Format (XSPF)"
 msgstr ""
 
-#: modules/gui/macosx/playlist.m:487
+#: modules/gui/macosx/playlist.m:489
 msgid "HTML Playlist"
 msgstr "רשימת השמעה מסוג HTML"
 
-#: modules/gui/macosx/playlist.m:696
+#: modules/gui/macosx/playlist.m:699
 msgid "Save Playlist"
 msgstr "שמור רשימת השמעה"
 
-#: modules/gui/macosx/playlist.m:1185
+#: modules/gui/macosx/playlist.m:1171
 msgid "Meta-information"
 msgstr ""
 
-#: modules/gui/macosx/prefs.m:204 modules/gui/macosx/simple_prefs.m:310
+#: modules/gui/macosx/prefs.m:204 modules/gui/macosx/simple_prefs.m:314
 #: modules/gui/qt4/components/simple_preferences.cpp:76
 #: modules/gui/qt4/dialogs/preferences.cpp:49
 msgid "Preferences"
 msgstr "העדפות"
 
-#: modules/gui/macosx/prefs.m:207 modules/gui/macosx/simple_prefs.m:308
+#: modules/gui/macosx/prefs.m:207 modules/gui/macosx/simple_prefs.m:312
 msgid "Reset All"
 msgstr "איפוס הכול"
 
@@ -16693,12 +16695,12 @@ msgstr "איפוס הכול"
 msgid "Show Basic"
 msgstr "בסיסי"
 
-#: modules/gui/macosx/prefs.m:226 modules/gui/macosx/simple_prefs.m:692
+#: modules/gui/macosx/prefs.m:226 modules/gui/macosx/simple_prefs.m:698
 #: modules/gui/qt4/dialogs/preferences.cpp:339
 msgid "Reset Preferences"
 msgstr "איפוס ההעדפות"
 
-#: modules/gui/macosx/prefs.m:229 modules/gui/macosx/simple_prefs.m:695
+#: modules/gui/macosx/prefs.m:229 modules/gui/macosx/simple_prefs.m:701
 #, fuzzy
 msgid ""
 "Beware this will reset the VLC media player preferences.\n"
@@ -16723,300 +16725,300 @@ msgstr "בחירה"
 msgid "Not Set"
 msgstr "לא הוגדר"
 
-#: modules/gui/macosx/simple_prefs.m:173
-#: modules/gui/qt4/components/simple_preferences.cpp:525
+#: modules/gui/macosx/simple_prefs.m:176
+#: modules/gui/qt4/components/simple_preferences.cpp:524
 msgid "Interface Settings"
 msgstr "הגדרות מנשק"
 
-#: modules/gui/macosx/simple_prefs.m:177
+#: modules/gui/macosx/simple_prefs.m:180
 msgid "General Audio Settings"
 msgstr "הגדרות שמע כלליות"
 
-#: modules/gui/macosx/simple_prefs.m:181
+#: modules/gui/macosx/simple_prefs.m:184
 #, fuzzy
 msgid "General Video Settings"
 msgstr "הגדרות וידאו כלליות"
 
-#: modules/gui/macosx/simple_prefs.m:185
+#: modules/gui/macosx/simple_prefs.m:188
 #, fuzzy
 msgid "Subtitles & OSD"
 msgstr "כתוביות/OSD"
 
-#: modules/gui/macosx/simple_prefs.m:185
-#: modules/gui/qt4/components/simple_preferences.cpp:641
+#: modules/gui/macosx/simple_prefs.m:188
+#: modules/gui/qt4/components/simple_preferences.cpp:640
 msgid "Subtitles & On Screen Display Settings"
 msgstr "הגדרות כתוביות וחיווי על גבי המסך"
 
-#: modules/gui/macosx/simple_prefs.m:189
+#: modules/gui/macosx/simple_prefs.m:192
 #, fuzzy
 msgid "Input & Codecs"
 msgstr "קלט / מפענחים"
 
-#: modules/gui/macosx/simple_prefs.m:189
+#: modules/gui/macosx/simple_prefs.m:192
 #, fuzzy
 msgid "Input & Codec settings"
 msgstr "קלט / מפענחים"
 
-#: modules/gui/macosx/simple_prefs.m:222
+#: modules/gui/macosx/simple_prefs.m:225
 msgid "Enable Audio"
 msgstr "הפעלת שמע"
 
-#: modules/gui/macosx/simple_prefs.m:223
+#: modules/gui/macosx/simple_prefs.m:226
 msgid "General Audio"
 msgstr "שמע כללי"
 
-#: modules/gui/macosx/simple_prefs.m:224
+#: modules/gui/macosx/simple_prefs.m:227
 #, fuzzy
 msgid "Preferred Audio language"
 msgstr "בחירת שפת שמע"
 
-#: modules/gui/macosx/simple_prefs.m:225
+#: modules/gui/macosx/simple_prefs.m:228
 msgid "Enable Last.fm submissions"
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:229
+#: modules/gui/macosx/simple_prefs.m:232
 msgid "Visualization"
 msgstr "אפקט חזותי"
 
-#: modules/gui/macosx/simple_prefs.m:230
+#: modules/gui/macosx/simple_prefs.m:233
 msgid "Default Volume"
 msgstr "עצמת שמע כבררת מחדל"
 
-#: modules/gui/macosx/simple_prefs.m:233 modules/gui/qt4/dialogs/vlm.cpp:506
+#: modules/gui/macosx/simple_prefs.m:236 modules/gui/qt4/dialogs/vlm.cpp:506
 msgid "Change"
 msgstr "שינוי"
 
-#: modules/gui/macosx/simple_prefs.m:234
+#: modules/gui/macosx/simple_prefs.m:237
 msgid "Change Hotkey"
 msgstr "שינוי מקש הקיצור"
 
-#: modules/gui/macosx/simple_prefs.m:238
+#: modules/gui/macosx/simple_prefs.m:241
 msgid "Select an action to change the associated hotkey:"
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:239
+#: modules/gui/macosx/simple_prefs.m:242
 #: modules/gui/qt4/components/preferences_widgets.cpp:1305
 msgid "Action"
 msgstr "פעולה"
 
-#: modules/gui/macosx/simple_prefs.m:240
+#: modules/gui/macosx/simple_prefs.m:243
 msgid "Shortcut"
 msgstr "קיצור"
 
-#: modules/gui/macosx/simple_prefs.m:246
+#: modules/gui/macosx/simple_prefs.m:249
 msgid "Repair AVI Files"
 msgstr "תיקון קובצי AVI"
 
-#: modules/gui/macosx/simple_prefs.m:247
+#: modules/gui/macosx/simple_prefs.m:250
 msgid "Default Caching Level"
 msgstr "רמת המטמון כבררת המחדל"
 
-#: modules/gui/macosx/simple_prefs.m:248 modules/gui/qt4/ui/open.h:232
+#: modules/gui/macosx/simple_prefs.m:251 modules/gui/qt4/ui/open.h:232
 msgid "Caching"
 msgstr "מטמון"
 
-#: modules/gui/macosx/simple_prefs.m:249
+#: modules/gui/macosx/simple_prefs.m:252
 msgid ""
 "Use the complete preferences to configure custom caching values for each "
 "access module."
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:250
+#: modules/gui/macosx/simple_prefs.m:253
 msgid "HTTP Proxy"
 msgstr "מתווך HTTP"
 
-#: modules/gui/macosx/simple_prefs.m:251
+#: modules/gui/macosx/simple_prefs.m:254
 msgid "Password for HTTP Proxy"
 msgstr "ססמה למתווך ה־HTTP"
 
-#: modules/gui/macosx/simple_prefs.m:252
+#: modules/gui/macosx/simple_prefs.m:255
 msgid "Codecs / Muxers"
 msgstr "מקודדים / מרבבים"
 
-#: modules/gui/macosx/simple_prefs.m:254
+#: modules/gui/macosx/simple_prefs.m:257
 msgid "Post-Processing Quality"
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:259
+#: modules/gui/macosx/simple_prefs.m:263
 #, fuzzy
 msgid "Interface style"
 msgstr "ממשק"
 
-#: modules/gui/macosx/simple_prefs.m:260
+#: modules/gui/macosx/simple_prefs.m:264
 msgid "Dark"
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:261
+#: modules/gui/macosx/simple_prefs.m:265
 #, fuzzy
 msgid "Bright"
 msgstr "ימין"
 
-#: modules/gui/macosx/simple_prefs.m:262
+#: modules/gui/macosx/simple_prefs.m:266
 msgid "Album art download policy"
 msgstr "מדיניות הורדת עטיפת האלבומים"
 
-#: modules/gui/macosx/simple_prefs.m:263
+#: modules/gui/macosx/simple_prefs.m:267
 #, fuzzy
 msgid "Show video within the main window"
 msgstr "מקודד כתוביות"
 
-#: modules/gui/macosx/simple_prefs.m:265
+#: modules/gui/macosx/simple_prefs.m:269
 msgid "Show Fullscreen Controller"
 msgstr "הצגת פקד מסך מלא"
 
-#: modules/gui/macosx/simple_prefs.m:267
+#: modules/gui/macosx/simple_prefs.m:271
 #: modules/gui/qt4/ui/sprefs_interface.h:517
 msgid "Privacy / Network Interaction"
 msgstr "פרטיות / אינטראקציה מול הרשת"
 
-#: modules/gui/macosx/simple_prefs.m:270
+#: modules/gui/macosx/simple_prefs.m:274
 msgid "Automatically check for updates"
 msgstr "בדיקת עדכונים אוטומטית"
 
-#: modules/gui/macosx/simple_prefs.m:272
+#: modules/gui/macosx/simple_prefs.m:276
 msgid "Enable Growl notifications (on playlist item change)"
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:275
+#: modules/gui/macosx/simple_prefs.m:279
 msgid "Default Encoding"
 msgstr "קידוד בררת מחדל"
 
-#: modules/gui/macosx/simple_prefs.m:276
+#: modules/gui/macosx/simple_prefs.m:280
 msgid "Display Settings"
 msgstr "הגדרות תצוגה"
 
-#: modules/gui/macosx/simple_prefs.m:278
+#: modules/gui/macosx/simple_prefs.m:282
 msgid "Font Color"
 msgstr "צבע הגופן"
 
-#: modules/gui/macosx/simple_prefs.m:279
+#: modules/gui/macosx/simple_prefs.m:283
 msgid "Font Size"
 msgstr "גודל הגופן"
 
-#: modules/gui/macosx/simple_prefs.m:281
+#: modules/gui/macosx/simple_prefs.m:285
 msgid "Subtitle Languages"
 msgstr "שפת הכתוביות"
 
-#: modules/gui/macosx/simple_prefs.m:282
+#: modules/gui/macosx/simple_prefs.m:286
 msgid "Preferred Subtitle Language"
 msgstr "שפת הכתוביות המועדפת"
 
-#: modules/gui/macosx/simple_prefs.m:284
+#: modules/gui/macosx/simple_prefs.m:288
 msgid "Enable OSD"
 msgstr "הפעלת חיווי על גבי המסך"
 
-#: modules/gui/macosx/simple_prefs.m:286
+#: modules/gui/macosx/simple_prefs.m:290
 #, fuzzy
 msgid "Force Bold"
 msgstr "קבע שמע חד ערוצי (mono)"
 
-#: modules/gui/macosx/simple_prefs.m:287
+#: modules/gui/macosx/simple_prefs.m:291
 msgid ""
 "More options on background, shadow and outline are available in the advanced "
 "preferences."
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:290
+#: modules/gui/macosx/simple_prefs.m:294
 msgid "Black screens in Fullscreen mode"
 msgstr "מסכים שחורים במצב מסך מלא"
 
-#: modules/gui/macosx/simple_prefs.m:292 modules/stream_out/display.c:53
-#: modules/gui/qt4/ui/sprefs_video.h:343
+#: modules/gui/macosx/simple_prefs.m:296 modules/stream_out/display.c:53
+#: modules/gui/qt4/ui/sprefs_video.h:336
 msgid "Display"
 msgstr "תצוגה"
 
-#: modules/gui/macosx/simple_prefs.m:293
+#: modules/gui/macosx/simple_prefs.m:297
 msgid "Enable Video"
 msgstr "הפעלת וידאו"
 
-#: modules/gui/macosx/simple_prefs.m:296
+#: modules/gui/macosx/simple_prefs.m:300
 msgid "Output module"
 msgstr "מודול פלט"
 
-#: modules/gui/macosx/simple_prefs.m:298 modules/gui/qt4/ui/sprefs_video.h:360
+#: modules/gui/macosx/simple_prefs.m:302 modules/gui/qt4/ui/sprefs_video.h:352
 msgid "Video snapshots"
 msgstr "צילומי וידאו"
 
-#: modules/gui/macosx/simple_prefs.m:300 modules/meta_engine/folder.c:62
+#: modules/gui/macosx/simple_prefs.m:304 modules/meta_engine/folder.c:62
 msgid "Folder"
 msgstr "תיקייה"
 
-#: modules/gui/macosx/simple_prefs.m:301 modules/gui/qt4/ui/sprefs_video.h:365
+#: modules/gui/macosx/simple_prefs.m:305 modules/gui/qt4/ui/sprefs_video.h:357
 msgid "Format"
 msgstr "מבנה"
 
-#: modules/gui/macosx/simple_prefs.m:302 modules/gui/qt4/ui/sprefs_video.h:363
+#: modules/gui/macosx/simple_prefs.m:306 modules/gui/qt4/ui/sprefs_video.h:355
 msgid "Prefix"
 msgstr "קידומת"
 
-#: modules/gui/macosx/simple_prefs.m:303 modules/gui/qt4/ui/sprefs_video.h:366
+#: modules/gui/macosx/simple_prefs.m:307 modules/gui/qt4/ui/sprefs_video.h:358
 msgid "Sequential numbering"
 msgstr "מספור רציף"
 
-#: modules/gui/macosx/simple_prefs.m:461
+#: modules/gui/macosx/simple_prefs.m:465
 msgid "Last check on: %@"
 msgstr "הבדיקה האחרונה: %@"
 
-#: modules/gui/macosx/simple_prefs.m:463
+#: modules/gui/macosx/simple_prefs.m:467
 msgid "No check was performed yet."
 msgstr "לא התבצעה בדיקה עדיין"
 
-#: modules/gui/macosx/simple_prefs.m:570 modules/gui/macosx/simple_prefs.m:601
-#: modules/gui/macosx/simple_prefs.m:1109
-#: modules/gui/qt4/components/simple_preferences.cpp:498
+#: modules/gui/macosx/simple_prefs.m:576 modules/gui/macosx/simple_prefs.m:607
+#: modules/gui/macosx/simple_prefs.m:1117
+#: modules/gui/qt4/components/simple_preferences.cpp:497
 msgid "Custom"
 msgstr "התאמה אישית"
 
-#: modules/gui/macosx/simple_prefs.m:570
-#: modules/gui/qt4/components/simple_preferences.cpp:499
+#: modules/gui/macosx/simple_prefs.m:576
+#: modules/gui/qt4/components/simple_preferences.cpp:498
 msgid "Lowest latency"
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:570
-#: modules/gui/qt4/components/simple_preferences.cpp:500
+#: modules/gui/macosx/simple_prefs.m:576
+#: modules/gui/qt4/components/simple_preferences.cpp:499
 msgid "Low latency"
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:571
-#: modules/gui/qt4/components/simple_preferences.cpp:502
+#: modules/gui/macosx/simple_prefs.m:577
+#: modules/gui/qt4/components/simple_preferences.cpp:501
 msgid "High latency"
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:571
-#: modules/gui/qt4/components/simple_preferences.cpp:503
+#: modules/gui/macosx/simple_prefs.m:577
+#: modules/gui/qt4/components/simple_preferences.cpp:502
 msgid "Higher latency"
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:1031
+#: modules/gui/macosx/simple_prefs.m:1039
 msgid "Choose the folder to save your video snapshots to."
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:1033
-#: modules/gui/macosx/simple_prefs.m:1123
+#: modules/gui/macosx/simple_prefs.m:1041
+#: modules/gui/macosx/simple_prefs.m:1131
 msgid "Choose"
 msgstr "בחרו"
 
-#: modules/gui/macosx/simple_prefs.m:1121
+#: modules/gui/macosx/simple_prefs.m:1129
 #, fuzzy
 msgid "Choose the directory or filename where the records will be stored."
 msgstr "מאפשר לבחור את התיקייה בה הקלטות יישמרו"
 
-#: modules/gui/macosx/simple_prefs.m:1143
+#: modules/gui/macosx/simple_prefs.m:1151
 msgid ""
 "Press new keys for\n"
 "\"%@\""
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:1227
+#: modules/gui/macosx/simple_prefs.m:1235
 msgid "Invalid combination"
 msgstr "צירוף בלתי חוקי"
 
-#: modules/gui/macosx/simple_prefs.m:1228
+#: modules/gui/macosx/simple_prefs.m:1236
 msgid "Regrettably, these keys cannot be assigned as hotkey shortcuts."
 msgstr ""
 
-#: modules/gui/macosx/simple_prefs.m:1240
-#: modules/gui/macosx/simple_prefs.m:1244
+#: modules/gui/macosx/simple_prefs.m:1248
+#: modules/gui/macosx/simple_prefs.m:1252
 msgid "This combination is already taken by \"%@\"."
 msgstr ""
 
@@ -18765,34 +18767,34 @@ msgstr "נא להזין שם עבור התיקייה החדשה:"
 msgid "Add to playlist"
 msgstr "הוסף לרשימת ההשמעה"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:981
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:982
 #, fuzzy
 msgid "Clear playlist"
 msgstr "נגן רשימה"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:987
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:989
 msgid "Sort by"
 msgstr "מיון לפי"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:994
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:996
 msgid "Ascending"
 msgstr "עולה"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:995
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:997
 msgid "Descending"
 msgstr "יורד"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:1006
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:1008
 #, fuzzy
 msgid "Display size"
 msgstr "התקן תצוגה"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:1007
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:1009
 #, fuzzy
 msgid "Increase"
 msgstr "הגברת עצמת השמע"
 
-#: modules/gui/qt4/components/playlist/playlist_model.cpp:1008
+#: modules/gui/qt4/components/playlist/playlist_model.cpp:1010
 #, fuzzy
 msgid "Decrease"
 msgstr "הנמכת עצמת השמע"
@@ -18817,23 +18819,23 @@ msgstr "אינטרנט"
 msgid "Subscribe to a podcast"
 msgstr "הרשמה לפודקאסט"
 
-#: modules/gui/qt4/components/playlist/selector.cpp:348
+#: modules/gui/qt4/components/playlist/selector.cpp:355
 msgid "Remove this podcast subscription"
 msgstr "הסרת ההרשמה לפודקאסט זה"
 
-#: modules/gui/qt4/components/playlist/selector.cpp:474
+#: modules/gui/qt4/components/playlist/selector.cpp:481
 msgid "Subscribe"
 msgstr "הרשמה"
 
-#: modules/gui/qt4/components/playlist/selector.cpp:475
+#: modules/gui/qt4/components/playlist/selector.cpp:482
 msgid "Enter URL of the podcast to subscribe to:"
 msgstr "נא להזין את כתובת הפודקאסט לרישום:"
 
-#: modules/gui/qt4/components/playlist/selector.cpp:492
+#: modules/gui/qt4/components/playlist/selector.cpp:499
 msgid "Do you really want to unsubscribe from %1?"
 msgstr "האם אכן ברצונך לבטל את הרישום ל־%1?"
 
-#: modules/gui/qt4/components/playlist/selector.cpp:495
+#: modules/gui/qt4/components/playlist/selector.cpp:502
 msgid "Unsubscribe"
 msgstr "ביטול הרישום"
 
@@ -18908,19 +18910,19 @@ msgstr "קלט ומקודדים"
 msgid "Video Settings"
 msgstr "הגדרות וידאו"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:260
+#: modules/gui/qt4/components/simple_preferences.cpp:259
 msgid "Audio Settings"
 msgstr "הגדרות שמע"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:272
+#: modules/gui/qt4/components/simple_preferences.cpp:271
 msgid "Device:"
 msgstr "התקן:"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:424
+#: modules/gui/qt4/components/simple_preferences.cpp:423
 msgid "Input & Codecs Settings"
 msgstr "הגדרות מקודדים וקלט"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:429
+#: modules/gui/qt4/components/simple_preferences.cpp:428
 msgid ""
 "If this property is blank, different values\n"
 "for DVD, VCD, and CDDA are set.\n"
@@ -18928,47 +18930,47 @@ msgid ""
 "individually in the advanced preferences."
 msgstr ""
 
-#: modules/gui/qt4/components/simple_preferences.cpp:528
+#: modules/gui/qt4/components/simple_preferences.cpp:527
 msgid "This is VLC's skinnable interface. You can download other skins at"
 msgstr "זהו מנשק ה־VLC הניתן לעיצוב. ניתן להוריד ערכות עיצוב אחרות ב"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:530
+#: modules/gui/qt4/components/simple_preferences.cpp:529
 msgid "VLC skins website"
 msgstr "אתר ערכות העיצוב של VLC"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:560
+#: modules/gui/qt4/components/simple_preferences.cpp:559
 msgid "System's default"
 msgstr "בררת המחדל של המערכת"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:680
+#: modules/gui/qt4/components/simple_preferences.cpp:679
 msgid "Configure Hotkeys"
 msgstr "הגדרת מקשי קיצור"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:948
+#: modules/gui/qt4/components/simple_preferences.cpp:947
 #, fuzzy
 msgid "File associations"
 msgstr "שיוכי קבצים"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:957
+#: modules/gui/qt4/components/simple_preferences.cpp:956
 #: modules/gui/qt4/dialogs_provider.hpp:42
 msgid "Audio Files"
 msgstr "קובצי שמע"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:958
+#: modules/gui/qt4/components/simple_preferences.cpp:957
 #: modules/gui/qt4/dialogs_provider.hpp:41
 msgid "Video Files"
 msgstr "קובצי וידאו"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:959
+#: modules/gui/qt4/components/simple_preferences.cpp:958
 #: modules/gui/qt4/dialogs_provider.hpp:43
 msgid "Playlist Files"
 msgstr "קובצי רשימות השמעה"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:1011
+#: modules/gui/qt4/components/simple_preferences.cpp:1010
 msgid "&Apply"
 msgstr "ה&חלה"
 
-#: modules/gui/qt4/components/simple_preferences.cpp:1012
+#: modules/gui/qt4/components/simple_preferences.cpp:1011
 #: modules/gui/qt4/dialogs/convert.cpp:96
 #: modules/gui/qt4/dialogs/gototime.cpp:49
 #: modules/gui/qt4/dialogs/open.cpp:109 modules/gui/qt4/dialogs/openurl.cpp:60
@@ -19432,10 +19434,6 @@ msgstr ""
 msgid "Plugins and extensions"
 msgstr "תוספים והרחבות"
 
-#: modules/gui/qt4/dialogs/plugins.cpp:68
-msgid "Extensions"
-msgstr "הרחבות"
-
 #: modules/gui/qt4/dialogs/plugins.cpp:105
 msgid "Capability"
 msgstr "תאימות"
@@ -19773,345 +19771,340 @@ msgstr "תפריט שליטה עבור הנגן"
 msgid "Paused"
 msgstr "הושהה"
 
-#: modules/gui/qt4/menus.cpp:317
+#: modules/gui/qt4/menus.cpp:314
 msgid "&Media"
 msgstr "מ&דיה"
 
-#: modules/gui/qt4/menus.cpp:320
+#: modules/gui/qt4/menus.cpp:317
 msgid "P&layback"
 msgstr "נ&גינה"
 
-#: modules/gui/qt4/menus.cpp:321 modules/gui/qt4/menus.cpp:1020
+#: modules/gui/qt4/menus.cpp:318 modules/gui/qt4/menus.cpp:1023
 msgid "&Audio"
 msgstr "&שמע"
 
-#: modules/gui/qt4/menus.cpp:322 modules/gui/qt4/menus.cpp:1027
+#: modules/gui/qt4/menus.cpp:319 modules/gui/qt4/menus.cpp:1030
 msgid "&Video"
 msgstr "&וידאו"
 
-#: modules/gui/qt4/menus.cpp:324
+#: modules/gui/qt4/menus.cpp:321
 msgid "&Tools"
 msgstr "&כלים"
 
-#: modules/gui/qt4/menus.cpp:327 modules/gui/qt4/menus.cpp:1076
+#: modules/gui/qt4/menus.cpp:324 modules/gui/qt4/menus.cpp:1079
 msgid "V&iew"
 msgstr "ת&צוגה"
 
-#: modules/gui/qt4/menus.cpp:329
+#: modules/gui/qt4/menus.cpp:326
 msgid "&Help"
 msgstr "&עזרה"
 
-#: modules/gui/qt4/menus.cpp:342
+#: modules/gui/qt4/menus.cpp:339
 #, fuzzy
 msgid "Open &File..."
 msgstr "פתח קובץ..."
 
-#: modules/gui/qt4/menus.cpp:346 modules/gui/qt4/menus.cpp:899
+#: modules/gui/qt4/menus.cpp:343 modules/gui/qt4/menus.cpp:902
 msgid "Open &Disc..."
 msgstr "פתיחת &תקליטור..."
 
-#: modules/gui/qt4/menus.cpp:348
+#: modules/gui/qt4/menus.cpp:345
 msgid "Open &Network Stream..."
 msgstr "פתיחת ת&זרים רשת..."
 
-#: modules/gui/qt4/menus.cpp:350 modules/gui/qt4/menus.cpp:903
+#: modules/gui/qt4/menus.cpp:347 modules/gui/qt4/menus.cpp:906
 msgid "Open &Capture Device..."
 msgstr "פתיחת התקן &לכידה..."
 
-#: modules/gui/qt4/menus.cpp:355
+#: modules/gui/qt4/menus.cpp:352
 #, fuzzy
 msgid "&Open (advanced)..."
 msgstr "פתיחת &קובץ..."
 
-#: modules/gui/qt4/menus.cpp:359
+#: modules/gui/qt4/menus.cpp:356
 msgid "Open &Location from clipboard"
 msgstr "פתיחת המיקום מ&לוח הגזירים"
 
-#: modules/gui/qt4/menus.cpp:364
+#: modules/gui/qt4/menus.cpp:361
 #, fuzzy
 msgid "Open &Recent Media"
 msgstr "מדיה &אחרונה"
 
-#: modules/gui/qt4/menus.cpp:375
+#: modules/gui/qt4/menus.cpp:372
 msgid "Conve&rt / Save..."
 msgstr "המ&רה / שמירה..."
 
-#: modules/gui/qt4/menus.cpp:377
+#: modules/gui/qt4/menus.cpp:374
 #, fuzzy
 msgid "&Stream..."
 msgstr "ה&זרמה..."
 
-#: modules/gui/qt4/menus.cpp:382
+#: modules/gui/qt4/menus.cpp:379
 #, fuzzy
 msgid "Quit at the end of playlist"
 msgstr "פריט אחד ברשימת ההשמעה"
 
-#: modules/gui/qt4/menus.cpp:389
+#: modules/gui/qt4/menus.cpp:386
 msgid "Close to systray"
 msgstr ""
 
-#: modules/gui/qt4/menus.cpp:393 modules/gui/qt4/menus.cpp:1140
+#: modules/gui/qt4/menus.cpp:390 modules/gui/qt4/menus.cpp:1143
 msgid "&Quit"
 msgstr "י&ציאה"
 
-#: modules/gui/qt4/menus.cpp:403
+#: modules/gui/qt4/menus.cpp:400
 msgid "&Effects and Filters"
 msgstr "&אפקטים ומסננים"
 
-#: modules/gui/qt4/menus.cpp:406
+#: modules/gui/qt4/menus.cpp:403
 msgid "&Track Synchronization"
 msgstr "&סנכרון רצועות"
 
-#: modules/gui/qt4/menus.cpp:419
+#: modules/gui/qt4/menus.cpp:416
 msgid "Program Guide"
 msgstr "מדריך תכניות"
 
-#: modules/gui/qt4/menus.cpp:425
+#: modules/gui/qt4/menus.cpp:422
 msgid "Plu&gins and extensions"
 msgstr "תוס&פים והרחבות"
 
-#: modules/gui/qt4/menus.cpp:429
+#: modules/gui/qt4/menus.cpp:426
 msgid "Customi&ze Interface..."
 msgstr "התאמת המ&נשק..."
 
-#: modules/gui/qt4/menus.cpp:432
+#: modules/gui/qt4/menus.cpp:429
 msgid "&Preferences"
 msgstr "ה&עדפות"
 
-#: modules/gui/qt4/menus.cpp:453
+#: modules/gui/qt4/menus.cpp:450
 msgid "&View"
 msgstr "&תצוגה"
 
-#: modules/gui/qt4/menus.cpp:474
+#: modules/gui/qt4/menus.cpp:471
 msgid "Play&list"
 msgstr "&רשימת השמעה"
 
-#: modules/gui/qt4/menus.cpp:475
+#: modules/gui/qt4/menus.cpp:472
 msgid "Ctrl+L"
 msgstr "Ctrl+L"
 
-#: modules/gui/qt4/menus.cpp:480
+#: modules/gui/qt4/menus.cpp:477
 #, fuzzy
 msgid "Mi&nimal Interface"
 msgstr "ממשק מינימלי"
 
-#: modules/gui/qt4/menus.cpp:481
+#: modules/gui/qt4/menus.cpp:478
 msgid "Ctrl+H"
 msgstr "Ctrl+H"
 
-#: modules/gui/qt4/menus.cpp:489
+#: modules/gui/qt4/menus.cpp:486
 msgid "&Fullscreen Interface"
 msgstr "מצב מ&סך מלא"
 
-#: modules/gui/qt4/menus.cpp:497
+#: modules/gui/qt4/menus.cpp:494
 msgid "&Advanced Controls"
 msgstr "&פקדים מתקדמים"
 
-#: modules/gui/qt4/menus.cpp:504
+#: modules/gui/qt4/menus.cpp:501
 msgid "Docked Playlist"
 msgstr "רשימת השמעה מוצמדת"
 
-#: modules/gui/qt4/menus.cpp:509
+#: modules/gui/qt4/menus.cpp:506
 #, fuzzy
 msgid "Status Bar"
 msgstr "מצב"
 
-#: modules/gui/qt4/menus.cpp:514
+#: modules/gui/qt4/menus.cpp:511
 msgid "Visualizations selector"
 msgstr "בוחר האפקטים החזותיים"
 
-#: modules/gui/qt4/menus.cpp:595
+#: modules/gui/qt4/menus.cpp:592
 msgid "Audio &Track"
 msgstr "רצועת &שמע"
 
-#: modules/gui/qt4/menus.cpp:596
+#: modules/gui/qt4/menus.cpp:593
 msgid "Audio &Channels"
 msgstr "ערוצ&י שמע"
 
-#: modules/gui/qt4/menus.cpp:597
+#: modules/gui/qt4/menus.cpp:594
 msgid "Audio &Device"
 msgstr "ה&תקן שמע"
 
-#: modules/gui/qt4/menus.cpp:600
+#: modules/gui/qt4/menus.cpp:597
 msgid "&Visualizations"
 msgstr "אפקטים &חזותיים"
 
-#: modules/gui/qt4/menus.cpp:620
+#: modules/gui/qt4/menus.cpp:617
 msgid "&Subtitles Track"
 msgstr "רצועת &כתוביות"
 
-#: modules/gui/qt4/menus.cpp:642
+#: modules/gui/qt4/menus.cpp:639
 msgid "Video &Track"
 msgstr "רצועת &וידאו"
 
-#: modules/gui/qt4/menus.cpp:648
+#: modules/gui/qt4/menus.cpp:645
 msgid "&Fullscreen"
 msgstr "מ&סך מלא"
 
-#: modules/gui/qt4/menus.cpp:649
+#: modules/gui/qt4/menus.cpp:646
 #, fuzzy
 msgid "Always Fit &Window"
 msgstr "תמיד &עליון"
 
-#: modules/gui/qt4/menus.cpp:650
+#: modules/gui/qt4/menus.cpp:647
 #, fuzzy
 msgid "Always &on Top"
 msgstr "תמיד &עליון"
 
-#: modules/gui/qt4/menus.cpp:652
-#, fuzzy
-msgid "Display on &Desktop"
-msgstr "רזולוציית תצוגה"
-
-#: modules/gui/qt4/menus.cpp:656
+#: modules/gui/qt4/menus.cpp:648
 #, fuzzy
 msgid "Set as Wall&paper"
 msgstr "רקע DirectX"
 
-#: modules/gui/qt4/menus.cpp:660
+#: modules/gui/qt4/menus.cpp:652
 msgid "&Zoom"
 msgstr "ת&קריב"
 
-#: modules/gui/qt4/menus.cpp:661
+#: modules/gui/qt4/menus.cpp:653
 msgid "&Aspect Ratio"
 msgstr "יחס ת&צוגה"
 
-#: modules/gui/qt4/menus.cpp:662
+#: modules/gui/qt4/menus.cpp:654
 msgid "&Crop"
 msgstr "&חיתוך"
 
-#: modules/gui/qt4/menus.cpp:666
+#: modules/gui/qt4/menus.cpp:658
 msgid "&Deinterlace"
 msgstr "יישור &פסים"
 
-#: modules/gui/qt4/menus.cpp:667
+#: modules/gui/qt4/menus.cpp:659
 msgid "&Deinterlace mode"
 msgstr "מ&צב יישור פסים"
 
-#: modules/gui/qt4/menus.cpp:668
+#: modules/gui/qt4/menus.cpp:660
 msgid "&Post processing"
 msgstr "&עיבוד מאוחר"
 
-#: modules/gui/qt4/menus.cpp:672
+#: modules/gui/qt4/menus.cpp:664
 #, fuzzy
 msgid "Take &Snapshot"
 msgstr "צילום המסך"
 
-#: modules/gui/qt4/menus.cpp:695
+#: modules/gui/qt4/menus.cpp:687
 msgid "T&itle"
 msgstr "&כותרת"
 
-#: modules/gui/qt4/menus.cpp:696
+#: modules/gui/qt4/menus.cpp:688
 msgid "&Chapter"
 msgstr "&פרק"
 
-#: modules/gui/qt4/menus.cpp:697
+#: modules/gui/qt4/menus.cpp:689
 msgid "&Navigation"
 msgstr "&ניווט"
 
-#: modules/gui/qt4/menus.cpp:699
+#: modules/gui/qt4/menus.cpp:691
 msgid "&Program"
 msgstr "ת&כנית"
 
-#: modules/gui/qt4/menus.cpp:702
+#: modules/gui/qt4/menus.cpp:694
 #, fuzzy
 msgid "Custom &Bookmarks"
 msgstr "&סימניות"
 
-#: modules/gui/qt4/menus.cpp:704
+#: modules/gui/qt4/menus.cpp:696
 #, fuzzy
 msgid "&Manage"
 msgstr "שפה"
 
-#: modules/gui/qt4/menus.cpp:748
+#: modules/gui/qt4/menus.cpp:752
 msgid "&Help..."
 msgstr "ע&זרה..."
 
-#: modules/gui/qt4/menus.cpp:751
+#: modules/gui/qt4/menus.cpp:755
 msgid "Check for &Updates..."
 msgstr "בדיקת &עדכונים..."
 
-#: modules/gui/qt4/menus.cpp:803
+#: modules/gui/qt4/menus.cpp:807
 msgid "Sp&eed"
 msgstr ""
 
-#: modules/gui/qt4/menus.cpp:809
+#: modules/gui/qt4/menus.cpp:813
 msgid "&Faster"
 msgstr "מ&היר יותר"
 
-#: modules/gui/qt4/menus.cpp:821
+#: modules/gui/qt4/menus.cpp:825
 msgid "N&ormal Speed"
 msgstr "מהירות ר&גילה"
 
-#: modules/gui/qt4/menus.cpp:831
+#: modules/gui/qt4/menus.cpp:835
 msgid "Slo&wer"
 msgstr "א&טי יותר"
 
-#: modules/gui/qt4/menus.cpp:846
+#: modules/gui/qt4/menus.cpp:850
 msgid "&Jump Forward"
 msgstr "&קפיצה קדימה"
 
-#: modules/gui/qt4/menus.cpp:853
+#: modules/gui/qt4/menus.cpp:857
 msgid "Jump Bac&kward"
 msgstr "קפיצה &אחורה"
 
-#: modules/gui/qt4/menus.cpp:870
+#: modules/gui/qt4/menus.cpp:873
 msgid "&Stop"
 msgstr "ע&צירה"
 
-#: modules/gui/qt4/menus.cpp:877
+#: modules/gui/qt4/menus.cpp:880
 msgid "Pre&vious"
 msgstr "ה&קודם"
 
-#: modules/gui/qt4/menus.cpp:883
+#: modules/gui/qt4/menus.cpp:886
 msgid "Ne&xt"
 msgstr "ה&בא"
 
-#: modules/gui/qt4/menus.cpp:894
+#: modules/gui/qt4/menus.cpp:897
 #, fuzzy
 msgid "Open a Media"
 msgstr "פתיחת מדיה"
 
-#: modules/gui/qt4/menus.cpp:895
+#: modules/gui/qt4/menus.cpp:898
 msgid "&Open File..."
 msgstr "פתיחת &קובץ..."
 
-#: modules/gui/qt4/menus.cpp:901
+#: modules/gui/qt4/menus.cpp:904
 msgid "Open &Network..."
 msgstr "פתיחת מיקום &רשת..."
 
-#: modules/gui/qt4/menus.cpp:1006
+#: modules/gui/qt4/menus.cpp:1009
 msgid "Leave Fullscreen"
 msgstr "יציאה ממסך מלא"
 
-#: modules/gui/qt4/menus.cpp:1032
+#: modules/gui/qt4/menus.cpp:1035
 #, fuzzy
 msgid "Subti&tle"
 msgstr "כתובית"
 
-#: modules/gui/qt4/menus.cpp:1038
+#: modules/gui/qt4/menus.cpp:1041
 msgid "&Playback"
 msgstr "נ&גינה"
 
-#: modules/gui/qt4/menus.cpp:1048
+#: modules/gui/qt4/menus.cpp:1051
 #, fuzzy
 msgid "Tools"
 msgstr "כלי"
 
-#: modules/gui/qt4/menus.cpp:1120
+#: modules/gui/qt4/menus.cpp:1123
 msgid "Hide VLC media player in taskbar"
 msgstr "הסתרת נגן המדיה VLC בשורת המשימות"
 
-#: modules/gui/qt4/menus.cpp:1126
+#: modules/gui/qt4/menus.cpp:1129
 msgid "Show VLC media player"
 msgstr "הצגת נגן המדיה VLC"
 
-#: modules/gui/qt4/menus.cpp:1138
+#: modules/gui/qt4/menus.cpp:1141
 #, fuzzy
 msgid "&Open a Media"
 msgstr "&פתיחת מדיה"
 
-#: modules/gui/qt4/menus.cpp:1551 modules/gui/qt4/ui/messages_panel.h:143
+#: modules/gui/qt4/menus.cpp:1554 modules/gui/qt4/ui/messages_panel.h:143
 msgid "&Clear"
 msgstr "&ניקוי"
 
@@ -21611,7 +21604,7 @@ msgid "Applications"
 msgstr "יישומים"
 
 #: modules/services_discovery/xcb_apps.c:351
-#: modules/video_output/msw/direct3d.c:204
+#: modules/video_output/msw/direct3d.c:203
 msgid "Desktop"
 msgstr "שולחן עבודה"
 
@@ -26122,7 +26115,7 @@ msgstr "פלט וידאו בגווני אפור"
 msgid "iOS OpenGL ES video output (requires UIView)"
 msgstr "פלט וידאו בגווני אפור"
 
-#: modules/video_output/kva.c:50 modules/gui/qt4/ui/sprefs_video.h:355
+#: modules/video_output/kva.c:50 modules/gui/qt4/ui/sprefs_video.h:347
 msgid "Enable a workaround for T23"
 msgstr ""
 
@@ -26132,7 +26125,7 @@ msgid ""
 "size is equal to or smaller than the movie size."
 msgstr ""
 
-#: modules/video_output/kva.c:55 modules/gui/qt4/ui/sprefs_video.h:354
+#: modules/video_output/kva.c:55 modules/gui/qt4/ui/sprefs_video.h:346
 #, fuzzy
 msgid "Video mode"
 msgstr "מקודדי ומפענחי וידאו"
@@ -26163,12 +26156,12 @@ msgstr "פלט שמע DirectX"
 msgid "Mac OS X OpenGL video output (requires drawable-nsobject)"
 msgstr ""
 
-#: modules/video_output/macosx.m:131
+#: modules/video_output/macosx.m:132
 #, fuzzy
 msgid "Video output is not supported"
 msgstr "הגדרות הווידאו לא נשמרו"
 
-#: modules/video_output/macosx.m:131
+#: modules/video_output/macosx.m:132
 msgid ""
 "Your Mac lacks Quartz Extreme acceleration, which is required for video "
 "output."
@@ -26208,7 +26201,7 @@ msgstr ""
 msgid "Direct3D video output"
 msgstr "פלט שמע DirectX"
 
-#: modules/video_output/msw/directx.c:61 modules/gui/qt4/ui/sprefs_video.h:349
+#: modules/video_output/msw/directx.c:61 modules/gui/qt4/ui/sprefs_video.h:342
 msgid "Use hardware YUV->RGB conversions"
 msgstr "שימוש בהמרות YUV->RGB באמצעות חומרה"
 
@@ -26753,7 +26746,7 @@ msgid "Stream Name"
 msgstr "קצב סיביות השמע"
 
 #: share/lua/http/dialogs/create_stream.html:156
-#: modules/gui/qt4/ui/sprefs_audio.h:435 modules/gui/qt4/ui/sprefs_video.h:346
+#: modules/gui/qt4/ui/sprefs_audio.h:435 modules/gui/qt4/ui/sprefs_video.h:339
 msgid "Output"
 msgstr "פלט"
 
@@ -27010,7 +27003,7 @@ msgstr "רשיון"
 #: modules/gui/qt4/ui/sprefs_audio.h:429 modules/gui/qt4/ui/sprefs_input.h:341
 #: modules/gui/qt4/ui/sprefs_interface.h:513
 #: modules/gui/qt4/ui/sprefs_subtitles.h:270
-#: modules/gui/qt4/ui/sprefs_video.h:341 modules/gui/qt4/ui/streampanel.h:168
+#: modules/gui/qt4/ui/sprefs_video.h:334 modules/gui/qt4/ui/streampanel.h:168
 msgid "Form"
 msgstr "צורה"
 
@@ -27636,36 +27629,32 @@ msgstr "רקע"
 msgid " px"
 msgstr " פיקסלים"
 
-#: modules/gui/qt4/ui/sprefs_video.h:348
+#: modules/gui/qt4/ui/sprefs_video.h:341
 msgid "Accelerated video output (Overlay)"
 msgstr "פלט וידאו מואץ (שכבת על)"
 
-#: modules/gui/qt4/ui/sprefs_video.h:350
+#: modules/gui/qt4/ui/sprefs_video.h:343
 msgid "DirectX"
 msgstr "DirectX"
 
-#: modules/gui/qt4/ui/sprefs_video.h:351
+#: modules/gui/qt4/ui/sprefs_video.h:344
 msgid "Display device"
 msgstr "התקן תצוגה"
 
-#: modules/gui/qt4/ui/sprefs_video.h:352
-msgid "Enable wallpaper mode"
-msgstr "הפעלת מצב רקע"
-
-#: modules/gui/qt4/ui/sprefs_video.h:353
+#: modules/gui/qt4/ui/sprefs_video.h:345
 #, fuzzy
 msgid "KVA"
 msgstr "MKV"
 
-#: modules/gui/qt4/ui/sprefs_video.h:357
+#: modules/gui/qt4/ui/sprefs_video.h:349
 msgid "Deinterlacing"
 msgstr "יישור פסים"
 
-#: modules/gui/qt4/ui/sprefs_video.h:358
+#: modules/gui/qt4/ui/sprefs_video.h:350
 msgid "Force Aspect Ratio"
 msgstr "אילוץ יחס תצוגה"
 
-#: modules/gui/qt4/ui/sprefs_video.h:364
+#: modules/gui/qt4/ui/sprefs_video.h:356
 msgid "vlc-snap"
 msgstr "לכידת-vlc"
 
@@ -27904,6 +27893,17 @@ msgstr "לולאה"
 #: modules/gui/qt4/ui/vlm.h:303
 msgid "Media Manager List"
 msgstr "רשימת מנהל המדיה"
+
+#, fuzzy
+#~ msgid "Live Update"
+#~ msgstr "עדכון"
+
+#, fuzzy
+#~ msgid "Display on &Desktop"
+#~ msgstr "רזולוציית תצוגה"
+
+#~ msgid "Enable wallpaper mode"
+#~ msgstr "הפעלת מצב רקע"
 
 #, fuzzy
 #~ msgid "Elasped time"
