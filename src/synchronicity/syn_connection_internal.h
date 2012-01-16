@@ -87,7 +87,7 @@ struct SynConnectionInternal {
   mtime_t estimated_rtt;
   mtime_t estimated_rtt_stdev;
   int delta_t_initialized;
-  mtime_t delta_t_confidence;
+  mtime_t delta_t_confidence;  // actually the inverse of the confidence
   mtime_t delta_t;
 
   struct Empty* useless_vlc_object;
