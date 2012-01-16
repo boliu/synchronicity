@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: vlc 1.2.0\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-01-16 03:53+0100\n"
-"PO-Revision-Date: 2011-11-26 12:07+0200\n"
+"PO-Revision-Date: 2012-01-09 13:51+0200\n"
 "Last-Translator: mihkel <turakas gmail com>\n"
 "Language-Team: Estonian\n"
 "Language: et\n"
@@ -1487,7 +1487,6 @@ msgid "Choose which objects should print debug message"
 msgstr "Millised objektid peaksid andma silumisteateid"
 
 #: src/libvlc-module.c:204
-#, fuzzy
 msgid ""
 "This is a ',' separated string, each object should be prefixed by a '+' or a "
 "'-' to respectively enable or disable it. The keyword 'all' refers to all "
@@ -6115,7 +6114,6 @@ msgid "No video or audio device selected."
 msgstr "Video- või audioseadet pole valitud."
 
 #: modules/access/dshow/dshow.cpp:601
-#, fuzzy
 msgid "VLC cannot open ANY capture device.Check the error log for details."
 msgstr "VLC ei suuda avada ühtegi hõiveseadet. Lähemalt vaata vigade logist."
 
@@ -7714,13 +7712,13 @@ msgid "SRTP key (hexadecimal)"
 msgstr "SRTP võti (16nd-süsteemis)"
 
 #: modules/access/rtp/rtp.c:51
-#, fuzzy
 msgid ""
 "RTP packets will be authenticated and deciphered with this Secure RTP master "
 "shared secret key. This must be a 32-character-long hexadecimal string."
 msgstr ""
 "RTP paketid autenditakse ja dešifreeritakse selle turvalise RTP primaarse "
-"jagatud salajase võtmega."
+"jagatud salajase võtmega. Ta peab olema 32-märgiline "
+"kuueteistkümnendsüsteemis olev string."
 
 #: modules/access/rtp/rtp.c:55 modules/stream_out/rtp.c:150
 msgid "SRTP salt (hexadecimal)"
@@ -8980,40 +8978,32 @@ msgid "Select channel to keep"
 msgstr "Vali säilitatav kanal"
 
 #: modules/audio_filter/channel_mixer/mono.c:89
-#, fuzzy
 msgid "This option silences all other channels except the selected channel."
-msgstr ""
-"See valik vaigistab kõik teised kanalid peale valitud. Vali üks (0=vasak, "
-"1=parem, 2=vasak tagumine, 3=parem tagumine, 4=keskmine, 5=vasak esimene)"
+msgstr "See valik vaigistab kõik teised kanalid peale valitud."
 
 #: modules/audio_filter/channel_mixer/mono.c:95
-#, fuzzy
 msgid "Rear left"
-msgstr "Tsoon 3:vasak"
+msgstr "Tagumine vasak"
 
 #: modules/audio_filter/channel_mixer/mono.c:95
-#, fuzzy
 msgid "Rear right"
-msgstr "Parem"
+msgstr "Tagumine parem"
 
 #: modules/audio_filter/channel_mixer/mono.c:96
 msgid "Low-frequency effects"
 msgstr ""
 
 #: modules/audio_filter/channel_mixer/mono.c:97
-#, fuzzy
 msgid "Side left"
-msgstr "Navigeerimine vasakule"
+msgstr "Külgmine vasak"
 
 #: modules/audio_filter/channel_mixer/mono.c:97
-#, fuzzy
 msgid "Side right"
-msgstr "Video kõrgus"
+msgstr "Külgmine parem"
 
 #: modules/audio_filter/channel_mixer/mono.c:97
-#, fuzzy
 msgid "Rear center"
-msgstr "Tagumised kõlarid"
+msgstr "Tagumine keskmine"
 
 #: modules/audio_filter/channel_mixer/mono.c:113
 msgid "Audio filter for stereo to mono conversion"
@@ -11254,7 +11244,6 @@ msgid "Gaussian Adaptive Low Pass Filter"
 msgstr "Gaussi adaptiivne madala läbimi filter"
 
 #: modules/codec/schroedinger.c:152
-#, fuzzy
 msgid "Low Pass Filter"
 msgstr "Madala läbimi filter"
 
@@ -13071,20 +13060,18 @@ msgid "Network master clock"
 msgstr "Võrgu esmane kell"
 
 #: modules/control/netsync.c:58
-#, fuzzy
 msgid ""
 "When set, this VLC instance will act as the master clock for synchronization "
 "for clients listening"
 msgstr ""
-"Kui määratud, siis vlc instants sünkroniseerib kella, kuulates esmase võrgu "
-"ip aadressi"
+"Kui määratud, siis VLC instants käitub kui esmane kell sünkroniseerimiseks "
+"kuulavatele klientidele"
 
 #: modules/control/netsync.c:62
 msgid "Master server ip address"
 msgstr "Esmase serveri ip aadress"
 
 #: modules/control/netsync.c:63
-#, fuzzy
 msgid ""
 "The IP address of the network master clock to use for clock synchronization."
 msgstr "Sünkroniseerimiseks kasutatav esmase võrgu kella IP aadress."
@@ -13845,7 +13832,6 @@ msgid ""
 msgstr ""
 
 #: modules/demux/image.c:60
-#, fuzzy
 msgid "Duration in seconds"
 msgstr "Kestus sekundistes"
 
@@ -14493,7 +14479,6 @@ msgid "Writer"
 msgstr "Stsenarist"
 
 #: modules/demux/mp4/mp4.c:967
-#, fuzzy
 msgid "Composer"
 msgstr "Helilooja"
 
@@ -16341,7 +16326,6 @@ msgid "Load subtitles file:"
 msgstr "Laadi subtiitrite fail:"
 
 #: modules/gui/macosx/open.m:313
-#, fuzzy
 msgid "Override parameters"
 msgstr "Eira parameetreid"
 
@@ -18165,14 +18149,12 @@ msgstr ""
 "Kui esitusloend on tühi, andmekandja avamine"
 
 #: modules/gui/qt4/components/controller.hpp:115
-#, fuzzy
 msgid "Previous / Backward"
-msgstr "Eelmine/tagasi"
+msgstr "Eelmine / tagasi"
 
 #: modules/gui/qt4/components/controller.hpp:115
-#, fuzzy
 msgid "Next / Forward"
-msgstr "Järgmine/edasi"
+msgstr "Järgmine / edasi"
 
 #: modules/gui/qt4/components/controller.hpp:116
 msgid "De-Fullscreen"
@@ -18205,17 +18187,14 @@ msgid "Step forward"
 msgstr "Samm edasi"
 
 #: modules/gui/qt4/components/controller.hpp:119
-#, fuzzy
 msgid "Loop / Repeat"
-msgstr "Kordusrežiim"
+msgstr "Tsükkel / korda"
 
 #: modules/gui/qt4/components/controller.hpp:120
-#, fuzzy
 msgid "Open subtitles"
 msgstr "Ava subtiitrid"
 
 #: modules/gui/qt4/components/controller.hpp:120
-#, fuzzy
 msgid "Dock fullscreen controller"
 msgstr "Kuva täisekraanil juhtelemendid"
 
@@ -18541,19 +18520,17 @@ msgstr "Kaanepiltide allalaadimine"
 
 #: modules/gui/qt4/components/interface_widgets.cpp:560
 #: modules/gui/qt4/dialogs/toolbar.cpp:458
-#, fuzzy
 msgid "Elapsed time"
-msgstr "Viivituse kestvus"
+msgstr "Kulunud aeg"
 
 #: modules/gui/qt4/components/interface_widgets.cpp:564
 #: modules/gui/qt4/dialogs/toolbar.cpp:462
 msgid "Total/Remaining time"
-msgstr ""
+msgstr "Kokku/Järelejäänud aeg"
 
 #: modules/gui/qt4/components/interface_widgets.cpp:566
-#, fuzzy
 msgid "Click to toggle between total and remaining time"
-msgstr "Klõpsa, et lülitada kulunud ja järelejäänud aja vahel"
+msgstr "Klõpsa, et lülitada kokku ja järelejäänud aja vahel"
 
 #: modules/gui/qt4/components/interface_widgets.cpp:572
 msgid "Click to toggle between elapsed and remaining time"
@@ -18869,9 +18846,8 @@ msgid "Configure Hotkeys"
 msgstr "Kiirklahvide seadistamine"
 
 #: modules/gui/qt4/components/simple_preferences.cpp:947
-#, fuzzy
 msgid "File associations"
-msgstr "Faililaiendite seosed"
+msgstr "Failiseosed"
 
 #: modules/gui/qt4/components/simple_preferences.cpp:956
 #: modules/gui/qt4/dialogs_provider.hpp:42
@@ -19613,9 +19589,8 @@ msgid "Advanced Buttons"
 msgstr "Muud nupud"
 
 #: modules/gui/qt4/dialogs/toolbar.cpp:446
-#, fuzzy
 msgid "Playback Buttons"
-msgstr "Taasesitamise kiirus"
+msgstr "Taasesitamise nupud"
 
 #: modules/gui/qt4/dialogs/vlm.cpp:73
 msgid "Broadcast"
@@ -19932,7 +19907,7 @@ msgstr "Kontrolli uue&ndusi..."
 
 #: modules/gui/qt4/menus.cpp:807
 msgid "Sp&eed"
-msgstr ""
+msgstr "K&iirus"
 
 #: modules/gui/qt4/menus.cpp:813
 msgid "&Faster"
@@ -22048,14 +22023,14 @@ msgid "This selects which transport protocol to use for RTP."
 msgstr "See valib, millist transpordi protokolli kasutada RTP-ga."
 
 #: modules/stream_out/rtp.c:146
-#, fuzzy
 msgid ""
 "RTP packets will be integrity-protected and ciphered with this Secure RTP "
 "master shared secret key. This must be a 32-character-long hexadecimal "
 "string."
 msgstr ""
 "RDP paketid on terviklikkuse kontrolliga ja krüpteeritud selle turvalise RTP "
-"primaarse jagatud salajase võtmega."
+"primaarse jagatud salajase võtmega. Ta peab olema 32-märgiline "
+"kuueteistkümnendsüteemis olev string."
 
 #: modules/stream_out/rtp.c:163
 msgid "MP4A LATM"
@@ -27161,7 +27136,6 @@ msgid "Pause on the last frame of a video"
 msgstr "Pausi video viimasel kaadril"
 
 #: modules/gui/qt4/ui/sprefs_interface.h:532
-#, fuzzy
 msgid "File extensions association"
 msgstr "Faililaiendite seosed"
 
@@ -27287,9 +27261,8 @@ msgid "Display device"
 msgstr "Kuvaseade"
 
 #: modules/gui/qt4/ui/sprefs_video.h:345
-#, fuzzy
 msgid "KVA"
-msgstr "MKV"
+msgstr "KVA"
 
 #: modules/gui/qt4/ui/sprefs_video.h:349
 msgid "Deinterlacing"
@@ -27450,9 +27423,8 @@ msgid "Motion detect"
 msgstr "Liikumise tuvastamine"
 
 #: modules/gui/qt4/ui/video_effects.h:1386
-#, fuzzy
 msgid "Anti-Flickering"
-msgstr "antiflicker"
+msgstr ""
 
 #: modules/gui/qt4/ui/video_effects.h:1387
 msgid "Soften"
@@ -27518,9 +27490,8 @@ msgstr "Korduv"
 msgid "Media Manager List"
 msgstr "Meediahalduri loend"
 
-#, fuzzy
 #~ msgid "Live Update"
-#~ msgstr "Uuenda"
+#~ msgstr "Uuenda laivis"
 
 #~ msgid "Display on &Desktop"
 #~ msgstr "Kuva &töölaual"
@@ -27530,7 +27501,7 @@ msgstr "Meediahalduri loend"
 
 #, fuzzy
 #~ msgid "Elasped time"
-#~ msgstr "Viivituse kestvus"
+#~ msgstr "Kulunud aeg"
 
 #~ msgid "Video standard (Default, SECAM_D, PAL_B, NTSC_M, etc...)."
 #~ msgstr "Video standard (vaikimisi, SECAM_D, PAL_B, NTSC_M, jne...)."
@@ -27698,7 +27669,6 @@ msgstr "Meediahalduri loend"
 #~ msgid "Effect"
 #~ msgstr "Efekt"
 
-#, fuzzy
 #~ msgid ""
 #~ "<p><i>VideoLAN</i> prefers when applications request authorization before "
 #~ "accessing Internet.</p>\n"
@@ -29483,7 +29453,6 @@ msgstr "Meediahalduri loend"
 #~ msgid "Advanced video filter controls"
 #~ msgstr "Muud videofiltrite sätted"
 
-#, fuzzy
 #~ msgid ""
 #~ "This is the relative default size of the fonts that will be rendered on "
 #~ "the video. If absolute font size is set, relative size will be overriden."
