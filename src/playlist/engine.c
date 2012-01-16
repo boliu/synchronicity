@@ -439,6 +439,9 @@ static void VariablesInit( playlist_t *p_playlist )
     /* Synchronicity Variable */
     var_Create( p_playlist, "synchronicity", VLC_VAR_INTEGER );
     var_SetInteger( p_playlist, "synchronicity", 0 );
+
+    var_Create( p_playlist, "synchronicity-user", VLC_VAR_STRING );
+    var_SetString( p_playlist, "synchronicity-user", "Anonymous" );
 }
 
 playlist_item_t * playlist_CurrentPlayingItem( playlist_t * p_playlist )
