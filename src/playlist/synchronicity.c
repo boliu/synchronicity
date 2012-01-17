@@ -110,13 +110,6 @@ static void SynReceiveCallback(int rv, mtime_t delay, void* param, void* buffer,
           delay = delay + stdev;  // Snap by amount exceeding noise
         }
         break;
-      case SYNCOMMAND_MYNAMEIS:
-        {
-          char *username = syn.message;
-          //warning this pointer will be invalid as soon as this method exits
-          var_SetString( p_playlist, "synchronicity-user", username);
-        }
-        break;
       default:
         msg_Info(p_playlist, "SynReceiveCallback: Error");
         break;
@@ -127,14 +120,6 @@ static void SynReceiveCallback(int rv, mtime_t delay, void* param, void* buffer,
       input_Control(p_in, INPUT_SET_TIME, current + delay);
     }
     vlc_object_release(p_in);
-  } else { // move outside?
-    SynCommand syn = CommandFromString(buffer, len);
-    if (SYNCOMMAND_MYNAMEIS == syn.type)
-    {
-      char *username = syn.message;
-      //warning this pointer will be invalid as soon as this method exits
-      var_SetString( p_playlist, "synchronicity-user", username);
-    }
   }
   pl_priv(p_playlist)->b_syn_can_send = true;
 }
@@ -190,21 +175,12 @@ static void SynHeartbeatCallback(int rv, void* param) {
 }
 
 static void SynConnectCallback(int rv, void* param) {
-  playlist_t* p_playlist = (playlist_t*)param;
   if (rv < 0) {
     // Connection closed.
-    SynBreakConnection(p_playlist);
+    SynBreakConnection((playlist_t*)(param));
     return;
   }
-  char *username = var_GetString( (playlist_t*)(param), "synchronicity-user");
-
-  SynCommand syn;
-  syn.type = SYNCOMMAND_MYNAMEIS;
-  strncpy(&syn.message, username, sizeof(syn.message));
-
-  SendSynCommand(p_playlist, syn);
-
-  var_SetInteger( p_playlist, "synchronicity", CONNECT_SUCCESS);
+  var_SetInteger( (playlist_t*)(param), "synchronicity", CONNECT_SUCCESS );
   pl_priv(param)->b_syn_can_send = true;
 }
 
@@ -281,24 +257,11 @@ static void SynClientConnectedCallback(int rv, void* param) {
     rv = 0;
     rv |= SendSynCommand(p_playlist, sync_to_host);
 
-
     if (rv < 0) {
       // Connection closed.
       SynBreakConnection(p_playlist);
       return;
     }
-  }
-  char *username = var_GetString( (playlist_t*)(param), "synchronicity-user");
-
-  SynCommand syn;
-  syn.type = SYNCOMMAND_MYNAMEIS;
-  strncpy(&syn.message, username, sizeof(syn.message));
-
-  rv |= SendSynCommand(p_playlist, syn);
-  if (rv < 0) {
-    // Connection closed.
-    SynBreakConnection(p_playlist);
-    return;
   }
 }
 
