@@ -1261,14 +1261,11 @@ static const char *const ppsz_prefres[] = {
 #define ALBUM_ART_LONGTEXT N_( \
     "Choose how album art will be downloaded." )
 
-#define SYNCHRONICITY_SERVER_TEXT N_( "Relay server for viewing with friend" )
+#define SYNCHRONICITY_SERVER_TEXT N_( "Relay server for viewing with friend." )
 #define SYNCHRONICITY_SERVER_LONGTEXT N_( "Domain name of server." )
 
-#define SYNCHRONICITY_PORT_TEXT N_( "Relay server port for viewing with friend" )
+#define SYNCHRONICITY_PORT_TEXT N_( "Relay server port for viewing with friend." )
 #define SYNCHRONICITY_PORT_LONGTEXT N_( "Port number of server." )
-
-#define SYNCHRONICITY_USER_TEXT N_( "User handle for viewing with friend" )
-#define SYNCHRONICITY_USER_LONGTEXT N_( "Username meant for use with viewing with a friend." )
 
 static const int pi_albumart_values[] = { ALBUM_ART_WHEN_ASKED,
                                           ALBUM_ART_WHEN_PLAYED,
@@ -2196,9 +2193,6 @@ vlc_module_begin ()
 
     add_integer( "synchronicity-port", 56789, SYNCHRONICITY_PORT_TEXT,
                 SYNCHRONICITY_PORT_LONGTEXT, true);
-
-    add_string( "synchronicity-user", "Anonymous", SYNCHRONICITY_USER_TEXT,
-                SYNCHRONICITY_USER_LONGTEXT, true);
 
     set_subcategory( SUBCAT_PLAYLIST_SD )
     add_string( "services-discovery", "", SD_TEXT, SD_LONGTEXT, true )
