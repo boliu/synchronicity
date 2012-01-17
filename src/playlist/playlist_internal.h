@@ -104,6 +104,7 @@ typedef struct playlist_private_t
     bool     b_correcting;
     mtime_t  t_last_correction_time;
 
+    mtime_t  last_diff_diff;
 } playlist_private_t;
 
 #define pl_priv( pl ) ((playlist_private_t *)(pl))
