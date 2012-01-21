@@ -27,8 +27,9 @@ VLC-release.app: VLC-tmp.app
 
 # common target to a VLC bundle used by both the dev and the release build
 VLC-tmp.app: vlc
-	$(AM_V_GEN)(cd src && $(MAKE) $(AM_MAKEFLAGS) install $(silentstd))
-	(cd lib && $(MAKE) $(AM_MAKEFLAGS) install $(silentstd))
+	$(AM_V_GEN)for i in src lib share; do \
+		(cd $$i && $(MAKE) $(AM_MAKEFLAGS) install $(silentstd)); \
+	done
 	rm -Rf "$(top_builddir)/tmp" "$@"
 	mkdir -p "$(top_builddir)/tmp/extras/package/macosx"
 	cd $(srcdir)/extras/package/macosx; cp -R Resources README.MacOSX.rtf $(abs_top_builddir)/tmp/extras/package/macosx/
@@ -48,7 +49,9 @@ VLC-tmp.app: vlc
 	cp -R -L $(top_builddir)/tmp/build/Default/VLC.bundle $@
 	mkdir -p $@/Contents/Frameworks && cp -R -L $(CONTRIB_DIR)/Growl.framework $@/Contents/Frameworks/
 	mkdir -p $@/Contents/MacOS/share/locale/
-	cp -r $(srcdir)/share/lua $@/Contents/MacOS/share/
+	cp -r "$(prefix)/lib/vlc/lua" "$(prefix)/share/vlc/lua" $@/Contents/MacOS/share/
+	mkdir -p $@Contents/MacOS/include/
+	cp -r "$(srcdir)/include/vlc" $@/Contents/MacOS/include/
 	$(INSTALL) -m 644 $(srcdir)/share/vlc512x512.png $@/Contents/MacOS/share/vlc512x512.png
 	cat $(top_srcdir)/po/LINGUAS | while read i; do \
 	  $(INSTALL) -d $@/Contents/MacOS/share/locale/$${i}/LC_MESSAGES ; \
