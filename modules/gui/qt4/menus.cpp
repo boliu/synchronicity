@@ -574,17 +574,17 @@ void VLCMenuBar::ExtensionsMenu( intf_thread_t *p_intf, QMenu *extMenu )
 
 static inline void VolumeEntries( intf_thread_t *p_intf, QMenu *current )
 {
-        current->addSeparator();
+    current->addSeparator();
 
-        QAction *action = current->addAction( qtr( "Increase Volume" ),
+    QAction *action = current->addAction( qtr( "Increase Volume" ),
                 ActionsManager::getInstance( p_intf ), SLOT( AudioUp() ) );
-        action->setData( VLCMenuBar::ACTION_STATIC );
-        action = current->addAction( qtr( "Decrease Volume" ),
+    action->setData( VLCMenuBar::ACTION_STATIC );
+    action = current->addAction( qtr( "Decrease Volume" ),
                 ActionsManager::getInstance( p_intf ), SLOT( AudioDown() ) );
-        action->setData( VLCMenuBar::ACTION_STATIC );
-        action = current->addAction( qtr( "Mute" ),
+    action->setData( VLCMenuBar::ACTION_STATIC );
+    action = current->addAction( qtr( "Mute" ),
                 ActionsManager::getInstance( p_intf ), SLOT( toggleMuteAudio() ) );
-        action->setData( VLCMenuBar::ACTION_STATIC );
+    action->setData( VLCMenuBar::ACTION_STATIC );
 }
 
 /**
@@ -710,15 +710,16 @@ QMenu *VLCMenuBar::NavigMenu( intf_thread_t *p_intf, QMenu *menu )
     action->setData( "bookmark" );
 
     menu->addSeparator();
-    PopupMenuPlaylistControlEntries( menu, p_intf );
+
     PopupMenuControlEntries( menu, p_intf );
 
     EnableStaticEntries( menu, ( THEMIM->getInput() != NULL ) );
-    return RebuildNavigMenu( p_intf, menu );
+    return RebuildNavigMenu( p_intf, menu, true );
 }
 
-QMenu *VLCMenuBar::RebuildNavigMenu( intf_thread_t *p_intf, QMenu *menu )
+QMenu *VLCMenuBar::RebuildNavigMenu( intf_thread_t *p_intf, QMenu *menu, bool b_keep )
 {
+
     /* */
     input_thread_t *p_object;
     QVector<vlc_object_t *> objects;
@@ -729,14 +730,25 @@ QMenu *VLCMenuBar::RebuildNavigMenu( intf_thread_t *p_intf, QMenu *menu )
 
     InputAutoMenuBuilder( p_object, objects, varnames );
 
-    menu->addSeparator();
-
     /* Title and so on */
     PUSH_VAR( "prev-title" );
     PUSH_VAR( "next-title" );
     PUSH_VAR( "prev-chapter" );
     PUSH_VAR( "next-chapter" );
 
+    /* Remove playback actions to recreate them */
+    if( !b_keep )
+    {
+        QList< QAction* > actions = menu->actions();
+        if( actions.count() > 4 )
+            for( int i = actions.count() - 1 ; i >= actions.count() - 1 - 4 ; --i )
+                delete actions[i];
+    }
+
+    PopupPlayEntries( menu, p_intf, p_object );
+    PopupMenuPlaylistControlEntries( menu, p_intf );
+
+    /* */
     EnableStaticEntries( menu, (p_object != NULL ) );
     return Populate( p_intf, menu, varnames, objects );
 }
@@ -802,7 +814,7 @@ void VLCMenuBar::PopupMenuControlEntries( QMenu *menu, intf_thread_t *p_intf,
                                         bool b_normal )
 {
     QAction *action;
-    QMenu *rateMenu = new QMenu( qtr( "Sp&eed" ) );
+    QMenu *rateMenu = new QMenu( qtr( "Sp&eed" ), menu );
     rateMenu->setTearOffEnabled( true );
 
     if( b_normal )
@@ -868,9 +880,8 @@ void VLCMenuBar::PopupMenuPlaylistControlEntries( QMenu *menu,
 {
     bool bEnable = THEMIM->getInput() != NULL;
     bool bPlaylistEmpty = THEMIM->hasEmptyPlaylist();
-    QAction *action =
-            addMIMStaticEntry( p_intf, menu, qtr( "&Stop" ), ":/menu/stop",
-                               SLOT( stop() ), true );
+    QAction *action = addMIMStaticEntry( p_intf, menu, qtr( "&Stop" ),
+                                         ":/menu/stop", SLOT( stop() ), true );
     /* Disable Stop in the right-click popup menu */
     if( !bEnable )
         action->setEnabled( false );
@@ -981,7 +992,7 @@ void VLCMenuBar::PopupMenu( intf_thread_t *p_intf, bool show )
     POPUP_BOILERPLATE
 
     /* */
-    menu = new QMenu( );
+    menu = new QMenu();
     QAction *action;
     bool b_isFullscreen = false;
     MainInterface *mi = p_intf->p_sys->p_mi;

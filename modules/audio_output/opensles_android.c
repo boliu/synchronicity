@@ -133,23 +133,17 @@ static void Clear( aout_sys_t *p_sys )
 /*****************************************************************************
  * Open: open a dummy audio device
  *****************************************************************************/
-static int Open( vlc_object_t * p_this )
+static int Open( vlc_object_t *p_this )
 {
     audio_output_t     *p_aout = (audio_output_t *)p_this;
     SLresult            result;
 
     /* Allocate structure */
-    p_aout->sys = malloc( sizeof( aout_sys_t ) );
+    p_aout->sys = calloc( 1, sizeof( aout_sys_t ) );
     if( unlikely( p_aout->sys == NULL ) )
         return VLC_ENOMEM;
 
-    aout_sys_t * p_sys = p_aout->sys;
-
-    p_sys->playerObject     = NULL;
-    p_sys->engineObject     = NULL;
-    p_sys->outputMixObject  = NULL;
-    p_sys->i_toclean_buffer = 0;
-    p_sys->i_toappend_buffer= 0;
+    aout_sys_t *p_sys = p_aout->sys;
 
     //Acquiring LibOpenSLES symbols :
     p_sys->p_so_handle = dlopen( "libOpenSLES.so", RTLD_NOW );
@@ -273,10 +267,10 @@ error:
 /*****************************************************************************
  * Close: close our file
  *****************************************************************************/
-static void Close( vlc_object_t * p_this )
+static void Close( vlc_object_t *p_this )
 {
-    audio_output_t *p_aout = (audio_output_t *)p_this;
-    aout_sys_t      *p_sys = p_aout->sys;
+    audio_output_t *p_aout = (audio_output_t*)p_this;
+    aout_sys_t     *p_sys = p_aout->sys;
 
     msg_Dbg( p_aout, "Closing OpenSLES" );
 
@@ -290,39 +284,46 @@ static void Close( vlc_object_t * p_this )
 /*****************************************************************************
  * Play: play a sound
  *****************************************************************************/
-static void Play( audio_output_t * p_aout, block_t *p_buffer )
+static void Play( audio_output_t *p_aout, block_t *p_buffer )
 {
-    aout_sys_t * p_sys = p_aout->sys;
-    SLresult result;
+    aout_sys_t *p_sys = p_aout->sys;
+    int tries = 5;
 
     for (;;)
     {
-        result = (*p_sys->playerBufferQueue)->Enqueue(
+        SLresult result = (*p_sys->playerBufferQueue)->Enqueue(
                             p_sys->playerBufferQueue, p_buffer->p_buffer,
                             p_buffer->i_buffer );
-        if( result == SL_RESULT_SUCCESS )
-            break;
-        if ( result != SL_RESULT_BUFFER_INSUFFICIENT )
+
+        switch (result)
         {
-            msg_Warn( p_aout, "Dropping invalid buffer" );
+        case SL_RESULT_SUCCESS:
+            p_sys->p_buffer_array[p_sys->i_toappend_buffer] = p_buffer;
+            if( ++p_sys->i_toappend_buffer == BUFF_QUEUE )
+                p_sys->i_toappend_buffer = 0;
+            return;
+
+        case SL_RESULT_BUFFER_INSUFFICIENT:
+            msg_Err( p_aout, "buffer insufficient");
+
+            if (tries--)
+            {
+                // Wait a bit to retry.
+                msleep(CLOCK_FREQ);
+                continue;
+            }
+
+        default:
+            msg_Warn( p_aout, "Error %lu, dropping buffer", result );
             aout_BufferFree( p_buffer );
-            return ;
+            return;
         }
-
-        msg_Err( p_aout, "write error (%lu)", result );
-
-        // Wait a bit to retry. might miss calls to *cancel
-        // but this is supposed to be rare anyway
-        msleep(CLOCK_FREQ);
     }
-    p_sys->p_buffer_array[p_sys->i_toappend_buffer] = p_buffer;
-    if( ++p_sys->i_toappend_buffer == BUFF_QUEUE )
-        p_sys->i_toappend_buffer = 0;
 }
 
 static void PlayedCallback (SLAndroidSimpleBufferQueueItf caller, void *pContext )
 {
-    aout_sys_t *p_sys = (aout_sys_t*)pContext;
+    aout_sys_t *p_sys = pContext;
 
     assert (caller == p_sys->playerBufferQueue);
 

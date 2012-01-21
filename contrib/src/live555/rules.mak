@@ -1,7 +1,7 @@
 # live555
 
 #LIVEDOTCOM_URL := http://live555.com/liveMedia/public/live555-latest.tar.gz
-LIVE555_FILE := live.2011.11.08.tar.gz
+LIVE555_FILE := live.2011.12.23.tar.gz
 LIVEDOTCOM_URL := http://live555sourcecontrol.googlecode.com/files/$(LIVE555_FILE)
 
 PKGS += live555
@@ -15,21 +15,19 @@ live555: $(LIVE555_FILE) .sum-live555
 	rm -Rf live
 	$(UNPACK)
 	chmod -R u+w live
-	patch -p0 < $(SRC)/live555/live-uselocale.patch
-	patch -p0 < $(SRC)/live555/live-inet_ntop.patch
-	patch -p0 < $(SRC)/live555/live-intptr.patch
-ifndef HAVE_WIN32
-ifndef HAVE_WINCE
-	patch -p0 < $(SRC)/live555/live-getaddrinfo.patch
-endif
-endif
-	patch -p0 < $(SRC)/live555/live-cloexec.patch
 	mv live $@
+ifdef HAVE_ANDROID
+	patch -p0 < $(SRC)/live555/android.patch
+endif
 	touch $@
 
 LIVE_TARGET = $(error live555 target not defined!)
 ifdef HAVE_LINUX
+ifeq ($(ARCH),arm)
+LIVE_TARGET := armlinux
+else
 LIVE_TARGET := linux
+endif
 endif
 ifdef HAVE_WIN32
 LIVE_TARGET := mingw

@@ -614,7 +614,10 @@ static VLCMain *_o_sharedMainInstance = nil;
     [o_msgs_refresh_btn setImage: [NSImage imageNamed: NSImageNameRefreshTemplate]];
 
     /* yeah, we are done */
+    b_nativeFullscreenMode = NO;
+#ifdef MAC_OS_X_VERSION_10_7
     b_nativeFullscreenMode = config_GetInt( p_intf, "macosx-nativefullscreenmode" );
+#endif
     nib_main_loaded = TRUE;
 }
 
@@ -1860,7 +1863,17 @@ unsigned int CocoaKeyToVLC( unichar i_key )
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
 {
-    return [o_msg_arr objectAtIndex: rowIndex];
+    NSMutableAttributedString *result = NULL;
+
+    [o_msg_lock lock];
+    if( rowIndex < [o_msg_arr count] )
+        result = [o_msg_arr objectAtIndex: rowIndex];
+    [o_msg_lock unlock];
+
+    if( result != NULL )
+        return result;
+    else
+        return @"";
 }
 
 - (void)processReceivedlibvlcMessage:(const msg_item_t *) item ofType: (int)i_type withStr: (char *)str

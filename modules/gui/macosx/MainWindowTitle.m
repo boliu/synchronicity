@@ -158,7 +158,7 @@
 - (IBAction)buttonAction:(id)sender
 {
     if (sender == o_red_btn)
-        [[self window] orderOut: sender];
+        [[self window] performClose: sender];
     else if (sender == o_yellow_btn)
         [[self window] miniaturize: sender];
     else if (sender == o_green_btn)
@@ -276,7 +276,7 @@
 /*****************************************************************************
  * VLCColorView
  *
- * since we are using a clear window color when using the black window 
+ * since we are using a clear window color when using the black window
  * style, some filling is needed behind the video and some other elements
  *****************************************************************************/
 
