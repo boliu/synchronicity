@@ -4220,7 +4220,6 @@ AC_CONFIG_FILES([
   modules/access/Makefile
   modules/access/bd/Makefile
   modules/access/dshow/Makefile
-  modules/access/dvb/Makefile
   modules/access/mms/Makefile
   modules/access/rtp/Makefile
   modules/access/rtsp/Makefile
