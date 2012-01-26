@@ -292,7 +292,9 @@ static void SynFreeMemory(int rv, void* param) {
 
 static int SendSynCommand(playlist_t* p_playlist, SynCommand syn) {
   playlist_private_t *p_sys = pl_priv(p_playlist);
-  p_sys->t_wall_minus_video = mdate() - syn.data.i_time;
+  if(SYNCOMMAND_MYNAMEIS != syn.type) {
+    p_sys->t_wall_minus_video = mdate() - syn.data.i_time;
+  }
   if(!p_sys->b_syn_can_send) {
     return VLC_SUCCESS;
   }
