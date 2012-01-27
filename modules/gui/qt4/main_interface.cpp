@@ -978,6 +978,7 @@ void MainInterface::setSynchronicityBarVisibility( bool b_visible )
 {
     synchWidget->setVisible( b_visible );
     isSynchVisible = b_visible;
+    getSettings()->setValue( "synchronicity-bar-visible", isSynchVisible );
 }
 
 #if 0
