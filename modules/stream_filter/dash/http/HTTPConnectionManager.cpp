@@ -46,16 +46,10 @@ HTTPConnectionManager::~HTTPConnectionManager   ()
     this->closeAllConnections();
 }
 
-IHTTPConnection*    HTTPConnectionManager::getConnection            (std::string url)
+bool                HTTPConnectionManager::closeConnection( IHTTPConnection *con )
 {
-    HTTPConnection *con = new HTTPConnection(url, this->stream);
-    con->init();
-    this->connections.push_back(con);
-    return con;
-}
-bool                HTTPConnectionManager::closeConnection          (IHTTPConnection *con)
-{
-    for(std::vector<HTTPConnection *>::iterator it = this->connections.begin(); it != this->connections.end(); ++it)
+    for(std::vector<HTTPConnection *>::iterator it = this->connections.begin();
+        it != this->connections.end(); ++it)
     {
         if(*it == con)
         {
@@ -67,7 +61,8 @@ bool                HTTPConnectionManager::closeConnection          (IHTTPConnec
     }
     return false;
 }
-bool                HTTPConnectionManager::closeConnection          (Chunk *chunk)
+
+bool                HTTPConnectionManager::closeConnection( Chunk *chunk )
 {
     HTTPConnection *con = this->chunkMap[chunk];
     bool ret = this->closeConnection(con);
@@ -75,6 +70,7 @@ bool                HTTPConnectionManager::closeConnection          (Chunk *chun
     delete(chunk);
     return ret;
 }
+
 void                HTTPConnectionManager::closeAllConnections      ()
 {
     for(std::vector<HTTPConnection *>::iterator it = this->connections.begin(); it != this->connections.end(); ++it)
@@ -94,14 +90,26 @@ void                HTTPConnectionManager::closeAllConnections      ()
 
     this->chunkMap.clear();
 }
-int                 HTTPConnectionManager::read                     (Chunk *chunk, void *p_buffer, size_t len)
-{
-    if(this->chunkMap.find(chunk) != this->chunkMap.end())
-    {
-        mtime_t start = mdate();
-        int ret = this->chunkMap[chunk]->read(p_buffer, len);
-        mtime_t end = mdate();
 
+int                 HTTPConnectionManager::read( Chunk *chunk, void *p_buffer, size_t len )
+{
+    if(this->chunkMap.find(chunk) == this->chunkMap.end())
+    {
+        this->bytesReadChunk    = 0;
+        this->timeSecChunk      = 0;
+
+        if ( this->initConnection( chunk ) == NULL )
+            return -1;
+    }
+
+    mtime_t start = mdate();
+    int ret = this->chunkMap[chunk]->read(p_buffer, len);
+    mtime_t end = mdate();
+
+    if( ret <= 0 )
+        this->closeConnection( chunk );
+    else
+    {
         double time = ((double)(end - start)) / 1000000;
 
         this->bytesReadSession += ret;
@@ -123,33 +131,25 @@ int                 HTTPConnectionManager::read                     (Chunk *chun
             this->bpsLastChunk = 0;
 
         this->notify();
-
-        if(ret <= 0)
-            this->closeConnection(chunk);
-
-        return ret;
     }
-    else
-    {
-        this->bytesReadChunk    = 0;
-        this->timeSecChunk      = 0;
-
-        this->initConnection(chunk);
-        return this->read(chunk, p_buffer, len);
-    }
+    return ret;
 }
+
 int                 HTTPConnectionManager::peek                     (Chunk *chunk, const uint8_t **pp_peek, size_t i_peek)
 {
-    if(this->chunkMap.find(chunk) != this->chunkMap.end())
-        return this->chunkMap[chunk]->peek(pp_peek, i_peek);
-
-    this->initConnection(chunk);
-    return this->peek(chunk, pp_peek, i_peek);
+    if(this->chunkMap.find(chunk) == this->chunkMap.end())
+    {
+        if ( this->initConnection(chunk) == NULL )
+            return -1;
+    }
+    return this->chunkMap[chunk]->peek(pp_peek, i_peek);
 }
-HTTPConnection*     HTTPConnectionManager::initConnection           (Chunk *chunk)
+
+IHTTPConnection*     HTTPConnectionManager::initConnection(Chunk *chunk)
 {
     HTTPConnection *con = new HTTPConnection(chunk->getUrl(), this->stream);
-    con->init();
+    if ( con->init() == false )
+        return NULL;
     this->connections.push_back(con);
     this->chunkMap[chunk] = con;
     this->chunkCount++;
@@ -161,6 +161,8 @@ void                HTTPConnectionManager::attach                   (IDownloadRa
 }
 void                HTTPConnectionManager::notify                   ()
 {
+    if ( this->bpsAvg <= 0 )
+        return ;
     for(size_t i = 0; i < this->rateObservers.size(); i++)
         this->rateObservers.at(i)->downloadRateChanged(this->bpsAvg, this->bpsLastChunk);
 }

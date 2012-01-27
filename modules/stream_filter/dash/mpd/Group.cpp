@@ -24,147 +24,66 @@
 
 #include "Group.h"
 
-using namespace dash::mpd;
-using namespace dash::exception;
+#include <vlc_common.h>
+#include <vlc_arrays.h>
 
-Group::Group    (std::map<std::string, std::string>  attributes)
+#include "SegmentInfoDefault.h"
+
+using namespace dash::mpd;
+
+Group::Group() :
+    subsegmentAlignmentFlag( false ),
+    segmentInfoDefault( NULL )
 {
-    this->attributes        = attributes;
-    this->contentProtection = NULL;
-    this->accessibility     = NULL;
-    this->viewpoint         = NULL;
-    this->rating            = NULL;
 }
+
 Group::~Group   ()
 {
-    for(size_t i = 1; i < this->representations.size(); i++)
-        delete(this->representations.at(i));
-
-    delete(this->contentProtection);
-    delete(this->rating);
-    delete(this->viewpoint);
-    delete(this->accessibility);
+    delete this->segmentInfoDefault;
+    vlc_delete_all( this->representations );
 }
 
-std::string                     Group::getWidth                 () throw(AttributeNotPresentException)
+bool                Group::getSubsegmentAlignmentFlag() const
 {
-    if(this->attributes.find("width") == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return this->attributes["width"];
+    return this->subsegmentAlignmentFlag;
 }
-std::string                     Group::getNumberOfChannels      () throw(AttributeNotPresentException)
+
+void Group::setSubsegmentAlignmentFlag(bool alignment)
 {
-    if(this->attributes.find("numberOfChannels") == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return this->attributes["numberOfChannels"];
+    this->subsegmentAlignmentFlag = alignment;
 }
-std::string                     Group::getLang                  () throw(AttributeNotPresentException)
-{
-    if(this->attributes.find("lang") == this->attributes.end())
-        throw AttributeNotPresentException();
 
-    return this->attributes["lang"];
-}
-std::string                     Group::getParY                  () throw(AttributeNotPresentException)
-{
-    if(this->attributes.find("pary") == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return this->attributes["pary"];
-}
-std::string                     Group::getParX                  () throw(AttributeNotPresentException)
-{
-    if(this->attributes.find("parx") == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return this->attributes["parx"];
-}
-std::string                     Group::getSamplingRate          () throw(AttributeNotPresentException)
-{
-    if(this->attributes.find("samplingRate") == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return this->attributes["samplingRate"];
-}
-std::string                     Group::getMimeType              () throw(AttributeNotPresentException)
-{
-    if(this->attributes.find("mimeType") == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return this->attributes["mimeType"];
-}
-std::string                     Group::getSubSegmentAlignment   () throw(AttributeNotPresentException)
-{
-    if(this->attributes.find("subsegmentAlignmentFlag") == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return this->attributes["subsegmentAlignmentFlag"];
-}
-std::string                     Group::getFrameRate             () throw(AttributeNotPresentException)
-{
-    if(this->attributes.find("frameRate") == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return this->attributes["frameRate"];
-}
-std::string                     Group::getHeight                () throw(AttributeNotPresentException)
-{
-    if(this->attributes.find("height") == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return this->attributes["height"];
-}
-Viewpoint*                      Group::getViewpoint             () throw(ElementNotPresentException)
-{
-    if(this->viewpoint == NULL)
-        throw ElementNotPresentException();
-
-    return this->viewpoint;
-}
-Rating*                         Group::getRating                () throw(ElementNotPresentException)
-{
-    if(this->rating == NULL)
-        throw ElementNotPresentException();
-
-    return this->rating;
-}
-Accessibility*                  Group::getAccessibility         () throw(ElementNotPresentException)
-{
-    if(this->accessibility == NULL)
-        throw ElementNotPresentException();
-
-    return this->accessibility;
-}
-ContentProtection*              Group::getContentProtection     () throw(ElementNotPresentException)
-{
-    if(this->contentProtection == NULL)
-        throw ElementNotPresentException();
-
-    return this->contentProtection;
-}
 std::vector<Representation*>    Group::getRepresentations       ()
 {
     return this->representations;
 }
+
+const Representation *Group::getRepresentationById(const std::string &id) const
+{
+    std::vector<Representation*>::const_iterator    it = this->representations.begin();
+    std::vector<Representation*>::const_iterator    end = this->representations.end();
+
+    while ( it != end )
+    {
+        if ( (*it)->getId() == id )
+            return *it;
+        ++it;
+    }
+    return NULL;
+}
+
+const SegmentInfoDefault *Group::getSegmentInfoDefault() const
+{
+    return this->segmentInfoDefault;
+}
+
+void Group::setSegmentInfoDefault(const SegmentInfoDefault *seg)
+{
+    if ( seg != NULL )
+        this->segmentInfoDefault = seg;
+}
+
 void                            Group::addRepresentation        (Representation *rep)
 {
     this->representations.push_back(rep);
-}
-void                            Group::setRating                (Rating *rating)
-{
-    this->rating = rating;
-}
-void                            Group::setContentProtection     (ContentProtection *protection)
-{
-    this->contentProtection = protection;
-}
-void                            Group::setAccessibility         (Accessibility *accessibility)
-{
-    this->accessibility = accessibility;
-}
-void                            Group::setViewpoint             (Viewpoint *viewpoint)
-{
-    this->viewpoint = viewpoint;
 }

@@ -28,9 +28,16 @@
 #include "MPD.h"
 
 using namespace dash::mpd;
-using namespace dash::exception;
 
-MPD::MPD    (const AttributesMap& attributes) : attributes( attributes ),
+MPD::MPD () :
+    profile( dash::mpd::UnknownProfile ),
+    live( false ),
+    availabilityStartTime( -1 ),
+    availabilityEndTime( -1 ),
+    duration( -1 ),
+    minUpdatePeriod( -1 ),
+    minBufferTime( -1 ),
+    timeShiftBufferDepth( -1 ),
     programInfo( NULL )
 {
 }
@@ -56,39 +63,56 @@ const std::vector<BaseUrl*>&   MPD::getBaseUrls            () const
     return this->baseUrls;
 }
 
-const std::string&             MPD::getMinBufferTime       () const throw(AttributeNotPresentException)
-{
-    AttributesMap::const_iterator     it = this->attributes.find("minBufferTime");
-    if( it == this->attributes.end())
-        throw AttributeNotPresentException();
 
-    return it->second;
+time_t      MPD::getDuration() const
+{
+    return this->duration;
 }
 
-const std::string&             MPD::getType                () const throw(AttributeNotPresentException)
+void MPD::setDuration(time_t duration)
 {
-    AttributesMap::const_iterator     it = this->attributes.find( "type" );
-    if( it == this->attributes.end() )
-        throw AttributeNotPresentException();
-
-    return it->second;
+    if ( duration >= 0 )
+        this->duration = duration;
 }
-const std::string&             MPD::getDuration            () const throw(AttributeNotPresentException)
+
+time_t MPD::getMinUpdatePeriod() const
 {
-    AttributesMap::const_iterator     it = this->attributes.find("mediaPresentationDuration");
-
-    if( it == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return it->second;
+    return this->minUpdatePeriod;
 }
-ProgramInformation*     MPD::getProgramInformation  () throw(ElementNotPresentException)
-{
-    if(this->programInfo == NULL)
-        throw ElementNotPresentException();
 
+void MPD::setMinUpdatePeriod(time_t period)
+{
+    if ( period >= 0 )
+        this->minUpdatePeriod = period;
+}
+
+time_t MPD::getMinBufferTime() const
+{
+    return this->minBufferTime;
+}
+
+void MPD::setMinBufferTime(time_t time)
+{
+    if ( time >= 0 )
+        this->minBufferTime = time;
+}
+
+time_t MPD::getTimeShiftBufferDepth() const
+{
+    return this->timeShiftBufferDepth;
+}
+
+void MPD::setTimeShiftBufferDepth(time_t depth)
+{
+    if ( depth >= 0 )
+        this->timeShiftBufferDepth = depth;
+}
+
+const ProgramInformation*     MPD::getProgramInformation  () const
+{
     return this->programInfo;
 }
+
 void                    MPD::addBaseUrl             (BaseUrl *url)
 {
     this->baseUrls.push_back(url);
@@ -100,4 +124,56 @@ void                    MPD::addPeriod              (Period *period)
 void                    MPD::setProgramInformation  (ProgramInformation *progInfo)
 {
     this->programInfo = progInfo;
+}
+
+bool                    MPD::isLive() const
+{
+    return this->live;
+}
+
+void                    MPD::setLive( bool live )
+{
+    this->live = live;
+}
+
+time_t MPD::getAvailabilityStartTime() const
+{
+    return this->availabilityStartTime;
+}
+
+void MPD::setAvailabilityStartTime(time_t time)
+{
+    if ( time >=0 )
+        this->availabilityStartTime = time;
+}
+
+time_t MPD::getAvailabilityEndTime() const
+{
+    return this->availabilityEndTime;
+}
+
+void MPD::setAvailabilityEndTime(time_t time)
+{
+    if ( time >= 0 )
+        this->availabilityEndTime = time;
+}
+
+Profile MPD::getProfile() const
+{
+    return this->profile;
+}
+
+void MPD::setProfile(Profile profile)
+{
+    this->profile = profile;
+}
+
+void MPD::setProfile( const std::string &strProfile )
+{
+    if( strProfile == "urn:mpeg:mpegB:profile:dash:isoff-basic-on-demand:cm" )
+        this->profile = dash::mpd::BasicCM;
+    else if ( strProfile == "urn:mpeg:mpegB:profile:dash:full:2011" )
+        this->profile = dash::mpd::Full2011;
+    else
+        this->profile = dash::mpd::UnknownProfile;
 }

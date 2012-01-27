@@ -44,7 +44,8 @@ typedef struct
 #endif
 
 #if !defined (HAVE_REWIND) || \
-    !defined (HAVE_GETDELIM)
+    !defined (HAVE_GETDELIM) || \
+    defined (__APPLE__)
 # include <stdio.h> /* FILE */
 #endif
 
@@ -58,7 +59,7 @@ typedef struct
 # include <stdarg.h> /* va_list */
 #endif
 
-#if !defined (HAVE_GETDELIM) || \
+#if !defined (HAVE_GETDELIM) || defined (__APPLE__) || \
     !defined (HAVE_GETPID)   || \
     !defined (HAVE_SWAB)
 # include <sys/types.h> /* ssize_t, pid_t */
@@ -88,7 +89,11 @@ int putc_unlocked (int, FILE *);
 int putchar_unlocked (int);
 #endif
 
-#ifndef HAVE_GETDELIM
+/* we always need our implementation on Darwin, since native support for getline
+ * was added lately to Darwin 11 (OS X Lion) only.
+ * However, we want binaries created on this OS to be executable on previous
+ * releases. */
+#if !defined HAVE_GETDELIM
 ssize_t getdelim (char **, size_t *, int, FILE *);
 ssize_t getline (char **, size_t *, FILE *);
 #endif
@@ -328,18 +333,6 @@ double erand48 (unsigned short subi[3]);
 long jrand48 (unsigned short subi[3]);
 long nrand48 (unsigned short subi[3]);
 #endif
-
-#ifdef __ANDROID__
-# undef __linux__
-# ifndef __cplusplus
-#  define __cplusplus 0
-# endif
-# include <pthread.h>
-# if __cplusplus == 0
-#  undef __cplusplus
-# endif
-char *tempnam(const char *, const char *);
-#endif // ANDROID
 
 #ifdef __OS2__
 # undef HAVE_FORK   /* Implementation of fork() is imperfect on OS/2 */

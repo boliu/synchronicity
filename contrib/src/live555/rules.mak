@@ -11,23 +11,9 @@ $(TARBALLS)/$(LIVE555_FILE):
 
 .sum-live555: $(LIVE555_FILE)
 
-live555: $(LIVE555_FILE) .sum-live555
-	rm -Rf live
-	$(UNPACK)
-	chmod -R u+w live
-	mv live $@
-ifdef HAVE_ANDROID
-	patch -p0 < $(SRC)/live555/android.patch
-endif
-	touch $@
-
 LIVE_TARGET = $(error live555 target not defined!)
 ifdef HAVE_LINUX
-ifeq ($(ARCH),arm)
-LIVE_TARGET := armlinux
-else
 LIVE_TARGET := linux
-endif
 endif
 ifdef HAVE_WIN32
 LIVE_TARGET := mingw
@@ -39,19 +25,28 @@ ifdef HAVE_MACOSX
 LIVE_TARGET := macosx
 endif
 
-.live555: live555
+live555: $(LIVE555_FILE) .sum-live555
+	rm -Rf live
+	$(UNPACK)
+	chmod -R u+w live
 ifdef HAVE_WINCE
-	cd $< && sed -e 's/-lws2_32/-lws2/g' -i.orig config.mingw
+	cd live && sed -e 's/-lws2_32/-lws2/g' -i.orig config.mingw
 endif
-ifdef HAVE_MACOSX
-	cd $< && sed -i.orig -e s/"libtool -s -o"/"ar cr"/g config.macosx*
-endif
-	cd $< && sed \
+	cd live && sed -e 's%cc%$(CC)%' -e 's%c++%$(CXX)%' -e 's%LIBRARY_LINK =.*ar%LIBRARY_LINK = $(AR)%' -i.orig config.$(LIVE_TARGET)
+	cd live && sed -i.orig -e s/"libtool -s -o"/"ar cr"/g config.macosx*
+	cd live && sed \
 		-e 's%-DBSD=1%-DBSD=1\ $(EXTRA_CFLAGS)\ $(EXTRA_LDFLAGS)%' \
-		-e 's%cc%$(CC)%' \
-		-e 's%c++%$(CXX)\ $(EXTRA_LDFLAGS)%' \
+		-e 's%$(CXX)%$(CXX)\ $(EXTRA_LDFLAGS)%' \
 		-i.orig config.macosx
-	cd $< && sed -e 's%-D_FILE_OFFSET_BITS=64%-D_FILE_OFFSET_BITS=64\ -fPIC\ -DPIC%' -i.orig config.linux
+	cd live && sed -e 's%-D_FILE_OFFSET_BITS=64%-D_FILE_OFFSET_BITS=64\ -fPIC\ -DPIC%' -i.orig config.linux
+ifdef HAVE_ANDROID
+	cd live && sed -e 's%-DPIC%-DPIC -DNO_SSTREAM=1 -DLOCALE_NOT_USED -I$(ANDROID_NDK)/platforms/android-9/arch-arm/usr/include%' -i.orig config.linux
+	patch -p0 < $(SRC)/live555/android.patch
+endif
+	mv live $@
+	touch $@
+
+.live555: live555
 	cd $< && ./genMakefiles $(LIVE_TARGET)
 	cd $< && $(MAKE) $(HOSTVARS)
 	mkdir -p -- "$(PREFIX)/lib" "$(PREFIX)/include"

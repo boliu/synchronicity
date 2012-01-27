@@ -161,6 +161,9 @@ case "${host_os}" in
     VLC_ADD_CFLAGS([motion],[-fconstant-cfstrings])
     VLC_ADD_LIBS([libvlccore],[-Wl,-framework,CoreFoundation])
 
+    dnl Allow binaries created on Lion to run on earlier releases
+    AC_LIBOBJ([getdelim])
+
     dnl
     dnl  Check for Mac OS X SDK settings
     dnl
@@ -501,7 +504,7 @@ need_libc=false
 
 dnl Check for usual libc functions
 AC_CHECK_DECLS([nanosleep],,,[#include <time.h>])
-AC_CHECK_FUNCS([daemon fcntl fstatvfs fork getenv getpwuid_r if_nameindex if_nametoindex isatty lstat memalign mmap openat pread posix_fadvise posix_madvise setlocale stricmp strnicmp uselocale])
+AC_CHECK_FUNCS([daemon fcntl fstatvfs fork getenv getpwuid_r if_nameindex if_nametoindex isatty lstat memalign mmap openat pread posix_fadvise posix_madvise setlocale stricmp strnicmp strptime uselocale])
 AC_REPLACE_FUNCS([asprintf atof atoll dirfd fdopendir flockfile fsync getdelim getpid gmtime_r inet_pton lldiv localtime_r nrand48 rewind setenv strcasecmp strcasestr strdup strlcpy strncasecmp strndup strnlen strsep strtof strtok_r strtoll swab tdestroy vasprintf])
 AC_CHECK_FUNCS(fdatasync,,
   [AC_DEFINE(fdatasync, fsync, [Alias fdatasync() to fsync() if missing.])
@@ -1869,21 +1872,21 @@ fi
 dnl
 dnl  Video4Linux 2
 dnl
-AC_ARG_ENABLE(libv4l2, [AS_HELP_STRING([--disable-libv4l2],
-  [disable userspace V4L2 library (default auto)])])
+AC_ARG_ENABLE(v4l2, [AS_HELP_STRING([--disable-v4l2],
+  [disable Video4Linux version 2 (default auto)])])
 AC_ARG_ENABLE(pvr, [AS_HELP_STRING([--enable-pvr],
   [support PVR V4L2 cards (default disabled)])])
 have_v4l2="no"
-AC_CHECK_HEADERS([linux/videodev2.h sys/videoio.h], [
-  have_v4l2="yes"
+AS_IF([test "$enable_v4l2" != "no"], [
+  AC_CHECK_HEADERS([linux/videodev2.h sys/videoio.h], [
+    have_v4l2="yes"
+  ])
 ])
 AS_IF([test "$have_v4l2" = "yes"], [
-  AS_IF([test "${enable_libv4l2}" != "no"], [
-    PKG_CHECK_MODULES(LIBV4L2, libv4l2, [
-      AC_DEFINE(HAVE_LIBV4L2, 1, [Define to 1 if libv4l2 is available])
-    ], [
-      AC_MSG_WARN([${LIBV4L2_PKG_ERRORS}.])
-    ])
+  PKG_CHECK_MODULES(LIBV4L2, libv4l2, [
+    AC_DEFINE(HAVE_LIBV4L2, 1, [Define to 1 if libv4l2 is available])
+  ], [
+    AC_MSG_WARN([${LIBV4L2_PKG_ERRORS}.])
   ])
   AS_IF([test "${enable_pvr}" = "yes"], [
     VLC_ADD_PLUGIN([pvr])

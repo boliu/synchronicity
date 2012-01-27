@@ -32,9 +32,7 @@
 #include "mpd/IMPDManager.h"
 #include "mpd/Period.h"
 #include "mpd/Representation.h"
-#include "mpd/InitSegment.h"
 #include "mpd/Segment.h"
-#include "exceptions/AttributeNotPresentException.h"
 #include "exceptions/EOFException.h"
 
 namespace dash
@@ -47,14 +45,13 @@ namespace dash
                 AbstractAdaptationLogic             (dash::mpd::IMPDManager *mpdManager);
                 virtual ~AbstractAdaptationLogic    ();
 
-                virtual dash::http::Chunk*  getNextChunk            () throw(dash::exception::EOFException) = 0;
                 virtual void                downloadRateChanged     (long bpsAvg, long bpsLastChunk);
 
                 long                        getBpsAvg               ();
                 long                        getBpsLastChunk         ();
 
             private:
-                long                    bpsAvg;
+                int                     bpsAvg;
                 long                    bpsLastChunk;
                 dash::mpd::IMPDManager  *mpdManager;
         };

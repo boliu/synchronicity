@@ -33,7 +33,7 @@
 /* On dll_open, just check that the OMX_Init symbol already is loaded */
 # define dll_open(name) dlsym(RTLD_DEFAULT, "OMX_Init")
 # define dll_close(handle) do { } while (0)
-# define dlsym(handle, name) dlsym(RTLD_DEFAULT, name)
+# define dlsym(handle, name) dlsym(RTLD_DEFAULT, "I" name)
 #else
 # define dll_open(name) dlopen( name, RTLD_NOW )
 # define dll_close(handle) dlclose(handle)
@@ -109,7 +109,14 @@ vlc_module_begin ()
     set_category( CAT_INPUT )
     set_subcategory( SUBCAT_INPUT_VCODEC )
     set_section( N_("Decoding") , NULL )
+#if defined(USE_IOMX)
+    /* For IOMX, don't enable it automatically via priorities,
+     * enable it only via the --codec iomx command line parameter when
+     * wanted. */
+    set_capability( "decoder", 0 )
+#else
     set_capability( "decoder", 80 )
+#endif
     set_callbacks( OpenDecoder, CloseGeneric )
 
     add_submodule ()
@@ -913,6 +920,9 @@ loaded:
 #ifdef __ANDROID__
         /* ignore OpenCore software codecs */
         if (!strncmp(p_sys->ppsz_components[i], "OMX.PV.", 7))
+            continue;
+        /* The same sw codecs, renamed in ICS (perhaps also in honeycomb) */
+        if (!strncmp(p_sys->ppsz_components[i], "OMX.google.", 11))
             continue;
 #endif
         omx_error = InitialiseComponent(p_dec, p_sys->ppsz_components[i],

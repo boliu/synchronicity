@@ -35,7 +35,8 @@
 #include "mpd/BaseUrl.h"
 #include "mpd/SegmentInfo.h"
 #include "mpd/Segment.h"
-#include "mpd/InitSegment.h"
+
+struct stream_t;
 
 namespace dash
 {
@@ -44,24 +45,44 @@ namespace dash
         class BasicCMParser : public IMPDParser
         {
             public:
-                BasicCMParser           (dash::xml::Node *root);
-                virtual ~BasicCMParser  ();
+                BasicCMParser( dash::xml::Node *root, stream_t *p_stream );
+                virtual ~BasicCMParser();
 
                 bool    parse  ();
                 MPD*    getMPD ();
 
             private:
+                void    handleDependencyId( Representation* rep, const Group* group, const std::string& dependencyId );
+
+            private:
+                bool    setMPD              ();
+                void    setPeriods          (dash::xml::Node *root);
+                void    parseSegmentTimeline( xml::Node* node, SegmentInfoCommon *segmentInfo );
+                void    parseSegmentInfoCommon( xml::Node* node, SegmentInfoCommon *segmentInfo );
+                void    parseSegmentInfoDefault( xml::Node* node, Group* group );
+                void    setGroups           (dash::xml::Node *root, Period *period);
+                void    parseTrickMode( dash::xml::Node *node, Representation *repr );
+                void    setRepresentations  (dash::xml::Node *root, Group *group);
+                bool    setSegmentInfo      (dash::xml::Node *root, Representation *rep);
+                void    setInitSegment      (dash::xml::Node *root, SegmentInfoCommon *info);
+                bool    setSegments         (dash::xml::Node *root, SegmentInfo *info );
+                bool    resolveUrlTemplates( std::string &url, bool &containRuntimeToken );
+                void    setMPDBaseUrl       (dash::xml::Node *root);
+                void    parseContentDescriptor( xml::Node *node, const std::string &name,
+                                                void (CommonAttributesElements::*addPtr)(ContentDescription*),
+                                                CommonAttributesElements *self ) const;
+                bool    parseCommonAttributesElements( dash::xml::Node *node,
+                                                       CommonAttributesElements *common,
+                                                       CommonAttributesElements *parent ) const;
+                Segment*    parseSegment( xml::Node* node );
+                ProgramInformation*     parseProgramInformation();
+
+            private:
                 dash::xml::Node *root;
                 MPD             *mpd;
-
-                void    setMPD              ();
-                void    setPeriods          (dash::xml::Node *root);
-                void    setGroups           (dash::xml::Node *root, Period *period);
-                void    setRepresentations  (dash::xml::Node *root, Group *group);
-                void    setSegmentInfo      (dash::xml::Node *root, Representation *rep);
-                void    setInitSegment      (dash::xml::Node *root, SegmentInfo *info);
-                void    setSegments         (dash::xml::Node *root, SegmentInfo *info);
-                void    setMPDBaseUrl       (dash::xml::Node *root);
+                std::string     url;
+                stream_t        *p_stream;
+                Representation  *currentRepresentation;
         };
     }
 }

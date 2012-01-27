@@ -34,16 +34,21 @@ using namespace dash::logic;
 using namespace dash::mpd;
 using namespace dash::exception;
 
-DASHManager::DASHManager    (HTTPConnectionManager *conManager, Node *node, IAdaptationLogic::LogicType type, Profile profile)
+DASHManager::DASHManager    ( HTTPConnectionManager *conManager, MPD *mpd,
+                              IAdaptationLogic::LogicType type ) :
+    conManager( conManager ),
+    currentChunk( NULL ),
+    adaptationLogic( NULL ),
+    logicType( type ),
+    mpdManager( NULL ),
+    mpd( mpd )
 {
-    this->conManager        = conManager;
-    this->node              = node;
-    this->logicType         = type;
-    this->profile           = profile;
-    this->mpdManager        = mpd::MPDManagerFactory::create(this->profile, this->node);
+    this->mpdManager        = mpd::MPDManagerFactory::create( mpd );
+    if ( this->mpdManager == NULL )
+        return ;
     this->adaptationLogic   = AdaptationLogicFactory::create( this->logicType, this->mpdManager );
-    this->currentChunk      = NULL;
-
+    if ( this->adaptationLogic == NULL )
+        return ;
     this->conManager->attach(this->adaptationLogic);
 }
 DASHManager::~DASHManager   ()
@@ -52,9 +57,9 @@ DASHManager::~DASHManager   ()
     delete this->mpdManager;
 }
 
-int DASHManager::read   (void *p_buffer, size_t len)
+int     DASHManager::read( void *p_buffer, size_t len )
 {
-    if(this->currentChunk == NULL)
+    if ( this->currentChunk == NULL )
     {
         try
         {
@@ -67,19 +72,19 @@ int DASHManager::read   (void *p_buffer, size_t len)
         }
     }
 
-    int ret = this->conManager->read(this->currentChunk, p_buffer, len);
-
-    if(ret <= 0)
+    int ret = this->conManager->read( this->currentChunk, p_buffer, len );
+    if ( ret == 0 )
     {
         this->currentChunk = NULL;
-        return this->read(p_buffer, len);
+        return this->read(p_buffer, len );
     }
 
     return ret;
 }
-int DASHManager::peek   (const uint8_t **pp_peek, size_t i_peek)
+
+int     DASHManager::peek( const uint8_t **pp_peek, size_t i_peek )
 {
-    if(this->currentChunk == NULL)
+    if ( this->currentChunk == NULL )
     {
         try
         {
@@ -91,6 +96,16 @@ int DASHManager::peek   (const uint8_t **pp_peek, size_t i_peek)
         }
     }
 
-    int ret = this->conManager->peek(this->currentChunk, pp_peek, i_peek);
+    int ret = this->conManager->peek( this->currentChunk, pp_peek, i_peek );
     return ret;
+}
+
+const mpd::IMPDManager*         DASHManager::getMpdManager() const
+{
+    return this->mpdManager;
+}
+
+const logic::IAdaptationLogic*  DASHManager::getAdaptionLogic() const
+{
+    return this->adaptationLogic;
 }

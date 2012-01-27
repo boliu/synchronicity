@@ -112,8 +112,6 @@ static VLCMainWindow *_o_sharedInstance = nil;
         [o_color_backdrop release];
 
     [[NSNotificationCenter defaultCenter] removeObserver: self];
-    config_PutInt( VLCIntf->p_libvlc, "volume", i_lastShownVolume );
-    [self saveFrameUsingName: [self frameAutosaveName]];
     [o_sidebaritems release];
     [super dealloc];
 }
@@ -413,27 +411,23 @@ static VLCMainWindow *_o_sharedInstance = nil;
         [self setOpaque: NO];
         [self setHasShadow:YES];
 
-        NSRect winrect;
+        NSRect winrect = [self frame];
         CGFloat f_titleBarHeight = [o_titlebar_view frame].size.height;
-        winrect = [self frame];
 
         [o_titlebar_view setFrame: NSMakeRect( 0, winrect.size.height - f_titleBarHeight,
                                               winrect.size.width, f_titleBarHeight )];
         [[self contentView] addSubview: o_titlebar_view];
 
-        winrect.size.height = winrect.size.height + f_titleBarHeight;
-        [self setFrame: winrect display:NO animate:NO];
+        [self setFrame: winrect display:YES animate:YES];
+        previousSavedFrame = winrect;
         winrect = [o_split_view frame];
         winrect.size.height = winrect.size.height - f_titleBarHeight;
         [o_split_view setFrame: winrect];
         [o_video_view setFrame: winrect];
-        previousSavedFrame = winrect;
 
         o_color_backdrop = [[VLCColorView alloc] initWithFrame: [o_split_view frame]];
         [[self contentView] addSubview: o_color_backdrop positioned: NSWindowBelow relativeTo: o_split_view];
         [o_color_backdrop setAutoresizingMask:NSViewHeightSizable | NSViewWidthSizable];
-
-        [self display];
     }
     else
     {
@@ -459,6 +453,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(someWindowWillClose:) name: NSWindowWillCloseNotification object: nil];
     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(someWindowWillMiniaturize:) name: NSWindowWillMiniaturizeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(applicationWillTerminate:) name: NSApplicationWillTerminateNotification object: nil];
 }
 
 #pragma mark -
@@ -559,11 +554,13 @@ static VLCMainWindow *_o_sharedInstance = nil;
         if ([o_video_view isHidden] && [o_playlist_btn isEnabled]) {
             [o_split_view setHidden: YES];
             [o_video_view setHidden: NO];
+            [self makeFirstResponder: o_video_view];
         }
         else
         {
             [o_video_view setHidden: YES];
             [o_split_view setHidden: NO];
+            [self makeFirstResponder: nil];
         }
     }
     else
@@ -765,7 +762,8 @@ static VLCMainWindow *_o_sharedInstance = nil;
     if (b_dark_interface)
     {
         [self miniaturize: sender];
-        [[VLCCoreInteraction sharedInstance] pause];
+        if ([[VLCMain sharedInstance] activeVideoPlayback])
+            [[VLCCoreInteraction sharedInstance] pause];
     }
     else
         [super performMiniaturize: sender];
@@ -888,7 +886,29 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
 - (void)windowResizedOrMoved:(NSNotification *)notification
 {
+    previousSavedFrame = [self frame];
     [self saveFrameUsingName: [self frameAutosaveName]];
+}
+
+- (void)applicationWillTerminate:(NSNotification *)notification
+{
+    config_PutInt( VLCIntf->p_libvlc, "volume", i_lastShownVolume );
+    [self saveFrameUsingName: [self frameAutosaveName]];
+}
+
+- (void)someWindowWillClose:(NSNotification *)notification
+{
+    if([notification object] == o_nonembedded_window || [notification object] == self)
+        [[VLCCoreInteraction sharedInstance] stop];
+}
+
+- (void)someWindowWillMiniaturize:(NSNotification *)notification
+{
+    if([notification object] == o_nonembedded_window || [notification object] == self)
+    {
+        if([[VLCMain sharedInstance] activeVideoPlayback])
+            [[VLCCoreInteraction sharedInstance] pause];
+    }
 }
 
 #pragma mark -
@@ -1193,6 +1213,11 @@ static VLCMainWindow *_o_sharedInstance = nil;
     }
     if (b_videoPlayback)
         [self makeFirstResponder: o_video_view];
+    else
+        [self makeFirstResponder: nil];
+
+    if (!b_videoPlayback && b_fullscreen && !b_nativeFullscreenMode)
+        [[VLCCoreInteraction sharedInstance] toggleFullscreen];
 }
 
 - (void)resizeWindow
@@ -1257,18 +1282,6 @@ static VLCMainWindow *_o_sharedInstance = nil;
 - (void)hideMouseCursor:(NSTimer *)timer
 {
     [NSCursor setHiddenUntilMouseMoves: YES];
-}
-
-- (void)someWindowWillClose:(NSNotification *)notification
-{
-    if([notification object] == o_nonembedded_window || [notification object] == self)
-        [[VLCCoreInteraction sharedInstance] stop];
-}
-
-- (void)someWindowWillMiniaturize:(NSNotification *)notification
-{
-    if([notification object] == o_nonembedded_window || [notification object] == self)
-        [[VLCCoreInteraction sharedInstance] pause];
 }
 
 #pragma mark -
@@ -1533,7 +1546,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
         if (OSX_LEOPARD)
             SetSystemUIMode( kUIModeNormal, kUIOptionAutoShowMenuBar);
         else
-            [NSApp setPresentationOptions:(NSApplicationPresentationDefault)];
+            [NSApp setPresentationOptions: NSApplicationPresentationDefault];
 
         /* Will release the lock */
         [self hasEndedFullscreen];
@@ -1753,6 +1766,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
     [o_video_view setFrame: [[self contentView] frame]];
     b_fullscreen = YES;
     [o_fspanel setVoutWasUpdated: (int)[[self screen] displayID]];
+    [o_fspanel setActive: nil];
 
     [self recreateHideMouseTimer];
 

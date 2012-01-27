@@ -31,15 +31,16 @@ using namespace dash::logic;
 using namespace dash::xml;
 using namespace dash::mpd;
 
-IAdaptationLogic* AdaptationLogicFactory::create (IAdaptationLogic::LogicType logic, IMPDManager *mpdManager)
+IAdaptationLogic* AdaptationLogicFactory::create ( IAdaptationLogic::LogicType logic,
+                                                  IMPDManager *mpdManager )
 {
     switch(logic)
     {
-        case IAdaptationLogic::Default:         return new NullAdaptationLogic          (mpdManager);
         case IAdaptationLogic::AlwaysBest:      return new AlwaysBestAdaptationLogic    (mpdManager);
-        case IAdaptationLogic::AlwaysLowest:    return new NullAdaptationLogic          (mpdManager);
         case IAdaptationLogic::RateBased:       return new RateBasedAdaptationLogic     (mpdManager);
-
-        default:                                return new NullAdaptationLogic          (mpdManager);
+        case IAdaptationLogic::Default:
+        case IAdaptationLogic::AlwaysLowest:
+        default:
+            return NULL;
     }
 }

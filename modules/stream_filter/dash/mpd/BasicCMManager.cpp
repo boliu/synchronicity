@@ -27,8 +27,9 @@
 
 #include "BasicCMManager.h"
 
+#include <cassert>
+
 using namespace dash::mpd;
-using namespace dash::exception;
 
 BasicCMManager::BasicCMManager  (MPD *mpd)
 {
@@ -39,26 +40,16 @@ BasicCMManager::~BasicCMManager ()
     delete this->mpd;
 }
 
-std::vector<ISegment*>  BasicCMManager::getSegments             (Representation *rep)
+std::vector<Segment*>   BasicCMManager::getSegments( Representation *rep )
 {
-    std::vector<ISegment *> retSegments;
-    try
-    {
-        SegmentInfo* info = rep->getSegmentInfo();
-        InitSegment* init = info->getInitSegment();
+    std::vector<Segment *>          retSegments;
+    SegmentInfo*                    info = rep->getSegmentInfo();
+    Segment*                        initSegment = info->getInitialisationSegment();
 
-        retSegments.push_back(init);
-
-        std::vector<Segment *> segments = info->getSegments();
-
-        for(size_t i = 0; i < segments.size(); i++)
-            retSegments.push_back(segments.at(i));
-    }
-    catch(ElementNotPresentException &e)
-    {
-        /*TODO Debug */
-    }
-
+    if ( initSegment )
+        retSegments.push_back( initSegment );
+    retSegments.insert( retSegments.end(), info->getSegments().begin(),
+                                            info->getSegments().end() );
     return retSegments;
 }
 const std::vector<Period*>&    BasicCMManager::getPeriods              () const
@@ -70,7 +61,7 @@ Representation*         BasicCMManager::getBestRepresentation   (Period *period)
 {
     std::vector<Group *> groups = period->getGroups();
 
-    long            bitrate  = 0;
+    int             bitrate  = 0;
     Representation  *best    = NULL;
 
     for(size_t i = 0; i < groups.size(); i++)
@@ -78,22 +69,16 @@ Representation*         BasicCMManager::getBestRepresentation   (Period *period)
         std::vector<Representation *> reps = groups.at(i)->getRepresentations();
         for(size_t j = 0; j < reps.size(); j++)
         {
-            try
+            int currentBitrate = reps.at(j)->getBandwidth();
+            assert( currentBitrate != -1 );
+
+            if( currentBitrate > bitrate)
             {
-                long currentBitrate = reps.at(j)->getBandwidth();
-                if(currentBitrate > bitrate)
-                {
-                    bitrate = currentBitrate;
-                    best    = reps.at(j);
-                }
-            }
-            catch(AttributeNotPresentException &e)
-            {
-                /* TODO DEBUG */
+                bitrate = currentBitrate;
+                best    = reps.at(j);
             }
         }
     }
-
     return best;
 }
 Period*                 BasicCMManager::getFirstPeriod          ()
@@ -105,45 +90,31 @@ Period*                 BasicCMManager::getFirstPeriod          ()
 
     return periods.at(0);
 }
-Representation*         BasicCMManager::getRepresentation       (Period *period, long bitrate)
-{
-    std::vector<Group *> groups = period->getGroups();
 
-    Representation  *best       = NULL;
-    long            bestDif  = -1;
+Representation*         BasicCMManager::getRepresentation(Period *period, int bitrate )
+{
+    std::vector<Group *>    groups = period->getGroups();
+
+    Representation  *best = NULL;
+    std::cout << "Sarching for best representation with bitrate: " << bitrate << std::endl;
 
     for(size_t i = 0; i < groups.size(); i++)
     {
         std::vector<Representation *> reps = groups.at(i)->getRepresentations();
-        for(size_t j = 0; j < reps.size(); j++)
+        for( size_t j = 0; j < reps.size(); j++ )
         {
-            try
-            {
-                long currentBitrate = reps.at(j)->getBandwidth();
-                long dif = bitrate - currentBitrate;
+            int     currentBitrate = reps.at(j)->getBandwidth();
+            assert( currentBitrate != -1 );
 
-                if(bestDif == -1)
-                {
-                    bestDif = dif;
-                    best = reps.at(j);
-                }
-                else
-                {
-                    if(dif >= 0 && dif < bestDif)
-                    {
-                        bestDif = dif;
-                        best = reps.at(j);
-                    }
-                }
-
-            }
-            catch(AttributeNotPresentException &e)
+            if ( best == NULL || bitrate == -1 ||
+                 ( currentBitrate > best->getBandwidth() &&
+                   currentBitrate < bitrate ) )
             {
-                /* TODO DEBUG */
+                std::cout << "Found a better Representation (#" << j << ") in group #" << i << std::endl;
+                best = reps.at( j );
             }
         }
     }
-
     return best;
 }
 Period*                 BasicCMManager::getNextPeriod           (Period *period)
@@ -157,4 +128,9 @@ Period*                 BasicCMManager::getNextPeriod           (Period *period)
     }
 
     return NULL;
+}
+
+const MPD*      BasicCMManager::getMPD() const
+{
+    return this->mpd;
 }

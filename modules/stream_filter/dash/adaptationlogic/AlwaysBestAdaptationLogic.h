@@ -33,7 +33,6 @@
 #include "mpd/Segment.h"
 #include "exceptions/EOFException.h"
 #include "mpd/BasicCMManager.h"
-#include "mpd/ISegment.h"
 #include <vector>
 
 namespace dash
@@ -46,10 +45,10 @@ namespace dash
                 AlwaysBestAdaptationLogic           (dash::mpd::IMPDManager *mpdManager);
                 virtual ~AlwaysBestAdaptationLogic  ();
 
-                dash::http::Chunk* getNextChunk () throw(dash::exception::EOFException);
+                dash::http::Chunk* getNextChunk() throw(dash::exception::EOFException);
 
             private:
-                std::vector<dash::mpd::ISegment *>  schedule;
+                std::vector<mpd::Segment *>         schedule;
                 dash::mpd::IMPDManager              *mpdManager;
                 size_t                              count;
 

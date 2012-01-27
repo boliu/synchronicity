@@ -76,6 +76,7 @@ matroska_segment_c::matroska_segment_c( demux_sys_t & demuxer, EbmlStream & estr
     ,sys(demuxer)
     ,ep(NULL)
     ,b_preloaded(false)
+    ,b_ref_external_segments(false)
 {
     p_indexes = (mkv_index_t*)malloc( sizeof( mkv_index_t ) * i_index_max );
 }
@@ -733,6 +734,8 @@ void matroska_segment_c::Seek( mtime_t i_date, mtime_t i_time_offset, int64_t i_
         delete ep;
         ep = new EbmlParser( &es, segment, &sys.demuxer );
         cluster = NULL;
+        sys.i_start_pts = 0;
+        sys.i_pts = 0;
         return;       
     }
 

@@ -25,26 +25,28 @@
 #ifndef SEGMENT_H_
 #define SEGMENT_H_
 
-#include <map>
 #include <string>
-
-#include "exceptions/AttributeNotPresentException.h"
-#include "mpd/ISegment.h"
 
 namespace dash
 {
     namespace mpd
     {
-        class Segment : public ISegment
+        class Segment
         {
             public:
-                Segment             (std::map<std::string, std::string>  attributes);
-                virtual ~Segment    ();
+                virtual ~Segment(){}
+                virtual std::string getSourceUrl() const;
+                virtual void        setSourceUrl( const std::string &url );
+                /**
+                 *  @return true if the segment should be dropped after being read.
+                 *          That is basically true when using an Url, and false
+                 *          when using an UrlTemplate
+                 */
+                virtual bool        isSingleShot() const;
+                virtual void        done();
 
-                std::string getSourceUrl() throw(dash::exception::AttributeNotPresentException);
-
-            private:
-                std::map<std::string, std::string>  attributes;
+            protected:
+                std::string         sourceUrl;
         };
     }
 }

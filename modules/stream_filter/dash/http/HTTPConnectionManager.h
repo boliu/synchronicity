@@ -50,7 +50,6 @@ namespace dash
 
                 void                closeAllConnections ();
                 bool                closeConnection     (IHTTPConnection *con);
-                IHTTPConnection*    getConnection       (std::string url);
                 int                 read                (Chunk *chunk, void *p_buffer, size_t len);
                 int                 peek                (Chunk *chunk, const uint8_t **pp_peek, size_t i_peek);
                 void                attach              (dash::logic::IDownloadRateObserver *observer);
@@ -70,8 +69,8 @@ namespace dash
                 stream_t                                            *stream;
                 int                                                 chunkCount;
 
-                bool            closeConnection (Chunk *chunk);
-                HTTPConnection* initConnection  (Chunk *chunk);
+                bool                closeConnection( Chunk *chunk );
+                IHTTPConnection*    initConnection( Chunk *chunk );
 
         };
     }

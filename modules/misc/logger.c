@@ -38,12 +38,8 @@
 #include <stdarg.h>
 #include <assert.h>
 
-#define MODE_TEXT 0
-#define MODE_HTML 1
-#define MODE_SYSLOG 2
-
-#ifdef __APPLE__
-#define LOG_DIR "Library/Logs/"
+#ifdef __ANDROID__
+# include <android/log.h>
 #endif
 
 #define LOG_FILE_TEXT "vlc-log.txt"
@@ -95,6 +91,9 @@ static void HtmlPrint(void *, int, const msg_item_t *, const char *, va_list);
 static void SyslogPrint(void *, int, const msg_item_t *, const char *,
                         va_list);
 #endif
+#ifdef __ANDROID__
+static void AndroidPrint(void *, int, const msg_item_t *, const char *, va_list);
+#endif
 
 /*****************************************************************************
  * Module descriptor
@@ -103,10 +102,16 @@ static const char *const mode_list[] = { "text", "html"
 #ifdef HAVE_SYSLOG_H
 ,"syslog"
 #endif
+#ifdef __ANDROID__
+,"android"
+#endif
 };
 static const char *const mode_list_text[] = { N_("Text"), "HTML"
 #ifdef HAVE_SYSLOG_H
 , "syslog"
+#endif
+#ifdef __ANDROID__
+,"android"
 #endif
 };
 
@@ -117,8 +122,9 @@ static const char *const mode_list_text[] = { N_("Text"), "HTML"
 #else
 
 #define LOGMODE_LONGTEXT N_("Specify the log format. Available choices are " \
-  "\"text\" (default), \"html\", and \"syslog\" (special mode to send to " \
-  "syslog instead of file.")
+  "\"text\" (default), \"html\", \"syslog\" (special mode to send to " \
+  "syslog instead of file), and \"android\" (special mode to send to " \
+  "android logging facility).")
 
 #define SYSLOG_FACILITY_TEXT N_("Syslog facility")
 #define SYSLOG_FACILITY_LONGTEXT N_("Select the syslog facility where logs " \
@@ -195,6 +201,7 @@ static int Open( vlc_object_t *p_this )
     if( p_sys == NULL )
         return VLC_ENOMEM;
 
+    p_sys->p_file = NULL;
     msg_callback_t cb = TextPrint;
     const char *filename = LOG_FILE_TEXT, *header = TEXT_HEADER;
     p_sys->footer = TEXT_FOOTER;
@@ -211,6 +218,10 @@ static int Open( vlc_object_t *p_this )
 #ifdef HAVE_SYSLOG_H
         else if( !strcmp( mode, "syslog" ) )
             cb = SyslogPrint;
+#endif
+#ifdef __ANDROID__
+        else if( !strcmp( mode, "android" ) )
+            cb = AndroidPrint;
 #endif
         else if( strcmp( mode, "text" ) )
             msg_Warn( p_intf, "invalid log mode `%s', using `text'", mode );
@@ -254,11 +265,19 @@ static int Open( vlc_object_t *p_this )
     }
     else
 #endif
+#ifdef __ANDROID__
+    if( cb == AndroidPrint )
+    {
+        /* nothing to do */
+    }
+    else
+#endif
     {
         char *psz_file = var_InheritString( p_intf, "logfile" );
         if( !psz_file )
         {
 #ifdef __APPLE__
+# define LOG_DIR "Library/Logs/"
             char *home = config_GetUserDir(VLC_DOCUMENTS_DIR);
             if( home == NULL
              || asprintf( &psz_file, "%s/"LOG_DIR"/%s", home,
@@ -308,6 +327,7 @@ static void Close( vlc_object_t *p_this )
         closelog();
     else
 #endif
+    if( p_sys->p_file )
     {
         fputs( p_sys->footer, p_sys->p_file );
         fclose( p_sys->p_file );
@@ -337,6 +357,29 @@ static const char ppsz_type[4][9] = {
     " warning",
     " debug",
 };
+
+#ifdef __ANDROID__
+static const android_LogPriority prioritytype[4] = {
+    ANDROID_LOG_INFO,
+    ANDROID_LOG_ERROR,
+    ANDROID_LOG_WARN,
+    ANDROID_LOG_DEBUG
+};
+
+static void AndroidPrint( void *opaque, int type, const msg_item_t *item,
+                       const char *fmt, va_list ap )
+{
+    (void)item;
+    intf_thread_t *p_intf = opaque;
+
+    if( IgnoreMessage( p_intf, type ) )
+        return;
+
+    int canc = vlc_savecancel();
+    __android_log_vprint(prioritytype[type], "vlc", fmt, ap);
+    vlc_restorecancel( canc );
+}
+#endif
 
 static void TextPrint( void *opaque, int type, const msg_item_t *item,
                        const char *fmt, va_list ap )

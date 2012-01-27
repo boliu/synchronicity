@@ -30,152 +30,93 @@
 #include "Representation.h"
 
 using namespace dash::mpd;
-using namespace dash::exception;
 
-Representation::Representation  (const std::map<std::string, std::string>&  attributes) :
-    attributes( attributes ),
+Representation::Representation() :
+    qualityRanking( -1 ),
     segmentInfo( NULL ),
     trickModeType( NULL ),
-    contentProtection( NULL )
+    parentGroup( NULL )
 {
 }
 
 Representation::~Representation ()
 {
     delete(this->segmentInfo);
-    delete(this->contentProtection);
     delete(this->trickModeType);
 }
 
-std::string         Representation::getFrameRate            () const throw(AttributeNotPresentException)
+const std::string&  Representation::getId                   () const
 {
-    std::map<std::string, std::string>::const_iterator  it = this->attributes.find("frameRate");
-    if ( it == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return it->second;
-
+    return this->id;
 }
-std::string         Representation::getSamplingRate         () const throw(AttributeNotPresentException)
+
+void    Representation::setId(const std::string &id)
 {
-    std::map<std::string, std::string>::const_iterator  it = this->attributes.find("samplingRate");
-    if ( it == this->attributes.end() )
-        throw AttributeNotPresentException();
-
-    return it->second;
-
+    if ( id.empty() == false )
+        this->id = id;
 }
-std::string         Representation::getDependencyId         () const throw(AttributeNotPresentException)
-{
-    std::map<std::string, std::string>::const_iterator  it = this->attributes.find("dependencyId");
-    if ( it == this->attributes.end() )
-        throw AttributeNotPresentException();
 
-    return it->second;
-
-}
-std::string         Representation::getId                   () const throw(AttributeNotPresentException)
-{
-    std::map<std::string, std::string>::const_iterator  it = this->attributes.find("id");
-    if ( it == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return it->second;
-
-}
-std::string         Representation::getLang                 () const throw(AttributeNotPresentException)
-{
-    std::map<std::string, std::string>::const_iterator  it = this->attributes.find("lang");
-    if ( it == this->attributes.end() )
-        throw AttributeNotPresentException();
-
-    return it->second;
-
-}
-std::string         Representation::getParX                 () const throw(AttributeNotPresentException)
-{
-    std::map<std::string, std::string>::const_iterator  it = this->attributes.find("parx");
-    if ( it == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return it->second;
-
-}
-std::string         Representation::getParY                 () const throw(AttributeNotPresentException)
-{
-    std::map<std::string, std::string>::const_iterator  it = this->attributes.find("pary");
-    if ( it == this->attributes.end() )
-        throw AttributeNotPresentException();
-
-    return it->second;
-
-}
-std::string         Representation::getHeight               () const throw(AttributeNotPresentException)
-{
-    std::map<std::string, std::string>::const_iterator  it = this->attributes.find("height");
-    if ( it == this->attributes.end() )
-        throw AttributeNotPresentException();
-
-    return it->second;
-
-}
-std::string         Representation::getWidth                () const throw(AttributeNotPresentException)
-{
-    std::map<std::string, std::string>::const_iterator  it = this->attributes.find("width");
-    if ( it == this->attributes.end())
-        throw AttributeNotPresentException();
-
-    return it->second;
-
-}
 int     Representation::getBandwidth            () const
 {
-    std::map<std::string, std::string>::const_iterator  it = this->attributes.find("bandwidth");
-    if ( it == this->attributes.end())
-        return -1;
-
-    return atoi( it->second.c_str() ) / 8;
-
+    return this->bandwidth;
 }
-std::string         Representation::getNumberOfChannels     () const throw(AttributeNotPresentException)
+
+void    Representation::setBandwidth( int bandwidth )
 {
-    std::map<std::string, std::string>::const_iterator  it = this->attributes.find("numberOfChannels");
-    if( it == this->attributes.end() )
-        throw AttributeNotPresentException();
-
-    return it->second;
-
+    if ( bandwidth >= 0 )
+        this->bandwidth = bandwidth;
 }
-SegmentInfo*        Representation::getSegmentInfo          () const throw(ElementNotPresentException)
-{
-    if(this->segmentInfo == NULL)
-        throw ElementNotPresentException();
 
+SegmentInfo*        Representation::getSegmentInfo() const
+{
     return this->segmentInfo;
 }
-TrickModeType*      Representation::getTrickModeType        () const throw(ElementNotPresentException)
-{
-    if(this->segmentInfo == NULL)
-        throw ElementNotPresentException();
 
+TrickModeType*      Representation::getTrickModeType        () const
+{
     return this->trickModeType;
 }
-ContentProtection*  Representation::getContentProtection    () const throw(ElementNotPresentException)
-{
-    if(this->contentProtection == NULL)
-        throw ElementNotPresentException();
 
-    return this->contentProtection;
-}
-void                Representation::setTrickModeType        (TrickModeType *trickModeType)
+void                Representation::setTrickMode        (TrickModeType *trickModeType)
 {
     this->trickModeType = trickModeType;
 }
-void                Representation::setContentProtection    (ContentProtection *protection)
+
+const Group *Representation::getParentGroup() const
 {
-    this->contentProtection = protection;
+    return this->parentGroup;
 }
+
+void Representation::setParentGroup(const Group *group)
+{
+    if ( group != NULL )
+        this->parentGroup = group;
+}
+
 void                Representation::setSegmentInfo          (SegmentInfo *info)
 {
     this->segmentInfo = info;
+}
+
+
+int Representation::getQualityRanking() const
+{
+    return this->qualityRanking;
+}
+
+void Representation::setQualityRanking( int qualityRanking )
+{
+    if ( qualityRanking > 0 )
+        this->qualityRanking = qualityRanking;
+}
+
+const std::list<const Representation*>&     Representation::getDependencies() const
+{
+    return this->dependencies;
+}
+
+void Representation::addDependency(const Representation *dep)
+{
+    if ( dep != NULL )
+        this->dependencies.push_back( dep );
 }

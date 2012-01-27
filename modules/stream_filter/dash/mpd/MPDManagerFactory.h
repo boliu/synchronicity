@@ -26,10 +26,7 @@
 #define MPDMANAGERFACTORY_H_
 
 #include "mpd/IMPDManager.h"
-#include "mpd/NullManager.h"
 #include "mpd/BasicCMManager.h"
-#include "mpd/BasicCMParser.h"
-#include "xml/Node.h"
 
 namespace dash
 {
@@ -38,10 +35,7 @@ namespace dash
         class MPDManagerFactory
         {
             public:
-                static IMPDManager* create(Profile profile, dash::xml::Node *root);
-
-            private:
-                static IMPDManager* createBasicCMManager(dash::xml::Node *root);
+                static IMPDManager* create( MPD *mpd );
         };
     }
 }

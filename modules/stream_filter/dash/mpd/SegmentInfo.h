@@ -30,27 +30,23 @@
 #include <map>
 
 #include "mpd/Segment.h"
-#include "mpd/InitSegment.h"
-#include "exceptions/ElementNotPresentException.h"
+#include "mpd/SegmentInfoCommon.h"
 
 namespace dash
 {
     namespace mpd
     {
-        class SegmentInfo
+        class SegmentInfo : public SegmentInfoCommon
         {
             public:
-                SegmentInfo             ( const std::map<std::string, std::string>& attr);
+                SegmentInfo             ();
                 virtual ~SegmentInfo    ();
 
-                InitSegment*            getInitSegment  () throw(dash::exception::ElementNotPresentException);
-                const std::vector<Segment *>&   getSegments () const;
-                void                    setInitSegment  (InitSegment *initSeg);
-                void                    addSegment      (Segment *seg);
+                const std::vector<Segment *>&   getSegments() const;
+                void                    addSegment(Segment *seg);
 
             private:
-                std::map<std::string, std::string>  attributes;
-                InitSegment                         *initSeg;
+                Segment                             *initSeg;
                 std::vector<Segment *>              segments;
         };
     }

@@ -7,11 +7,8 @@ SOURCES_stream_filter_dash = \
     adaptationlogic/AlwaysBestAdaptationLogic.h \
     adaptationlogic/IAdaptationLogic.h \
     adaptationlogic/IDownloadRateObserver.h \
-    adaptationlogic/NullAdaptationLogic.h \
     adaptationlogic/RateBasedAdaptationLogic.h \
     adaptationlogic/RateBasedAdaptationLogic.cpp \
-    exceptions/AttributeNotPresentException.h \
-    exceptions/ElementNotPresentException.h \
     exceptions/EOFException.h \
     http/Chunk.cpp \
     http/Chunk.h \
@@ -20,44 +17,43 @@ SOURCES_stream_filter_dash = \
     http/HTTPConnectionManager.cpp \
     http/HTTPConnectionManager.h \
     http/IHTTPConnection.h \
-    mpd/Accessibility.h \
     mpd/BaseUrl.h \
     mpd/BasicCMManager.cpp \
     mpd/BasicCMManager.h \
     mpd/BasicCMParser.cpp \
     mpd/BasicCMParser.h \
+    mpd/CommonAttributesElements.cpp \
+    mpd/CommonAttributesElements.h \
     mpd/ContentDescription.cpp \
     mpd/ContentDescription.h \
-    mpd/ContentProtection.h \
     mpd/Group.cpp \
     mpd/Group.h \
     mpd/IMPDManager.h \
     mpd/IMPDParser.h \
-    mpd/InitSegment.cpp \
-    mpd/InitSegment.h \
-    mpd/ISegment.h \
     mpd/MPD.cpp \
     mpd/MPD.h \
     mpd/MPDManagerFactory.cpp \
     mpd/MPDManagerFactory.h \
-    mpd/NullManager.cpp \
-    mpd/NullManager.h \
     mpd/Period.cpp \
     mpd/Period.h \
     mpd/ProgramInformation.cpp \
     mpd/ProgramInformation.h \
-    mpd/Rating.h \
     mpd/Representation.cpp \
     mpd/Representation.h \
-    mpd/SchemeInformation.cpp \
-    mpd/SchemeInformation.h \
     mpd/Segment.cpp \
     mpd/Segment.h \
     mpd/SegmentInfo.cpp \
     mpd/SegmentInfo.h \
+    mpd/SegmentInfoCommon.cpp \
+    mpd/SegmentInfoCommon.h \
+    mpd/SegmentInfoDefault.cpp \
+    mpd/SegmentInfoDefault.h \
+    mpd/SegmentTemplate.cpp \
+    mpd/SegmentTemplate.h \
+    mpd/SegmentTimeline.cpp \
+    mpd/SegmentTimeline.h \
     mpd/TrickModeType.cpp \
     mpd/TrickModeType.h \
-    mpd/Viewpoint.h \
     xml/DOMHelper.cpp \
     xml/DOMHelper.h \
     xml/DOMParser.cpp \

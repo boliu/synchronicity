@@ -30,52 +30,33 @@
 #include <map>
 
 #include "mpd/Representation.h"
-#include "mpd/ContentProtection.h"
-#include "mpd/Accessibility.h"
-#include "mpd/Viewpoint.h"
-#include "mpd/Rating.h"
-#include "exceptions/AttributeNotPresentException.h"
-#include "exceptions/ElementNotPresentException.h"
+#include "mpd/CommonAttributesElements.h"
 
 namespace dash
 {
     namespace mpd
     {
-        class Group
+        class SegmentInfoDefault;
+
+        class Group : public CommonAttributesElements
         {
             public:
-                Group           (std::map<std::string, std::string>  attributes);
-                virtual ~Group  ();
+                Group();
+                virtual ~Group();
 
-                std::string                     getWidth                () throw(dash::exception::AttributeNotPresentException);
-                std::string                     getHeight               () throw(dash::exception::AttributeNotPresentException);
-                std::string                     getParX                 () throw(dash::exception::AttributeNotPresentException);
-                std::string                     getParY                 () throw(dash::exception::AttributeNotPresentException);
-                std::string                     getLang                 () throw(dash::exception::AttributeNotPresentException);
-                std::string                     getMimeType             () throw(dash::exception::AttributeNotPresentException);
-                std::string                     getFrameRate            () throw(dash::exception::AttributeNotPresentException);
-                std::string                     getNumberOfChannels     () throw(dash::exception::AttributeNotPresentException);
-                std::string                     getSamplingRate         () throw(dash::exception::AttributeNotPresentException);
-                std::string                     getSubSegmentAlignment  () throw(dash::exception::AttributeNotPresentException);
+                bool                            getSubsegmentAlignmentFlag() const;
+                void                            setSubsegmentAlignmentFlag( bool alignment );
                 std::vector<Representation *>   getRepresentations      ();
-                Viewpoint*                      getViewpoint            () throw(dash::exception::ElementNotPresentException);
-                ContentProtection*              getContentProtection    () throw(dash::exception::ElementNotPresentException);
-                Accessibility*                  getAccessibility        () throw(dash::exception::ElementNotPresentException);
-                Rating*                         getRating               () throw(dash::exception::ElementNotPresentException);
+                const Representation*           getRepresentationById   ( const std::string &id ) const;
+                const SegmentInfoDefault*       getSegmentInfoDefault() const;
+                void                            setSegmentInfoDefault( const SegmentInfoDefault* seg );
 
-                void addRepresentation      (Representation *rep);
-                void setViewpoint           (Viewpoint *viewpoint);
-                void setContentProtection   (ContentProtection *protection);
-                void setAccessibility       (Accessibility *accessibility);
-                void setRating              (Rating *rating);
+                void addRepresentation( Representation *rep );
 
             private:
-                std::map<std::string, std::string>  attributes;
+                bool                                subsegmentAlignmentFlag;
                 std::vector<Representation *>       representations;
-                ContentProtection                   *contentProtection;
-                Accessibility                       *accessibility;
-                Viewpoint                           *viewpoint;
-                Rating                              *rating;
+                const SegmentInfoDefault*           segmentInfoDefault;
         };
     }
 }

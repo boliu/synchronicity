@@ -28,8 +28,6 @@
 #include "DOMParser.h"
 
 using namespace dash::xml;
-using namespace dash::http;
-using namespace dash::mpd;
 
 DOMParser::DOMParser    (stream_t *stream) :
     root( NULL ),
@@ -65,6 +63,8 @@ bool    DOMParser::parse                    ()
         return false;
 
     this->root = this->processNode();
+    if ( this->root == NULL )
+        return false;
 
     return true;
 }
@@ -72,24 +72,29 @@ Node*   DOMParser::processNode              ()
 {
     const char *data;
     int type = xml_ReaderNextNode(this->vlc_reader, &data);
-    if(type != -1 && type != XML_READER_TEXT && type != XML_READER_NONE && type != XML_READER_ENDELEM)
+    if(type != -1 && type != XML_READER_NONE && type != XML_READER_ENDELEM)
     {
         Node *node = new Node();
+        node->setType( type );
 
-        std::string name    = data;
-        bool        isEmpty = xml_ReaderIsEmptyElement(this->vlc_reader);
-        node->setName(name);
+        if ( type != XML_READER_TEXT )
+        {
+            std::string name    = data;
+            bool        isEmpty = xml_ReaderIsEmptyElement(this->vlc_reader);
+            node->setName(name);
 
-        this->addAttributesToNode(node);
+            this->addAttributesToNode(node);
 
-        if(isEmpty)
-            return node;
+            if(isEmpty)
+                return node;
 
-        Node *subnode = NULL;
+            Node *subnode = NULL;
 
-        while((subnode = this->processNode()) != NULL)
-            node->addSubNode(subnode);
-
+            while((subnode = this->processNode()) != NULL)
+                node->addSubNode(subnode);
+        }
+        else
+            node->setText( data );
         return node;
     }
     return NULL;
@@ -132,15 +137,7 @@ void    DOMParser::print                    ()
 {
     this->print(this->root, 0);
 }
-Profile DOMParser::getProfile               (dash::xml::Node *node)
-{
-    std::string profile = node->getAttributeValue("profiles");
 
-    if(!profile.compare("urn:mpeg:mpegB:profile:dash:isoff-basic-on-demand:cm"))
-        return dash::mpd::BasicCM;
-
-    return dash::mpd::NotValid;
-}
 bool    DOMParser::isDash                   (stream_t *stream)
 {
     const char* psz_namespace = "urn:mpeg:mpegB:schema:DASH:MPD:DIS2011";

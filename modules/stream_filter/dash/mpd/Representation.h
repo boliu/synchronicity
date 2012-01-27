@@ -26,55 +26,58 @@
 #define REPRESENTATION_H_
 
 #include <string>
-#include <vector>
-#include <map>
 
+#include "mpd/CommonAttributesElements.h"
 #include "mpd/SegmentInfo.h"
 #include "mpd/TrickModeType.h"
-#include "mpd/ContentProtection.h"
-#include "exceptions/AttributeNotPresentException.h"
-#include "exceptions/ElementNotPresentException.h"
 
 namespace dash
 {
     namespace mpd
     {
-        class Representation
+        class Group;
+
+        class Representation : public CommonAttributesElements
         {
             public:
-                Representation          ( const std::map<std::string, std::string>&  attributes);
+                Representation();
                 virtual ~Representation ();
 
-                std::string         getWidth                () const throw(dash::exception::AttributeNotPresentException);
-                std::string         getHeight               () const throw(dash::exception::AttributeNotPresentException);
-                std::string         getParX                 () const throw(dash::exception::AttributeNotPresentException);
-                std::string         getParY                 () const throw(dash::exception::AttributeNotPresentException);
-                std::string         getLang                 () const throw(dash::exception::AttributeNotPresentException);
-                std::string         getFrameRate            () const throw(dash::exception::AttributeNotPresentException);
-                std::string         getId                   () const throw(dash::exception::AttributeNotPresentException);
+                const std::string&  getId                   () const;
+                void                setId                   ( const std::string &id );
                 /*
                  *  @return The bitrate required for this representation
                  *          in Bytes per seconds.
-                 *          -1 if an error occurs.
+                 *          Will be a valid value, as the parser refuses Representation
+                 *          without bandwith.
                  */
                 int                 getBandwidth            () const;
-                std::string         getDependencyId         () const throw(dash::exception::AttributeNotPresentException);
-                std::string         getNumberOfChannels     () const throw(dash::exception::AttributeNotPresentException);
-                std::string         getSamplingRate         () const throw(dash::exception::AttributeNotPresentException);
-                SegmentInfo*        getSegmentInfo          () const throw(dash::exception::ElementNotPresentException);
-                TrickModeType*      getTrickModeType        () const throw(dash::exception::ElementNotPresentException);
-                ContentProtection*  getContentProtection    () const throw(dash::exception::ElementNotPresentException);
+                void                setBandwidth            ( int bandwidth );
+                int                 getQualityRanking       () const;
+                void                setQualityRanking       ( int qualityRanking );
+                const std::list<const Representation*>&     getDependencies() const;
+                void                addDependency           ( const Representation* dep );
+                /**
+                 * @return  This SegmentInfo for this Representation.
+                 *          It cannot be NULL, or without any Segments in it.
+                 *          It can however have a NULL InitSegment
+                 */
+                SegmentInfo*        getSegmentInfo          () const;
+                TrickModeType*      getTrickModeType        () const;
 
-                void    setSegmentInfo         (SegmentInfo *info);
-                void    setTrickModeType       (TrickModeType *trickModeType);
-                void    setContentProtection   (ContentProtection *protection);
+                void                setSegmentInfo( SegmentInfo *info );
+                void                setTrickMode( TrickModeType *trickModeType );
+                const Group*        getParentGroup() const;
+                void                setParentGroup( const Group *group );
 
             private:
-                std::map<std::string, std::string>  attributes;
+                int                                 bandwidth;
+                std::string                         id;
+                int                                 qualityRanking;
+                std::list<const Representation*>    dependencies;
                 SegmentInfo                         *segmentInfo;
                 TrickModeType                       *trickModeType;
-                ContentProtection                   *contentProtection;
-
+                const Group                         *parentGroup;
         };
     }
 }

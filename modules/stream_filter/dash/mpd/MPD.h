@@ -32,8 +32,7 @@
 #include "mpd/Period.h"
 #include "mpd/BaseUrl.h"
 #include "mpd/ProgramInformation.h"
-#include "exceptions/AttributeNotPresentException.h"
-#include "exceptions/ElementNotPresentException.h"
+#include "mpd/IMPDManager.h"
 
 namespace dash
 {
@@ -41,25 +40,44 @@ namespace dash
     {
         class MPD
         {
-            typedef std::map<std::string, std::string>      AttributesMap;
-
             public:
-                MPD         (const AttributesMap& attributes);
+                MPD();
                 virtual ~MPD();
 
-                const std::string&             getType                 () const throw(dash::exception::AttributeNotPresentException);
-                const std::string&             getDuration             () const throw(dash::exception::AttributeNotPresentException);
-                const std::string&             getMinBufferTime        () const throw(dash::exception::AttributeNotPresentException);
-                const std::vector<BaseUrl *>&  getBaseUrls      () const;
-                const std::vector<Period *>&   getPeriods       () const;
-                ProgramInformation*     getProgramInformation   () throw(dash::exception::ElementNotPresentException);
+                Profile                         getProfile() const;
+                void                            setProfile( const std::string &strProfile );
+                void                            setProfile( Profile profile );
+                bool                            isLive() const;
+                void                            setLive( bool live );
+                time_t                          getAvailabilityStartTime() const;
+                void                            setAvailabilityStartTime( time_t time );
+                time_t                          getAvailabilityEndTime() const;
+                void                            setAvailabilityEndTime( time_t time );
+                time_t                          getDuration() const;
+                void                            setDuration( time_t duration );
+                time_t                          getMinUpdatePeriod() const;
+                void                            setMinUpdatePeriod( time_t period );
+                time_t                          getMinBufferTime() const;
+                void                            setMinBufferTime( time_t time );
+                time_t                          getTimeShiftBufferDepth() const;
+                void                            setTimeShiftBufferDepth( time_t depth );
+                const std::vector<BaseUrl *>&   getBaseUrls() const;
+                const std::vector<Period *>&    getPeriods() const;
+                const ProgramInformation*       getProgramInformation() const;
 
                 void    addPeriod               (Period *period);
                 void    addBaseUrl              (BaseUrl *url);
                 void    setProgramInformation   (ProgramInformation *progInfo);
 
             private:
-                AttributesMap                       attributes;
+                Profile                             profile;
+                bool                                live;
+                time_t                              availabilityStartTime;
+                time_t                              availabilityEndTime;
+                time_t                              duration;
+                time_t                              minUpdatePeriod;
+                time_t                              minBufferTime;
+                time_t                              timeShiftBufferDepth;
                 std::vector<Period *>               periods;
                 std::vector<BaseUrl *>              baseUrls;
                 ProgramInformation                  *programInfo;
