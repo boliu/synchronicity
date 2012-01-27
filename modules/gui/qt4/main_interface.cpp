@@ -1216,6 +1216,8 @@ void MainInterface::clearConnectionKey(int oldVal, int newVal) {
 void MainInterface::resetConnectionKey() {
   if(0 == connectionKey->text().length()) {
     connectionKey->setText( "Enter key or click 'Host' to begin" );
+    b_connectionKeyBlanked = true;
+    connectionKey->setCursorPosition(-2);
     b_connectionKeyBlanked = false;
   }
 }
