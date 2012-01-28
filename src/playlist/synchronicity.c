@@ -295,6 +295,7 @@ static void SynClientConnectedCallback(int rv, void* param) {
   SynCommand syn;
   syn.type = SYNCOMMAND_MYNAMEIS;
   strncpy(&syn.message, username, sizeof(syn.message));
+  syn.message[MESSAGE_LENGTH-1] = 0; // null terminate string
 
   rv |= SendSynCommand(p_playlist, syn);
   if (rv < 0) {
