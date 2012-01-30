@@ -112,23 +112,26 @@ case "${host_os}" in
     CFLAGS_save="${CFLAGS_save} -pthread"; CFLAGS="${CFLAGS_save}"
     VLC_ADD_LIBS([vcd cdda vcdx],[-ldvd])
     ;;
-  *bsd*)
-    SYS="${host_os}"
+  freebsd*)
+    SYS=freebsd
     CFLAGS_save="${CFLAGS_save} -pthread"; CFLAGS="${CFLAGS_save}"
-    case "${host_os}" in
-      freebsd*)
-        CPPFLAGS_save="${CPPFLAGS_save} -I/usr/local/include"
-        CPPFLAGS="${CPPFLAGS_save}"
-        LDFLAGS_save="${LDFLAGS_save} -L/usr/local/lib"
-        LDFLAGS="${LDFLAGS_save}"
-        ;;
-      openbsd*)
-        CPPFLAGS_save="${CPPFLAGS_save} -I/usr/local/include -I/usr/X11R6/include"
-        CPPFLAGS="${CPPFLAGS_save}"
-        LDFLAGS_save="${LDFLAGS_save} -L/usr/local/lib -L/usr/X11R6/lib/"
-        LDFLAGS="${LDFLAGS_save}"
-        ;;
-    esac
+    CPPFLAGS_save="${CPPFLAGS_save} -I/usr/local/include"
+    CPPFLAGS="${CPPFLAGS_save}"
+    LDFLAGS_save="${LDFLAGS_save} -L/usr/local/lib"
+    LDFLAGS="${LDFLAGS_save}"
+    ;;
+  openbsd*)
+    SYS=openbsd
+    CPPFLAGS_save="${CPPFLAGS_save} -I/usr/local/include -I/usr/X11R6/include"
+    CPPFLAGS="${CPPFLAGS_save}"
+    LDFLAGS_save="${LDFLAGS_save} -L/usr/local/lib -L/usr/X11R6/lib/"
+    LDFLAGS="${LDFLAGS_save}"
+    ;;
+  netbsd*)
+    SYS=netbsd
+    ;;
+  dragonfly*)
+    SYS=dragonfly
     ;;
   darwin*)
 
