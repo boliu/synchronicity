@@ -2814,11 +2814,11 @@ AC_ARG_ENABLE(png,
   [  --enable-png            PNG support (default enabled)])
 if test "${enable_png}" != "no"; then
 AC_CHECK_HEADERS(png.h, [
-  LDFLAGS="${LDFLAGS_save} -lz"
+  LDFLAGS="${LDFLAGS_save} -lz $LIBM"
   AC_CHECK_LIB(png, png_set_rows, [
-    VLC_ADD_LIBS([png],[-lpng -lz -lm])
+    VLC_ADD_LIBS([png],[-lpng -lz $LIBM])
     VLC_ADD_PLUGIN([png osdmenu osd_parser])],
-    [],[-lz])
+    [],[-lz $LIBM])
     LDFLAGS="${LDFLAGS_save}"
   ])
 fi
