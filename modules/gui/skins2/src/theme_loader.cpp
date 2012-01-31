@@ -755,7 +755,7 @@ int gzclose_frontend( int fd )
     {
         void *toClose = currentGzVp;
         currentGzVp = NULL;  currentGzFd = -1;
-        return gzclose( toClose );
+        return gzclose( (gzFile) toClose );
     }
     return -1;
 }
@@ -764,7 +764,7 @@ int gzread_frontend( int fd, void *p_buffer, size_t i_length )
 {
     if( currentGzVp != NULL && fd != -1 )
     {
-        return gzread( currentGzVp, p_buffer, i_length );
+        return gzread( (gzFile) currentGzVp, p_buffer, i_length );
     }
     return -1;
 }
@@ -773,7 +773,7 @@ int gzwrite_frontend( int fd, const void * p_buffer, size_t i_length )
 {
     if( currentGzVp != NULL && fd != -1 )
     {
-        return gzwrite( currentGzVp, const_cast<void*>(p_buffer), i_length );
+        return gzwrite( (gzFile) currentGzVp, const_cast<void*>(p_buffer), i_length );
     }
     return -1;
 }
