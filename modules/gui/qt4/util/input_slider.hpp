@@ -46,7 +46,6 @@ class SeekSlider : public QSlider
     Q_OBJECT
     Q_PROPERTY(qreal handleOpacity READ handleOpacity WRITE setHandleOpacity)
 public:
-    SeekSlider( QWidget *_parent );
     SeekSlider( Qt::Orientation q, QWidget *_parent );
     ~SeekSlider();
     void setChapters( SeekPoints * );
