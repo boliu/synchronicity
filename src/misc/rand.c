@@ -50,15 +50,10 @@ static uint8_t okey[BLOCK_SIZE], ikey[BLOCK_SIZE];
 
 static void vlc_rand_init (void)
 {
-#if defined (__OpenBSD__) || defined (__OpenBSD_kernel__)
-    static const char randfile[] = "/dev/random";
-#else
-    static const char randfile[] = "/dev/urandom";
-#endif
     uint8_t key[BLOCK_SIZE];
 
     /* Get non-predictible value as key for HMAC */
-    int fd = vlc_open (randfile, O_RDONLY);
+    int fd = vlc_open ("/dev/urandom", O_RDONLY);
     if (fd == -1)
         return; /* Uho! */
 
@@ -154,7 +149,7 @@ void vlc_rand_bytes (void *buf, size_t len)
         NULL,              // Use default key container.
         MS_DEF_PROV,       // Use default CSP.
         PROV_RSA_FULL,     // Type of provider to acquire.
-        0) )
+        CRYPT_VERIFYCONTEXT) ) // Flag values
     {
         /* fill buffer with pseudo-random data, intial buffer content
            is used as auxillary random seed */

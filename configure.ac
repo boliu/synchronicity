@@ -112,23 +112,26 @@ case "${host_os}" in
     CFLAGS_save="${CFLAGS_save} -pthread"; CFLAGS="${CFLAGS_save}"
     VLC_ADD_LIBS([vcd cdda vcdx],[-ldvd])
     ;;
-  *bsd*)
-    SYS="${host_os}"
+  freebsd*)
+    SYS=freebsd
     CFLAGS_save="${CFLAGS_save} -pthread"; CFLAGS="${CFLAGS_save}"
-    case "${host_os}" in
-      freebsd*)
-        CPPFLAGS_save="${CPPFLAGS_save} -I/usr/local/include"
-        CPPFLAGS="${CPPFLAGS_save}"
-        LDFLAGS_save="${LDFLAGS_save} -L/usr/local/lib"
-        LDFLAGS="${LDFLAGS_save}"
-        ;;
-      openbsd*)
-        CPPFLAGS_save="${CPPFLAGS_save} -I/usr/local/include -I/usr/X11R6/include"
-        CPPFLAGS="${CPPFLAGS_save}"
-        LDFLAGS_save="${LDFLAGS_save} -L/usr/local/lib -L/usr/X11R6/lib/"
-        LDFLAGS="${LDFLAGS_save}"
-        ;;
-    esac
+    CPPFLAGS_save="${CPPFLAGS_save} -I/usr/local/include"
+    CPPFLAGS="${CPPFLAGS_save}"
+    LDFLAGS_save="${LDFLAGS_save} -L/usr/local/lib"
+    LDFLAGS="${LDFLAGS_save}"
+    ;;
+  openbsd*)
+    SYS=openbsd
+    CPPFLAGS_save="${CPPFLAGS_save} -I/usr/local/include -I/usr/X11R6/include"
+    CPPFLAGS="${CPPFLAGS_save}"
+    LDFLAGS_save="${LDFLAGS_save} -L/usr/local/lib -L/usr/X11R6/lib/"
+    LDFLAGS="${LDFLAGS_save}"
+    ;;
+  netbsd*)
+    SYS=netbsd
+    ;;
+  dragonfly*)
+    SYS=dragonfly
     ;;
   darwin*)
 
@@ -162,7 +165,15 @@ case "${host_os}" in
     VLC_ADD_LIBS([libvlccore],[-Wl,-framework,CoreFoundation])
 
     dnl Allow binaries created on Lion to run on earlier releases
-    AC_LIBOBJ([getdelim])
+    AC_EGREP_CPP(yes,
+           [#import <Cocoa/Cocoa.h>
+            #ifdef MAC_OS_X_VERSION_10_7
+            yes
+            #endif],
+            [AC_MSG_RESULT([yes])
+            AC_LIBOBJ([getdelim])
+            AC_LIBOBJ([strndup])
+            AC_LIBOBJ([strnlen])],)
 
     dnl
     dnl  Check for Mac OS X SDK settings
@@ -2806,11 +2817,11 @@ AC_ARG_ENABLE(png,
   [  --enable-png            PNG support (default enabled)])
 if test "${enable_png}" != "no"; then
 AC_CHECK_HEADERS(png.h, [
-  LDFLAGS="${LDFLAGS_save} -lz"
+  LDFLAGS="${LDFLAGS_save} -lz $LIBM"
   AC_CHECK_LIB(png, png_set_rows, [
-    VLC_ADD_LIBS([png],[-lpng -lz -lm])
+    VLC_ADD_LIBS([png],[-lpng -lz $LIBM])
     VLC_ADD_PLUGIN([png osdmenu osd_parser])],
-    [],[-lz])
+    [],[-lz $LIBM])
     LDFLAGS="${LDFLAGS_save}"
   ])
 fi
@@ -3470,8 +3481,8 @@ dnl  Open Sound System module
 dnl
 AC_ARG_ENABLE(oss,
   [AS_HELP_STRING([--enable-oss],
-    [support the Open Sound System OSS (default enabled on BSD)])],, [
-  AS_IF([test "$SYS" = "mingw32" -o "$SYS" = "mingwce" -o "$SYS" = "linux"], [
+    [support the Open Sound System OSS (default enabled on FreeBSD/NetBSD/DragonFlyBSD)])],, [
+  AS_IF([test "$SYS" = "mingw32" -o "$SYS" = "mingwce" -o "$SYS" = "linux" -o "$SYS" = "openbsd"], [
     enable_oss="no"
   ])
 ])
@@ -4298,21 +4309,27 @@ dnl Generate makefiles
 AC_OUTPUT
 
 dnl Do we have to use make or gmake ?
-USE_MAKE_OR_GMAKE=`case "${SYS}" in openbsd*) echo "gmake";; *) echo "make";; esac`
+if make --version 2>&1|grep -q GNU
+then
+    # GNU make, all seems good
+    MAKE=make
+else
+    # Known GNU make alias (on BSD)
+    MAKE=gmake
+fi
 dnl Shortcut to nice compile message
-rm -f compile
 if test -n $SHELL; then
   SHELL=${CONFIG_SHELL-/bin/sh}
 fi
-echo '#! '$SHELL >compile
-echo rm -f .error\$\$ >>compile
-echo ERROR=0 >>compile
-echo export PATH=$PATH LANG=C >>compile
-echo "($USE_MAKE_OR_GMAKE V=1 \$@ 2>&1 || touch .error\$\$)| \\" >>compile
-echo '`sed -ne "s/^top_srcdir *= *//p" < Makefile`/extras/buildsystem/make.pl' >>compile
-echo test -f .error\$\$ \&\& ERROR=1 >>compile
-echo rm -f .error\$\$ >>compile
-echo exit \$ERROR >>compile
+rm -f compile
+echo "#! $SHELL
+rm -f .error\$\$
+ERROR=0
+export PATH=\"$PATH\" LANG=C
+($MAKE V=1 \$@ 2>&1 || touch .error\$\$)| `sed -ne "s/^top_srcdir *= *//p" < Makefile`/extras/buildsystem/make.pl
+test -f .error\$\$ && ERROR=1
+rm -f .error\$\$
+exit \$ERROR" >compile
 chmod a+x compile
 
 echo "
@@ -4328,4 +4345,4 @@ else
 echo "build vlc executable  : no"
 fi
 echo "
-To build vlc and its plugins, type \`./compile' or \`$USE_MAKE_OR_GMAKE'."
+To build vlc and its plugins, type \`$MAKE', or \`./compile' if you like nice colors."

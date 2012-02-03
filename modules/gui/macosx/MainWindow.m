@@ -75,7 +75,10 @@ static VLCMainWindow *_o_sharedInstance = nil;
     if (b_dark_interface)
     {
 #ifdef MAC_OS_X_VERSION_10_7
-        styleMask = NSBorderlessWindowMask | NSResizableWindowMask;
+        if (OSX_LION)
+            styleMask = NSBorderlessWindowMask | NSResizableWindowMask;
+        else
+            styleMask = NSBorderlessWindowMask;
 #else
         styleMask = NSBorderlessWindowMask;
 #endif
@@ -329,7 +332,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
         switch (*p_category) {
             case SD_CAT_INTERNET:
                 {
-                    [internetItems addObject: [SideBarItem itemWithTitle: [NSString stringWithCString: *ppsz_longname encoding: NSUTF8StringEncoding] identifier: o_identifier]];
+                    [internetItems addObject: [SideBarItem itemWithTitle: _NS(*ppsz_longname) identifier: o_identifier]];
                     if (!strncmp( *ppsz_name, "podcast", 7 ))
                         [[internetItems lastObject] setIcon: [NSImage imageNamed:@"sidebar-podcast"]];
                     else
@@ -339,21 +342,21 @@ static VLCMainWindow *_o_sharedInstance = nil;
                 break;
             case SD_CAT_DEVICES:
                 {
-                    [devicesItems addObject: [SideBarItem itemWithTitle: [NSString stringWithCString: *ppsz_longname encoding: NSUTF8StringEncoding] identifier: o_identifier]];
+                    [devicesItems addObject: [SideBarItem itemWithTitle: _NS(*ppsz_longname) identifier: o_identifier]];
                     [[devicesItems lastObject] setIcon: [NSImage imageNamed:@"NSApplicationIcon"]];
                     [[devicesItems lastObject] setSdtype: SD_CAT_DEVICES];
                 }
                 break;
             case SD_CAT_LAN:
                 {
-                    [lanItems addObject: [SideBarItem itemWithTitle: [NSString stringWithCString: *ppsz_longname encoding: NSUTF8StringEncoding] identifier: o_identifier]];
+                    [lanItems addObject: [SideBarItem itemWithTitle: _NS(*ppsz_longname) identifier: o_identifier]];
                     [[lanItems lastObject] setIcon: [NSImage imageNamed:@"sidebar-local"]];
                     [[lanItems lastObject] setSdtype: SD_CAT_LAN];
                 }
                 break;
             case SD_CAT_MYCOMPUTER:
                 {
-                    [mycompItems addObject: [SideBarItem itemWithTitle: [NSString stringWithCString: *ppsz_longname encoding: NSUTF8StringEncoding] identifier: o_identifier]];
+                    [mycompItems addObject: [SideBarItem itemWithTitle: _NS(*ppsz_longname) identifier: o_identifier]];
                     if (!strncmp( *ppsz_name, "video_dir", 9 ))
                         [[mycompItems lastObject] setIcon: [NSImage imageNamed:@"sidebar-movie"]];
                     else if (!strncmp( *ppsz_name, "audio_dir", 9 ))
@@ -892,7 +895,9 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
-    config_PutInt( VLCIntf->p_libvlc, "volume", i_lastShownVolume );
+    if( config_GetInt( VLCIntf, "macosx-autosave-volume" ))
+        config_PutInt( VLCIntf->p_libvlc, "volume", i_lastShownVolume );
+
     [self saveFrameUsingName: [self frameAutosaveName]];
 }
 
@@ -985,6 +990,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
     if( i_volume != i_lastShownVolume )
     {
+        i_lastShownVolume = i_volume;
         [o_volume_sld setIntValue: i_volume];
         [o_fspanel setVolumeLevel: i_volume];
     }
@@ -1510,8 +1516,8 @@ static VLCMainWindow *_o_sharedInstance = nil;
     [o_fullscreen_btn setState: NO];
 
     /* We always try to do so */
-    if (!(OSX_LION || !b_nativeFullscreenMode))
-        [NSScreen unblackoutScreens];
+    [NSScreen unblackoutScreens];
+
     vout_thread_t *p_vout = getVout();
     if (p_vout)
     {

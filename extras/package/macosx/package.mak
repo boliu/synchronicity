@@ -6,27 +6,27 @@ endif
 endif
 
 # This is just for development purposes.
-# The resulting VLC.app will only run in this tree.
-VLC.app: VLC-tmp.app
+# The resulting VLC-dev.app will only run in this tree.
+VLC-dev.app: VLC-tmp
 	rm -Rf $@
-	cp -R VLC-tmp.app $@
+	cp -R VLC-tmp $@
 	$(INSTALL) -m 0755 $(top_builddir)/bin/.libs/vlc $@/Contents/MacOS/VLC
 	$(LN_S) -f ../../../modules $@/Contents/MacOS/plugins
-	rm -Rf VLC-tmp.app
+	rm -Rf VLC-tmp
 
-# VLC-release.app for packaging and giving it to your friends
+# VLC.app for packaging and giving it to your friends
 # use package-macosx to get a nice dmg
-VLC-release.app: VLC-tmp.app
+VLC.app: VLC-tmp
 	rm -Rf $@
-	cp -R VLC-tmp.app $@
+	cp -R VLC-tmp $@
 	PRODUCT="$@" ACTION="release-makefile" src_dir=$(srcdir) build_dir=$(top_builddir) sh $(srcdir)/projects/macosx/framework/Pre-Compile.sh
 	find $@ -type d -exec chmod ugo+rx '{}' \;
 	find $@ -type f -exec chmod ugo+r '{}' \;
 	rm -Rf $@/Contents/Frameworks/BGHUDAppKit.framework/Resources/
-	rm -Rf VLC-tmp.app
+	rm -Rf VLC-tmp
 
 # common target to a VLC bundle used by both the dev and the release build
-VLC-tmp.app: vlc
+VLC-tmp: vlc
 	$(AM_V_GEN)for i in src lib share; do \
 		(cd $$i && $(MAKE) $(AM_MAKEFLAGS) install $(silentstd)); \
 	done
@@ -62,9 +62,9 @@ VLC-tmp.app: vlc
 	done
 	printf "APPLVLC#" >| $@/Contents/PkgInfo
 
-package-macosx: VLC-release.app ChangeLog
+package-macosx: VLC.app ChangeLog
 	mkdir -p "$(top_builddir)/vlc-$(VERSION)/Goodies/"
-	cp -R "$(top_builddir)/VLC-release.app" "$(top_builddir)/vlc-$(VERSION)/VLC.app"
+	cp -R "$(top_builddir)/VLC.app" "$(top_builddir)/vlc-$(VERSION)/VLC.app"
 	cd $(srcdir); cp AUTHORS COPYING README THANKS NEWS $(abs_top_builddir)/vlc-$(VERSION)/Goodies/
 	cp $(top_builddir)/ChangeLog $(top_builddir)/vlc-$(VERSION)/Goodies/
 	cp -R  $(srcdir)/extras/package/macosx/Delete_Preferences.app $(top_builddir)/vlc-$(VERSION)/Goodies/Delete\ VLC\ Preferences.app
@@ -86,9 +86,9 @@ package-macosx: VLC-release.app ChangeLog
 	rm -f "$(top_builddir)/vlc-$(VERSION)-rw.dmg"
 	rm -rf "$(top_builddir)/vlc-$(VERSION)"
 
-package-macosx-zip: VLC-release.app ChangeLog
+package-macosx-zip: VLC.app ChangeLog
 	mkdir -p $(top_builddir)/vlc-$(VERSION)/Goodies/
-	cp -R $(top_builddir)/VLC-release.app $(top_builddir)/vlc-$(VERSION)/VLC.app
+	cp -R $(top_builddir)/VLC.app $(top_builddir)/vlc-$(VERSION)/VLC.app
 	cp $(top_builddir)/ChangeLog $(top_builddir)/vlc-$(VERSION)/Goodies/
 	cd $(srcdir); cp -R AUTHORS COPYING README THANKS NEWS extras/package/macosx/Delete_Preferences.app/ \
 		$(abs_top_builddir)/vlc-$(VERSION)/Goodies/

@@ -600,7 +600,7 @@ int transcode_video_process( sout_stream_t *p_stream, sout_stream_id_t *id,
     picture_t *p_pic, *p_pic2 = NULL;
     *out = NULL;
 
-    if( in == NULL )
+    if( unlikely( in == NULL ) )
     {
         if( p_sys->i_threads == 0 )
         {
@@ -629,7 +629,7 @@ int transcode_video_process( sout_stream_t *p_stream, sout_stream_id_t *id,
         if( p_stream->p_sout->i_out_pace_nocontrol && p_sys->b_hurry_up )
         {
             mtime_t current_date = mdate();
-            if( current_date + 50000 > p_pic->date )
+            if( unlikely( current_date + 50000 > p_pic->date ) )
             {
                 msg_Dbg( p_stream, "late picture skipped (%"PRId64")",
                          current_date + 50000 - p_pic->date );
@@ -645,8 +645,8 @@ int transcode_video_process( sout_stream_t *p_stream, sout_stream_id_t *id,
             mtime_t i_pts;
 
             i_pts = date_Get( &id->interpolated_pts ) + 1;
-            if ( p_pic->date - i_pts > MASTER_SYNC_MAX_DRIFT
-                  || p_pic->date - i_pts < -MASTER_SYNC_MAX_DRIFT )
+            if ( unlikely( p_pic->date - i_pts > MASTER_SYNC_MAX_DRIFT
+                  || p_pic->date - i_pts < -MASTER_SYNC_MAX_DRIFT ) )
             {
                 msg_Dbg( p_stream, "drift is too high, resetting master sync" );
                 date_Set( &id->interpolated_pts, p_pic->date );
@@ -658,7 +658,7 @@ int transcode_video_process( sout_stream_t *p_stream, sout_stream_id_t *id,
             /* Set the pts of the frame being encoded */
             p_pic->date = i_pts;
 
-            if( i_video_drift < (i_master_drift - 50000) )
+            if( unlikely( i_video_drift < (i_master_drift - 50000) ) )
             {
 #if 0
                 msg_Dbg( p_stream, "dropping frame (%i)",
@@ -667,7 +667,7 @@ int transcode_video_process( sout_stream_t *p_stream, sout_stream_id_t *id,
                 picture_Release( p_pic );
                 continue;
             }
-            else if( i_video_drift > (i_master_drift + 50000) )
+            else if( unlikely( i_video_drift > (i_master_drift + 50000) ) )
             {
 #if 0
                 msg_Dbg( p_stream, "adding frame (%i)",
@@ -726,16 +726,16 @@ int transcode_video_process( sout_stream_t *p_stream, sout_stream_id_t *id,
                 {
                     /* We can't modify the picture, we need to duplicate it */
                     picture_t *p_tmp = video_new_buffer_decoder( id->p_decoder );
-                    if( p_tmp )
+                    if( likely( p_tmp ) )
                     {
                         picture_Copy( p_tmp, p_pic );
                         picture_Release( p_pic );
                         p_pic = p_tmp;
                     }
                 }
-                if( !p_sys->p_spu_blend )
+                if( unlikely( !p_sys->p_spu_blend ) )
                     p_sys->p_spu_blend = filter_NewBlend( VLC_OBJECT( p_sys->p_spu ), &fmt );
-                if( p_sys->p_spu_blend )
+                if( likely( p_sys->p_spu_blend ) )
                     picture_BlendSubpicture( p_pic, p_sys->p_spu_blend, p_subpic );
                 subpicture_Delete( p_subpic );
             }
@@ -755,8 +755,8 @@ int transcode_video_process( sout_stream_t *p_stream, sout_stream_id_t *id,
         if( p_sys->b_master_sync )
         {
             mtime_t i_pts = date_Get( &id->interpolated_pts ) + 1;
-            if ( p_pic->date - i_pts > MASTER_SYNC_MAX_DRIFT
-                  || p_pic->date - i_pts < -MASTER_SYNC_MAX_DRIFT )
+            if (unlikely ( p_pic->date - i_pts > MASTER_SYNC_MAX_DRIFT
+                  || p_pic->date - i_pts < -MASTER_SYNC_MAX_DRIFT ) )
             {
                 msg_Dbg( p_stream, "drift is too high, resetting master sync" );
                 date_Set( &id->interpolated_pts, p_pic->date );
@@ -771,7 +771,7 @@ int transcode_video_process( sout_stream_t *p_stream, sout_stream_id_t *id,
                {
                    /* We can't modify the picture, we need to duplicate it */
                    p_pic2 = video_new_buffer_decoder( id->p_decoder );
-                   if( p_pic2 != NULL )
+                   if( unlikely( p_pic2 != NULL ) )
                    {
                        picture_Copy( p_pic2, p_pic );
                        p_pic2->date = i_pts;
@@ -841,7 +841,7 @@ bool transcode_video_add( sout_stream_t *p_stream, es_format_t *p_fmt,
 
     if( p_sys->f_fps > 0 )
     {
-        id->p_encoder->fmt_out.video.i_frame_rate = (p_sys->f_fps * 1000) + 0.5;
+        id->p_encoder->fmt_out.video.i_frame_rate = (p_sys->f_fps * ENC_FRAMERATE_BASE) + 0.5;
         id->p_encoder->fmt_out.video.i_frame_rate_base = ENC_FRAMERATE_BASE;
     }
 

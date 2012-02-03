@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: vlc-trans\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-01-25 00:33+0100\n"
-"PO-Revision-Date: 2012-01-10 01:18+0100\n"
+"PO-Revision-Date: 2012-01-29 17:51+0100\n"
 "Last-Translator: Christoph Miebach <christoph.miebach@web.de>\n"
 "Language-Team: German (http://www.transifex.net/projects/p/vlc-trans/team/"
 "de/)\n"
@@ -2916,15 +2916,17 @@ msgstr ""
 "Ihnen beispielsweise svg zu benutzen."
 
 #: src/libvlc-module.c:840
-#, fuzzy
 msgid "Subpictures source module"
-msgstr "Unterbilder-Filtermodul"
+msgstr "Unterbild-Quellen-Modul"
 
 #: src/libvlc-module.c:842
 msgid ""
 "This adds so-called \"subpicture sources\". These filters overlay some "
 "images or text over the video (like a logo, arbitrary text, ...)."
 msgstr ""
+"Fügt sogenannte \"subpicture sources\" (Unterbild-Quellen) hinzu. Diese "
+"Filter legen Bilder oder Texte über das Video (ein Logo, Beliebige "
+"Texte, ...)."
 
 #: src/libvlc-module.c:845
 msgid "Subpictures filter module"
@@ -2935,6 +2937,9 @@ msgid ""
 "This adds so-called \"subpicture filters\". These filter subpictures created "
 "by subtitles decoders or other subpictures sources."
 msgstr ""
+"Fügt sogenannte \"subpicture filters\" (Unterbild-Filter) hinzu. Diese "
+"filtern die von Untertitel-Decodern oder anderen Unterbild-Quellen erzeugten "
+"Daten."
 
 #: src/libvlc-module.c:850
 msgid "Autodetect subtitle files"
@@ -3138,15 +3143,16 @@ msgstr ""
 "verwendet."
 
 #: src/libvlc-module.c:960
-#, fuzzy
 msgid "HTTP/TLS Certificate Authority"
-msgstr "HTTP/TLS Server-Zertifikat"
+msgstr "HTTP/TLS Zertifizierungsstelle"
 
 #: src/libvlc-module.c:962
 msgid ""
 "This X.509 certificate file (PEM format) can optionally be used to "
 "authenticate remote clients in TLS sessions."
 msgstr ""
+"Diese optionale X.509-Zertifikats-Datei (PEM-Format) kann für die "
+"Authentifizierung von Remoteclients in TLS-Sessions verwendet werden."
 
 #: src/libvlc-module.c:965
 msgid "HTTP/TLS Certificate Revocation List"
@@ -3157,6 +3163,9 @@ msgid ""
 "This file countains an optional CRL to prevent remove clients from using "
 "revoked certificates in TLS sessions."
 msgstr ""
+"Diese Datei enthält eine optionale CRL (HTTP/TLS Zertifikats-Widerrufsliste) "
+"um Clienten davor zu bewahren, widerrufene Zertifikate in einer TLS-Session "
+"zu verwenden."
 
 #: src/libvlc-module.c:970
 msgid "SOCKS server"
@@ -3872,6 +3881,8 @@ msgstr "Medienbibliothek laden"
 #: src/libvlc-module.c:1312
 msgid "Enable this option to load the SQL-based Media Library at VLC startup"
 msgstr ""
+"Aktivieren Sie diese Option, um die SQL-basierte Medienbibliothek (ML) beim "
+"Starten von VLC zu laden"
 
 #: src/libvlc-module.c:1314 modules/gui/qt4/ui/sprefs_interface.h:530
 msgid "Display playlist tree"
@@ -4983,7 +4994,7 @@ msgstr "Armenisch"
 
 #: src/text/iso-639_def.h:47
 msgid "Assamese"
-msgstr " Assamesisch"
+msgstr "Assamesisch"
 
 #: src/text/iso-639_def.h:48
 msgid "Avestan"
@@ -5809,6 +5820,8 @@ msgstr ""
 #: modules/access/bluray.c:147
 msgid "Your system AACS decoding library does not work. Missing keys?"
 msgstr ""
+"Die AACS-Dekodierungs-Bibliothek auf diesem System funktioniert nicht. "
+"Fehlende Schlüssel (keys)?"
 
 #: modules/access/bluray.c:156
 msgid ""
@@ -5821,6 +5834,8 @@ msgstr ""
 #: modules/access/bluray.c:161
 msgid "Your system BD+ decoding library does not work. Missing configuration?"
 msgstr ""
+"Die BD+Dekodierungs-Bibliothek auf diesem System funktioniert nicht. "
+"Fehlende Konfiguration?"
 
 #: modules/access/bluray.c:198
 msgid "Blu-Ray error"
@@ -5927,6 +5942,9 @@ msgid ""
 "Video connection to use for DeckLink captures. Valid choices: sdi, hdmi, "
 "opticalsdi, component, composite, svideo. Leave blank for card default."
 msgstr ""
+"Video-Anschluss für DeckLink-Captures (Aufnahme). Gültige "
+"Auswahlmöglichkeiten: sdi, hdmi, opticalsdi, component, composite, svideo. "
+"Freilassen für Karten-Standard."
 
 #: modules/access/decklink.cpp:81 modules/access/linsys/linsys_sdi.c:93
 msgid "SDI"
@@ -5942,7 +5960,7 @@ msgstr "Optisches SDI"
 
 #: modules/access/decklink.cpp:81
 msgid "Component"
-msgstr ""
+msgstr "Component"
 
 #: modules/access/decklink.cpp:81
 msgid "Composite"
@@ -8489,9 +8507,8 @@ msgid "Automatically control the chroma gain."
 msgstr ""
 
 #: modules/access/v4l2/video.c:136
-#, fuzzy
 msgid "Power line frequency"
-msgstr "Transponder/Multiplex-Frequenz"
+msgstr "Netzfrequenz"
 
 #: modules/access/v4l2/video.c:138
 msgid "Power line frequency anti-flicker filter."
@@ -8506,14 +8523,12 @@ msgid "60 Hz"
 msgstr "60 Hz"
 
 #: modules/access/v4l2/video.c:147
-#, fuzzy
 msgid "Backlight compensation"
-msgstr "Audio-Desynchronisationsausgleich"
+msgstr "Backlight compensation"
 
 #: modules/access/v4l2/video.c:148
-#, fuzzy
 msgid "Backlight compensation."
-msgstr "Audio-Desynchronisationsausgleich"
+msgstr "Hintergrundbeleuchtung ausgleichen."
 
 #: modules/access/v4l2/video.c:149
 #, fuzzy
@@ -8626,24 +8641,20 @@ msgid "Balance of the audio input."
 msgstr "Balance des Audio-Inputs."
 
 #: modules/access/v4l2/video.c:183
-#, fuzzy
 msgid "Bass level"
-msgstr "Mega-Bass-Niveau"
+msgstr "Bass-Level"
 
 #: modules/access/v4l2/video.c:185
-#, fuzzy
 msgid "Bass adjustment of the audio input."
-msgstr "ALSA Audioaufnahme Input"
+msgstr "Bass-Einstellung des Audio-Eingangs."
 
 #: modules/access/v4l2/video.c:186
-#, fuzzy
 msgid "Treble level"
-msgstr "Qualitätsniveau"
+msgstr "Höhen-Level"
 
 #: modules/access/v4l2/video.c:188
-#, fuzzy
 msgid "Treble adjustment of the audio input."
-msgstr "ALSA Audioaufnahme Input"
+msgstr "Höhen-Einstellung des Audio-Eingangs."
 
 #: modules/access/v4l2/video.c:191
 msgid "Mute the audio."
@@ -11040,9 +11051,8 @@ msgid "Flac audio encoder"
 msgstr "Flac-Audioencoder"
 
 #: modules/codec/fluidsynth.c:56
-#, fuzzy
 msgid "Sound fonts"
-msgstr "Sound Fonts (benötigt)"
+msgstr "Sound Fonts"
 
 #: modules/codec/fluidsynth.c:58
 msgid "A sound fonts file is required for software synthesis."
@@ -11066,6 +11076,9 @@ msgid ""
 "Please install a sound font and configure it from the VLC preferences "
 "(Input / Codecs > Audio codecs > FluidSynth).\n"
 msgstr ""
+"Für die MIDI-Synthese wird eine Sound-Font-Datei (.SF2) benötigt.\n"
+"Bitte Sound-Font installieren und über VLC-Einstellungen (Input / Codecs > "
+"Audiocodecs > FluidSynth) konfigurieren.\n"
 
 #: modules/codec/kate.c:194 modules/codec/subsdec.c:169
 msgid "Formatted Subtitles"
@@ -11567,7 +11580,6 @@ msgstr "Breite der Bewegungsvorhersageblöcke"
 
 #: modules/codec/schroedinger.c:182 modules/codec/schroedinger.c:199
 #: modules/codec/schroedinger.c:297 modules/codec/schroedinger.c:338
-#, fuzzy
 msgid "automatic - let encoder decide based upon input (Best)"
 msgstr "Automatisch - der Encoder entscheidet aufgrund des Inputs (Beste)"
 
@@ -11715,9 +11727,8 @@ msgid "Main Profile"
 msgstr "H.264-Profil"
 
 #: modules/codec/schroedinger.c:363
-#, fuzzy
 msgid "Dirac video decoder using libschroedinger"
-msgstr "Dirac Video-Encoder nutzt libschroedinger"
+msgstr "Dirac Video-Decoder nutzt libschroedinger"
 
 #: modules/codec/schroedinger.c:371
 msgid "Dirac video encoder using libschroedinger"
@@ -16193,7 +16204,7 @@ msgstr ""
 
 #: modules/gui/macosx/macosx.m:90 modules/gui/macosx/simple_prefs.m:268
 msgid "Use the native fullscreen mode on OS X Lion"
-msgstr "Nativen Vollbild-Modus auf OS X Lion verwenden"
+msgstr "Nativen Vollbild-Modus unter OS X Lion verwenden"
 
 #: modules/gui/macosx/macosx.m:91
 msgid ""
@@ -16490,31 +16501,31 @@ msgstr "Medium öffnen..."
 
 #: modules/gui/macosx/MainWindow.m:145
 msgid "Drop media here"
-msgstr "Medium hier einfügen"
+msgstr "Medien hierher ziehen"
 
 #: modules/gui/macosx/MainWindow.m:305
 msgid "LIBRARY"
-msgstr "Medienbibliothek"
+msgstr "MEDIENBIBLIOTHEK"
 
 #: modules/gui/macosx/MainWindow.m:308
 msgid "MY COMPUTER"
-msgstr "Mein Computer"
+msgstr "MEIN COMPUTER"
 
 #: modules/gui/macosx/MainWindow.m:309
 msgid "DEVICES"
-msgstr "Standardgeräte"
+msgstr "GERÄTE"
 
 #: modules/gui/macosx/MainWindow.m:310
 msgid "LOCAL NETWORK"
-msgstr "Lokales Netzwerk"
+msgstr "LOKALES NETZWERK"
 
 #: modules/gui/macosx/MainWindow.m:311
 msgid "INTERNET"
-msgstr "Internet"
+msgstr "INTERNET"
 
 #: modules/gui/macosx/open.m:55
 msgid "No device is selected"
-msgstr "Kein Gerät (device) ausgewählt."
+msgstr "Kein Gerät ausgewählt"
 
 #: modules/gui/macosx/open.m:56
 msgid ""
@@ -16584,7 +16595,7 @@ msgstr "BDMV-Ordner öffnen"
 
 #: modules/gui/macosx/open.m:142
 msgid "Insert Disc"
-msgstr "Medium einlegen..."
+msgstr "Medium einlegen"
 
 #: modules/gui/macosx/open.m:150
 msgid "Disable DVD menus"
@@ -16668,13 +16679,15 @@ msgstr "Multicast"
 #: modules/gui/macosx/open.m:188 modules/gui/macosx/open.m:441
 #: modules/gui/macosx/open.m:1205
 msgid "Capture Device"
-msgstr "Aufnahmegerät (capture device)"
+msgstr "Aufnahmegerät"
 
 #: modules/gui/macosx/open.m:193
 msgid ""
 "This input allows you to save, stream or display your current screen "
 "contents."
 msgstr ""
+"Diese Funktion erlaubt das Speichern, Streamen und die Darstellung "
+"der aktuellen Inhalte des eigenen Bildschirms."
 
 #: modules/gui/macosx/open.m:194
 msgid "Frames per Second:"
@@ -16785,9 +16798,9 @@ msgid "Open File"
 msgstr "Datei öffnen"
 
 #: modules/gui/macosx/open.m:834
-#, fuzzy, c-format
+#, c-format
 msgid "%i tracks"
-msgstr "Titel"
+msgstr "%i Titel"
 
 #: modules/gui/macosx/open.m:1309
 msgid "Composite input"
@@ -17391,7 +17404,7 @@ msgstr "s"
 
 #: modules/gui/macosx/TrackSynchronization.m:57
 msgid "A positive value means that the audio is ahead of the video"
-msgstr ""
+msgstr "Ein positiver Wert bedeutet, dass die Audiodaten dem Video voraus sind"
 
 #: modules/gui/macosx/TrackSynchronization.m:58
 #: modules/gui/qt4/components/extended_panels.cpp:1542
@@ -17404,7 +17417,7 @@ msgstr "Vorsprung der Untertitel gegenüber Video:"
 
 #: modules/gui/macosx/TrackSynchronization.m:61
 msgid "A positive value means that the subtitles are ahead of the video"
-msgstr ""
+msgstr "Ein positiver Wert bedeutet, dass die Untertitel dem Video voraus sind"
 
 #: modules/gui/macosx/TrackSynchronization.m:62
 msgid "Speed of the subtitles:"
@@ -17468,7 +17481,7 @@ msgstr "Körnungs-Videofilter"
 #: modules/gui/macosx/VideoEffects.m:87 modules/video_filter/grain.c:53
 #: modules/gui/qt4/ui/video_effects.h:1309
 msgid "Variance"
-msgstr "Gauss'sche Standardabweichung"
+msgstr "Varianz"
 
 #: modules/gui/macosx/VideoEffects.m:92
 #: modules/gui/qt4/ui/video_effects.h:1317
@@ -18204,6 +18217,11 @@ msgid ""
 "what it means, or if you want to stream on your local network only, leave "
 "this setting to 1."
 msgstr ""
+"Dies erlaubt die Definition des TTL-Wertes (Time-To-Live) des Streams. "
+"Dieser Parameter ist die maximale Anzahl von Routern, die der Stream "
+"durchlaufen kann. Wenn der Stream nur im lokalen Netzwerk gesendet werden "
+"soll, oder diese Erklärung nicht ausreicht, sollte diese Einstellung auf 1 "
+"bleiben."
 
 #: modules/gui/macosx/wizard.m:1858
 msgid ""
@@ -19156,7 +19174,7 @@ msgstr "Absteigend"
 
 #: modules/gui/qt4/components/playlist/playlist_model.cpp:1009
 msgid "Display size"
-msgstr "Display-Größe"
+msgstr "Darstellungsgröße"
 
 #: modules/gui/qt4/components/playlist/playlist_model.cpp:1010
 msgid "Increase"
@@ -21021,7 +21039,7 @@ msgstr ""
 
 #: modules/media_library/sql_media_library.c:111
 msgid "Media Library based on a SQL based database"
-msgstr ""
+msgstr "Die Medienbibliothek (ML) basiert auf einer SQL-basierten Datenbank"
 
 #: modules/media_library/sql_media_library.c:118
 #: modules/media_library/sql_media_library.c:119
@@ -21043,7 +21061,7 @@ msgstr "Neue Medien automatisch hinzufügen"
 
 #: modules/media_library/sql_media_library.c:127
 msgid "Automatically add new medias to ML"
-msgstr ""
+msgstr "Neue Medien automatisch zu Medien-Bibliothek (ML) hinzufügen"
 
 #: modules/meta_engine/folder.c:63
 msgid "Folder meta data"
@@ -24868,7 +24886,7 @@ msgstr "Farbverlaufs-Videofilter"
 
 #: modules/video_filter/grain.c:54
 msgid "Variance of the gaussian noise"
-msgstr "Gauss'sche Standardabweichung"
+msgstr "Varianz des Gauß'schen Rauschens"
 
 #: modules/video_filter/grain.c:58
 msgid "Minimal period"
@@ -26479,7 +26497,7 @@ msgstr "EGL"
 
 #: modules/video_output/egl.c:47
 msgid "EGL extension for OpenGL"
-msgstr ""
+msgstr "EGL Erweiterung für OpenGL"
 
 #: modules/video_output/fb.c:60
 msgid "Run fb on current tty"
@@ -26551,6 +26569,7 @@ msgstr "OpenGL ES Erweiterung"
 #: modules/video_output/gl.c:44
 msgid "Extension through which to use the Open Graphics Library (OpenGL)."
 msgstr ""
+"Erweiterung, über welche die Open Graphics Library (OpenGL) benutzt wird."
 
 #: modules/video_output/gl.c:51
 msgid "OpenGL ES2"
@@ -26629,6 +26648,8 @@ msgid ""
 "Your Mac lacks Quartz Extreme acceleration, which is required for video "
 "output."
 msgstr ""
+"Dieser Mac verfügt nicht über die Quartz-Extreme-Beschleunigung (Quartz "
+"Extreme acceleration), die für Video-Ausgabe erforderlich ist."
 
 #: modules/video_output/msw/direct2d.c:56
 msgid "Video output for Windows 7/Windows Vista with Platform update"
@@ -26653,6 +26674,8 @@ msgstr "Hardware-Blending Unterstützung verwenden"
 #: modules/video_output/msw/direct3d.c:62
 msgid "Try to use hardware acceleration for subtitles/OSD blending."
 msgstr ""
+"Versuchen, die Hardware-Beschleunigung für das Untertitel/OSD-Blending zu "
+"verwenden."
 
 #: modules/video_output/msw/direct3d.c:64
 msgid "Recommended video output for Windows Vista and later versions"
@@ -26834,6 +26857,8 @@ msgid ""
 "Video will be rendered with this X11 display. If empty, the default display "
 "will be used."
 msgstr ""
+"Video wird mit diesem X11-Display wiedergegeben. Falls leer, wird die "
+"Standardanzeige verwendet."
 
 #: modules/video_output/xcb/window.c:48
 msgid "X11 window ID"
@@ -27097,7 +27122,7 @@ msgstr "Die Höhe des Effekte-Videofensters in Pixeln."
 
 #: modules/visualization/visual/visual.c:56
 msgid "Show 80 bands instead of 20"
-msgstr ""
+msgstr "Zeige 80 Bänder anstatt 20"
 
 #: modules/visualization/visual/visual.c:58
 msgid "More bands for the spectrometer : 80 if enabled else 20."
@@ -29369,7 +29394,7 @@ msgstr "Media Manager-Liste"
 
 #, fuzzy
 #~ msgid "Capture Screen"
-#~ msgstr "Aufnahmegerät (capture device)"
+#~ msgstr "Aufnahmegerät"
 
 #, fuzzy
 #~ msgid "Close"
@@ -30285,7 +30310,7 @@ msgstr "Media Manager-Liste"
 
 #, fuzzy
 #~ msgid "No device connected"
-#~ msgstr "Kein Gerät (device) ausgewählt."
+#~ msgstr "Kein Gerät ausgewählt."
 
 #, fuzzy
 #~ msgid "Screen Capture Input"

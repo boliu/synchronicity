@@ -173,7 +173,7 @@ static int Open( vlc_object_t * p_this )
                     {
                         s_filename = s_path + DIR_SEP_CHAR + psz_file;
 
-#ifdef WIN32
+#if defined(WIN32) || defined(__OS2__)
                         if (!strcasecmp(s_filename.c_str(), p_demux->psz_file))
 #else
                         if (!s_filename.compare(p_demux->psz_file))
@@ -704,7 +704,6 @@ static int Demux( demux_t *p_demux)
             else
             {
                 msg_Warn( p_demux, "cannot get block EOF?" );
-                es_out_Control( p_demux->out, ES_OUT_RESET_PCR );
                 break;
             }
         }
