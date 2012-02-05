@@ -29,6 +29,7 @@
 
 #include <synchronicity/syn_connection.h>
 #include <synchronicity/syn_parsing.h>
+#include <synchronicity/syn_error_codes.h>
 #include <vlc_common.h>
 #include <vlc_es.h>
 #include <vlc_input.h>
@@ -367,7 +368,7 @@ static int SynEventListener( vlc_object_t *p_this, const char *psz_var,
         mtime_t diff_diff = current_difference - p_playlist->t_wall_minus_video;
         if(diff_diff > 50000 || diff_diff < -50000) {
           p_playlist->t_last_correction_time = current_wall;
-          p_playlist->last_diff_diff = diff_diff + p_playlist->last_diff_diff / 3;
+          p_playlist->last_diff_diff = (4 * diff_diff + p_playlist->last_diff_diff) / 5;
 
           p_playlist->b_correcting = true;
           input_Control((input_thread_t*)p_this, INPUT_SET_TIME, current_time +
@@ -430,6 +431,11 @@ static int PlayItem( playlist_t *p_playlist, playlist_item_t *p_item )
         var_AddCallback( p_input_thread, "position", SynPositionListener, p_playlist );
         var_AddCallback( p_input_thread, "intf-event", SynEventListener, p_playlist);
         //var_AddCallback( p_input_thread, "position", PositionListener, p_input_thread );
+
+        // Re-initialize synchronicity variables on every playlist item
+        p_sys->b_syn_can_send = false;
+        p_sys->b_syn_created = false;
+        p_sys->b_syn_heartbeat = false;
 
         var_SetAddress( p_playlist, "input-current", p_input_thread );
 
@@ -674,6 +680,14 @@ static int LoopInput( playlist_t *p_playlist )
         var_DelCallback( p_input, "position", SynPositionListener, p_playlist );
         var_DelCallback( p_input, "intf-event", SynEventListener, p_playlist );
         //var_DelCallback( p_input, "position", PositionListener, p_input );
+
+        // Disconnect when ends
+        if(p_sys->b_syn_created) {
+          var_SetInteger( p_playlist, "synchronicity", PEER_DISCONNECT);
+          SynConnection_Destroy(p_sys->syn_connection, NULL, NULL);
+          p_sys->b_syn_created = false;
+          p_sys->b_syn_heartbeat = false;
+        }
 
         PL_LOCK;
 

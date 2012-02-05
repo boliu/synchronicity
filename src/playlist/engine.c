@@ -190,9 +190,7 @@ playlist_t * playlist_Create( vlc_object_t *p_parent )
     pl_priv(p_playlist)->b_auto_preparse =
         var_InheritBool( p_parent, "auto-preparse" );
 
-    pl_priv(p_playlist)->b_syn_can_send = false;
-    pl_priv(p_playlist)->b_syn_created = false;
-    pl_priv(p_playlist)->b_syn_heartbeat = false;
+    // TODO find out if these can be read for every playlist item
     pl_priv(p_playlist)->psz_syn_server_host =
       var_InheritString( p_parent, "synchronicity-server" );
     pl_priv(p_playlist)->i_syn_port =
