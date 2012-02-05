@@ -369,7 +369,7 @@ SynDestroying:
   sci->state = SYN_UNINITIALIZED;
 
   vlc_object_release(sci->useless_vlc_object);
-  memset(&sci, 0, sizeof(*sci));
+  memset(sci, 0, sizeof(*sci));
 
   return NULL;
 }
