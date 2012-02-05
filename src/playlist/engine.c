@@ -197,6 +197,8 @@ playlist_t * playlist_Create( vlc_object_t *p_parent )
       var_InheritString( p_parent, "synchronicity-server" );
     pl_priv(p_playlist)->i_syn_port =
       var_InheritInteger( p_parent, "synchronicity-port" );
+    pl_priv(p_playlist)->psz_syn_user =
+      var_InheritString( p_parent, "synchronicity-user" );
 
     /* Fetcher */
     p->p_fetcher = playlist_fetcher_New( p_playlist );

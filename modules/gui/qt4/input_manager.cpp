@@ -59,6 +59,9 @@ static int SoundMuteChanged( vlc_object_t *, const char *,
 static int SynchronicityChanged( vlc_object_t *, const char *,
                         vlc_value_t, vlc_value_t, void * );
 
+static int SynchronicityUserChanged( vlc_object_t *, const char *,
+                            vlc_value_t, vlc_value_t, void * );
+
 
 static int RandomChanged( vlc_object_t *, const char *,
                         vlc_value_t, vlc_value_t, void * );
@@ -955,6 +958,7 @@ MainInputManager::MainInputManager( intf_thread_t *_p_intf )
     var_AddCallback( THEPL, "volume", VolumeChanged, this );
     var_AddCallback( THEPL, "mute", SoundMuteChanged, this );
     var_AddCallback( THEPL, "synchronicity", SynchronicityChanged, this );
+    var_AddCallback( THEPL, "synchronicity-user", SynchronicityUserChanged, this );
 
     /* Warn our embedded IM about input changes */
     DCONNECT( this, inputChanged( input_thread_t * ),
@@ -974,6 +978,7 @@ MainInputManager::~MainInputManager()
     var_DelCallback( THEPL, "volume", VolumeChanged, this );
     var_DelCallback( THEPL, "mute", SoundMuteChanged, this );
     var_DelCallback( THEPL, "synchronicity", SynchronicityChanged, this );
+    var_DelCallback( THEPL, "synchronicity-user", SynchronicityUserChanged, this );
 
     var_DelCallback( THEPL, "activity", PLItemChanged, this );
     var_DelCallback( THEPL, "item-change", ItemChanged, im );
@@ -1046,6 +1051,8 @@ void MainInputManager::customEvent( QEvent *event )
     case SynchronicityChanged_Type:
         emit synchronicityChanged( var_GetInteger( THEPL, "synchronicity" ) );
         return;
+    case SynchronicityUserChanged_Type:
+        emit synchronicityUserChanged( var_GetString( THEPL, "synchronicity-user" ) );
     default:
         if( type != ItemChanged_Type ) return;
     }
@@ -1245,6 +1252,15 @@ static int SynchronicityChanged (vlc_object_t *p_this, const char *psz_var,
 {
     MainInputManager *mim = (MainInputManager*)param;
     IMEvent *event = new IMEvent( SynchronicityChanged_Type );
+    QApplication::postEvent( mim, event );
+    return VLC_SUCCESS;
+}
+
+static int SynchronicityUserChanged (vlc_object_t *p_this, const char *psz_var,
+                                vlc_value_t oldval, vlc_value_t newval, void *param )
+{
+    MainInputManager *mim = (MainInputManager*)param;
+    IMEvent *event = new IMEvent( SynchronicityUserChanged_Type );
     QApplication::postEvent( mim, event );
     return VLC_SUCCESS;
 }

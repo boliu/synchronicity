@@ -65,6 +65,7 @@ enum {
     LeafToParent_Type,
     EPGEvent_Type,
     SynchronicityChanged_Type,
+    SynchronicityUserChanged_Type,
 /*    SignalChanged_Type, */
 
     FullscreenControlToggle_Type = QEvent::User + IMEventType + 20,
@@ -292,6 +293,7 @@ signals:
     void inputChanged( input_thread_t * );
     void volumeChanged();
     void synchronicityChanged(int messageId);
+    void synchronicityUserChanged(char* name);
     void soundMuteChanged();
     void playlistItemAppended( int itemId, int parentId );
     void playlistItemRemoved( int itemId );

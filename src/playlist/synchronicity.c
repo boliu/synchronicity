@@ -198,7 +198,11 @@ static void SynConnectCallback(int rv, void* param) {
     SynBreakConnection(p_playlist);
     return;
   }
-  char *username = var_GetString( (playlist_t*)(param), "synchronicity-user");
+
+  var_SetInteger( p_playlist, "synchronicity", CONNECT_SUCCESS);
+  pl_priv(param)->b_syn_can_send = true;
+
+  char *username = pl_priv(p_playlist)->psz_syn_user;
 
   SynCommand syn;
   syn.type = SYNCOMMAND_MYNAMEIS;
@@ -206,8 +210,6 @@ static void SynConnectCallback(int rv, void* param) {
 
   SendSynCommand(p_playlist, syn);
 
-  var_SetInteger( p_playlist, "synchronicity", CONNECT_SUCCESS);
-  pl_priv(param)->b_syn_can_send = true;
 }
 
 void playlist_SynConnect(playlist_t * p_playlist, const char* addr) {
@@ -290,7 +292,7 @@ static void SynClientConnectedCallback(int rv, void* param) {
       return;
     }
   }
-  char *username = var_GetString( (playlist_t*)(param), "synchronicity-user");
+  char *username = pl_priv(p_playlist)->psz_syn_user;
 
   SynCommand syn;
   syn.type = SYNCOMMAND_MYNAMEIS;

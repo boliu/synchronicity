@@ -186,6 +186,7 @@ private:
     QLineEdit *connectionKey;
     QGridLayout *synchLayout;
     QWidget *synchWidget;
+    QLabel *synchronicityUser;
 
 #ifdef WIN32
     HIMAGELIST himl;
@@ -218,6 +219,7 @@ public slots:
                        unsigned *pi_width, unsigned *pi_height );
     void releaseVideoSlot( void );
     void updateSynchronicity ( int );
+    void updateUser ( char * );
     void checkConnectionKey( const QString& );
     void clearConnectionKey( int, int );
     void resetConnectionKey();
