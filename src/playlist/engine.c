@@ -197,6 +197,9 @@ playlist_t * playlist_Create( vlc_object_t *p_parent )
       var_InheritInteger( p_parent, "synchronicity-port" );
     pl_priv(p_playlist)->psz_syn_user =
       var_InheritString( p_parent, "synchronicity-user" );
+    int threshold_in_ms = var_InheritInteger( p_parent, "synchronicity-offline-sync-threshold" );
+    if(threshold_in_ms < 20) threshold_in_ms = 20;
+    pl_priv(p_playlist)->offline_sync_threshold = threshold_in_ms * 1000;
 
     /* Fetcher */
     p->p_fetcher = playlist_fetcher_New( p_playlist );

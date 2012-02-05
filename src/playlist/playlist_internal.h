@@ -101,6 +101,7 @@ typedef struct playlist_private_t
     char*    psz_syn_user;
     int      i_syn_port;
 
+    mtime_t  offline_sync_threshold;
     mtime_t  t_wall_minus_video;
     bool     b_correcting;
     mtime_t  t_last_correction_time;

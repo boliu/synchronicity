@@ -1284,6 +1284,9 @@ static const char *const ppsz_prefres[] = {
 #define SYNCHRONICITY_USER_TEXT N_( "User handle for viewing with friend" )
 #define SYNCHRONICITY_USER_LONGTEXT N_( "Username meant for use with viewing with a friend." )
 
+#define SYNCHRONICITY_OFFLINE_SYNC_THRESHOLD_TEXT N_( "Offline Sync Threshold" )
+#define SYNCHRONICITY_OFFLINE_SYNC_THRESHOLD_LONGTEXT N_( "How close do you want the two video players to sync up to (in ms)" )
+
 static const int pi_albumart_values[] = { ALBUM_ART_WHEN_ASKED,
                                           ALBUM_ART_WHEN_PLAYED,
                                           ALBUM_ART_ALL };
@@ -2213,6 +2216,10 @@ vlc_module_begin ()
 
     add_string( "synchronicity-user", "Anonymous", SYNCHRONICITY_USER_TEXT,
                 SYNCHRONICITY_USER_LONGTEXT, true);
+
+    add_integer( "synchronicity-offline-sync-threshold", 40,
+        SYNCHRONICITY_OFFLINE_SYNC_THRESHOLD_TEXT,
+        SYNCHRONICITY_OFFLINE_SYNC_THRESHOLD_LONGTEXT, true);
 
     set_subcategory( SUBCAT_PLAYLIST_SD )
     add_string( "services-discovery", "", SD_TEXT, SD_LONGTEXT, true )

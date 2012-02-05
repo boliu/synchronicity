@@ -366,7 +366,8 @@ static int SynEventListener( vlc_object_t *p_this, const char *psz_var,
         mtime_t current_difference = current_wall - current_time;
 
         mtime_t diff_diff = current_difference - p_playlist->t_wall_minus_video;
-        if(diff_diff > 50000 || diff_diff < -50000) {
+        if(diff_diff > p_playlist->offline_sync_threshold
+          || diff_diff < -p_playlist->offline_sync_threshold) {
           p_playlist->t_last_correction_time = current_wall;
           p_playlist->last_diff_diff = (4 * diff_diff + p_playlist->last_diff_diff) / 5;
 
