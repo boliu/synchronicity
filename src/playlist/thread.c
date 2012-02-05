@@ -438,6 +438,16 @@ static int PlayItem( playlist_t *p_playlist, playlist_item_t *p_item )
         p_sys->b_syn_created = false;
         p_sys->b_syn_heartbeat = false;
 
+        p_sys->psz_syn_server_host =
+          var_InheritString( p_playlist->p_libvlc, "synchronicity-server" );
+        p_sys->i_syn_port =
+          var_InheritInteger( p_playlist->p_libvlc, "synchronicity-port" );
+        p_sys->psz_syn_user =
+          var_InheritString( p_playlist->p_libvlc, "synchronicity-user" );
+        int threshold_in_ms = var_InheritInteger( p_playlist->p_libvlc, "synchronicity-offline-sync-threshold" );
+        if(threshold_in_ms < 20) threshold_in_ms = 20;
+        p_sys->offline_sync_threshold = threshold_in_ms * 1000;
+
         var_SetAddress( p_playlist, "input-current", p_input_thread );
 
         if( input_Start( p_sys->p_input ) )
@@ -689,6 +699,8 @@ static int LoopInput( playlist_t *p_playlist )
           p_sys->b_syn_created = false;
           p_sys->b_syn_heartbeat = false;
         }
+        free(p_sys->psz_syn_server_host);
+        free(p_sys->psz_syn_user);
 
         PL_LOCK;
 

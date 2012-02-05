@@ -190,17 +190,6 @@ playlist_t * playlist_Create( vlc_object_t *p_parent )
     pl_priv(p_playlist)->b_auto_preparse =
         var_InheritBool( p_parent, "auto-preparse" );
 
-    // TODO find out if these can be read for every playlist item
-    pl_priv(p_playlist)->psz_syn_server_host =
-      var_InheritString( p_parent, "synchronicity-server" );
-    pl_priv(p_playlist)->i_syn_port =
-      var_InheritInteger( p_parent, "synchronicity-port" );
-    pl_priv(p_playlist)->psz_syn_user =
-      var_InheritString( p_parent, "synchronicity-user" );
-    int threshold_in_ms = var_InheritInteger( p_parent, "synchronicity-offline-sync-threshold" );
-    if(threshold_in_ms < 20) threshold_in_ms = 20;
-    pl_priv(p_playlist)->offline_sync_threshold = threshold_in_ms * 1000;
-
     /* Fetcher */
     p->p_fetcher = playlist_fetcher_New( p_playlist );
     if( unlikely(p->p_fetcher == NULL) )
