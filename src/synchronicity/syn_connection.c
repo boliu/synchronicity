@@ -173,7 +173,9 @@ void* syn_receive_thread(void* param) {
         }
       }
     } else {
-      (*callback)(rv, sci->estimated_rtt / 2, param, 0, 0);
+      if(SYN_DESTROYING != sci->state) {
+        (*callback)(rv, sci->estimated_rtt / 2, param, 0, 0);
+      }
     }
 
     if(rv <= 0) {
