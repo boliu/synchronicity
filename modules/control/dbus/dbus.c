@@ -140,7 +140,7 @@ static void DispatchDBusMessages( intf_thread_t *p_intf );
     "The process identifier (PID) is added to the service name: org.mpris.vlc-<pid>" )
 
 vlc_module_begin ()
-    set_shortname( N_("dbus"))
+    set_shortname( N_("DBus"))
     set_category( CAT_INTERFACE )
     set_subcategory( SUBCAT_INTERFACE_CONTROL )
     set_description( N_("D-Bus control interface") )
