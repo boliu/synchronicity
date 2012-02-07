@@ -1139,7 +1139,7 @@ AS_IF([test "${enable_mmx}" != "no"], [
   ARCH="${ARCH} mmx"
 
   AC_CACHE_CHECK([if $CC groks MMX intrinsics], [ac_cv_c_mmx_intrinsics], [
-    CFLAGS="${CFLAGS_save} -O -mmmx"
+    CFLAGS="${CFLAGS_save} -mmmx"
     AC_COMPILE_IFELSE([AC_LANG_PROGRAM([
 [#include <mmintrin.h>
 #include <stdint.h>
@@ -1226,7 +1226,7 @@ AS_IF([test "${enable_sse}" != "no"], [
   ARCH="${ARCH} sse sse2"
 
   AC_CACHE_CHECK([if $CC groks SSE2 intrinsics], [ac_cv_c_sse2_intrinsics], [
-    CFLAGS="${CFLAGS_save} -O -msse2"
+    CFLAGS="${CFLAGS_save} -msse2"
     AC_COMPILE_IFELSE([AC_LANG_PROGRAM([
 [#include <emmintrin.h>
 #include <stdint.h>
