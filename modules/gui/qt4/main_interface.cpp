@@ -448,7 +448,7 @@ void MainInterface::createMainWidget( QSettings *settings )
     CONNECT( connectionKey, textEdited ( const QString& ), this, checkConnectionKey ( const QString& ) );
     CONNECT( connectionKey, cursorPositionChanged ( int, int ), this, clearConnectionKey(int, int) );
     CONNECT( connectionKey, editingFinished(), this, resetConnectionKey() );
-    isSynchVisible = getSettings()->value( "synchronicity-bar-visible", false ).toBool();
+    isSynchVisible = getSettings()->value( "synchronicity-bar-visible", true ).toBool();
     b_connectionKeyBlanked = false;
     synchWidget->setVisible(isSynchVisible);
     hostButtonVisible();
