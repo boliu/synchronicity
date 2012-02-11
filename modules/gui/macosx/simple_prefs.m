@@ -276,6 +276,8 @@ create_toolbar_item( NSString * o_itemIdent, NSString * o_name, NSString * o_des
     [o_intf_update_ckb setTitle: _NS("Automatically check for updates")];
     [o_intf_last_update_lbl setStringValue: @""];
     [o_intf_enableGrowl_ckb setTitle: _NS("Enable Growl notifications (on playlist item change)")];
+    [o_intf_autoresize_ckb setTitle: _NS("Resize interface to the native video size")];
+    [o_intf_pauseminimized_ckb setTitle: _NS("Pause the video playback when minimized")];
 
     /* Subtitles and OSD */
     [o_osd_encoding_txt setStringValue: _NS("Default Encoding")];
@@ -435,14 +437,14 @@ static inline char * __config_GetLabel( vlc_object_t *p_this, const char *psz_na
 - (void)setupButton: (NSButton *)object forBoolValue: (const char *)name
 {
     [object setState: config_GetInt( p_intf, name )];
-    [object setToolTip: [NSString stringWithUTF8String: config_GetLabel( p_intf, name ) ?: ""]];
+    [object setToolTip: _NS(config_GetLabel( p_intf, name ) ?: "")];
 }
 
 - (void)setupField:(NSTextField *)o_object forOption:(const char *)psz_option
 {
     char *psz_tmp = config_GetPsz( p_intf, psz_option );
     [o_object setStringValue: [NSString stringWithUTF8String: psz_tmp ?: ""]];
-    [o_object setToolTip: [NSString stringWithUTF8String: config_GetLabel( p_intf, psz_option )]];
+    [o_object setToolTip: _NS(config_GetLabel( p_intf, psz_option ))];
     free( psz_tmp );
 }
 
@@ -484,6 +486,8 @@ static inline char * __config_GetLabel( vlc_object_t *p_this, const char *psz_na
         [o_intf_style_dark_bcell setState: NO];
         [o_intf_style_bright_bcell setState: YES];
     }
+    [self setupButton: o_intf_autoresize_ckb forBoolValue: "macosx-video-autoresize"];
+    [self setupButton: o_intf_pauseminimized_ckb forBoolValue: "macosx-pause-minimized"];
 
     /******************
      * audio settings *
@@ -582,7 +586,7 @@ static inline char * __config_GetLabel( vlc_object_t *p_this, const char *psz_na
     [self setupField: o_input_httpproxy_fld forOption:"http-proxy"];
     [self setupField: o_input_httpproxypwd_sfld forOption:"http-proxy-pwd"];
     [o_input_postproc_fld setIntValue: config_GetInt( p_intf, "postproc-q")];
-    [o_input_postproc_fld setToolTip: [NSString stringWithUTF8String: config_GetLabel( p_intf, "postproc-q")]];
+    [o_input_postproc_fld setToolTip: _NS(config_GetLabel( p_intf, "postproc-q"))];
 
     [self setupButton: o_input_avi_pop forIntList: "avi-index"];
 
@@ -642,7 +646,7 @@ static inline char * __config_GetLabel( vlc_object_t *p_this, const char *psz_na
     i = config_GetInt( p_intf, "freetype-opacity" );
     [o_osd_opacity_fld setIntValue: i];
     [o_osd_opacity_sld setIntValue: i];
-    [o_osd_opacity_sld setToolTip: [NSString stringWithUTF8String: config_GetLabel( p_intf, "freetype-opacity")]];
+    [o_osd_opacity_sld setToolTip: _NS(config_GetLabel( p_intf, "freetype-opacity"))];
     [o_osd_opacity_fld setToolTip: [o_osd_opacity_sld toolTip]];
     [self setupButton: o_osd_forcebold_ckb forBoolValue: "freetype-bold"];
 
@@ -817,6 +821,8 @@ static inline void save_module_list( intf_thread_t * p_intf, id object, const ch
         config_PutInt( p_intf, "macosx-mediakeys", [o_intf_mediakeys_ckb state] );
         config_PutInt( p_intf, "macosx-interfacestyle", [o_intf_style_dark_bcell state] );
         config_PutInt( p_intf, "macosx-nativefullscreenmode", [o_intf_nativefullscreen_ckb state] );
+        config_PutInt( p_intf, "macosx-pause-minimized", [o_intf_pauseminimized_ckb state] );
+        config_PutInt( p_intf, "macosx-video-autoresize", [o_intf_autoresize_ckb state] );
         if( [o_intf_enableGrowl_ckb state] == NSOnState )
         {
             tmpString = getString( "control" );
@@ -855,7 +861,8 @@ static inline void save_module_list( intf_thread_t * p_intf, id object, const ch
     if( b_audioSettingChanged )
     {
         config_PutInt( p_intf, "audio", [o_audio_enable_ckb state] );
-        config_PutInt( p_intf, "volume", [o_audio_vol_fld intValue] * AOUT_VOLUME_MAX / 200 );
+        if( [o_audio_vol_fld isEnabled] )
+            config_PutInt( p_intf, "volume", [o_audio_vol_fld intValue] * AOUT_VOLUME_MAX / 200 );
         config_PutInt( p_intf, "macosx-autosave-volume", [o_audio_autosavevol_yes_bcell state] );
         config_PutInt( p_intf, "spdif", [o_audio_spdif_ckb state] );
 

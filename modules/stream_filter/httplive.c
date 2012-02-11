@@ -1,7 +1,7 @@
 /*****************************************************************************
  * httplive.c: HTTP Live Streaming stream filter
  *****************************************************************************
- * Copyright (C) 2010-2011 M2X BV
+ * Copyright (C) 2010-2012 M2X BV
  * $Id$
  *
  * Author: Jean-Paul Saman <jpsaman _AT_ videolan _DOT_ org>
@@ -422,7 +422,7 @@ static int ChooseSegment(stream_t *s, const int current)
     int count = vlc_array_count(hls->segments);
     int i = p_sys->b_live ? count - 1 : 0;
 
-    while((i >= 0) && (i < count) && vlc_object_alive(s))
+    while((i >= 0) && (i < count))
     {
         segment_t *segment = segment_GetSegment(hls, i);
         assert(segment);
@@ -445,7 +445,7 @@ static int ChooseSegment(stream_t *s, const int current)
         if (p_sys->b_live)
             i-- ;
         else
-          i++;
+            i++;
     }
 
     msg_Info(s, "Choose segment %d/%d (sequence=%d)", wanted, count, sequence);
@@ -678,7 +678,6 @@ static int parse_SegmentInformation(hls_stream_t *hls, char *p_read, int *durati
     }
 
     /* Ignore the rest of the line */
-
     return VLC_SUCCESS;
 }
 
@@ -953,6 +952,13 @@ static int parse_Discontinuity(stream_t *s, hls_stream_t *hls, char *p_read)
     return VLC_SUCCESS;
 }
 
+static int hls_CompareStreams( const void* a, const void* b )
+{
+    hls_stream_t*   stream_a = *(hls_stream_t**)a;
+    hls_stream_t*   stream_b = *(hls_stream_t**)b;
+    return stream_a->bandwidth > stream_b->bandwidth;
+}
+
 /* The http://tools.ietf.org/html/draft-pantos-http-live-streaming-04#page-8
  * document defines the following new tags: EXT-X-TARGETDURATION,
  * EXT-X-MEDIA-SEQUENCE, EXT-X-KEY, EXT-X-PROGRAM-DATE-TIME, EXT-X-
@@ -1074,7 +1080,7 @@ static int parse_M3U8(stream_t *s, vlc_array_t *streams, uint8_t *buffer, const 
             if (p_begin >= p_end)
                 break;
 
-        } while ((err == VLC_SUCCESS) && vlc_object_alive(s));
+        } while (err == VLC_SUCCESS);
 
     }
     else
@@ -1087,7 +1093,11 @@ static int parse_M3U8(stream_t *s, vlc_array_t *streams, uint8_t *buffer, const 
         else
         {
             /* No Meta playlist used */
-            hls = hls_New(streams, 0, 0, NULL);
+            char* uri = ConstructUrl( &s->p_sys->m3u8 );
+            if (uri == NULL)
+                return VLC_EGENERIC;
+            hls = hls_New(streams, 0, 0, uri);
+            free( uri );
             if (hls)
             {
                 /* Get TARGET-DURATION first */
@@ -1150,7 +1160,7 @@ static int parse_M3U8(stream_t *s, vlc_array_t *streams, uint8_t *buffer, const 
             if (p_begin >= p_end)
                 break;
 
-        } while ((err == VLC_SUCCESS) && vlc_object_alive(s));
+        } while (err == VLC_SUCCESS);
 
         free(line);
     }
@@ -1724,35 +1734,21 @@ static void* hls_Reload(void *p_this)
 static int Prefetch(stream_t *s, int *current)
 {
     stream_sys_t *p_sys = s->p_sys;
-    int stream;
+    int stream = *current;
 
-    /* Try to pick best matching stream */;
-again:
-    stream = *current;
-
-    hls_stream_t *hls = hls_Get(p_sys->hls_stream, *current);
+    hls_stream_t *hls = hls_Get(p_sys->hls_stream, stream);
     if (hls == NULL)
         return VLC_EGENERIC;
 
-    segment_t *segment = segment_GetSegment(hls, p_sys->download.segment);
-    if (segment == NULL )
-        return VLC_EGENERIC;
-
-    if (hls_DownloadSegmentData(s, hls, segment, current) != VLC_SUCCESS)
-        return VLC_EGENERIC;
-
-    /* Found better bandwidth match, try again */
-    if (*current != stream)
-        goto again;
-
     /* Download first 2 segments of this HLS stream */
-    stream = *current;
     for (int i = 0; i < 2; i++)
     {
         segment_t *segment = segment_GetSegment(hls, p_sys->download.segment);
         if (segment == NULL )
             return VLC_EGENERIC;
 
+        /* It is useless to lock the segment here, as Prefetch is called before
+           download and playlit thread are started. */
         if (segment->data)
         {
             p_sys->download.segment++;
@@ -1991,6 +1987,10 @@ static int Open(vlc_object_t *p_this)
         goto fail;
     }
     free(buffer);
+    /* HLS standard doesn't provide any guaranty about streams
+       being sorted by bandwidth, so we sort them */
+    qsort( p_sys->hls_stream->pp_elems, p_sys->hls_stream->i_count,
+           sizeof( hls_stream_t* ), &hls_CompareStreams );
 
     /* Choose first HLS stream to start with */
     int current = p_sys->playback.stream = 0;
@@ -2009,7 +2009,6 @@ static int Open(vlc_object_t *p_this)
         msg_Err(s, "fetching first segment failed.");
         goto fail;
     }
-
 
     p_sys->download.stream = current;
     p_sys->playback.stream = current;
@@ -2113,21 +2112,23 @@ static segment_t *GetSegment(stream_t *s)
         segment = segment_GetSegment(hls, p_sys->playback.segment);
         if (segment != NULL)
         {
+            vlc_mutex_lock(&segment->lock);
             /* This segment is ready? */
             if (segment->data != NULL)
             {
+                vlc_mutex_unlock(&segment->lock);
                 p_sys->b_cache = hls->b_cache;
                 vlc_mutex_unlock(&hls->lock);
                 goto check;
             }
+            vlc_mutex_unlock(&segment->lock);
         }
         vlc_mutex_unlock(&hls->lock);
     }
 
     /* Was the HLS stream changed to another bitrate? */
-    int i_stream = 0;
     segment = NULL;
-    while(vlc_object_alive(s))
+    for (int i_stream = 0; i_stream < vlc_array_count(p_sys->hls_stream); i_stream++)
     {
         /* Is the next segment ready */
         hls_stream_t *hls = hls_Get(p_sys->hls_stream, i_stream);
@@ -2146,23 +2147,21 @@ static segment_t *GetSegment(stream_t *s)
         int i_segment = p_sys->download.segment;
         vlc_mutex_unlock(&p_sys->download.lock_wait);
 
+        vlc_mutex_lock(&segment->lock);
         /* This segment is ready? */
         if ((segment->data != NULL) &&
             (p_sys->playback.segment < i_segment))
         {
             p_sys->playback.stream = i_stream;
             p_sys->b_cache = hls->b_cache;
+            vlc_mutex_unlock(&segment->lock);
             vlc_mutex_unlock(&hls->lock);
             goto check;
         }
+        vlc_mutex_unlock(&segment->lock);
         vlc_mutex_unlock(&hls->lock);
 
         if (!p_sys->b_meta)
-            break;
-
-        /* Was the stream changed to another bitrate? */
-        i_stream++;
-        if (i_stream >= vlc_array_count(p_sys->hls_stream))
             break;
     }
     /* */
@@ -2170,6 +2169,7 @@ static segment_t *GetSegment(stream_t *s)
 
 check:
     /* sanity check */
+    assert(segment->data);
     if (segment->data->i_buffer == 0)
     {
         vlc_mutex_lock(&hls->lock);
@@ -2186,12 +2186,12 @@ check:
     return segment;
 }
 
-static int segment_RestorePos( segment_t *segment )
+static int segment_RestorePos(segment_t *segment)
 {
-    if( segment->data )
+    if (segment->data)
     {
-        uint64_t size = segment->size -segment->data->i_buffer;
-        if( size > 0 )
+        uint64_t size = segment->size - segment->data->i_buffer;
+        if (size > 0)
         {
             segment->data->i_buffer += size;
             segment->data->p_buffer -= size;
@@ -2200,10 +2200,11 @@ static int segment_RestorePos( segment_t *segment )
     return VLC_SUCCESS;
 }
 
+/* p_read might be NULL if caller wants to skip data */
 static ssize_t hls_Read(stream_t *s, uint8_t *p_read, unsigned int i_read)
 {
     stream_sys_t *p_sys = s->p_sys;
-    ssize_t copied = 0;
+    ssize_t used = 0;
 
     do
     {
@@ -2223,7 +2224,7 @@ static ssize_t hls_Read(stream_t *s, uint8_t *p_read, unsigned int i_read)
                 segment->data = NULL;
             }
             else
-                segment_RestorePos( segment );
+                segment_RestorePos(segment);
 
             p_sys->playback.segment++;
             vlc_mutex_unlock(&segment->lock);
@@ -2247,17 +2248,18 @@ static ssize_t hls_Read(stream_t *s, uint8_t *p_read, unsigned int i_read)
 
         if (len > 0)
         {
-            memcpy(p_read + copied, segment->data->p_buffer, len);
+            if (p_read) /* if NULL, then caller skips data */
+                memcpy(p_read + used, segment->data->p_buffer, len);
             segment->data->i_buffer -= len;
             segment->data->p_buffer += len;
-            copied += len;
+            used += len;
             i_read -= len;
         }
         vlc_mutex_unlock(&segment->lock);
 
-    } while ((i_read > 0) && vlc_object_alive(s));
+    } while (i_read > 0);
 
-    return copied;
+    return used;
 }
 
 static int Read(stream_t *s, void *buffer, unsigned int i_read)
@@ -2270,15 +2272,7 @@ static int Read(stream_t *s, void *buffer, unsigned int i_read)
     if (p_sys->b_error)
         return 0;
 
-    if (buffer == NULL)
-    {
-        /* caller skips data, get big enough buffer */
-        msg_Warn(s, "buffer is NULL (allocate %d)", i_read);
-        buffer = calloc(1, i_read);
-        if (buffer == NULL)
-            return 0; /* NO MEMORY left*/
-    }
-
+    /* NOTE: buffer might be NULL if caller wants to skip data */
     length = hls_Read(s, (uint8_t*) buffer, i_read);
     if (length < 0)
         return 0;
@@ -2328,6 +2322,7 @@ static int Peek(stream_t *s, const uint8_t **pp_peek, unsigned int i_peek)
             peeked = block_Realloc (peeked, 0, i_peek);
         if (peeked == NULL)
             return 0;
+        p_sys->peeked = peeked;
 
         memcpy(peeked->p_buffer, p_buff, i_buff);
         curlen = i_buff;
@@ -2338,7 +2333,7 @@ static int Peek(stream_t *s, const uint8_t **pp_peek, unsigned int i_peek)
         p_buff = peeked->p_buffer;
         *pp_peek = p_buff;
 
-        while ((curlen < i_peek) && vlc_object_alive(s))
+        while (curlen < i_peek)
         {
             nsegment = GetSegment(s);
             if (nsegment == NULL)
@@ -2419,7 +2414,6 @@ static uint64_t GetStreamSize(stream_t *s)
     return size;
 }
 
-
 static int segment_Seek(stream_t *s, const uint64_t pos)
 {
     stream_sys_t *p_sys = s->p_sys;
@@ -2443,7 +2437,7 @@ static int segment_Seek(stream_t *s, const uint64_t pos)
         return VLC_EGENERIC;
     }
     vlc_mutex_lock(&segment->lock);
-    segment_RestorePos( segment );
+    segment_RestorePos(segment);
     vlc_mutex_unlock(&segment->lock);
 
     for (int n = 0; n < count; n++)
@@ -2490,8 +2484,9 @@ static int segment_Seek(stream_t *s, const uint64_t pos)
             vlc_mutex_unlock(&hls->lock);
             return VLC_EGENERIC;
         }
+
         vlc_mutex_lock(&segment->lock);
-        segment_RestorePos( segment );
+        segment_RestorePos(segment);
         vlc_mutex_unlock(&segment->lock);
 
         /* start download at current playback segment */

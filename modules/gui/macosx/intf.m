@@ -295,7 +295,7 @@ static int InputEvent( vlc_object_t *p_this, const char *psz_var,
             break;
 
         case INPUT_EVENT_ITEM_NAME:
-            [[VLCMain sharedInstance] updateName];
+            [[VLCMain sharedInstance] performSelectorOnMainThread:@selector(updateName) withObject: nil waitUntilDone:NO];
             [[VLCMain sharedInstance] performSelectorOnMainThread:@selector(playlistUpdated) withObject: nil waitUntilDone:NO];
             break;
 
@@ -305,12 +305,12 @@ static int InputEvent( vlc_object_t *p_this, const char *psz_var,
             break;
 
         case INPUT_EVENT_DEAD:
-            [[VLCMain sharedInstance] updateName];
+            [[VLCMain sharedInstance] performSelectorOnMainThread:@selector(updateName) withObject: nil waitUntilDone:NO];
             [[VLCMain sharedInstance] performSelectorOnMainThread:@selector(updatePlaybackPosition) withObject:nil waitUntilDone:NO];
             break;
 
         case INPUT_EVENT_ABORT:
-            [[VLCMain sharedInstance] updateName];
+            [[VLCMain sharedInstance] performSelectorOnMainThread:@selector(updateName) withObject: nil waitUntilDone:NO];
             [[VLCMain sharedInstance] performSelectorOnMainThread:@selector(updatePlaybackPosition) withObject:nil waitUntilDone:NO];
             break;
 
@@ -347,7 +347,7 @@ static int PlaybackModeUpdated( vlc_object_t *p_this, const char *psz_var,
                          vlc_value_t oldval, vlc_value_t new_val, void *param )
 {
     NSAutoreleasePool * o_pool = [[NSAutoreleasePool alloc] init];
-    [[VLCMain sharedInstance] playbackModeUpdated];
+    [[VLCMain sharedInstance] performSelectorOnMainThread:@selector(playbackModeUpdated) withObject:nil waitUntilDone:NO];
 
     [o_pool release];
     return VLC_SUCCESS;
@@ -399,7 +399,7 @@ static int FullscreenChanged( vlc_object_t *p_this, const char *psz_variable,
     if (p_intf)
     {
         NSAutoreleasePool *o_pool = [[NSAutoreleasePool alloc] init];
-        [[VLCMain sharedInstance] fullscreenChanged];
+        [[VLCMain sharedInstance] performSelectorOnMainThread:@selector(fullscreenChanged) withObject:nil waitUntilDone:NO];
         [o_pool release];
     }
     return VLC_SUCCESS;
@@ -660,8 +660,8 @@ static VLCMain *_o_sharedMainInstance = nil;
 
     [[VLCMain sharedInstance] performSelectorOnMainThread:@selector(lookForCrashLog) withObject:nil waitUntilDone:NO];
 
-	/* we will need this, so let's load it here so the interface appears to be more responsive */
-	nib_open_loaded = [NSBundle loadNibNamed:@"Open" owner: NSApp];
+    /* we will need this, so let's load it here so the interface appears to be more responsive */
+    nib_open_loaded = [NSBundle loadNibNamed:@"Open" owner: NSApp];
 }
 
 - (void)initStrings
@@ -692,7 +692,6 @@ static VLCMain *_o_sharedMainInstance = nil;
         [[NSNotificationCenter defaultCenter] postNotificationName: NSApplicationWillTerminateNotification object: nil];
 
     playlist_t * p_playlist;
-    vout_thread_t * p_vout;
     int returnedValue = 0;
 
     if( !p_intf )
@@ -714,8 +713,6 @@ static VLCMain *_o_sharedMainInstance = nil;
 
     msg_Dbg( p_intf, "Terminating" );
 
-    /* Make sure the intf object is getting killed */
-    vlc_object_kill( p_intf );
     p_playlist = pl_Get( p_intf );
 
     /* unsubscribe from the interactive dialogues */
@@ -783,9 +780,6 @@ static VLCMain *_o_sharedMainInstance = nil;
     [o_mainmenu releaseRepresentedObjects:[NSApp mainMenu]];
     [o_mainmenu release];
 
-    /* Kill the playlist, so that it doesn't accept new request
-     * such as the play request from vlc.c (we are a blocking interface). */
-    vlc_object_kill( p_playlist );
     libvlc_Quit( p_intf->p_libvlc );
 
     [self setIntf:nil];
@@ -856,8 +850,8 @@ static VLCMain *_o_sharedMainInstance = nil;
 - (void)applicationDidBecomeActive:(NSNotification *)aNotification
 {
     if( !p_intf ) return;
-	if( config_GetInt( p_intf, "macosx-appleremote" ) == YES )
-		[o_remote startListening: self];
+    if( config_GetInt( p_intf, "macosx-appleremote" ) == YES )
+        [o_remote startListening: self];
 }
 - (void)applicationDidResignActive:(NSNotification *)aNotification
 {
@@ -1490,6 +1484,15 @@ unsigned int CocoaKeyToVLC( unichar i_key )
     }
 
     [[VLCMain sharedInstance] performSelectorOnMainThread:@selector(updateMainWindow) withObject: nil waitUntilDone: NO];
+    [self performSelectorOnMainThread:@selector(sendDistributedNotificationWithUpdatedPlaybackStatus) withObject: nil waitUntilDone: NO];
+}
+
+- (void)sendDistributedNotificationWithUpdatedPlaybackStatus
+{
+    [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"VLCPlayerStateDidChange"
+                                                                   object:nil
+                                                                 userInfo:nil
+                                                       deliverImmediately:YES];
 }
 
 - (void)playbackModeUpdated
@@ -1653,7 +1656,7 @@ unsigned int CocoaKeyToVLC( unichar i_key )
 
 - (id)appleRemoteController
 {
-	return o_remote;
+    return o_remote;
 }
 
 - (void)setActiveVideoPlayback:(BOOL)b_value

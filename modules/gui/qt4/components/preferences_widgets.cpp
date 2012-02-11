@@ -723,24 +723,30 @@ ModuleListConfigControl::~ModuleListConfigControl()
     delete groupBox;
 }
 
-#define CHECKBOX_LISTS \
-{ \
-        QCheckBox *cb = new QCheckBox( qtr( module_GetLongName( p_parser ) ) );\
-        checkBoxListItem *cbl = new checkBoxListItem; \
-\
-        CONNECT( cb, stateChanged( int ), this, onUpdate() );\
-        const char *help = module_get_help( p_parser ); \
-        if( help != NULL ) \
-            cb->setToolTip( formatTooltip( qtr( help ) ) ); \
-        cbl->checkBox = cb; \
-\
-        cbl->psz_module = strdup( module_get_object( p_parser ) ); \
-        modules.append( cbl ); \
-\
-        if( p_item->value.psz && strstr( p_item->value.psz, cbl->psz_module ) ) \
-            cbl->checkBox->setChecked( true ); \
+void ModuleListConfigControl::checkbox_lists( module_t *p_parser )
+{
+    const char *help = module_get_help( p_parser );
+    checkbox_lists( qtr( module_GetLongName( p_parser ) ),
+                    help != NULL ? qtr( help ): "",
+                    module_get_object( p_parser ) );
 }
 
+void ModuleListConfigControl::checkbox_lists( QString label, QString help, const char* psz_module )
+{
+    QCheckBox *cb = new QCheckBox( label );
+    checkBoxListItem *cbl = new checkBoxListItem;
+
+    CONNECT( cb, stateChanged( int ), this, onUpdate() );
+    if( !help.isEmpty() )
+        cb->setToolTip( formatTooltip( help ) );
+    cbl->checkBox = cb;
+
+    cbl->psz_module = strdup( psz_module );
+    modules.append( cbl );
+
+    if( p_item->value.psz && strstr( p_item->value.psz, cbl->psz_module ) )
+        cbl->checkBox->setChecked( true );
+}
 
 void ModuleListConfigControl::finish( bool bycat )
 {
@@ -764,14 +770,29 @@ void ModuleListConfigControl::finish( bool bycat )
                 if( p_cfg->i_type == CONFIG_SUBCATEGORY &&
                         p_cfg->value.i == p_item->min.i )
                 {
-                    CHECKBOX_LISTS;
+                    checkbox_lists( p_parser );
+                }
+
+                /* Parental Advisory HACK:
+                 * Selecting HTTP, RC and Telnet interfaces is difficult now
+                 * since they are just the lua interface module */
+                if( p_cfg->i_type == CONFIG_SUBCATEGORY &&
+                    !strcmp( module_get_object( p_parser ), "lua" ) &&
+                    !strcmp( p_item->psz_name, "extraintf" ) &&
+                    p_cfg->value.i == p_item->min.i )
+                {
+                    checkbox_lists( "Web", "Lua HTTP", "http" );
+                    checkbox_lists( "Telnet", "Lua Telnet", "telnet" );
+#ifndef WIN32
+                    checkbox_lists( "Console", "Lua CLI", "cli" );
+#endif
                 }
             }
             module_config_free (p_config);
         }
         else if( module_provides( p_parser, p_item->psz_type ) )
         {
-            CHECKBOX_LISTS;
+            checkbox_lists(p_parser);
         }
     }
     module_list_free( p_list );
@@ -785,7 +806,6 @@ void ModuleListConfigControl::finish( bool bycat )
         groupBox->setToolTip( formatTooltip(tipText) );
    }
 }
-#undef CHECKBOX_LISTS
 
 QString ModuleListConfigControl::getValue() const
 {

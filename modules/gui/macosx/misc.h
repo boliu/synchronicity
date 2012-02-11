@@ -77,6 +77,8 @@
 
 /* animate mode is only supported in >=10.4 */
 - (void)closeAndAnimate: (BOOL)animate;
+
+- (BOOL)isFullscreen;
 @end
 
 
@@ -151,7 +153,10 @@
 
 @interface VLCTimeField : NSTextField
 {
+    NSShadow * o_string_shadow;
+    NSDictionary * o_string_attributes_dict;
 }
+
 - (BOOL)timeRemaining;
 @end
 

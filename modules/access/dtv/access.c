@@ -232,7 +232,8 @@ vlc_module_begin ()
     add_shortcut ("dtv", "tv", "dvb", /* "radio", "dab",*/
                   "cable", "dvb-c", "cqam", "isdb-c",
                   "satellite", "dvb-s", "dvb-s2", "isdb-s",
-                  "terrestrial", "dvb-t", "dvb-t2", "isdb-t", "atsc")
+                  "terrestrial", "dvb-t", "dvb-t2", "isdb-t", "atsc",
+                  "dvbt")
 
 #ifdef __linux__
     add_integer ("dvb-adapter", 0, ADAPTER_TEXT, ADAPTER_LONGTEXT, false)
@@ -362,14 +363,14 @@ vlc_module_begin ()
 #endif
     add_integer ("dvb-lnb-low", 0, LNB_LOW_TEXT, LNB_LONGTEXT, true)
         change_integer_range (0, 0x7fffffff)
-    add_obsolete_integer ("dvb-lnb-lof1") /* since 1.2.0 */
+    add_obsolete_integer ("dvb-lnb-lof1") /* since 2.0.0 */
     add_integer ("dvb-lnb-high", 0, LNB_HIGH_TEXT, LNB_LONGTEXT, true)
         change_integer_range (0, 0x7fffffff)
-    add_obsolete_integer ("dvb-lnb-lof2") /* since 1.2.0 */
+    add_obsolete_integer ("dvb-lnb-lof2") /* since 2.0.0 */
     add_integer ("dvb-lnb-switch", 11700000,
                  LNB_SWITCH_TEXT, LNB_SWITCH_LONGTEXT, true)
         change_integer_range (0, 0x7fffffff)
-    add_obsolete_integer ("dvb-lnb-slof") /* since 1.2.0 */
+    add_obsolete_integer ("dvb-lnb-slof") /* since 2.0.0 */
 #ifdef __linux__
     add_integer ("dvb-satno", 0, SATNO_TEXT, SATNO_LONGTEXT, true)
         change_integer_list (satno_vlc, satno_user)

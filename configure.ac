@@ -2,12 +2,12 @@ dnl Autoconf settings for vlc
 
 AC_COPYRIGHT([Copyright 2002-2012 VLC authors and VideoLAN])
 
-AC_INIT(vlc, 2.0.0-rc1)
+AC_INIT(vlc, 2.0.0)
 VERSION_MAJOR=2
 VERSION_MINOR=0
 VERSION_REVISION=0
 VERSION_EXTRA=0
-VERSION_DEV=rc1
+VERSION_DEV=
 
 PKGDIR="vlc"
 AC_SUBST(PKGDIR)
@@ -1139,7 +1139,7 @@ AS_IF([test "${enable_mmx}" != "no"], [
   ARCH="${ARCH} mmx"
 
   AC_CACHE_CHECK([if $CC groks MMX intrinsics], [ac_cv_c_mmx_intrinsics], [
-    CFLAGS="${CFLAGS_save} -O -mmmx"
+    CFLAGS="${CFLAGS_save} -mmmx"
     AC_COMPILE_IFELSE([AC_LANG_PROGRAM([
 [#include <mmintrin.h>
 #include <stdint.h>
@@ -1226,7 +1226,7 @@ AS_IF([test "${enable_sse}" != "no"], [
   ARCH="${ARCH} sse sse2"
 
   AC_CACHE_CHECK([if $CC groks SSE2 intrinsics], [ac_cv_c_sse2_intrinsics], [
-    CFLAGS="${CFLAGS_save} -O -msse2"
+    CFLAGS="${CFLAGS_save} -msse2"
     AC_COMPILE_IFELSE([AC_LANG_PROGRAM([
 [#include <emmintrin.h>
 #include <stdint.h>
@@ -3071,11 +3071,7 @@ AS_IF([test "${enable_xcb}" != "no"], [
     AS_IF([test "${have_gl}" != "yes"], [
       AC_MSG_ERROR([${GL_PKG_ERRORS}. Pass --disable-glx if you do not need OpenGL X11 support.])
     ])
-    PKG_CHECK_MODULES(XLIB_XCB, [x11-xcb], [
-      VLC_ADD_PLUGIN([xcb_glx])
-    ], [
-      AC_MSG_ERROR([${XLIB_XCB_PKG_ERRORS}. Pass --disable-glx if you do not need OpenGL X11 support.])
-    ])
+    VLC_ADD_PLUGIN([xcb_glx])
   ])
 ])
 AM_CONDITIONAL([HAVE_XCB], [test "${have_xcb}" = "yes"])
@@ -4220,7 +4216,6 @@ AC_CONFIG_FILES([
   modules/access/Makefile
   modules/access/bd/Makefile
   modules/access/dshow/Makefile
-  modules/access/dvb/Makefile
   modules/access/mms/Makefile
   modules/access/rtp/Makefile
   modules/access/rtsp/Makefile

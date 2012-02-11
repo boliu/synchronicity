@@ -47,12 +47,9 @@
 #include <vlc_dialog.h>
 #include "opengl.h"
 
-#ifndef MAC_OS_X_VERSION_10_7
-enum {
-    NSApplicationPresentationFullScreen                 = (1 << 10),
-    NSApplicationPresentationAutoHideToolbar            = (1 << 11)
-};
-#endif
+@interface NSWindow (VLCCustomCode)
+- (BOOL)isFullscreen;
+@end
 
 /**
  * Forward declarations
@@ -331,14 +328,19 @@ static int Control (vout_display_t *vd, int query, va_list ap)
         }
         case VOUT_DISPLAY_CHANGE_DISPLAY_FILLED:
         {
-            [[sys->glView window] performSelectorOnMainThread:@selector(zoom:) withObject: nil waitUntilDone:NO];
+            [[sys->glView window] performSelectorOnMainThread:@selector(performZoom:) withObject: nil waitUntilDone:NO];
             return VLC_SUCCESS;
         }
-        case VOUT_DISPLAY_CHANGE_DISPLAY_SIZE:
         case VOUT_DISPLAY_CHANGE_ZOOM:
         case VOUT_DISPLAY_CHANGE_SOURCE_ASPECT:
         case VOUT_DISPLAY_CHANGE_SOURCE_CROP:
+        case VOUT_DISPLAY_CHANGE_DISPLAY_SIZE:
         {
+            if (!config_GetInt( vd, "macosx-video-autoresize" ))
+                return VLC_SUCCESS;
+
+            [sys->glView performSelectorOnMainThread:@selector(reshapeView:) withObject:nil waitUntilDone:NO];
+
             NSAutoreleasePool * o_pool = [[NSAutoreleasePool alloc] init];
             NSPoint topleftbase;
             NSPoint topleftscreen;
@@ -496,7 +498,7 @@ static void OpenglSwap(vlc_gl_t *gl)
  */
 - (void)setWindowFrameWithValue:(NSValue *)value
 {
-    if (!(NSAppKitVersionNumber >= 1115.2 && [NSApp currentSystemPresentationOptions] == NSApplicationPresentationFullScreen))
+    if (![[self window] isFullscreen])
     {
         NSRect frame = [value rectValue];
         if (frame.origin.x <= 0.0 && frame.origin.y <= 0.0)
@@ -594,6 +596,11 @@ static void OpenglSwap(vlc_gl_t *gl)
     }
     else
         glClear(GL_COLOR_BUFFER_BIT);
+}
+
+- (void)reshapeView:(id)sender
+{
+    [self reshape];
 }
 
 /**

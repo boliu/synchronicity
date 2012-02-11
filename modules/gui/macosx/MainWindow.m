@@ -214,7 +214,6 @@ static VLCMainWindow *_o_sharedInstance = nil;
         o_shuffle_pressed_img = [[NSImage imageNamed:@"shuffle-pressed_dark"] retain];
         o_shuffle_on_img = [[NSImage imageNamed:@"shuffle-blue_dark"] retain];
         o_shuffle_on_pressed_img = [[NSImage imageNamed:@"shuffle-blue-pressed_dark"] retain];
-        [o_time_fld setTextColor: [NSColor colorWithCalibratedRed:229.0 green:229.0 blue:229.0 alpha:100.0]];
         [o_time_sld_background setImagesLeft: [NSImage imageNamed:@"progression-track-wrapper-left_dark"] middle: [NSImage imageNamed:@"progression-track-wrapper-middle_dark"] right: [NSImage imageNamed:@"progression-track-wrapper-right_dark"]];
         [o_volume_down_btn setImage: [NSImage imageNamed:@"volume-low_dark"]];
         [o_volume_track_view setImage: [NSImage imageNamed:@"volume-slider-track_dark"]];
@@ -765,8 +764,11 @@ static VLCMainWindow *_o_sharedInstance = nil;
     if (b_dark_interface)
     {
         [self miniaturize: sender];
-        if ([[VLCMain sharedInstance] activeVideoPlayback])
-            [[VLCCoreInteraction sharedInstance] pause];
+        if (config_GetInt( VLCIntf, "macosx-pause-minimized" ))
+        {
+            if ([[VLCMain sharedInstance] activeVideoPlayback])
+                [[VLCCoreInteraction sharedInstance] pause];
+        }
     }
     else
         [super performMiniaturize: sender];
@@ -889,7 +891,6 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
 - (void)windowResizedOrMoved:(NSNotification *)notification
 {
-    previousSavedFrame = [self frame];
     [self saveFrameUsingName: [self frameAutosaveName]];
 }
 
@@ -909,10 +910,13 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
 - (void)someWindowWillMiniaturize:(NSNotification *)notification
 {
-    if([notification object] == o_nonembedded_window || [notification object] == self)
+    if (config_GetInt( VLCIntf, "macosx-pause-minimized" ))
     {
-        if([[VLCMain sharedInstance] activeVideoPlayback])
-            [[VLCCoreInteraction sharedInstance] pause];
+        if([notification object] == o_nonembedded_window || [notification object] == self)
+        {
+            if([[VLCMain sharedInstance] activeVideoPlayback])
+                [[VLCCoreInteraction sharedInstance] pause];
+        }
     }
 }
 
@@ -1074,7 +1078,8 @@ static VLCMainWindow *_o_sharedInstance = nil;
         //FIXME! b_chapters = p_input->stream.i_area_nb > 1;
 
         if (cachedInputState == PLAYING_S || b_buffering == YES)
-            [self makeKeyAndOrderFront: nil];
+            [[o_video_view window] makeKeyAndOrderFront: nil];
+
         vlc_object_release( p_input );
     }
 
@@ -1360,8 +1365,8 @@ static VLCMainWindow *_o_sharedInstance = nil;
         /* We can't change the styleMask of an already created NSWindow, so we create another window, and do eye catching stuff */
 
         rect = [[o_video_view superview] convertRect: [o_video_view frame] toView: nil]; /* Convert to Window base coord */
-        rect.origin.x += [self frame].origin.x;
-        rect.origin.y += [self frame].origin.y;
+        rect.origin.x += [[o_video_view window] frame].origin.x;
+        rect.origin.y += [[o_video_view window] frame].origin.y;
         o_fullscreen_window = [[VLCWindow alloc] initWithContentRect:rect styleMask: NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:YES];
         [o_fullscreen_window setBackgroundColor: [NSColor blackColor]];
         [o_fullscreen_window setCanBecomeKeyWindow: YES];
@@ -1592,8 +1597,9 @@ static VLCMainWindow *_o_sharedInstance = nil;
     }
 
     frame = [[o_temp_view superview] convertRect: [o_temp_view frame] toView: nil]; /* Convert to Window base coord */
-    frame.origin.x += [self frame].origin.x;
-    frame.origin.y += [self frame].origin.y;
+    id targetWindow = b_nonembedded ? o_nonembedded_window : self;
+    frame.origin.x += [targetWindow frame].origin.x;
+    frame.origin.y += [targetWindow frame].origin.y;
 
     dict2 = [[NSMutableDictionary alloc] initWithCapacity:2];
     [dict2 setObject:self forKey:NSViewAnimationTargetKey];
