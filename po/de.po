@@ -4,7 +4,7 @@
 # Thanks to Thomas Graf <tgr at reeler.org> for starting a translation in 2002.
 # Thanks to Philipp Weissenbacher <philippweissenbacher _at_ aon.at> for various fixes in 2004.
 # Thanks to Jens Seidel <jensseidel _at_ users.sf.net> for some minor fixes in 2005.
-# Felix Kühne <fkuehne at users.sf.net>, 2003-2009.
+# Felix Kühne <fkuehne at users.sf.net>, 2003-2012.
 # Mathias C. Berens | welcome-soft <berens at welcome-soft.de>, 2006.
 # Kai Hermann <kai.uwe.hermann@gmail.com>, 2009
 # Michał Trzebiatowski <hippie_1968@hotmail.com>, 2010
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-01-25 00:33+0100\n"
 "PO-Revision-Date: 2012-01-29 17:51+0100\n"
-"Last-Translator: Christoph Miebach <christoph.miebach@web.de>\n"
+"Last-Translator: Felix Kühne <fkuehne@videolan.org>\n"
 "Language-Team: German (http://www.transifex.net/projects/p/vlc-trans/team/"
 "de/)\n"
 "Language: de\n"
@@ -9405,12 +9405,11 @@ msgstr "Die globale Verstärkung in dB einstellen (-20 ... 20)."
 #: modules/audio_filter/compressor.c:179 modules/gui/macosx/AudioEffects.m:103
 #: modules/gui/qt4/dialogs/extended.cpp:67
 msgid "Compressor"
-msgstr "Verdichter"
+msgstr "Compressor"
 
 #: modules/audio_filter/compressor.c:180
-#, fuzzy
 msgid "Dynamic range compressor"
-msgstr "A/52-Dynamic Range-Kompression"
+msgstr "Dynamic Range Compressor"
 
 #: modules/audio_filter/converter/a52tofloat32.c:82
 msgid "A/52 dynamic range compression"
@@ -15789,9 +15788,8 @@ msgstr "Vorverstärker"
 
 #: modules/gui/macosx/AudioEffects.m:77
 #: modules/gui/qt4/components/extended_panels.cpp:1199
-#, fuzzy
 msgid "Enable dynamic range compressor"
-msgstr "A/52-Dynamic Range-Kompression"
+msgstr "Dynamic Range Compressor aktivieren"
 
 #: modules/gui/macosx/AudioEffects.m:78 modules/gui/macosx/AudioEffects.m:89
 #: modules/gui/macosx/TrackSynchronization.m:53
@@ -15818,7 +15816,6 @@ msgid "Threshold"
 msgstr "Farb-Grenzbereich"
 
 #: modules/gui/macosx/AudioEffects.m:88
-#, fuzzy
 msgid "Enable Spatializer"
 msgstr "Spatializer aktivieren"
 
@@ -16751,6 +16748,9 @@ msgid ""
 "video devices.\n"
 "Live Audio input is not supported."
 msgstr ""
+"Diese Funktion erlaubt die Signalverarbeitung von QuickTime-kompatiblen "
+"Videogeräten.\n"
+"Live-Audio wird derzeit nicht unterstützt."
 
 #: modules/gui/macosx/open.m:209
 msgid "Image width:"
@@ -17279,6 +17279,8 @@ msgid ""
 "More options on background, shadow and outline are available in the advanced "
 "preferences."
 msgstr ""
+"Mehr Optionen zu Hintergrund, Schatten und Umrahmung stehen in den "
+"fortgeschrittenen Einstellungen zur Verfügung."
 
 #: modules/gui/macosx/simple_prefs.m:294
 msgid "Black screens in Fullscreen mode"
@@ -17442,7 +17444,6 @@ msgid "Geometry"
 msgstr "Geometrie"
 
 #: modules/gui/macosx/VideoEffects.m:74
-#, fuzzy
 msgid "Image Adjust"
 msgstr "Bildjustierung"
 
@@ -17465,7 +17466,7 @@ msgstr "Sigma"
 #: modules/gui/macosx/VideoEffects.m:84
 #: modules/gui/qt4/ui/video_effects.h:1306
 msgid "Banding removal"
-msgstr ""
+msgstr "Bänderung entfernen"
 
 #: modules/gui/macosx/VideoEffects.m:85 modules/video_filter/gradfun.c:47
 #: modules/gui/qt4/ui/video_effects.h:1307
@@ -17474,9 +17475,8 @@ msgstr "Radius"
 
 #: modules/gui/macosx/VideoEffects.m:86
 #: modules/gui/qt4/ui/video_effects.h:1308
-#, fuzzy
 msgid "Film Grain"
-msgstr "Körnungs-Videofilter"
+msgstr "Filmkörnung"
 
 #: modules/gui/macosx/VideoEffects.m:87 modules/video_filter/grain.c:53
 #: modules/gui/qt4/ui/video_effects.h:1309
@@ -17540,9 +17540,8 @@ msgid "Columns"
 msgstr "Spalten"
 
 #: modules/gui/macosx/VideoEffects.m:111
-#, fuzzy
 msgid "Black Slot"
-msgstr "Schwarzer Slot"
+msgstr "Schwarze Aussparung"
 
 #: modules/gui/macosx/VideoEffects.m:113 modules/video_filter/colorthres.c:70
 #: modules/gui/qt4/ui/video_effects.h:1331
