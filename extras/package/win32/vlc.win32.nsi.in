@@ -815,7 +815,7 @@ UAC_Success:
   StrCmp $LANGUAGE ${LANG_JAPANESE} Japanese 0
 ;  StrCmp $LANGUAGE ${LANG_BENGALI} Bengali 0
 ;  StrCmp $LANGUAGE ${LANG_PUNJABI} Punjabi 0
-;  StrCmp $LANGUAGE ${LANG_SLOVENIAN} Slovenian 0
+  StrCmp $LANGUAGE ${LANG_SLOVENIAN} Slovenian 0
   StrCmp $LANGUAGE ${LANG_SPANISH} Spanish 0
   StrCmp $LANGUAGE ${LANG_ESTONIAN} Estonian 0
   StrCmp $LANGUAGE ${LANG_LITHUANIAN} Lithuanian 0
@@ -825,6 +825,7 @@ UAC_Success:
   StrCmp $LANGUAGE ${LANG_HEBREW} Hebrew 0
   StrCmp $LANGUAGE ${LANG_GALICIAN} Galician 0
   StrCmp $LANGUAGE ${LANG_SWEDISH} Swedish 0
+  StrCmp $LANGUAGE ${LANG_CROATIAN} Croatian 0
   StrCmp $LANGUAGE ${LANG_PORTUGUESEBR} Brazilian EndLanguageCmp
   French:
   !include "languages\french.nsh"
@@ -893,7 +894,7 @@ UAC_Success:
   !include "languages\serbian.nsh"
   Goto EndLanguageCmp
   Russian:
-  !include "languages\Russian.nsh"
+  !include "languages\russian.nsh"
   Goto EndLanguageCmp
   Hebrew:
   !include "languages\hebrew.nsh"
@@ -903,6 +904,9 @@ UAC_Success:
   Goto EndLanguageCmp
   Swedish:
   !include "languages\swedish.nsh"
+  Goto EndLanguageCmp
+  Croatian:
+  !include "languages\croatian.nsh"
   Goto EndLanguageCmp
   Brazilian:
   !include "languages\brazilian_portuguese.nsh"
@@ -1181,7 +1185,7 @@ UAC_Success:
   StrCmp $LANGUAGE ${LANG_JAPANESE} Japanese 0
 ;  StrCmp $LANGUAGE ${LANG_BENGALI} Bengali 0
 ;  StrCmp $LANGUAGE ${LANG_PUNJABI} Punjabi 0
-;  StrCmp $LANGUAGE ${LANG_SLOVENIAN} Slovenian 0
+  StrCmp $LANGUAGE ${LANG_SLOVENIAN} Slovenian 0
   StrCmp $LANGUAGE ${LANG_SPANISH} Spanish 0
   StrCmp $LANGUAGE ${LANG_ESTONIAN} Estonian 0
   StrCmp $LANGUAGE ${LANG_LITHUANIAN} Lithuanian 0
@@ -1191,6 +1195,7 @@ UAC_Success:
   StrCmp $LANGUAGE ${LANG_HEBREW} Hebrew 0
   StrCmp $LANGUAGE ${LANG_GALICIAN} Galician 0
   StrCmp $LANGUAGE ${LANG_SWEDISH} Swedish 0
+  StrCmp $LANGUAGE ${LANG_CROATIAN} Croatian 0
   StrCmp $LANGUAGE ${LANG_PORTUGUESEBR} Brazilian EndLanguageCmp
   French:
   !include "languages\french.nsh"
@@ -1269,7 +1274,10 @@ UAC_Success:
   Goto EndLanguageCmp
   Swedish:
   !include "languages\swedish.nsh"
-  Goto EndLanguageCmp
+  Goto endlanguagecmp
+  Croatian:
+  !include "languages\croatian.nsh"
+  Goto endlanguagecmp
   Brazilian:
   !include "languages\brazilian_portuguese.nsh"
   EndLanguageCmp:
