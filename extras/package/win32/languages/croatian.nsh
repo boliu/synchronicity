@@ -1,15 +1,15 @@
-Var Name_Section01 "Izvoðaè VLC (obvezatno)"
-Var Name_Section02a "Preèica u poèetnom izborniku"
-Var Name_Section02b "Preèica na radnoj plohi"
-Var Name_Section03 "Dodatak za Mozillu "
-Var Name_Section04 "Dodatak za ActiveX"
-Var Name_Section05 "Izvedba CD- i DVD-diskova"
-Var Name_Section06 "Povezivanja vrsta datoteka"
-Var Name_SectionGroupAudio "Zvuène datoteke"
-Var Name_SectionGroupVideo "Video datoteke"
-Var Name_SectionGroupOther "Ostalo"
-Var Name_Section07 "Kontekstni izbornik"
-Var Name_Section08 "Izbrisati postavke i sadržaj priruènog spremnika"
+StrCpy $Name_Section01 "Izvoðaè VLC (obvezatno)"
+StrCpy $Name_Section02a "Preèica u poèetnom izborniku"
+StrCpy $Name_Section02b "Preèica na radnoj plohi"
+StrCpy $Name_Section03 "Dodatak za Mozillu "
+StrCpy $Name_Section04 "Dodatak za ActiveX"
+StrCpy $Name_Section05 "Izvedba CD- i DVD-diskova"
+StrCpy $Name_Section06 "Povezivanja vrsta datoteka"
+StrCpy $Name_SectionGroupAudio "Zvuène datoteke"
+StrCpy $Name_SectionGroupVideo "Video datoteke"
+StrCpy $Name_SectionGroupOther "Ostalo"
+StrCpy $Name_Section07 "Kontekstni izbornik"
+StrCpy $Name_Section08 "Izbrisati postavke i sadržaj priruènog spremnika"
 
 StrCpy $Desc_Section01 \
     "Medijski izvoðaè"
@@ -61,13 +61,12 @@ StrCpy $Action_OnArrivalMusicFiles "Izvedba audio datoteka"
 StrCpy $Action_OnArrivalDVDAudio "Izvedba audio zapisa s DVD-a"
 
 
-Var ShellAssociation_Play "Izvedba"
-Var ContextMenuEntry_PlayWith "Izvedba izvoðaèem medija VLC"
-Var ContextMenuEntry_AddToPlaylist "Pridodati VLC-ovom popisu izvedbi"
+StrCpy $ShellAssociation_Play "Izvedba"
+StrCpy $ContextMenuEntry_PlayWith "Izvedba izvoðaèem medija VLC"
+StrCpy $ContextMenuEntry_AddToPlaylist "Pridodati VLC-ovom popisu izvedbi"
 
 
-
-Var Action_OnArrivalMusicFiles "Izvedba audio datoteka"
-Var Action_OnArrivalDVDAudio "Izvedba video zapisa s DVD-a"
+StrCpy $Action_OnArrivalMusicFiles "Izvedba audio datoteka"
+StrCpy $Action_OnArrivalDVDAudio "Izvedba video zapisa s DVD-a"
 
 StrCpy $License_NextText "Ovim ste obaviješteni o Vašim pravima. Za nastavak pritistine gumb 'Slijedeæe'."
