@@ -128,15 +128,16 @@ void* syn_receive_thread(void* param) {
                 sample_rtt) / SYNC_ALPHA_INVERSE;
           }
           mtime_t new_delta_t = current_mdate - sample_rtt / 2 - header.timestamp_sync;
+          mtime_t cs = (sample_rtt * sample_rtt) >> 14;
           if(sci->delta_t_initialized) {
             // complicated math follows...doing a weighted sum of new_delta_t and old delta_t
-            sci->delta_t = (new_delta_t * sci->delta_t_confidence + sci->delta_t * sample_rtt) /
-              (sci->delta_t_confidence + sample_rtt);
-            sci->delta_t_confidence = (sample_rtt * sci->delta_t_confidence + sample_rtt * sci->delta_t_confidence) /
-              (sci->delta_t_confidence + sample_rtt);
+            sci->delta_t = (new_delta_t * sci->delta_t_confidence + sci->delta_t * cs) /
+              (sci->delta_t_confidence + cs);
+            sci->delta_t_confidence = (2 * sci->delta_t_confidence * cs) /
+              (sci->delta_t_confidence + cs);
           } else {
             sci->delta_t = new_delta_t;
-            sci->delta_t_confidence = sample_rtt;
+            sci->delta_t_confidence = cs;
             sci->delta_t_initialized = 1;
           }
           if(sci->peer_connect_callback &&
