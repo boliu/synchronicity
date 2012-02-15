@@ -132,7 +132,7 @@ void* syn_receive_thread(void* param) {
             // complicated math follows...doing a weighted sum of new_delta_t and old delta_t
             sci->delta_t = (new_delta_t * sci->delta_t_confidence + sci->delta_t * sample_rtt) /
               (sci->delta_t_confidence + sample_rtt);
-            sci->delta_t_confidence = (sample_rtt * sample_rtt + sci->delta_t_confidence * sci->delta_t_confidence) /
+            sci->delta_t_confidence = (sample_rtt * sci->delta_t_confidence + sample_rtt * sci->delta_t_confidence) /
               (sci->delta_t_confidence + sample_rtt);
           } else {
             sci->delta_t = new_delta_t;
