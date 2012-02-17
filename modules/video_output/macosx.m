@@ -334,12 +334,14 @@ static int Control (vout_display_t *vd, int query, va_list ap)
         case VOUT_DISPLAY_CHANGE_ZOOM:
         case VOUT_DISPLAY_CHANGE_SOURCE_ASPECT:
         case VOUT_DISPLAY_CHANGE_SOURCE_CROP:
+            return VLC_SUCCESS;
         case VOUT_DISPLAY_CHANGE_DISPLAY_SIZE:
         {
+            // is needed in the case we do not an actual resize
+            [sys->glView performSelectorOnMainThread:@selector(reshapeView:) withObject:nil waitUntilDone:NO];
+
             if (!config_GetInt( vd, "macosx-video-autoresize" ))
                 return VLC_SUCCESS;
-
-            [sys->glView performSelectorOnMainThread:@selector(reshapeView:) withObject:nil waitUntilDone:NO];
 
             NSAutoreleasePool * o_pool = [[NSAutoreleasePool alloc] init];
             NSPoint topleftbase;

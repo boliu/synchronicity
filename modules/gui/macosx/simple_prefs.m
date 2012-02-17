@@ -437,7 +437,19 @@ static inline char * __config_GetLabel( vlc_object_t *p_this, const char *psz_na
 - (void)setupButton: (NSButton *)object forBoolValue: (const char *)name
 {
     [object setState: config_GetInt( p_intf, name )];
-    [object setToolTip: _NS(config_GetLabel( p_intf, name ) ?: "")];
+
+    char * psz_label = config_GetLabel( p_intf, name );
+    NSString * o_label;
+
+    if (psz_label)
+    {
+        o_label = _NS(psz_label);
+        free( psz_label );
+    }
+    else
+        o_label = @"";
+
+    [object setToolTip: o_label];
 }
 
 - (void)setupField:(NSTextField *)o_object forOption:(const char *)psz_option
@@ -603,24 +615,20 @@ static inline char * __config_GetLabel( vlc_object_t *p_this, const char *psz_na
     [[o_input_cachelevel_pop itemAtIndex: 1] setTag: 100];
     [[o_input_cachelevel_pop itemAtIndex: 2] setTag: 200];
     [[o_input_cachelevel_pop itemAtIndex: 3] setTag: 300];
-    [[o_input_cachelevel_pop itemAtIndex: 4] setTag: 400];
-    [[o_input_cachelevel_pop itemAtIndex: 5] setTag: 500];
+    [[o_input_cachelevel_pop itemAtIndex: 4] setTag: 500];
+    [[o_input_cachelevel_pop itemAtIndex: 5] setTag: 1000];
 
-#define TestCaC( name ) \
+    #define TestCaC( name, factor ) \
     b_cache_equal =  b_cache_equal && \
-        ( i_cache == config_GetInt( p_intf, name ) )
-
-#define TestCaCi( name, int ) \
-        b_cache_equal = b_cache_equal &&  \
-        ( ( i_cache * int ) == config_GetInt( p_intf, name ) )
+    ( i_cache * factor == config_GetInt( p_intf, name ) );
 
     /* Select the accurate value of the PopupButton */
     bool b_cache_equal = true;
     int i_cache = config_GetInt( p_intf, "file-caching");
 
-    TestCaC( "network-caching" );
-    TestCaC( "disc-caching" );
-    TestCaC( "live-caching" );
+    TestCaC( "network-caching", 10/3 );
+    TestCaC( "disc-caching", 1 );
+    TestCaC( "live-caching", 1 );
     if( b_cache_equal )
     {
         [o_input_cachelevel_pop selectItemWithTag: i_cache];
@@ -631,6 +639,7 @@ static inline char * __config_GetLabel( vlc_object_t *p_this, const char *psz_na
         [o_input_cachelevel_pop selectItemWithTitle: _NS("Custom")];
         [o_input_cachelevel_custom_txt setHidden: NO];
     }
+    #undef TestCaC
 
     /*********************
      * subtitle settings *
@@ -927,8 +936,7 @@ static inline void save_module_list( intf_thread_t * p_intf, id object, const ch
 
         config_PutInt( p_intf, "mkv-preload-local-dir", [o_input_mkv_preload_dir_ckb state] );
 
-        #define CaCi( name, int ) config_PutInt( p_intf, name, int * [[o_input_cachelevel_pop selectedItem] tag] )
-        #define CaC( name ) CaCi( name, 1 )
+        #define CaC( name, factor ) config_PutInt( p_intf, name, [[o_input_cachelevel_pop selectedItem] tag] * factor )
         if ( [[o_input_cachelevel_pop selectedItem] tag] == 0 )
         {
             msg_Dbg( p_intf, "Custom chosen, not adjusting cache values" );
@@ -936,11 +944,12 @@ static inline void save_module_list( intf_thread_t * p_intf, id object, const ch
         else
         {
             msg_Dbg( p_intf, "Adjusting all cache values to: %i", (int)[[o_input_cachelevel_pop selectedItem] tag] );
-            CaC( "file-caching" );
-            CaC( "network-caching" );
-            CaC( "disc-caching" );
-            CaC( "live-caching" );
+            CaC( "file-caching", 1 );
+            CaC( "network-caching", 10/3 );
+            CaC( "disc-caching", 1 );
+            CaC( "live-caching", 1 );
         }
+        #undef CaC
         b_inputSettingChanged = NO;
     }
 
@@ -1025,6 +1034,12 @@ static inline void save_module_list( intf_thread_t * p_intf, id object, const ch
 
 - (IBAction)interfaceSettingChanged:(id)sender
 {
+    if( sender == o_intf_embedded_ckb && [o_intf_embedded_ckb state] == NSOffState )
+        [o_intf_nativefullscreen_ckb setState: NSOffState];
+
+    if( sender == o_intf_nativefullscreen_ckb && [o_intf_nativefullscreen_ckb state] == NSOnState )
+        [o_intf_embedded_ckb setState: NSOnState];
+
     b_intfSettingChanged = YES;
 }
 

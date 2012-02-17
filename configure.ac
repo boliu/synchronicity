@@ -730,7 +730,7 @@ AC_CHECK_HEADERS([sys/mount.h], [], [],
 if test "${SYS}" != "mingw32" -a "${SYS}" != "mingwce"; then
   AC_CHECK_HEADERS(machine/param.h sys/shm.h)
   AC_CHECK_HEADERS([linux/version.h linux/dccp.h scsi/scsi.h linux/magic.h])
-  AC_CHECK_HEADERS(syslog.h)
+  AC_CHECK_HEADERS(syslog.h mntent.h)
 fi # end "${SYS}" != "mingw32" -a "${SYS}" != "mingwce"
 
 dnl LP64 and LLP64 architectures had better define ssize_t by themselves...
@@ -2798,7 +2798,7 @@ AM_CONDITIONAL([HAVE_SPEEXDSP], [test "$have_speexdsp" = "yes"])
 dnl
 dnl  theora decoder plugin
 dnl
-PKG_ENABLE_MODULES_VLC([THEORA], [], [ogg theora >= 1.0], [experimental theora codec], [auto])
+PKG_ENABLE_MODULES_VLC([THEORA], [], [ogg theoradec >= 1.0 theoraenc], [experimental theora codec], [auto])
 
 dnl
 dnl  dirac encoder plugin

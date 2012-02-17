@@ -188,6 +188,7 @@ static NSMutableArray *blackoutWindows = NULL;
     self = [super initWithContentRect:contentRect styleMask:styleMask backing:backingType defer:flag];
     if( self )
     {
+        b_isFullscreen = NO;
         b_isset_canBecomeKeyWindow = NO;
         /* we don't want this window to be restored on relaunch */
         if (OSX_LION)
@@ -361,10 +362,16 @@ static NSMutableArray *blackoutWindows = NULL;
     }
 }
 
+- (void)setFullscreen:(BOOL)b_var
+{
+    b_isFullscreen = b_var;
+}
+
 - (BOOL)isFullscreen
 {
-    return YES;
+    return b_isFullscreen;
 }
+
 @end
 
 /*****************************************************************************
@@ -417,6 +424,19 @@ static NSMutableArray *blackoutWindows = NULL;
             NSArray *o_array = [NSArray array];
             NSArray *o_values = [[o_paste propertyListForType: NSFilenamesPboardType] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
             NSUInteger count = [o_values count];
+
+            input_thread_t * p_input = pl_CurrentInput( VLCIntf );
+            BOOL b_returned = NO;
+
+            if (count == 1 && p_input)
+            {
+                b_returned = input_AddSubtitle( p_input, make_URI([[o_values objectAtIndex:0] UTF8String], NULL), true );
+                vlc_object_release( p_input );
+                if(!b_returned)
+                    return YES;
+            }
+            else if( p_input )
+                vlc_object_release( p_input );
 
             for( NSUInteger i = 0; i < count; i++)
             {
@@ -504,6 +524,19 @@ static NSMutableArray *blackoutWindows = NULL;
             NSArray *o_array = [NSArray array];
             NSArray *o_values = [[o_paste propertyListForType: NSFilenamesPboardType] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
             NSUInteger count = [o_values count];
+
+            input_thread_t * p_input = pl_CurrentInput( VLCIntf );
+            BOOL b_returned = NO;
+
+            if (count == 1 && p_input)
+            {
+                b_returned = input_AddSubtitle( p_input, make_URI([[o_values objectAtIndex:0] UTF8String], NULL), true );
+                vlc_object_release( p_input );
+                if(!b_returned)
+                    return YES;
+            }
+            else if( p_input )
+                vlc_object_release( p_input );
 
             for( NSUInteger i = 0; i < count; i++)
             {
@@ -720,7 +753,14 @@ void _drawFrameInRect(NSRect frameRect)
     else
         o_string_color = [NSColor colorWithCalibratedRed:0.64 green:0.64 blue:0.64 alpha:100.0];
 
+    textAlignment = NSCenterTextAlignment;
     o_string_attributes_dict = [[NSDictionary dictionaryWithObjectsAndKeys: o_string_color, NSForegroundColorAttributeName, [NSFont titleBarFontOfSize:10.0], NSFontAttributeName, nil] retain];
+}
+
+- (void)setAlignment:(NSTextAlignment)alignment
+{
+    textAlignment = alignment;
+    [self setStringValue:[self stringValue]];
 }
 
 - (void)dealloc
@@ -743,7 +783,7 @@ void _drawFrameInRect(NSRect frameRect)
     NSUInteger i_stringLength = [string length];
 
     [o_attributed_string addAttribute: NSShadowAttributeName value: o_string_shadow range: NSMakeRange(0, i_stringLength)];
-    [o_attributed_string setAlignment: NSRightTextAlignment range: NSMakeRange(0, i_stringLength)];
+    [o_attributed_string setAlignment: textAlignment range: NSMakeRange(0, i_stringLength)];
     [self setAttributedStringValue: o_attributed_string];
     [o_attributed_string release];
 }
@@ -835,6 +875,102 @@ void _drawFrameInRect(NSRect frameRect)
 {
     NSRect bnds = [self bounds];
     NSDrawThreePartImage( bnds, o_left_img, o_middle_img, o_right_img, NO, NSCompositeSourceOver, 1, NO );
+}
+
+@end
+
+@implementation VLCThreePartDropView
+
+- (BOOL)mouseDownCanMoveWindow
+{
+    return YES;
+}
+
+- (void)dealloc
+{
+    [self unregisterDraggedTypes];
+    [super dealloc];
+}
+
+- (void)awakeFromNib
+{
+    [self registerForDraggedTypes:[NSArray arrayWithObjects:NSTIFFPboardType,
+                                   NSFilenamesPboardType, nil]];
+}
+
+- (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender
+{
+    if ((NSDragOperationGeneric & [sender draggingSourceOperationMask])
+        == NSDragOperationGeneric)
+    {
+        return NSDragOperationGeneric;
+    }
+    else
+    {
+        return NSDragOperationNone;
+    }
+}
+
+- (BOOL)prepareForDragOperation:(id <NSDraggingInfo>)sender
+{
+    return YES;
+}
+
+- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender
+{
+    NSPasteboard *o_paste = [sender draggingPasteboard];
+    NSArray *o_types = [NSArray arrayWithObjects: NSFilenamesPboardType, nil];
+    NSString *o_desired_type = [o_paste availableTypeFromArray:o_types];
+    NSData *o_carried_data = [o_paste dataForType:o_desired_type];
+    BOOL b_autoplay = config_GetInt( VLCIntf, "macosx-autoplay" );
+
+    if( o_carried_data )
+    {
+        if ([o_desired_type isEqualToString:NSFilenamesPboardType])
+        {
+            NSArray *o_array = [NSArray array];
+            NSArray *o_values = [[o_paste propertyListForType: NSFilenamesPboardType] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+            NSUInteger count = [o_values count];
+
+            input_thread_t * p_input = pl_CurrentInput( VLCIntf );
+            BOOL b_returned = NO;
+
+            if (count == 1 && p_input)
+            {
+                b_returned = input_AddSubtitle( p_input, make_URI([[o_values objectAtIndex:0] UTF8String], NULL), true );
+                vlc_object_release( p_input );
+                if(!b_returned)
+                    return YES;
+            }
+            else if( p_input )
+                vlc_object_release( p_input );
+
+            for( NSUInteger i = 0; i < count; i++)
+            {
+                NSDictionary *o_dic;
+                char *psz_uri = make_URI([[o_values objectAtIndex:i] UTF8String], NULL);
+                if( !psz_uri )
+                    continue;
+
+                o_dic = [NSDictionary dictionaryWithObject:[NSString stringWithCString:psz_uri encoding:NSUTF8StringEncoding] forKey:@"ITEM_URL"];
+                free( psz_uri );
+
+                o_array = [o_array arrayByAddingObject: o_dic];
+            }
+            if( b_autoplay )
+                [[[VLCMain sharedInstance] playlist] appendArray: o_array atPos: -1 enqueue:NO];
+            else
+                [[[VLCMain sharedInstance] playlist] appendArray: o_array atPos: -1 enqueue:YES];
+            return YES;
+        }
+    }
+    [self setNeedsDisplay:YES];
+    return YES;
+}
+
+- (void)concludeDragOperation:(id <NSDraggingInfo>)sender
+{
+    [self setNeedsDisplay:YES];
 }
 
 @end

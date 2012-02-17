@@ -278,6 +278,7 @@ static VLCOpen *_o_sharedMainInstance = nil;
 	[[sharedWorkspace notificationCenter] addObserver:self selector:@selector(scanOpticalMedia:) name:NSWorkspaceDidMountNotification object:nil];
 	[[sharedWorkspace notificationCenter] addObserver:self selector:@selector(scanOpticalMedia:) name:NSWorkspaceDidUnmountNotification object:nil];
     [self scanOpticalMedia:nil];
+    [self qtkChanged:nil];
 
     [self setMRL: @""];
 }
@@ -454,7 +455,7 @@ static VLCOpen *_o_sharedMainInstance = nil;
 - (IBAction)qtkChanged:(id)sender
 {
 	NSInteger i_selectedDevice = [o_qtk_device_pop indexOfSelectedItem];
-	if (i_selectedDevice > ([qtkvideoDevices count] - 1))
+	if (i_selectedDevice >= ([qtkvideoDevices count] - 1))
 	{
 		NSValue *sizes = [[[[qtkvideoDevices objectAtIndex:i_selectedDevice] formatDescriptions] objectAtIndex: 0] attributeForKey: QTFormatDescriptionVideoEncodedPixelsSizeAttribute];
 
@@ -821,7 +822,7 @@ static VLCOpen *_o_sharedMainInstance = nil;
             [self setMRL: [NSString stringWithFormat: @"dvdnav://%@", pathToOpen]];
             [self showOpticalMediaView: o_disc_dvd_view withIcon: [[NSWorkspace sharedWorkspace] iconForFile: o_currentOpticalDevice]];
         } else {
-            [self setMRL: [NSString stringWithFormat: @"dvdread://%@@%i:%i-", pathToOpen, [o_disc_dvdwomenus_title intValue], [o_disc_dvdwomenus_chapter intValue]]];
+            [self setMRL: [NSString stringWithFormat: @"dvdread://%@#%i:%i-", pathToOpen, [o_disc_dvdwomenus_title intValue], [o_disc_dvdwomenus_chapter intValue]]];
             [self showOpticalMediaView: o_disc_dvdwomenus_view withIcon: [[NSWorkspace sharedWorkspace] iconForFile: o_currentOpticalDevice]];
         }
     }
@@ -842,10 +843,7 @@ static VLCOpen *_o_sharedMainInstance = nil;
     {
         [o_disc_bd_lbl setStringValue: [[NSFileManager defaultManager] displayNameAtPath: o_currentOpticalDevice]];
         [self showOpticalMediaView: o_disc_bd_view withIcon: [[NSWorkspace sharedWorkspace] iconForFile: o_currentOpticalDevice]];
-        if (diskType == kVLCMediaBD)
-            [self setMRL: [NSString stringWithFormat: @"bluray://%@", [self getBSDNodeFromMountPath: o_currentOpticalDevice]]];
-        else
-            [self setMRL: [NSString stringWithFormat: @"bluray://%@", o_currentOpticalDevice]];
+        [self setMRL: [NSString stringWithFormat: @"bluray://%@", o_currentOpticalDevice]];
     }
     else
     {

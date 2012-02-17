@@ -187,6 +187,8 @@ EXTRA_DIST += \
 	extras/package/macosx/Resources/mainwindow/back.png \
 	extras/package/macosx/Resources/mainwindow/bottom-background.png \
 	extras/package/macosx/Resources/mainwindow/bottombar-mini.png \
+	extras/package/macosx/Resources/mainwindow_dark/bottomdark-left.png \
+	extras/package/macosx/Resources/mainwindow_dark/bottomdark-right.png \
 	extras/package/macosx/Resources/mainwindow/dropzone-background.png \
 	extras/package/macosx/Resources/mainwindow/dropzone.png \
 	extras/package/macosx/Resources/mainwindow/effects-double-buttons-blue.png \
@@ -354,9 +356,9 @@ EXTRA_DIST += \
 	extras/package/macosx/eyetvplugin/eyetvplugin.h \
 	extras/package/macosx/eyetvplugin/English.lproj/InfoPlist.strings \
 	extras/package/macosx/eyetvplugin/eyetvplugin.xcodeproj/project.pbxproj \
-	extras/package/macosx/eyetvplugin/EyeTV Plugin Installer.pmdoc/01vlc-contents.xml \
-	extras/package/macosx/eyetvplugin/EyeTV Plugin Installer.pmdoc/01vlc.xml \
-	extras/package/macosx/eyetvplugin/EyeTV Plugin Installer.pmdoc/index.xml \
+	extras/package/macosx/eyetvplugin/EyeTV_Plugin_Installer.pmdoc/01vlc-contents.xml \
+	extras/package/macosx/eyetvplugin/EyeTV_Plugin_Installer.pmdoc/01vlc.xml \
+	extras/package/macosx/eyetvplugin/EyeTV_Plugin_Installer.pmdoc/index.xml \
 	extras/package/macosx/README.MacOSX.rtf \
 	extras/package/macosx/Info.plist.in
 

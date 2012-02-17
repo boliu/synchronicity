@@ -188,20 +188,9 @@ void WindowClose( vout_window_t *p_wnd )
  * Run: main loop
  *****************************************************************************/
 static NSLock * o_appLock = nil;    // controls access to f_appExit
-static int f_appExit = 0;           // set to 1 when application termination signaled
 
 static void Run( intf_thread_t *p_intf )
 {
-    sigset_t set;
-
-    /* Make sure the "force quit" menu item does quit instantly.
-     * VLC overrides SIGTERM which is sent by the "force quit"
-     * menu item to make sure daemon mode quits gracefully, so
-     * we un-override SIGTERM here. */
-    sigemptyset( &set );
-    sigaddset( &set, SIGTERM );
-    pthread_sigmask( SIG_UNBLOCK, &set, NULL );
-
     NSAutoreleasePool * o_pool = [[NSAutoreleasePool alloc] init];
     [VLCApplication sharedApplication];
 
@@ -614,8 +603,6 @@ static VLCMain *_o_sharedMainInstance = nil;
     var_AddCallback( p_intf, "dialog-progress-bar", DialogCallback, self );
     dialog_Register( p_intf );
 
-    [self playbackModeUpdated];
-
     /* init Apple Remote support */
     o_remote = [[AppleRemote alloc] init];
     [o_remote setClickCountEnabledButtons: kRemoteButtonPlay];
@@ -626,7 +613,8 @@ static VLCMain *_o_sharedMainInstance = nil;
     /* yeah, we are done */
     b_nativeFullscreenMode = NO;
 #ifdef MAC_OS_X_VERSION_10_7
-    b_nativeFullscreenMode = config_GetInt( p_intf, "macosx-nativefullscreenmode" );
+    if( config_GetInt( VLCIntf, "embedded-video" ))
+        b_nativeFullscreenMode = config_GetInt( p_intf, "macosx-nativefullscreenmode" );
 #endif
     nib_main_loaded = TRUE;
 }
@@ -634,6 +622,11 @@ static VLCMain *_o_sharedMainInstance = nil;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     if( !p_intf ) return;
+
+    [o_mainwindow updateWindow];
+    [o_mainwindow updateTimeSlider];
+    [o_mainwindow updateVolumeSlider];
+    [o_mainwindow makeKeyAndOrderFront: self];
 
     /* init media key support */
     b_mediaKeySupport = config_GetInt( VLCIntf, "macosx-mediakeys" );
@@ -649,11 +642,6 @@ static VLCMain *_o_sharedMainInstance = nil;
 
     [self _removeOldPreferences];
 
-    [o_mainwindow updateWindow];
-    [o_mainwindow updateTimeSlider];
-    [o_mainwindow updateVolumeSlider];
-    [o_mainwindow makeKeyAndOrderFront: self];
-
     /* Handle sleep notification */
     [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(computerWillSleep:)
            name:NSWorkspaceWillSleepNotification object:nil];
@@ -662,6 +650,7 @@ static VLCMain *_o_sharedMainInstance = nil;
 
     /* we will need this, so let's load it here so the interface appears to be more responsive */
     nib_open_loaded = [NSBundle loadNibNamed:@"Open" owner: NSApp];
+    [self initStrings];
 }
 
 - (void)initStrings
@@ -688,32 +677,31 @@ static VLCMain *_o_sharedMainInstance = nil;
 
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
-    if (notification == nil)
-        [[NSNotificationCenter defaultCenter] postNotificationName: NSApplicationWillTerminateNotification object: nil];
-
-    playlist_t * p_playlist;
-    int returnedValue = 0;
-
-    if( !p_intf )
-        return;
-
-    // save stuff
-    config_SaveConfigFile( p_intf );
-
-    // don't allow a double termination call. If the user has
-    // already invoked the quit then simply return this time.
-    int isTerminating = false;
+    /* don't allow a double termination call. If the user has
+     * already invoked the quit then simply return this time. */
+    static bool f_appExit = false;
+    bool isTerminating;
 
     [o_appLock lock];
-    isTerminating = (f_appExit++ > 0 ? 1 : 0);
+    isTerminating = f_appExit;
+    f_appExit = true;
     [o_appLock unlock];
 
     if (isTerminating)
         return;
 
-    msg_Dbg( p_intf, "Terminating" );
+    if (notification == nil)
+        [[NSNotificationCenter defaultCenter] postNotificationName: NSApplicationWillTerminateNotification object: nil];
 
-    p_playlist = pl_Get( p_intf );
+    playlist_t * p_playlist = pl_Get( p_intf );
+    int returnedValue = 0;
+
+    /* Save some interface state in configuration, at module quit */
+    config_PutInt( p_intf, "random", var_GetBool( p_playlist, "random" ) );
+    config_PutInt( p_intf, "loop", var_GetBool( p_playlist, "loop" ) );
+    config_PutInt( p_intf, "repeat", var_GetBool( p_playlist, "repeat" ) );
+
+    msg_Dbg( p_intf, "Terminating" );
 
     /* unsubscribe from the interactive dialogues */
     dialog_Unregister( p_intf );
@@ -736,6 +724,13 @@ static VLCMain *_o_sharedMainInstance = nil;
     var_DelCallback(p_playlist, "fullscreen", FullscreenChanged, self);
     var_DelCallback(p_intf->p_libvlc, "intf-toggle-fscontrol", ShowController, self);
     var_DelCallback(p_intf->p_libvlc, "intf-show", ShowController, self);
+
+    input_thread_t * p_input = playlist_CurrentInput( p_playlist );
+    if( p_input )
+    {
+        var_DelCallback( p_input, "intf-event", InputEvent, [VLCMain sharedInstance] );
+        vlc_object_release( p_input );
+    }
 
     /* remove global observer watching for vout device changes correctly */
     [[NSNotificationCenter defaultCenter] removeObserver: self];
@@ -874,6 +869,22 @@ static VLCMain *_o_sharedMainInstance = nil;
     char *psz_uri = make_URI([o_filename UTF8String], "file" );
     if( !psz_uri )
         return( FALSE );
+
+    input_thread_t * p_input = pl_CurrentInput( VLCIntf );
+    BOOL b_returned = NO;
+
+    if (p_input)
+    {
+        b_returned = input_AddSubtitle( p_input, psz_uri, true );
+        vlc_object_release( p_input );
+        if(!b_returned)
+        {
+            free( psz_uri );
+            return YES;
+        }
+    }
+    else if( p_input )
+        vlc_object_release( p_input );
 
     NSDictionary *o_dic = [NSDictionary dictionaryWithObject:[NSString stringWithCString:psz_uri encoding:NSUTF8StringEncoding] forKey:@"ITEM_URL"];
 
@@ -1362,8 +1373,9 @@ unsigned int CocoaKeyToVLC( unichar i_key )
             if( p_input != NULL && [self activeVideoPlayback] )
             {
                 [o_mainwindow performSelectorOnMainThread:@selector(enterFullscreen) withObject:nil waitUntilDone:NO];
-                vlc_object_release( p_input );
             }
+            if (p_input)
+                vlc_object_release( p_input );
         }
         else
         {
@@ -1382,10 +1394,12 @@ unsigned int CocoaKeyToVLC( unichar i_key )
     {
         var_AddCallback( p_input, "intf-event", InputEvent, [VLCMain sharedInstance] );
         [o_mainmenu setRateControlsEnabled: YES];
-        vlc_object_release( p_input );
     }
     else
         [o_mainmenu setRateControlsEnabled: NO];
+
+    if (p_input)
+        vlc_object_release( p_input );
 
     [o_playlist updateRowSelection];
     [o_mainwindow updateWindow];

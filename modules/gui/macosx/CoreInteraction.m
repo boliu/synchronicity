@@ -118,8 +118,12 @@ static VLCCoreInteraction *_o_sharedInstance = nil;
 
 - (void)toggleRecord
 {
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return;
+
     input_thread_t * p_input;
-    p_input = pl_CurrentInput( VLCIntf );
+    p_input = pl_CurrentInput( p_intf );
     if( p_input )
     {
         var_ToggleBool( p_input, "record" );
@@ -142,8 +146,12 @@ static VLCCoreInteraction *_o_sharedInstance = nil;
 {
     float f_rate;
 
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return 0;
+
     input_thread_t * p_input;
-    p_input = pl_CurrentInput( VLCIntf );
+    p_input = pl_CurrentInput( p_intf );
     if (p_input)
     {
         f_rate = var_GetFloat( p_input, "rate" );
@@ -179,7 +187,11 @@ static VLCCoreInteraction *_o_sharedInstance = nil;
 
 - (BOOL)isPlaying
 {
-    input_thread_t * p_input = pl_CurrentInput( VLCIntf );
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return NO;
+
+    input_thread_t * p_input = pl_CurrentInput( p_intf );
 
     if (!p_input) return NO;
 
@@ -216,7 +228,11 @@ static VLCCoreInteraction *_o_sharedInstance = nil;
 
 - (int)durationOfCurrentPlaylistItem
 {
-    input_thread_t * p_input = pl_CurrentInput( VLCIntf );
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return 0;
+
+    input_thread_t * p_input = pl_CurrentInput( p_intf );
     int64_t i_duration = -1;
     if (!p_input) return i_duration;
 
@@ -229,31 +245,56 @@ static VLCCoreInteraction *_o_sharedInstance = nil;
 
 - (NSURL*)URLOfCurrentPlaylistItem
 {
-    input_thread_t *p_input = pl_CurrentInput( VLCIntf );
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return nil;
+
+    input_thread_t *p_input = pl_CurrentInput( p_intf );
     if (!p_input) return nil;
 
     input_item_t *p_item = input_GetItem( p_input );
-    if (!p_item) return nil;
+    if (!p_item)
+    {
+        vlc_object_release( p_input );
+        return nil;
+    }
 
     char *psz_uri = input_item_GetURI( p_item );
-    if (!psz_uri) return nil;
+    if (!psz_uri)
+    {
+        vlc_object_release( p_input );
+        return nil;
+    }
 
     NSURL *o_url;
     o_url = [NSURL URLWithString:[NSString stringWithUTF8String:psz_uri]];
+    vlc_object_release( p_input );
 
     return o_url;
 }
 
 - (NSString*)nameOfCurrentPlaylistItem
 {
-    input_thread_t *p_input = pl_CurrentInput( VLCIntf );
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return nil;
+
+    input_thread_t *p_input = pl_CurrentInput( p_intf );
     if (!p_input) return nil;
 
     input_item_t *p_item = input_GetItem( p_input );
-    if (!p_item) return nil;
+    if (!p_item)
+    {
+        vlc_object_release( p_input );
+        return nil;
+    }
 
     char *psz_uri = input_item_GetURI( p_item );
-    if (!psz_uri) return nil;
+    if (!psz_uri)
+    {
+        vlc_object_release( p_input );
+        return nil;
+    }
 
     NSString *o_name;
     char *format = var_InheritString( VLCIntf, "input-title-format" );
@@ -272,6 +313,7 @@ static VLCCoreInteraction *_o_sharedInstance = nil;
         else
             o_name = [o_url absoluteString];
     }
+    vlc_object_release( p_input );
     return o_name;
 }
 
@@ -329,8 +371,12 @@ static VLCCoreInteraction *_o_sharedInstance = nil;
 
 - (void)shuffle
 {
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return;
+
     vlc_value_t val;
-    playlist_t * p_playlist = pl_Get( VLCIntf );
+    playlist_t * p_playlist = pl_Get( p_intf );
     vout_thread_t *p_vout = getVout();
 
     var_Get( p_playlist, "random", &val );
@@ -358,7 +404,11 @@ static VLCCoreInteraction *_o_sharedInstance = nil;
 
 - (void)repeatAll
 {
-    playlist_t * p_playlist = pl_Get( VLCIntf );
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return;
+
+    playlist_t * p_playlist = pl_Get( p_intf );
 
     var_SetBool( p_playlist, "repeat", NO );
     var_SetBool( p_playlist, "loop", YES );
@@ -375,7 +425,11 @@ static VLCCoreInteraction *_o_sharedInstance = nil;
 
 - (void)repeatOne
 {
-    playlist_t * p_playlist = pl_Get( VLCIntf );
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return;
+
+    playlist_t * p_playlist = pl_Get( p_intf );
 
     var_SetBool( p_playlist, "repeat", YES );
     var_SetBool( p_playlist, "loop", NO );
@@ -392,7 +446,11 @@ static VLCCoreInteraction *_o_sharedInstance = nil;
 
 - (void)repeatOff
 {
-    playlist_t * p_playlist = pl_Get( VLCIntf );
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return;
+
+    playlist_t * p_playlist = pl_Get( p_intf );
 
     var_SetBool( p_playlist, "repeat", NO );
     var_SetBool( p_playlist, "loop", NO );
@@ -409,46 +467,61 @@ static VLCCoreInteraction *_o_sharedInstance = nil;
 
 - (void)volumeUp
 {
-    playlist_t * p_playlist = pl_Get( VLCIntf );
-    aout_VolumeUp( p_playlist, 1, NULL );
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return;
+
+    aout_VolumeUp( pl_Get( p_intf ), 1, NULL );
 }
 
 - (void)volumeDown
 {
-    playlist_t * p_playlist = pl_Get( VLCIntf );
-    aout_VolumeDown( p_playlist, 1, NULL );
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return;
+
+    aout_VolumeDown( pl_Get( p_intf ), 1, NULL );
 }
 
 - (void)mute
 {
-    playlist_t * p_playlist = pl_Get( VLCIntf );
-    aout_ToggleMute( p_playlist, NULL );
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return;
+
+    aout_ToggleMute( pl_Get( p_intf ), NULL );
 }
 
 - (BOOL)isMuted
-{       
-    playlist_t * p_playlist = pl_Get( VLCIntf );
+{
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return NO;
+
     BOOL b_is_muted = NO;
-    b_is_muted = aout_IsMuted( VLC_OBJECT(p_playlist) );
+    b_is_muted = aout_IsMuted( VLC_OBJECT(pl_Get( p_intf )) );
 
     return b_is_muted;
 }
 
 - (int)volume
 {
-    intf_thread_t * p_intf = VLCIntf;
-    playlist_t * p_playlist = pl_Get( VLCIntf );
-    audio_volume_t i_volume = aout_VolumeGet( p_playlist );
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return 0;
+
+    audio_volume_t i_volume = aout_VolumeGet( pl_Get( p_intf ) );
 
     return (int)i_volume;
 }
 
 - (void)setVolume: (int)i_value
 {
-    intf_thread_t * p_intf = VLCIntf;
-    playlist_t * p_playlist = pl_Get( VLCIntf );
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return;
 
-    aout_VolumeSet( p_playlist, i_value );
+    aout_VolumeSet( pl_Get( p_intf ), i_value );
 }
 
 #pragma mark -
@@ -466,8 +539,11 @@ static VLCCoreInteraction *_o_sharedInstance = nil;
 
 - (void)toggleFullscreen
 {
-    playlist_t * p_playlist = pl_Get( VLCIntf );
-    var_ToggleBool( p_playlist, "fullscreen" );
+    intf_thread_t *p_intf = VLCIntf;
+    if (!p_intf)
+        return;
+
+    var_ToggleBool( pl_Get( p_intf ), "fullscreen" );
 }
 
 @end

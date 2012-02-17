@@ -39,7 +39,7 @@ Important changes for packagers:
  * The default tarballs are now compressed with XZ/LZMA: .tar.xz
  * OSS support is not compiled on Linux by default, pass --enable-oss to the
    configure script if you use OSSv4 or really want to use OSS emulation.
- * The webplugins has moved to git://git.videolan.org/npapi-vlc.git
+ * The webplugins have moved to: git://git.videolan.org/npapi-vlc.git
 
 Core:
  * Major Video Core and Outputs rework and rewrite:
@@ -103,6 +103,7 @@ Demuxers:
  * Support for duration and better seeking in Mpeg-TS files (.ts, .m2ts, .mts)
  * Mov improvements, notably for aspect-ratio handling and Audio DV tracks
  * Improved support of tracker files
+ * Real Media (.rm and .rmvb) demuxer is now based on libavformat
 
 Interfaces:
  * Qt: effects dialogs rework
@@ -226,6 +227,7 @@ Removed modules:
 
 Translations:
  * Update of translations for most languages.
+ * New Telugu and Kurmanji translations.
 
 
 Changes between 1.1.12 and 1.1.13:

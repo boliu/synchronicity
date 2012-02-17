@@ -617,7 +617,7 @@ void BlockDecode( demux_t *p_demux, KaxBlock *block, KaxSimpleBlock *simpleblock
                 if ( f_mandatory )
                     p_block->i_dts = p_block->i_pts;
                 else
-                    p_block->i_dts = min( i_pts, tk->i_last_dts + (mtime_t)(tk->i_default_duration >> 10));
+                    p_block->i_dts = min( i_pts, tk->i_last_dts + ( mtime_t )( tk->i_default_duration / 1000 ) );
             }
         }
         tk->i_last_dts = p_block->i_dts;
@@ -639,7 +639,9 @@ msg_Dbg( p_demux, "block i_dts: %"PRId64" / i_pts: %"PRId64, p_block->i_dts, p_b
         es_out_Send( p_demux->out, tk->p_es, p_block );
 
         /* use time stamp only for first block */
-        i_pts = VLC_TS_INVALID;
+        i_pts = ( tk->i_default_duration )?
+                 i_pts + ( mtime_t )( tk->i_default_duration / 1000 ):
+                 VLC_TS_INVALID;
     }
 }
 
@@ -714,8 +716,11 @@ static int Demux( demux_t *p_demux)
             p_sys->i_pts = p_sys->i_chapter_time + ( block->GlobalTimecode() / (mtime_t) 1000 );
 
         /* The blocks are in coding order so we can safely consider that only references are in chronological order */
-        if( simpleblock == NULL || b_key_picture )
-            es_out_Control( p_demux->out, ES_OUT_SET_PCR, VLC_TS_0 + p_sys->i_pts );
+        if( p_sys->i_pts > p_sys->i_pcr + 300000 )
+        {
+            es_out_Control( p_demux->out, ES_OUT_SET_PCR, VLC_TS_0 + p_sys->i_pcr );
+            p_sys->i_pcr = p_sys->i_pts;
+        }
 
         if( p_sys->i_pts >= p_sys->i_start_pts  )
         {
