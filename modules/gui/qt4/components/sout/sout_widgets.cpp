@@ -108,7 +108,8 @@ FileDestBox::FileDestBox( QWidget *_parent ) : VirtualDestBox( _parent )
     BUTTONACT( fileSelectButton, fileBrowse() );
 }
 
-QString FileDestBox::getMRL( const QString& mux )
+QString FileDestBox::getMRL( const QString& mux, const int, const bool,
+                             const QString&, const QString& )
 {
     if( fileEdit->text().isEmpty() ) return "";
 
@@ -173,7 +174,8 @@ HTTPDestBox::HTTPDestBox( QWidget *_parent ) : VirtualDestBox( _parent )
     CT( HTTPEdit );
 }
 
-QString HTTPDestBox::getMRL( const QString& mux )
+QString HTTPDestBox::getMRL( const QString& mux, const int, const bool,
+                             const QString&, const QString& )
 {
     if( HTTPEdit->text().isEmpty() ) return "";
 
@@ -232,7 +234,8 @@ MMSHDestBox::MMSHDestBox( QWidget *_parent ) : VirtualDestBox( _parent )
     CT( MMSHEdit );
 }
 
-QString MMSHDestBox::getMRL( const QString& )
+QString MMSHDestBox::getMRL( const QString&, const int, const bool,
+                             const QString&, const QString& )
 {
     if( MMSHEdit->text().isEmpty() ) return "";
 
@@ -277,7 +280,8 @@ RTSPDestBox::RTSPDestBox( QWidget *_parent ) : VirtualDestBox( _parent )
     CT( RTSPEdit );
 }
 
-QString RTSPDestBox::getMRL( const QString& )
+QString RTSPDestBox::getMRL( const QString&, const int, const bool,
+                             const QString&, const QString& )
 {
     if( RTSPEdit->text().isEmpty() ) return "";
 
@@ -326,16 +330,34 @@ UDPDestBox::UDPDestBox( QWidget *_parent ) : VirtualDestBox( _parent )
     CT( UDPEdit );
 }
 
-QString UDPDestBox::getMRL( const QString& mux )
+QString UDPDestBox::getMRL( const QString& mux, const int ttl, const bool sap,
+                            const QString& sapName, const QString& sapGroup )
 {
     if( UDPEdit->text().isEmpty() ) return "";
 
     SoutMrl m;
-    m.begin( "udp" );
+    m.begin( "std" );
+
+    SoutMrl access;
+    access.begin( "udp" );
+    access.option( "ttl", ttl );
+    access.end();
+    m.option( "access", access.getMrl() );
+ 
     /* udp output, ts-mux is really only reasonable one to use*/
     if( !mux.isEmpty() && !mux.compare("ts" ) )
         m.option( "mux", mux );
     m.option( "dst", UDPEdit->text(), UDPPort->value() );
+
+    if( sap )
+    {
+        m.option( "sap" );
+        if( !sapName.isEmpty() )
+            m.option( "name", sapName );
+        if( !sapGroup.isEmpty() )
+            m.option( "group", sapGroup );
+    }
+   
     m.end();
 
     return m.getMrl();
@@ -374,7 +396,8 @@ RTPDestBox::RTPDestBox( QWidget *_parent, const char *_mux )
     CT( RTPEdit );
 }
 
-QString RTPDestBox::getMRL( const QString& )
+QString RTPDestBox::getMRL( const QString&, const int ttl, const bool sap,
+                            const QString& sapName, const QString& )
 {
     if( RTPEdit->text().isEmpty() ) return "";
 
@@ -385,6 +408,13 @@ QString RTPDestBox::getMRL( const QString& )
     /* mp4-mux ain't usable in rtp-output either */
     if( mux != NULL )
         m.option( "mux", qfu( mux ) );
+    if( sap )
+    {
+        m.option( "sap" );
+        if( !sapName.isEmpty() )
+            m.option( "name", sapName );
+    }
+    m.option( "ttl", ttl );
     m.end();
 
     return m.getMrl();
@@ -435,7 +465,8 @@ ICEDestBox::ICEDestBox( QWidget *_parent ) : VirtualDestBox( _parent )
 #undef CS
 #undef CT
 
-QString ICEDestBox::getMRL( const QString& )
+QString ICEDestBox::getMRL( const QString&, const int, const bool,
+                            const QString&, const QString& )
 {
     if( ICEEdit->text().isEmpty() ) return "";
 
