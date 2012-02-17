@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vlc\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2012-02-13 00:43+0100\n"
+"POT-Creation-Date: 2012-02-17 17:51+0100\n"
 "PO-Revision-Date: 2011-10-12 13:03+0100\n"
 "Last-Translator: pico.dev <pico.dev@gmail..com>\n"
 "Language-Team: \n"
@@ -363,7 +363,7 @@ msgstr "Implementación de VLC de vídeo bajo demanda (Video On Demand)"
 
 #: include/vlc_config_cat.h:175 src/libvlc-module.c:2163
 #: src/playlist/engine.c:217 modules/demux/playlist/playlist.c:63
-#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:308
+#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:311
 #: modules/gui/qt4/components/controller.hpp:116
 #: modules/gui/qt4/components/playlist/playlist.cpp:191
 #: modules/gui/qt4/components/playlist/selector.cpp:187
@@ -385,8 +385,8 @@ msgstr ""
 msgid "General playlist behaviour"
 msgstr "Comportamiento general de lista de reproducción"
 
-#: include/vlc_config_cat.h:181 modules/gui/macosx/playlist.m:480
-#: modules/gui/macosx/playlist.m:481
+#: include/vlc_config_cat.h:181 modules/gui/macosx/playlist.m:499
+#: modules/gui/macosx/playlist.m:500
 msgid "Services discovery"
 msgstr "Descubrimiento de servicios"
 
@@ -553,7 +553,7 @@ msgstr "&Acerca de"
 #: modules/gui/macosx/MainMenu.m:266 modules/gui/macosx/MainMenu.m:363
 #: modules/gui/macosx/MainMenu.m:370 modules/gui/macosx/MainMenu.m:846
 #: modules/gui/macosx/MainMenu.m:847 modules/gui/macosx/MainMenu.m:848
-#: modules/gui/macosx/MainWindow.m:1127 modules/gui/macosx/playlist.m:468
+#: modules/gui/macosx/MainWindow.m:1147 modules/gui/macosx/playlist.m:487
 #: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/dialogs/vlm.cpp:550 modules/gui/qt4/menus.cpp:790
 #: modules/gui/qt4/ui/open.h:253
@@ -600,12 +600,12 @@ msgstr "Emitir..."
 msgid "Save..."
 msgstr "Guardar..."
 
-#: include/vlc_intf_strings.h:80 modules/gui/macosx/CoreInteraction.m:371
+#: include/vlc_intf_strings.h:80 modules/gui/macosx/CoreInteraction.m:421
 #: modules/gui/macosx/MainMenu.m:280 modules/gui/macosx/MainMenu.m:1178
 msgid "Repeat All"
 msgstr "Repetir todo"
 
-#: include/vlc_intf_strings.h:81 modules/gui/macosx/CoreInteraction.m:388
+#: include/vlc_intf_strings.h:81 modules/gui/macosx/CoreInteraction.m:442
 #: modules/gui/macosx/MainMenu.m:279 modules/gui/macosx/MainMenu.m:1171
 msgid "Repeat One"
 msgstr "Repetir uno"
@@ -621,7 +621,7 @@ msgstr "No repetir"
 msgid "Random"
 msgstr "Aleatorio"
 
-#: include/vlc_intf_strings.h:85 modules/gui/macosx/CoreInteraction.m:352
+#: include/vlc_intf_strings.h:85 modules/gui/macosx/CoreInteraction.m:398
 msgid "Random Off"
 msgstr "Aleatorio desactivado"
 
@@ -657,7 +657,7 @@ msgstr "Guardar lis&ta de reproducción..."
 msgid "Open Play&list..."
 msgstr "Abrir &lista de reproducción..."
 
-#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:142
+#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:143
 #: modules/gui/qt4/components/preferences_widgets.cpp:1320
 msgid "Search"
 msgstr "Buscar"
@@ -802,7 +802,7 @@ msgstr ""
 
 #: src/audio_output/common.c:85 src/audio_output/common.c:125
 #: src/input/es_out.c:934 src/libvlc-module.c:683
-#: src/video_output/postprocessing.c:98 modules/gui/macosx/MainWindow.m:1948
+#: src/video_output/postprocessing.c:98 modules/gui/macosx/MainWindow.m:1987
 #: modules/video_filter/postproc.c:228
 msgid "Disable"
 msgstr "Deshabilitar"
@@ -1254,7 +1254,7 @@ msgid "Title"
 msgstr "Título"
 
 #: src/input/meta.c:55 modules/gui/macosx/playlistinfo.m:79
-#: modules/gui/macosx/playlist.m:1175
+#: modules/gui/macosx/playlist.m:1197
 msgid "Artist"
 msgstr "Artista"
 
@@ -2533,7 +2533,7 @@ msgid "Default"
 msgstr "Predeterminado"
 
 #: src/libvlc-module.c:683 modules/gui/macosx/AudioEffects.m:66
-#: modules/gui/macosx/MainWindow.m:1946 modules/gui/macosx/wizard.m:357
+#: modules/gui/macosx/MainWindow.m:1985 modules/gui/macosx/wizard.m:357
 #: modules/gui/qt4/ui/equalizer.h:133 modules/gui/qt4/ui/vlm.h:290
 msgid "Enable"
 msgstr "Habilitar"
@@ -3862,7 +3862,7 @@ msgstr "Salir de pantalla completa"
 msgid "Select the hotkey to use to leave fullscreen state."
 msgstr "Seleccione la tecla rápida para salir del estado de pantalla completa."
 
-#: src/libvlc-module.c:1346 modules/gui/macosx/MainWindow.m:133
+#: src/libvlc-module.c:1346 modules/gui/macosx/MainWindow.m:134
 msgid "Play/Pause"
 msgstr "Reproducir/Pausar"
 
@@ -3957,7 +3957,7 @@ msgstr ""
 
 #: src/libvlc-module.c:1366 modules/gui/macosx/MainMenu.m:267
 #: modules/gui/macosx/MainMenu.m:364 modules/gui/macosx/MainMenu.m:371
-#: modules/gui/macosx/MainMenu.m:1149 modules/gui/macosx/MainWindow.m:136
+#: modules/gui/macosx/MainMenu.m:1149 modules/gui/macosx/MainWindow.m:137
 #: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/dialogs/vlm.cpp:556 modules/notify/xosd.c:234
 #: modules/gui/qt4/ui/streampanel.h:181
@@ -3970,7 +3970,7 @@ msgstr "Seleccione la tecla rápida para detener la reproducción."
 
 #: src/libvlc-module.c:1368 modules/gui/fbosd.c:128 modules/gui/fbosd.c:196
 #: modules/gui/macosx/bookmarks.m:93 modules/gui/macosx/bookmarks.m:102
-#: modules/gui/macosx/MainWindow.m:146 modules/gui/macosx/VideoEffects.m:145
+#: modules/gui/macosx/MainWindow.m:147 modules/gui/macosx/VideoEffects.m:145
 #: modules/gui/macosx/VideoEffects.m:167 modules/video_filter/marq.c:157
 #: modules/video_filter/rss.c:200 modules/gui/qt4/ui/sprefs_subtitles.h:274
 #: modules/gui/qt4/ui/video_effects.h:1362
@@ -4197,7 +4197,7 @@ msgstr "Seleccionar tecla para bajar el volumen"
 #: src/libvlc-module.c:1435 modules/access/v4l2/video.c:189
 #: modules/gui/macosx/MainMenu.m:295 modules/gui/macosx/MainMenu.m:367
 #: modules/gui/macosx/MainMenu.m:376 modules/gui/macosx/MainMenu.m:1203
-#: modules/gui/macosx/MainWindow.m:144 modules/gui/qt4/menus.cpp:575
+#: modules/gui/macosx/MainWindow.m:145 modules/gui/qt4/menus.cpp:575
 msgid "Mute"
 msgstr "Silenciar"
 
@@ -4893,6 +4893,7 @@ msgid "Install"
 msgstr "Instalar"
 
 #: src/playlist/engine.c:230 src/playlist/loadsave.c:152 lib/media_list.c:254
+#: modules/gui/macosx/MainWindow.m:313
 #: modules/gui/qt4/components/playlist/selector.cpp:193
 msgid "Media Library"
 msgstr "Biblioteca multimedia"
@@ -5738,36 +5739,36 @@ msgstr "BD"
 msgid "Blu-Ray Disc Input"
 msgstr "Entrada de disco Blu-Ray"
 
-#: modules/access/bluray.c:48 modules/gui/qt4/ui/open_disk.h:299
+#: modules/access/bluray.c:52 modules/gui/qt4/ui/open_disk.h:299
 msgid "BluRay"
 msgstr ""
 
-#: modules/access/bluray.c:49
+#: modules/access/bluray.c:53
 #, fuzzy
 msgid "Blu-Ray Disc support (libbluray)"
 msgstr "Entrada de disco Blu-Ray"
 
-#: modules/access/bluray.c:142
+#: modules/access/bluray.c:166
 msgid ""
 "This Blu-Ray Disc needs a library for AACS decoding, and your system does "
 "not have it."
 msgstr ""
 
-#: modules/access/bluray.c:147
+#: modules/access/bluray.c:171
 msgid "Your system AACS decoding library does not work. Missing keys?"
 msgstr ""
 
-#: modules/access/bluray.c:156
+#: modules/access/bluray.c:180
 msgid ""
 "This Blu-Ray Disc needs a library for BD+ decoding, and your system does not "
 "have it."
 msgstr ""
 
-#: modules/access/bluray.c:161
+#: modules/access/bluray.c:185
 msgid "Your system BD+ decoding library does not work. Missing configuration?"
 msgstr ""
 
-#: modules/access/bluray.c:198
+#: modules/access/bluray.c:222
 #, fuzzy
 msgid "Blu-Ray error"
 msgstr "Blu-Ray"
@@ -7666,7 +7667,7 @@ msgid "Bitmask that will get used by the audio part of the card."
 msgstr "Máscara de bits que usará la parte de audio de la tarjeta."
 
 #: modules/access/pvr.c:103 modules/access/vcdx/info.c:69
-#: modules/gui/macosx/MainWindow.m:143 modules/gui/qt4/dialogs/toolbar.cpp:362
+#: modules/gui/macosx/MainWindow.m:144 modules/gui/qt4/dialogs/toolbar.cpp:362
 #: modules/stream_out/raop.c:150 modules/gui/qt4/ui/sprefs_audio.h:431
 msgid "Volume"
 msgstr "Volumen"
@@ -13089,8 +13090,8 @@ msgstr ""
 msgid "D-Bus control interface"
 msgstr "Interfaz de control D-Bus"
 
-#: modules/control/dbus/dbus_root.c:75 modules/gui/macosx/MainWindow.m:254
-#: modules/gui/macosx/MainWindow.m:1040 modules/gui/qt4/dialogs/help.cpp:99
+#: modules/control/dbus/dbus_root.c:75 modules/gui/macosx/MainWindow.m:255
+#: modules/gui/macosx/MainWindow.m:1060 modules/gui/qt4/dialogs/help.cpp:99
 #: modules/gui/qt4/main_interface.cpp:973
 #: modules/gui/qt4/main_interface.cpp:977
 #: modules/gui/qt4/main_interface.cpp:1016
@@ -13168,8 +13169,8 @@ msgstr "Control del volumen"
 msgid "Position Control"
 msgstr "Control de posición"
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1838
-#: modules/gui/macosx/intf.m:2020
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1849
+#: modules/gui/macosx/intf.m:2031
 msgid "Ignore"
 msgstr "Ignorar"
 
@@ -13425,7 +13426,7 @@ msgstr "Abriendo"
 
 #: modules/control/rc.c:73 modules/gui/macosx/MainMenu.m:853
 #: modules/gui/macosx/MainMenu.m:854 modules/gui/macosx/MainMenu.m:855
-#: modules/gui/macosx/MainWindow.m:1119 modules/gui/qt4/menus.cpp:798
+#: modules/gui/macosx/MainWindow.m:1139 modules/gui/qt4/menus.cpp:798
 #: modules/notify/xosd.c:238
 msgid "Pause"
 msgstr "Pausa"
@@ -15793,12 +15794,12 @@ msgstr "Hora"
 msgid "OK"
 msgstr "Aceptar"
 
-#: modules/gui/macosx/bookmarks.m:100 modules/gui/macosx/playlist.m:136
-#: modules/gui/macosx/playlist.m:140 modules/gui/qt4/dialogs/plugins.cpp:105
+#: modules/gui/macosx/bookmarks.m:100 modules/gui/macosx/playlist.m:141
+#: modules/gui/macosx/playlist.m:145 modules/gui/qt4/dialogs/plugins.cpp:105
 msgid "Name"
 msgstr "Nombre"
 
-#: modules/gui/macosx/bookmarks.m:123 modules/gui/macosx/playlist.m:701
+#: modules/gui/macosx/bookmarks.m:123 modules/gui/macosx/playlist.m:720
 msgid "Untitled"
 msgstr "Sin título"
 
@@ -15873,11 +15874,11 @@ msgstr "Limpiar"
 msgid "Show Details"
 msgstr "Mostrar detalles"
 
-#: modules/gui/macosx/CoreInteraction.m:343
+#: modules/gui/macosx/CoreInteraction.m:389
 msgid "Random On"
 msgstr "Aleatorio sí"
 
-#: modules/gui/macosx/CoreInteraction.m:405
+#: modules/gui/macosx/CoreInteraction.m:463
 msgid "Repeat Off"
 msgstr "Repetir no"
 
@@ -15897,33 +15898,33 @@ msgstr ""
 msgid "(no item is being played)"
 msgstr "(no se está reproduciendo nada)"
 
-#: modules/gui/macosx/intf.m:672 modules/gui/qt4/dialogs/messages.cpp:75
+#: modules/gui/macosx/intf.m:661 modules/gui/qt4/dialogs/messages.cpp:75
 #: modules/gui/qt4/ui/messages_panel.h:141
 #: modules/gui/qt4/ui/messages_panel.h:146
 msgid "Messages"
 msgstr "Mensajes"
 
-#: modules/gui/macosx/intf.m:673
+#: modules/gui/macosx/intf.m:662
 msgid "Open CrashLog..."
 msgstr "Abrir registro de fallos..."
 
-#: modules/gui/macosx/intf.m:674
+#: modules/gui/macosx/intf.m:663
 msgid "Save this Log..."
 msgstr "Guardar estas trazas..."
 
-#: modules/gui/macosx/intf.m:677
+#: modules/gui/macosx/intf.m:666
 msgid "Send"
 msgstr "Enviar"
 
-#: modules/gui/macosx/intf.m:678
+#: modules/gui/macosx/intf.m:667
 msgid "Don't Send"
 msgstr "No enviar"
 
-#: modules/gui/macosx/intf.m:679 modules/gui/macosx/intf.m:680
+#: modules/gui/macosx/intf.m:668 modules/gui/macosx/intf.m:669
 msgid "VLC crashed previously"
 msgstr "VLC falló anteriormente"
 
-#: modules/gui/macosx/intf.m:681
+#: modules/gui/macosx/intf.m:670
 msgid ""
 "Do you want to send details on the crash to VLC's development team?\n"
 "\n"
@@ -15937,11 +15938,11 @@ msgstr ""
 "junto a otra información útil: un enlace para descargar un archivo de "
 "muestra, una URL de una emisión de red, ..."
 
-#: modules/gui/macosx/intf.m:682
+#: modules/gui/macosx/intf.m:671
 msgid "I agree to be possibly contacted about this bugreport."
 msgstr "Acepto ser contactado sobre este informe de errores."
 
-#: modules/gui/macosx/intf.m:683
+#: modules/gui/macosx/intf.m:672
 msgid ""
 "Only your default E-Mail address will be submitted, including no further "
 "information."
@@ -15949,53 +15950,53 @@ msgstr ""
 "Solo se enviará su dirección de correo de forma predeterminada, sin incluir "
 "más información."
 
-#: modules/gui/macosx/intf.m:1718
+#: modules/gui/macosx/intf.m:1729
 msgid "Error when sending the Crash Report"
 msgstr "Error al enviar el informe de errores"
 
-#: modules/gui/macosx/intf.m:1809
+#: modules/gui/macosx/intf.m:1820
 msgid "No CrashLog found"
 msgstr "No se encontró registro de errores"
 
-#: modules/gui/macosx/intf.m:1809 modules/gui/macosx/prefs.m:227
+#: modules/gui/macosx/intf.m:1820 modules/gui/macosx/prefs.m:227
 #: modules/gui/macosx/simple_prefs.m:720
 msgid "Continue"
 msgstr "Continuar"
 
-#: modules/gui/macosx/intf.m:1809
+#: modules/gui/macosx/intf.m:1820
 msgid "Couldn't find any trace of a previous crash."
 msgstr "No se pudo hallar ningún vestigio de fallos previos."
 
-#: modules/gui/macosx/intf.m:1836
+#: modules/gui/macosx/intf.m:1847
 msgid "Remove old preferences?"
 msgstr "¿Eliminar preferencias antiguas?"
 
-#: modules/gui/macosx/intf.m:1837
+#: modules/gui/macosx/intf.m:1848
 msgid "We just found an older version of VLC's preferences files."
 msgstr ""
 "Se ha encontrado una versión más antigua de los archivos de preferencias de "
 "VLC."
 
-#: modules/gui/macosx/intf.m:1838
+#: modules/gui/macosx/intf.m:1849
 msgid "Move To Trash and Relaunch VLC"
 msgstr "Mover a la papelera y reiniciar VLC"
 
-#: modules/gui/macosx/intf.m:1949
+#: modules/gui/macosx/intf.m:1960
 #, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr "Registro de depuración de VLC (%s).rtfd"
 
-#: modules/gui/macosx/intf.m:2018
+#: modules/gui/macosx/intf.m:2029
 msgid "Relaunch required"
 msgstr ""
 
-#: modules/gui/macosx/intf.m:2019
+#: modules/gui/macosx/intf.m:2030
 msgid ""
 "To make sure that VLC no longer listens to your media key events, it needs "
 "to be restarted."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:2020
+#: modules/gui/macosx/intf.m:2031
 msgid "Relaunch VLC"
 msgstr "Relanzar VLC"
 
@@ -16223,7 +16224,7 @@ msgstr "Copiar"
 msgid "Paste"
 msgstr "Pegar"
 
-#: modules/gui/macosx/MainMenu.m:263 modules/gui/macosx/playlist.m:471
+#: modules/gui/macosx/MainMenu.m:263 modules/gui/macosx/playlist.m:490
 msgid "Select All"
 msgstr "Seleccionar todo"
 
@@ -16335,7 +16336,7 @@ msgstr "Favoritos..."
 msgid "Playlist..."
 msgstr "Lista de reproducción..."
 
-#: modules/gui/macosx/MainMenu.m:347 modules/gui/macosx/playlist.m:472
+#: modules/gui/macosx/MainMenu.m:347 modules/gui/macosx/playlist.m:491
 msgid "Media Information..."
 msgstr "Información multimedia..."
 
@@ -16392,64 +16393,64 @@ msgstr "Bajar volumen"
 msgid "Lock Aspect Ratio"
 msgstr "Bloquear proporción"
 
-#: modules/gui/macosx/MainWindow.m:134
+#: modules/gui/macosx/MainWindow.m:135
 msgid "Backward"
 msgstr "Retroceder"
 
-#: modules/gui/macosx/MainWindow.m:135
+#: modules/gui/macosx/MainWindow.m:136
 msgid "Forward"
 msgstr "Avance"
 
-#: modules/gui/macosx/MainWindow.m:137
+#: modules/gui/macosx/MainWindow.m:138
 msgid "Show/Hide Playlist"
 msgstr "Mostrar/ocultar lista de reproducción"
 
-#: modules/gui/macosx/MainWindow.m:138 modules/gui/qt4/dialogs/vlm.cpp:560
+#: modules/gui/macosx/MainWindow.m:139 modules/gui/qt4/dialogs/vlm.cpp:560
 msgid "Repeat"
 msgstr "Repetir"
 
-#: modules/gui/macosx/MainWindow.m:139
+#: modules/gui/macosx/MainWindow.m:140
 msgid "Shuffle"
 msgstr "Barajar"
 
-#: modules/gui/macosx/MainWindow.m:140 modules/gui/macosx/simple_prefs.m:225
+#: modules/gui/macosx/MainWindow.m:141 modules/gui/macosx/simple_prefs.m:225
 #: modules/gui/qt4/ui/sprefs_audio.h:440
 msgid "Effects"
 msgstr "Efectos"
 
-#: modules/gui/macosx/MainWindow.m:141
+#: modules/gui/macosx/MainWindow.m:142
 msgid "Toggle Fullscreen mode"
 msgstr "Intercambiar pantalla completa"
 
-#: modules/gui/macosx/MainWindow.m:145
+#: modules/gui/macosx/MainWindow.m:146
 msgid "Full Volume"
 msgstr "Volumen completo"
 
-#: modules/gui/macosx/MainWindow.m:147
+#: modules/gui/macosx/MainWindow.m:148
 msgid "Open media..."
 msgstr "Abrir medio..."
 
-#: modules/gui/macosx/MainWindow.m:148
+#: modules/gui/macosx/MainWindow.m:149
 msgid "Drop media here"
 msgstr "Dejar medio aquí"
 
-#: modules/gui/macosx/MainWindow.m:307
+#: modules/gui/macosx/MainWindow.m:310
 msgid "LIBRARY"
 msgstr "Librería"
 
-#: modules/gui/macosx/MainWindow.m:310
+#: modules/gui/macosx/MainWindow.m:315
 msgid "MY COMPUTER"
 msgstr "Mi equipo"
 
-#: modules/gui/macosx/MainWindow.m:311
+#: modules/gui/macosx/MainWindow.m:316
 msgid "DEVICES"
 msgstr "Dispositivos"
 
-#: modules/gui/macosx/MainWindow.m:312
+#: modules/gui/macosx/MainWindow.m:317
 msgid "LOCAL NETWORK"
 msgstr "Red local"
 
-#: modules/gui/macosx/MainWindow.m:313
+#: modules/gui/macosx/MainWindow.m:318
 msgid "INTERNET"
 msgstr "Internet"
 
@@ -16537,11 +16538,11 @@ msgstr "Habilitar menús DVD"
 
 #: modules/gui/macosx/open.m:166 modules/gui/macosx/open.m:168
 #: modules/gui/macosx/output.m:147
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:156
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:215
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:260
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:310
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:404 modules/lua/vlc.c:72
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:157
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:217
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:263
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:314
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:434 modules/lua/vlc.c:72
 #: modules/stream_out/rtp.c:114
 #: share/lua/http/dialogs/stream_config_window.html:32
 #: share/lua/http/dialogs/stream_window.html:91
@@ -16589,10 +16590,10 @@ msgid "Protocol"
 msgstr "Protocolo"
 
 #: modules/gui/macosx/open.m:177 modules/gui/macosx/output.m:146
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:214
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:309
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:356
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:403
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:216
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:313
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:378
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:433
 msgid "Address"
 msgstr "Dirección"
 
@@ -16819,7 +16820,7 @@ msgstr "URL de SDP"
 msgid "Save File"
 msgstr "Guardar archivo"
 
-#: modules/gui/macosx/output.m:520 modules/gui/macosx/playlist.m:704
+#: modules/gui/macosx/output.m:520 modules/gui/macosx/playlist.m:723
 #: modules/gui/macosx/prefs.m:205 modules/gui/macosx/simple_prefs.m:317
 #: modules/gui/qt4/components/sout/profile_selector.cpp:252
 #: modules/gui/qt4/ui/vlm.h:302
@@ -16910,77 +16911,77 @@ msgstr "Error al guardar metadatos"
 msgid "VLC was unable to save the meta data."
 msgstr "VLC fue incapaz de guardar los metadatos."
 
-#: modules/gui/macosx/playlist.m:137 modules/gui/macosx/playlist.m:141
+#: modules/gui/macosx/playlist.m:142 modules/gui/macosx/playlist.m:146
 #: modules/gui/macosx/wizard.m:353 modules/gui/qt4/dialogs/plugins.cpp:528
 #: modules/mux/asf.c:58
 msgid "Author"
 msgstr "Autor"
 
-#: modules/gui/macosx/playlist.m:138 modules/gui/macosx/playlist.m:142
+#: modules/gui/macosx/playlist.m:143 modules/gui/macosx/playlist.m:147
 #: modules/gui/macosx/wizard.m:355
 #: modules/gui/qt4/components/playlist/sorting.h:56
 msgid "Duration"
 msgstr "Duración"
 
-#: modules/gui/macosx/playlist.m:467
+#: modules/gui/macosx/playlist.m:486
 msgid "Save Playlist..."
 msgstr "Guardar lista de reproducción..."
 
-#: modules/gui/macosx/playlist.m:469 modules/gui/qt4/dialogs/bookmarks.cpp:48
+#: modules/gui/macosx/playlist.m:488 modules/gui/qt4/dialogs/bookmarks.cpp:48
 #: modules/gui/qt4/ui/podcast_configuration.h:105
 #: modules/gui/qt4/ui/streampanel.h:173
 msgid "Delete"
 msgstr "Borrar"
 
-#: modules/gui/macosx/playlist.m:470
+#: modules/gui/macosx/playlist.m:489
 msgid "Expand Node"
 msgstr "Expandir nodo"
 
-#: modules/gui/macosx/playlist.m:473
+#: modules/gui/macosx/playlist.m:492
 msgid "Download Cover Art"
 msgstr "Descargar arte de carátula"
 
-#: modules/gui/macosx/playlist.m:474
+#: modules/gui/macosx/playlist.m:493
 msgid "Fetch Meta Data"
 msgstr "Recopilar metadatos"
 
-#: modules/gui/macosx/playlist.m:475 modules/gui/macosx/playlist.m:476
+#: modules/gui/macosx/playlist.m:494 modules/gui/macosx/playlist.m:495
 msgid "Reveal in Finder"
 msgstr "Mostrar en Finder"
 
-#: modules/gui/macosx/playlist.m:478
+#: modules/gui/macosx/playlist.m:497
 msgid "Sort Node by Name"
 msgstr "Ordenar nodo por nombre"
 
-#: modules/gui/macosx/playlist.m:479
+#: modules/gui/macosx/playlist.m:498
 msgid "Sort Node by Author"
 msgstr "Ordenar nodo por autor"
 
-#: modules/gui/macosx/playlist.m:483 modules/gui/macosx/playlist.m:484
+#: modules/gui/macosx/playlist.m:502 modules/gui/macosx/playlist.m:503
 msgid "Search in Playlist"
 msgstr "Buscar en lista de reproducción"
 
-#: modules/gui/macosx/playlist.m:486
+#: modules/gui/macosx/playlist.m:505
 msgid "File Format:"
 msgstr "Formato de archivo:"
 
-#: modules/gui/macosx/playlist.m:487
+#: modules/gui/macosx/playlist.m:506
 msgid "Extended M3U"
 msgstr "M3U extendida"
 
-#: modules/gui/macosx/playlist.m:488
+#: modules/gui/macosx/playlist.m:507
 msgid "XML Shareable Playlist Format (XSPF)"
 msgstr "Formato de lista de reproducción compartible XML (XSPF)"
 
-#: modules/gui/macosx/playlist.m:489
+#: modules/gui/macosx/playlist.m:508
 msgid "HTML Playlist"
 msgstr "Lista de reproducción HTML"
 
-#: modules/gui/macosx/playlist.m:703
+#: modules/gui/macosx/playlist.m:722
 msgid "Save Playlist"
 msgstr "Guardar lista de reproducción"
 
-#: modules/gui/macosx/playlist.m:1175
+#: modules/gui/macosx/playlist.m:1197
 msgid "Meta-information"
 msgstr "Meta-información"
 
@@ -19362,29 +19363,29 @@ msgstr "Este módulo escribe la emisión transcodificada en un archivo."
 msgid "Filename"
 msgstr "Nombre de archivo"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:138
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:139
 #: modules/gui/qt4/dialogs/convert.cpp:113
 msgid "Save file..."
 msgstr "Guardar archivo..."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:139
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:140
 #: modules/gui/qt4/dialogs/convert.cpp:115
 msgid ""
 "Containers (*.ps *.ts *.mpg *.ogg *.asf *.mp4 *.mov *.wav *.raw *.flv *.webm)"
 msgstr ""
 "Contenedores (*.ps *.ts *.mpg *.ogg *.asf *.mp4 *.mov *.wav *.raw *.flv)"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:151
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:152
 msgid "This module outputs the transcoded stream to a network via HTTP."
 msgstr ""
 "Este módulo envía la emisión transcodificada a una red a través de HTTP."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:155
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:259
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:156
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:262
 msgid "Path"
 msgstr "Ruta"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:210
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:212
 #, fuzzy
 msgid ""
 "This module outputs the transcoded stream to a network via the mms protocol."
@@ -19392,33 +19393,33 @@ msgstr ""
 "Este módulo envía la emisión transcodificada a una red a través del "
 "protocolo mms."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:255
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:258
 msgid "This module outputs the transcoded stream to a network via RTSP."
 msgstr "Este módulo envía la emisión transcodificada a una red via RTSP."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:305
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:309
 msgid "This module outputs the transcoded stream to a network via UDP."
 msgstr ""
 "Este módulo envía la emisión transcodificada a una red a través de UDP."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:352
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:374
 msgid "This module outputs the transcoded stream to a network via RTP."
 msgstr ""
 "Este módulo envía la emisión transcodificada a una red a través de RTP."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:357
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:379
 msgid "Base port"
 msgstr "Puerto base"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:399
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:429
 msgid "This module outputs the transcoded stream to an Icecast server."
 msgstr "Este módulo envía la emisión transcodificada a un servidor Icecast."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:420
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:450
 msgid "Mount Point"
 msgstr "Punto de montaje"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:421
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:451
 msgid "Login:pass"
 msgstr "Usuario:contraseña"
 
@@ -20429,7 +20430,7 @@ msgstr ""
 "Mostrar preferencias avanzadas y no preferencias simples al abrir el diálogo "
 "preferencias."
 
-#: modules/gui/qt4/qt4.cpp:79 modules/gui/skins2/src/skin_main.cpp:455
+#: modules/gui/qt4/qt4.cpp:79 modules/gui/skins2/src/skin_main.cpp:467
 msgid "Systray icon"
 msgstr "Icono de área de notificación"
 
@@ -20687,19 +20688,19 @@ msgstr "Guardar lista de reproducción"
 msgid "XSPF playlist|*.xspf|M3U file|*.m3u|HTML playlist|*.html"
 msgstr "Lista de reproducción XSPF|*.xspf|Archivo M3U|*.m3u"
 
-#: modules/gui/skins2/src/skin_main.cpp:450
+#: modules/gui/skins2/src/skin_main.cpp:462
 msgid "Skin to use"
 msgstr "Piel a usar"
 
-#: modules/gui/skins2/src/skin_main.cpp:451
+#: modules/gui/skins2/src/skin_main.cpp:463
 msgid "Path to the skin to use."
 msgstr "Ruta de la piel a usar."
 
-#: modules/gui/skins2/src/skin_main.cpp:452
+#: modules/gui/skins2/src/skin_main.cpp:464
 msgid "Config of last used skin"
 msgstr "Configuración de última piel usada"
 
-#: modules/gui/skins2/src/skin_main.cpp:453
+#: modules/gui/skins2/src/skin_main.cpp:465
 msgid ""
 "Windows configuration of the last skin used. This option is updated "
 "automatically, do not touch it."
@@ -20707,20 +20708,20 @@ msgstr ""
 "Configuración de windows de la última piel usada. Esta opción se actualiza "
 "automáticamente, no la modifique."
 
-#: modules/gui/skins2/src/skin_main.cpp:456
+#: modules/gui/skins2/src/skin_main.cpp:468
 msgid "Show a systray icon for VLC"
 msgstr "Mostrar icono en el área de notificación para VLC"
 
-#: modules/gui/skins2/src/skin_main.cpp:457
-#: modules/gui/skins2/src/skin_main.cpp:458
+#: modules/gui/skins2/src/skin_main.cpp:469
+#: modules/gui/skins2/src/skin_main.cpp:470
 msgid "Show VLC on the taskbar"
 msgstr "Mostrar VLC en la barra de tareas"
 
-#: modules/gui/skins2/src/skin_main.cpp:459
+#: modules/gui/skins2/src/skin_main.cpp:471
 msgid "Enable transparency effects"
 msgstr "Habilitar efectos de transparencia"
 
-#: modules/gui/skins2/src/skin_main.cpp:460
+#: modules/gui/skins2/src/skin_main.cpp:472
 msgid ""
 "You can disable all transparency effects if you want. This is mainly useful "
 "when moving windows does not behave correctly."
@@ -20728,16 +20729,16 @@ msgstr ""
 "Puedes deshabilitar todos los efectos de transparencia si quieres. Esto es "
 "útil principalmente cuando al mover ventanas no se comporta correctamente."
 
-#: modules/gui/skins2/src/skin_main.cpp:463
-#: modules/gui/skins2/src/skin_main.cpp:464
+#: modules/gui/skins2/src/skin_main.cpp:475
+#: modules/gui/skins2/src/skin_main.cpp:476
 msgid "Use a skinned playlist"
 msgstr "Usar una lista de reproducción con piel"
 
-#: modules/gui/skins2/src/skin_main.cpp:465
+#: modules/gui/skins2/src/skin_main.cpp:477
 msgid "Display video in a skinned window if any"
 msgstr "Mostrar el vídeo en una ventana con piel si hay alguna"
 
-#: modules/gui/skins2/src/skin_main.cpp:467
+#: modules/gui/skins2/src/skin_main.cpp:479
 msgid ""
 "When set to 'no', this parameter is intended to give old skins a chance to "
 "play back video even though no video tag is implemented"
@@ -20745,11 +20746,11 @@ msgstr ""
 "Cuando tiene valor «no», este parámetro da una oportunidad a las pieles "
 "antiguas de reproducir vídeo aunque la etiqueta no esté implementada"
 
-#: modules/gui/skins2/src/skin_main.cpp:491
+#: modules/gui/skins2/src/skin_main.cpp:503
 msgid "Skins"
 msgstr "Pieles"
 
-#: modules/gui/skins2/src/skin_main.cpp:492
+#: modules/gui/skins2/src/skin_main.cpp:504
 msgid "Skinnable Interface"
 msgstr "Interfaz con piel"
 

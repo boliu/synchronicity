@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vlc\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2012-02-13 00:43+0100\n"
+"POT-Creation-Date: 2012-02-17 17:51+0100\n"
 "PO-Revision-Date: 2010-03-03 09:03+0900\n"
 "Last-Translator: airplanez <airplanez@gmail.com>\n"
 "Language-Team: airplanez <airplanez@gmail.com>\n"
@@ -358,7 +358,7 @@ msgstr "VLC의 VOD (Video On Demand) 구현"
 
 #: include/vlc_config_cat.h:175 src/libvlc-module.c:2163
 #: src/playlist/engine.c:217 modules/demux/playlist/playlist.c:63
-#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:308
+#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:311
 #: modules/gui/qt4/components/controller.hpp:116
 #: modules/gui/qt4/components/playlist/playlist.cpp:191
 #: modules/gui/qt4/components/playlist/selector.cpp:187
@@ -379,8 +379,8 @@ msgstr ""
 msgid "General playlist behaviour"
 msgstr "재생목록 일반 동작"
 
-#: include/vlc_config_cat.h:181 modules/gui/macosx/playlist.m:480
-#: modules/gui/macosx/playlist.m:481
+#: include/vlc_config_cat.h:181 modules/gui/macosx/playlist.m:499
+#: modules/gui/macosx/playlist.m:500
 msgid "Services discovery"
 msgstr "서비스 검색"
 
@@ -543,7 +543,7 @@ msgstr "정보(&A)"
 #: modules/gui/macosx/MainMenu.m:266 modules/gui/macosx/MainMenu.m:363
 #: modules/gui/macosx/MainMenu.m:370 modules/gui/macosx/MainMenu.m:846
 #: modules/gui/macosx/MainMenu.m:847 modules/gui/macosx/MainMenu.m:848
-#: modules/gui/macosx/MainWindow.m:1127 modules/gui/macosx/playlist.m:468
+#: modules/gui/macosx/MainWindow.m:1147 modules/gui/macosx/playlist.m:487
 #: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/dialogs/vlm.cpp:550 modules/gui/qt4/menus.cpp:790
 #: modules/gui/qt4/ui/open.h:253
@@ -594,12 +594,12 @@ msgstr "스트림..."
 msgid "Save..."
 msgstr "저장..."
 
-#: include/vlc_intf_strings.h:80 modules/gui/macosx/CoreInteraction.m:371
+#: include/vlc_intf_strings.h:80 modules/gui/macosx/CoreInteraction.m:421
 #: modules/gui/macosx/MainMenu.m:280 modules/gui/macosx/MainMenu.m:1178
 msgid "Repeat All"
 msgstr "전체 반복"
 
-#: include/vlc_intf_strings.h:81 modules/gui/macosx/CoreInteraction.m:388
+#: include/vlc_intf_strings.h:81 modules/gui/macosx/CoreInteraction.m:442
 #: modules/gui/macosx/MainMenu.m:279 modules/gui/macosx/MainMenu.m:1171
 msgid "Repeat One"
 msgstr "하나 반복"
@@ -616,7 +616,7 @@ msgstr "반복 안함"
 msgid "Random"
 msgstr "무작위"
 
-#: include/vlc_intf_strings.h:85 modules/gui/macosx/CoreInteraction.m:352
+#: include/vlc_intf_strings.h:85 modules/gui/macosx/CoreInteraction.m:398
 msgid "Random Off"
 msgstr "무작위 끄기"
 
@@ -657,7 +657,7 @@ msgstr "재생목록을 파일로 저장(&F)..."
 msgid "Open Play&list..."
 msgstr "재생목록 열기(&L)..."
 
-#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:142
+#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:143
 #: modules/gui/qt4/components/preferences_widgets.cpp:1320
 msgid "Search"
 msgstr "검색"
@@ -799,7 +799,7 @@ msgstr ""
 
 #: src/audio_output/common.c:85 src/audio_output/common.c:125
 #: src/input/es_out.c:934 src/libvlc-module.c:683
-#: src/video_output/postprocessing.c:98 modules/gui/macosx/MainWindow.m:1948
+#: src/video_output/postprocessing.c:98 modules/gui/macosx/MainWindow.m:1987
 #: modules/video_filter/postproc.c:228
 msgid "Disable"
 msgstr "사용 안함"
@@ -1253,7 +1253,7 @@ msgid "Title"
 msgstr "제목"
 
 #: src/input/meta.c:55 modules/gui/macosx/playlistinfo.m:79
-#: modules/gui/macosx/playlist.m:1175
+#: modules/gui/macosx/playlist.m:1197
 msgid "Artist"
 msgstr "아티스트"
 
@@ -2492,7 +2492,7 @@ msgid "Default"
 msgstr "기본"
 
 #: src/libvlc-module.c:683 modules/gui/macosx/AudioEffects.m:66
-#: modules/gui/macosx/MainWindow.m:1946 modules/gui/macosx/wizard.m:357
+#: modules/gui/macosx/MainWindow.m:1985 modules/gui/macosx/wizard.m:357
 #: modules/gui/qt4/ui/equalizer.h:133 modules/gui/qt4/ui/vlm.h:290
 msgid "Enable"
 msgstr "사용"
@@ -3742,7 +3742,7 @@ msgstr "전체화면 끄기"
 msgid "Select the hotkey to use to leave fullscreen state."
 msgstr "전체화면 상태 나가기에 사용할 단축키 선택."
 
-#: src/libvlc-module.c:1346 modules/gui/macosx/MainWindow.m:133
+#: src/libvlc-module.c:1346 modules/gui/macosx/MainWindow.m:134
 msgid "Play/Pause"
 msgstr "재생/일시정지"
 
@@ -3832,7 +3832,7 @@ msgstr "재생목록에서 이전 항목으로 넘김에 사용할 단축키 선
 
 #: src/libvlc-module.c:1366 modules/gui/macosx/MainMenu.m:267
 #: modules/gui/macosx/MainMenu.m:364 modules/gui/macosx/MainMenu.m:371
-#: modules/gui/macosx/MainMenu.m:1149 modules/gui/macosx/MainWindow.m:136
+#: modules/gui/macosx/MainMenu.m:1149 modules/gui/macosx/MainWindow.m:137
 #: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/dialogs/vlm.cpp:556 modules/notify/xosd.c:234
 #: modules/gui/qt4/ui/streampanel.h:181
@@ -3845,7 +3845,7 @@ msgstr "재생 중지 단축키 선택."
 
 #: src/libvlc-module.c:1368 modules/gui/fbosd.c:128 modules/gui/fbosd.c:196
 #: modules/gui/macosx/bookmarks.m:93 modules/gui/macosx/bookmarks.m:102
-#: modules/gui/macosx/MainWindow.m:146 modules/gui/macosx/VideoEffects.m:145
+#: modules/gui/macosx/MainWindow.m:147 modules/gui/macosx/VideoEffects.m:145
 #: modules/gui/macosx/VideoEffects.m:167 modules/video_filter/marq.c:157
 #: modules/video_filter/rss.c:200 modules/gui/qt4/ui/sprefs_subtitles.h:274
 #: modules/gui/qt4/ui/video_effects.h:1362
@@ -4070,7 +4070,7 @@ msgstr "오디오 음량 줄일 키 선택."
 #: src/libvlc-module.c:1435 modules/access/v4l2/video.c:189
 #: modules/gui/macosx/MainMenu.m:295 modules/gui/macosx/MainMenu.m:367
 #: modules/gui/macosx/MainMenu.m:376 modules/gui/macosx/MainMenu.m:1203
-#: modules/gui/macosx/MainWindow.m:144 modules/gui/qt4/menus.cpp:575
+#: modules/gui/macosx/MainWindow.m:145 modules/gui/qt4/menus.cpp:575
 msgid "Mute"
 msgstr "소리끄기"
 
@@ -4764,6 +4764,7 @@ msgid "Install"
 msgstr "인더스트리얼"
 
 #: src/playlist/engine.c:230 src/playlist/loadsave.c:152 lib/media_list.c:254
+#: modules/gui/macosx/MainWindow.m:313
 #: modules/gui/qt4/components/playlist/selector.cpp:193
 msgid "Media Library"
 msgstr "미디어 라이브러리"
@@ -5632,36 +5633,36 @@ msgstr "BD"
 msgid "Blu-Ray Disc Input"
 msgstr "블루레이 디스크 입력"
 
-#: modules/access/bluray.c:48 modules/gui/qt4/ui/open_disk.h:299
+#: modules/access/bluray.c:52 modules/gui/qt4/ui/open_disk.h:299
 msgid "BluRay"
 msgstr ""
 
-#: modules/access/bluray.c:49
+#: modules/access/bluray.c:53
 #, fuzzy
 msgid "Blu-Ray Disc support (libbluray)"
 msgstr "블루레이 디스크 입력"
 
-#: modules/access/bluray.c:142
+#: modules/access/bluray.c:166
 msgid ""
 "This Blu-Ray Disc needs a library for AACS decoding, and your system does "
 "not have it."
 msgstr ""
 
-#: modules/access/bluray.c:147
+#: modules/access/bluray.c:171
 msgid "Your system AACS decoding library does not work. Missing keys?"
 msgstr ""
 
-#: modules/access/bluray.c:156
+#: modules/access/bluray.c:180
 msgid ""
 "This Blu-Ray Disc needs a library for BD+ decoding, and your system does not "
 "have it."
 msgstr ""
 
-#: modules/access/bluray.c:161
+#: modules/access/bluray.c:185
 msgid "Your system BD+ decoding library does not work. Missing configuration?"
 msgstr ""
 
-#: modules/access/bluray.c:198
+#: modules/access/bluray.c:222
 msgid "Blu-Ray error"
 msgstr ""
 
@@ -7592,7 +7593,7 @@ msgid "Bitmask that will get used by the audio part of the card."
 msgstr ""
 
 #: modules/access/pvr.c:103 modules/access/vcdx/info.c:69
-#: modules/gui/macosx/MainWindow.m:143 modules/gui/qt4/dialogs/toolbar.cpp:362
+#: modules/gui/macosx/MainWindow.m:144 modules/gui/qt4/dialogs/toolbar.cpp:362
 #: modules/stream_out/raop.c:150 modules/gui/qt4/ui/sprefs_audio.h:431
 msgid "Volume"
 msgstr "음량"
@@ -12839,8 +12840,8 @@ msgstr ""
 msgid "D-Bus control interface"
 msgstr "D-Bus 제어 인터페이스"
 
-#: modules/control/dbus/dbus_root.c:75 modules/gui/macosx/MainWindow.m:254
-#: modules/gui/macosx/MainWindow.m:1040 modules/gui/qt4/dialogs/help.cpp:99
+#: modules/control/dbus/dbus_root.c:75 modules/gui/macosx/MainWindow.m:255
+#: modules/gui/macosx/MainWindow.m:1060 modules/gui/qt4/dialogs/help.cpp:99
 #: modules/gui/qt4/main_interface.cpp:973
 #: modules/gui/qt4/main_interface.cpp:977
 #: modules/gui/qt4/main_interface.cpp:1016
@@ -12915,8 +12916,8 @@ msgstr "음량 제어"
 msgid "Position Control"
 msgstr "위치 제어"
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1838
-#: modules/gui/macosx/intf.m:2020
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1849
+#: modules/gui/macosx/intf.m:2031
 msgid "Ignore"
 msgstr "무시"
 
@@ -13168,7 +13169,7 @@ msgstr "열기"
 
 #: modules/control/rc.c:73 modules/gui/macosx/MainMenu.m:853
 #: modules/gui/macosx/MainMenu.m:854 modules/gui/macosx/MainMenu.m:855
-#: modules/gui/macosx/MainWindow.m:1119 modules/gui/qt4/menus.cpp:798
+#: modules/gui/macosx/MainWindow.m:1139 modules/gui/qt4/menus.cpp:798
 #: modules/notify/xosd.c:238
 msgid "Pause"
 msgstr "일시정지"
@@ -15510,12 +15511,12 @@ msgstr "시간"
 msgid "OK"
 msgstr "확인"
 
-#: modules/gui/macosx/bookmarks.m:100 modules/gui/macosx/playlist.m:136
-#: modules/gui/macosx/playlist.m:140 modules/gui/qt4/dialogs/plugins.cpp:105
+#: modules/gui/macosx/bookmarks.m:100 modules/gui/macosx/playlist.m:141
+#: modules/gui/macosx/playlist.m:145 modules/gui/qt4/dialogs/plugins.cpp:105
 msgid "Name"
 msgstr "이름"
 
-#: modules/gui/macosx/bookmarks.m:123 modules/gui/macosx/playlist.m:701
+#: modules/gui/macosx/bookmarks.m:123 modules/gui/macosx/playlist.m:720
 msgid "Untitled"
 msgstr "제목없음"
 
@@ -15587,11 +15588,11 @@ msgstr "지우기"
 msgid "Show Details"
 msgstr "상세 정보 보기"
 
-#: modules/gui/macosx/CoreInteraction.m:343
+#: modules/gui/macosx/CoreInteraction.m:389
 msgid "Random On"
 msgstr "무작위 켜기"
 
-#: modules/gui/macosx/CoreInteraction.m:405
+#: modules/gui/macosx/CoreInteraction.m:463
 msgid "Repeat Off"
 msgstr "반복 꺼짐"
 
@@ -15609,33 +15610,33 @@ msgstr ""
 msgid "(no item is being played)"
 msgstr "(재생 중인 항목이 없음)"
 
-#: modules/gui/macosx/intf.m:672 modules/gui/qt4/dialogs/messages.cpp:75
+#: modules/gui/macosx/intf.m:661 modules/gui/qt4/dialogs/messages.cpp:75
 #: modules/gui/qt4/ui/messages_panel.h:141
 #: modules/gui/qt4/ui/messages_panel.h:146
 msgid "Messages"
 msgstr "메시지"
 
-#: modules/gui/macosx/intf.m:673
+#: modules/gui/macosx/intf.m:662
 msgid "Open CrashLog..."
 msgstr "충돌 로그 열기..."
 
-#: modules/gui/macosx/intf.m:674
+#: modules/gui/macosx/intf.m:663
 msgid "Save this Log..."
 msgstr "이 로그 저장..."
 
-#: modules/gui/macosx/intf.m:677
+#: modules/gui/macosx/intf.m:666
 msgid "Send"
 msgstr "보내기"
 
-#: modules/gui/macosx/intf.m:678
+#: modules/gui/macosx/intf.m:667
 msgid "Don't Send"
 msgstr "보내지 않기"
 
-#: modules/gui/macosx/intf.m:679 modules/gui/macosx/intf.m:680
+#: modules/gui/macosx/intf.m:668 modules/gui/macosx/intf.m:669
 msgid "VLC crashed previously"
 msgstr "이전에 VLC 가 멈추었습니다"
 
-#: modules/gui/macosx/intf.m:681
+#: modules/gui/macosx/intf.m:670
 msgid ""
 "Do you want to send details on the crash to VLC's development team?\n"
 "\n"
@@ -15648,61 +15649,61 @@ msgstr ""
 "원한다면, VLC 멈춤전에 무엇을 했는지와 같이 다른 도움이 되는 정보를 몇 줄 입"
 "력할수 있습니다: 샘플 파일의 다운로드 링크, 네트워크 스트림의 URL, ..."
 
-#: modules/gui/macosx/intf.m:682
+#: modules/gui/macosx/intf.m:671
 msgid "I agree to be possibly contacted about this bugreport."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:683
+#: modules/gui/macosx/intf.m:672
 msgid ""
 "Only your default E-Mail address will be submitted, including no further "
 "information."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1718
+#: modules/gui/macosx/intf.m:1729
 msgid "Error when sending the Crash Report"
 msgstr "멈춤 보고 전송시 오류"
 
-#: modules/gui/macosx/intf.m:1809
+#: modules/gui/macosx/intf.m:1820
 msgid "No CrashLog found"
 msgstr "충돌 로그를 찾을수 없음"
 
-#: modules/gui/macosx/intf.m:1809 modules/gui/macosx/prefs.m:227
+#: modules/gui/macosx/intf.m:1820 modules/gui/macosx/prefs.m:227
 #: modules/gui/macosx/simple_prefs.m:720
 msgid "Continue"
 msgstr "계속"
 
-#: modules/gui/macosx/intf.m:1809
+#: modules/gui/macosx/intf.m:1820
 msgid "Couldn't find any trace of a previous crash."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1836
+#: modules/gui/macosx/intf.m:1847
 msgid "Remove old preferences?"
 msgstr "오래된 선택사항을 제거 하시겠습니까?"
 
-#: modules/gui/macosx/intf.m:1837
+#: modules/gui/macosx/intf.m:1848
 msgid "We just found an older version of VLC's preferences files."
 msgstr "지금 이전 버전의 VLC 선택사항 파일을 찾았습니다."
 
-#: modules/gui/macosx/intf.m:1838
+#: modules/gui/macosx/intf.m:1849
 msgid "Move To Trash and Relaunch VLC"
 msgstr "휴지통으로 이동 및 VLC 재실행"
 
-#: modules/gui/macosx/intf.m:1949
+#: modules/gui/macosx/intf.m:1960
 #, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr "VLC 디버그 로그 (%s).rtfd"
 
-#: modules/gui/macosx/intf.m:2018
+#: modules/gui/macosx/intf.m:2029
 msgid "Relaunch required"
 msgstr ""
 
-#: modules/gui/macosx/intf.m:2019
+#: modules/gui/macosx/intf.m:2030
 msgid ""
 "To make sure that VLC no longer listens to your media key events, it needs "
 "to be restarted."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:2020
+#: modules/gui/macosx/intf.m:2031
 msgid "Relaunch VLC"
 msgstr ""
 
@@ -15919,7 +15920,7 @@ msgstr "복사"
 msgid "Paste"
 msgstr "붙여넣기"
 
-#: modules/gui/macosx/MainMenu.m:263 modules/gui/macosx/playlist.m:471
+#: modules/gui/macosx/MainMenu.m:263 modules/gui/macosx/playlist.m:490
 msgid "Select All"
 msgstr "모두 선택"
 
@@ -16037,7 +16038,7 @@ msgstr "북마크..."
 msgid "Playlist..."
 msgstr "재생목록..."
 
-#: modules/gui/macosx/MainMenu.m:347 modules/gui/macosx/playlist.m:472
+#: modules/gui/macosx/MainMenu.m:347 modules/gui/macosx/playlist.m:491
 msgid "Media Information..."
 msgstr "미디어 정보..."
 
@@ -16094,71 +16095,71 @@ msgstr "음량 낮춤"
 msgid "Lock Aspect Ratio"
 msgstr "가로세로비 잠금"
 
-#: modules/gui/macosx/MainWindow.m:134
+#: modules/gui/macosx/MainWindow.m:135
 #, fuzzy
 msgid "Backward"
 msgstr "역전 재생"
 
-#: modules/gui/macosx/MainWindow.m:135
+#: modules/gui/macosx/MainWindow.m:136
 #, fuzzy
 msgid "Forward"
 msgstr "한단계 앞으로"
 
-#: modules/gui/macosx/MainWindow.m:137
+#: modules/gui/macosx/MainWindow.m:138
 #, fuzzy
 msgid "Show/Hide Playlist"
 msgstr "재생목록 보기"
 
-#: modules/gui/macosx/MainWindow.m:138 modules/gui/qt4/dialogs/vlm.cpp:560
+#: modules/gui/macosx/MainWindow.m:139 modules/gui/qt4/dialogs/vlm.cpp:560
 #, fuzzy
 msgid "Repeat"
 msgstr "반복:"
 
-#: modules/gui/macosx/MainWindow.m:139
+#: modules/gui/macosx/MainWindow.m:140
 msgid "Shuffle"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:140 modules/gui/macosx/simple_prefs.m:225
+#: modules/gui/macosx/MainWindow.m:141 modules/gui/macosx/simple_prefs.m:225
 #: modules/gui/qt4/ui/sprefs_audio.h:440
 msgid "Effects"
 msgstr "효과"
 
-#: modules/gui/macosx/MainWindow.m:141
+#: modules/gui/macosx/MainWindow.m:142
 #, fuzzy
 msgid "Toggle Fullscreen mode"
 msgstr "전화면화(_F)"
 
-#: modules/gui/macosx/MainWindow.m:145
+#: modules/gui/macosx/MainWindow.m:146
 #, fuzzy
 msgid "Full Volume"
 msgstr "기본 음량"
 
-#: modules/gui/macosx/MainWindow.m:147
+#: modules/gui/macosx/MainWindow.m:148
 #, fuzzy
 msgid "Open media..."
 msgstr "디스크를 연다(_D)..."
 
-#: modules/gui/macosx/MainWindow.m:148
+#: modules/gui/macosx/MainWindow.m:149
 msgid "Drop media here"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:307
+#: modules/gui/macosx/MainWindow.m:310
 msgid "LIBRARY"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:310
+#: modules/gui/macosx/MainWindow.m:315
 msgid "MY COMPUTER"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:311
+#: modules/gui/macosx/MainWindow.m:316
 msgid "DEVICES"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:312
+#: modules/gui/macosx/MainWindow.m:317
 msgid "LOCAL NETWORK"
 msgstr ""
 
-#: modules/gui/macosx/MainWindow.m:313
+#: modules/gui/macosx/MainWindow.m:318
 msgid "INTERNET"
 msgstr ""
 
@@ -16253,11 +16254,11 @@ msgstr "DVD 메뉴를 사용"
 
 #: modules/gui/macosx/open.m:166 modules/gui/macosx/open.m:168
 #: modules/gui/macosx/output.m:147
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:156
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:215
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:260
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:310
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:404 modules/lua/vlc.c:72
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:157
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:217
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:263
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:314
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:434 modules/lua/vlc.c:72
 #: modules/stream_out/rtp.c:114
 #: share/lua/http/dialogs/stream_config_window.html:32
 #: share/lua/http/dialogs/stream_window.html:91
@@ -16296,10 +16297,10 @@ msgid "Protocol"
 msgstr "프로토콜"
 
 #: modules/gui/macosx/open.m:177 modules/gui/macosx/output.m:146
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:214
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:309
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:356
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:403
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:216
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:313
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:378
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:433
 msgid "Address"
 msgstr "주소"
 
@@ -16532,7 +16533,7 @@ msgstr "SDP URL"
 msgid "Save File"
 msgstr "파일 저장"
 
-#: modules/gui/macosx/output.m:520 modules/gui/macosx/playlist.m:704
+#: modules/gui/macosx/output.m:520 modules/gui/macosx/playlist.m:723
 #: modules/gui/macosx/prefs.m:205 modules/gui/macosx/simple_prefs.m:317
 #: modules/gui/qt4/components/sout/profile_selector.cpp:252
 #: modules/gui/qt4/ui/vlm.h:302
@@ -16623,77 +16624,77 @@ msgstr "메타 저장중 오류"
 msgid "VLC was unable to save the meta data."
 msgstr "VLC 가 메타 데이터를 저장할수 없습니다."
 
-#: modules/gui/macosx/playlist.m:137 modules/gui/macosx/playlist.m:141
+#: modules/gui/macosx/playlist.m:142 modules/gui/macosx/playlist.m:146
 #: modules/gui/macosx/wizard.m:353 modules/gui/qt4/dialogs/plugins.cpp:528
 #: modules/mux/asf.c:58
 msgid "Author"
 msgstr "작성자"
 
-#: modules/gui/macosx/playlist.m:138 modules/gui/macosx/playlist.m:142
+#: modules/gui/macosx/playlist.m:143 modules/gui/macosx/playlist.m:147
 #: modules/gui/macosx/wizard.m:355
 #: modules/gui/qt4/components/playlist/sorting.h:56
 msgid "Duration"
 msgstr "재생시간"
 
-#: modules/gui/macosx/playlist.m:467
+#: modules/gui/macosx/playlist.m:486
 msgid "Save Playlist..."
 msgstr "재생목록 저장..."
 
-#: modules/gui/macosx/playlist.m:469 modules/gui/qt4/dialogs/bookmarks.cpp:48
+#: modules/gui/macosx/playlist.m:488 modules/gui/qt4/dialogs/bookmarks.cpp:48
 #: modules/gui/qt4/ui/podcast_configuration.h:105
 #: modules/gui/qt4/ui/streampanel.h:173
 msgid "Delete"
 msgstr "삭제"
 
-#: modules/gui/macosx/playlist.m:470
+#: modules/gui/macosx/playlist.m:489
 msgid "Expand Node"
 msgstr "노드 펼치기"
 
-#: modules/gui/macosx/playlist.m:473
+#: modules/gui/macosx/playlist.m:492
 msgid "Download Cover Art"
 msgstr "커버 아트 다운로드"
 
-#: modules/gui/macosx/playlist.m:474
+#: modules/gui/macosx/playlist.m:493
 msgid "Fetch Meta Data"
 msgstr "메타데이터 가져오기"
 
-#: modules/gui/macosx/playlist.m:475 modules/gui/macosx/playlist.m:476
+#: modules/gui/macosx/playlist.m:494 modules/gui/macosx/playlist.m:495
 msgid "Reveal in Finder"
 msgstr ""
 
-#: modules/gui/macosx/playlist.m:478
+#: modules/gui/macosx/playlist.m:497
 msgid "Sort Node by Name"
 msgstr "이름으로 정렬"
 
-#: modules/gui/macosx/playlist.m:479
+#: modules/gui/macosx/playlist.m:498
 msgid "Sort Node by Author"
 msgstr "작성자로 정렬"
 
-#: modules/gui/macosx/playlist.m:483 modules/gui/macosx/playlist.m:484
+#: modules/gui/macosx/playlist.m:502 modules/gui/macosx/playlist.m:503
 msgid "Search in Playlist"
 msgstr "재생목록에서 검색"
 
-#: modules/gui/macosx/playlist.m:486
+#: modules/gui/macosx/playlist.m:505
 msgid "File Format:"
 msgstr "파일 형식:"
 
-#: modules/gui/macosx/playlist.m:487
+#: modules/gui/macosx/playlist.m:506
 msgid "Extended M3U"
 msgstr "확장 M3U"
 
-#: modules/gui/macosx/playlist.m:488
+#: modules/gui/macosx/playlist.m:507
 msgid "XML Shareable Playlist Format (XSPF)"
 msgstr "XML Shareable Playlist Format (XSPF)"
 
-#: modules/gui/macosx/playlist.m:489
+#: modules/gui/macosx/playlist.m:508
 msgid "HTML Playlist"
 msgstr "HTML 재생목록"
 
-#: modules/gui/macosx/playlist.m:703
+#: modules/gui/macosx/playlist.m:722
 msgid "Save Playlist"
 msgstr "재생목록 저장"
 
-#: modules/gui/macosx/playlist.m:1175
+#: modules/gui/macosx/playlist.m:1197
 msgid "Meta-information"
 msgstr "메타-정보"
 
@@ -19098,60 +19099,60 @@ msgstr "이 모듈은 변환된 스트림을 파일에 씁니다."
 msgid "Filename"
 msgstr "파일명"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:138
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:139
 #: modules/gui/qt4/dialogs/convert.cpp:113
 msgid "Save file..."
 msgstr "파일 저장..."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:139
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:140
 #: modules/gui/qt4/dialogs/convert.cpp:115
 #, fuzzy
 msgid ""
 "Containers (*.ps *.ts *.mpg *.ogg *.asf *.mp4 *.mov *.wav *.raw *.flv *.webm)"
 msgstr "컨테이너 (*.ps *.ts *.mpg *.ogg *.asf *.mp4 *.mov *.wav *.raw *.flv)"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:151
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:152
 msgid "This module outputs the transcoded stream to a network via HTTP."
 msgstr "이 모듈은 HTTP 를 통해 변환된 스트림을 네트워크로 출력합니다."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:155
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:259
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:156
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:262
 msgid "Path"
 msgstr "경로"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:210
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:212
 #, fuzzy
 msgid ""
 "This module outputs the transcoded stream to a network via the mms protocol."
 msgstr "이 모듈은 mms 프로토콜을 통해 변환된 스트림을 네트워크로 출력합니다."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:255
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:258
 #, fuzzy
 msgid "This module outputs the transcoded stream to a network via RTSP."
 msgstr "이 모듈은 RTP 를 통해 변환된 스트림을 네트워크로 출력합니다."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:305
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:309
 msgid "This module outputs the transcoded stream to a network via UDP."
 msgstr "이 모듈은 UDP 를 통해 변환된 스트림을 네트워크로 출력합니다."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:352
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:374
 msgid "This module outputs the transcoded stream to a network via RTP."
 msgstr "이 모듈은 RTP 를 통해 변환된 스트림을 네트워크로 출력합니다."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:357
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:379
 #, fuzzy
 msgid "Base port"
 msgstr "CDDB 포트"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:399
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:429
 msgid "This module outputs the transcoded stream to an Icecast server."
 msgstr "이 모듈은 변환된 스트림을 Icecast 서버로 출력합니다."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:420
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:450
 msgid "Mount Point"
 msgstr "마운트 지점"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:421
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:451
 msgid "Login:pass"
 msgstr "로그인:통과"
 
@@ -20175,7 +20176,7 @@ msgid ""
 "preferences dialog."
 msgstr ""
 
-#: modules/gui/qt4/qt4.cpp:79 modules/gui/skins2/src/skin_main.cpp:455
+#: modules/gui/qt4/qt4.cpp:79 modules/gui/skins2/src/skin_main.cpp:467
 msgid "Systray icon"
 msgstr "시스템 트레이 아이콘"
 
@@ -20429,19 +20430,19 @@ msgstr "재생목록 저장"
 msgid "XSPF playlist|*.xspf|M3U file|*.m3u|HTML playlist|*.html"
 msgstr "XSPF 재생목록|*.xspf|M3U 파일|*.m3u|HTML 재생목록|*.html"
 
-#: modules/gui/skins2/src/skin_main.cpp:450
+#: modules/gui/skins2/src/skin_main.cpp:462
 msgid "Skin to use"
 msgstr "사용할 스킨"
 
-#: modules/gui/skins2/src/skin_main.cpp:451
+#: modules/gui/skins2/src/skin_main.cpp:463
 msgid "Path to the skin to use."
 msgstr "사용할 스킨의 경로."
 
-#: modules/gui/skins2/src/skin_main.cpp:452
+#: modules/gui/skins2/src/skin_main.cpp:464
 msgid "Config of last used skin"
 msgstr "이전에 사용한 스킨 설정"
 
-#: modules/gui/skins2/src/skin_main.cpp:453
+#: modules/gui/skins2/src/skin_main.cpp:465
 msgid ""
 "Windows configuration of the last skin used. This option is updated "
 "automatically, do not touch it."
@@ -20449,45 +20450,45 @@ msgstr ""
 "마지막 사용된 스킨의 윈도우즈 설정. 이 옵션은 자동으로 업데이트됩니다, 건들"
 "지 마세요."
 
-#: modules/gui/skins2/src/skin_main.cpp:456
+#: modules/gui/skins2/src/skin_main.cpp:468
 msgid "Show a systray icon for VLC"
 msgstr "시스템 트레이에 VLC 아이콘 표시"
 
-#: modules/gui/skins2/src/skin_main.cpp:457
-#: modules/gui/skins2/src/skin_main.cpp:458
+#: modules/gui/skins2/src/skin_main.cpp:469
+#: modules/gui/skins2/src/skin_main.cpp:470
 msgid "Show VLC on the taskbar"
 msgstr "작업표시줄에 VLC 표시"
 
-#: modules/gui/skins2/src/skin_main.cpp:459
+#: modules/gui/skins2/src/skin_main.cpp:471
 msgid "Enable transparency effects"
 msgstr "투명 효과 사용"
 
-#: modules/gui/skins2/src/skin_main.cpp:460
+#: modules/gui/skins2/src/skin_main.cpp:472
 msgid ""
 "You can disable all transparency effects if you want. This is mainly useful "
 "when moving windows does not behave correctly."
 msgstr ""
 
-#: modules/gui/skins2/src/skin_main.cpp:463
-#: modules/gui/skins2/src/skin_main.cpp:464
+#: modules/gui/skins2/src/skin_main.cpp:475
+#: modules/gui/skins2/src/skin_main.cpp:476
 msgid "Use a skinned playlist"
 msgstr "스킨이 적용된 재생목록 사용"
 
-#: modules/gui/skins2/src/skin_main.cpp:465
+#: modules/gui/skins2/src/skin_main.cpp:477
 msgid "Display video in a skinned window if any"
 msgstr ""
 
-#: modules/gui/skins2/src/skin_main.cpp:467
+#: modules/gui/skins2/src/skin_main.cpp:479
 msgid ""
 "When set to 'no', this parameter is intended to give old skins a chance to "
 "play back video even though no video tag is implemented"
 msgstr ""
 
-#: modules/gui/skins2/src/skin_main.cpp:491
+#: modules/gui/skins2/src/skin_main.cpp:503
 msgid "Skins"
 msgstr "스킨"
 
-#: modules/gui/skins2/src/skin_main.cpp:492
+#: modules/gui/skins2/src/skin_main.cpp:504
 msgid "Skinnable Interface"
 msgstr "스킨을 적용할 수 있는 인터페이스"
 

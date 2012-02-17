@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vlc 1.0.0\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2012-02-13 00:43+0100\n"
+"POT-Creation-Date: 2012-02-17 17:51+0100\n"
 "PO-Revision-Date: 2012-02-08 21:42+0200\n"
 "Last-Translator: Juha Jeronen <juha.jeronen@jyu.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -365,7 +365,7 @@ msgstr "VLC:n toteutus Video On Demand -palveluille"
 
 #: include/vlc_config_cat.h:175 src/libvlc-module.c:2163
 #: src/playlist/engine.c:217 modules/demux/playlist/playlist.c:63
-#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:308
+#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:311
 #: modules/gui/qt4/components/controller.hpp:116
 #: modules/gui/qt4/components/playlist/playlist.cpp:191
 #: modules/gui/qt4/components/playlist/selector.cpp:187
@@ -387,8 +387,8 @@ msgstr ""
 msgid "General playlist behaviour"
 msgstr "Soittolistan yleistoiminta"
 
-#: include/vlc_config_cat.h:181 modules/gui/macosx/playlist.m:480
-#: modules/gui/macosx/playlist.m:481
+#: include/vlc_config_cat.h:181 modules/gui/macosx/playlist.m:499
+#: modules/gui/macosx/playlist.m:500
 msgid "Services discovery"
 msgstr "Palvelujen haku"
 
@@ -555,7 +555,7 @@ msgstr "Tietoj&a"
 #: modules/gui/macosx/MainMenu.m:266 modules/gui/macosx/MainMenu.m:363
 #: modules/gui/macosx/MainMenu.m:370 modules/gui/macosx/MainMenu.m:846
 #: modules/gui/macosx/MainMenu.m:847 modules/gui/macosx/MainMenu.m:848
-#: modules/gui/macosx/MainWindow.m:1127 modules/gui/macosx/playlist.m:468
+#: modules/gui/macosx/MainWindow.m:1147 modules/gui/macosx/playlist.m:487
 #: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/dialogs/vlm.cpp:550 modules/gui/qt4/menus.cpp:790
 #: modules/gui/qt4/ui/open.h:253
@@ -602,12 +602,12 @@ msgstr "Lähetä verkkoon..."
 msgid "Save..."
 msgstr "Tallenna..."
 
-#: include/vlc_intf_strings.h:80 modules/gui/macosx/CoreInteraction.m:371
+#: include/vlc_intf_strings.h:80 modules/gui/macosx/CoreInteraction.m:421
 #: modules/gui/macosx/MainMenu.m:280 modules/gui/macosx/MainMenu.m:1178
 msgid "Repeat All"
 msgstr "Toista kaikkia"
 
-#: include/vlc_intf_strings.h:81 modules/gui/macosx/CoreInteraction.m:388
+#: include/vlc_intf_strings.h:81 modules/gui/macosx/CoreInteraction.m:442
 #: modules/gui/macosx/MainMenu.m:279 modules/gui/macosx/MainMenu.m:1171
 msgid "Repeat One"
 msgstr "Toista yhtä"
@@ -623,7 +623,7 @@ msgstr "Ei toistoa"
 msgid "Random"
 msgstr "Satunnaistoisto"
 
-#: include/vlc_intf_strings.h:85 modules/gui/macosx/CoreInteraction.m:352
+#: include/vlc_intf_strings.h:85 modules/gui/macosx/CoreInteraction.m:398
 msgid "Random Off"
 msgstr "Satunnaistoisto pois"
 
@@ -659,7 +659,7 @@ msgstr "Tallenna &soittolista tiedostoon..."
 msgid "Open Play&list..."
 msgstr "Avaa soitto&lista..."
 
-#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:142
+#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:143
 #: modules/gui/qt4/components/preferences_widgets.cpp:1320
 msgid "Search"
 msgstr "Hae"
@@ -814,7 +814,7 @@ msgstr ""
 
 #: src/audio_output/common.c:85 src/audio_output/common.c:125
 #: src/input/es_out.c:934 src/libvlc-module.c:683
-#: src/video_output/postprocessing.c:98 modules/gui/macosx/MainWindow.m:1948
+#: src/video_output/postprocessing.c:98 modules/gui/macosx/MainWindow.m:1987
 #: modules/video_filter/postproc.c:228
 msgid "Disable"
 msgstr "Poista käytöstä"
@@ -1267,7 +1267,7 @@ msgid "Title"
 msgstr "Nimi"
 
 #: src/input/meta.c:55 modules/gui/macosx/playlistinfo.m:79
-#: modules/gui/macosx/playlist.m:1175
+#: modules/gui/macosx/playlist.m:1197
 msgid "Artist"
 msgstr "Esittäjä"
 
@@ -2562,7 +2562,7 @@ msgid "Default"
 msgstr "Oletusarvo"
 
 #: src/libvlc-module.c:683 modules/gui/macosx/AudioEffects.m:66
-#: modules/gui/macosx/MainWindow.m:1946 modules/gui/macosx/wizard.m:357
+#: modules/gui/macosx/MainWindow.m:1985 modules/gui/macosx/wizard.m:357
 #: modules/gui/qt4/ui/equalizer.h:133 modules/gui/qt4/ui/vlm.h:290
 msgid "Enable"
 msgstr "Käytä"
@@ -3954,7 +3954,7 @@ msgstr "Poistu koko näytön tilasta"
 msgid "Select the hotkey to use to leave fullscreen state."
 msgstr "Valitse pikanäppäin koko näytön tilasta poistumiselle."
 
-#: src/libvlc-module.c:1346 modules/gui/macosx/MainWindow.m:133
+#: src/libvlc-module.c:1346 modules/gui/macosx/MainWindow.m:134
 msgid "Play/Pause"
 msgstr "Toista/tauko"
 
@@ -4046,7 +4046,7 @@ msgstr ""
 
 #: src/libvlc-module.c:1366 modules/gui/macosx/MainMenu.m:267
 #: modules/gui/macosx/MainMenu.m:364 modules/gui/macosx/MainMenu.m:371
-#: modules/gui/macosx/MainMenu.m:1149 modules/gui/macosx/MainWindow.m:136
+#: modules/gui/macosx/MainMenu.m:1149 modules/gui/macosx/MainWindow.m:137
 #: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/dialogs/vlm.cpp:556 modules/notify/xosd.c:234
 #: modules/gui/qt4/ui/streampanel.h:181
@@ -4059,7 +4059,7 @@ msgstr "Valitse pikanäppäin toiston pysäyttämistä varten."
 
 #: src/libvlc-module.c:1368 modules/gui/fbosd.c:128 modules/gui/fbosd.c:196
 #: modules/gui/macosx/bookmarks.m:93 modules/gui/macosx/bookmarks.m:102
-#: modules/gui/macosx/MainWindow.m:146 modules/gui/macosx/VideoEffects.m:145
+#: modules/gui/macosx/MainWindow.m:147 modules/gui/macosx/VideoEffects.m:145
 #: modules/gui/macosx/VideoEffects.m:167 modules/video_filter/marq.c:157
 #: modules/video_filter/rss.c:200 modules/gui/qt4/ui/sprefs_subtitles.h:274
 #: modules/gui/qt4/ui/video_effects.h:1362
@@ -4285,7 +4285,7 @@ msgstr "Valitse näppäin, joka vähentää äänenvoimakkuutta."
 #: src/libvlc-module.c:1435 modules/access/v4l2/video.c:189
 #: modules/gui/macosx/MainMenu.m:295 modules/gui/macosx/MainMenu.m:367
 #: modules/gui/macosx/MainMenu.m:376 modules/gui/macosx/MainMenu.m:1203
-#: modules/gui/macosx/MainWindow.m:144 modules/gui/qt4/menus.cpp:575
+#: modules/gui/macosx/MainWindow.m:145 modules/gui/qt4/menus.cpp:575
 msgid "Mute"
 msgstr "Vaimenna"
 
@@ -4992,6 +4992,7 @@ msgid "Install"
 msgstr "Asenna"
 
 #: src/playlist/engine.c:230 src/playlist/loadsave.c:152 lib/media_list.c:254
+#: modules/gui/macosx/MainWindow.m:313
 #: modules/gui/qt4/components/playlist/selector.cpp:193
 msgid "Media Library"
 msgstr "Mediakirjasto"
@@ -5844,38 +5845,38 @@ msgstr "BD"
 msgid "Blu-Ray Disc Input"
 msgstr "Blu-Ray -levylähde"
 
-#: modules/access/bluray.c:48 modules/gui/qt4/ui/open_disk.h:299
+#: modules/access/bluray.c:52 modules/gui/qt4/ui/open_disk.h:299
 msgid "BluRay"
 msgstr "BluRay"
 
-#: modules/access/bluray.c:49
+#: modules/access/bluray.c:53
 msgid "Blu-Ray Disc support (libbluray)"
 msgstr "Blu-Ray -levyjen tuki (libbluray)"
 
-#: modules/access/bluray.c:142
+#: modules/access/bluray.c:166
 msgid ""
 "This Blu-Ray Disc needs a library for AACS decoding, and your system does "
 "not have it."
 msgstr "Tämä Blu-Ray -levy vaatii AACS-purkukirjaston, joka puuttuu."
 
-#: modules/access/bluray.c:147
+#: modules/access/bluray.c:171
 msgid "Your system AACS decoding library does not work. Missing keys?"
 msgstr ""
 "Järjestelmäsi AACS-purkukirjasto ei jostain syystä toimi. Avaimet puuttuvat?"
 
-#: modules/access/bluray.c:156
+#: modules/access/bluray.c:180
 msgid ""
 "This Blu-Ray Disc needs a library for BD+ decoding, and your system does not "
 "have it."
 msgstr "Tämä Blu-Ray -levy vaatii BD+ -purkukirjaston, joka puuttuu."
 
-#: modules/access/bluray.c:161
+#: modules/access/bluray.c:185
 msgid "Your system BD+ decoding library does not work. Missing configuration?"
 msgstr ""
 "Järjestelmäsi BD+ -purkukirjasto ei jostain syystä toimi. Asetukset "
 "puuttuvat?"
 
-#: modules/access/bluray.c:198
+#: modules/access/bluray.c:222
 msgid "Blu-Ray error"
 msgstr "Blu-Ray -virhe"
 
@@ -7840,7 +7841,7 @@ msgid "Bitmask that will get used by the audio part of the card."
 msgstr "Bittimaski, jota kortin ääniosa käyttää."
 
 #: modules/access/pvr.c:103 modules/access/vcdx/info.c:69
-#: modules/gui/macosx/MainWindow.m:143 modules/gui/qt4/dialogs/toolbar.cpp:362
+#: modules/gui/macosx/MainWindow.m:144 modules/gui/qt4/dialogs/toolbar.cpp:362
 #: modules/stream_out/raop.c:150 modules/gui/qt4/ui/sprefs_audio.h:431
 msgid "Volume"
 msgstr "Äänenvoimakkuus"
@@ -13319,8 +13320,8 @@ msgstr ""
 msgid "D-Bus control interface"
 msgstr "D-Bus -etäohjauskäyttöliittymä"
 
-#: modules/control/dbus/dbus_root.c:75 modules/gui/macosx/MainWindow.m:254
-#: modules/gui/macosx/MainWindow.m:1040 modules/gui/qt4/dialogs/help.cpp:99
+#: modules/control/dbus/dbus_root.c:75 modules/gui/macosx/MainWindow.m:255
+#: modules/gui/macosx/MainWindow.m:1060 modules/gui/qt4/dialogs/help.cpp:99
 #: modules/gui/qt4/main_interface.cpp:973
 #: modules/gui/qt4/main_interface.cpp:977
 #: modules/gui/qt4/main_interface.cpp:1016
@@ -13397,8 +13398,8 @@ msgstr "Äänen voimakkuuden hallinta"
 msgid "Position Control"
 msgstr "Sijainnin hallinta"
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1838
-#: modules/gui/macosx/intf.m:2020
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1849
+#: modules/gui/macosx/intf.m:2031
 msgid "Ignore"
 msgstr "Älä huomioi"
 
@@ -13660,7 +13661,7 @@ msgstr "Avataan"
 
 #: modules/control/rc.c:73 modules/gui/macosx/MainMenu.m:853
 #: modules/gui/macosx/MainMenu.m:854 modules/gui/macosx/MainMenu.m:855
-#: modules/gui/macosx/MainWindow.m:1119 modules/gui/qt4/menus.cpp:798
+#: modules/gui/macosx/MainWindow.m:1139 modules/gui/qt4/menus.cpp:798
 #: modules/notify/xosd.c:238
 msgid "Pause"
 msgstr "Tauko"
@@ -16063,12 +16064,12 @@ msgstr "Aika"
 msgid "OK"
 msgstr "OK"
 
-#: modules/gui/macosx/bookmarks.m:100 modules/gui/macosx/playlist.m:136
-#: modules/gui/macosx/playlist.m:140 modules/gui/qt4/dialogs/plugins.cpp:105
+#: modules/gui/macosx/bookmarks.m:100 modules/gui/macosx/playlist.m:141
+#: modules/gui/macosx/playlist.m:145 modules/gui/qt4/dialogs/plugins.cpp:105
 msgid "Name"
 msgstr "Nimi"
 
-#: modules/gui/macosx/bookmarks.m:123 modules/gui/macosx/playlist.m:701
+#: modules/gui/macosx/bookmarks.m:123 modules/gui/macosx/playlist.m:720
 msgid "Untitled"
 msgstr "Nimetön"
 
@@ -16142,11 +16143,11 @@ msgstr "Tyhjennä"
 msgid "Show Details"
 msgstr "Näytä lisätietoja"
 
-#: modules/gui/macosx/CoreInteraction.m:343
+#: modules/gui/macosx/CoreInteraction.m:389
 msgid "Random On"
 msgstr "Satunnaistoisto päälle"
 
-#: modules/gui/macosx/CoreInteraction.m:405
+#: modules/gui/macosx/CoreInteraction.m:463
 msgid "Repeat Off"
 msgstr "Toisto pois"
 
@@ -16166,33 +16167,33 @@ msgstr ""
 msgid "(no item is being played)"
 msgstr "(ei toistettavaa kohdetta)"
 
-#: modules/gui/macosx/intf.m:672 modules/gui/qt4/dialogs/messages.cpp:75
+#: modules/gui/macosx/intf.m:661 modules/gui/qt4/dialogs/messages.cpp:75
 #: modules/gui/qt4/ui/messages_panel.h:141
 #: modules/gui/qt4/ui/messages_panel.h:146
 msgid "Messages"
 msgstr "Viestit"
 
-#: modules/gui/macosx/intf.m:673
+#: modules/gui/macosx/intf.m:662
 msgid "Open CrashLog..."
 msgstr "Avaa kaatumisloki..."
 
-#: modules/gui/macosx/intf.m:674
+#: modules/gui/macosx/intf.m:663
 msgid "Save this Log..."
 msgstr "Tallenna tämä loki..."
 
-#: modules/gui/macosx/intf.m:677
+#: modules/gui/macosx/intf.m:666
 msgid "Send"
 msgstr "Lähetä"
 
-#: modules/gui/macosx/intf.m:678
+#: modules/gui/macosx/intf.m:667
 msgid "Don't Send"
 msgstr "Älä lähetä"
 
-#: modules/gui/macosx/intf.m:679 modules/gui/macosx/intf.m:680
+#: modules/gui/macosx/intf.m:668 modules/gui/macosx/intf.m:669
 msgid "VLC crashed previously"
 msgstr "VLC kaatui aiemmin"
 
-#: modules/gui/macosx/intf.m:681
+#: modules/gui/macosx/intf.m:670
 msgid ""
 "Do you want to send details on the crash to VLC's development team?\n"
 "\n"
@@ -16206,55 +16207,55 @@ msgstr ""
 "ennen kuin VLC kaatui, ja mahdollista muuta hyödyllistä tietoa ongelman "
 "toistamiseen: esim. linkki esimerkkitiedostoon, verkkomediavirran osoite, ..."
 
-#: modules/gui/macosx/intf.m:682
+#: modules/gui/macosx/intf.m:671
 msgid "I agree to be possibly contacted about this bugreport."
 msgstr "Minuun saa tarvittaessa ottaa yhteyttä tästä ongelmaraportista."
 
-#: modules/gui/macosx/intf.m:683
+#: modules/gui/macosx/intf.m:672
 msgid ""
 "Only your default E-Mail address will be submitted, including no further "
 "information."
 msgstr "Vain oletussähköpostiosoitteesi lähetetään. Muuta tietoa ei."
 
-#: modules/gui/macosx/intf.m:1718
+#: modules/gui/macosx/intf.m:1729
 msgid "Error when sending the Crash Report"
 msgstr "Virhe tapahtui kaatumisraporttia lähettäessä"
 
-#: modules/gui/macosx/intf.m:1809
+#: modules/gui/macosx/intf.m:1820
 msgid "No CrashLog found"
 msgstr "Kaatumislokia ei löydy"
 
-#: modules/gui/macosx/intf.m:1809 modules/gui/macosx/prefs.m:227
+#: modules/gui/macosx/intf.m:1820 modules/gui/macosx/prefs.m:227
 #: modules/gui/macosx/simple_prefs.m:720
 msgid "Continue"
 msgstr "Jatka"
 
-#: modules/gui/macosx/intf.m:1809
+#: modules/gui/macosx/intf.m:1820
 msgid "Couldn't find any trace of a previous crash."
 msgstr "Edellisestä kaatumisesta ei löydy mitään jälkeä."
 
-#: modules/gui/macosx/intf.m:1836
+#: modules/gui/macosx/intf.m:1847
 msgid "Remove old preferences?"
 msgstr "Nollaa asetukset?"
 
-#: modules/gui/macosx/intf.m:1837
+#: modules/gui/macosx/intf.m:1848
 msgid "We just found an older version of VLC's preferences files."
 msgstr "Löytyi vanha versio VLC:n asetustiedostoista."
 
-#: modules/gui/macosx/intf.m:1838
+#: modules/gui/macosx/intf.m:1849
 msgid "Move To Trash and Relaunch VLC"
 msgstr "Siirrä roskakoriin ja käynnistä VLC uudelleen"
 
-#: modules/gui/macosx/intf.m:1949
+#: modules/gui/macosx/intf.m:1960
 #, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr "VLC Debug Log (%s).rtfd"
 
-#: modules/gui/macosx/intf.m:2018
+#: modules/gui/macosx/intf.m:2029
 msgid "Relaunch required"
 msgstr "Uudelleenkäynnistys tarvitaan"
 
-#: modules/gui/macosx/intf.m:2019
+#: modules/gui/macosx/intf.m:2030
 msgid ""
 "To make sure that VLC no longer listens to your media key events, it needs "
 "to be restarted."
@@ -16262,7 +16263,7 @@ msgstr ""
 "Jotta VLC ei enää kuuntelisi medianäppäimiäsi, se täytyy käynnistää "
 "uudelleen."
 
-#: modules/gui/macosx/intf.m:2020
+#: modules/gui/macosx/intf.m:2031
 msgid "Relaunch VLC"
 msgstr "Käynnistä VLC uudelleen"
 
@@ -16487,7 +16488,7 @@ msgstr "Kopioi"
 msgid "Paste"
 msgstr "Liitä"
 
-#: modules/gui/macosx/MainMenu.m:263 modules/gui/macosx/playlist.m:471
+#: modules/gui/macosx/MainMenu.m:263 modules/gui/macosx/playlist.m:490
 msgid "Select All"
 msgstr "Valitse kaikki"
 
@@ -16602,7 +16603,7 @@ msgstr "Kirjanmerkit..."
 msgid "Playlist..."
 msgstr "Soittolista..."
 
-#: modules/gui/macosx/MainMenu.m:347 modules/gui/macosx/playlist.m:472
+#: modules/gui/macosx/MainMenu.m:347 modules/gui/macosx/playlist.m:491
 msgid "Media Information..."
 msgstr "Mediatiedot..."
 
@@ -16659,66 +16660,66 @@ msgstr "Vähennä äänenvoimakkuutta"
 msgid "Lock Aspect Ratio"
 msgstr "Lukitse kuvasuhde"
 
-#: modules/gui/macosx/MainWindow.m:134
+#: modules/gui/macosx/MainWindow.m:135
 msgid "Backward"
 msgstr "Taaksepäin"
 
-#: modules/gui/macosx/MainWindow.m:135
+#: modules/gui/macosx/MainWindow.m:136
 msgid "Forward"
 msgstr "Eteenpäin"
 
-#: modules/gui/macosx/MainWindow.m:137
+#: modules/gui/macosx/MainWindow.m:138
 msgid "Show/Hide Playlist"
 msgstr "Näytä/piilota soittolista"
 
 # FIXME: it's silly to use the same word for "play" and "repeat".
-#: modules/gui/macosx/MainWindow.m:138 modules/gui/qt4/dialogs/vlm.cpp:560
+#: modules/gui/macosx/MainWindow.m:139 modules/gui/qt4/dialogs/vlm.cpp:560
 msgid "Repeat"
 msgstr "Toista"
 
-#: modules/gui/macosx/MainWindow.m:139
+#: modules/gui/macosx/MainWindow.m:140
 msgid "Shuffle"
 msgstr "Satunnaistoisto"
 
-#: modules/gui/macosx/MainWindow.m:140 modules/gui/macosx/simple_prefs.m:225
+#: modules/gui/macosx/MainWindow.m:141 modules/gui/macosx/simple_prefs.m:225
 #: modules/gui/qt4/ui/sprefs_audio.h:440
 msgid "Effects"
 msgstr "Tehosteet"
 
-#: modules/gui/macosx/MainWindow.m:141
+#: modules/gui/macosx/MainWindow.m:142
 msgid "Toggle Fullscreen mode"
 msgstr "Kokoruututila päälle/pois"
 
-#: modules/gui/macosx/MainWindow.m:145
+#: modules/gui/macosx/MainWindow.m:146
 msgid "Full Volume"
 msgstr "Täysi äänenvoimakkuus"
 
-#: modules/gui/macosx/MainWindow.m:147
+#: modules/gui/macosx/MainWindow.m:148
 msgid "Open media..."
 msgstr "Avaa media..."
 
-#: modules/gui/macosx/MainWindow.m:148
+#: modules/gui/macosx/MainWindow.m:149
 msgid "Drop media here"
 msgstr "Pudota mediaa tähän"
 
 # TOCHECK/FIXME: WHY THE CAPS?
-#: modules/gui/macosx/MainWindow.m:307
+#: modules/gui/macosx/MainWindow.m:310
 msgid "LIBRARY"
 msgstr "KIRJASTO"
 
-#: modules/gui/macosx/MainWindow.m:310
+#: modules/gui/macosx/MainWindow.m:315
 msgid "MY COMPUTER"
 msgstr "OMA TIETOKONE"
 
-#: modules/gui/macosx/MainWindow.m:311
+#: modules/gui/macosx/MainWindow.m:316
 msgid "DEVICES"
 msgstr "LAITTEET"
 
-#: modules/gui/macosx/MainWindow.m:312
+#: modules/gui/macosx/MainWindow.m:317
 msgid "LOCAL NETWORK"
 msgstr "LÄHIVERKKO"
 
-#: modules/gui/macosx/MainWindow.m:313
+#: modules/gui/macosx/MainWindow.m:318
 msgid "INTERNET"
 msgstr "INTERNET"
 
@@ -16812,11 +16813,11 @@ msgstr "Käytä DVD-valikkoja"
 
 #: modules/gui/macosx/open.m:166 modules/gui/macosx/open.m:168
 #: modules/gui/macosx/output.m:147
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:156
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:215
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:260
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:310
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:404 modules/lua/vlc.c:72
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:157
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:217
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:263
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:314
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:434 modules/lua/vlc.c:72
 #: modules/stream_out/rtp.c:114
 #: share/lua/http/dialogs/stream_config_window.html:32
 #: share/lua/http/dialogs/stream_window.html:91
@@ -16864,10 +16865,10 @@ msgid "Protocol"
 msgstr "Protokolla"
 
 #: modules/gui/macosx/open.m:177 modules/gui/macosx/output.m:146
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:214
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:309
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:356
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:403
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:216
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:313
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:378
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:433
 msgid "Address"
 msgstr "Osoite"
 
@@ -17095,7 +17096,7 @@ msgstr "SDP:n osoite"
 msgid "Save File"
 msgstr "Tallenna tiedosto"
 
-#: modules/gui/macosx/output.m:520 modules/gui/macosx/playlist.m:704
+#: modules/gui/macosx/output.m:520 modules/gui/macosx/playlist.m:723
 #: modules/gui/macosx/prefs.m:205 modules/gui/macosx/simple_prefs.m:317
 #: modules/gui/qt4/components/sout/profile_selector.cpp:252
 #: modules/gui/qt4/ui/vlm.h:302
@@ -17187,77 +17188,77 @@ msgid "VLC was unable to save the meta data."
 msgstr "VLC ei voinut tallentaa metatietoja."
 
 # NOTE: Inconsistent with other translations of "author", but probably makes more sense for the UI.
-#: modules/gui/macosx/playlist.m:137 modules/gui/macosx/playlist.m:141
+#: modules/gui/macosx/playlist.m:142 modules/gui/macosx/playlist.m:146
 #: modules/gui/macosx/wizard.m:353 modules/gui/qt4/dialogs/plugins.cpp:528
 #: modules/mux/asf.c:58
 msgid "Author"
 msgstr "Esittäjä"
 
-#: modules/gui/macosx/playlist.m:138 modules/gui/macosx/playlist.m:142
+#: modules/gui/macosx/playlist.m:143 modules/gui/macosx/playlist.m:147
 #: modules/gui/macosx/wizard.m:355
 #: modules/gui/qt4/components/playlist/sorting.h:56
 msgid "Duration"
 msgstr "Kesto"
 
-#: modules/gui/macosx/playlist.m:467
+#: modules/gui/macosx/playlist.m:486
 msgid "Save Playlist..."
 msgstr "Tallenna soittolista..."
 
-#: modules/gui/macosx/playlist.m:469 modules/gui/qt4/dialogs/bookmarks.cpp:48
+#: modules/gui/macosx/playlist.m:488 modules/gui/qt4/dialogs/bookmarks.cpp:48
 #: modules/gui/qt4/ui/podcast_configuration.h:105
 #: modules/gui/qt4/ui/streampanel.h:173
 msgid "Delete"
 msgstr "Poista"
 
-#: modules/gui/macosx/playlist.m:470
+#: modules/gui/macosx/playlist.m:489
 msgid "Expand Node"
 msgstr "Laajenna solmu"
 
-#: modules/gui/macosx/playlist.m:473
+#: modules/gui/macosx/playlist.m:492
 msgid "Download Cover Art"
 msgstr "Lataa albumin kansikuva"
 
-#: modules/gui/macosx/playlist.m:474
+#: modules/gui/macosx/playlist.m:493
 msgid "Fetch Meta Data"
 msgstr "Hae metatiedot"
 
-#: modules/gui/macosx/playlist.m:475 modules/gui/macosx/playlist.m:476
+#: modules/gui/macosx/playlist.m:494 modules/gui/macosx/playlist.m:495
 msgid "Reveal in Finder"
 msgstr "Näytä Finderissa"
 
-#: modules/gui/macosx/playlist.m:478
+#: modules/gui/macosx/playlist.m:497
 msgid "Sort Node by Name"
 msgstr "Lajittele solmu nimen mukaan"
 
-#: modules/gui/macosx/playlist.m:479
+#: modules/gui/macosx/playlist.m:498
 msgid "Sort Node by Author"
 msgstr "Lajittele solmu tekijän mukaan"
 
-#: modules/gui/macosx/playlist.m:483 modules/gui/macosx/playlist.m:484
+#: modules/gui/macosx/playlist.m:502 modules/gui/macosx/playlist.m:503
 msgid "Search in Playlist"
 msgstr "Hae soittolistasta"
 
-#: modules/gui/macosx/playlist.m:486
+#: modules/gui/macosx/playlist.m:505
 msgid "File Format:"
 msgstr "Tiedostomuoto"
 
-#: modules/gui/macosx/playlist.m:487
+#: modules/gui/macosx/playlist.m:506
 msgid "Extended M3U"
 msgstr "Laajennettu M3U-soittolista"
 
-#: modules/gui/macosx/playlist.m:488
+#: modules/gui/macosx/playlist.m:507
 msgid "XML Shareable Playlist Format (XSPF)"
 msgstr "Jaettava XML-soittolistaformaatti (XSPF)"
 
-#: modules/gui/macosx/playlist.m:489
+#: modules/gui/macosx/playlist.m:508
 msgid "HTML Playlist"
 msgstr "HTML-soittolista"
 
-#: modules/gui/macosx/playlist.m:703
+#: modules/gui/macosx/playlist.m:722
 msgid "Save Playlist"
 msgstr "Tallenna soittolista"
 
-#: modules/gui/macosx/playlist.m:1175
+#: modules/gui/macosx/playlist.m:1197
 msgid "Meta-information"
 msgstr "Metatiedot"
 
@@ -19668,67 +19669,67 @@ msgstr "Tämä moduuli tallentaa transkoodatun tietovirran tiedostoon."
 msgid "Filename"
 msgstr "Tiedostonimi"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:138
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:139
 #: modules/gui/qt4/dialogs/convert.cpp:113
 msgid "Save file..."
 msgstr "Tallenna tiedosto..."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:139
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:140
 #: modules/gui/qt4/dialogs/convert.cpp:115
 msgid ""
 "Containers (*.ps *.ts *.mpg *.ogg *.asf *.mp4 *.mov *.wav *.raw *.flv *.webm)"
 msgstr ""
 "Säiliöt (*.ps *.ts *.mpg *.ogg *.asf *.mp4 *.mov *.wav *.raw *.flv *.webm)"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:151
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:152
 msgid "This module outputs the transcoded stream to a network via HTTP."
 msgstr ""
 "Tämä moduuli lähettää transkoodatun tietovirran verkkoon käyttäen HTTP-"
 "protokollaa."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:155
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:259
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:156
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:262
 msgid "Path"
 msgstr "Polku"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:210
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:212
 msgid ""
 "This module outputs the transcoded stream to a network via the mms protocol."
 msgstr ""
 "Tämä moduuli lähettää transkoodatun tietovirran verkkoon käyttäen MMS-"
 "protokollaa."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:255
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:258
 msgid "This module outputs the transcoded stream to a network via RTSP."
 msgstr ""
 "Tämä moduuli lähettää transkoodatun tietovirran verkkoon käyttäen RTSP-"
 "protokollaa."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:305
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:309
 msgid "This module outputs the transcoded stream to a network via UDP."
 msgstr ""
 "Tämä moduuli lähettää transkoodatun tietovirran verkkoon käyttäen UDP-"
 "protokollaa."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:352
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:374
 msgid "This module outputs the transcoded stream to a network via RTP."
 msgstr ""
 "Tämä moduuli lähettää transkoodatun tietovirran verkkoon käyttäen RTP-"
 "protokollaa."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:357
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:379
 msgid "Base port"
 msgstr "Perusportti"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:399
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:429
 msgid "This module outputs the transcoded stream to an Icecast server."
 msgstr "Tämä moduuli lähettää transkoodatun tietovirran Icecast-palvelimelle."
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:420
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:450
 msgid "Mount Point"
 msgstr "Liitoskohta"
 
-#: modules/gui/qt4/components/sout/sout_widgets.cpp:421
+#: modules/gui/qt4/components/sout/sout_widgets.cpp:451
 msgid "Login:pass"
 msgstr "Tunnus:salasana"
 
@@ -20750,7 +20751,7 @@ msgstr ""
 "Näytä lisäasetustila heti yksinkertaisten asetusten sijaan, kun asetusikkuna "
 "avataan."
 
-#: modules/gui/qt4/qt4.cpp:79 modules/gui/skins2/src/skin_main.cpp:455
+#: modules/gui/qt4/qt4.cpp:79 modules/gui/skins2/src/skin_main.cpp:467
 msgid "Systray icon"
 msgstr "Kuvake tehtäväpalkissa"
 
@@ -21017,19 +21018,19 @@ msgstr "Tallenna soittolista"
 msgid "XSPF playlist|*.xspf|M3U file|*.m3u|HTML playlist|*.html"
 msgstr "XSPF-soittolista|*.xspf|M3U-tiedosto|*.m3u|HTML-soittolista|*.html"
 
-#: modules/gui/skins2/src/skin_main.cpp:450
+#: modules/gui/skins2/src/skin_main.cpp:462
 msgid "Skin to use"
 msgstr "Käytettävä ulkoasutiedosto"
 
-#: modules/gui/skins2/src/skin_main.cpp:451
+#: modules/gui/skins2/src/skin_main.cpp:463
 msgid "Path to the skin to use."
 msgstr "Käytettävän ulkoasutiedoston polku."
 
-#: modules/gui/skins2/src/skin_main.cpp:452
+#: modules/gui/skins2/src/skin_main.cpp:464
 msgid "Config of last used skin"
 msgstr "Viimeksi käytetyn ulkoasun asetukset"
 
-#: modules/gui/skins2/src/skin_main.cpp:453
+#: modules/gui/skins2/src/skin_main.cpp:465
 msgid ""
 "Windows configuration of the last skin used. This option is updated "
 "automatically, do not touch it."
@@ -21037,20 +21038,20 @@ msgstr ""
 "Viimeksi käytetyn ulkoasun ikkuna-asetukset. Tämä päivittyy automaattisesti; "
 "käsin muuttaminen ei ole suositeltavaa."
 
-#: modules/gui/skins2/src/skin_main.cpp:456
+#: modules/gui/skins2/src/skin_main.cpp:468
 msgid "Show a systray icon for VLC"
 msgstr "Näytä tehtäväpalkin VLC-kuvake"
 
-#: modules/gui/skins2/src/skin_main.cpp:457
-#: modules/gui/skins2/src/skin_main.cpp:458
+#: modules/gui/skins2/src/skin_main.cpp:469
+#: modules/gui/skins2/src/skin_main.cpp:470
 msgid "Show VLC on the taskbar"
 msgstr "Näytä VLC tehtäväpalkissa"
 
-#: modules/gui/skins2/src/skin_main.cpp:459
+#: modules/gui/skins2/src/skin_main.cpp:471
 msgid "Enable transparency effects"
 msgstr "Käytä läpinäkyvyystehosteita"
 
-#: modules/gui/skins2/src/skin_main.cpp:460
+#: modules/gui/skins2/src/skin_main.cpp:472
 msgid ""
 "You can disable all transparency effects if you want. This is mainly useful "
 "when moving windows does not behave correctly."
@@ -21059,16 +21060,16 @@ msgstr ""
 "hyödyllistä pääasiassa silloin, jos ikkunoiden siirtäminen näytöllä ei toimi "
 "oikein."
 
-#: modules/gui/skins2/src/skin_main.cpp:463
-#: modules/gui/skins2/src/skin_main.cpp:464
+#: modules/gui/skins2/src/skin_main.cpp:475
+#: modules/gui/skins2/src/skin_main.cpp:476
 msgid "Use a skinned playlist"
 msgstr "Käytä teemattavaa soittolistaa"
 
-#: modules/gui/skins2/src/skin_main.cpp:465
+#: modules/gui/skins2/src/skin_main.cpp:477
 msgid "Display video in a skinned window if any"
 msgstr "Näytä video teematussa ikkunassa, jos mahdollista"
 
-#: modules/gui/skins2/src/skin_main.cpp:467
+#: modules/gui/skins2/src/skin_main.cpp:479
 msgid ""
 "When set to 'no', this parameter is intended to give old skins a chance to "
 "play back video even though no video tag is implemented"
@@ -21076,11 +21077,11 @@ msgstr ""
 "Kun tämä on asennossa 'ei', vanhat ulkoasuteemat pystyvät soittamaan "
 "videota, vaikka ne eivät tukisi 'video'-tunnistetta."
 
-#: modules/gui/skins2/src/skin_main.cpp:491
+#: modules/gui/skins2/src/skin_main.cpp:503
 msgid "Skins"
 msgstr "Ulkoasuteemat"
 
-#: modules/gui/skins2/src/skin_main.cpp:492
+#: modules/gui/skins2/src/skin_main.cpp:504
 msgid "Skinnable Interface"
 msgstr "Teemattava käyttöliittymä"
 
