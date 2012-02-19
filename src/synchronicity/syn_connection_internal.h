@@ -8,7 +8,7 @@
 #define SYN_THREAD_PRIORITY 10
 
 #define SYN_CONNECTION_THRESHOLD 30000000
-#define SYN_INTERNAL_IN_MICROS 500000
+#define SYN_INTERNAL_IN_MICROS 1000000
 #define SYNC_MASK 0x1
 #define SYNC_REPLY_MASK 0x2
 #define SYNC_END 0x4
@@ -85,7 +85,6 @@ struct SynConnectionInternal {
   int awaiting_reply;
   mtime_t await_start_time;
   mtime_t estimated_rtt;
-  mtime_t estimated_rtt_stdev;
   int delta_t_initialized;
   mtime_t delta_t_confidence;  // actually the inverse of the confidence
   mtime_t delta_t;

@@ -71,7 +71,4 @@ VLC_API int SynConnection_Send(
     void* param
 );
 
-VLC_API mtime_t SynConnection_EstimatedDelayStdev(
-    SynConnection connection);
-
 #endif

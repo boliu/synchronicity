@@ -66,8 +66,6 @@ static void SynReceiveCallback(int rv, mtime_t delay, void* param, void* buffer,
     if (delay < 0) {
       delay = 0;
     }
-    mtime_t stdev = SynConnection_EstimatedDelayStdev(
-        pl_priv(p_playlist)->syn_connection);
     mtime_t current;
     input_Control(p_in, INPUT_GET_TIME, &current);
     switch(syn.type) {
@@ -102,12 +100,10 @@ static void SynReceiveCallback(int rv, mtime_t delay, void* param, void* buffer,
         // Further-ahead snaps to user that is behind
         msg_Info(p_playlist, "SynReceiveCallback: RTT/2:%d, You - Them:%I64d", delay, current - syn.data.i_time);
         delay = syn.data.i_time + delay - current;
-        if(delay > 0 ||  // Don't snap forward
-            stdev > SYNC_STDEV_THRESHOLD ||  // Don't snap if delay is unstable
-            (-delay) < stdev) {  // Don't snap if absolute delay < noise
+        if(delay > 0) {  // Don't snap forward
           delay = 0;
         } else {
-          delay = delay + stdev;  // Snap by amount exceeding noise
+          delay = delay;
         }
         break;
       case SYNCOMMAND_MYNAMEIS:

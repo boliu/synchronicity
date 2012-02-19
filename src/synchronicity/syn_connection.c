@@ -78,19 +78,6 @@ void* syn_receive_thread(void* param) {
         vlc_cond_signal(&sci->send_info_non_empy);
         SynUnlock(sci);
       }
-      if(sci->peer_connect_callback &&
-          (count_sync_reply >= SYNC_INITIAL_COUNT)) {
-        // TODO this block of code is duplicated
-        SynLock(sci);
-        SynConnection_Callback* peer_connect_callback =
-          sci->peer_connect_callback;
-        void* peer_connect_param = sci->peer_connect_param;
-        sci->peer_connect_callback = 0;
-        sci->peer_connect_param = 0;
-        SynUnlock(sci);
-
-        (*peer_connect_callback)(0, peer_connect_param);
-      }
 
       if(header.flag & SYNC_MASK) {
         int mask = SYNC_REPLY_MASK;
@@ -108,22 +95,13 @@ void* syn_receive_thread(void* param) {
       if(header.flag & SYNC_REPLY_MASK) {
         count_sync_reply++;
         sci->awaiting_reply = 0;
-        if(count_sync_reply < SYNC_INITIAL_COUNT) {
-          vlc_cond_signal(&sci->send_info_non_empy);
-        }
+
         // update rtt
         mtime_t sample_rtt = current_mdate - header.timestamp_reply;
         SynLock(sci);
           if(sci->estimated_rtt < 0) {
             sci->estimated_rtt = sample_rtt;
-            sci->estimated_rtt_stdev = sample_rtt;
           } else {
-            mtime_t samp_diff = sci->estimated_rtt - sample_rtt;
-            if(samp_diff < 0) {
-              samp_diff = -samp_diff;
-            }
-            sci->estimated_rtt_stdev = ((SYNC_BETA_INVERSE - 1) * sci->estimated_rtt_stdev +
-                samp_diff) / SYNC_BETA_INVERSE;
             sci->estimated_rtt = ((SYNC_ALPHA_INVERSE - 1) * sci->estimated_rtt +
                 sample_rtt) / SYNC_ALPHA_INVERSE;
           }
@@ -140,21 +118,21 @@ void* syn_receive_thread(void* param) {
             sci->delta_t_confidence = cs;
             sci->delta_t_initialized = 1;
           }
-          if(sci->peer_connect_callback &&
-              (count_sync_reply >= SYNC_INITIAL_COUNT)) {
-            // TODO this block of code is duplicated
-            SynConnection_Callback* peer_connect_callback =
-              sci->peer_connect_callback;
-            void* peer_connect_param = sci->peer_connect_param;
-            sci->peer_connect_callback = 0;
-            sci->peer_connect_param = 0;
-            SynUnlock(sci);
-
-            (*peer_connect_callback)(0, peer_connect_param);
-
-            SynLock(sci);
-          }
         SynUnlock(sci);
+      }
+
+      if(sci->peer_connect_callback &&
+          (count_sync_reply >= SYNC_INITIAL_COUNT)) {
+        // TODO this block of code is duplicated
+        SynLock(sci);
+        SynConnection_Callback* peer_connect_callback =
+          sci->peer_connect_callback;
+        void* peer_connect_param = sci->peer_connect_param;
+        sci->peer_connect_callback = 0;
+        sci->peer_connect_param = 0;
+        SynUnlock(sci);
+
+        (*peer_connect_callback)(0, peer_connect_param);
       }
 
       mtime_t delay = current_mdate - header.timestamp_sync - sci->delta_t;
@@ -251,18 +229,17 @@ void* syn_send_thread(void* param) {
 
       if(NULL == sci->send_info_head) {
         mtime_t delay;
-        if(count_sync < SYNC_INITIAL_COUNT && sci->peer_connected &&
-            !sci->awaiting_reply) {
-          delay = 0;
+        if(count_sync < SYNC_INITIAL_COUNT) {
+          delay = 100000;
         } else {
-          delay = sci->estimated_rtt + 2 * sci->estimated_rtt_stdev;
+          delay = sci->estimated_rtt;
           if(delay < SYN_INTERNAL_IN_MICROS) {
             delay = SYN_INTERNAL_IN_MICROS;
           }
           delay = delay * (vlc_lrand48() % 10 + 1);
-          vlc_cond_timedwait(&sci->send_info_non_empy, &sci->lock,
-              mdate() + delay);
         }
+        vlc_cond_timedwait(&sci->send_info_non_empy, &sci->lock,
+            mdate() + delay);
       }
       SynConnection_SendInfo* send_info = NULL;
       if(NULL != sci->send_info_head) {
@@ -428,7 +405,6 @@ int SynConnection_InitializeHelper(
   syn_ci_[i].heartbeat_callback = heartbeat_callback;
   syn_ci_[i].heartbeat_param = heartbeat_param;
   syn_ci_[i].estimated_rtt = -1;
-  syn_ci_[i].estimated_rtt_stdev = 0;
   syn_ci_[i].delta_t_initialized = 0;
   syn_ci_[i].delta_t = 0;
   syn_ci_[i].delta_t_confidence = 100000;
@@ -638,24 +614,4 @@ int SynConnection_GetAddr(
   uint64_to_char(syn_ci_[i].address.relay_server_key, out_buffer);
 
   return 0;
-}
-
-mtime_t SynConnection_EstimatedDelayStdev(
-    SynConnection connection) {
-  int i = connection.index;
-  if(i < 0 || i >= MAX_CONNECTIONS) {
-    return -1;
-  }
-  if(SYN_INITIALIZED != syn_ci_[i].state) {
-    return -2;
-  }
-
-  SynConnectionInternal* sci = &syn_ci_[i];
-  mtime_t rv = 0;
-
-  SynLock(sci);
-  rv = sci->estimated_rtt_stdev;
-  SynUnlock(sci);
-
-  return rv;
 }
