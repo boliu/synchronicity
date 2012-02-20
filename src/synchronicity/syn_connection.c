@@ -308,6 +308,9 @@ SynDestroyWithIniailize:
   if(sci->initialize_callback) {
     (*sci->initialize_callback)(rv, sci->initialize_param);
   }
+  if(sci->peer_connect_callback) {
+    (*sci->peer_connect_callback)(rv, sci->peer_connect_param);
+  }
   SynLock(sci);  // to be released immediately in SynDestroying
 
 // lock is assumed to be held here

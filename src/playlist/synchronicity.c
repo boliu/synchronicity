@@ -152,6 +152,7 @@ static void SynConnectCallback(int rv, void* param) {
   if (rv < 0) {
     // Connection closed.
     SynBreakConnection(p_playlist);
+    var_SetInteger( p_playlist, "synchronicity", CONNECTION_FAILURE );
     return;
   }
 
