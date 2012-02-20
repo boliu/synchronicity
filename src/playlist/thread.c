@@ -436,7 +436,6 @@ static int PlayItem( playlist_t *p_playlist, playlist_item_t *p_item )
         // Re-initialize synchronicity variables on every playlist item
         p_sys->b_syn_can_send = false;
         p_sys->b_syn_created = false;
-        p_sys->b_syn_heartbeat = false;
 
         p_sys->psz_syn_server_host =
           var_InheritString( p_playlist->p_libvlc, "synchronicity-server" );
@@ -697,7 +696,6 @@ static int LoopInput( playlist_t *p_playlist )
           var_SetInteger( p_playlist, "synchronicity", PEER_DISCONNECT);
           SynConnection_Destroy(p_sys->syn_connection, NULL, NULL);
           p_sys->b_syn_created = false;
-          p_sys->b_syn_heartbeat = false;
         }
         free(p_sys->psz_syn_server_host);
         free(p_sys->psz_syn_user);

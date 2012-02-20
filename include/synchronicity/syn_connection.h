@@ -41,9 +41,7 @@ VLC_API int SynConnection_InitializeAsServer(
     SynConnection_Callback* host_key_callback,
     void* host_key_param,
     SynConnection_Callback* peer_connect_callback,
-    void* peer_connect_param,
-    SynConnection_Callback* heartbeat_callback,
-    void* heartbeat_param
+    void* peer_connect_param
 );
 VLC_API int SynConnection_InitializeAsClient(
     vlc_object_t* parent,
@@ -54,9 +52,7 @@ VLC_API int SynConnection_InitializeAsClient(
     SynConnection_ReceiveCallback* receive_callback,
     void* receive_param,
     SynConnection_Callback* callback,
-    void* param,
-    SynConnection_Callback* heartbeat_callback,
-    void* heartbeat_param
+    void* param
 );
 VLC_API int SynConnection_Destroy(
     SynConnection connection,

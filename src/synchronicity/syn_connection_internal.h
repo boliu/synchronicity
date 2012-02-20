@@ -63,9 +63,6 @@ struct SynConnectionInternal {
   SynConnection_Callback* initialize_callback;
   void* initialize_param;
 
-  SynConnection_Callback* heartbeat_callback;
-  void* heartbeat_param;
-
   // For server only, called when peer is connected
   SynConnection_Callback* peer_connect_callback;
   void* peer_connect_param;
@@ -124,8 +121,6 @@ int SynConnection_InitializeHelper(
     void* param,
     SynConnection_Callback* peer_connect_callback,
     void* peer_connect_param,
-    SynConnection_Callback* heartbeat_callback,
-    void* heartbeat_param,
     int type);
 void syn_connection_append_send_info(
     SynConnectionInternal* sci,

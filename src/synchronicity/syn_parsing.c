@@ -60,7 +60,6 @@ int StringFromCommand(SynCommand command, char* outbuffer, int length) {
     case SYNCOMMAND_PAUSE:
     case SYNCOMMAND_SEEK:
     case SYNCOMMAND_MYNAMEIS:
-    case SYNCOMMAND_BEAT:
       num_bytes = snprintf(outbuffer, length,
           "%s", SynCommandTypeNames[command.type]);
       if(TYPE_LENGTH != num_bytes) {

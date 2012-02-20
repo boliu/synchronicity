@@ -42,7 +42,6 @@ static void SynBreakConnection(playlist_t* p_playlist) {
     var_SetInteger( p_playlist, "synchronicity", CONNECTION_FAILURE );
     SynConnection_Destroy(pl_priv(p_playlist)->syn_connection, NULL, NULL);
     pl_priv(p_playlist)->b_syn_created = false;
-    pl_priv(p_playlist)->b_syn_heartbeat = false;
   }
 }
 
@@ -93,17 +92,6 @@ static void SynReceiveCallback(int rv, mtime_t delay, void* param, void* buffer,
               msg_Err(p_playlist, "SynReceiveCallback: Received on no input? %d", playpause);
               break;
           }
-        }
-        break;
-      case SYNCOMMAND_BEAT:
-        pl_priv(p_playlist)->b_syn_heartbeat = true;
-        // Further-ahead snaps to user that is behind
-        msg_Info(p_playlist, "SynReceiveCallback: RTT/2:%d, You - Them:%I64d", delay, current - syn.data.i_time);
-        delay = syn.data.i_time + delay - current;
-        if(delay > 0) {  // Don't snap forward
-          delay = 0;
-        } else {
-          delay = delay;
         }
         break;
       case SYNCOMMAND_MYNAMEIS:
@@ -159,34 +147,6 @@ static int SendSynCommand(playlist_t* p_playlist, SynCommand syn) {
   return VLC_EGENERIC;
 }
 
-static void SynHeartbeatCallback(int rv, void* param) {
-  playlist_t* p_playlist = (playlist_t*)param;
-  if (rv < 0) {
-    // Connection closed.
-    SynBreakConnection((playlist_t*)(param));
-    return;
-  }
-  if (!pl_priv(p_playlist)->b_syn_heartbeat) {
-    return;
-  }
-  pl_priv(p_playlist)->b_syn_heartbeat = false;
-
-  input_thread_t* p_in = playlist_CurrentInput(p_playlist);
-  if (NULL != p_in) {
-    SynCommand syn;
-    syn.type = SYNCOMMAND_BEAT;
-    input_Control(p_in, INPUT_GET_TIME, &syn.data.i_time);
-    vlc_object_release(p_in);
-
-    rv = SendSynCommand(p_playlist, syn);
-  }
-  if (rv < 0) {
-    // Connection closed.
-    SynBreakConnection((playlist_t*)(param));
-    return;
-  }
-}
-
 static void SynConnectCallback(int rv, void* param) {
   playlist_t* p_playlist = (playlist_t*)param;
   if (rv < 0) {
@@ -218,13 +178,11 @@ void playlist_SynConnect(playlist_t * p_playlist, const char* addr) {
         pl_priv(p_playlist)->psz_syn_server_host,
         pl_priv(p_playlist)->i_syn_port,
         &SynReceiveCallback, p_playlist,
-        &SynConnectCallback, p_playlist,
-        &SynHeartbeatCallback, p_playlist);
+        &SynConnectCallback, p_playlist);
     if (rv < 0) {
       var_SetInteger( p_playlist, "synchronicity", CONNECTION_FAILURE );
     } else {
       p_sys->b_syn_created = true;
-      p_sys->b_syn_heartbeat = true;
     }
   }
 }
@@ -234,7 +192,6 @@ void playlist_SynDisconnect(playlist_t* p_playlist) {
     var_SetInteger( p_playlist, "synchronicity", PEER_DISCONNECT);
     SynConnection_Destroy(pl_priv(p_playlist)->syn_connection, NULL, NULL);
     pl_priv(p_playlist)->b_syn_created = false;
-    pl_priv(p_playlist)->b_syn_heartbeat = false;
   }
 }
 
@@ -312,13 +269,11 @@ void playlist_SynHost(playlist_t * p_playlist) {
         pl_priv(p_playlist)->i_syn_port,
         &SynReceiveCallback, p_playlist,
         &SynHostCallback, p_playlist,
-        &SynClientConnectedCallback, p_playlist,
-        &SynHeartbeatCallback, p_playlist);
+        &SynClientConnectedCallback, p_playlist);
     if (rv < 0) {
       var_SetInteger( p_playlist, "synchronicity", CONNECTION_FAILURE );
     } else {
       pl_priv(p_playlist)->b_syn_created = true;
-      pl_priv(p_playlist)->b_syn_heartbeat = true;
     }
     //success, set synchronicity variable
   }

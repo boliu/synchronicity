@@ -365,8 +365,6 @@ int SynConnection_InitializeHelper(
     void* param,
     SynConnection_Callback* peer_connect_callback,
     void* peer_connect_param,
-    SynConnection_Callback* heartbeat_callback,
-    void* heartbeat_param,
     int type) {
   assert(NULL != connection);
   assert(NULL != receive_callback);
@@ -402,8 +400,6 @@ int SynConnection_InitializeHelper(
   syn_ci_[i].initialize_param = param;
   syn_ci_[i].peer_connect_callback = peer_connect_callback;
   syn_ci_[i].peer_connect_param = peer_connect_param;
-  syn_ci_[i].heartbeat_callback = heartbeat_callback;
-  syn_ci_[i].heartbeat_param = heartbeat_param;
   syn_ci_[i].estimated_rtt = -1;
   syn_ci_[i].delta_t_initialized = 0;
   syn_ci_[i].delta_t = 0;
@@ -458,9 +454,7 @@ int SynConnection_InitializeAsServer(
     SynConnection_Callback* host_key_callback,
     void* host_key_param,
     SynConnection_Callback* peer_connect_callback,
-    void* peer_connect_param,
-    SynConnection_Callback* heartbeat_callback,
-    void* heartbeat_param
+    void* peer_connect_param
 ) {
   return SynConnection_InitializeHelper(
       parent,
@@ -471,7 +465,6 @@ int SynConnection_InitializeAsServer(
       receive_param,
       host_key_callback, host_key_param,
       peer_connect_callback, peer_connect_param,
-      heartbeat_callback, heartbeat_param,
       1  /* server */);
 }
 
@@ -484,9 +477,7 @@ int SynConnection_InitializeAsClient(
     SynConnection_ReceiveCallback* receive_callback,
     void* receive_param,
     SynConnection_Callback* callback,
-    void* param,
-    SynConnection_Callback* heartbeat_callback,
-    void* heartbeat_param
+    void* param
 ) {
   return SynConnection_InitializeHelper(
       parent,
@@ -496,7 +487,6 @@ int SynConnection_InitializeAsClient(
       receive_callback, receive_param,
       0, 0,
       callback, param,
-      heartbeat_callback, heartbeat_param,
       0 /* client */);
 }
 
