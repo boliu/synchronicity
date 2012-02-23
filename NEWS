@@ -11,11 +11,14 @@ Codecs:
 Demuxers:
  * Fix a mka seeking crash
 
-MacOS X interface:
+Mac OS X interface:
  * correct a few visual glitches and accessibility support
- * disable Lion fullscreen mode by default. Users do not understand this...
+ * disable Lion fullscreen mode by default, since its behavior is misleading
+   - this fixes fullscreen video output on a secondary screen
  * fix fontconfig cache dialog, closure of the interface and various crashes
- * allow to hide the playlist and the sidebar
+ * allow to hide the playlist to get a small controller window
+ * noticebly faster launch time
+ * re-enable visual feedback on seek and volume changes
 
 Qt interface:
  * allow a native seek slider
