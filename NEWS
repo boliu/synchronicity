@@ -3,13 +3,13 @@ Changes between 2.0.0 and 2.0.1:
 
 Access:
  * fix and improve the CDDB information retrieval
- * fix the smb compilation
+ * fix the samba module compilation
 
 Codecs:
- * Support for MXPEG
+ * Support for MXPEG files
 
 Demuxers:
- * Fix a mka seeking crash
+ * Fix a crash when seeking in mka
 
 Mac OS X interface:
  * correct a few visual glitches and accessibility support
@@ -22,7 +22,13 @@ Mac OS X interface:
 
 Qt interface:
  * allow a native seek slider
- * various fixes in the playlist, the addons dialog and the main toolbar
+ * fixes in the playlist, the addons dialog, the menus and the main toolbar
+ * fix for fontconfig cache dialog, when rebuilding ASS fonts
+
+Skins interface:
+ * fix for menus
+ * Addition of $R to display current playback speed
+ * documentation update
 
 Web interface:
  * fix mobile controls mode
