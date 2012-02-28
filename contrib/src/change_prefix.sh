@@ -48,7 +48,7 @@ process() {
 }
 
 for file in `find . -type f`; do
- if ! test -e $file; then
+ if test ! -e $file; then
    echo "$file doesn't exist"
    continue
  fi
@@ -61,7 +61,7 @@ for file in `find . -type f`; do
     libs=`otool -L $file 2>/dev/null | grep $prefix | cut -d\  -f 1`
     first=y
     for i in "" $libs; do
-      if ! test -z $i; then
+      if test ! -z $i; then
         if test $islib = y -a $first = y; then
             install_name_tool -id `echo $i | sed -e "s,$prefix,$new_prefix,"` $file
             first=n
