@@ -4195,11 +4195,6 @@ dnl
 VLC_RESTORE_FLAGS
 
 dnl
-dnl Sort the modules list
-dnl
-PLUGINS=$( (for i in `echo $PLUGINS`; do echo $i; done)|sort|xargs )
-
-dnl
 dnl  Configuration is finished
 dnl
 AC_SUBST(SYS)
