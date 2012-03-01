@@ -11,4 +11,10 @@
 #define CONNECTION_FAILURE -1
 #define PEER_DISCONNECT -2
 
+//Item Playing
+#define ITEM_PLAYING 20
+
+//Item stop playing
+#define ITEM_STOPPED 21
+
 #endif 

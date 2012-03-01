@@ -453,6 +453,9 @@ void MainInterface::createMainWidget( QSettings *settings )
     synchWidget->setVisible(isSynchVisible);
     hostButtonVisible();
     connectButton->setEnabled(false);
+    hostButton->setEnabled(false);
+    copyButton->setEnabled(false);
+    connectionKey->setEnabled(false);
 
     /* Visualisation, disabled for now, they SUCK */
     #if 0
@@ -1171,6 +1174,14 @@ void MainInterface::updateSynchronicity( int messageID ) {
       hostButtonVisible();
     } else if (messageID == PEER_SNAP) {
       displayMessage( "Synchronizing to peer." );
+    } else if (messageID == ITEM_STOPPED) {
+      hostButton->setEnabled(false);
+      copyButton->setEnabled(false);
+      connectionKey->setEnabled(false);
+    } else if (messageID == ITEM_PLAYING) {
+      hostButton->setEnabled(true);
+      copyButton->setEnabled(true);
+      connectionKey->setEnabled(true);
     }
 }
 

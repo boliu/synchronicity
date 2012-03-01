@@ -433,6 +433,10 @@ static int PlayItem( playlist_t *p_playlist, playlist_item_t *p_item )
         var_AddCallback( p_input_thread, "intf-event", SynEventListener, p_playlist);
         //var_AddCallback( p_input_thread, "position", PositionListener, p_input_thread );
 
+        //set synchronicity variable to enable gui
+        var_SetInteger( p_playlist, "synchronicity", ITEM_PLAYING);
+
+
         // Re-initialize synchronicity variables on every playlist item
         p_sys->b_syn_can_send = false;
         p_sys->b_syn_created = false;
@@ -691,6 +695,9 @@ static int LoopInput( playlist_t *p_playlist )
         var_DelCallback( p_input, "intf-event", SynEventListener, p_playlist );
         //var_DelCallback( p_input, "position", PositionListener, p_input );
 
+        //set synchronicity variable to disable GUI
+        var_SetInteger( p_playlist, "synchronicity", ITEM_STOPPED);
+
         // Disconnect when ends
         if(p_sys->b_syn_created) {
           var_SetInteger( p_playlist, "synchronicity", PEER_DISCONNECT);
@@ -720,6 +727,7 @@ static int LoopInput( playlist_t *p_playlist )
         PL_DEBUG( "finished input" );
         input_Stop( p_input, false );
     }
+
     return VLC_SUCCESS;
 }
 
