@@ -695,9 +695,6 @@ static int LoopInput( playlist_t *p_playlist )
         var_DelCallback( p_input, "intf-event", SynEventListener, p_playlist );
         //var_DelCallback( p_input, "position", PositionListener, p_input );
 
-        //set synchronicity variable to disable GUI
-        var_SetInteger( p_playlist, "synchronicity", ITEM_STOPPED);
-
         // Disconnect when ends
         if(p_sys->b_syn_created) {
           var_SetInteger( p_playlist, "synchronicity", PEER_DISCONNECT);
@@ -706,6 +703,9 @@ static int LoopInput( playlist_t *p_playlist )
         }
         free(p_sys->psz_syn_server_host);
         free(p_sys->psz_syn_user);
+
+        //set synchronicity variable to disable GUI
+        var_SetInteger( p_playlist, "synchronicity", ITEM_STOPPED);
 
         PL_LOCK;
 
