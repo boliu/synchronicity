@@ -37,7 +37,6 @@
 #include <QObject>
 #include <QEvent>
 
-
 enum {
     PositionUpdate_Type = QEvent::User + IMEventType + 1,
     ItemChanged_Type,
@@ -64,7 +63,14 @@ enum {
     RepeatChanged_Type,
     LeafToParent_Type,
     EPGEvent_Type,
-    SynchronicityChanged_Type,
+    SynchronicityChanged_CON_SUCCESS_Type,
+    SynchronicityChanged_HOST_SUCCESS_Type,
+    SynchronicityChanged_CLIENT_CONNECT_Type,
+    SynchronicityChanged_PEER_SNAP_Type,
+    SynchronicityChanged_CON_FAIL_Type,
+    SynchronicityChanged_PEER_DIS_Type,
+    SynchronicityChanged_ITEM_PLAY_Type,
+    SynchronicityChanged_ITEM_STOP_Type,
     SynchronicityUserChanged_Type,
 /*    SignalChanged_Type, */
 

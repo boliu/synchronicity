@@ -1178,6 +1178,7 @@ void MainInterface::updateSynchronicity( int messageID ) {
       hostButton->setEnabled(false);
       copyButton->setEnabled(false);
       connectionKey->setEnabled(false);
+      leaveButton_Click();
     } else if (messageID == ITEM_PLAYING) {
       hostButton->setEnabled(true);
       copyButton->setEnabled(true);

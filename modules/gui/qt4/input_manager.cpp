@@ -40,6 +40,7 @@
 #include <QApplication>
 
 #include <assert.h>
+#include <synchronicity/syn_error_codes.h>  /* error codes for synchronicity */
 
 static int ItemChanged( vlc_object_t *, const char *,
                         vlc_value_t, vlc_value_t, void * );
@@ -1048,8 +1049,29 @@ void MainInputManager::customEvent( QEvent *event )
         plEv = static_cast<PLEvent*>( event );
         emit leafBecameParent( plEv->i_item );
         return;
-    case SynchronicityChanged_Type:
-        emit synchronicityChanged( var_GetInteger( THEPL, "synchronicity" ) );
+    case SynchronicityChanged_CON_SUCCESS_Type:
+        emit synchronicityChanged( CONNECT_SUCCESS );
+        return;
+    case SynchronicityChanged_HOST_SUCCESS_Type:
+        emit synchronicityChanged( HOST_SUCCESS );
+        return;
+    case SynchronicityChanged_CLIENT_CONNECT_Type:
+        emit synchronicityChanged( CLIENT_CONNECTED );
+        return;
+    case SynchronicityChanged_PEER_SNAP_Type:
+        emit synchronicityChanged( PEER_SNAP );
+        return;
+    case SynchronicityChanged_CON_FAIL_Type:
+        emit synchronicityChanged( CONNECTION_FAILURE );
+        return;
+    case SynchronicityChanged_PEER_DIS_Type:
+        emit synchronicityChanged( PEER_DISCONNECT );
+        return;
+    case SynchronicityChanged_ITEM_PLAY_Type:
+        emit synchronicityChanged( ITEM_PLAYING );
+        return;
+    case SynchronicityChanged_ITEM_STOP_Type:
+        emit synchronicityChanged( ITEM_STOPPED );
         return;
     case SynchronicityUserChanged_Type:
         emit synchronicityUserChanged( var_GetString( THEPL, "synchronicity-user" ) );
@@ -1251,7 +1273,18 @@ static int SynchronicityChanged (vlc_object_t *p_this, const char *psz_var,
                             vlc_value_t oldval, vlc_value_t newval, void *param )
 {
     MainInputManager *mim = (MainInputManager*)param;
-    IMEvent *event = new IMEvent( SynchronicityChanged_Type );
+    IMEvent *event;
+
+    int newValue = newval.i_int;
+    if ( CONNECT_SUCCESS == newValue ) event = new IMEvent( SynchronicityChanged_CON_SUCCESS_Type );
+    else if ( HOST_SUCCESS == newValue ) event = new IMEvent( SynchronicityChanged_HOST_SUCCESS_Type );
+    else if ( CLIENT_CONNECTED == newValue ) event = new IMEvent( SynchronicityChanged_CLIENT_CONNECT_Type );
+    else if ( PEER_SNAP == newValue ) event = new IMEvent( SynchronicityChanged_PEER_SNAP_Type );
+    else if ( CONNECTION_FAILURE == newValue ) event = new IMEvent( SynchronicityChanged_CON_FAIL_Type );
+    else if ( PEER_DISCONNECT == newValue ) event = new IMEvent( SynchronicityChanged_PEER_DIS_Type );
+    else if ( ITEM_PLAYING == newValue ) event = new IMEvent( SynchronicityChanged_ITEM_PLAY_Type );
+    else if ( ITEM_STOPPED == newValue ) event = new IMEvent( SynchronicityChanged_ITEM_STOP_Type );
+
     QApplication::postEvent( mim, event );
     return VLC_SUCCESS;
 }
