@@ -15,21 +15,25 @@ Demuxers:
  * Improve MKV multi-video tracks support
 
 Audio filters:
- * limit spatializer distortions
+ * limit spatializer filter distortions
+
+Video filters:
+ * Fix gradfun unloading on Windows platform
 
 Mac OS X interface:
- * correct a few visual glitches and accessibility support
+ * allow to hide the playlist to get a small controller window
  * disable Lion fullscreen mode by default, since its behavior is misleading
    - this fixes fullscreen video output on a secondary screen
- * fix fontconfig cache dialog, closure of the interface and various crashes
- * allow to hide the playlist to get a small controller window
  * noticebly faster launch time
+ * fix fontconfig cache dialog, closure of the interface and various crashes
+ * correct a few visual glitches and accessibility support
  * re-enable visual feedback on seek and volume changes
  * improve track synchronization panel
 
 Qt interface:
- * allow a native seek slider
- * fixes in the playlist, the addons dialog, the menus and the main toolbar
+ * allow a native seek slider instead of the blue one
+ * fixes in the playlist, the addons dialog, the menus, the main toolbar
+   the open dialogs and preferences
  * fix for fontconfig cache dialog, when rebuilding ASS fonts
 
 Skins interface:
@@ -43,10 +47,11 @@ Web interface:
 
 Service discovery:
  * fix SAP discovery, where an item was added multiple times
+ * Update Jamendo selections
 
 Miscellaneous:
  * fix DBus crash
- * fix build issues on BSD and Linux/PPC
+ * fix build issues on BSD, Linux/PPC and Linux/Sparc
  * fix a crash on VLM close
 
 Security:
