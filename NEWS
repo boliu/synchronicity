@@ -17,6 +17,11 @@ Demuxers:
 Audio filters:
  * limit spatializer filter distortions
 
+Audio output:
+ * Fix S/PDIF passthrough with ALSA.
+ * Remove flawed ALSA channels autodetection.
+   The available ALSA channels MUST be configured now (stereo by default).
+
 Video filters:
  * Fix gradfun unloading on Windows platform
 
