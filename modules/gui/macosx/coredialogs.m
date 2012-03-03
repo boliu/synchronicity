@@ -51,7 +51,7 @@ static VLCCoreDialogProvider *_o_sharedInstance = nil;
         o_error_panel = [[VLCErrorPanel alloc] init];
         b_progress_cancelled = NO;
     }
-    
+
     return _o_sharedInstance;
 }
 
@@ -79,7 +79,7 @@ static VLCCoreDialogProvider *_o_sharedInstance = nil;
     else if( [o_type isEqualToString: @"dialog-login"] )
         [self performSelectorOnMainThread:@selector(showLoginDialog:) withObject:o_value waitUntilDone:YES];
     else if( [o_type isEqualToString: @"dialog-progress-bar"] )
-        [self performSelectorOnMainThread:@selector(showProgressDialog:) withObject:o_value waitUntilDone:YES];
+        [self performSelectorOnMainThread:@selector(showProgressDialogOnMainThread:) withObject: o_value waitUntilDone:YES];
     else
         msg_Err( VLCIntf, "unhandled dialog type: '%s'", type );
 }
@@ -108,7 +108,7 @@ static VLCCoreDialogProvider *_o_sharedInstance = nil;
     NSAlert *o_alert;
     NSString *o_yes, *o_no, *o_cancel;
     NSInteger i_returnValue = 0;
-    
+
     if( p_dialog->yes != NULL )
         o_yes = [NSString stringWithUTF8String: p_dialog->yes];
     if( p_dialog->no != NULL )
@@ -161,9 +161,21 @@ static VLCCoreDialogProvider *_o_sharedInstance = nil;
         [NSApp stopModalWithCode: 0];
 }
 
+-(void)showProgressDialogOnMainThread: (NSValue *)o_value
+{
+    /* we work-around a Cocoa limitation here, since you cannot delay an execution
+     * on the main thread within a single call */
+    b_progress_cancelled = NO;
+    if (VLCIntf)
+        [self performSelector:@selector(showProgressDialog:) withObject: o_value afterDelay:3.00];
+}
+
 -(void)showProgressDialog: (NSValue *)o_value
 {
     dialog_progress_bar_t *p_dialog = [o_value pointerValue];
+
+    if (!p_dialog || b_progress_cancelled)
+        return;
 
     if( p_dialog->title != NULL )
     {
@@ -200,6 +212,7 @@ static VLCCoreDialogProvider *_o_sharedInstance = nil;
 
 -(void)destroyProgressPanel
 {
+    b_progress_cancelled = YES;
     [o_prog_bar stopAnimation: self];
     [o_prog_win close];
 }

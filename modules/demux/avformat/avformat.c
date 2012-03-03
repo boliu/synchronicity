@@ -41,6 +41,7 @@ vlc_module_begin ()
     set_shortname( N_("Avformat") )
     set_capability( "demux", 2 )
     set_callbacks( OpenDemux, CloseDemux )
+    add_string( "ffmpeg-format", NULL, FORMAT_TEXT, FORMAT_LONGTEXT, true )
 
 #ifdef ENABLE_SOUT
     /* mux submodule */

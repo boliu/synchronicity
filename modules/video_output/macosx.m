@@ -208,8 +208,8 @@ static int Open(vlc_object_t *this)
     const vlc_fourcc_t *subpicture_chromas;
     video_format_t fmt = vd->fmt;
 
-	sys->vgl = vout_display_opengl_New(&vd->fmt, &subpicture_chromas, &sys->gl);
-	if (!sys->vgl)
+    sys->vgl = vout_display_opengl_New(&vd->fmt, &subpicture_chromas, &sys->gl);
+    if (!sys->vgl)
     {
         sys->gl.sys = NULL;
         goto error;
@@ -301,7 +301,9 @@ static void PictureDisplay(vout_display_t *vd, picture_t *pic, subpicture_t *sub
     [sys->glView setVoutFlushing:NO];
     picture_Release (pic);
     sys->has_first_frame = true;
-	(void)subpicture;
+
+    if (subpicture)
+        subpicture_Delete(subpicture);
 }
 
 static int Control (vout_display_t *vd, int query, va_list ap)
@@ -319,11 +321,10 @@ static int Control (vout_display_t *vd, int query, va_list ap)
         }
         case VOUT_DISPLAY_CHANGE_WINDOW_STATE:
         {
+            NSAutoreleasePool * o_pool = [[NSAutoreleasePool alloc] init];
             unsigned state = va_arg (ap, unsigned);
-            if( (state & VOUT_WINDOW_STATE_ABOVE) != 0)
-                [[sys->glView window] setLevel: NSStatusWindowLevel];
-            else
-                [[sys->glView window] setLevel: NSNormalWindowLevel];
+            [sys->glView performSelectorOnMainThread:@selector(setWindowLevel:) withObject:[NSNumber numberWithUnsignedInt:state] waitUntilDone:NO];
+            [o_pool release];
             return VLC_SUCCESS;
         }
         case VOUT_DISPLAY_CHANGE_DISPLAY_FILLED:
@@ -697,8 +698,8 @@ static void OpenglSwap(vlc_gl_t *gl)
     NSWindow *window = [self window];
 
     // Remove flashes with splitter view.
-	if ([window respondsToSelector:@selector(disableScreenUpdatesUntilFlush)])
-		[window disableScreenUpdatesUntilFlush];
+    if ([window respondsToSelector:@selector(disableScreenUpdatesUntilFlush)])
+        [window disableScreenUpdatesUntilFlush];
 
     [super renewGState];
 }
@@ -711,5 +712,13 @@ static void OpenglSwap(vlc_gl_t *gl)
 - (BOOL)isOpaque
 {
     return YES;
+}
+
+- (void)setWindowLevel:(NSNumber*)state
+{
+    if( [state unsignedIntValue] & VOUT_WINDOW_STATE_ABOVE )
+        [[self window] setLevel: NSStatusWindowLevel];
+    else
+        [[self window] setLevel: NSNormalWindowLevel];
 }
 @end

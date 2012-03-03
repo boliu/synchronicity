@@ -1,3 +1,63 @@
+Changes between 2.0.0 and 2.0.1:
+--------------------------------
+
+Access:
+ * fix and improve the CDDB information retrieval
+ * fix the samba module compilation
+
+Codecs:
+ * Support for MXPEG files
+ * limit auto-detected threads to 4 in avcodec module
+
+Demuxers:
+ * Fix multi-file splitted RAR archive support
+ * Fix a crash when seeking in mka
+ * Improve MKV multi-video tracks support
+
+Audio filters:
+ * limit spatializer filter distortions
+
+Video filters:
+ * Fix gradfun unloading on Windows platform
+
+Mac OS X interface:
+ * allow to hide the playlist to get a small controller window
+ * disable Lion fullscreen mode by default, since its behavior is misleading
+   - this fixes fullscreen video output on a secondary screen
+ * noticebly faster launch time
+ * fix fontconfig cache dialog, closure of the interface and various crashes
+ * correct a few visual glitches and accessibility support
+ * re-enable visual feedback on seek and volume changes
+ * improve track synchronization panel
+
+Qt interface:
+ * allow a native seek slider instead of the blue one
+ * fixes in the playlist, the addons dialog, the menus, the main toolbar
+   the open dialogs and preferences
+ * fix for fontconfig cache dialog, when rebuilding ASS fonts
+
+Skins interface:
+ * fix for menus display
+ * Addition of $R to display current playback speed
+ * documentation update
+
+Web interface:
+ * fix mobiles display for remote control mode
+ * support for .drc and .3ga extensions
+
+Service discovery:
+ * fix SAP discovery, where an item was added multiple times
+ * Update Jamendo selections
+
+Miscellaneous:
+ * fix DBus crash
+ * fix build issues on BSD, Linux/PPC and Linux/Sparc
+ * fix a crash on VLM close
+
+Security:
+ * Update libpng to 1.5.9 (CVE-2011-3026)
+
+
 Changes between 1.1.13 and 2.0.0:
 ---------------------------------
 

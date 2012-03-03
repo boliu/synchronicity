@@ -274,6 +274,7 @@ static hls_stream_t *hls_Copy(hls_stream_t *src, const bool b_cp_segments)
         return NULL;
     }
     vlc_UrlParse(&dst->url, uri, 0);
+    free( uri );
     if (!b_cp_segments)
         dst->segments = vlc_array_new();
     vlc_mutex_init(&dst->lock);
@@ -314,7 +315,7 @@ static hls_stream_t *hls_Find(vlc_array_t *hls_stream, hls_stream_t *hls_new)
         {
             /* compare */
             if ((hls->id == hls_new->id) &&
-                (hls->bandwidth == hls_new->bandwidth))
+                ((hls->bandwidth == hls_new->bandwidth)||(hls_new->bandwidth==0)))
                 return hls;
         }
     }
@@ -2453,7 +2454,7 @@ static int segment_Seek(stream_t *s, const uint64_t pos)
         length += segment->duration * (hls->bandwidth/8);
         vlc_mutex_unlock(&segment->lock);
 
-        if (!b_found && (pos <= length))
+        if (pos <= length)
         {
             if (count - n >= 3)
             {

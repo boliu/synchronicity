@@ -72,7 +72,7 @@ PluginDialog::PluginDialog( intf_thread_t *_p_intf ) : QVLCFrame( _p_intf )
 
     QDialogButtonBox *box = new QDialogButtonBox;
     QPushButton *okButton = new QPushButton( qtr( "&Close" ), this );
-    box->addButton( okButton, QDialogButtonBox::AcceptRole );
+    box->addButton( okButton, QDialogButtonBox::RejectRole );
     layout->addWidget( box );
     BUTTONACT( okButton, close() );
     readSettings( "PluginsDialog", QSize( 435, 280 ) );
@@ -192,6 +192,12 @@ ExtensionTab::ExtensionTab( intf_thread_t *p_intf )
 {
     // Layout
     QVBoxLayout *layout = new QVBoxLayout( this );
+
+    QLabel *notice = new QLabel( qtr("Get more extensions from")
+            + QString( " <a href=\"http://addons.videolan.org/\">"
+                       "addons.videolan.org</a>." ) );
+    notice->setOpenExternalLinks( true );
+    layout->addWidget( notice );
 
     // ListView
     extList = new QListView( this );
@@ -555,12 +561,13 @@ ExtensionInfoDialog::ExtensionInfoDialog( const ExtensionCopy& extension,
     label = new QLabel( "<b>" + qtr( "File" ) + ":</b>", this );
     layout->addWidget( label, 6, 0, 1, 2 );
     QLineEdit *line = new QLineEdit( extension.name, this );
+    line->setReadOnly( true );
     layout->addWidget( line, 6, 2, 1, -1 );
 
     // Close button
     QDialogButtonBox *group = new QDialogButtonBox( this );
     QPushButton *closeButton = new QPushButton( qtr( "&Close" ) );
-    group->addButton( closeButton, QDialogButtonBox::AcceptRole );
+    group->addButton( closeButton, QDialogButtonBox::RejectRole );
     BUTTONACT( closeButton, close() );
 
     layout->addWidget( group, 7, 0, 1, -1 );

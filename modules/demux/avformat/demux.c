@@ -104,7 +104,7 @@ int OpenDemux( vlc_object_t *p_this )
     demux_t       *p_demux = (demux_t*)p_this;
     demux_sys_t   *p_sys;
     AVProbeData   pd;
-    AVInputFormat *fmt;
+    AVInputFormat *fmt = NULL;
     unsigned int  i;
     int64_t       i_start_time = -1;
     bool          b_can_seek;
@@ -131,8 +131,16 @@ int OpenDemux( vlc_object_t *p_this )
     av_register_all(); /* Can be called several times */
     vlc_avcodec_unlock();
 
+    char *psz_format = var_InheritString( p_this, "ffmpeg-format" );
+    if( psz_format )
+    {
+        if( fmt = av_find_input_format(psz_format) )
+            msg_Dbg( p_demux, "forcing format: %s", fmt->name );
+        free( psz_format );
+    }
+
     /* Guess format */
-    if( !( fmt = av_probe_input_format( &pd, 1 ) ) )
+    if( !fmt && !( fmt = av_probe_input_format( &pd, 1 ) ) )
     {
         msg_Dbg( p_demux, "couldn't guess format" );
         free( psz_url );
@@ -586,17 +594,37 @@ static int Demux( demux_t *p_demux )
     if( pkt.flags & AV_PKT_FLAG_KEY )
         p_frame->i_flags |= BLOCK_FLAG_TYPE_I;
 
-    i_start_time = ( p_sys->ic->start_time != (int64_t)AV_NOPTS_VALUE ) ?
-        ( p_sys->ic->start_time * 1000000 / AV_TIME_BASE )  : 0;
+    /* Used to avoid timestamps overlow */
+    lldiv_t q;
+    if( p_sys->ic->start_time != (int64_t)AV_NOPTS_VALUE )
+    {
+        q = lldiv( p_sys->ic->start_time, AV_TIME_BASE);
+        i_start_time = q.quot * (int64_t)1000000 + q.rem * (int64_t)1000000 / AV_TIME_BASE;
+    }
+    else
+        i_start_time = 0;
 
-    p_frame->i_dts = ( pkt.dts == (int64_t)AV_NOPTS_VALUE ) ?
-        VLC_TS_INVALID : (pkt.dts) * 1000000 *
-        p_stream->time_base.num /
-        p_stream->time_base.den - i_start_time + VLC_TS_0;
-    p_frame->i_pts = ( pkt.pts == (int64_t)AV_NOPTS_VALUE ) ?
-        VLC_TS_INVALID : (pkt.pts) * 1000000 *
-        p_stream->time_base.num /
-        p_stream->time_base.den - i_start_time + VLC_TS_0;
+    if( pkt.dts == (int64_t)AV_NOPTS_VALUE )
+        p_frame->i_dts = VLC_TS_INVALID;
+    else
+    {
+        q = lldiv( pkt.dts, p_stream->time_base.den );
+        p_frame->i_dts = q.quot * (int64_t)1000000 *
+            p_stream->time_base.num + q.rem * (int64_t)1000000 *
+            p_stream->time_base.num /
+            p_stream->time_base.den - i_start_time + VLC_TS_0;
+    }
+
+    if( pkt.pts == (int64_t)AV_NOPTS_VALUE )
+        p_frame->i_pts = VLC_TS_INVALID;
+    else
+    {
+        q = lldiv( pkt.pts, p_stream->time_base.den );
+        p_frame->i_pts = q.quot * (int64_t)1000000 *
+            p_stream->time_base.num + q.rem * (int64_t)1000000 *
+            p_stream->time_base.num /
+            p_stream->time_base.den - i_start_time + VLC_TS_0;
+    }
     if( pkt.duration > 0 && p_frame->i_length <= 0 )
         p_frame->i_length = pkt.duration * 1000000 *
             p_stream->time_base.num /

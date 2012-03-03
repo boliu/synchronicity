@@ -36,10 +36,10 @@
     IBOutlet id o_cleanup_button;
     IBOutlet id o_error_table;
     IBOutlet id o_messages_btn;
-    
+
     NSMutableArray * o_errors;
     NSMutableArray * o_icons;
-    
+
     BOOL b_nib_loaded;
 }
 - (IBAction)cleanupTable:(id)sender;
@@ -87,6 +87,7 @@
 -(void)showLoginDialog: (NSValue *)o_value;
 -(IBAction)loginDialogAction:(id)sender;
 
+-(void)showProgressDialogOnMainThread: (NSValue *)o_value;
 -(void)showProgressDialog: (NSValue *)o_value;
 -(IBAction)progDialogAction:(id)sender;
 -(BOOL)progressCancelled;
