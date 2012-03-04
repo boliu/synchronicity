@@ -1187,7 +1187,9 @@ void MainInterface::updateSynchronicity( int messageID ) {
 }
 
 void MainInterface::updateUser( char* name ) {
-    synchronicityUser->setText( name );
+    string userText = "Synchronized with ";
+    userText.append( name );
+    connectionKey->setText( userText.c_str() );
 }
 
 void MainInterface::hostButton_Click() {
