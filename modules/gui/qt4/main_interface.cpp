@@ -1182,9 +1182,9 @@ void MainInterface::updateSynchronicity( int messageID ) {
 }
 
 void MainInterface::updateUser( char* name ) {
-    string userText = "Synchronized with ";
+    QString userText = "Synchronized with ";
     userText.append( name );
-    connectionKey->setText( userText.c_str() );
+    connectionKey->setText( userText );
 }
 
 void MainInterface::hostButton_Click() {
