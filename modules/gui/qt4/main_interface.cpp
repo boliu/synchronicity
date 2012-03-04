@@ -425,7 +425,6 @@ void MainInterface::createMainWidget( QSettings *settings )
     connectionKey = new QLineEdit( "" );
     synchronicityLabel = new QLabel( "" );
     synchronicityLabel->setPixmap(QPixmap(":/synchronicity/graylight"));
-    synchronicityUser = new QLabel( "" );
     hostButton = new QPushButton( "Host" );
     connectButton = new QPushButton ( "Connect" );
     copyButton = new QPushButton( "Copy" );
@@ -435,7 +434,6 @@ void MainInterface::createMainWidget( QSettings *settings )
     synchLayout->addWidget( copyButton, 0, 2 );
     synchLayout->addWidget( connectionKey, 0, 3 );
     synchLayout->addWidget( connectButton, 0, 4 );
-    synchLayout->addWidget( synchronicityUser, 0, 5 );
     synchLayout->addWidget( synchronicityLabel, 0, 6 );
     synchWidget->setLayout( synchLayout );
     mainLayout->addWidget( synchWidget );
@@ -1145,7 +1143,6 @@ void MainInterface::updateSynchronicity( int messageID ) {
       //enable buttons and text line
       connectionKey->setReadOnly(false);
       displayMessage( "Connection lost." );
-      synchronicityUser->setText( "" );
       hostButtonVisible();
     } else if (messageID == HOST_SUCCESS) {
       synchronicityLabel->setPixmap(QPixmap(":/synchronicity/yellowlight"));
@@ -1165,12 +1162,10 @@ void MainInterface::updateSynchronicity( int messageID ) {
     } else if (messageID == CONNECT_SUCCESS) {
       synchronicityLabel->setPixmap(QPixmap(":/synchronicity/greenlight"));
       displayMessage( "Connected to host. Synchronizing." );
-      synchronicityUser->setText( "" );
       leaveButtonVisible();
     } else if (messageID == PEER_DISCONNECT) {
       synchronicityLabel->setPixmap(QPixmap(":synchronicity/graylight"));
       displayMessage( "Peer has disconnected." );
-      synchronicityUser->setText( "" );
       hostButtonVisible();
     } else if (messageID == PEER_SNAP) {
       displayMessage( "Synchronizing to peer." );
@@ -1220,7 +1215,6 @@ void MainInterface::copyButton_Click() {
 
 void MainInterface::leaveButton_Click() {
   playlist_SynDisconnect(THEPL);
-  synchronicityUser->setText( "" );
 }
 
 void MainInterface::checkConnectionKey(const QString &text) {

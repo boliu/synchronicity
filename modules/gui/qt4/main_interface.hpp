@@ -186,7 +186,6 @@ private:
     QLineEdit *connectionKey;
     QGridLayout *synchLayout;
     QWidget *synchWidget;
-    QLabel *synchronicityUser;
 
 #ifdef WIN32
     HIMAGELIST himl;
