@@ -703,7 +703,9 @@ static int LoopInput( playlist_t *p_playlist )
 
         // Disconnect when ends
         bool b_repeat = var_GetBool( p_playlist, "repeat" ) /* loop one */;
-        if(p_sys->b_syn_created && !b_repeat ) {
+        if(p_sys->b_syn_created &&
+            (!b_repeat || PLAYLIST_STOPPED == p_sys->request.i_status)
+            ) {
           var_SetInteger( p_playlist, "synchronicity", PEER_DISCONNECT);
           SynConnection_Destroy(p_sys->syn_connection, NULL, NULL);
           p_sys->b_syn_created = false;
