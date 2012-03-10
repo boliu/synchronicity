@@ -42,6 +42,7 @@ static void SynBreakConnection(playlist_t* p_playlist) {
     var_SetInteger( p_playlist, "synchronicity", CONNECTION_FAILURE );
     SynConnection_Destroy(pl_priv(p_playlist)->syn_connection, NULL, NULL);
     pl_priv(p_playlist)->b_syn_created = false;
+    pl_priv(p_playlist)->b_syn_can_send = false;
   }
 }
 
@@ -192,6 +193,7 @@ void playlist_SynDisconnect(playlist_t* p_playlist) {
     var_SetInteger( p_playlist, "synchronicity", PEER_DISCONNECT);
     SynConnection_Destroy(pl_priv(p_playlist)->syn_connection, NULL, NULL);
     pl_priv(p_playlist)->b_syn_created = false;
+    pl_priv(p_playlist)->b_syn_can_send = false;
   }
 }
 

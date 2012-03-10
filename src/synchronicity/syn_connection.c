@@ -518,9 +518,8 @@ int SynConnection_Destroy(
     sci->state = SYN_DESTROYING;
     sci->destroy_callback = callback;
     sci->destroy_param = param;
+    shutdown(sci->socket, SHUT_RDWR);
   SynUnlock(sci);
-  vlc_cond_signal(&sci->send_info_non_empy);
-  vlc_join(sci->send_thread, NULL);
 
   return 0;
 }
