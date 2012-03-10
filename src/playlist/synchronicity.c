@@ -62,9 +62,6 @@ static void SynReceiveCallback(int rv, mtime_t delay, void* param, void* buffer,
   input_thread_t* p_in = playlist_CurrentInput(p_playlist);
   if (NULL != p_in) {
     SynCommand syn = CommandFromString(buffer, len);
-    if (delay < 0) {
-      delay = 0;
-    }
     mtime_t current;
     input_Control(p_in, INPUT_GET_TIME, &current);
     switch(syn.type) {
@@ -90,6 +87,7 @@ static void SynReceiveCallback(int rv, mtime_t delay, void* param, void* buffer,
               break;
             default:
               msg_Err(p_playlist, "SynReceiveCallback: Received on no input? %d", playpause);
+              delay = 0;
               break;
           }
         }
@@ -103,6 +101,7 @@ static void SynReceiveCallback(int rv, mtime_t delay, void* param, void* buffer,
         break;
       default:
         msg_Info(p_playlist, "SynReceiveCallback: Error");
+        delay = 0;
         break;
     }
     if (0 != delay && SYNCOMMAND_MYNAMEIS != syn.type) {

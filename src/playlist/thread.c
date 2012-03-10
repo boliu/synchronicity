@@ -343,28 +343,28 @@ static int SynEventListener( vlc_object_t *p_this, const char *psz_var,
     return VLC_SUCCESS;
   }
   if(INPUT_EVENT_POSITION == newval.i_int ) {
+    // calculate current wall clock - video time
+    mtime_t current_wall = mdate();
+    mtime_t current_time;
+    input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &current_time);
+    mtime_t current_difference = current_wall - current_time;
+
     if(p_playlist->b_need_send_seek) {
       p_playlist->b_need_send_seek = false;
       SynCommand syn;
       syn.type = SYNCOMMAND_SEEK;
-      input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &syn.data.i_time);
+      syn.data.i_time = current_time;
       return SendSynCommand((playlist_t*)param, syn);
     } else {
       // immediately after a position change, the difference is totally messed up, so
       // this is in the else block
       int playpause;
       input_Control((input_thread_t*)p_this, INPUT_GET_STATE, &playpause);
-      mtime_t current_wall = mdate();
       if(p_playlist->t_wall_minus_video
         && !p_playlist->b_correcting
         && PLAYING_S == playpause
         //&& current_wall - p_playlist->t_last_correction_time > 200000
         ) {
-        // calculate current wall clock - video time
-        mtime_t current_time;
-        input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &current_time);
-        mtime_t current_difference = current_wall - current_time;
-
         mtime_t diff_diff = current_difference - p_playlist->t_wall_minus_video;
         if(diff_diff > p_playlist->offline_sync_threshold
           || diff_diff < -p_playlist->offline_sync_threshold) {
@@ -436,7 +436,7 @@ static int PlayItem( playlist_t *p_playlist, playlist_item_t *p_item )
 
         if(p_sys->b_syn_created && var_GetBool( p_playlist, "repeat" ) /* loop one */) {
           // continuing a loop single video while connected
-          p_sys->t_wall_minus_video = mdate();
+          p_sys->b_need_send_seek = true;
         } else {
           //set synchronicity variable to enable gui
           var_SetInteger( p_playlist, "synchronicity", ITEM_PLAYING);
@@ -444,6 +444,7 @@ static int PlayItem( playlist_t *p_playlist, playlist_item_t *p_item )
           // Re-initialize synchronicity variables on every playlist item
           p_sys->b_syn_can_send = false;
           p_sys->b_syn_created = false;
+          p_sys->b_need_send_seek = false;
         }
 
         p_sys->psz_syn_server_host =
