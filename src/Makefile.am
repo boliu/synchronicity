@@ -538,7 +538,7 @@ check-local:
 			exit 1; \
 		fi ; \
 	done
-	$(srcdir)/check_headers $(pluginsinclude_HEADERS)
+	$(SHELL) $(srcdir)/check_headers $(pluginsinclude_HEADERS)
 
 FORCE:
 	@echo "Generated source cannot be phony. Go away." >&2

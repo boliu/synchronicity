@@ -70,12 +70,27 @@
     IBOutlet VLCFSPanel *o_fspanel;
     IBOutlet id o_titlebar_view;
     IBOutlet id o_resize_view;
+    IBOutlet id o_detached_resize_view;
+
+    IBOutlet id o_detached_play_btn;
+    IBOutlet id o_detached_fwd_btn;
+    IBOutlet id o_detached_bwd_btn;
+    IBOutlet id o_detached_fullscreen_btn;
+    IBOutlet id o_detached_time_fld;
+    IBOutlet id o_detached_time_sld;
+    IBOutlet id o_detached_time_sld_background;
+    IBOutlet id o_detached_progress_bar;
+    IBOutlet id o_detached_time_sld_fancygradient_view;
+    IBOutlet id o_detached_bottombar_view;
+    IBOutlet id o_detached_titlebar_view;
+    IBOutlet id o_detached_video_window;
 
     BOOL b_dark_interface;
     BOOL b_nativeFullscreenMode;
     BOOL b_video_playback_enabled;
     BOOL b_dropzone_active;
     BOOL b_splitview_removed;
+    BOOL b_minimized_view;
     int i_lastSplitViewHeight;
     int i_lastShownVolume;
     input_state_e cachedInputState;
@@ -101,7 +116,6 @@
     BOOL just_triggered_previous;
     NSMutableArray *o_sidebaritems;
 
-    VLCWindow       * o_nonembedded_window;
     BOOL              b_nonembedded;
 
     VLCWindow       * o_fullscreen_window;
@@ -158,6 +172,7 @@
 - (void)drawFancyGradientEffectForTimeSlider;
 
 - (id)videoView;
+- (id)setupVideoView;
 - (void)setVideoplayEnabled;
 - (void)resizeWindow;
 - (void)setNativeVideoSize:(NSSize)size;
@@ -175,10 +190,19 @@
 - (void)leaveFullscreenAndFadeOut: (BOOL)fadeout;
 - (void)hasEndedFullscreen;
 - (void)hasBecomeFullscreen;
-- (void)setFrameOnMainThread:(NSData*)packedargs;
 
 /* lion's native fullscreen handling */
 - (void)windowWillEnterFullScreen:(NSNotification *)notification;
 - (void)windowWillExitFullScreen:(NSNotification *)notification;
+
+@end
+
+@interface VLCDetachedVideoWindow : NSWindow
+{
+    BOOL b_dark_interface;
+    NSRect previousSavedFrame;
+}
+
+- (BOOL)isFullscreen;
 
 @end

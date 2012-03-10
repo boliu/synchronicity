@@ -550,10 +550,15 @@ void DiscOpenPanel::updateMRL()
             opts += " :sub-track=" +
                 QString("%1").arg( ui.subtitlesSpin->value() );
     }
-    if( ui.audioCDRadioButton->isChecked() )
+    else if( ui.audioCDRadioButton->isChecked() )
     {
         if( ui.titleSpin->value() > 0 )
             opts += QString(" :cdda-track=%1").arg( ui.titleSpin->value() );
+    }
+    else if ( ui.bdRadioButton->isChecked() )
+    {
+        if ( ui.dvdsimple->isChecked() == false )
+            opts += " :bluray-menu";
     }
     emit mrlUpdated( fileList, opts );
 }
@@ -611,11 +616,7 @@ NetOpenPanel::~NetOpenPanel()
     /* Create the list with the current items */
     QStringList mrlList;
     for( int i = 0; i < ui.urlComboBox->count(); i++ )
-    {
         mrlList << ui.urlComboBox->itemText( i );
-        msg_Err( p_intf, "%s" , qtu( ui.urlComboBox->itemText( i ) ) );
-
-    }
 
     if( mrlList.count() > 0 )
     {
