@@ -251,6 +251,9 @@ playlist_t * playlist_Create( vlc_object_t *p_parent )
     pl_priv(p_playlist)->request.b_request = false;
     pl_priv(p_playlist)->status.i_status = PLAYLIST_STOPPED;
 
+    /* this is read in PlayItem so it needs to be initialized here */
+    pl_priv(p_playlist)->b_syn_created = false;
+
     if(b_ml)
     {
         const bool b_auto_preparse = pl_priv(p_playlist)->b_auto_preparse;

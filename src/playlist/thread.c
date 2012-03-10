@@ -433,13 +433,18 @@ static int PlayItem( playlist_t *p_playlist, playlist_item_t *p_item )
         var_AddCallback( p_input_thread, "intf-event", SynEventListener, p_playlist);
         //var_AddCallback( p_input_thread, "position", PositionListener, p_input_thread );
 
-        //set synchronicity variable to enable gui
-        var_SetInteger( p_playlist, "synchronicity", ITEM_PLAYING);
 
+        if(p_sys->b_syn_created && var_GetBool( p_playlist, "repeat" ) /* loop one */) {
+          // continuing a loop single video while connected
+          p_sys->t_wall_minus_video = mdate();
+        } else {
+          //set synchronicity variable to enable gui
+          var_SetInteger( p_playlist, "synchronicity", ITEM_PLAYING);
 
-        // Re-initialize synchronicity variables on every playlist item
-        p_sys->b_syn_can_send = false;
-        p_sys->b_syn_created = false;
+          // Re-initialize synchronicity variables on every playlist item
+          p_sys->b_syn_can_send = false;
+          p_sys->b_syn_created = false;
+        }
 
         p_sys->psz_syn_server_host =
           var_InheritString( p_playlist->p_libvlc, "synchronicity-server" );
@@ -696,16 +701,17 @@ static int LoopInput( playlist_t *p_playlist )
         //var_DelCallback( p_input, "position", PositionListener, p_input );
 
         // Disconnect when ends
-        if(p_sys->b_syn_created) {
+        bool b_repeat = var_GetBool( p_playlist, "repeat" ) /* loop one */;
+        if(p_sys->b_syn_created && !b_repeat ) {
           var_SetInteger( p_playlist, "synchronicity", PEER_DISCONNECT);
           SynConnection_Destroy(p_sys->syn_connection, NULL, NULL);
           p_sys->b_syn_created = false;
+
+          //set synchronicity variable to disable GUI
+          var_SetInteger( p_playlist, "synchronicity", ITEM_STOPPED);
         }
         free(p_sys->psz_syn_server_host);
         free(p_sys->psz_syn_user);
-
-        //set synchronicity variable to disable GUI
-        var_SetInteger( p_playlist, "synchronicity", ITEM_STOPPED);
 
         PL_LOCK;
 
