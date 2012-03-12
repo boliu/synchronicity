@@ -5,7 +5,9 @@ Access:
  * fix and improve the CDDB information retrieval
  * fix the samba module compilation
  * fix UDP / RTP multicast stream reception on Mac OS X when using the 10.7 SDK
- * multiple fix for HTTP Live Streaming support, notably on Win32
+ * multiple fixes for HLS support, notably on Win32 and for encryption
+ * multiple fixes for Bluray discs playback
+ * fix for DVD decryption on some RPC-I drives
 
 Codecs:
  * Support for MXPEG files
@@ -19,6 +21,7 @@ Demuxers:
 
 Audio filters:
  * limit spatializer filter distortions
+ * Use fastest SinC algorithm for samplerate module
 
 Audio output:
  * Fix S/PDIF passthrough with ALSA.
@@ -35,15 +38,16 @@ Mac OS X interface:
  * disable Lion fullscreen mode by default, since its behavior is misleading
    - this fixes fullscreen video output on a secondary screen
  * noticebly faster launch time
- * fix fontconfig cache dialog, closure of the interface and various crashes
  * correct a few visual glitches and accessibility support
  * re-enable visual feedback on seek and volume changes
  * improve track synchronization panel
+ * fix fontconfig cache dialog, closure of the interface and numerous crashes
+ * fix crop, aspect ratio handling, DVD (no menu) support and Open subtitle menu
 
 Qt interface:
  * allow a native seek slider instead of the blue one
  * fixes in the playlist, the addons dialog, the menus, the main toolbar
-   the open dialogs and preferences
+   the open dialogs, preferences and customization dialogs
  * fix for fontconfig cache dialog, when rebuilding ASS fonts
 
 Skins interface:
