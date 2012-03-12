@@ -35,6 +35,7 @@
 #include <vlc_plugin.h>
 
 #include <assert.h>
+#include <errno.h>
 #include <gcrypt.h>
 
 #include <vlc_threads.h>
@@ -577,8 +578,9 @@ static int parse_SegmentInformation(hls_stream_t *hls, char *p_read, int *durati
     char *endptr;
     if (hls->version < 3)
     {
+       errno = 0;
        value = strtol(token, &endptr, 10);
-       if (token == endptr)
+       if (token == endptr || errno == ERANGE )
        {
            *duration = -1;
            return VLC_EGENERIC;
@@ -587,8 +589,9 @@ static int parse_SegmentInformation(hls_stream_t *hls, char *p_read, int *durati
     }
     else
     {
+        errno = 0;
         double d = strtof(token, &endptr);
-        if (token == endptr)
+        if (token == endptr || errno == ERANGE )
         {
             *duration = -1;
             return VLC_EGENERIC;
