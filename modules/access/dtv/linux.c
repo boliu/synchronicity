@@ -52,28 +52,6 @@
 # error Linux DVB kernel headers version 2.6.28 or later required.
 #endif
 
-/** Opens the device directory for the specified DVB adapter */
-static int dvb_open_adapter (uint8_t adapter)
-{
-    char dir[20];
-
-    snprintf (dir, sizeof (dir), "/dev/dvb/adapter%"PRIu8, adapter);
-    return open (dir, O_SEARCH|O_DIRECTORY|O_CLOEXEC);
-}
-
-/** Opens the DVB device node of the specified type */
-static int dvb_open_node (int dir, const char *type, unsigned dev, int flags)
-{
-    int fd;
-    char path[strlen (type) + 4];
-
-    snprintf (path, sizeof (path), "%s%u", type, dev);
-    fd = openat (dir, path, flags|O_CLOEXEC);
-    if (fd != -1)
-        fcntl (fd, F_SETFL, fcntl (fd, F_GETFL) | O_NONBLOCK);
-    return fd;
-}
-
 typedef struct
 {
     int vlc;
@@ -184,10 +162,32 @@ struct dvb_device
 #ifdef HAVE_DVBPSI
     cam_t *cam;
 #endif
-    unsigned systems;
+    uint8_t device;
     bool budget;
     //size_t buffer_size;
 };
+
+/** Opens the device directory for the specified DVB adapter */
+static int dvb_open_adapter (uint8_t adapter)
+{
+    char dir[20];
+
+    snprintf (dir, sizeof (dir), "/dev/dvb/adapter%"PRIu8, adapter);
+    return open (dir, O_SEARCH|O_DIRECTORY|O_CLOEXEC);
+}
+
+/** Opens the DVB device node of the specified type */
+static int dvb_open_node (dvb_device_t *d, const char *type, int flags)
+{
+    int fd;
+    char path[strlen (type) + 4];
+
+    snprintf (path, sizeof (path), "%s%u", type, d->device);
+    fd = openat (d->dir, path, flags|O_CLOEXEC);
+    if (fd != -1)
+        fcntl (fd, F_SETFL, fcntl (fd, F_GETFL) | O_NONBLOCK);
+    return fd;
+}
 
 /**
  * Opens the DVB tuner
@@ -201,6 +201,7 @@ dvb_device_t *dvb_open (vlc_object_t *obj)
     d->obj = obj;
 
     uint8_t adapter = var_InheritInteger (obj, "dvb-adapter");
+    d->device = var_InheritInteger (obj, "dvb-device");
 
     d->dir = dvb_open_adapter (adapter);
     if (d->dir == -1)
@@ -219,7 +220,7 @@ dvb_device_t *dvb_open (vlc_object_t *obj)
     if (d->budget)
 #endif
     {
-       d->demux = dvb_open_node (d->dir, "demux", 0, O_RDONLY);
+       d->demux = dvb_open_node (d, "demux", O_RDONLY);
        if (d->demux == -1)
        {
            msg_Err (obj, "cannot access demultiplexer: %m");
@@ -251,7 +252,7 @@ dvb_device_t *dvb_open (vlc_object_t *obj)
     {
         for (size_t i = 0; i < MAX_PIDS; i++)
             d->pids[i].pid = d->pids[i].fd = -1;
-        d->demux = dvb_open_node (d->dir, "dvr", 0, O_RDONLY);
+        d->demux = dvb_open_node (d, "dvr", O_RDONLY);
         if (d->demux == -1)
         {
             msg_Err (obj, "cannot access DVR: %m");
@@ -263,7 +264,7 @@ dvb_device_t *dvb_open (vlc_object_t *obj)
     }
 
 #ifdef HAVE_DVBPSI
-    int ca = dvb_open_node (d->dir, "ca", 0, O_RDWR);
+    int ca = dvb_open_node (d, "ca", O_RDWR);
     if (ca != -1)
     {
         d->cam = en50221_Init (obj, ca);
@@ -381,7 +382,7 @@ int dvb_add_pid (dvb_device_t *d, uint16_t pid)
         if (d->pids[i].fd != -1)
             continue;
 
-        int fd = dvb_open_node (d->dir, "demux", 0, O_RDONLY);
+        int fd = dvb_open_node (d, "demux", O_RDONLY);
         if (fd == -1)
             goto error;
 
@@ -430,12 +431,34 @@ void dvb_remove_pid (dvb_device_t *d, uint16_t pid)
 #endif
 }
 
-/** Enumerates the systems supported by one frontend */
-static unsigned dvb_probe_frontend (dvb_device_t *d, int fd)
+/** Finds a frontend of the correct type */
+static int dvb_open_frontend (dvb_device_t *d)
 {
-    struct dvb_frontend_info info;
+    if (d->frontend != -1)
+        return 0;
+    int fd = dvb_open_node (d, "frontend", O_RDWR);
+    if (fd == -1)
+    {
+        msg_Err (d->obj, "cannot access frontend: %m");
+        return -1;
+    }
 
-    if (ioctl (fd, FE_GET_INFO, &info) < 0)
+    d->frontend = fd;
+    return 0;
+}
+#define dvb_find_frontend(d, sys) (dvb_open_frontend(d))
+
+/**
+ * Detects supported delivery systems.
+ * @return a bit mask of supported systems (zero on failure)
+ */
+unsigned dvb_enum_systems (dvb_device_t *d)
+{
+    if (dvb_open_frontend (d))
+        return 0;
+
+    struct dvb_frontend_info info;
+    if (ioctl (d->frontend, FE_GET_INFO, &info) < 0)
     {
         msg_Err (d->obj, "cannot get frontend info: %m");
         return 0;
@@ -481,70 +504,6 @@ static unsigned dvb_probe_frontend (dvb_device_t *d, int fd)
     if (info.type == FE_OFDM)
         systems |= ISDB_T;
 
-    return systems;
-}
-
-/** Finds a frontend of the correct type */
-static int dvb_find_frontend (dvb_device_t *d, unsigned system)
-{
-    if (d->frontend != -1)
-    {
-        if (d->systems & system)
-            return 0; /* already got an adequate frontend */
-
-        close (d->frontend);
-        d->frontend = -1;
-    }
-
-    for (unsigned n = 0; n < 256; n++)
-    {
-        int fd = dvb_open_node (d->dir, "frontend", n, O_RDWR);
-        if (fd == -1)
-        {
-            if (errno == ENOENT)
-                break; /* all frontends already enumerated */
-            msg_Err (d->obj, "cannot access frontend %u: %m", n);
-            continue;
-        }
-
-        d->systems = dvb_probe_frontend (d, fd);
-        if (d->systems & system)
-        {
-            msg_Dbg (d->obj, "selected frontend %u", n);
-            d->frontend = fd;
-            return 0;
-        }
-
-        msg_Dbg (d->obj, "skipping frontend %u: wrong type", n);
-        close (fd);
-    }
-
-    msg_Err (d->obj, "no suitable frontend found");
-    return -1;
-}
-
-/**
- * Detects supported delivery systems.
- * @return a bit mask of supported systems (zero on failure)
- */
-unsigned dvb_enum_systems (dvb_device_t *d)
-{
-    unsigned systems = 0;
-
-    for (unsigned n = 0; n < 256; n++)
-    {
-        int fd = dvb_open_node (d->dir, "frontend", n, O_RDWR);
-        if (fd == -1)
-        {
-            if (errno == ENOENT)
-                break; /* all frontends already enumerated */
-            msg_Err (d->obj, "cannot access frontend %u; %m", n);
-            continue;
-        }
-
-        systems |= dvb_probe_frontend (d, fd);
-        close (fd);
-    }
     return systems;
 }
 
