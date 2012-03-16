@@ -126,8 +126,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
     /* setup the styled interface */
     b_nativeFullscreenMode = NO;
 #ifdef MAC_OS_X_VERSION_10_7
-    if( config_GetInt( VLCIntf, "embedded-video" ))
-        b_nativeFullscreenMode = config_GetInt( VLCIntf, "macosx-nativefullscreenmode" );
+    b_nativeFullscreenMode = config_GetInt( VLCIntf, "macosx-nativefullscreenmode" );
 #endif
     i_lastShownVolume = -1;
     t_hide_mouse_timer = nil;
@@ -635,13 +634,21 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
 - (IBAction)togglePlaylist:(id)sender
 {
-    if (![self isVisible])
+    if (![self isVisible] && sender != nil)
     {
         [self makeKeyAndOrderFront: sender];
+        return;
     }
 
     BOOL b_activeVideo = [[VLCMain sharedInstance] activeVideoPlayback];
     BOOL b_restored = NO;
+
+    if (b_dropzone_active && !b_activeVideo && ([[NSApp currentEvent] modifierFlags] & NSAlternateKeyMask) != 0)
+    {
+        b_dropzone_active = NO;
+        [self hideDropZone];
+        return;
+    }
 
     if ( !b_splitview_removed && ( (([[NSApp currentEvent] modifierFlags] & NSAlternateKeyMask) != 0 && b_activeVideo)
                                   || (b_nonembedded && sender != nil)
@@ -664,12 +671,6 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
             if (b_activeVideo)
                 b_restored = YES;
-        }
-
-        if (b_dropzone_active && !b_activeVideo)
-        {
-            b_dropzone_active = NO;
-            [self hideDropZone];
         }
 
         if (!b_nonembedded)
@@ -889,14 +890,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 - (void)performMiniaturize:(id)sender
 {
     if (b_dark_interface)
-    {
         [self miniaturize: sender];
-        if (config_GetInt( VLCIntf, "macosx-pause-minimized" ))
-        {
-            if ([[VLCMain sharedInstance] activeVideoPlayback])
-                [[VLCCoreInteraction sharedInstance] pause];
-        }
-    }
     else
         [super performMiniaturize: sender];
 }
@@ -980,7 +974,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
  *              Felipe A. Rodriguez <far@ix.netcom.com>, Richard Frith-Macdonald <richard@brainstorm.co.uk>
  *    Copyright (C) 1996 Free Software Foundation, Inc.
  */
-- (void) customZoom: (id)sender
+- (void)customZoom:(id)sender
 {
     NSRect maxRect = [[self screen] visibleFrame];
     NSRect currentFrame = [self frame];
@@ -1042,7 +1036,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 {
     if (config_GetInt( VLCIntf, "macosx-pause-minimized" ))
     {
-        if([notification object] == o_detached_video_window || [notification object] == self)
+        if([notification object] == o_detached_video_window || ([notification object] == self && !b_nonembedded))
         {
             if([[VLCMain sharedInstance] activeVideoPlayback])
                 [[VLCCoreInteraction sharedInstance] pause];
@@ -1381,7 +1375,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 - (id)setupVideoView
 {
     vout_thread_t *p_vout = getVout();
-    if (config_GetInt( VLCIntf, "embedded-video" ))
+    if (config_GetInt( VLCIntf, "embedded-video" ) || (OSX_LION && b_nativeFullscreenMode))
     {
         if ([o_video_view window] != self)
         {
@@ -2275,14 +2269,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 - (void)performMiniaturize:(id)sender
 {
     if (b_dark_interface)
-    {
         [self miniaturize: sender];
-        if (config_GetInt( VLCIntf, "macosx-pause-minimized" ))
-        {
-            if ([[VLCMain sharedInstance] activeVideoPlayback])
-                [[VLCCoreInteraction sharedInstance] pause];
-        }
-    }
     else
         [super performMiniaturize: sender];
 }

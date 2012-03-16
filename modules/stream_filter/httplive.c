@@ -35,6 +35,7 @@
 #include <vlc_plugin.h>
 
 #include <assert.h>
+#include <errno.h>
 #include <gcrypt.h>
 
 #include <vlc_threads.h>
@@ -574,10 +575,12 @@ static int parse_SegmentInformation(hls_stream_t *hls, char *p_read, int *durati
         return VLC_EGENERIC;
 
     int value;
+    char *endptr;
     if (hls->version < 3)
     {
-       value = strtol(token, NULL, 10);
-       if (errno == ERANGE)
+       errno = 0;
+       value = strtol(token, &endptr, 10);
+       if (token == endptr || errno == ERANGE )
        {
            *duration = -1;
            return VLC_EGENERIC;
@@ -586,8 +589,9 @@ static int parse_SegmentInformation(hls_stream_t *hls, char *p_read, int *durati
     }
     else
     {
-        double d = strtod(token, (char **) NULL);
-        if (errno == ERANGE)
+        errno = 0;
+        double d = strtof(token, &endptr);
+        if (token == endptr || errno == ERANGE )
         {
             *duration = -1;
             return VLC_EGENERIC;
@@ -596,6 +600,7 @@ static int parse_SegmentInformation(hls_stream_t *hls, char *p_read, int *durati
             value = ((int)d) + 1;
         else
             value = ((int)d);
+        *duration = value;
     }
 
     /* Ignore the rest of the line */
@@ -1808,21 +1813,27 @@ static char *ReadLine(uint8_t *buffer, uint8_t **pos, const size_t len)
 
     while (p < end)
     {
-        if ((*p == '\n') || (*p == '\0'))
+        if ((*p == '\r') || (*p == '\n') || (*p == '\0'))
             break;
         p++;
     }
 
-    /* copy line excluding \n or \0 */
+    /* copy line excluding \r \n or \0 */
     line = strndup((char *)begin, p - begin);
 
-    if (*p == '\0')
-        *pos = end;
-    else
+    while ((*p == '\r') || (*p == '\n') || (*p == '\0'))
     {
-        /* next pass start after \n */
-        p++;
-        *pos = p;
+        if (*p == '\0')
+        {
+            *pos = end;
+            break;
+        }
+        else
+        {
+            /* next pass start after \r and \n */
+            p++;
+            *pos = p;
+        }   
     }
 
     return line;

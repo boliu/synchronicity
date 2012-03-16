@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright © 2011 VideoLAN
+ * Copyright © 2011-2012 VideoLAN
  * $Id$
  *
  * Authors: Ludovic Fauvet <etix@l0cal.com>
@@ -55,6 +55,8 @@ TimeTooltip::TimeTooltip( QWidget *parent ) :
 
     // Set default text
     setText( "00:00:00", "" );
+
+    mInitialized = false;
 }
 
 void TimeTooltip::buildPath()
@@ -108,6 +110,7 @@ void TimeTooltip::buildPath()
 
 void TimeTooltip::setText( const QString& time, const QString& text )
 {
+    mInitialized = true;
     mDisplayedText = time;
     if ( !text.isEmpty() )
         mDisplayedText.append( " - " ).append( text );
@@ -118,6 +121,11 @@ void TimeTooltip::setText( const QString& time, const QString& text )
     mTime = time;
     mText = text;
     update();
+}
+
+void TimeTooltip::show()
+{
+    QWidget::setVisible( mInitialized );
 }
 
 void TimeTooltip::paintEvent( QPaintEvent * )

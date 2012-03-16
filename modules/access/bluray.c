@@ -98,8 +98,6 @@ struct  demux_sys_t
     unsigned int        i_title;
     unsigned int        i_longest_title;
     input_title_t       **pp_title;
-    unsigned int        i_first_play;
-    unsigned int        i_top_menu;
 
     /* Meta informations */
     const META_DL       *p_meta;
@@ -248,7 +246,7 @@ static int blurayOpen( vlc_object_t *object )
     /* Get titles and chapters */
     p_sys->p_meta = bd_get_meta(p_sys->bluray);
     if (!p_sys->p_meta)
-        goto error;
+        msg_Warn(p_demux, "Failed to get meta info." );
 
     if (blurayInitTitles(p_demux) != VLC_SUCCESS) {
         goto error;
@@ -262,12 +260,16 @@ static int blurayOpen( vlc_object_t *object )
     p_sys->b_menu = var_InheritBool(p_demux, "bluray-menu");
     if (p_sys->b_menu) {
         p_sys->p_input = demux_GetParentInput(p_demux);
-        if (unlikely(!p_sys->p_input))
+        if (unlikely(!p_sys->p_input)) {
+            error_msg = "Could not get parent input";
             goto error;
+        }
 
         /* libbluray will start playback from "First-Title" title */
-        bd_play(p_sys->bluray);
-
+        if (bd_play(p_sys->bluray) == 0) {
+            error_msg = "Failed to start bluray playback. Please try without menu support.";
+            goto error;
+        }
         /* Registering overlay event handler */
         bd_register_overlay_proc(p_sys->bluray, p_demux, blurayOverlayProc);
     } else {
@@ -730,23 +732,6 @@ static int blurayInitTitles(demux_t *p_demux )
         TAB_APPEND( p_sys->i_title, p_sys->pp_title, t );
         bd_free_title_info(title_info);
     }
-
-    /* Create titles for BLURAY_TITLE_FIRST_PLAY & BLURAY_TITLE_TOP_MENU */
-    input_title_t *p_first_play = vlc_input_title_New();
-    if (unlikely(!p_first_play))
-        return VLC_SUCCESS;
-
-    p_first_play->psz_name = strdup("First play");
-    p_sys->i_first_play = p_sys->i_title;
-    TAB_APPEND(p_sys->i_title, p_sys->pp_title, p_first_play);
-
-    input_title_t *p_top_menu = vlc_input_title_New();
-    if (unlikely(!p_top_menu))
-        return VLC_SUCCESS;
-
-    p_top_menu->psz_name = strdup("Top menu");
-    p_sys->i_top_menu = p_sys->i_title;
-    TAB_APPEND(p_sys->i_title, p_sys->pp_title, p_top_menu);
     return VLC_SUCCESS;
 }
 
@@ -771,14 +756,8 @@ static void blurayResetParser( demux_t *p_demux )
 static void blurayUpdateTitle(demux_t *p_demux, unsigned i_title)
 {
     blurayResetParser(p_demux);
-    if (i_title >= p_demux->p_sys->i_title) {
-        if (i_title == BLURAY_TITLE_FIRST_PLAY)
-            i_title = p_demux->p_sys->i_first_play;
-        else if (i_title == BLURAY_TITLE_TOP_MENU)
-            i_title = p_demux->p_sys->i_top_menu;
-        else
-            return;
-    }
+    if (i_title >= p_demux->p_sys->i_title)
+        return;
 
     /* read title info and init some values */
     p_demux->info.i_title = i_title;
@@ -877,7 +856,7 @@ static int blurayControl(demux_t *p_demux, int query, va_list args)
         case DEMUX_GET_LENGTH:
         {
             int64_t *pi_length = (int64_t*)va_arg(args, int64_t *);
-            *pi_length = CUR_LENGTH;
+            *pi_length = p_demux->info.i_title < p_sys->i_title ? CUR_LENGTH : 0;
             return VLC_SUCCESS;
         }
         case DEMUX_SET_TIME:
@@ -896,7 +875,8 @@ static int blurayControl(demux_t *p_demux, int query, va_list args)
         case DEMUX_GET_POSITION:
         {
             double *pf_position = (double*)va_arg( args, double * );
-            *pf_position = (double)FROM_TICKS(bd_tell_time(p_sys->bluray))/CUR_LENGTH;
+            *pf_position = p_demux->info.i_title < p_sys->i_title ?
+                        (double)FROM_TICKS(bd_tell_time(p_sys->bluray))/CUR_LENGTH : 0.0;
             return VLC_SUCCESS;
         }
         case DEMUX_SET_POSITION:
@@ -910,6 +890,8 @@ static int blurayControl(demux_t *p_demux, int query, va_list args)
         {
             vlc_meta_t *p_meta = (vlc_meta_t *) va_arg (args, vlc_meta_t*);
             const META_DL *meta = p_sys->p_meta;
+            if (meta == NULL)
+                return VLC_EGENERIC;
 
             if (!EMPTY_STR(meta->di_name)) vlc_meta_SetTitle(p_meta, meta->di_name);
 
@@ -953,7 +935,7 @@ static void blurayHandleEvent( demux_t *p_demux, const BD_EVENT *e )
             break;
         case BD_EVENT_CHAPTER:
             p_demux->info.i_update |= INPUT_UPDATE_SEEKPOINT;
-            p_demux->info.i_seekpoint = 0;
+            p_demux->info.i_seekpoint = e->param;
             break;
         case BD_EVENT_ANGLE:
         case BD_EVENT_IG_STREAM:
@@ -998,6 +980,11 @@ static int blurayDemux(demux_t *p_demux)
         BD_EVENT e;
         nread = bd_read_ext(p_sys->bluray, p_block->p_buffer,
                             NB_TS_PACKETS * BD_TS_PACKET_SIZE, &e);
+        if (nread < 0)
+        {
+            block_Release(p_block);
+            return -1;
+        }
         if (nread == 0) {
             if (e.event == BD_EVENT_NONE)
                 msg_Info(p_demux, "We reached the end of a title");

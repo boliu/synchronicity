@@ -567,7 +567,7 @@ static void *Run( void *data )
 
         mtime_t now = mdate();
 
-        /* A 1 hour timeout correspong to the RFC Implicit timeout.
+        /* A 1 hour timeout correspond to the RFC Implicit timeout.
          * This timeout is tuned in the following loop. */
         timeout = 1000 * 60 * 60;
 
@@ -578,7 +578,7 @@ static void *Run( void *data )
             sap_announce_t * p_announce = p_sd->p_sys->pp_announces[i];
             mtime_t i_last_period = now - p_announce->i_last;
 
-            /* Remove the annoucement, if the last announcement was 1 hour ago
+            /* Remove the announcement, if the last announcement was 1 hour ago
              * or if the last packet emitted was 3 times the average time
              * between two packets */
             if( ( p_announce->i_period_trust > 5 && i_last_period > 3 * p_announce->i_period ) ||
@@ -795,7 +795,7 @@ static int ParseSAP( services_discovery_t *p_sd, const uint8_t *buf,
         {
             /* We don't support delete announcement as they can easily
              * Be used to highjack an announcement by a third party.
-             * Intead we cleverly implement Implicit Announcement removal.
+             * Instead we cleverly implement Implicit Announcement removal.
              *
              * if( b_need_delete )
              *    RemoveAnnounce( p_sd, p_sd->p_sys->pp_announces[i]);
@@ -811,7 +811,7 @@ static int ParseSAP( services_discovery_t *p_sd, const uint8_t *buf,
 
                 /* Compute the average period */
                 mtime_t now = mdate();
-                p_announce->i_period = (p_announce->i_period + (now - p_announce->i_last)) / 2;
+                p_announce->i_period = ( p_announce->i_period * (p_announce->i_period_trust-1) + (now - p_announce->i_last) ) / p_announce->i_period_trust;
                 p_announce->i_last = now;
             }
             FreeSDP( p_sdp ); p_sdp = NULL;
@@ -877,13 +877,27 @@ sap_announce_t *CreateAnnounce( services_discovery_t *p_sd, uint32_t *i_source, 
                            p_sdp->username );
     }
 
-    /* Handle group */
-    if (p_sap->p_sdp->mediac >= 1)
-        psz_value = FindAttribute (p_sap->p_sdp, 0, "x-plgroup");
+    /* Handle category */
+    psz_value = GetAttribute(p_sap->p_sdp->pp_attributes,
+                             p_sap->p_sdp->i_attributes, "cat");
+    if (psz_value != NULL)
+    {
+        /* a=cat provides a dot-separated hierarchy.
+         * For the time being only replace dots with pipe. TODO: FIXME */
+        char *str = strdup(psz_value);
+        if (likely(str != NULL))
+            for (char *p = strchr(str, '.'); p != NULL; p = strchr(p, '.'))
+                *(p++) = '|';
+        services_discovery_AddItem(p_sd, p_input, str ? str : psz_value);
+        free(str);
+    }
     else
-        psz_value = GetAttribute( p_sap->p_sdp->pp_attributes, p_sap->p_sdp->i_attributes, "x-plgroup" );
-
-    services_discovery_AddItem( p_sd, p_input, psz_value /* category name */ );
+    {
+        /* backward compatibility with VLC 0.7.3-2.0.0 senders */
+        psz_value = GetAttribute(p_sap->p_sdp->pp_attributes,
+                                 p_sap->p_sdp->i_attributes, "x-plgroup");
+        services_discovery_AddItem(p_sd, p_input, psz_value);
+    }
 
     TAB_APPEND( p_sys->i_announces, p_sys->pp_announces, p_sap );
 

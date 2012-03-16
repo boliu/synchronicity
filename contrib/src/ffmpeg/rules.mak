@@ -1,7 +1,7 @@
 # FFmpeg
 
-FFMPEG_SNAPURL := http://git.videolan.org/?p=ffmpeg.git;a=snapshot;h=570f6aaab12e2bc;sf=tgz
-#FFMPEG_SNAPURL := http://git.libav.org/?p=libav.git;a=snapshot;h=570f6aaab12e2bc;sf=tgz
+FFMPEG_SNAPURL := http://git.videolan.org/?p=ffmpeg.git;a=snapshot;h=88c76c7d2291c;sf=tgz
+#FFMPEG_SNAPURL := http://git.libav.org/?p=libav.git;a=snapshot;h=499ad54d982;sf=tgz
 
 FFMPEGCONF = \
 	--cc="$(CC)" \
@@ -77,7 +77,9 @@ endif
 
 # Windows
 ifdef HAVE_WIN32
+ifndef HAVE_MINGW_W64
 DEPS_ffmpeg += directx
+endif
 FFMPEGCONF += --target-os=mingw32 --enable-memalign-hack
 FFMPEGCONF += --enable-w32threads \
 	--disable-bzlib --disable-bsfs \

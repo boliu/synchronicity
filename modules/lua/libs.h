@@ -31,6 +31,7 @@ void luaopen_httpd( lua_State * );
 void luaopen_input( lua_State * );
 void luaopen_msg( lua_State * );
 void luaopen_misc( lua_State * );
+void luaopen_misc_extensions( lua_State * );
 void luaopen_net( lua_State * );
 void luaopen_object( lua_State * );
 void luaopen_osd( lua_State * );

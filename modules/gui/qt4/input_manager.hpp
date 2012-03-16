@@ -271,6 +271,8 @@ public:
 
     bool getPlayExitState();
     bool hasEmptyPlaylist();
+
+    void requestVoutUpdate() { return im->UpdateVout(); }
 private:
     MainInputManager( intf_thread_t * );
     virtual ~MainInputManager();
