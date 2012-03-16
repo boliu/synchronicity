@@ -30,7 +30,7 @@
 #define TIP_HEIGHT 5
 
 TimeTooltip::TimeTooltip( QWidget *parent ) :
-    QWidget( parent ), mInitialized( false )
+    QWidget( parent )
 {
     setWindowFlags( Qt::Window                  |
                     Qt::WindowStaysOnTopHint    |
@@ -55,6 +55,8 @@ TimeTooltip::TimeTooltip( QWidget *parent ) :
 
     // Set default text
     setText( "00:00:00", "" );
+
+    mInitialized = false;
 }
 
 void TimeTooltip::buildPath()
