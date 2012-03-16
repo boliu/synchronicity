@@ -142,6 +142,7 @@ static int vlclua_quit( lua_State *L )
  *****************************************************************************/
 static int vlclua_datadir( lua_State *L )
 {
+    msg_Warn( vlclua_get_this( L ), "This function is DEPRECATED, use vlc.config.datadir() instead" );
     char *psz_data = config_GetDataDir( vlclua_get_this( L ) );
     lua_pushstring( L, psz_data );
     free( psz_data );
@@ -150,6 +151,7 @@ static int vlclua_datadir( lua_State *L )
 
 static int vlclua_userdatadir( lua_State *L )
 {
+    msg_Warn( vlclua_get_this( L ), "This function is DEPRECATED, use vlc.config.userdatadir() instead" );
     char *dir = config_GetUserDir( VLC_DATA_DIR );
     lua_pushstring( L, dir );
     free( dir );
@@ -158,6 +160,7 @@ static int vlclua_userdatadir( lua_State *L )
 
 static int vlclua_homedir( lua_State *L )
 {
+    msg_Warn( vlclua_get_this( L ), "This function is DEPRECATED, use vlc.config.homedir() instead" );
     char *home = config_GetUserDir( VLC_HOME_DIR );
     lua_pushstring( L, home );
     free( home );
@@ -166,6 +169,7 @@ static int vlclua_homedir( lua_State *L )
 
 static int vlclua_configdir( lua_State *L )
 {
+    msg_Warn( vlclua_get_this( L ), "This function is DEPRECATED, use vlc.config.configdir() instead" );
     char *dir = config_GetUserDir( VLC_CONFIG_DIR );
     lua_pushstring( L, dir );
     free( dir );
@@ -174,6 +178,7 @@ static int vlclua_configdir( lua_State *L )
 
 static int vlclua_cachedir( lua_State *L )
 {
+    msg_Warn( vlclua_get_this( L ), "This function is DEPRECATED, use vlc.config.cachedir() instead" );
     char *dir = config_GetUserDir( VLC_CACHE_DIR );
     lua_pushstring( L, dir );
     free( dir );
@@ -182,6 +187,7 @@ static int vlclua_cachedir( lua_State *L )
 
 static int vlclua_datadir_list( lua_State *L )
 {
+    msg_Warn( vlclua_get_this( L ), "This function is DEPRECATED, use vlc.config.datadir_list instead" );
     const char *psz_dirname = luaL_checkstring( L, 1 );
     char **ppsz_dir_list = NULL;
     int i = 1;
