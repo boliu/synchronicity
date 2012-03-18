@@ -115,13 +115,13 @@ function host()
     end
 
     local function del_client( client )
-        if client.type == client_type.stdio then
-            client:send( "Cannot delete stdin/stdout client.\n" )
-            return
-        end
         for i, c in pairs(clients) do
             if c == client then
-                if client.type == client_type.net
+                if client.type == client_type.stdio then
+                    h:broadcast("Shutting down.\r\n")
+                    vlc.msg.info("Requested shutdown.")
+                    vlc.misc.quit()
+                elseif client.type == client_type.net
                 or client.type == client_type.telnet then
                     if client.wfd ~= client.rfd then
                         vlc.net.close( client.rfd )
