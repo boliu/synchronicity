@@ -766,6 +766,7 @@ static VLCMain *_o_sharedMainInstance = nil;
     [o_coredialogs release];
     [o_eyetv release];
     [o_mainwindow release];
+    o_mainwindow = NULL;
 
     /* unsubscribe from libvlc's debug messages */
     vlc_Unsubscribe( p_intf->p_sys->p_sub );
@@ -1705,8 +1706,11 @@ unsigned int CocoaKeyToVLC( unichar i_key )
 - (void)setActiveVideoPlayback:(BOOL)b_value
 {
     b_active_videoplayback = b_value;
-    [o_mainwindow performSelectorOnMainThread:@selector(setVideoplayEnabled) withObject: nil waitUntilDone:NO];
-    [o_mainwindow performSelectorOnMainThread:@selector(togglePlaylist:) withObject: nil waitUntilDone:NO];
+    if( o_mainwindow )
+    {
+        [o_mainwindow performSelectorOnMainThread:@selector(setVideoplayEnabled) withObject:nil waitUntilDone:NO];
+        [o_mainwindow performSelectorOnMainThread:@selector(togglePlaylist:) withObject:nil waitUntilDone:NO];
+    }
 }
 
 - (BOOL)activeVideoPlayback
