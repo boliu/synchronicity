@@ -499,6 +499,9 @@ static const struct
     /* Compressed data types */
     { V4L2_PIX_FMT_MJPEG,   VLC_CODEC_MJPG, 0, 0, 0 },
     { V4L2_PIX_FMT_JPEG,    VLC_CODEC_JPEG, 0, 0, 0 },
+#ifdef V4L2_PIX_FMT_H264
+    { V4L2_PIX_FMT_H264,    VLC_CODEC_H264, 0, 0, 0 },
+#endif
 #if 0
     { V4L2_PIX_FMT_DV,      VLC_FOURCC('?','?','?','?') },
     { V4L2_PIX_FMT_MPEG,    VLC_FOURCC('?','?','?','?') },
