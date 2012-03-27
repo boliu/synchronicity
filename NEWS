@@ -1,6 +1,40 @@
 Changes between 2.0.1 and 2.0.2:
 --------------------------------
 
+Video Output:
+ * Direct3D vo rejects old drivers on XP. Fallback should happen onto DirectX.
+ * More accurate colourspaces conversions
+ * Misc fixes in OpenGL module
+
+Access:
+ * Reworked Digital TV module for Windows. DVB-T and DVB-C work again.
+ * Fix DirectShow crashes on exit
+ * Improved PulseAudio input latency
+ * Fixes for HTTP access through a proxy
+ * v4l2 webcam outputting H264 can now be used directly (use --v4l2-chroma=h264)
+
+Demuxers:
+ * Fixes for MKV segments
+ * Fix for some mp4, voc crashes
+ * Fix for Real .ram and .ra files support
+
+Mac OS X:
+ * fullscreen fixes and video output improvements
+ * misc fixes for the interfaces
+ * fix crashes on exit
+
+Lua Scripts:
+ * Fixes for stdin/stdout and for different locale issues
+
+Qt:
+ * Fix preferences for audio devices on Windows
+ * Fix a crash
+
+Skins2:
+ * Fix mousewheel on Windows
+ * Fix for key events and focus loss
+
+Translation:
 
 
 Changes between 2.0.0 and 2.0.1:
