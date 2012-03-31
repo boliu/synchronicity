@@ -3,7 +3,7 @@ Changes between 2.0.1 and 2.0.2:
 
 Video Output:
  * Direct3D vo rejects old drivers on XP. Fallback should happen onto DirectX.
- * More accurate colourspaces conversions
+ * More accurate colourspaces conversions for YUV->RGB
  * Misc fixes in OpenGL module
 
 Access:
@@ -17,22 +17,32 @@ Demuxers:
  * Fixes for MKV segments
  * Fix for some mp4, voc crashes
  * Fix for Real .ram and .ra files support
+ * Fix for DVB channels file support
 
 Mac OS X:
- * fullscreen fixes and video output improvements
- * misc fixes for the interfaces
- * fix crashes on exit
+ * Fullscreen fixes and video output improvements
+ * Misc fixes for the interfaces
+ * Fix crashes on exit and on open dialog
+
+Audio filters:
+ * Limitation of spatializer volume output
 
 Lua Scripts:
  * Fixes for stdin/stdout and for different locale issues
 
 Qt:
  * Fix preferences for audio devices on Windows
- * Fix a crash
+ * Fix various crashes
+ * Fix multiple issues in the Open Disc dialog
+ * Fix playlist search
 
 Skins2:
  * Fix mousewheel on Windows
  * Fix for key events and focus loss
+
+Web interface:
+ * Fix display of some buttons
+ * Fix listing of some files in the Open interface
 
 Translation:
 
