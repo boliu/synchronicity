@@ -1,7 +1,7 @@
 # FFmpeg
 
-FFMPEG_SNAPURL := http://git.videolan.org/?p=ffmpeg.git;a=snapshot;h=88c76c7d2291c;sf=tgz
-#FFMPEG_SNAPURL := http://git.libav.org/?p=libav.git;a=snapshot;h=499ad54d982;sf=tgz
+FFMPEG_SNAPURL := http://git.videolan.org/?p=ffmpeg.git;a=snapshot;h=3c480f8a6c2df;sf=tgz
+#FFMPEG_SNAPURL := http://git.libav.org/?p=libav.git;a=snapshot;h=0aaa45ef696;sf=tgz
 
 FFMPEGCONF = \
 	--cc="$(CC)" \
