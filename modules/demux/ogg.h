@@ -133,4 +133,8 @@ struct demux_sys_t
 
     /* */
     vlc_meta_t *p_meta;
+
+    /* */
+    int                i_attachments;
+    input_attachment_t **attachments;
 };
