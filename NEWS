@@ -2,7 +2,8 @@ Changes between 2.0.1 and 2.0.2:
 --------------------------------
 
 Video Output:
- * Direct3D vo rejects old drivers on XP. Fallback should happen onto DirectX.
+ * XP machine will now use DirectX mode by default, like in previous versions.
+   There were too many errors with broken drivers.
  * More accurate colourspaces conversions for YUV->RGB
  * Misc fixes in OpenGL module
 
@@ -15,7 +16,7 @@ Access:
 
 Demuxers:
  * Fixes for MKV segments
- * Fix for some mp4, voc crashes
+ * Fix for some mp4, voc, midi and au crashes
  * Fix for Real .ram and .ra files support
  * Fix for DVB channels file support
 
@@ -25,7 +26,7 @@ Mac OS X:
  * Fix crash when mounting a device with multiple logical volumes while
    VLC is running
  * Chosen audio output device is retained throughout multiple sessions
- * miscellaneous minor interface improvements
+ * Miscellaneous minor interface improvements
 
 Audio filters:
  * Limitation of spatializer volume output
@@ -38,6 +39,7 @@ Qt:
  * Fix various crashes
  * Fix multiple issues in the Open Disc dialog
  * Fix playlist search
+ * Miscellaneous fixes in preferences and open dialogs
 
 Skins2:
  * Fix mousewheel on Windows
@@ -45,7 +47,7 @@ Skins2:
 
 Web interface:
  * Fix display of some buttons
- * Fix listing of some files in the Open interface
+ * Fix listing of files in the Open interface
 
 Translation:
 
