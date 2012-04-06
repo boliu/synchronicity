@@ -13,23 +13,33 @@ Access:
  * Improved PulseAudio input latency
  * Fixes for HTTP access through a proxy
  * v4l2 webcam outputting H264 can now be used directly (use --v4l2-chroma=h264)
+ * Fix subtitles auto-detection in subfolders
+ * IE http proxy is not used by VLC on Win32
+ * Accept more extensions for DVD images
 
 Demuxers:
- * Fixes for MKV segments
+ * Fixes for MKV segments and MKV title display
  * Fix for some mp4, voc, midi and au crashes
  * Fix for Real .ram and .ra files support
  * Fix for DVB channels file support
+ * Fixes for alac, vorbis, DTS and Dirac in mp4
+
+Encoders:
+ * Fix for MPEG Audio encoding, use layer2 when using fourcc "mp2 " and "mp2a"
+ * Fix for Jpeg generation, when doing snapshots
+
+Audio filters and output:
+ * Limitation of spatializer volume output
+ * Fix DirectSound device selection
 
 Mac OS X:
  * Fullscreen fixes and video output improvements
+ * Keep Aspect Ratio when resizing is back
  * Fix crash on exit
  * Fix crash when mounting a device with multiple logical volumes while
    VLC is running
  * Chosen audio output device is retained throughout multiple sessions
  * Miscellaneous minor interface improvements
-
-Audio filters:
- * Limitation of spatializer volume output
 
 Lua Scripts:
  * Fixes for stdin/stdout and for different locale issues
@@ -39,7 +49,7 @@ Qt:
  * Fix various crashes
  * Fix multiple issues in the Open Disc dialog
  * Fix playlist search
- * Miscellaneous fixes in preferences and open dialogs
+ * Miscellaneous fixes in preferences, buttons and open dialogs
 
 Skins2:
  * Fix mousewheel on Windows
