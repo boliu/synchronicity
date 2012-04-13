@@ -13,16 +13,16 @@ Access:
  * Improved PulseAudio input latency
  * Fixes for HTTP access through a proxy
  * v4l2 webcam outputting H264 can now be used directly (use --v4l2-chroma=h264)
- * Fix subtitles auto-detection in subfolders
+ * Fix subtitles auto-detection in subfolders and detection behaviour
  * IE http proxy is not used by VLC on Win32
  * Accept more extensions for DVD images
 
 Demuxers:
- * Fixes for MKV segments and MKV title display
+ * Fixes for MKV segments, seeking and MKV title display
  * Fix for some mp4, voc, midi and au crashes
  * Fix for Real .ram and .ra files support
  * Fix for DVB channels file support
- * Fixes for alac, vorbis, DTS and Dirac in mp4
+ * Fixes for alac, vorbis, DTS, VC-1 and Dirac in mp4
 
 Encoders:
  * Fix for MPEG Audio encoding, use layer2 when using fourcc "mp2 " and "mp2a"
@@ -61,7 +61,7 @@ Qt:
  * Fix various crashes
  * Fix multiple issues in the Open Disc dialog
  * Fix playlist search
- * Miscellaneous fixes in preferences, buttons and open dialogs
+ * Miscellaneous fixes in preferences, buttons, EPG, playlist and open dialogs
 
 Skins2:
  * Fix mousewheel on Windows
