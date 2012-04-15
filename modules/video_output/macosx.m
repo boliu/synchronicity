@@ -433,31 +433,10 @@ static int Control (vout_display_t *vd, int query, va_list ap)
             {
                 glViewport (place.x, place.y, place.width, place.height);
             }
-            else
-            {
-                // VOUT_DISPLAY_CHANGE_ZOOM, VOUT_DISPLAY_CHANGE_DISPLAY_FILLED, VOUT_DISPLAY_CHANGE_DISPLAY_SIZE
-                const vout_display_cfg_t *cfg;
-                const video_format_t *source;
-                bool is_forced = false;
 
-                source = &vd->source;
-                cfg = (const vout_display_cfg_t*)va_arg (ap, const vout_display_cfg_t *);
-                is_forced = (bool)va_arg (ap, int);
-
-                if (query == VOUT_DISPLAY_CHANGE_DISPLAY_SIZE
-                    && is_forced
-                    && (cfg->display.width  != vd->cfg->display.width
-                        ||cfg->display.height != vd->cfg->display.height)
-                    && vout_window_SetSize (sys->embed,
-                                            cfg->display.width,
-                                            cfg->display.height))
-                    return VLC_EGENERIC;
-
-                vout_display_place_t place;
-                vout_display_PlacePicture (&place, source, cfg, false);
-                i_width = place.width;
-                i_height = place.height;
-            }
+            // this should not be needed, but currently it improves crop somehow, when we are in fullscreen
+            if (query == VOUT_DISPLAY_CHANGE_SOURCE_CROP)
+                [sys->glView performSelectorOnMainThread:@selector(reshapeView:) withObject:nil waitUntilDone:NO];
 
             [o_pool release];
             return VLC_SUCCESS;
