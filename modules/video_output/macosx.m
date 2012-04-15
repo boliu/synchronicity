@@ -359,34 +359,43 @@ static int Control (vout_display_t *vd, int query, va_list ap)
                 return VLC_EGENERIC;
 
             NSAutoreleasePool * o_pool = [[NSAutoreleasePool alloc] init];
-            NSPoint topleftbase;
-            NSPoint topleftscreen;
-            NSRect new_frame;
-            const vout_display_cfg_t *cfg;
-            int i_width = 0;
-            int i_height = 0;
 
             id o_window = [sys->glView window];
             if (!o_window)
                 return VLC_SUCCESS; // this is okay, since the event will occur again when we have a window
-            NSRect windowFrame = [o_window frame];
-            NSRect glViewFrame = [sys->glView frame];
-            NSRect screenFrame = [[o_window screen] visibleFrame];
+
             NSSize windowMinSize = [o_window minSize];
+            int i_width = 0;
+            int i_height = 0;
 
-            topleftbase.x = 0;
-            topleftbase.y = windowFrame.size.height;
-            topleftscreen = [o_window convertBaseToScreen: topleftbase];
+            const vout_display_cfg_t *cfg;
+            const video_format_t *source;
+            bool is_forced = false;
 
-            if (query == VOUT_DISPLAY_CHANGE_SOURCE_CROP || query == VOUT_DISPLAY_CHANGE_SOURCE_ASPECT)
+            vout_display_place_t place;
+
+            if (query == VOUT_DISPLAY_CHANGE_SOURCE_ASPECT || query == VOUT_DISPLAY_CHANGE_SOURCE_CROP)
             {
                 const video_format_t *source;
 
                 source = (const video_format_t *)va_arg (ap, const video_format_t *);
                 cfg = vd->cfg;
 
-                vout_display_place_t place;
-                vout_display_PlacePicture (&place, source, cfg, false);
+            if (query == VOUT_DISPLAY_CHANGE_DISPLAY_SIZE && is_forced
+                && (cfg->display.width != vd->cfg->display.width
+                    || cfg->display.height != vd->cfg->display.height)
+                && vout_window_SetSize (sys->embed, cfg->display.width, cfg->display.height))
+                return VLC_EGENERIC;
+
+            /* for the case that the core wants to resize below minimum window size we correct the size here
+             to ensure a centered picture */
+            vout_display_cfg_t cfg_tmp = *cfg;
+            if (cfg_tmp.display.width < windowMinSize.width)
+                cfg_tmp.display.width = windowMinSize.width;
+            if (cfg_tmp.display.height < windowMinSize.height)
+                cfg_tmp.display.height = windowMinSize.height;
+
+            vout_display_PlacePicture (&place, source, &cfg_tmp, false);
 
                 vd->fmt.i_width  = vd->source.i_width  * place.width  / vd->source.i_visible_width;
                 vd->fmt.i_height = vd->source.i_height * place.height / vd->source.i_visible_height;
@@ -418,7 +427,11 @@ static int Control (vout_display_t *vd, int query, va_list ap)
                     }
                 }
 
-                glViewport (0, 0, i_width, i_height);
+            /* For resize, we call glViewport in reshape and not here.
+               This has the positive side effect that we avoid erratic sizing as we animate every resize. */
+            if (query != VOUT_DISPLAY_CHANGE_DISPLAY_SIZE)
+            {
+                glViewport (place.x, place.y, place.width, place.height);
             }
             else
             {
@@ -446,40 +459,6 @@ static int Control (vout_display_t *vd, int query, va_list ap)
                 i_height = place.height;
             }
 
-            /* Calculate the window's new size, if it is larger than our minimal size */
-            if (i_width < windowMinSize.width)
-                i_width = windowMinSize.width;
-            if (i_height < windowMinSize.height)
-                i_height = windowMinSize.height;
-
-            // is needed in the case we do not an actual resize
-            [sys->glView performSelectorOnMainThread:@selector(reshapeView:) withObject:nil waitUntilDone:NO];
-
-            if (config_GetInt (vd, "macosx-video-autoresize") && query == VOUT_DISPLAY_CHANGE_DISPLAY_SIZE &&
-                (i_height != glViewFrame.size.height || i_width != glViewFrame.size.width))
-            {
-                new_frame.size.width = windowFrame.size.width - glViewFrame.size.width + i_width;
-                new_frame.size.height = windowFrame.size.height - glViewFrame.size.height + i_height;
-
-                new_frame.origin.x = topleftscreen.x;
-                new_frame.origin.y = topleftscreen.y - new_frame.size.height;
-
-                /* make sure the window doesn't exceed the screen size the window is on */
-                if( new_frame.size.width > screenFrame.size.width )
-                {
-                    new_frame.size.width = screenFrame.size.width;
-                    new_frame.origin.x = screenFrame.origin.x;
-                }
-                if( new_frame.size.height > screenFrame.size.height )
-                {
-                    new_frame.size.height = screenFrame.size.height;
-                    new_frame.origin.y = screenFrame.origin.y;
-                }
-                if( new_frame.origin.y < screenFrame.origin.y )
-                    new_frame.origin.y = screenFrame.origin.y;
-
-                [sys->glView performSelectorOnMainThread:@selector(setWindowFrameWithValue:) withObject:[NSValue valueWithRect:new_frame] waitUntilDone:NO];
-            }
             [o_pool release];
             return VLC_SUCCESS;
         }
@@ -594,23 +573,6 @@ static void OpenglSwap(vlc_gl_t *gl)
 - (void)setFrameWithValue:(NSValue *)value
 {
     [self setFrame:[value rectValue]];
-}
-
-/**
- * Gets called by Control() to make sure that we're performing on the main thread
- */
-- (void)setWindowFrameWithValue:(NSValue *)value
-{
-    id window = [self window];
-    NSRect frame = [value rectValue];
-
-    if ([window respondsToSelector:@selector(isFullscreen)])
-    {
-        if (!(BOOL)[[self window] isFullscreen])
-            [[self window] setFrame:frame display:YES animate:YES];
-    }
-    else
-        [[self window] setFrame:frame display:YES animate:YES];
 }
 
 /**
