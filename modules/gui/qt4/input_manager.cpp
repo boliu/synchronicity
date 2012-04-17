@@ -988,11 +988,6 @@ MainInputManager::~MainInputManager()
     var_DelCallback( THEPL, "repeat", RepeatChanged, this );
     var_DelCallback( THEPL, "loop", LoopChanged, this );
 
-    /* Save some interface state in configuration, at module quit */
-    config_PutInt( p_intf, "random", var_GetBool( THEPL, "random" ) );
-    config_PutInt( p_intf, "loop", var_GetBool( THEPL, "loop" ) );
-    config_PutInt( p_intf, "repeat", var_GetBool( THEPL, "repeat" ) );
-
     if( var_InheritBool( p_intf, "qt-autosave-volume" ) )
         config_PutInt( p_intf, "volume", aout_VolumeGet( THEPL ) );
 }
@@ -1145,7 +1140,7 @@ void MainInputManager::pause()
 
 void MainInputManager::toggleRandom()
 {
-    var_ToggleBool( THEPL, "random" );
+    config_PutInt( p_intf, "random", var_ToggleBool( THEPL, "random" ) );
 }
 
 void MainInputManager::notifyRepeatLoop()
@@ -1159,15 +1154,29 @@ void MainInputManager::notifyRepeatLoop()
 void MainInputManager::loopRepeatLoopStatus()
 {
     /* Toggle Normal -> Loop -> Repeat -> Normal ... */
-    if( var_GetBool( THEPL, "repeat" ) )
-        var_SetBool( THEPL, "repeat", false );
-    else if( var_GetBool( THEPL, "loop" ) )
+    bool loop = var_GetBool( THEPL, "loop" );
+    bool repeat = var_GetBool( THEPL, "repeat" );
+
+    if( repeat )
     {
-        var_SetBool( THEPL, "loop", false );
-        var_SetBool( THEPL, "repeat", true );
+        loop = false;
+        repeat = false;
+    }
+    else if( loop )
+    {
+        loop = false;
+        repeat = true;
     }
     else
-        var_SetBool( THEPL, "loop", true );
+    {
+        loop = true;
+        //repeat = false;
+    }
+
+    var_SetBool( THEPL, "loop", loop );
+    var_SetBool( THEPL, "repeat", repeat );
+    config_PutInt( p_intf, "loop", loop );
+    config_PutInt( p_intf, "repeat", repeat );
 }
 
 void MainInputManager::activatePlayQuit( bool b_exit )
