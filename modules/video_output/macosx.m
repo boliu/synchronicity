@@ -618,11 +618,6 @@ static void OpenglSwap(vlc_gl_t *gl)
         glClear(GL_COLOR_BUFFER_BIT);
 }
 
-- (void)reshapeView:(id)sender
-{
-    [self reshape];
-}
-
 /**
  * Method called by Cocoa when the view is resized.
  */
