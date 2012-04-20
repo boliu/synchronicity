@@ -1,5 +1,5 @@
 /*****************************************************************************
- * voutgl.m: MacOS X OpenGL provider
+ * macosx.m: MacOS X OpenGL provider
  *****************************************************************************
  * Copyright (C) 2001-2012 the VideoLAN team
  * $Id$
@@ -317,28 +317,6 @@ static int Control (vout_display_t *vd, int query, va_list ap)
             if (vout_window_SetFullScreen (sys->embed, cfg->is_fullscreen))
                 return VLC_EGENERIC;
 
-            NSRect frame;
-
-            /* when entering fullscreen, set the OSD / display size to the visible screen size.
-             * this way, the text rendering will be as sharp as possible.
-             * when returning from fullscreen, pick the dimensions from cfg, which can be different
-             * from the native video size because of crop and zoom */
-            if (cfg->is_fullscreen)
-                frame = [[[sys->glView window] screen] visibleFrame];
-            else
-                frame = NSMakeRect( 0., 0., cfg->display.width, cfg->display.height );
-
-            vout_display_SendEventDisplaySize( vd, frame.size.width, frame.size.height, cfg->is_fullscreen );
-
-            const video_format_t * source;
-            source = &vd->source;
-            vout_display_cfg_t place_cfg = *cfg;
-            place_cfg.display.width  = frame.size.width;
-            place_cfg.display.height = frame.size.height;
-
-            vout_display_place_t place;
-            vout_display_PlacePicture(&place, source, &place_cfg, false);
-
             return VLC_SUCCESS;
         }
         case VOUT_DISPLAY_CHANGE_WINDOW_STATE:
@@ -376,17 +354,23 @@ static int Control (vout_display_t *vd, int query, va_list ap)
 
             if (query == VOUT_DISPLAY_CHANGE_SOURCE_ASPECT || query == VOUT_DISPLAY_CHANGE_SOURCE_CROP)
             {
-                const video_format_t *source;
-
                 source = (const video_format_t *)va_arg (ap, const video_format_t *);
                 cfg = vd->cfg;
+            }
+            else
+            {
+                source = &vd->source;
+                cfg = (const vout_display_cfg_t*)va_arg (ap, const vout_display_cfg_t *);
+                if (query == VOUT_DISPLAY_CHANGE_DISPLAY_SIZE)
+                    is_forced = (bool)va_arg (ap, int);
+            }
 
             if (query == VOUT_DISPLAY_CHANGE_DISPLAY_SIZE && is_forced
                 && (cfg->display.width != vd->cfg->display.width
                     || cfg->display.height != vd->cfg->display.height)
                 && vout_window_SetSize (sys->embed, cfg->display.width, cfg->display.height))
                 return VLC_EGENERIC;
-
+ 
             /* for the case that the core wants to resize below minimum window size we correct the size here
              to ensure a centered picture */
             vout_display_cfg_t cfg_tmp = *cfg;
@@ -408,7 +392,8 @@ static int Control (vout_display_t *vd, int query, va_list ap)
                This has the positive side effect that we avoid erratic sizing as we animate every resize. */
             if (query != VOUT_DISPLAY_CHANGE_DISPLAY_SIZE)
             {
-                glViewport (place.x, place.y, place.width, place.height);
+                // x / y are top left corner, but we need the lower left one
+                glViewport (place.x, cfg_tmp.display.height - (place.y + place.height), place.width, place.height);
             }
 
             [o_pool release];
@@ -470,6 +455,7 @@ static void OpenglSwap(vlc_gl_t *gl)
 @implementation VLCOpenGLVideoView
 
 #define VLCAssertMainThread() assert([[NSThread currentThread] isMainThread])
+
 
 + (void)getNewView:(NSValue *)value
 {
@@ -626,44 +612,22 @@ static void OpenglSwap(vlc_gl_t *gl)
     VLCAssertMainThread();
 
     NSRect bounds = [self bounds];
-
-    CGFloat height, width;
-    if( !vd || ( vd && vd->cfg->is_display_filled ))
-    {
-        height = bounds.size.height;
-        width = bounds.size.width;
-    }
-    else
-    {
-        height = vd->source.i_visible_height;
-        width = vd->source.i_visible_width;
-    }
-
-    GLint x = width, y = height;
+    vout_display_place_t place;
 
     @synchronized(self) {
         if (vd) {
-            CGFloat videoHeight = vd->source.i_visible_height;
-            CGFloat videoWidth = vd->source.i_visible_width;
+            vout_display_cfg_t cfg_tmp = *(vd->cfg);
+            cfg_tmp.display.width  = bounds.size.width;
+            cfg_tmp.display.height = bounds.size.height;
 
-            GLint sarNum = vd->source.i_sar_num;
-            GLint sarDen = vd->source.i_sar_den;
-
-            if (height * videoWidth * sarNum < width * videoHeight * sarDen)
-            {
-                x = (height * videoWidth * sarNum) / (videoHeight * sarDen);
-                y = height;
-            }
-            else
-            {
-                x = width;
-                y = (width * videoHeight * sarDen) / (videoWidth * sarNum);
-            }
+            vout_display_PlacePicture (&place, &vd->source, &cfg_tmp, false);
+            vout_display_SendEventDisplaySize (vd, bounds.size.width, bounds.size.height, vd->cfg->is_fullscreen);
         }
     }
 
     if ([self lockgl]) {
-        glViewport((bounds.size.width - x) / 2, (bounds.size.height - y) / 2, x, y);
+        // x / y are top left corner, but we need the lower left one
+        glViewport (place.x, bounds.size.height - (place.y + place.height), place.width, place.height);
 
         @synchronized(self) {
             // This may be cleared before -drawRect is being called,
