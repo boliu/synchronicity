@@ -1832,7 +1832,8 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
 - (void)hasBecomeFullscreen
 {
-    [o_fullscreen_window makeFirstResponder: [[o_video_view subviews] objectAtIndex:0]];
+    if( [[o_video_view subviews] count] > 0 )
+        [o_fullscreen_window makeFirstResponder: [[o_video_view subviews] objectAtIndex:0]];
 
     [o_fullscreen_window makeKeyWindow];
     [o_fullscreen_window setAcceptsMouseMovedEvents: YES];
@@ -1993,7 +1994,8 @@ static VLCMainWindow *_o_sharedInstance = nil;
     [[o_temp_view superview] replaceSubview:o_temp_view with:o_video_view];
     [o_video_view release];
     [o_video_view setFrame:[o_temp_view frame]];
-    [[o_video_view window] makeFirstResponder: [[o_video_view subviews] objectAtIndex:0]];
+    if( [[o_video_view subviews] count] > 0 )
+        [[o_video_view window] makeFirstResponder: [[o_video_view subviews] objectAtIndex:0]];
     if( [[o_video_view window] isVisible] )
     {
         if( !b_nonembedded )
