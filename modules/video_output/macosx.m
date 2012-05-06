@@ -96,7 +96,6 @@ vlc_module_end ()
     BOOL _hasPendingReshape;
 }
 - (void)setVoutDisplay:(vout_display_t *)vd;
-- (vout_display_t *)voutDisplay;
 - (void)setVoutFlushing:(BOOL)flushing;
 @end
 
@@ -523,11 +522,6 @@ static void OpenglSwap (vlc_gl_t *gl)
     @synchronized(self) {
         vd = aVd;
     }
-}
-
-- (vout_display_t *)voutDisplay
-{
-    return vd;
 }
 
 /**
