@@ -28,7 +28,7 @@ Demuxers:
 
 Encoders:
  * Fix for MPEG Audio encoding, use layer2 when using fourcc "mp2 " and "mp2a"
- * Fix for Jpeg generation, when doing snapshots
+ * Fix for JPEG generation, when doing snapshots
 
 Audio filters and output:
  * Limitation of spatializer volume output
@@ -57,6 +57,7 @@ Mac OS X:
  * Since running the Mac OS X interface as an Extra Interface or Control
    Interface can lead to undefined results, eventual settings will be
    automatically reset on the first launch.
+   - This fixes issues with unresponsive playback controls and crashes on quit.
  * Miscellaneous minor interface improvements
 
 Lua Scripts:
