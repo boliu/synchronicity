@@ -20,6 +20,10 @@ Access:
  * Accept more extensions for DVD images
  * Fixes for RAR compressed files
 
+Codec:
+ * fix crashes in AAC decoder on channels changes, notably in ISDB streams
+ * fix compilation with multiple FFmpeg and libav versions
+
 Demuxers:
  * Fixes for MKV segments, seeking and MKV title display
  * Fix for some mp4, voc, midi and au crashes
@@ -35,6 +39,9 @@ Audio filters and output:
  * Limitation of spatializer volume output
  * Fix DirectSound device selection
  * Correct PulseAudio volume control
+ * Fix Directsound volume initialization
+ * Do not apply volume in file output
+ * Fix sampling rate in JACK output
 
 Mac OS X:
  * Enable drag and drop of playlist items between the temporary playlist and
