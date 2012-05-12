@@ -528,6 +528,11 @@ inline void MainInterface::showTab( QWidget *widget )
 #ifdef DEBUG_INTF
     msg_Warn( p_intf, "Old stackCentralOldWidget %i", stackCentralW->indexOf( stackCentralOldWidget ) );
 #endif
+    /* fixing when the playlist has been undocked after been hidden.
+       restoreStackOldWidget() is called when video stops but
+       stackCentralOldWidget would still be pointing to playlist */
+    if ( widget == playlistWidget && !isPlDocked() )
+        widget = bgWidget;
 
     stackCentralOldWidget = stackCentralW->currentWidget();
     stackWidgetsSizes[stackCentralOldWidget] = stackCentralW->size();
