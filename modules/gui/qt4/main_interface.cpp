@@ -350,6 +350,8 @@ void MainInterface::recreateToolbars()
                  this, handleKeyPress( QKeyEvent * ) );
         THEMIM->requestVoutUpdate();
     }
+
+    setMinimalView( b_minimalView );
 }
 
 void MainInterface::reloadPrefs()
