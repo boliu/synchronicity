@@ -511,6 +511,8 @@ static void *data_convert(block_t **pp)
     return block->p_buffer;
 }
 
+static void Pause(audio_output_t *, bool, mtime_t);
+
 /**
  * Queue one audio frame to the playabck stream
  */
@@ -532,6 +534,13 @@ static void Play(audio_output_t *aout, block_t *block)
      * (including from PulseAudio stream callbacks). Otherwise lock inversion
      * will take place, and sooner or later a deadlock. */
     pa_threaded_mainloop_lock(sys->mainloop);
+
+    /* Work around decoder core bug (play without/before resume) */
+    while (unlikely(sys->paused != VLC_TS_INVALID)) {
+        pa_threaded_mainloop_unlock(sys->mainloop);
+        Pause(aout, false, mdate());
+        pa_threaded_mainloop_lock(sys->mainloop);
+    }
 
     sys->pts = pts;
     if (pa_stream_is_corked(s) > 0)
@@ -566,6 +575,9 @@ static void Pause(audio_output_t *aout, bool paused, mtime_t date)
     if (paused) {
         sys->paused = date;
         stream_stop(s, aout);
+    } else if (unlikely(sys->paused == VLC_TS_INVALID)) {
+        /* Work around decoder core bug (play before resume) */
+        msg_Warn(aout, "pause state confusion");
     } else {
         assert (sys->paused != VLC_TS_INVALID);
         date -= sys->paused;
