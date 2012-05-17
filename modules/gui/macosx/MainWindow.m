@@ -128,11 +128,9 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
     /* setup the styled interface */
     b_video_deco = config_GetInt( VLCIntf, "video-deco" );
-    if (b_video_deco)
-        b_nonembedded = YES;
     b_nativeFullscreenMode = NO;
 #ifdef MAC_OS_X_VERSION_10_7
-    if( OSX_LION )
+    if( OSX_LION && b_video_deco )
         b_nativeFullscreenMode = config_GetInt( VLCIntf, "macosx-nativefullscreenmode" );
 #endif
     i_lastShownVolume = -1;
@@ -2515,6 +2513,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
                   backing:(NSBackingStoreType)backingType defer:(BOOL)flag
 {
     b_dark_interface = config_GetInt( VLCIntf, "macosx-interfacestyle" );
+    b_video_deco = config_GetInt( VLCIntf, "video-deco" );
 
     if (b_dark_interface || !b_video_deco)
     {
@@ -2528,12 +2527,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 #endif
     }
 
-    b_video_deco = config_GetInt( VLCIntf, "video-deco" );
-    if (b_video_deco)
-        self = [super initWithContentRect:contentRect styleMask:styleMask
-                              backing:backingType defer:flag];
-    else
-        self = [super initWithContentRect:contentRect styleMask:styleMask
+    self = [super initWithContentRect:contentRect styleMask:styleMask
                                   backing:backingType defer:flag];
 
     /* we want to be moveable regardless of our style */
