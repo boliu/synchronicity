@@ -954,16 +954,16 @@ static VLCMain *_o_sharedMainInstance = nil;
         {
             case kRemoteButtonRight_Hold:
                 [[VLCCoreInteraction sharedInstance] forward];
-            break;
+                break;
             case kRemoteButtonLeft_Hold:
                 [[VLCCoreInteraction sharedInstance] backward];
-            break;
+                break;
             case kRemoteButtonVolume_Plus_Hold:
                 [[VLCCoreInteraction sharedInstance] volumeUp];
-            break;
+                break;
             case kRemoteButtonVolume_Minus_Hold:
                 [[VLCCoreInteraction sharedInstance] volumeDown];
-            break;
+                break;
         }
         if(b_remote_button_hold)
         {
@@ -1023,6 +1023,13 @@ static VLCMain *_o_sharedMainInstance = nil;
         case kRemoteButtonMenu:
             [o_controls showPosition: self]; //FIXME
             break;
+        case kRemoteButtonPlay_Sleep:
+        {
+            NSAppleScript * script = [[NSAppleScript alloc] initWithSource:@"tell application \"System Events\" to sleep"];
+            [script executeAndReturnError:nil];
+            [script release];
+            break;
+        }
         default:
             /* Add here whatever you want other buttons to do */
             break;
