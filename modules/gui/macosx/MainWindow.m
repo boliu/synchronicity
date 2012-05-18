@@ -747,7 +747,6 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
     if (b_dropzone_active && ([[NSApp currentEvent] modifierFlags] & NSAlternateKeyMask) != 0)
     {
-        b_dropzone_active = NO;
         [self hideDropZone];
         return;
     }
