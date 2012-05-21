@@ -188,6 +188,7 @@ static NSMutableArray *blackoutWindows = NULL;
     }
     return self;
 }
+
 - (void)setCanBecomeKeyWindow: (BOOL)canBecomeKey
 {
     b_isset_canBecomeKeyWindow = YES;
@@ -200,6 +201,20 @@ static NSMutableArray *blackoutWindows = NULL;
         return b_canBecomeKeyWindow;
 
     return [super canBecomeKeyWindow];
+}
+
+- (void)setCanBecomeMainWindow: (BOOL)canBecomeMain
+{
+    b_isset_canBecomeMainWindow = YES;
+    b_canBecomeMainWindow = canBecomeMain;
+}
+
+- (BOOL)canBecomeMainWindow
+{
+    if(b_isset_canBecomeMainWindow)
+        return b_canBecomeMainWindow;
+
+    return [super canBecomeMainWindow];
 }
 
 - (void)closeAndAnimate: (BOOL)animate

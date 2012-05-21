@@ -60,6 +60,8 @@
 {
     BOOL b_canBecomeKeyWindow;
     BOOL b_isset_canBecomeKeyWindow;
+    BOOL b_canBecomeMainWindow;
+    BOOL b_isset_canBecomeMainWindow;
     BOOL b_isFullscreen;
     NSViewAnimation *animation;
 }
