@@ -55,6 +55,9 @@ Mac OS X:
    manufacturing keyboards under the brand "Cherry".
  * Added support for the Apple Remote to set the Mac to sleep using a longer
    press on the Play/Pause button
+ * Replaced libfontconfig's font cache by an Apple Type Services lookup.
+   This way, the "Updating Cache" dialog is gone, while VLC is still able to
+   find all fonts.
  * re-added an option to hide the window decoration during video playback
  * Improved compatibility with other 3rd party apps using SPMediaKeyTap
  * Fullscreen fixes
