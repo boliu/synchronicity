@@ -443,7 +443,7 @@ static int Open (vlc_object_t *obj)
         msg_Err (aout, "cannot set buffer duration: %s", snd_strerror (val));
         goto error;
     }
-#if 1
+#if 0
     val = snd_pcm_hw_params_get_buffer_time (hw, &param, NULL);
     if (val)
     {
@@ -452,7 +452,7 @@ static int Open (vlc_object_t *obj)
     }
     else
         param /= 2;
-#else /* work-around for PulseAudio: */
+#else /* work-around for period-long latency outputs (e.g. PulseAudio): */
     param = AOUT_MIN_PREPARE_TIME;
 #endif
     val = snd_pcm_hw_params_set_period_time_near (pcm, hw, &param, NULL);
