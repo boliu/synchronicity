@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: vlc\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-03-16 18:33+0000\n"
-"PO-Revision-Date: 2012-03-02 23:11+0100\n"
+"PO-Revision-Date: 2012-05-25 20:09+0100\n"
 "Last-Translator: pico.dev <pico.dev@gmail.com>\n"
 "Language-Team: \n"
 "Language: es\n"
@@ -29,7 +29,7 @@ msgid ""
 "see the file named COPYING for details.\n"
 "Written by the VideoLAN team; see the AUTHORS file.\n"
 msgstr ""
-"Este programa viene SIN GARANTIA, solo a la extendida por ley.\n"
+"Este programa viene SIN GARANTÍA, solo a la extendida por ley.\n"
 "Puede redistribuirlo bajo los términos de la Licencia Pública General GNU;\n"
 "lea el archivo llamado COPYING para ver los detalles.\n"
 "Escrito por el equipo VideoLAN; lea el archivo AUTHORS.\n"
@@ -97,7 +97,7 @@ msgstr "Preferencias de audio"
 
 #: include/vlc_config_cat.h:55
 msgid "General audio settings"
-msgstr "Preferencias de audio generales"
+msgstr "Preferencias generales de audio"
 
 #: include/vlc_config_cat.h:57 include/vlc_config_cat.h:79
 msgid "Filters"
@@ -154,11 +154,11 @@ msgstr "Preferencias de vídeo"
 
 #: include/vlc_config_cat.h:73
 msgid "General video settings"
-msgstr "Preferencias de vídeo generales"
+msgstr "Preferencias generales de vídeo"
 
 #: include/vlc_config_cat.h:77
 msgid "Choose your preferred video output and configure it here."
-msgstr "Seleccione la salida de vídeo y configúrela aquí."
+msgstr "Seleccione la salida de vídeo preferida y configúrela aquí."
 
 #: include/vlc_config_cat.h:81
 msgid "Video filters are used to process the video stream."
@@ -182,7 +182,7 @@ msgstr "Entrada / Códecs"
 #: include/vlc_config_cat.h:94
 msgid "Settings for input, demultiplexing, decoding and encoding"
 msgstr ""
-"Preferencias para entrada, demultiplexación, decodificación y codificación."
+"Preferencias para entrada, demultiplexación, decodificación y codificación"
 
 #: include/vlc_config_cat.h:97
 msgid "Access modules"
@@ -415,8 +415,7 @@ msgstr "Características de CPU"
 msgid ""
 "You can choose to disable some CPU accelerations here. Use with extreme care!"
 msgstr ""
-"Aquí puede seleccionar deshabilitar algunas aceleraciones de CPU. Usar con "
-"mucho cuidado!"
+"Aquí puede deshabilitar algunas aceleraciones de CPU. Usar con mucho cuidado!"
 
 #: include/vlc_config_cat.h:193
 msgid "Advanced settings"
@@ -718,14 +717,14 @@ msgstr "Inversión de colores de imagen"
 
 #: include/vlc_intf_strings.h:124
 msgid "Split the image to make an image wall"
-msgstr "Dividir la imagen para hacer una pared imagen"
+msgstr "Dividir la imagen para hacer un muro de imagen"
 
 #: include/vlc_intf_strings.h:126
 msgid ""
 "Create a \"puzzle game\" with the video.\n"
 "The video gets split in parts that you must sort."
 msgstr ""
-"Crear un «juego repecabezas» con el vídeo.\n"
+"Crear un «repecabezas» con el vídeo.\n"
 "El vídeo se divide en trozos que debe ordenar."
 
 #: include/vlc_intf_strings.h:129
@@ -810,7 +809,7 @@ msgstr "Deshabilitar"
 
 #: src/audio_output/common.c:88 modules/visualization/visual/visual.c:119
 msgid "Spectrometer"
-msgstr "Espectro"
+msgstr "Espectrómetro"
 
 #: src/audio_output/common.c:91
 msgid "Scope"
@@ -818,7 +817,7 @@ msgstr "Osciloscopio"
 
 #: src/audio_output/common.c:94
 msgid "Spectrum"
-msgstr "Espectrómetro"
+msgstr "Espectro"
 
 #: src/audio_output/common.c:97
 msgid "Vu meter"
@@ -839,7 +838,7 @@ msgstr "Reproducir ganancia"
 
 #: src/audio_output/filters.c:142
 msgid "Audio filtering failed"
-msgstr "Falló filtrado de audio"
+msgstr "Falló el filtrado de audio"
 
 #: src/audio_output/filters.c:143
 #, c-format
@@ -994,11 +993,11 @@ msgstr ""
 
 #: src/config/help.c:513
 msgid " (default enabled)"
-msgstr " (por defecto habilitado)"
+msgstr " (habilitado por defecto)"
 
 #: src/config/help.c:514
 msgid " (default disabled)"
-msgstr " (por defecto deshabilitado)"
+msgstr " (deshabilitado por defecto)"
 
 #: src/config/help.c:679 src/config/help.c:682 src/config/help.c:690
 #: src/config/help.c:695
@@ -1073,7 +1072,7 @@ msgstr "Decodificador"
 #: modules/codec/avcodec/encoder.c:777 modules/stream_out/es.c:363
 #: modules/stream_out/es.c:378
 msgid "Streaming / Transcoding failed"
-msgstr "Falló emitiendo / transcodificando"
+msgstr "Fallo emitiendo / transcodificando"
 
 #: src/input/decoder.c:277
 #, c-format
@@ -1130,7 +1129,7 @@ msgstr "Subtítulos %u cerrados"
 #: src/input/es_out.c:2883
 #, c-format
 msgid "Stream %d"
-msgstr "Emitir %d"
+msgstr "Emisión %d"
 
 #: src/input/es_out.c:2899 src/input/es_out.c:3017 modules/access/imem.c:64
 msgid "Subtitle"
@@ -1265,7 +1264,7 @@ msgstr "Género"
 
 #: src/input/meta.c:57 modules/mux/asf.c:60
 msgid "Copyright"
-msgstr "Copyright"
+msgstr "Derechos de autor"
 
 #: src/input/meta.c:58 src/libvlc-module.c:373 modules/access/vcdx/info.c:63
 msgid "Album"
@@ -1412,7 +1411,7 @@ msgid ""
 "Running vlc with the default interface. Use 'cvlc' to use vlc without "
 "interface."
 msgstr ""
-"Ejecutar vlc con la interfaz predeterminada. Usa «cvlc» para usar vlc sin "
+"Ejecutar vlc con la interfaz predeterminada. Use «cvlc» para usar vlc sin "
 "interfaz."
 
 #: src/libvlc.h:154 src/libvlc-module.c:1526 src/libvlc-module.c:1527
@@ -1498,7 +1497,7 @@ msgstr ""
 
 #: src/libvlc-module.c:215
 msgid "Choose which objects should print debug message"
-msgstr "Seleccionar que objetos imprimirán mensajes de depuración"
+msgstr "Seleccione los objetos que se imprimirán en el mensaje de depuración"
 
 #: src/libvlc-module.c:218
 msgid ""
@@ -1667,12 +1666,12 @@ msgid ""
 "resampling algorithm will be used instead."
 msgstr ""
 "Esto usa un algoritmo de remuestreo de audio de alta calidad. Este "
-"remuestreo puede consumir mucha potencia de procesador, puede deshabilitarlo "
-"y entonces se usará un algoritmo de remuestreo más sencillo."
+"remuestreo hace un uso intensivo del procesador, puede deshabilitarlo y "
+"entonces se usará un algoritmo de remuestreo más sencillo."
 
 #: src/libvlc-module.c:307
 msgid "Audio desynchronization compensation"
-msgstr "Compensar desincronización de audio"
+msgstr "Compensación de desincronización de audio"
 
 #: src/libvlc-module.c:309
 msgid ""
@@ -1761,7 +1760,7 @@ msgstr "Seleccionar el modo de reproducción de ganancia"
 
 #: src/libvlc-module.c:350
 msgid "Replay preamp"
-msgstr "Reproducir preamp"
+msgstr "Reproducir preamplificación"
 
 #: src/libvlc-module.c:352
 msgid ""
@@ -1969,7 +1968,7 @@ msgstr "Abajo"
 #: modules/video_filter/marq.c:137 modules/video_filter/mosaic.c:171
 #: modules/video_filter/osdmenu.c:85 modules/video_filter/rss.c:174
 msgid "Top-Left"
-msgstr "Arriba izquierda"
+msgstr "Superior-Izquierda"
 
 #: src/libvlc-module.c:430 src/libvlc-module.c:508 modules/codec/dvbsub.c:103
 #: modules/codec/zvbi.c:78 modules/gui/fbosd.c:164
@@ -1978,7 +1977,7 @@ msgstr "Arriba izquierda"
 #: modules/video_filter/marq.c:137 modules/video_filter/mosaic.c:171
 #: modules/video_filter/osdmenu.c:85 modules/video_filter/rss.c:174
 msgid "Top-Right"
-msgstr "Arriba derecha"
+msgstr "Superior-Derecha"
 
 #: src/libvlc-module.c:430 src/libvlc-module.c:508 modules/codec/dvbsub.c:103
 #: modules/codec/zvbi.c:78 modules/gui/fbosd.c:164
@@ -1987,7 +1986,7 @@ msgstr "Arriba derecha"
 #: modules/video_filter/marq.c:137 modules/video_filter/mosaic.c:171
 #: modules/video_filter/osdmenu.c:85 modules/video_filter/rss.c:174
 msgid "Bottom-Left"
-msgstr "Abajo izquierda"
+msgstr "Inferior-Izquierda"
 
 #: src/libvlc-module.c:430 src/libvlc-module.c:508 modules/codec/dvbsub.c:103
 #: modules/codec/zvbi.c:78 modules/gui/fbosd.c:164
@@ -1996,7 +1995,7 @@ msgstr "Abajo izquierda"
 #: modules/video_filter/marq.c:137 modules/video_filter/mosaic.c:171
 #: modules/video_filter/osdmenu.c:85 modules/video_filter/rss.c:174
 msgid "Bottom-Right"
-msgstr "Abajo derecha"
+msgstr "Inferior-Derecha"
 
 #: src/libvlc-module.c:432
 msgid "Zoom video"
@@ -2004,18 +2003,18 @@ msgstr "Ampliación de vídeo"
 
 #: src/libvlc-module.c:434
 msgid "You can zoom the video by the specified factor."
-msgstr "Puede hacer zoom en el vídeo con el valor especificado."
+msgstr "Puede ampliar el vídeo con el valor especificado."
 
 #: src/libvlc-module.c:436
 msgid "Grayscale video output"
-msgstr "Escala de grises de salida de vídeo"
+msgstr "Salida de vídeo en escala de grises"
 
 #: src/libvlc-module.c:438
 msgid ""
 "Output video in grayscale. As the color information aren't decoded, this can "
 "save some processing power."
 msgstr ""
-"Vídeo de salida en escala de grises. Como la información de color no se "
+"Salida de vídeo en escala de grises. Como la información de color no se "
 "decodifica, esto puede ahorrar algo de potencia del procesador."
 
 #: src/libvlc-module.c:441
@@ -2089,7 +2088,9 @@ msgstr "Posición del título del vídeo"
 
 #: src/libvlc-module.c:473
 msgid "Place on video where to display the title (default bottom center)."
-msgstr "Lugar del vídeo donde mostrar el título (por defecto centrado abajo)."
+msgstr ""
+"Lugar del vídeo donde mostrar el título (por defecto en la parte inferior-"
+"central)."
 
 #: src/libvlc-module.c:475
 msgid "Hide cursor and fullscreen controller after x milliseconds"
@@ -2111,7 +2112,7 @@ msgstr "Desentrelazar"
 #: modules/gui/macosx/MainMenu.m:326 modules/gui/macosx/MainMenu.m:327
 #: modules/video_filter/deinterlace/deinterlace.c:53
 msgid "Deinterlace mode"
-msgstr "Modo desentrelazado"
+msgstr "Modo de desentrelazado"
 
 #: src/libvlc-module.c:493
 msgid "Deinterlace method to use for video processing."
@@ -2184,7 +2185,7 @@ msgstr "Módulo de filtro de vídeo"
 
 #: src/libvlc-module.c:524
 msgid "This adds video splitters like clone or wall"
-msgstr "Esto añade filtros de salida de vídeo como clonar o pared"
+msgstr "Esto añade filtros de salida de vídeo como clón o pared"
 
 #: src/libvlc-module.c:526
 msgid "Video filter module"
@@ -2279,7 +2280,7 @@ msgstr ""
 
 #: src/libvlc-module.c:570
 msgid "Source aspect ratio"
-msgstr "Proporción fuente"
+msgstr "Proporción de fuente"
 
 #: src/libvlc-module.c:572
 msgid ""
@@ -2289,8 +2290,8 @@ msgid ""
 "y (4:3, 16:9, etc.) expressing the global image aspect, or a float value "
 "(1.25, 1.3333, etc.) expressing pixel squareness."
 msgstr ""
-"Esto fuerza la proporción fuente. Por ejemplo, algunos DVDs dicen ser 16:9 "
-"cuando realmente son 4:3. Esto puede usarse también como pista para VLC "
+"Esto fuerza la proporción de fuente. Por ejemplo, algunos DVDs dicen ser "
+"16:9 cuando realmente son 4:3. Esto puede usarse también como pista para VLC "
 "cuando una película no tiene información de proporción. Formatos aceptados "
 "son x:y (4:3, 16:9, etc.) expresando el aspecto global de la imagen, o un "
 "valor flotante (1.25, 1.3333, etc.) expresando cuadratura del píxel."
@@ -2372,7 +2373,7 @@ msgstr ""
 
 #: src/libvlc-module.c:611 modules/gui/macosx/simple_prefs.m:307
 msgid "Skip frames"
-msgstr "Omitir fotogramas"
+msgstr "Salto de fotogramas"
 
 #: src/libvlc-module.c:613
 msgid ""
@@ -2809,11 +2810,12 @@ msgstr ""
 
 #: src/libvlc-module.c:813
 msgid "Timeshift directory"
-msgstr "Carpeta timeshift"
+msgstr "Carpeta de cambio de tiempo"
 
 #: src/libvlc-module.c:815
 msgid "Directory used to store the timeshift temporary files."
-msgstr "Carpeta usada para almacenar los archivos temporales de timeshift."
+msgstr ""
+"Carpeta usada para almacenar los archivos temporales de cambio de tiempo."
 
 #: src/libvlc-module.c:817
 msgid "Timeshift granularity"
@@ -2825,7 +2827,7 @@ msgid ""
 "to store the timeshifted streams."
 msgstr ""
 "Tamaño máximo de los archivos temporales en bytes a usar para almacenar las "
-"emisiones timeshift."
+"emisiones cambio de tiempo."
 
 #: src/libvlc-module.c:822
 msgid "Change title according to current media"
@@ -2839,9 +2841,10 @@ msgid ""
 "\" (Fall back on Title - Artist)"
 msgstr ""
 "Esta opción permite establecer el título de acuerdo a lo que se está "
-"reproduciendo<br>$a: Artista<br>$b: Álbum<br>$c: Copyright<br>$t: Título<br>"
-"$g: Género<br>$n: Número de pista<br>$p: Reproduciendo ahora<br>$A: Fecha<br>"
-"$D: Duración<br>$Z: «Reproduciendo ahora» (Recurrir a Título - Artísta)"
+"reproduciendo<br>$a: Artista<br>$b: Álbum<br>$c: Derechos de autor<br>$t: "
+"Título<br>$g: Género<br>$n: Número de pista<br>$p: Reproduciendo ahora<br>"
+"$A: Fecha<br>$D: Duración<br>$Z: «Reproduciendo ahora» (Recurrir a Título - "
+"Artísta)"
 
 #: src/libvlc-module.c:830
 msgid ""
@@ -2850,10 +2853,10 @@ msgid ""
 "filters here and configure them in the \"subsources filters\" modules "
 "section. You can also set many miscellaneous subpictures options."
 msgstr ""
-"Estas opciones le permiten modificar el comportamiento del subsistema de sub-"
-"imágenes. Por ejemplo, puede habilitar filtros de sub-imágenes (logo, etc.). "
-"Habilítelos aquí y configúrelos en la sección de módulos «filtros de sub-"
-"imágenes». También puede poner varias opciones de sub-imágenes."
+"Estas opciones le permiten modificar el comportamiento del subsistema de "
+"subimágenes. Por ejemplo, puede habilitar filtros de sub-imágenes (logo, "
+"etc.). Habilítelos aquí y configúrelos en la sección de módulos «filtros de "
+"subimágenes». También puede poner varias opciones de subimágenes."
 
 #: src/libvlc-module.c:836 modules/gui/qt4/ui/sprefs_subtitles.h:286
 msgid "Force subtitle position"
@@ -2869,11 +2872,11 @@ msgstr ""
 
 #: src/libvlc-module.c:841
 msgid "Enable sub-pictures"
-msgstr "Habilitar sub-imágenes"
+msgstr "Habilitar subimágenes"
 
 #: src/libvlc-module.c:843
 msgid "You can completely disable the sub-picture processing."
-msgstr "Puede deshabilitar completamente el proceso de sub-imágenes."
+msgstr "Puede deshabilitar completamente el proceso de subimágenes."
 
 #: src/libvlc-module.c:845 src/libvlc-module.c:1782 src/text/iso-639_def.h:145
 #: modules/gui/macosx/simple_prefs.m:293
@@ -2920,14 +2923,13 @@ msgid "Subpictures filter module"
 msgstr "Módulo de filtro de sub-imágenes"
 
 #: src/libvlc-module.c:861
-#, fuzzy
 msgid ""
 "This adds so-called \"subpicture filters\". These filter subpictures created "
 "by subtitles decoders or other subpictures sources."
 msgstr ""
-"Esto añade los llamados «filtros de subimagen». Estos filtros superponen "
-"algunas imágenes o texto sobre el vídeo (como un logo, texto "
-"arbitrario, ...)."
+"Esto añade los llamados «filtros de subimagen». Estos filtros de subimágenes "
+"son creados por decodificaciones de subtítulos o otras fuentes de "
+"subimágenes."
 
 #: src/libvlc-module.c:864
 msgid "Autodetect subtitle files"
@@ -3055,8 +3057,8 @@ msgid ""
 "them to a specific network interface."
 msgstr ""
 "Por defecto, el servidor escuchará en cualquier dirección IP local. "
-"Especifique una direccion IP (pe., ::1 o 127.0.0.1) o un nombre de máquina "
-"(pe., localhost) para restringirlas a una interfaz de red especídfica."
+"Especifique una direccion IP (ej., ::1 o 127.0.0.1) o un nombre de máquina "
+"(ej., localhost) para restringirlas a una interfaz de red especídfica."
 
 #: src/libvlc-module.c:937
 msgid "RTSP server address"
@@ -3070,6 +3072,11 @@ msgid ""
 "127.0.0.1) or a host name (e.g. localhost) to restrict them to a specific "
 "network interface."
 msgstr ""
+"Esto define las direcciones RTSP que se escucharán en el servidor, a través "
+"de la ruta base del medio VOD RTSP. La sintaxis es: dirección/ruta. Por "
+"defecto, el servidor se escuchará en cualquier dirección IP local. "
+"Especifique una dirección IP (ej. ::1 o 127.0.0.1) o un nombre de servidor "
+"(ej. localhost) para restringirlos a una interface de red específica"
 
 #: src/libvlc-module.c:945
 msgid "HTTP server port"
@@ -3120,6 +3127,8 @@ msgstr "Certificado de servidor HTTP/TSL"
 #: src/libvlc-module.c:968
 msgid "This X.509 certicate file (PEM format) is used for server-side TLS."
 msgstr ""
+"Este archivo de certificado X.509 (formato PEM) es usado para TLS lateral al "
+"servidor."
 
 #: src/libvlc-module.c:970
 msgid "HTTP/TLS server private key"
@@ -3128,6 +3137,8 @@ msgstr "Clave de servidor privada HTTP/TLS"
 #: src/libvlc-module.c:972
 msgid "This private key file (PEM format) is used for server-side TLS."
 msgstr ""
+"Este archivo de clave privada (formato PEM) es usado para TLS lateral al "
+"servidor."
 
 #: src/libvlc-module.c:974
 msgid "HTTP/TLS Certificate Authority"
@@ -3148,6 +3159,8 @@ msgid ""
 "This file countains an optional CRL to prevent remove clients from using "
 "revoked certificates in TLS sessions."
 msgstr ""
+"Este archivo contiene un CRL opcional para prevenir la eliminación de "
+"clientes causada por el uso de certificados revocados en sesiones TLS."
 
 #: src/libvlc-module.c:984
 msgid "SOCKS server"
@@ -3167,7 +3180,7 @@ msgstr "Nombre de usuario SOCKS"
 
 #: src/libvlc-module.c:991
 msgid "User name to be used for connection to the SOCKS proxy."
-msgstr "Nombre de usuario a usar para conectar al SOCKS proxy."
+msgstr "Nombre de usuario a usar para conectar al proxy SOCKS."
 
 #: src/libvlc-module.c:993
 msgid "SOCKS password"
@@ -3175,7 +3188,7 @@ msgstr "Contraseña SOCKS"
 
 #: src/libvlc-module.c:995
 msgid "Password to be used for connection to the SOCKS proxy."
-msgstr "Contraseña a usar para conectar al SOCKS proxy."
+msgstr "Contraseña a usar para conectar al proxy SOCKS."
 
 #: src/libvlc-module.c:997
 msgid "Title metadata"
@@ -3211,11 +3224,12 @@ msgstr "Permite especificar un metadato de «género» para una entrada."
 
 #: src/libvlc-module.c:1013
 msgid "Copyright metadata"
-msgstr "Metadato de copyright"
+msgstr "Metadato de derechos de autor"
 
 #: src/libvlc-module.c:1015
 msgid "Allows you to specify a \"copyright\" metadata for an input."
-msgstr "Permite especificar un metadato de «copyright» para una entrada."
+msgstr ""
+"Permite especificar un metadato de «derechos de autor» para una entrada."
 
 #: src/libvlc-module.c:1017
 msgid "Description metadata"
@@ -3223,7 +3237,7 @@ msgstr "Metadato de descripción"
 
 #: src/libvlc-module.c:1019
 msgid "Allows you to specify a \"description\" metadata for an input."
-msgstr "Permite especificar un metadata de «Descripción» para una entrada."
+msgstr "Permite especificar un metadato de «descripción» para una entrada."
 
 #: src/libvlc-module.c:1021
 msgid "Date metadata"
@@ -3231,7 +3245,7 @@ msgstr "Metadato de fecha"
 
 #: src/libvlc-module.c:1023
 msgid "Allows you to specify a \"date\" metadata for an input."
-msgstr "Permite especificar un metadata «fecha» para una entrada."
+msgstr "Permite especificar un metadato de «fecha» para una entrada."
 
 #: src/libvlc-module.c:1025
 msgid "URL metadata"
@@ -3379,7 +3393,7 @@ msgstr ""
 
 #: src/libvlc-module.c:1096
 msgid "Preferred packetizer list"
-msgstr "Lista de empaquetador preferida"
+msgstr "Lista de empaquetadores preferida"
 
 #: src/libvlc-module.c:1098
 msgid ""
@@ -3444,7 +3458,7 @@ msgid ""
 "you really know what you are doing."
 msgstr ""
 "Estas opciones le permiten seleccionar módulos por defecto. No las toque a "
-"menos que sepa lo que realmente estás haciendo."
+"menos que sepa lo que realmente está haciendo."
 
 #: src/libvlc-module.c:1134
 msgid "Memory copy module"
@@ -3839,6 +3853,8 @@ msgstr "Cargar biblioteca multimedia"
 #: src/libvlc-module.c:1326
 msgid "Enable this option to load the SQL-based Media Library at VLC startup"
 msgstr ""
+"Habilite esta opción para carga la librería de medios basada en SQL al "
+"iniciar VLC"
 
 #: src/libvlc-module.c:1328 modules/gui/qt4/ui/sprefs_interface.h:530
 msgid "Display playlist tree"
@@ -5761,11 +5777,12 @@ msgstr "Entrada de disco Blu-Ray"
 
 #: modules/access/bluray.c:51
 msgid "Bluray menus"
-msgstr ""
+msgstr "Menús Bluray"
 
 #: modules/access/bluray.c:52
 msgid "Use bluray menus. If disabled, the movie will start directly"
 msgstr ""
+"Usar menús bluray. Si está deshabilitado, la película emperazará directamente"
 
 #: modules/access/bluray.c:60 modules/gui/qt4/ui/open_disk.h:299
 msgid "BluRay"
@@ -6259,9 +6276,8 @@ msgid ""
 msgstr ""
 
 #: modules/access/dtv/access.c:41
-#, fuzzy
 msgid "DVB device"
-msgstr "Dispositivo DVD"
+msgstr "Dispositivo DVB "
 
 #: modules/access/dtv/access.c:43
 msgid ""
@@ -6921,7 +6937,7 @@ msgstr ""
 
 #: modules/access/htcpcp.c:149
 msgid "Coffee is ready."
-msgstr ""
+msgstr "El café está listo."
 
 #: modules/access/http.c:72 modules/access/mms/mms.c:58
 msgid "HTTP proxy"
@@ -9960,6 +9976,8 @@ msgid ""
 "Enable this option if you want your audio not to be interrupted by the other "
 "audio."
 msgstr ""
+"Habilite esta opción si quiere que su audio no sea interrumpido por otro "
+"audio."
 
 #: modules/audio_output/kai.c:82
 #, fuzzy
@@ -14130,7 +14148,6 @@ msgid ""
 msgstr ""
 
 #: modules/demux/image.c:61
-#, fuzzy
 msgid "Duration in seconds"
 msgstr "Duración en segundos"
 
@@ -15188,9 +15205,8 @@ msgid "Real demuxer"
 msgstr "Demuxor real"
 
 #: modules/demux/sid.cpp:48
-#, fuzzy
 msgid "C64 sid demuxer"
-msgstr "Demuxor de vídeo H264"
+msgstr "Demuxor de vídeo C64"
 
 #: modules/demux/smf.c:41
 msgid "SMF demuxer"
@@ -17156,15 +17172,15 @@ msgstr "Calidad de post-poceso"
 
 #: modules/gui/macosx/simple_prefs.m:265
 msgid "Interface style"
-msgstr "estilo de interfaz"
+msgstr "Estilo de interfaz"
 
 #: modules/gui/macosx/simple_prefs.m:266
 msgid "Dark"
-msgstr "Osucro"
+msgstr "Oscuro"
 
 #: modules/gui/macosx/simple_prefs.m:267
 msgid "Bright"
-msgstr "Brillo"
+msgstr "Claro"
 
 #: modules/gui/macosx/simple_prefs.m:268
 msgid "Album art download policy"
@@ -20132,7 +20148,7 @@ msgstr "&Herramientas"
 
 #: modules/gui/qt4/menus.cpp:322 modules/gui/qt4/menus.cpp:1072
 msgid "V&iew"
-msgstr "&Ver"
+msgstr "V&er"
 
 #: modules/gui/qt4/menus.cpp:324
 msgid "&Help"
@@ -27038,9 +27054,8 @@ msgid "This is a coefficient that modifies the height of the bands."
 msgstr "Coeficiente que modifica la altura de las bandas."
 
 #: modules/visualization/visual/visual.c:66
-#, fuzzy
 msgid "Draw peaks in the analyzer"
-msgstr "Dibujar «picos» en el analizador espectral."
+msgstr "Dibujar picos en el analizador"
 
 #: modules/visualization/visual/visual.c:68
 msgid "Enable original graphic spectrum"
@@ -27051,9 +27066,8 @@ msgid "Enable the \"flat\" spectrum analyzer in the spectrometer."
 msgstr "Habilita el analizador espectral «plano» en el espectrómetro."
 
 #: modules/visualization/visual/visual.c:72
-#, fuzzy
 msgid "Draw bands in the spectrometer"
-msgstr "Dibujar bandas en el espectrómetro."
+msgstr "Dibujar bandas en el espectrómetro"
 
 #: modules/visualization/visual/visual.c:74
 msgid "Draw the base of the bands"
@@ -27209,19 +27223,16 @@ msgid "File Name"
 msgstr "Nombre de archivo"
 
 #: share/lua/http/dialogs/equalizer_window.html:49
-#, fuzzy
 msgid "Preamp:"
-msgstr "Preamp"
+msgstr "Preamplificador:"
 
 #: share/lua/http/dialogs/mosaic_window.html:96
-#, fuzzy
 msgid "Rows:"
-msgstr "Filas"
+msgstr "Filas:"
 
 #: share/lua/http/dialogs/mosaic_window.html:100
-#, fuzzy
 msgid "x offset"
-msgstr "Compensación X"
+msgstr "Compensación x"
 
 #: share/lua/http/dialogs/mosaic_window.html:104
 msgid "row border"
@@ -27236,9 +27247,8 @@ msgid "Columns:"
 msgstr "Columnas:"
 
 #: share/lua/http/dialogs/mosaic_window.html:118
-#, fuzzy
 msgid "y offset"
-msgstr "Compensación X"
+msgstr "Compensación y"
 
 #: share/lua/http/dialogs/mosaic_window.html:122
 msgid "column border"
@@ -27343,9 +27353,8 @@ msgid "Are you sure you wish to create the stream ?"
 msgstr "¿Está seguro de que desea crear la emisión?"
 
 #: share/lua/http/mobile_equalizer.html:62
-#, fuzzy
 msgid "Preamp: "
-msgstr "Preamp"
+msgstr "Preamplificador:"
 
 #: modules/gui/qt4/ui/about.h:185
 msgid "Authors"
