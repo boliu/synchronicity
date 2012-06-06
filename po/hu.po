@@ -3,21 +3,21 @@
 # This file is distributed under the same license as the VLC package.
 # $Id$
 #
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
 #: modules/gui/macosx/prefs.m:481 modules/gui/macosx/simple_prefs.m:445
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: vlc 1.1.6\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-03-16 18:33+0000\n"
-"PO-Revision-Date: 2012-01-13 01:12+0100\n"
+"PO-Revision-Date: 2012-05-26 02:47+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
-"Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
+"Language-Team: Magyar <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: include/vlc_common.h:1024
@@ -5789,11 +5789,11 @@ msgstr "Blu-Ray lemez bemenet"
 
 #: modules/access/bluray.c:51
 msgid "Bluray menus"
-msgstr ""
+msgstr "Blu-Ray menük"
 
 #: modules/access/bluray.c:52
 msgid "Use bluray menus. If disabled, the movie will start directly"
-msgstr ""
+msgstr "Blu-Ray menük használata. Ha letiltja, akkor a film azonnal elindul."
 
 #: modules/access/bluray.c:60 modules/gui/qt4/ui/open_disk.h:299
 msgid "BluRay"
@@ -6298,18 +6298,16 @@ msgstr ""
 "választani a csatoló számát. A számozás nullától indul."
 
 #: modules/access/dtv/access.c:41
-#, fuzzy
 msgid "DVB device"
-msgstr "DVD-meghajtó"
+msgstr "DVB-eszköz"
 
 #: modules/access/dtv/access.c:43
-#, fuzzy
 msgid ""
 "If the adapter provides multiple independent tuner devices, the device "
 "number must be selected. Numbering starts from zero."
 msgstr ""
-"Ha több digitális műsorszóró csatolóval rendelkezik, akkor ki kell "
-"választani a csatoló számát. A számozás nullától indul."
+"Ha a csatoló több független tunereszközzel rendelkezik, akkor ki kell "
+"választani az eszköz számát. A számozás nullától indul."
 
 #: modules/access/dtv/access.c:45
 msgid "Do not demultiplex"
@@ -9819,18 +9817,16 @@ msgid "Dummy audio output"
 msgstr "Látszólagos videokimenet"
 
 #: modules/audio_output/alsa.c:56
-#, fuzzy
 msgid "Audio output device"
-msgstr "Hang kimeneti tű"
+msgstr "Hangkimeneti eszköz"
 
 #: modules/audio_output/alsa.c:57
 msgid "Audio output device (using ALSA syntax)."
-msgstr ""
+msgstr "Hangkimeneti eszköz (ALSA szintaxissal)."
 
 #: modules/audio_output/alsa.c:65
-#, fuzzy
 msgid "Audio output channels"
-msgstr "A hangkimeneti csatornák módja"
+msgstr "Hangkimeneti csatornák"
 
 #: modules/audio_output/alsa.c:66
 msgid ""
@@ -9838,6 +9834,9 @@ msgid ""
 "output, it will be down-mixed.This parameter is ignored when digital pass-"
 "through is active."
 msgstr ""
+"A hangkimenethez elérhető csatornák. Ha a bemenet több csatornával "
+"rendelkezik, mint a kimenet, akkor le lesz keverve. Ez a paraméter figyelmen "
+"kívül marad, ha a digitális passthrough aktív."
 
 #: modules/audio_output/alsa.c:74
 msgid "Surround 4.0"
@@ -10565,12 +10564,11 @@ msgid "Strict standard compliance"
 msgstr "Szigorú megfelelés a szabványnak"
 
 #: modules/codec/avcodec/avcodec.h:228
-#, fuzzy
 msgid ""
 "Force a strict standard compliance when encoding (accepted values: -2 to 2)."
 msgstr ""
 "A kódoláskor a szabványnak való szigorú megfelelés kikényszerítése "
-"(elfogadott értékek: -1, 0, 1)."
+"(elfogadott értékek: -2 – 2)."
 
 #: modules/codec/avcodec/avcodec.h:231
 msgid "Luminance masking"
@@ -11048,13 +11046,15 @@ msgstr "A szoftveres szintetizáláshoz szükség van egy hangkészlet-fájlra."
 
 #: modules/codec/fluidsynth.c:60
 msgid "Synthesis gain"
-msgstr ""
+msgstr "Szintetizálás erősítése"
 
 #: modules/codec/fluidsynth.c:61
 msgid ""
 "This gain is applied to synthesis output. High values may cause saturation "
 "when many notes are played at a time."
 msgstr ""
+"Ez az erősítés lesz a szintézis kimenetére alkalmazva. Nagyobb értékek "
+"telítettséget okozhatnak, amikor egyszerre több hang kerül lejátszásra."
 
 #: modules/codec/fluidsynth.c:69
 msgid "FluidSynth MIDI synthesizer"
@@ -13207,7 +13207,7 @@ msgstr ""
 
 #: modules/control/dbus/dbus.c:143
 msgid "DBus"
-msgstr ""
+msgstr "D-Bus"
 
 #: modules/control/dbus/dbus.c:146
 msgid "D-Bus control interface"
@@ -14110,14 +14110,12 @@ msgid "Force use of a specific avformat muxer."
 msgstr "Az adott avformat egyesítő használatának kényszerítése."
 
 #: modules/demux/avformat/avformat.h:37
-#, fuzzy
 msgid "Format name"
-msgstr "Formátum"
+msgstr "Formátumnév"
 
 #: modules/demux/avformat/avformat.h:38
-#, fuzzy
 msgid "Internal libavcodec format name"
-msgstr "Belső libavcodec kodeknév"
+msgstr "Belső libavcodec formátumnév"
 
 #: modules/demux/avi/avi.c:51
 msgid "Force interleaved method"
@@ -18851,9 +18849,8 @@ msgid "Stop the A to B loop"
 msgstr "Az A-B ismétlés leállítása"
 
 #: modules/gui/qt4/components/controller_widget.cpp:281
-#, fuzzy
 msgid "Aspect Ratio"
-msgstr "Mér&etarány"
+msgstr "Méretarány"
 
 #: modules/gui/qt4/components/extended_panels.cpp:418
 #: modules/video_filter/logo.c:48
@@ -19914,9 +19911,8 @@ msgid "&Search:"
 msgstr "&Keresés:"
 
 #: modules/gui/qt4/dialogs/plugins.cpp:196
-#, fuzzy
 msgid "Get more extensions from"
-msgstr "Mellőzött kiterjesztések"
+msgstr "További kiterjesztések letöltése"
 
 #: modules/gui/qt4/dialogs/plugins.cpp:228
 msgid "More information..."
@@ -21240,14 +21236,14 @@ msgstr ""
 "és „html”."
 
 #: modules/misc/logger.c:124
-#, fuzzy
 msgid ""
 "Specify the log format. Available choices are \"text\" (default), \"html\", "
 "\"syslog\" (special mode to send to syslog instead of file), and \"android"
 "\" (special mode to send to android logging facility)."
 msgstr ""
 "Adja meg a naplóformátumot. A lehetséges értékek: „text” (alapértelmezett), "
-"„html” és „syslog” (speciális mód a fájl helyett rendszernaplóba küldéshez)."
+"„html”, „syslog” (speciális mód a fájl helyett rendszernaplóba küldéshez) és "
+"„android” (speciális mód az android naplózási szolgáltatásnak küldéshez)."
 
 #: modules/misc/logger.c:129
 msgid "Syslog facility"
@@ -22556,17 +22552,16 @@ msgid ""
 msgstr "Ez az SDP-ben (munkamenet-leíró) bejelentendő munkamenet neve."
 
 #: modules/stream_out/rtp.c:96
-#, fuzzy
 msgid "Session category"
-msgstr "Munkamenet neve"
+msgstr "Munkamenet-kategória"
 
 #: modules/stream_out/rtp.c:98
-#, fuzzy
 msgid ""
 "This allows you to specify a category for the session, that will be "
 "announced if you choose to use SAP."
 msgstr ""
-"Lehetővé teszi csoport megadását a munkamenethez, amely az SAP használatakor "
+"Lehetővé teszi kategória megadását a munkamenethez, amely az SAP "
+"használatakor "
 "bejelentésre kerül."
 
 #: modules/stream_out/rtp.c:100 modules/stream_out/standard.c:62
@@ -26681,7 +26676,7 @@ msgstr "WarpOverlay!"
 
 #: modules/video_output/kva.c:62
 msgid "VMAN"
-msgstr ""
+msgstr "VMAN"
 
 #: modules/video_output/kva.c:62
 msgid "DIVE"
