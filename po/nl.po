@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: VLC Media Player\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-03-16 18:33+0000\n"
-"PO-Revision-Date: 2011-12-28 18:34+0100\n"
+"PO-Revision-Date: 2012-05-27 09:24+0100\n"
 "Last-Translator: Thomas De Rocker <thomasderocker.at.h0tmail.d0t.c0m>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -63,7 +63,7 @@ msgstr "Algemene interface-instellingen"
 
 #: include/vlc_config_cat.h:42
 msgid "Main interfaces"
-msgstr "Hoofdinterfaces"
+msgstr "Hoofdinterface"
 
 #: include/vlc_config_cat.h:43
 msgid "Settings for the main interface"
@@ -71,11 +71,11 @@ msgstr "Instellingen voor de hoofdinterface"
 
 #: include/vlc_config_cat.h:45 src/libvlc-module.c:206
 msgid "Control interfaces"
-msgstr "Besturingsinterfaces"
+msgstr "Besturingsinterface"
 
 #: include/vlc_config_cat.h:46
 msgid "Settings for VLC's control interfaces"
-msgstr "Instellingen voor VLC's besturingsinterfaces"
+msgstr "Instellingen voor VLC's besturingsinterface"
 
 #: include/vlc_config_cat.h:48 include/vlc_config_cat.h:49
 #: modules/gui/macosx/simple_prefs.m:197
@@ -119,7 +119,7 @@ msgstr "Visuele effecten"
 
 #: include/vlc_config_cat.h:61 src/audio_output/common.c:146
 msgid "Audio visualizations"
-msgstr "Geluidvisualisaties"
+msgstr "Geluidsvisualisaties"
 
 #: include/vlc_config_cat.h:63 include/vlc_config_cat.h:75
 msgid "Output modules"
@@ -792,7 +792,7 @@ msgstr ""
 "\">kennisbank</a>.</p><p>Om de belangrijkste sneltoetsen te begrijpen, leest "
 "u de <a href=\"http://wiki.videolan.org/Hotkeys\">sneltoetsen</a>-pagina.</"
 "p><h3>Help</h3><p>Raadpleeg de <a href=\"http://www.videolan.org/support/faq."
-"html\">FAQ</a> voordat u een vraag stelt.</p><p>U kan hulp krijgen (en "
+"html\">FAQ</a> voordat u een vraag stelt.</p><p>U kunt hulp krijgen (en "
 "bieden) op de <a href=\"http://forum.videolan.org\">forums</a>, de <a href="
 "\"http://www.videolan.org/vlc/lists.html\">maillijsten</a> of ons IRC-kanaal "
 "(<em>#videolan</em> op irc.freenode.net).</p><h3>Bijdragen aan het project</"
@@ -1711,7 +1711,7 @@ msgid ""
 "S/PDIF can be used by default when your hardware supports it as well as the "
 "audio stream being played."
 msgstr ""
-"S/PDIF  kan standaard worden gebruikt als zowel uw hardware als de "
+"S/PDIF kan standaard gebruikt worden als zowel uw hardware als de "
 "afgespeelde audiostream dit ondersteunen."
 
 #: src/libvlc-module.c:323 modules/gui/macosx/simple_prefs.m:224
@@ -5781,11 +5781,12 @@ msgstr "Blu-Ray Disc invoer"
 
 #: modules/access/bluray.c:51
 msgid "Bluray menus"
-msgstr ""
+msgstr "Blu-raymenu's"
 
 #: modules/access/bluray.c:52
 msgid "Use bluray menus. If disabled, the movie will start directly"
 msgstr ""
+"Blu-raymenu's gebruiken. Indien uitgeschakeld zal de film direct starten"
 
 #: modules/access/bluray.c:60 modules/gui/qt4/ui/open_disk.h:299
 msgid "BluRay"
@@ -6285,18 +6286,16 @@ msgstr ""
 "geselecteerd worden. Nummering begint vanaf nul. "
 
 #: modules/access/dtv/access.c:41
-#, fuzzy
 msgid "DVB device"
-msgstr "Dvd-apparaat"
+msgstr "DVB-apparaat"
 
 #: modules/access/dtv/access.c:43
-#, fuzzy
 msgid ""
 "If the adapter provides multiple independent tuner devices, the device "
 "number must be selected. Numbering starts from zero."
 msgstr ""
-"Als er meer dan een digitale-uitzendingsadapter is, moet het adapternummer "
-"geselecteerd worden. Nummering begint vanaf nul. "
+"Als de adapter meerdere onafhankelijke tuner-apparaten voorziet, moet het "
+"apparaatnummer geselecteerd worden. Nummering begint vanaf nul. "
 
 #: modules/access/dtv/access.c:45
 msgid "Do not demultiplex"
@@ -9794,18 +9793,16 @@ msgid "Dummy audio output"
 msgstr "Dummy audio-uitvoer"
 
 #: modules/audio_output/alsa.c:56
-#, fuzzy
 msgid "Audio output device"
-msgstr "Audio-uitvoerpin"
+msgstr "Audio-uitvoerapparaat"
 
 #: modules/audio_output/alsa.c:57
 msgid "Audio output device (using ALSA syntax)."
-msgstr ""
+msgstr "Audio-uitvoerapparaat (gebruikmakend van ALSA-syntax)."
 
 #: modules/audio_output/alsa.c:65
-#, fuzzy
 msgid "Audio output channels"
-msgstr "Audio-uitvoer kanalenmodus"
+msgstr "Audio-uitvoerkanalen"
 
 #: modules/audio_output/alsa.c:66
 msgid ""
@@ -9813,6 +9810,9 @@ msgid ""
 "output, it will be down-mixed.This parameter is ignored when digital pass-"
 "through is active."
 msgstr ""
+"Beschikbare kanalen voor audio-uitvoer. Als de invoer meer kanalen heeft dan "
+"de uitvoer, zal het gedownmixt worden. Deze parameter wordt genegeerd "
+"wanneer digitale pass-through ingeschakeld is."
 
 #: modules/audio_output/alsa.c:74
 msgid "Surround 4.0"
@@ -10543,12 +10543,11 @@ msgid "Strict standard compliance"
 msgstr "Strikt conform standaard"
 
 #: modules/codec/avcodec/avcodec.h:228
-#, fuzzy
 msgid ""
 "Force a strict standard compliance when encoding (accepted values: -2 to 2)."
 msgstr ""
 "Forceer een strikte standaardtolerantie bij het coderen (geaccepteerde "
-"waarden: -1, 0, 1)."
+"waarden: -2 tot 2)."
 
 #: modules/codec/avcodec/avcodec.h:231
 msgid "Luminance masking"
@@ -10594,7 +10593,7 @@ msgstr ""
 
 #: modules/codec/avcodec/avcodec.h:247
 msgid "Luminance elimination"
-msgstr "Helderheideliminatie"
+msgstr "Helderheid-eliminatie"
 
 #: modules/codec/avcodec/avcodec.h:248
 msgid ""
@@ -10606,7 +10605,7 @@ msgstr ""
 
 #: modules/codec/avcodec/avcodec.h:252
 msgid "Chrominance elimination"
-msgstr "Kleureliminatie"
+msgstr "Kleur-eliminatie"
 
 #: modules/codec/avcodec/avcodec.h:253
 msgid ""
@@ -11025,13 +11024,15 @@ msgstr "Een soundfontsbestand is nodig voor software-synthese."
 
 #: modules/codec/fluidsynth.c:60
 msgid "Synthesis gain"
-msgstr ""
+msgstr "Synthesis-gain"
 
 #: modules/codec/fluidsynth.c:61
 msgid ""
 "This gain is applied to synthesis output. High values may cause saturation "
 "when many notes are played at a time."
 msgstr ""
+"Deze gain wordt toegepast op de synthese-uitvoer. Hoge waarden kunnen "
+"verzadiging veroorzaken wanneer veel noten tegelijk gespeeld worden."
 
 #: modules/codec/fluidsynth.c:69
 msgid "FluidSynth MIDI synthesizer"
@@ -13174,7 +13175,7 @@ msgstr ""
 
 #: modules/control/dbus/dbus.c:143
 msgid "DBus"
-msgstr ""
+msgstr "DBus"
 
 #: modules/control/dbus/dbus.c:146
 msgid "D-Bus control interface"
@@ -14075,14 +14076,12 @@ msgid "Force use of a specific avformat muxer."
 msgstr "Gebruik van een specifieke avformat-muxer forceren."
 
 #: modules/demux/avformat/avformat.h:37
-#, fuzzy
 msgid "Format name"
-msgstr "Formaat"
+msgstr "Formaatnaam"
 
 #: modules/demux/avformat/avformat.h:38
-#, fuzzy
 msgid "Internal libavcodec format name"
-msgstr "Interne libavcodec-codecnaam"
+msgstr "Interne libavcodec formaatnaam"
 
 #: modules/demux/avi/avi.c:51
 msgid "Force interleaved method"
@@ -14876,7 +14875,6 @@ msgid "Writer"
 msgstr "Schrijver"
 
 #: modules/demux/mp4/mp4.c:967
-#, fuzzy
 msgid "Composer"
 msgstr "Componist"
 
@@ -16200,13 +16198,14 @@ msgid "Use the native fullscreen mode on OS X Lion"
 msgstr "Standaard schermvullende modus gebruiken op OS X Lion"
 
 #: modules/gui/macosx/macosx.m:91
+#, fuzzy
 msgid ""
 "By default, VLC uses the native fullscreen mode on Mac OS X 10.7 and later. "
 "It can also use the custom mode known from previous Mac OS X releases."
 msgstr ""
-"VLC gebruikt standaard de ingebouwde fullscreen-modus bij Mac OS X 10.7 en "
-"later. Het kan ook gebruik maken van de aangepaste modus die gekend is van "
-"vorige Mac OS X releases."
+"VLC gebruikt standaard de fullscreen-modus die gekend is van vorige Mac OS X "
+"releases. Het kan ook gebruik maken van de ingebouwde fullscreen-modus bij "
+"Mac OS X 10.7 en later."
 
 #: modules/gui/macosx/macosx.m:93 modules/gui/qt4/qt4.cpp:128
 msgid "Automatically save the volume on exit"
@@ -18828,9 +18827,8 @@ msgid "Stop the A to B loop"
 msgstr "Stop de A naar B lus"
 
 #: modules/gui/qt4/components/controller_widget.cpp:281
-#, fuzzy
 msgid "Aspect Ratio"
-msgstr "&Beeldverhouding"
+msgstr "Beeldverhouding"
 
 #: modules/gui/qt4/components/extended_panels.cpp:418
 #: modules/video_filter/logo.c:48
@@ -19066,20 +19064,17 @@ msgstr "Albumillustraties downloaden"
 
 #: modules/gui/qt4/components/interface_widgets.cpp:561
 #: modules/gui/qt4/dialogs/toolbar.cpp:458
-#, fuzzy
 msgid "Elapsed time"
-msgstr "Release-tijd"
+msgstr "Tijd verstreken"
 
 #: modules/gui/qt4/components/interface_widgets.cpp:565
 #: modules/gui/qt4/dialogs/toolbar.cpp:462
-#, fuzzy
 msgid "Total/Remaining time"
-msgstr "Resterende tijd: %i seconden"
+msgstr "Totale/resterende tijd"
 
 #: modules/gui/qt4/components/interface_widgets.cpp:567
-#, fuzzy
 msgid "Click to toggle between total and remaining time"
-msgstr "Klik om tussen vertreken en overige tijd te wisselen"
+msgstr "Klik om te wisselen tussen totale en resterende tijd"
 
 #: modules/gui/qt4/components/interface_widgets.cpp:573
 msgid "Click to toggle between elapsed and remaining time"
@@ -19901,9 +19896,8 @@ msgid "&Search:"
 msgstr "&Zoeken"
 
 #: modules/gui/qt4/dialogs/plugins.cpp:196
-#, fuzzy
 msgid "Get more extensions from"
-msgstr "Genegeerde extensies"
+msgstr "Meer extensies krijgen van"
 
 #: modules/gui/qt4/dialogs/plugins.cpp:228
 msgid "More information..."
@@ -21229,15 +21223,15 @@ msgstr ""
 "\" (standaard) en \"html\"."
 
 #: modules/misc/logger.c:124
-#, fuzzy
 msgid ""
 "Specify the log format. Available choices are \"text\" (default), \"html\", "
 "\"syslog\" (special mode to send to syslog instead of file), and \"android"
 "\" (special mode to send to android logging facility)."
 msgstr ""
 "Specificeer het logboekformaat. Beschikbare opties zijn \"tekst"
-"\" (standaard), \"html\" en \"syslog\" (speciale modus om naar syslog te "
-"sturen i.p.v. naar bestand)."
+"\" (standaard), \"html\", \"syslog\" (speciale modus om naar syslog te "
+"sturen i.p.v. naar bestand), en \"android\" (speciale modus om naar android "
+"logging-faciliteit te zenden))."
 
 #: modules/misc/logger.c:129
 msgid "Syslog facility"
@@ -22553,18 +22547,16 @@ msgstr ""
 "Descriptor)."
 
 #: modules/stream_out/rtp.c:96
-#, fuzzy
 msgid "Session category"
-msgstr "Sessie naam"
+msgstr "Sessiecategorie"
 
 #: modules/stream_out/rtp.c:98
-#, fuzzy
 msgid ""
 "This allows you to specify a category for the session, that will be "
 "announced if you choose to use SAP."
 msgstr ""
-"Hier kunt u een groep voor de sessie opgeven. Deze zal worden aangekondigd "
-"als u besluit SAP te gebruiken."
+"Hier kunt u een categorie voor de sessie opgeven. Deze zal worden "
+"aangekondigd als u besluit SAP te gebruiken."
 
 #: modules/stream_out/rtp.c:100 modules/stream_out/standard.c:62
 msgid "Session description"
@@ -23282,7 +23274,7 @@ msgstr "Omtrek-ondoorzichtigheid"
 #: modules/text_renderer/freetype.c:145
 #: modules/gui/qt4/ui/sprefs_subtitles.h:283
 msgid "Outline color"
-msgstr "Omtrekkleur"
+msgstr "Kleur omtrek"
 
 #: modules/text_renderer/freetype.c:146
 #: modules/gui/qt4/ui/sprefs_subtitles.h:282
@@ -26697,7 +26689,7 @@ msgstr "WarpOverlay!"
 
 #: modules/video_output/kva.c:62
 msgid "VMAN"
-msgstr ""
+msgstr "VMAN"
 
 #: modules/video_output/kva.c:62
 msgid "DIVE"
@@ -26716,11 +26708,14 @@ msgid "Video output is not supported"
 msgstr "Video-uitvoer wordt niet ondersteund"
 
 #: modules/video_output/macosx.m:129
+#, fuzzy
 msgid ""
 "Your Mac lacks Quartz Extreme acceleration, which is required for video "
 "output."
 msgstr ""
-"Uw Mac mist Quartz Extreme-versnelling, wat vereist is voor video-uitvoer."
+"Uw Mac mist Quartz Extreme-versnelling, wat vereist is voor video-uitvoer. "
+"Het zal nog steeds werken, maar veel sneller en met mogelijk onverwachte "
+"resultaten."
 
 #: modules/video_output/msw/direct2d.c:56
 msgid "Video output for Windows 7/Windows Vista with Platform update"
@@ -28449,9 +28444,8 @@ msgstr "Mediabeheerlijst"
 #~ msgstr ""
 #~ "Balkleur, een van \"red\" (rood), \"blue\" (blauw) en \"green\" (groen)."
 
-#, fuzzy
 #~ msgid "Live Update"
-#~ msgstr "Bijwerken"
+#~ msgstr "Live bijwerken"
 
 #~ msgid "Display on &Desktop"
 #~ msgstr "Op bureaublad weergeven"
@@ -28461,7 +28455,7 @@ msgstr "Mediabeheerlijst"
 
 #, fuzzy
 #~ msgid "Elasped time"
-#~ msgstr "Release-tijd"
+#~ msgstr "Tijd verstreken"
 
 #~ msgid "Video standard (Default, SECAM_D, PAL_B, NTSC_M, etc...)."
 #~ msgstr "Videostandaard (Standaard, SECAM_D, PAL_B, NTSC_M, enz...)."
@@ -32545,3 +32539,37 @@ msgstr "Mediabeheerlijst"
 #~ msgstr ""
 #~ "Voeg nabewerkingsfilters toe om de beeldkwaliteit te verhogen. "
 #~ "Bijvoorbeeld voor deinterlacing, of het klonen van het beeld."
+
+#~ msgid "BluRay Disc is corrupted."
+#~ msgstr "Blu-Ray disc is beschadigd."
+
+#~ msgid "Missing AACS configuration file!"
+#~ msgstr "Ontbrekend AACS-configuratiebestand!"
+
+#~ msgid "No valid processing key found in AACS config file."
+#~ msgstr ""
+#~ "Geen geldige verwerkingssleutel gevonden in AACS-configuratiebestand."
+
+#~ msgid "No valid host certificate found in AACS config file."
+#~ msgstr "Geen geldig hostcertificaat gevonden in AACS-configuratiebestand"
+
+#~ msgid "AACS Host certificate revoked."
+#~ msgstr "AACS-hostcertificaat ingetrokken."
+
+#~ msgid "AACS MMC failed."
+#~ msgstr "AACS MMC mislukt."
+
+#~ msgid "Western European (IBM 00850)"
+#~ msgstr "West-Europees (IBM 00850)"
+
+#~ msgid "Outline Color"
+#~ msgstr "Kleur omtrek"
+
+#~ msgid "Outline Thickness"
+#~ msgstr "Dikte omtrek"
+
+#~ msgid "New input playing"
+#~ msgstr "Nieuwe invoer wordt afgespeeld"
+
+#~ msgid "OpenGL acceleration is not supported on your Mac"
+#~ msgstr "OpenGL-versnelling is niet ondersteund op uw Mac"
