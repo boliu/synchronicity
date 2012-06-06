@@ -1,7 +1,7 @@
 # translation of ja.po to Japanese
 # Japanese translation for VLC
 # Copyright (C) 2002, 2004-2011 the VideoLAN team
-# Fumio Nakayama <fumio.n6a@gmail.com>, 2002,2009-2011.
+# Fumio Nakayama <fumio.n6a@gmail.com>, 2002,2009-2012.
 # Tadashi Jokagi <elf@elf.no-ip.org>, 2004-2009.
 #
 #: modules/gui/macosx/prefs.m:483 modules/gui/macosx/simple_prefs.m:451
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: vlc 2.0.1\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-05-24 23:46+0100\n"
-"PO-Revision-Date: 2012-05-05 00:02+0900\n"
+"PO-Revision-Date: 2012-05-25 23:06+0900\n"
 "Last-Translator: Fumio Nakayama <fumio.n6a@gmail.com>\n"
 "Language-Team: VideoLAN's Translators <translators@videolan.org>\n"
 "Language: ja\n"
@@ -5724,30 +5724,28 @@ msgstr ""
 "はインストールされていません。"
 
 #: modules/access/bluray.c:230
-#, fuzzy
 msgid "BluRay Disc is corrupted."
-msgstr "ブルーレイディスク入力"
+msgstr "ブルーレイディスクが破損しています。"
 
 #: modules/access/bluray.c:233
-#, fuzzy
 msgid "Missing AACS configuration file!"
-msgstr "VLM設定ファイル"
+msgstr "AACS設定ファイルがありません!"
 
 #: modules/access/bluray.c:236
 msgid "No valid processing key found in AACS config file."
-msgstr ""
+msgstr "AACS設定ファイルに有効なProcessing Keyがありません。"
 
 #: modules/access/bluray.c:239
 msgid "No valid host certificate found in AACS config file."
-msgstr ""
+msgstr "AACS設定ファイルに有効なホスト証明書がありません。"
 
 #: modules/access/bluray.c:242
 msgid "AACS Host certificate revoked."
-msgstr ""
+msgstr "AACSホスト証明書が無効になりました。"
 
 #: modules/access/bluray.c:245
 msgid "AACS MMC failed."
-msgstr ""
+msgstr "AACS MMCが失敗しました。"
 
 #: modules/access/bluray.c:251
 msgid "Your system AACS decoding library does not work. Missing keys?"
@@ -11760,9 +11758,8 @@ msgid "Western European (Windows-1252)"
 msgstr "西欧(Windows-1252)"
 
 #: modules/codec/subsdec.c:107
-#, fuzzy
 msgid "Western European (IBM 00850)"
-msgstr "西欧(Latin-9)"
+msgstr "西欧(IBM 00850)"
 
 #: modules/codec/subsdec.c:109
 msgid "Eastern European (Latin-2)"
@@ -16033,17 +16030,16 @@ msgstr "デフォルトでVLCは暗いインターフェーススタイルを使
 
 #: modules/gui/macosx/macosx.m:90 modules/gui/macosx/simple_prefs.m:271
 msgid "Use the native fullscreen mode on OS X Lion"
-msgstr "OS X Lion上でネイティブの前画面モードを使用"
+msgstr "OS X Lion上でネイティブの全画面モードを使用"
 
 #: modules/gui/macosx/macosx.m:91
-#, fuzzy
 msgid ""
 "By default, VLC uses the fullscreen mode known from previous Mac OS X "
 "releases. It can also use the native fullscreen mode on Mac OS X 10.7 and "
 "later."
 msgstr ""
-"Mac OS X 10.7以降ではVLCはデフォルトでネイティブの前画面モードを使用します。"
-"以前のMac OS Xリリースから知られているカスタムモードも使用します。"
+"以前のMac OS XリリースからVLCはデフォルトで全画面モードを使用します。Mac OS "
+"X 10.7以降ではネイティブの全画面モードも使用します。"
 
 #: modules/gui/macosx/macosx.m:93 modules/gui/qt4/qt4.cpp:128
 msgid "Automatically save the volume on exit"
@@ -17164,12 +17160,10 @@ msgid "Force Bold"
 msgstr "ボールド(太字)を使用"
 
 #: modules/gui/macosx/simple_prefs.m:298
-#, fuzzy
 msgid "Outline Color"
 msgstr "アウトラインの色"
 
 #: modules/gui/macosx/simple_prefs.m:299
-#, fuzzy
 msgid "Outline Thickness"
 msgstr "アウトラインの太さ"
 
@@ -18360,7 +18354,7 @@ msgstr " <space>                一時停止/再生"
 
 #: modules/gui/ncurses.c:888
 msgid " f                      Toggle Fullscreen"
-msgstr " f                      前画面表示の切り替え"
+msgstr " f                      全画面表示の切り替え"
 
 #: modules/gui/ncurses.c:889
 msgid " n, p                   Next/Previous playlist item"
@@ -21550,9 +21544,8 @@ msgid "Growl Notification Plugin"
 msgstr "Growl通知プラグイン"
 
 #: modules/notify/growl.m:286
-#, fuzzy
 msgid "New input playing"
-msgstr "再生中"
+msgstr "新しい入力を再生中"
 
 #: modules/notify/growl.m:309
 msgid "Now playing"
@@ -26427,16 +26420,16 @@ msgstr "Mac OS X OpenGLビデオ出力(描画可能なnsオブジェクトが必
 
 #: modules/video_output/macosx.m:131
 msgid "OpenGL acceleration is not supported on your Mac"
-msgstr ""
+msgstr "OpenGLアクセラレーションはあなたのMacではサポートされていません。"
 
 #: modules/video_output/macosx.m:131
-#, fuzzy
 msgid ""
 "Your Mac lacks Quartz Extreme acceleration, which is required for video "
 "output. It will still work, but much slower and with possibly unexpected "
 "results."
 msgstr ""
 "あなたのMacはビデオ出力に必要なQuartz Extremeアクセラレーションがありません。"
+"動作するかも知れませんが、かなり遅く予期しない結果になることもあります。"
 
 #: modules/video_output/msw/direct2d.c:56
 msgid "Video output for Windows 7/Windows Vista with Platform update"
