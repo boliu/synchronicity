@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-05-24 23:46+0100\n"
-"PO-Revision-Date: 2012-05-14 17:23+0100\n"
+"PO-Revision-Date: 2012-05-22 17:37+0100\n"
 "Last-Translator: Éric Lassauge <lassauge {AT} users {dot} sourceforge {dot} "
 "net>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -23,7 +23,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n>1;\n"
 "X-Poedit-Language: French\n"
 
 #: include/vlc_common.h:1024
@@ -170,9 +169,8 @@ msgid "Video filters are used to process the video stream."
 msgstr "Les filtres vidéo permettent de traiter le flux vidéo."
 
 #: include/vlc_config_cat.h:83
-#, fuzzy
 msgid "Subtitles/OSD"
-msgstr "Sous-titres & OSD"
+msgstr "Sous-titres/OSD"
 
 #: include/vlc_config_cat.h:84
 msgid ""
@@ -975,7 +973,7 @@ msgstr ""
 "  --option  Une option globale.\n"
 "   -option  La version à lettre unique d'une --option globale.\n"
 "   :option  Une option qui ne s'applique qu'au flux la précédant\n"
-"            et qui surcharge les options précédantes.\n"
+"            et qui surcharge les options précédentes.\n"
 "\n"
 "Syntaxe des flux (MRL) :\n"
 "  [[acces]/[demux]://]URL[#[titre][:chapitre][-[titre][:chapitre]]] [:"
@@ -985,19 +983,19 @@ msgstr ""
 "  qu'options spécifiques à une MRL.\n"
 "  Plusieurs paires « :option=valeur » peuvent être spécifiées.\n"
 "\n"
-"Syntaxe pour l'URL :\n"
-"  file:///chemin/fichier         Fichier standard\n"
+"Syntaxe pour une URL :\n"
+"  [file://]chemin/fichier        Fichier standard\n"
 "  http://ip:port/fichier         Adresse HTTP\n"
 "  ftp://ip:port/fichier          Adresse FTP\n"
 "  mms://ip:port/fichier          Adresse MMS\n"
 "  screen://                      Capture d'écran\n"
-"  dvd://[périphérique]           Periphérique DVD\n"
-"  vcd://[périphérique]           Periphérique VCD\n"
-"  cdda://[périphérique]          Periphérique CD Audio\n"
+"  dvd://[périphérique]           Périphérique DVD\n"
+"  vcd://[périphérique]           Périphérique VCD\n"
+"  cdda://[périphérique]          Périphérique CD Audio\n"
 "  udp://[[adresse source]@[adresse d'attache][:port]]\n"
 "                                 Flux UDP envoyé par un serveur\n"
-"  vlc://pause:secondes           Mettre en pause la liste de lecture\n"
-"                                 pour le temps spécifié\n"
+"  vlc://pause:secondes           Mettre en pause la liste de lecture pour\n"
+"                                 le temps spécifié\n"
 "  vlc://quit                     Quitter VLC\n"
 "\n"
 
@@ -1021,10 +1019,11 @@ msgstr ""
 "avancées."
 
 #: src/config/help.c:691 src/config/help.c:696
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%d module(s) were not displayed because they only have advanced options.\n"
-msgstr "%u module n'est pas affiché car il n'a que des options avancées.\n"
+msgstr ""
+"%d module(s) ne sont pas affichés car ils n'ont que des options avancées.\n"
 
 #: src/config/help.c:703 src/config/help.c:707
 msgid ""
@@ -1247,7 +1246,7 @@ msgstr ""
 
 #: src/input/input.c:2583
 msgid "VLC can't recognize the input's format"
-msgstr "Impossible de reconnaitre le format du média d'entrée"
+msgstr "Impossible de reconnaître le format du média d'entrée"
 
 #: src/input/input.c:2584
 #, c-format
@@ -1510,7 +1509,7 @@ msgstr ""
 
 #: src/libvlc-module.c:215
 msgid "Choose which objects should print debug message"
-msgstr "Choisissez les éléments qui peuvent affichers des messages"
+msgstr "Choisissez les éléments qui peuvent afficher des messages"
 
 #: src/libvlc-module.c:218
 msgid ""
@@ -1640,26 +1639,24 @@ msgid "Default audio volume"
 msgstr "Volume audio par défaut"
 
 #: src/libvlc-module.c:285
-#, fuzzy
 msgid ""
 "You can set the default audio output volume here, in a range from 0 to 1024."
-msgstr "Spécifiez ici le volume par défaut de la sortie audio"
+msgstr "Spécifiez ici le volume de la sortie audio, de 0 à 1024."
 
 #: src/libvlc-module.c:288
 msgid "Audio output volume step"
 msgstr "Pas de réglage du volume"
 
 #: src/libvlc-module.c:290
-#, fuzzy
 msgid ""
 "The step size of the volume is adjustable using this option, in a range from "
 "0 to 1024."
-msgstr "Cette option permet de modifier le pas de réglage du volume audio"
+msgstr ""
+"Cett option permet de modifier le pas de réglage du volume audio, de 0 à 1024"
 
 #: src/libvlc-module.c:294
-#, fuzzy
 msgid "Audio output frequency (Hz)"
-msgstr "Multiplexeur de sortie audio"
+msgstr "Fréquence de la sortie audio (Hz)"
 
 #: src/libvlc-module.c:296
 msgid ""
@@ -2682,7 +2679,6 @@ msgid "Preferred video resolution"
 msgstr "Liste de résolutions vidéos préférées"
 
 #: src/libvlc-module.c:752
-#, fuzzy
 msgid ""
 "When several video formats are available, select one whose resolution is "
 "closest to (but not higher than) this setting, in number of lines. Use this "
@@ -2712,9 +2708,8 @@ msgid "Standard Definition (576 or 480 lines)"
 msgstr "Définition Standard  (576 ou 480 lignes)"
 
 #: src/libvlc-module.c:760
-#, fuzzy
 msgid "Low definition (320 lines)"
-msgstr "Basse définition (360 lignes)"
+msgstr "Basse définition (320 lignes)"
 
 #: src/libvlc-module.c:763
 msgid "Input repetitions"
@@ -3168,12 +3163,11 @@ msgid "HTTP/TLS Certificate Revocation List"
 msgstr "Liste de révocations de certificats HTTP/TLS"
 
 #: src/libvlc-module.c:981
-#, fuzzy
 msgid ""
 "This file countains an optional CRL to prevent remove clients from using "
 "revoked certificates in TLS sessions."
 msgstr ""
-"Ce fichier contient un CRL optionnel pour éviter que des clients  supprimés "
+"Ce fichier contient un CRL optionnel pour éviter que de clients  supprimés "
 "utilisent des certificats révoqués pour des sessions TLS."
 
 #: src/libvlc-module.c:984
@@ -3578,14 +3572,12 @@ msgstr ""
 "plusieurs chemins en utilisant « PATH_SEP » comme séparateur"
 
 #: src/libvlc-module.c:1185
-#, fuzzy
 msgid "Data search path"
-msgstr "Chemin de recherche des modules"
+msgstr "Chemin de recherche des données"
 
 #: src/libvlc-module.c:1187
-#, fuzzy
 msgid "Override the default data/share search path."
-msgstr "Surcharger la description par défaut de la piste."
+msgstr "Modifier le chemin de recherche par défaut pour les données."
 
 #: src/libvlc-module.c:1189
 msgid "VLM configuration file"
@@ -3853,7 +3845,7 @@ msgid ""
 "The media library is automatically saved and reloaded each time you start "
 "VLC."
 msgstr ""
-"La bibliothèque est automatiquement sauvegardée et rechargée chaque fois que "
+"La bibliothèque est automatiquement enregistrée et rechargée chaque fois que "
 "vous relancez VLC."
 
 #: src/libvlc-module.c:1324
@@ -3897,15 +3889,14 @@ msgstr ""
 "Sélectionnez la combinaison de touches à utiliser pour passer en plein écran."
 
 #: src/libvlc-module.c:1344
-#, fuzzy
 msgid "Leave fullscreen"
 msgstr "Quitter le plein écran"
 
 #: src/libvlc-module.c:1345
-#, fuzzy
 msgid "Select the hotkey to use to leave fullscreen state."
 msgstr ""
-"Sélectionnez la combinaison de touches à utiliser pour passer en plein écran."
+"Sélectionnez la combinaison de touches à utiliser pour quitter le plein "
+"écran."
 
 #: src/libvlc-module.c:1346 modules/gui/macosx/MainWindow.m:141
 msgid "Play/Pause"
@@ -5698,14 +5689,12 @@ msgid "Capture the audio stream in stereo."
 msgstr "Capture audio en stéréo."
 
 #: modules/access/alsa.c:73
-#, fuzzy
 msgid "Capture format (default s16l)"
-msgstr "Format d'image (RVB par défaut)"
+msgstr "Format de capture (s16l par défaut)"
 
 #: modules/access/alsa.c:75
-#, fuzzy
 msgid "Capture format of audio stream."
-msgstr "Capture audio en stéréo."
+msgstr "Format de capture audio."
 
 #: modules/access/alsa.c:77 modules/access/oss.c:67
 #: modules/access_output/shout.c:95
@@ -5739,9 +5728,8 @@ msgid "PCM S8"
 msgstr "PCM S8"
 
 #: modules/access/alsa.c:95
-#, fuzzy
 msgid "GSM Audio"
-msgstr "Audio"
+msgstr "Audio GSM"
 
 #: modules/access/alsa.c:96
 msgid "PCM U16 LE"
@@ -5812,7 +5800,6 @@ msgid "ALSA"
 msgstr "ALSA"
 
 #: modules/access/alsa.c:108
-#, fuzzy
 msgid "ALSA audio capture input"
 msgstr "Entrée capture audio « ALSA »"
 
@@ -5846,11 +5833,13 @@ msgstr "Entrée disque Blu-Ray"
 
 #: modules/access/bluray.c:51
 msgid "Bluray menus"
-msgstr "Menus Blue-ray"
+msgstr "Menus Bluray"
 
 #: modules/access/bluray.c:52
 msgid "Use bluray menus. If disabled, the movie will start directly"
-msgstr "Utiliser les menus Blue-ray. Si inhibé le film débutera directement"
+msgstr ""
+"Utiliser les menus Bluray. Si cette option est inhibée, le film commencera "
+"directement"
 
 #: modules/access/bluray.c:60 modules/gui/qt4/ui/open_disk.h:300
 msgid "BluRay"
@@ -5950,9 +5939,8 @@ msgid "Audio CD - Track %02i"
 msgstr "CD Audio - Piste %02i"
 
 #: modules/access/dc1394.c:69
-#, fuzzy
 msgid "dc1394 input"
-msgstr "Entrée audio"
+msgstr "entrée dc1394"
 
 #: modules/access/decklink.cpp:43
 msgid "Input card to use"
@@ -6347,10 +6335,9 @@ msgid "No video or audio device selected."
 msgstr "Aucun périphérique audio ou vidéo sélectionné."
 
 #: modules/access/dshow/dshow.cpp:610
-#, fuzzy
 msgid "VLC cannot open ANY capture device.Check the error log for details."
 msgstr ""
-"VLC ne peut trouver de périphéeique de capture. Vérifiez les messages pour "
+"VLC ne peut trouver de périphérique de capture. Vérifiez les messages pour "
 "plus de détails."
 
 #: modules/access/dshow/dshow.cpp:1057
@@ -6371,7 +6358,6 @@ msgid "DVB adapter"
 msgstr "Adaptateur DVB"
 
 #: modules/access/dtv/access.c:38
-#, fuzzy
 msgid ""
 "If there is more than one digital broadcasting adapter, the adapter number "
 "must be selected. Numbering start from zero."
@@ -6381,13 +6367,15 @@ msgstr ""
 
 #: modules/access/dtv/access.c:41
 msgid "DVB device"
-msgstr "Périphérique DVD"
+msgstr "Périphérique DVB"
 
 #: modules/access/dtv/access.c:43
 msgid ""
 "If the adapter provides multiple independent tuner devices, the device "
 "number must be selected. Numbering starts from zero."
 msgstr ""
+"Si l'adaptateur propose plusieurs périphériques tuners indépendant, le "
+"numéro de périphérique doit être sélectionné. La numérotation commence à 0."
 
 #: modules/access/dtv/access.c:45
 msgid "Do not demultiplex"
@@ -6488,7 +6476,7 @@ msgstr "Priorité élevée"
 #: modules/access/dtv/access.c:96
 #, fuzzy
 msgid "Low-priority code rate"
-msgstr "Vitesse FEC basse priorité"
+msgstr "Priorité élevée"
 
 #: modules/access/dtv/access.c:97
 #, fuzzy
@@ -6567,17 +6555,17 @@ msgstr "Nombre de canaux AtmoLight"
 #: modules/access/dtv/access.c:148
 #, fuzzy
 msgid "Layer A time interleaving"
-msgstr "Aller au temps"
+msgstr "Aller à"
 
 #: modules/access/dtv/access.c:149
 #, fuzzy
 msgid "Layer B time interleaving"
-msgstr "Aller au temps"
+msgstr "Aller à"
 
 #: modules/access/dtv/access.c:150
 #, fuzzy
 msgid "Layer C time interleaving"
-msgstr "Aller au temps"
+msgstr "Aller à"
 
 #: modules/access/dtv/access.c:152
 msgid "Pilot"
@@ -8154,7 +8142,6 @@ msgid "Region left column"
 msgstr "Colonne gauche de la région"
 
 #: modules/access/screen/xcb.c:40
-#, fuzzy
 msgid "Abscissa of the capture reion in pixels."
 msgstr "Abscisse de la région de capture en pixels."
 
@@ -8785,9 +8772,8 @@ msgid "Primary language (Analog TV tuners only)"
 msgstr "Langue principale (tuner TV analogique uniquement)"
 
 #: modules/access/v4l2/video.c:286
-#, fuzzy
 msgid "Secondary language (Analog TV tuners only)"
-msgstr "Langue secondaire ou programme"
+msgstr "Langue secondaire (tuner TV analogique uniquement)"
 
 #: modules/access/v4l2/video.c:287
 msgid "Second audio program (Analog TV tuners only)"
@@ -8834,7 +8820,6 @@ msgid "VCD input"
 msgstr "Lecture VCD"
 
 #: modules/access/vcd/vcd.c:54
-#, fuzzy
 msgid "[vcd:][device][@[title][,[chapter]]]"
 msgstr "[vcd:][périphérique][@[titre][,[chapitre]]]"
 
@@ -9071,7 +9056,6 @@ msgid "TCP address to use (default localhost)"
 msgstr "Adresse TCP à utiliser (« localhost » par défaut)"
 
 #: modules/audio_filter/audiobargraph_a.c:41
-#, fuzzy
 msgid ""
 "TCP address to use to communicate with the video part of the Bar Graph "
 "(default localhost).In the case of bargraph incrustation, use localhost."
@@ -9085,7 +9069,6 @@ msgid "TCP port to use (default 12345)"
 msgstr "Port à utiliser (12345 pour la valeur par défaut)"
 
 #: modules/audio_filter/audiobargraph_a.c:45
-#, fuzzy
 msgid ""
 "TCP port to use to communicate with the video part of the Bar Graph (default "
 "12345).Use the same port as the one used in the rc interface."
@@ -9276,7 +9259,7 @@ msgstr "Sélectionner les canaux à conserver"
 #: modules/audio_filter/channel_mixer/mono.c:89
 msgid "This option silences all other channels except the selected channel."
 msgstr ""
-"Cette option permet de rendre muet tous les canaux sauf celui sélectionné."
+"Cette option permet de rendre muet tous les canaux sauf le canal sélectionné."
 
 #: modules/audio_filter/channel_mixer/mono.c:95
 msgid "Rear left"
@@ -9858,7 +9841,7 @@ msgstr "Périphérique de sortie audio"
 
 #: modules/audio_output/alsa.c:57
 msgid "Audio output device (using ALSA syntax)."
-msgstr "Périphérique de sorte audio (utilisant la syntaxe ALSA)."
+msgstr "Périphérique audio de sortie (en utilisant la syntaxe ALSA)."
 
 #: modules/audio_output/alsa.c:65
 msgid "Audio output channels"
@@ -9870,9 +9853,9 @@ msgid ""
 "output, it will be down-mixed.This parameter is ignored when digital pass-"
 "through is active."
 msgstr ""
-"Canaux disponibles pour la sortie audio. Si l'entrée a plus de canaux que la "
-"sortie, ils seront mixés. Ce paramètre est ignoré en cas de sortie numérique "
-"directe."
+"Canaux disponibles pour la sortie audio. Si l'entrée a plusde canaux que la "
+"sortie, ils seront mixés. Ce paramètre est ignoré en cas de transition "
+"digitale activée."
 
 #: modules/audio_output/alsa.c:74
 msgid "Surround 4.0"
@@ -9912,7 +9895,7 @@ msgid ""
 "The audio device \"%s\" could not be used:\n"
 "%s."
 msgstr ""
-"Le périphérique audio « %s » ne peut pas êtr utilisé:\n"
+"Le périphérique audio « %s » ne peut pas être utilisé :\n"
 "%s."
 
 #: modules/audio_output/amem.c:34
@@ -10083,7 +10066,7 @@ msgstr "Choisir un périphérique audio adapté pour être utilisé par KAI."
 
 #: modules/audio_output/kai.c:70
 msgid "Open audio in exclusive mode."
-msgstr "Ouvir l'audio en mode exclusif."
+msgstr "Ouvrir l'audio en mode exclusif."
 
 #: modules/audio_output/kai.c:72
 msgid ""
@@ -10118,9 +10101,8 @@ msgid "Portaudio identifier for the output device"
 msgstr "Identifiant Portaudio du périphérique"
 
 #: modules/audio_output/portaudio.c:112
-#, fuzzy
 msgid "PORTAUDIO audio output"
-msgstr "Sortie audio ALSA"
+msgstr "Sortie audio Portaudio"
 
 #: modules/audio_output/portaudio.c:427 modules/audio_output/waveout.c:375
 msgid "5.1"
@@ -10608,8 +10590,8 @@ msgstr "Respect strict des standards"
 msgid ""
 "Force a strict standard compliance when encoding (accepted values: -2 to 2)."
 msgstr ""
-"Forcer un respect strict des standards lors de l'encodage (les valeurs "
-"acceptées sont -2 à 2)."
+"Forcer un respect strict des standards lors de l'encodage. Les valeurs "
+"acceptées sont -2 à 2."
 
 #: modules/codec/avcodec/avcodec.h:231
 msgid "Luminance masking"
@@ -10760,7 +10742,7 @@ msgid ""
 "main options."
 msgstr ""
 "Cette option permet d'enregistrer les données  brutes si vous avez "
-"sélectionné ou forcé le décodeur pseudo (« Dummy »)  dans les options "
+"sélectionné ou forcé le décodeur pseudo (« Dummy ») dans les options "
 "générales."
 
 #: modules/codec/ddummy.c:47
@@ -10769,7 +10751,7 @@ msgstr "Pseudo-décodeur"
 
 #: modules/codec/ddummy.c:56 modules/codec/ddummy.c:57
 msgid "Dump decoder"
-msgstr "Décodeur dump"
+msgstr "Pseudo-décodeur"
 
 #: modules/codec/dirac.c:61 modules/codec/schroedinger.c:109
 msgid "Constant quality factor"
@@ -11058,7 +11040,7 @@ msgstr "Encodeur de sous-titres DVB"
 
 #: modules/codec/edummy.c:40
 msgid "Dummy encoder"
-msgstr "Pseudo-encodeur"
+msgstr "Pseudo-décodeur"
 
 #: modules/codec/faad.c:45
 msgid "AAC audio decoder (using libfaad2)"
@@ -11448,9 +11430,8 @@ msgid "Pseudo raw video packetizer"
 msgstr "Pseudo-empaqueteur vidéo brute"
 
 #: modules/codec/realvideo.c:126
-#, fuzzy
 msgid "RealVideo library decoder"
-msgstr "Décodeur QuickTime"
+msgstr "Décodeur RealVideo"
 
 #: modules/codec/schroedinger.c:63
 msgid "Rate control method"
@@ -11659,15 +11640,15 @@ msgstr ""
 
 #: modules/codec/schroedinger.c:298
 msgid "small - use small code blocks"
-msgstr ""
+msgstr "petit - Utilise des petits blocs de code"
 
 #: modules/codec/schroedinger.c:299
 msgid "medium - use medium sized code blocks"
-msgstr ""
+msgstr "moyen - Utilise des blocs de code moyens"
 
 #: modules/codec/schroedinger.c:300
 msgid "large - use large code blocks"
-msgstr ""
+msgstr "petit - Utilise des blocs de codes larges"
 
 #: modules/codec/schroedinger.c:301
 msgid "full - One code block per subband"
@@ -12263,14 +12244,13 @@ msgid "Maximum GOP size"
 msgstr "Taille maximale du GOP"
 
 #: modules/codec/x264.c:58
-#, fuzzy
 msgid ""
 "Sets maximum interval between IDR-frames.Larger values save bits, thus "
 "improving quality for a given bitrate at the cost of seeking precision."
 msgstr ""
-"Intervalle maximal entre des images IDR. De plus grandes valeurs économisent "
+"Intervalle maximum entre des images IDR. De plus grandes valeurs économisent "
 "de l'espace, et donc permettent une meilleure qualité à débit égal, au prix "
-"d'une perte de précision de la recherche. Utilisez -1 pour l'infini."
+"d'une perte de précision de la recherche."
 
 #: modules/codec/x264.c:62
 msgid "Minimum GOP size"
@@ -13073,6 +13053,8 @@ msgstr ""
 #: modules/codec/x264.c:397
 msgid "Use preset as default settings. Overridden by user settings."
 msgstr ""
+"Utiliser les paramètres par défaut. Modifiable par les paramètres "
+"utilisateur."
 
 #: modules/codec/x264.c:402
 msgid "dia"
@@ -13175,7 +13157,7 @@ msgstr "VBI & Télétexte"
 
 #: modules/control/dbus/dbus.c:137
 msgid "Unique DBUS service id (org.mpris.vlc-<pid>)"
-msgstr ""
+msgstr "Identifiant unique de service DBUS (org.mpris.vlc-<pid>)"
 
 #: modules/control/dbus/dbus.c:139
 msgid ""
@@ -13183,6 +13165,9 @@ msgid ""
 "The process identifier (PID) is added to the service name: org.mpris.vlc-"
 "<pid>"
 msgstr ""
+"Utiliser un dentifiant unique de service DBUS pour identifier une instance "
+"de VLC. Le PID du preocess est ajouté au nom du service : « org.mpris.vlc-"
+"<pid> »"
 
 #: modules/control/dbus/dbus.c:143
 msgid "DBus"
@@ -13443,7 +13428,7 @@ msgstr "Adresse IP du serveur maître"
 msgid ""
 "The IP address of the network master clock to use for clock synchronization."
 msgstr ""
-"Adresse IP du client maître pour la synchronisation d'horloge par le réseau."
+"Adresse IP de l'horloge maître réseau pour la synchronisation d'horloge."
 
 #: modules/control/netsync.c:66
 msgid "UDP timeout (in ms)"
@@ -13947,9 +13932,9 @@ msgid "Error: `goto' needs an argument greater than zero."
 msgstr "Erreur : « goto » a besoin d'un argument supérieur à zéro."
 
 #: modules/control/rc.c:1348
-#, fuzzy, c-format
+#, c-format
 msgid "Playlist has only %d elements"
-msgstr "La liste de lecture a seulement %u élément"
+msgstr "La liste de lecture n'a que %d éléments"
 
 #: modules/control/rc.c:1778 modules/control/rc.c:1818
 msgid "Please provide one of the following parameters:"
@@ -14092,7 +14077,7 @@ msgstr "Format"
 
 #: modules/demux/avformat/avformat.h:38
 msgid "Internal libavcodec format name"
-msgstr "Nom interne du format « libavcodec »"
+msgstr "Nom interne  « libavcodec » du format"
 
 #: modules/demux/avi/avi.c:51
 msgid "Force interleaved method"
@@ -14135,7 +14120,6 @@ msgid "Broken or missing AVI Index"
 msgstr "Index AVI absent ou abimé"
 
 #: modules/demux/avi/avi.c:676
-#, fuzzy
 msgid ""
 "Because this AVI file index is broken or missing, seeking will not work "
 "correctly.\n"
@@ -14146,14 +14130,14 @@ msgid ""
 msgstr ""
 "Ce fichier AVI a un index éronné ou absent, il ne sera pas possible de se "
 "déplacer dedans correctement.\n"
-"VLC ne réparera pas le fichier mais peu temporairement contourner ce "
+"VLC ne réparera pas le fichier mais peut temporairement contourner ce "
 "problème en construisant un index en mémoire.\n"
 "Cette opération peut prendre du temps sur des gros fichiers.\n"
 "Souhaitez-vous essayer de le réparer ?"
 
 #: modules/demux/avi/avi.c:682
 msgid "Build index then play"
-msgstr "Contruire l'index et lancer la lecture"
+msgstr "Contruire l'index puis lancer la lecture"
 
 #: modules/demux/avi/avi.c:682
 msgid "Play as is"
@@ -14215,7 +14199,7 @@ msgstr "Décoder"
 
 #: modules/demux/image.c:54
 msgid "Decode at the demuxer stage"
-msgstr "Décoder au niveau  démuxer"
+msgstr "Décoder au niveau démuxer"
 
 #: modules/demux/image.c:56
 msgid "Forced chroma"
@@ -14580,7 +14564,6 @@ msgid "Blues"
 msgstr "Blues"
 
 #: modules/demux/mp4/id3genres.h:29
-#, fuzzy
 msgid "Classic rock"
 msgstr "Rock classique"
 
@@ -14641,7 +14624,6 @@ msgid "Alternative"
 msgstr "Alternatif"
 
 #: modules/demux/mp4/id3genres.h:50
-#, fuzzy
 msgid "Death metal"
 msgstr "Death metal"
 
@@ -14698,7 +14680,6 @@ msgid "Game"
 msgstr "Jeux"
 
 #: modules/demux/mp4/id3genres.h:65
-#, fuzzy
 msgid "Sound clip"
 msgstr "Clip sonore"
 
@@ -14711,7 +14692,6 @@ msgid "Noise"
 msgstr "Bruit"
 
 #: modules/demux/mp4/id3genres.h:68
-#, fuzzy
 msgid "Alternative rock"
 msgstr "Rock alternatif"
 
@@ -14736,12 +14716,10 @@ msgid "Meditative"
 msgstr "Méditatif"
 
 #: modules/demux/mp4/id3genres.h:74
-#, fuzzy
 msgid "Instrumental pop"
 msgstr "Pop instrumentale"
 
 #: modules/demux/mp4/id3genres.h:75
-#, fuzzy
 msgid "Instrumental rock"
 msgstr "Rock instrumental"
 
@@ -14778,9 +14756,8 @@ msgid "Dream"
 msgstr "Dream"
 
 #: modules/demux/mp4/id3genres.h:84
-#, fuzzy
 msgid "Southern rock"
-msgstr "Rock sudiste"
+msgstr "Rock du Sud"
 
 #: modules/demux/mp4/id3genres.h:85
 msgid "Comedy"
@@ -14799,12 +14776,10 @@ msgid "Top 40"
 msgstr "Top 40"
 
 #: modules/demux/mp4/id3genres.h:89
-#, fuzzy
 msgid "Christian rap"
 msgstr "Rap chrétien"
 
 #: modules/demux/mp4/id3genres.h:90
-#, fuzzy
 msgid "Pop/funk"
 msgstr "Pop/funk"
 
@@ -14821,7 +14796,6 @@ msgid "Cabaret"
 msgstr "Cabaret"
 
 #: modules/demux/mp4/id3genres.h:94
-#, fuzzy
 msgid "New wave"
 msgstr "New wave"
 
@@ -14852,12 +14826,10 @@ msgid "Tribal"
 msgstr "Tribal"
 
 #: modules/demux/mp4/id3genres.h:101
-#, fuzzy
 msgid "Acid punk"
 msgstr "Acid punk"
 
 #: modules/demux/mp4/id3genres.h:102
-#, fuzzy
 msgid "Acid jazz"
 msgstr "Acid jazz"
 
@@ -14874,12 +14846,10 @@ msgid "Musical"
 msgstr "Musical"
 
 #: modules/demux/mp4/id3genres.h:106
-#, fuzzy
 msgid "Rock & roll"
 msgstr "Rock & roll"
 
 #: modules/demux/mp4/id3genres.h:107
-#, fuzzy
 msgid "Hard rock"
 msgstr "Hard rock"
 
@@ -15096,9 +15066,8 @@ msgid "Google Video Playlist importer"
 msgstr "Importeur de playlist Google Video "
 
 #: modules/demux/playlist/playlist.c:128
-#, fuzzy
 msgid "Dummy ifo demux"
-msgstr "Pseudo démultipléxeur ifo "
+msgstr "Démultipléxeur ifo"
 
 #: modules/demux/playlist/playlist.c:133
 msgid "iTunes Music Library importer"
@@ -15448,32 +15417,28 @@ msgstr ""
 "de descriptions enlèvent l'en-tête TS avant de déchiffrer. "
 
 #: modules/demux/ts.c:123
-#, fuzzy
 msgid "Filename of dump"
-msgstr "Nom de fichier"
+msgstr "Nom de fichier du dump"
 
 #: modules/demux/ts.c:124
 msgid "Specify a filename where to dump the TS in."
 msgstr "Nom du fichier dans lequel sera enregistré le flux TS."
 
 #: modules/demux/ts.c:126
-#, fuzzy
 msgid "Append"
-msgstr "Ajouter au fichier"
+msgstr "Ajouter"
 
 #: modules/demux/ts.c:128
-#, fuzzy
 msgid ""
 "If the file exists and this option is selected, the existing file will not "
 "be overwritten."
 msgstr ""
-"Si le fichier spécifié existe déjà, les nouvelles données seront ajoutées au "
-"fichier."
+"Si le fichier spécifié existe déjà et que cette option est activée, les "
+"nouvelles données seront ajoutées au fichier."
 
 #: modules/demux/ts.c:131
-#, fuzzy
 msgid "Dump buffer size"
-msgstr "Fichier du tampon du framebuffer"
+msgstr "Taille du tampon de dump"
 
 #: modules/demux/ts.c:133
 msgid ""
@@ -15608,35 +15573,33 @@ msgstr ""
 "Périphérique de framebuffer à utiliser pour le rendu (généralement /dev/fb0)."
 
 #: modules/gui/fbosd.c:106
-#, fuzzy
 msgid "Video aspect ratio"
-msgstr "Conserver les proportions"
+msgstr "Proportions de la vidéo"
 
 #: modules/gui/fbosd.c:108
-#, fuzzy
 msgid "Aspect ratio of the video image (4:3, 16:9). Default is square pixels."
-msgstr "Proportions (4:3, 16:9). Le défaut est 1:1 (pixels carrés)."
+msgstr ""
+"Proportions de l'image vidéo (4:3, 16:9). Le défaut est 1:1 (pixels carrés)"
 
 #: modules/gui/fbosd.c:110
-#, fuzzy
 msgid "Image file"
-msgstr "Clone"
+msgstr "Fichier d'image"
 
 #: modules/gui/fbosd.c:112
 msgid "Filename of image file to use on the overlay framebuffer."
 msgstr "Nom du fichier pour l'image à utiliser en superposition."
 
 #: modules/gui/fbosd.c:114
-#, fuzzy
 msgid "Transparency of the image"
-msgstr "Transparence  de l'histogramme"
+msgstr "Transparence de l'image"
 
 #: modules/gui/fbosd.c:115
-#, fuzzy
 msgid ""
 "Transparency value of the new image used in blending. By default it set to "
 "fully opaque (255). (from 0 for full transparency to 255 for full opacity)"
-msgstr "Transparence de l'histogramme (255 = opaque, 0 = transparent)."
+msgstr ""
+"Transparence de l'image. Par défaut complètement opaque (255 = opaque, 0 = "
+"transparent)."
 
 #: modules/gui/fbosd.c:119 modules/gui/macosx/VideoEffects.m:144
 #: modules/misc/logger.c:109 modules/video_filter/marq.c:86
@@ -15655,9 +15618,8 @@ msgid "X coordinate"
 msgstr "Position X"
 
 #: modules/gui/fbosd.c:123
-#, fuzzy
 msgid "X coordinate of the rendered image"
-msgstr "Position X de l'incrustation encodée"
+msgstr "Position X de l'image"
 
 #: modules/gui/fbosd.c:125 modules/video_filter/audiobargraph_v.c:52
 #: modules/video_filter/erase.c:60 modules/video_filter/logo.c:61
@@ -15666,18 +15628,16 @@ msgid "Y coordinate"
 msgstr "Position Y"
 
 #: modules/gui/fbosd.c:126
-#, fuzzy
 msgid "Y coordinate of the rendered image"
-msgstr "Position Y de l'incrustation encodée"
+msgstr "Position Y de l'image"
 
 #: modules/gui/fbosd.c:130
-#, fuzzy
 msgid ""
 "You can enforce the picture position on the overlay (0=center, 1=left, "
 "2=right, 4=top, 8=bottom, you can also use combinations of these values, e."
 "g. 6=top-right)."
 msgstr ""
-"Forcer la position du sous-titre sur la video (0=centré, 1=gauche, 2=droite, "
+"Forcer la position de l'image sur la video (0=centré, 1=gauche, 2=droite, "
 "4=haut, 8=bas, et vous pouvez utiliser une combinaison de ces valeurs, comme "
 "par exemple 6 = haut-droite)."
 
@@ -15729,9 +15689,8 @@ msgstr ""
 "jaune (rouge + bleu), #FFFFFF = blanc."
 
 #: modules/gui/fbosd.c:148
-#, fuzzy
 msgid "Clear overlay framebuffer"
-msgstr "Framebuffer en mémoire partagée"
+msgstr "Effacer le tampon de superposition"
 
 #: modules/gui/fbosd.c:149
 msgid ""
@@ -15744,18 +15703,16 @@ msgstr ""
 "précédents seront effacés du cache."
 
 #: modules/gui/fbosd.c:153
-#, fuzzy
 msgid "Render text or image"
-msgstr "Cloner l'image"
+msgstr "Afficher du texte ou une image"
 
 #: modules/gui/fbosd.c:154
 msgid "Render the image or text in current overlay buffer."
 msgstr "Afficher du texte ou une image dans le tampon de superposition."
 
 #: modules/gui/fbosd.c:157
-#, fuzzy
 msgid "Display on overlay framebuffer"
-msgstr "Framebuffer en mémoire partagée"
+msgstr "Afficher en superposition"
 
 #: modules/gui/fbosd.c:158
 msgid ""
@@ -15773,14 +15730,12 @@ msgid "Font"
 msgstr "Police"
 
 #: modules/gui/fbosd.c:213
-#, fuzzy
 msgid "Commands"
-msgstr "Commande"
+msgstr "Commandes"
 
 #: modules/gui/fbosd.c:218
-#, fuzzy
 msgid "GNU/Linux osd/overlay framebuffer interface"
-msgstr "Sortie vidéo « framebuffer console GNU/Linux »"
+msgstr "Sortie vidéo pour le framebuffer de GNU/Linux"
 
 #: modules/gui/hildon/maemo.c:63
 msgid "Maemo hildon interface"
@@ -16195,9 +16150,8 @@ msgstr ""
 "récents Apple."
 
 #: modules/gui/macosx/macosx.m:87
-#, fuzzy
 msgid "Run VLC with dark or bright interface style"
-msgstr "Lancer VLC avec un style d'interface sombre"
+msgstr "Lancer VLC avec un style d'interface sombre ou clair"
 
 #: modules/gui/macosx/macosx.m:88
 msgid "By default, VLC will use the dark interface style."
@@ -16733,9 +16687,8 @@ msgstr "Multicast"
 
 #: modules/gui/macosx/open.m:178 modules/gui/macosx/open.m:432
 #: modules/gui/macosx/open.m:1195
-#, fuzzy
 msgid "Capture Device"
-msgstr "Périphérique de cap&ture"
+msgstr "Périphérique de capture"
 
 #: modules/gui/macosx/open.m:185
 msgid ""
@@ -16800,7 +16753,6 @@ msgid "Download Plugin"
 msgstr "Télécharger"
 
 #: modules/gui/macosx/open.m:200
-#, fuzzy
 msgid ""
 "This input allows you to process input signals from QuickTime-compatible "
 "video devices.\n"
@@ -17165,7 +17117,6 @@ msgid "General Video Settings"
 msgstr "Paramètres vidéo généraux"
 
 #: modules/gui/macosx/simple_prefs.m:190
-#, fuzzy
 msgid "Subtitles & OSD"
 msgstr "Sous-titres & OSD"
 
@@ -17175,9 +17126,8 @@ msgid "Subtitles & On Screen Display Settings"
 msgstr "Paramètres de sous-titres et d'incrustation vidéo"
 
 #: modules/gui/macosx/simple_prefs.m:194
-#, fuzzy
 msgid "Input & Codecs"
-msgstr "Lecture / Codecs"
+msgstr "Lecture / Codecs"
 
 #: modules/gui/macosx/simple_prefs.m:194
 msgid "Input & Codec settings"
@@ -17345,7 +17295,7 @@ msgstr "Couleur du contour"
 
 #: modules/gui/macosx/simple_prefs.m:299
 msgid "Outline Thickness"
-msgstr "Épaisseur des contours"
+msgstr "Épaisseur du contour"
 
 #: modules/gui/macosx/simple_prefs.m:302
 msgid "Black screens in Fullscreen mode"
@@ -18253,7 +18203,7 @@ msgstr "Aucun fichier sélectionné"
 
 #: modules/gui/macosx/wizard.m:1091
 msgid "A file where to save the stream has to be selected."
-msgstr "Vous devez sélectionner un fichier vers lequel enregistrer"
+msgstr "Vous devez sélectionner un fichier pour enregistrer le flux."
 
 #: modules/gui/macosx/wizard.m:1093
 msgid ""
@@ -18397,89 +18347,85 @@ msgid "      %s: %s"
 msgstr "      %s : %s"
 
 #: modules/gui/ncurses.c:808
-#, fuzzy
 msgid "  [Incoming]"
-msgstr "+-[Entrée]"
+msgstr " [Entrée]"
 
 #: modules/gui/ncurses.c:810
-#, fuzzy, c-format
+#, c-format
 msgid "      input bytes read : %8.0f KiB"
-msgstr "| octets lus en entrée : %8.0f Kio"
+msgstr "      octets lus en entrée : %8.0f Kio"
 
 #: modules/gui/ncurses.c:812
-#, fuzzy, c-format
+#, c-format
 msgid "      input bitrate    :   %6.0f kb/s"
-msgstr "| débit en entrée      : %6.0f kb/s"
+msgstr "      débit en entrée      : %6.0f kb/s"
 
 #: modules/gui/ncurses.c:814
-#, fuzzy, c-format
+#, c-format
 msgid "      demux bytes read : %8.0f KiB"
-msgstr "| octets lus en demux  : %8.0f Kio"
+msgstr "      octets lus en demux  : %8.0f Kio"
 
 #: modules/gui/ncurses.c:816
-#, fuzzy, c-format
+#, c-format
 msgid "      demux bitrate    :   %6.0f kb/s"
-msgstr "| debit en demux       : %6.0f kb/s"
+msgstr "      debit en demux       : %6.0f kb/s"
 
 #: modules/gui/ncurses.c:822
-#, fuzzy
 msgid "  [Video Decoding]"
-msgstr "+-[Décodage vidéo]"
+msgstr "[Décodage vidéo]"
 
 #: modules/gui/ncurses.c:824
-#, fuzzy, c-format
+#, c-format
 msgid "      video decoded    :    %<PRId64>"
-msgstr "| vidéo décodée        : %5<PRIi64>"
+msgstr "      vidéo décodée        : %<PRId64>"
 
 #: modules/gui/ncurses.c:826
-#, fuzzy, c-format
+#, c-format
 msgid "      frames displayed :    %<PRId64>"
-msgstr "| trames affichées     : %5<PRIi64>"
+msgstr "      trames affichées     : %<PRId64>"
 
 #: modules/gui/ncurses.c:828
-#, fuzzy, c-format
+#, c-format
 msgid "      frames lost      :    %<PRId64>"
-msgstr "| trames perdues       : %5<PRIi64>"
+msgstr "      trames perdues       : %<PRId64>"
 
 #: modules/gui/ncurses.c:834
-#, fuzzy
 msgid "  [Audio Decoding]"
-msgstr "+-[Décodage audio]"
+msgstr "[Décodage audio]"
 
 #: modules/gui/ncurses.c:836
-#, fuzzy, c-format
+#, c-format
 msgid "      audio decoded    :    %<PRId64>"
-msgstr "| audio décodé         : %5<PRIi64>"
+msgstr "audio décodé         : %<PRId64>"
 
 #: modules/gui/ncurses.c:838
-#, fuzzy, c-format
+#, c-format
 msgid "      buffers played   :    %<PRId64>"
-msgstr "| buffers joués        : %5<PRIi64>"
+msgstr "buffers joués        : %<PRId64>"
 
 #: modules/gui/ncurses.c:840
-#, fuzzy, c-format
+#, c-format
 msgid "      buffers lost     :    %<PRId64>"
-msgstr "| buffers perdus       : %5<PRIi64>"
+msgstr "buffers perdus       : %<PRId64>"
 
 #: modules/gui/ncurses.c:845
-#, fuzzy
 msgid "  [Streaming]"
-msgstr "+-[Diffusion]"
+msgstr "[Diffusion]"
 
 #: modules/gui/ncurses.c:847
-#, fuzzy, c-format
+#, c-format
 msgid "      packets sent     :    %5i"
-msgstr "| paquets envoyés      : %5<PRIi64>"
+msgstr "      paquets envoyés      : %5i"
 
 #: modules/gui/ncurses.c:848
-#, fuzzy, c-format
+#, c-format
 msgid "      bytes sent       : %8.0f KiB"
-msgstr "| octets envoyés            : %8.0f Kio"
+msgstr "      octets envoyés            : %8.0f Kio"
 
 #: modules/gui/ncurses.c:850
-#, fuzzy, c-format
+#, c-format
 msgid "      sending bitrate  :   %6.0f kb/s"
-msgstr "| débit émission       : %6.0f kb/s"
+msgstr "      débit émission       : %6.0f kb/s"
 
 #: modules/gui/ncurses.c:868
 msgid "[Display]"
@@ -18817,9 +18763,8 @@ msgid "Show extended settings"
 msgstr "Afficher les options étendues"
 
 #: modules/gui/qt4/components/controller.hpp:127
-#, fuzzy
 msgid "Show playlist"
-msgstr "Afficher/cacher la liste de lecture"
+msgstr "Afficher la liste de lecture"
 
 #: modules/gui/qt4/components/controller.hpp:128
 msgid "Take a snapshot"
@@ -18827,7 +18772,7 @@ msgstr "Prendre une capture d'écran"
 
 #: modules/gui/qt4/components/controller.hpp:129
 msgid "Loop from point A to point B continuously."
-msgstr "Boucle entre les points A et B de façon continue."
+msgstr "Boucler entre les points A et B de façon continue."
 
 #: modules/gui/qt4/components/controller.hpp:129
 msgid "Frame by frame"
@@ -18877,12 +18822,12 @@ msgid ""
 "Loop from point A to point B continuously\n"
 "Click to set point A"
 msgstr ""
-"Boucle entre les points A et B de façon continue\n"
-"Cliquer pour le point A"
+"Boucler entre les points A et B de façon continue\n"
+"Cliquez pour le point A"
 
 #: modules/gui/qt4/components/controller_widget.cpp:255
 msgid "Click to set point B"
-msgstr "Cliquer pour le point B"
+msgstr "Cliquez pour le point B"
 
 #: modules/gui/qt4/components/controller_widget.cpp:260
 msgid "Stop the A to B loop"
@@ -19087,7 +19032,7 @@ msgstr "Télécharger la jaquette"
 #: modules/gui/qt4/components/interface_widgets.cpp:561
 #: modules/gui/qt4/dialogs/toolbar.cpp:458
 msgid "Elapsed time"
-msgstr "Temps écoulé"
+msgstr "Durée écoulée"
 
 #: modules/gui/qt4/components/interface_widgets.cpp:565
 #: modules/gui/qt4/dialogs/toolbar.cpp:462
@@ -19323,9 +19268,8 @@ msgid "Select File"
 msgstr "Sélectionner un fichier"
 
 #: modules/gui/qt4/components/preferences_widgets.cpp:1318
-#, fuzzy
 msgid "Select an action to change the associated hotkey"
-msgstr "Sélectionnez une action pour changer la touche associée :"
+msgstr "Sélectionnez une action pour changer la touche associée"
 
 #: modules/gui/qt4/components/preferences_widgets.cpp:1326
 msgid "Hotkey"
@@ -19342,19 +19286,14 @@ msgid "Unset"
 msgstr "Non-assigné"
 
 #: modules/gui/qt4/components/preferences_widgets.cpp:1546
-#, fuzzy
 msgid "Hotkey for "
-msgstr "Raccourci clavier"
+msgstr "Raccourci pour "
 
 #: modules/gui/qt4/components/preferences_widgets.cpp:1550
-#, fuzzy
 msgid "Press the new keys for "
-msgstr ""
-"Appuyez sur la nouvelle combinaison pour\n"
-"« %@ »"
+msgstr "Appuyez sur la nouvelle combinaison pour "
 
 #: modules/gui/qt4/components/preferences_widgets.cpp:1581
-#, fuzzy
 msgid "Warning: the key is already assigned to \""
 msgstr "Attention : la combinaison est déjà assignée à « "
 
@@ -19364,14 +19303,12 @@ msgid "Key: "
 msgstr "Touche :"
 
 #: modules/gui/qt4/components/simple_preferences.cpp:92
-#, fuzzy
 msgid "Subtitles && OSD"
-msgstr "Sous-titres & OSD"
+msgstr "Sous-titres && OSD"
 
 #: modules/gui/qt4/components/simple_preferences.cpp:94
-#, fuzzy
 msgid "Input && Codecs"
-msgstr "Lecture / Codecs"
+msgstr "Lecture && Codecs"
 
 #: modules/gui/qt4/components/simple_preferences.cpp:216
 msgid "Video Settings"
@@ -19798,9 +19735,8 @@ msgid "&Metadata"
 msgstr "&Métadonnées"
 
 #: modules/gui/qt4/dialogs/mediainfo.cpp:64
-#, fuzzy
 msgid "&Codec"
-msgstr "Codec "
+msgstr "&Codec "
 
 #: modules/gui/qt4/dialogs/mediainfo.cpp:68
 msgid "S&tatistics"
@@ -19879,14 +19815,12 @@ msgid "&Stream"
 msgstr "&Diffuser"
 
 #: modules/gui/qt4/dialogs/open.cpp:122
-#, fuzzy
 msgid "&Convert"
-msgstr "Convertir"
+msgstr "&Convertir"
 
 #: modules/gui/qt4/dialogs/open.cpp:206
-#, fuzzy
 msgid "&Convert / Save"
-msgstr "C&onvertir / Enregistrer"
+msgstr "&Convertir / Enregistrer"
 
 #: modules/gui/qt4/dialogs/openurl.cpp:47
 msgid "Open URL"
@@ -19897,9 +19831,8 @@ msgid "Enter URL here..."
 msgstr "Entrer l'URL ici…"
 
 #: modules/gui/qt4/dialogs/openurl.cpp:66
-#, fuzzy
 msgid "Please enter the URL or path to the media you want to play"
-msgstr "Entrez l'URL ou le chemin du média que vous voulez lire."
+msgstr "Entrez l'URL ou le chemin du média que vous voulez lire"
 
 #: modules/gui/qt4/dialogs/openurl.cpp:70
 msgid ""
@@ -19929,7 +19862,7 @@ msgstr "&Chercher :"
 
 #: modules/gui/qt4/dialogs/plugins.cpp:196
 msgid "Get more extensions from"
-msgstr "Trouver d'autres extensions depuis"
+msgstr "Récupérer plus d'extensions depuis"
 
 #: modules/gui/qt4/dialogs/plugins.cpp:228
 msgid "More information..."
@@ -20046,15 +19979,14 @@ msgid "Stream Output"
 msgstr "Flux de sortie"
 
 #: modules/gui/qt4/dialogs/sout.cpp:49
-#, fuzzy
 msgid ""
 "This dialog will allow you to stream or convert your media for use locally, "
 "on your private network, or on the Internet.\n"
 "You should start by checking that source matches what you want your input to "
 "be and then press the \"Next\" button to continue.\n"
 msgstr ""
-"Ce assistant vous permet de diffuser ou de convertir un média localement, "
-"sur votre réseau privé ou sur Internet.\n"
+"Ce dialogue vous permet de diffuser ou de convertir un média localement, sur "
+"votre réseau privé ou sur Internet.\n"
 "Vérifiez que la source correspond bien à ce que vous désirez et ensuite "
 "appuyez sur « suivant » pour continuer.\n"
 
@@ -20559,14 +20491,12 @@ msgid "Tools"
 msgstr "Outils"
 
 #: modules/gui/qt4/menus.cpp:1116
-#, fuzzy
 msgid "Hide VLC media player in taskbar"
-msgstr "C&acher le lecteur multimédia VLC dans la barre des tâches"
+msgstr "Cacher le lecteur multimédia VLC dans la barre des tâches"
 
 #: modules/gui/qt4/menus.cpp:1122
-#, fuzzy
 msgid "Show VLC media player"
-msgstr "A&fficher le lecteur multimédia VLC"
+msgstr "Afficher le lecteur multimédia VLC"
 
 #: modules/gui/qt4/menus.cpp:1546 modules/gui/qt4/ui/messages_panel.h:143
 msgid "&Clear"
@@ -20712,9 +20642,9 @@ msgid ""
 "An alternative can be '30;30;50;40;40;100;50;50;160;150;150;255' "
 msgstr ""
 "Définir la couleur du curseur de volume\n"
-" en spécifiant 12 nombres séparés par ';'\n"
-" Par défault on a '255;255;255;20;226;20;255;176;15;235;30;20'\n"
-" Une alternative peut être '30;30;50;40;40;100;50;50;160;150;150;255' "
+"en spécifiant 12 nombres séparés par ';'\n"
+"Par défault on a '255;255;255;20;226;20;255;176;15;235;30;20'\n"
+"Une alternative peut être '30;30;50;40;40;100;50;50;160;150;150;255' "
 
 #: modules/gui/qt4/qt4.cpp:144
 msgid "Selection of the starting mode and look "
@@ -21058,9 +20988,8 @@ msgid "Freebox TV"
 msgstr "Freebox TV"
 
 #: modules/lua/vlc.c:190
-#, fuzzy
 msgid "French TV"
-msgstr "Français"
+msgstr "Télévision Française"
 
 #: modules/media_library/sql_media_library.c:33
 msgid "Filename of the SQLite database"
@@ -21254,14 +21183,14 @@ msgid ""
 msgstr "Sélectionner le format d'enregistrement, « text » (défaut) ou « html »"
 
 #: modules/misc/logger.c:124
-#, fuzzy
 msgid ""
 "Specify the log format. Available choices are \"text\" (default), \"html\", "
 "\"syslog\" (special mode to send to syslog instead of file), and \"android"
 "\" (special mode to send to android logging facility)."
 msgstr ""
 "Sélectionner le format d'enregistrement, « text » (défaut),« html » ou "
-"« syslog » (pour envoyer dans le syslog au lieu d'un fichier)."
+"« syslog » (pour envoyer dans le syslog au lieu d'un fichier), et  « android "
+"» (mode spécial pour les logs android)."
 
 #: modules/misc/logger.c:129
 msgid "Syslog facility"
@@ -21751,9 +21680,8 @@ msgid "Growl Notification Plugin"
 msgstr "Plugin d'annonce Growl"
 
 #: modules/notify/growl.m:286
-#, fuzzy
 msgid "New input playing"
-msgstr "Joue actuellement"
+msgstr "Nouvelle entrée en lecture"
 
 #: modules/notify/growl.m:309
 msgid "Now playing"
@@ -21797,19 +21725,16 @@ msgid "Telepathy \"Now Playing\" (MissionControl)"
 msgstr ""
 
 #: modules/notify/xosd.c:68
-#, fuzzy
 msgid "Flip vertical position"
-msgstr "Retournement vertical"
+msgstr "Inverser la position verticale"
 
 #: modules/notify/xosd.c:69
-#, fuzzy
 msgid "Display XOSD output at the bottom of the screen instead of the top."
-msgstr "Afficher le titre au dessus de la vidéo."
+msgstr "Affiche la sortie xosd au bas de l'écran plutôt qu'en haut."
 
 #: modules/notify/xosd.c:72
-#, fuzzy
 msgid "Vertical offset"
-msgstr "Retournement vertical"
+msgstr "Décalage vertical"
 
 #: modules/notify/xosd.c:73
 msgid ""
@@ -21820,9 +21745,8 @@ msgstr ""
 "valeur par défaut est de 30 pixels."
 
 #: modules/notify/xosd.c:77
-#, fuzzy
 msgid "Shadow offset"
-msgstr "Opacité de l'ombre"
+msgstr "Décalage de l'ombre"
 
 #: modules/notify/xosd.c:78
 msgid ""
@@ -21840,9 +21764,8 @@ msgid "Color used to display text in the XOSD output."
 msgstr "Couleur utilisée pour afficher le texte dans la sortie xosd."
 
 #: modules/notify/xosd.c:89
-#, fuzzy
 msgid "XOSD interface"
-msgstr "Afficher l'interface"
+msgstr "Interface XOSD"
 
 #: modules/packetizer/copy.c:48
 msgid "Copy packetizer"
@@ -22238,6 +22161,8 @@ msgid ""
 "Specify a delay (in ms) for this elementary stream. Positive means delay and "
 "negative means advance."
 msgstr ""
+"Spécifiez un délais (en ms) pour ce flux élémentaire. Positif pour un retard "
+"et négatif pour une avance."
 
 #: modules/stream_out/delay.c:55
 msgid "Delay a stream"
@@ -22561,8 +22486,7 @@ msgstr "Catégorie de session"
 msgid ""
 "This allows you to specify a category for the session, that will be "
 "announced if you choose to use SAP."
-msgstr ""
-"Permet de spécifier une catégorie pour une session qui sera annoncée par SAP."
+msgstr "Catégorie de la session qui sera annoncée par SAP."
 
 #: modules/stream_out/rtp.c:100 modules/stream_out/standard.c:62
 msgid "Session description"
@@ -22698,24 +22622,23 @@ msgid "Command UDP port"
 msgstr "Port UDP de commande"
 
 #: modules/stream_out/select.c:47
-#, fuzzy
 msgid ""
 "UDP port to listen to for commands (show | enable <pid> | disable <pid>)."
-msgstr "Port UDP sur lequel attendre des commandes."
+msgstr ""
+"Port UDP sur lequel attendre des commandes (show | enable <pid> | disable "
+"<pid>)."
 
 #: modules/stream_out/select.c:49
-#, fuzzy
 msgid "Disable ES id"
-msgstr "Désactiver"
+msgstr "Désactiver ID ES"
 
 #: modules/stream_out/select.c:51
 msgid "Disable ES id at startup."
 msgstr "Inhiber l'identifiant de flux élémentaire au démarrage."
 
 #: modules/stream_out/select.c:53
-#, fuzzy
 msgid "Enable ES id"
-msgstr "Activer la vidéo"
+msgstr "Activer ID ES"
 
 #: modules/stream_out/select.c:55
 msgid "Only enable ES id at startup."
@@ -24221,7 +24144,7 @@ msgstr "Chroma pour l'image de base"
 
 #: modules/video_filter/blendbench.c:62
 msgid "Chroma which the base image will be loaded in"
-msgstr ""
+msgstr "Chroma de base de l'image"
 
 #: modules/video_filter/blendbench.c:64
 msgid "Image which will be blended"
@@ -24902,27 +24825,24 @@ msgid "Spatial luma strength (0-254)"
 msgstr "Étendue spatiale luma (0-254)"
 
 #: modules/video_filter/hqdn3d.c:54
-#, fuzzy
 msgid "Spatial luma strength (default 4)"
-msgstr "Puissande de l'effet par défaut pour la police"
+msgstr "Puissance de l'effet spatial luma (4 par défaut)"
 
 #: modules/video_filter/hqdn3d.c:55
 msgid "Spatial chroma strength (0-254)"
 msgstr "Étendue spatiale chroma (0-254)"
 
 #: modules/video_filter/hqdn3d.c:56
-#, fuzzy
 msgid "Spatial chroma strength (default 3)"
-msgstr "Puissande de l'effet par défaut pour la police"
+msgstr "Puissance de l'effet spatial chroma ( 3 par défaut)"
 
 #: modules/video_filter/hqdn3d.c:57
 msgid "Temporal luma strength (0-254)"
 msgstr "Étendue temporelle luma  (0-254)"
 
 #: modules/video_filter/hqdn3d.c:58
-#, fuzzy
 msgid "Temporal luma strength (default 6)"
-msgstr "Puissande de l'effet par défaut pour la police"
+msgstr "Puissance de l'effet temporel luma (6 par défaut)"
 
 #: modules/video_filter/hqdn3d.c:59
 msgid "Temporal chroma strength (0-254)"
@@ -26732,8 +26652,8 @@ msgid ""
 "Force the dummy video output to create images using a specific chroma format "
 "instead of trying to improve performances by using the most efficient one."
 msgstr ""
-"Force la sortie vidéo muette à créer des images en utilisant un format "
-"chroma spécifique au lieu d'essayer d'améliorer les performances en "
+"Force la sortie vidéo pseudo (« Dummy ») à créer des images en utilisant un "
+"format chroma spécifique au lieu d'essayer d'améliorer les performances en "
 "utilisant le plus performant."
 
 #: modules/video_output/vdummy.c:48
@@ -26876,7 +26796,7 @@ msgid "Video acceleration not available"
 msgstr "L'accélération vidéo n'est pas disponible"
 
 #: modules/video_output/xcb/xvideo.c:337
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your video output acceleration driver does not support the required "
 "resolution: %ux%u pixels. The maximum supported resolution is %<PRIu32>x"
@@ -26884,8 +26804,8 @@ msgid ""
 "Video output acceleration will be disabled. However, rendering videos with "
 "overly large resolution may cause severe performance degration."
 msgstr ""
-"Votre pilote XVideo accéléré ne supporte pas la résolution demandée : %ux%u "
-"pixels. La résolution maximale supportée est %<PRIu32>x%<PRIu32>.\n"
+"Votre pilote vidéo ne supporte pas la résolution demandée : %ux%u pixels. La "
+"résolution maximale supportée est %<PRIu32>x%<PRIu32>.\n"
 "La sortie vidéo accéléré sera inhibée. Cependant, utiliser des résolutions "
 "très grandes pour la vidéo peut provoquer de fortes dégradations des "
 "performances."
@@ -27371,12 +27291,10 @@ msgstr ""
 "un flux</i> de nouveau."
 
 #: share/lua/http/index.html:274
-#, fuzzy
 msgid "Are you sure you wish to create the stream ?"
 msgstr "Voulez-vous créer ce flux ?"
 
 #: share/lua/http/mobile_equalizer.html:62
-#, fuzzy
 msgid "Preamp: "
 msgstr "Préamp :"
 
@@ -27709,9 +27627,8 @@ msgid "Overlay subtitles on the video"
 msgstr "Incruster les sous-titres sur la vidéo"
 
 #: modules/gui/qt4/ui/sout.h:329
-#, fuzzy
 msgid "Destinations"
-msgstr "Destination"
+msgstr "Destinations"
 
 #: modules/gui/qt4/ui/sout.h:330
 msgid "New destination"
@@ -27955,9 +27872,8 @@ msgid "Show systray icon"
 msgstr "Icône dans la barre système"
 
 #: modules/gui/qt4/ui/sprefs_interface.h:537
-#, fuzzy
 msgid "Systray popup when minimized"
-msgstr "Mettre en pause la lecture si minimisé"
+msgstr "Infobulles depuis la zone de notification si minimisé"
 
 #: modules/gui/qt4/ui/sprefs_interface.h:538
 msgid "Force window style:"
@@ -28104,7 +28020,6 @@ msgid "Launching an update request..."
 msgstr "Lancement d'une requête de mise à jour…"
 
 #: modules/gui/qt4/ui/update.h:151
-#, fuzzy
 msgid "Do you want to download it ?"
 msgstr "Voulez-vous la télécharger ?"
 
@@ -28258,956 +28173,1253 @@ msgstr "En boucle"
 msgid "Media Manager List"
 msgstr "Liste du gestionnaire de médias"
 
-#~ msgid ""
-#~ "More options on background, shadow and outline are available in the "
-#~ "advanced preferences."
-#~ msgstr ""
-#~ "Plus d'options sur l'arrière-plan, les ombres et le coutour dans les "
-#~ "préférences avancées."
+msgid ""
+"More options on background, shadow and outline are available in the advanced "
+"preferences."
+msgstr ""
+"Plus d'options sur l'arrière-plan, les ombres et le coutour dans les "
+"préférences avancées."
 
-#~ msgid "Advance of audio over video:"
-#~ msgstr "Avance de l'audio sur la vidéo :"
+msgid "Advance of audio over video:"
+msgstr "Avance de l'audio sur la vidéo :"
 
-#~ msgid "Side speakers"
-#~ msgstr "Haut-parleurs latéraux"
+msgid "Side speakers"
+msgstr "Haut-parleurs latéraux"
 
-#~ msgid "Center and subwoofer"
-#~ msgstr "Centre et caisson de basse"
+msgid "Center and subwoofer"
+msgstr "Centre et caisson de basse"
 
-#~ msgid "S/PDIF"
-#~ msgstr "S/PDIF"
+msgid "S/PDIF"
+msgstr "S/PDIF"
 
-#~ msgid "Dump"
-#~ msgstr "Dump"
+msgid "Dump"
+msgstr "Dump"
 
-#~ msgid "dbus"
-#~ msgstr "dbus"
+msgid "dbus"
+msgstr "dbus"
 
-#~ msgid "Ball color, one of \"red\", \"blue\" and \"green\"."
-#~ msgstr "Couleur de la balle, parmi « rouge », « bleu » et « vert »."
+msgid "Ball color, one of \"red\", \"blue\" and \"green\"."
+msgstr "Couleur de la balle, parmi « rouge », « bleu » et « vert »."
 
 #, fuzzy
-#~ msgid "Live Update"
-#~ msgstr "Modifier"
+msgid "Live Update"
+msgstr "Modifier"
 
-#~ msgid ""
-#~ "One of \"u8\", \"s8\", \"u16\", \"s16\", \"u16_le\", \"s16_le\", \"u16_be"
-#~ "\", \"s16_be\", \"fixed32\", \"float32\" or \"spdif\""
-#~ msgstr ""
-#~ "Un parmi « u8 », « s8 », « u16 », « s16 », « u16_le », « s16_le », "
-#~ "« u16_be », « s16_be », « fixed32 », « float32 » ou « spdif »"
+msgid ""
+"One of \"u8\", \"s8\", \"u16\", \"s16\", \"u16_le\", \"s16_le\", \"u16_be\", "
+"\"s16_be\", \"fixed32\", \"float32\" or \"spdif\""
+msgstr ""
+"Un parmi « u8 », « s8 », « u16 », « s16 », « u16_le », « s16_le », "
+"« u16_be », « s16_be », « fixed32 », « float32 » ou « spdif »"
 
-#~ msgid ""
-#~ "This defines the address, port and path the RTSP VOD server will listen "
-#~ "on.\n"
-#~ "Syntax is address:port/path. The default is to listen on all interfaces "
-#~ "(address 0.0.0.0), on port 554, with no path.\n"
-#~ "To listen only on the local interface, use \"localhost\" as address."
-#~ msgstr ""
-#~ "Vous pouvez configurer l'adresse, le port et l'emplacement sur lequel "
-#~ "l'interface RTSP écoutera…\n"
-#~ " La syntaxe est adresse:port/emplacement. Le comportement par défaut est "
-#~ "d'écouter sur l'hôte local sur toutes les interfaces (adresse 0.0.0.0), "
-#~ "port 554, sans emplacement.\n"
-#~ "Pour n'écouter que sur l'interface locale, utilisez « localhost »."
+msgid ""
+"This defines the address, port and path the RTSP VOD server will listen on.\n"
+"Syntax is address:port/path. The default is to listen on all interfaces "
+"(address 0.0.0.0), on port 554, with no path.\n"
+"To listen only on the local interface, use \"localhost\" as address."
+msgstr ""
+"Vous pouvez configurer l'adresse, le port et l'emplacement sur lequel "
+"l'interface RTSP écoutera…\n"
+" La syntaxe est adresse:port/emplacement. Le comportement par défaut est "
+"d'écouter sur l'hôte local sur toutes les interfaces (adresse 0.0.0.0), port "
+"554, sans emplacement.\n"
+"Pour n'écouter que sur l'interface locale, utilisez « localhost »."
+
+msgid "Left front"
+msgstr "Avant Gauche"
+
+msgid "Exposure"
+msgstr "Exposition"
+
+msgid "Exposure."
+msgstr "Exposition."
+
+msgid " - Empty - "
+msgstr " - Vide - "
+
+msgid ""
+"This saves the audio output volume when you use the mute function. You "
+"should not change this option manually."
+msgstr ""
+"Le volume courant est enregistré dans cette variable quand vous sélectionnez "
+"« couper le son ». Vous ne devriez pas modifier cette valeur manuellement."
+
+msgid "Prefer system plugins over VLC"
+msgstr "Préférer les plugins systèmes plutôt que ceux de VLC"
+
+msgid ""
+"Indicates whether VLC will prefer native plugins installed on system over "
+"VLC owns plugins whenever a choice is available."
+msgstr ""
+"Indique si VLC doit préférer les plugins natifs installés sur le système "
+"plutôt que les propres plugins de VLC chaque fois que le choix est possible."
+
+msgid ""
+"If your processor supports the MMX instructions set, VLC can take advantage "
+"of them."
+msgstr ""
+"Si votre processeur reconnaît le jeu d'instructions MMX, VLC peut en "
+"profiter."
+
+msgid ""
+"If your processor supports the 3D Now! instructions set, VLC can take "
+"advantage of them."
+msgstr ""
+"Si votre processeur reconnaît le jeu d'instructions 3D Now!, VLC peut en "
+"profiter."
+
+msgid "Enable CPU MMX EXT support"
+msgstr "Activer le support MMX EXT du processeur"
+
+msgid ""
+"If your processor supports the MMX EXT instructions set, VLC can take "
+"advantage of them."
+msgstr ""
+"Si votre processeur reconnaît le jeu d'instructions MMX EXT, VLC peut en "
+"profiter."
+
+msgid ""
+"If your processor supports the SSE instructions set, VLC can take advantage "
+"of them."
+msgstr ""
+"Si votre processeur reconnaît le jeu d'instructions SSE, VLC peut en "
+"profiter."
+
+msgid "Enable CPU SSE2 support"
+msgstr "Activer le support SSE2 du processeur"
+
+msgid ""
+"If your processor supports the SSE2 instructions set, VLC can take advantage "
+"of them."
+msgstr ""
+"Si votre processeur reconnaît le jeu d'instructions SSE2, VLC peut en "
+"profiter."
+
+msgid "Enable CPU SSE3 support"
+msgstr "Activer le support SSE du processeur"
+
+msgid ""
+"If your processor supports the SSE3 instructions set, VLC can take advantage "
+"of them."
+msgstr ""
+"Si votre processeur reconnaît le jeu d'instructions SSE, VLC peut en "
+"profiter."
+
+msgid "Enable CPU SSSE3 support"
+msgstr "Activer le support SSSE3 du processeur"
+
+msgid ""
+"If your processor supports the SSSE3 instructions set, VLC can take "
+"advantage of them."
+msgstr ""
+"Si votre processeur reconnaît le jeu d'instructions SSSE3 , VLC peut en "
+"profiter."
+
+msgid "Enable CPU SSE4.1 support"
+msgstr "Activer le support SSE4.1 du processeur"
+
+msgid ""
+"If your processor supports the SSE4.1 instructions set, VLC can take "
+"advantage of them."
+msgstr ""
+"Si votre processeur reconnaît le jeu d'instructions SSE4.1, VLC peut en "
+"profiter."
+
+msgid "Enable CPU SSE4.2 support"
+msgstr "Activer le support SSE4.2 du processeur"
+
+msgid ""
+"If your processor supports the SSE4.2 instructions set, VLC can take "
+"advantage of them."
+msgstr ""
+"Si votre processeur reconnaît le jeu d'instructions SSE4.2, VLC peut en "
+"profiter."
+
+msgid ""
+"If your processor supports the AltiVec instructions set, VLC can take "
+"advantage of them."
+msgstr ""
+"Si votre processeur reconnaît le jeu d'instructions AltiVec, VLC peut en "
+"profiter."
+
+msgid "Go back in browsing history"
+msgstr "Précédent (historique)"
+
+msgid "Go forward in browsing history"
+msgstr "Suivant (historique)"
+
+msgid ""
+"%s\n"
+"Done %s (100.0%%)"
+msgstr ""
+"%s\n"
+"Fait %s (100.0%%)"
+
+msgid "Alsa"
+msgstr "ALSA"
+
+msgid "Avio"
+msgstr "Avio"
+
+msgid ""
+"Adapter cards have a device file in directory named /dev/dvb/adapter[n] with "
+"n>=0."
+msgstr ""
+"Les cartes ont un nom de périphérique dans le dossier /dev/dvb/adapter[n] où "
+"n>=0"
+
+msgid "In kHz for DVB-S or Hz for DVB-C/T"
+msgstr "En kHz pour le DVB-S ou Hz pour le DVB-C/T"
+
+msgid "In kHz for DVB-C/S/T"
+msgstr "En kHz pour le DVB-C/S/T"
+
+msgid "Inversion mode [0=off, 1=on, 2=auto]"
+msgstr "Mode d'inversion [0=off, 1=on, 2=auto]"
+
+msgid "This allows you to stream an entire transponder with a \"budget\" card."
+msgstr "Diffuser un transpondeur entier avec une carte « budget »."
+
+msgid "Satellite number in the Diseqc system"
+msgstr "Numéro du satellite dans le système Diseqc"
+
+msgid "[0=no diseqc, 1-4=satellite number]."
+msgstr "[0=pas de diseqc, 1-4=numéro du satellite]."
+
+msgid "In Volts [0, 13=vertical, 18=horizontal]."
+msgstr "En Volts [0, 13=vertival, 18=horizontal]."
+
+msgid ""
+"Enable high voltage if your cables are particularly long. This is not "
+"supported by all frontends."
+msgstr ""
+"Activer le voltage élevé si vos câbles sont particulièrement longs. Cette "
+"option n'est pas suportée par tous les adaptateurs."
+
+msgid "[0=off, 1=on, -1=auto]."
+msgstr "[0=off, 1=on, -1=auto]."
+
+msgid "FEC=Forward Error Correction mode [9=auto]."
+msgstr "FEC=Forward Error Correction mode [9=auto]."
+
+msgid "Antenna lnb_lof1 (kHz)"
+msgstr "lnb_lof1 de l'antenne (kHz)"
+
+msgid "Low Band Local Osc Freq in kHz (usually 9.75GHz)"
+msgstr "« Low Band Local Osc Freq » en kHz, habituellement 9.75GHz"
+
+msgid "Antenna lnb_lof2 (kHz)"
+msgstr "lnb_lof2 de l'antenne (kHz)"
+
+msgid "High Band Local Osc Freq in kHz (usually 10.6GHz)"
+msgstr "« High Band Local Osc Freq » en kHz, habituellement 10.6GHz"
+
+msgid "Antenna lnb_slof (kHz)"
+msgstr "lnb_slof de l'antenne (kHz)"
+
+msgid "Low Noise Block switch freq in kHz (usually 11.7GHz)"
+msgstr "« Low Noise Block switch freq » en kHz, habituellement 11.7GHz"
+
+msgid "QAM, PSK or VSB modulation method"
+msgstr "Méthode de modulation QAM, PSK ou VSB"
+
+msgid "QAM16"
+msgstr "QAM16"
+
+msgid "QAM32"
+msgstr "QAM32"
+
+msgid "QAM64"
+msgstr "QAM64"
+
+msgid "QAM128"
+msgstr "QAM128"
+
+msgid "QAM256"
+msgstr "QAM256"
+
+msgid "BPSK"
+msgstr "BPSK"
+
+msgid "QPSK"
+msgstr "QPSK"
+
+msgid "8VSB"
+msgstr "8VSB"
+
+msgid "16VSB"
+msgstr "16VSB"
+
+msgid "FEC rate includes DVB-T high priority stream FEC Rate"
+msgstr "FEC terrestre haute priorité"
+
+msgid "2/3"
+msgstr "2/3"
+
+msgid "3/4"
+msgstr "3/4"
+
+msgid "5/6"
+msgstr "5/6"
+
+msgid "7/8"
+msgstr "7/8"
+
+msgid "Terrestrial low priority stream code rate (FEC)"
+msgstr "FEC terrestre basse priorité"
+
+msgid "Low Priority FEC Rate [Undefined,1/2,2/3,3/4,5/6,7/8]"
+msgstr "Taux FEC de basse priorité [Indéfini,1/2,2/3,3/4,5/6,7/8]"
+
+msgid "Terrestrial bandwidth"
+msgstr "Bande passante terrestre"
+
+msgid "Terrestrial bandwidth [0=auto,6,7,8 in MHz]"
+msgstr "Bande passante terrestre [0=auto,6,7,8 en MHz]"
+
+msgid "Guard interval [Undefined,1/4,1/8,1/16,1/32]"
+msgstr "Intervalle de garde [Indéfini,1/4,1/8,1/16,1/32]"
+
+msgid "1/4"
+msgstr "1/4"
+
+msgid "1/8"
+msgstr "1/8"
+
+msgid "1/16"
+msgstr "1/16"
+
+msgid "1/32"
+msgstr "1/32"
+
+msgid "2k"
+msgstr "2k"
+
+msgid "8k"
+msgstr "8k"
+
+msgid "Hierarchy alpha value [Undefined,1,2,4]"
+msgstr "Hiérarchie des valeurs alpha [Indéfinie,1,2,4]"
+
+msgid "Modulation type for front-end device."
+msgstr "Type de modulation pour le périphérique de frontend."
+
+msgid "Terrestrial high priority stream code rate (FEC)"
+msgstr "FEC terrestre haute priorité"
+
+msgid "To enable the internal HTTP server, set its address and port here."
+msgstr ""
+"Entrez ici l'adresse et le port à utiliser pour activer le serveur HTTP "
+"spécifique aux cartes DVB."
+
+msgid ""
+"User name the administrator will use to log into the internal HTTP server."
+msgstr "Nom d'utilisateur pour le serveur HTTP spécifique aux cartes DVB."
+
+msgid ""
+"Password the administrator will use to log into the internal HTTP server."
+msgstr "Mot de passe pour le serveur HTTP spécifique aux cartes DVB."
+
+msgid "HTTP ACL"
+msgstr "ACL HTTP"
+
+msgid ""
+"Access control list (equivalent to .hosts) file path, which will limit the "
+"range of IPs entitled to log into the internal HTTP server."
+msgstr ""
+"Nom de fichier de la liste de contrôle d'accès (équivalent à un fichier ."
+"hosts), qui permet de limiter les adresses IP autorisées à utiliser le "
+"serveur HTTP interne."
+
+msgid "HTTP interface x509 PEM certificate file (enables SSL)"
+msgstr "Fichier de certificat x509 pour l'interface HTTP (active SSL)"
+
+msgid "HTTP interface x509 PEM private key file"
+msgstr "Fichier de clé privée x509 pour l'interface HTTP"
+
+msgid "HTTP interface x509 PEM trusted root CA certificates file"
+msgstr "Fichier d'autorité de certification x509 pour l'interface HTTP"
+
+msgid ""
+"The given syntax is deprecated. Run \"vlc -p dvb\" to see an explanation of "
+"the new syntax."
+msgstr ""
+"La syntaxe est obsolète. Lancer « vlc -p dvb » pour voir une explication de "
+"la nouvelle syntaxe."
+
+msgid "The provided polarization \"%c\" is not valid."
+msgstr "La polarisation fournie « %c » n'est pas valide."
+
+msgid "Number of frames per second (eg. 24, 25, 29.97, 30)."
+msgstr "Nombre d'images par seconde (i.e. 24; 25; 29,997; 30)."
+
+msgid ""
+"Set the ID of the fake elementary stream for use in #duplicate{} constructs "
+"(default 0)."
+msgstr ""
+"Ceci vous permet de spécifier un identifiant pour le flux factice, pour être "
+"utilisé dans les chaînes de flux de sortie (0 par défaut)."
+
+msgid ""
+"Duration of the fake streaming before faking an end-of-file (default is -1 "
+"meaning that the stream is unlimited when fake is forced, or lasts for 10 "
+"seconds otherwise. 0, means that the stream is unlimited)."
+msgstr ""
+"Durée du flux factice. La valeur par défaut (-1) signifie que le flux est "
+"illimité quand on le force à factive, sinon 10 secondes. 0 signifie illimité."
+
+msgid "Limit the number of redirection to follow."
+msgstr "Limiter le nombre de redirection à propager."
+
+msgid "Use Internet Explorer entered HTTP proxy server"
+msgstr "Utiliser le serveur mandataire défini pour Internet Explorer"
+
+msgid ""
+"Use Internet Explorer entered HTTP proxy server for all URL. Don't take into "
+"account bypasses settings and auto configuration scripts."
+msgstr ""
+"Utiliser le serveur mandataire défini pour Internet Explorer pour toutes les "
+"URL. Ne pas prendre en compte les configurations de contournement ou celles "
+"venant de scripts d'auto-configuration."
+
+msgid ""
+"Make VLC buffer audio data captured from jack for the specified length in "
+"milliseconds."
+msgstr ""
+"Forcer VLC à bufferiser les données audio capturées depuis « Jack » pour le "
+"temps spécifié en millisecondes."
+
+msgid "Use file memory mapping"
+msgstr "Utiliser le mapping fichier-mémoire"
+
+msgid "Try to use memory mapping to read files and block devices."
+msgstr ""
+"Essayer d'utiliser le mappage mémoire pour lire les fichiers et "
+"périphériques de type bloc."
+
+msgid "MMap"
+msgstr "MMap"
+
+msgid "Audio Channel to use, if there are several audio inputs."
+msgstr "Canal audio à utiliser, s'il existe plusieurs entrées audio."
+
+msgid "Decimation level for MJPEG streams"
+msgstr "Niveau de décimation des flux MJPEG"
+
+msgid ""
+"Alsa or OSS audio capture in the v4l access is deprecated. please use "
+"'v4l:// :input-slave=alsa://' or 'v4l:// :input-slave=oss://' instead."
+msgstr ""
+"Capture audio Alsa ou OSS obsolète pour l'accès v4l. Utilisez  « v4l:// :"
+"input-slave=alsa:// » ou « v4l:// :input-slave=oss:// » à la place."
+
+msgid "IO Method (READ, MMAP, USERPTR)."
+msgstr "Méthode d'entrée/sortie (READ, MMAP, USERPTR)."
+
+msgid ""
+"Automatically set the white balance of the video input (if supported by the "
+"v4l2 driver)."
+msgstr ""
+"Gérer automatiquement la balance des blancs de l'entrée vidéo (si supporté "
+"par le driver v4l2)."
+
+msgid ""
+"Trigger a white balancing action, useless if auto white balance is activated "
+"(if supported by the v4l2 driver)."
+msgstr ""
+"Déclencher la balance des blancs, inutile si la balance automatique des "
+"blancs est activée (si supporté par le driver v4l2)."
+
+msgid "Blue balance of the video input (if supported by the v4l2 driver)."
+msgstr "Balance des bleus de l'entrée vidéo (si supporté par le driver v4l2)."
+
+msgid ""
+"Set the camera's horizontal centering (if supported by the v4l2 driver)."
+msgstr ""
+"Activer le centrage horizontal de la caméra (si supporté par le driver v4l2)."
+
+msgid "Treble level of the audio input (if supported by the v4l2 driver)."
+msgstr "Niveau d'aiguës de l'entrée audio (si supporté par le driver v4l2)."
+
+msgid ""
+"Alsa or OSS audio capture in the v4l2 access is deprecated. please use "
+"'v4l2:// :input-slave=alsa://' or 'v4l2:// :input-slave=oss://' instead."
+msgstr ""
+"Capture audio Alsa ou OSS obsolète pour l'accès v4l2. Utilisez  « v4l2:// :"
+"input-slave=alsa:// » ou « v4l2:// :input-slave=oss:// » à la place."
+
+msgid "AUTO"
+msgstr "AUTO"
+
+msgid "READ"
+msgstr "READ"
+
+msgid "MMAP"
+msgstr "MMAP"
+
+msgid "USERPTR"
+msgstr "USERPTR"
+
+msgid ""
+"Path to the x509 PEM private key file that will be used for HTTPS. Leave "
+"empty if you don't have one."
+msgstr ""
+"Chemin du fichier x509 de clé privée à utiliser pour HTTPS. Ne rien entrer "
+"si vous n'en n'avez pas."
+
+msgid ""
+"Path to the x509 PEM trusted root CA certificates (certificate authority) "
+"file that will be used for HTTPS. Leave empty if you don't have one."
+msgstr ""
+"Chemin du fichier x509 d'autorité de certification qui sera utilisé pour "
+"HTTPS. Ne rien entrer si vous n'en n'avez pas."
+
+msgid ""
+"Path to the x509 PEM Certificates Revocation List file that will be used for "
+"SSL. Leave empty if you don't have one."
+msgstr ""
+"Chemin du fichier x509 de liste de révocation de certificats qui sera "
+"utilisé pour HTTPS. Ne rien entrer si vous n'en n'avez pas"
+
+msgid "No audio device name was given. You might want to enter \"default\"."
+msgstr "Pas de périphérique audio spécifié. Utilisez « Prédéfini(e) »."
+
+msgid "Try to work around buggy OSS drivers"
+msgstr "Tentative de coutournement pour les pilotes OSS bogués"
+
+msgid ""
+"Some buggy OSS drivers just don't like when their internal buffers are "
+"completely filled (the sound gets heavily hashed). If you have one of these "
+"drivers, then you need to enable this option."
+msgstr ""
+"Certains drivers OSS bogués ne supportent pas lorsque leurs tampons internes "
+"sont pleins (le son devient très haché). Si vous avez l'un de ces drivers, "
+"vous devez activer cette option."
+
+msgid "AltiVec FFmpeg audio/video decoder ((MS)MPEG4,SVQ1,H263,WMV,WMA)"
+msgstr "Décodeur audio/vidéo FFmpeg Altivec ((MS)MPEG4,SVQ1,H263,WMV,WMA)"
+
+msgid "Reload image file every n seconds."
+msgstr "Recharger l'image toutes les n secondes."
+
+msgid "Consider width and height as maximum values."
+msgstr "Considérer les dimensions comme des valeurs maximales"
+
+msgid ""
+"This integer when viewed in binary is a debugging mask\n"
+"calls                 1\n"
+"packet assembly info  2\n"
+msgstr ""
+"Cet entier quand il est vu en binaire avec un masque de débogage\n"
+"appels                  1\n"
+"info assemblage paquet  2\n"
+
+msgid "Text is always opaque"
+msgstr "Texte toujours opaque"
+
+msgid "Subpage"
+msgstr "Sous-page"
+
+msgid "1.00x"
+msgstr "1.00x"
+
+msgid "Handlers"
+msgstr "Prise en charge d'extensions"
+
+msgid ""
+"List of handler extensions and executable paths (for instance: php=/usr/bin/"
+"php,pl=/usr/bin/perl)."
+msgstr ""
+"Programmes de prise en charge pour diverses extensions et le chemin du "
+"programme en question (par exemple: php=/usr/bin/php,pl=/usr/bin/perl)."
+
+msgid "Export album art as /art"
+msgstr "Exporter la jaquette vers « /art »"
+
+msgid ""
+"Allow exporting album art for current playlist items at the /art and /art?"
+"id=<id> URLs."
+msgstr ""
+"Permet d'exporter les jaquettes pour les éléments de la liste de lecture "
+"courante vers les URLs /art et /art? id=<id>."
+
+msgid "HTTP interface x509 PEM certificate file (enables SSL)."
+msgstr "Fichier de certificat x509 pour l'interface HTTP (active SSL)."
+
+msgid "HTTP interface x509 PEM private key file."
+msgstr "Fichier de clé privée x509 pour l'interface HTTP."
+
+msgid "HTTP interface x509 PEM trusted root CA certificates file."
+msgstr "Fichier d'autorité de certification x509 pour l'interface HTTP."
+
+msgid "Signals"
+msgstr "Signaux"
+
+msgid ""
+"This AVI file is broken. Seeking will not work correctly.\n"
+"Do you want to try to fix it?\n"
+"\n"
+"This might take a long time."
+msgstr ""
+"Ce fichier AVI est cassé, il ne sera pas possible de se déplacer dedans "
+"correctement.\n"
+"Souhaitez-vous essayer de le réparer ?\n"
+"\n"
+"Cette opération peut prendre du temps."
+
+msgid "Repair"
+msgstr "Réparer"
+
+msgid "Control word for the CSA encryption algorithm"
+msgstr "Mot de contrôle pour lCSA"
+
+msgid "VLC was brought to you by:"
+msgstr "VLC vous a été amené par :"
+
+msgid "Rewind"
+msgstr "Retour arrière"
+
+msgid "Apply the equalizer filter twice. The effect will be sharper."
+msgstr ""
+"Si vous appliquez ce réglage, le filtrage par l'égaliseur sera fait deux "
+"fois, produisant un effet plus accentué."
+
+msgid "Enable the equalizer. Bands can be set manually or using a preset."
+msgstr ""
+"Activer l'égaliseur. Vous pouvez soit changer manuellement les bandes soit "
+"utiliser un préréglage."
+
+msgid "Shows more information about the available video filters."
+msgstr "Montre plus d'information sur les filtres vidéos disponibles."
+
+msgid "Blur"
+msgstr "Flou"
+
+msgid "Adds motion blurring to the image"
+msgstr "Ajoute un effet de flou à l'image"
+
+msgid "Creates several copies of the Video output window"
+msgstr "Crée des clones de l'image"
+
+msgid "Enables an interactive Zoom feature"
+msgstr "Active le zoom interactif"
+
+msgid "Prevents the audio output from going over a predefined value."
+msgstr ""
+"Empêche la puissance de la sortie audio de dépasser une valeur prédéfinie."
+
+msgid "Imitates the effect of surround sound when using headphones."
+msgstr "Ce filtre donne l'effet d'un kit 5.1 avec un casque."
+
+msgid "Adjust Image"
+msgstr "Ajuster l'image"
+
+msgid ""
+"This panel allows on-the-fly selection of various video effects.\n"
+"These filters can be configured individually in the Preferences, in the "
+"subsections of Video/Filters.\n"
+"To choose the order in which the filter are applied, a filter option string "
+"can be set in the Preferences, Video / Filters section."
+msgstr ""
+"Ce panneau permet de régler les filtres vidéo à appliquer.\n"
+"Ces filtres peuvent être configurés individuellement dans les préférences, "
+"dans les sous-sections de Vidéo/Filtres.\n"
+"Pour choisir l'ordre d'application, une chaîne d'option peut être indiquée à "
+"ce même endroit."
+
+msgid ""
+"Stretch the video to fill the entire window when resizing the video instead "
+"of keeping the aspect ratio and displaying black borders."
+msgstr ""
+"Etirer la vidéo pour remplir la fenêtre entière lors des redimensionnements, "
+"au lieu de garder le ratio et d'afficher des bordures noires."
+
+msgid "Use as Desktop Background"
+msgstr "Utiliser en tant que fond d'écran"
+
+msgid ""
+"Use the video as the Desktop Background Desktop icons cannot be interacted "
+"with in this mode."
+msgstr ""
+"Ceci permet d'utiliser la vidéo comme fond d'écran du Finder. Lorsque vous "
+"utilisez ce mode, vous ne pouvez pas utiliser les icônes du bureau."
+
+msgid ""
+"VLC could not detect any EyeTV compatible device.\n"
+"\n"
+"Check the device's connection, make sure that the latest EyeTV software is "
+"installed and try again."
+msgstr ""
+"VLC n'a trouvé aucun périphérique compatible Eye TV.\n"
+"\n"
+"Vérifiez la connectique du périphérique et controllez que la dernière "
+"version du logiciel EyeTV est installée avant de recommencer."
+
+msgid "Add controls to the video window"
+msgstr "Ajouter des contrôles à la fenêtre vidéo"
+
+msgid "Input Settings not saved"
+msgstr "Paramètres d'entrée non enregistrés"
+
+msgid " State    : Playing %s"
+msgstr " État      :  Lecture  %s"
+
+msgid " State    : Opening/Connecting %s"
+msgstr " État      : Ouverture/Connexion %s"
+
+msgid "     c           Switch color on/off"
+msgstr "     c           Basculer l'affichage des couleurs"
+
+msgid "[Boxes]"
+msgstr "[Boites]"
+
+msgid " Logs "
+msgstr " Messages "
+
+msgid " Objects "
+msgstr " Objets"
+
+msgid " Playlist (All, one level) "
+msgstr " Liste de lecture (À plat) "
+
+msgid " Playlist (Manually added) "
+msgstr " Liste de lecture (Vue manuelle) "
+
+msgid ""
+"<p><i>VideoLAN</i> prefers when applications request authorization before "
+"accessing Internet.</p>\n"
+"<p><b>VLC media player</b> can get information from the Internet in order to "
+"get <b>media informations</b> or to check for available <b>updates</b>.</p>\n"
+"<p><i>VLC media player</i> <b>doesn't</b> send or collect any information, "
+"even anonymously, about your usage.</p>\n"
+msgstr ""
+"<p><i>VideoLAN</i> préfère que les applications demandent l'autorisation "
+"avant d'accéder à Internet.</p>\n"
+"<p><b>Le lecteur multimédia VLC</b> peut récupérer des informations "
+"d'Internet pour avoir les <b>informations de média</b> ou pour vérifier la "
+"disponibilité des <b>mises à jour</b>.</p>\n"
+"<p><i>Le lecteur multimédia VLC</i> <b>n'émet ni ne collecte</b> "
+"d'informations, même anonymes, sur votre utilisation.</p>\n"
+
+msgid "&Update"
+msgstr "Mise à jo&ur"
+
+msgid "Sca&le"
+msgstr "Eche&lle"
+
+msgid "Allow the volume to be set to 400%"
+msgstr "Permettre au volume de monter jusque 400%"
+
+msgid ""
+"Allow the volume to have range from 0% to 400%, instead of 0% to 200%. This "
+"option can distort the audio, since it uses software amplification."
+msgstr ""
+"Permettre au volume d'aller de 0% à 400%, au lieu de 0% à 200%. Cette option "
+"peut déformer la sortie audio."
+
+msgid "Skins loader demux"
+msgstr "Démultiplexeur de chargement de thème"
+
+msgid "ID3v1/2 and APEv1/2 tags parser"
+msgstr "Parseur de balises ID3v1/2 et APEv1/2"
+
+msgid "Expiration time for resumed TLS sessions"
+msgstr "Délai d'expiration pour les sessions TLS reprises"
+
+msgid ""
+"It is possible to cache the resumed TLS sessions. This is the expiration "
+"time of the sessions stored in this cache, in seconds."
+msgstr ""
+"Il est possible de mettre en cache les sessions TLS reprises. Ceci est le "
+"temps d'expiration en secondes des sessions stockées dans ce cache."
+
+msgid ""
+"This is the maximum number of resumed TLS sessions that the cache will hold."
+msgstr ""
+"Ceci vous permet de spécifier le nombre de sessions TLS reprises que le "
+"cache pourra contenir."
+
+msgid "OSSO"
+msgstr "OSSO"
+
+msgid ""
+"This is the host to which Growl notifications will be sent. By default, "
+"notifications are sent locally."
+msgstr "Hôte recevant les notifications Growl."
+
+msgid "Growl password on the Growl server."
+msgstr "Mot de passe sur le serveur Growl."
+
+msgid "Growl UDP port on the Growl server."
+msgstr "Port UDP du serveur Growl."
+
+msgid "Simple XML Parser"
+msgstr "Parseur XML simple"
+
+msgid "IPv4 SAP"
+msgstr "SAP IPv4"
+
+msgid "Listen to IPv4 announcements on the standard addresses."
+msgstr "Ecouter les annonces IPv4 sur les adresses standards."
+
+msgid "IPv6 SAP"
+msgstr "SAP IPv6"
+
+msgid "Listen to IPv6 announcements on the standard addresses."
+msgstr "Ecouter les annonces IPv6 sur les adresses standards."
+
+msgid "IPv6 SAP scope"
+msgstr "Scope des annonces IPv6"
+
+msgid "Scope for IPv6 announcements (default is 8)."
+msgstr "Portée des annonces IPv6 (8 par défaut)."
+
+msgid ""
+"This enables a SAP caching mechanism. This will result in lower SAP startup "
+"time, but you could end up with items corresponding to legacy streams."
+msgstr ""
+"Mécanisme de cache SAP. Cela accélerera le SAP au lancement, mais vous "
+"pourriez vous retrouver avec des éléments correspondant à des flux "
+"inexistants."
+
+msgid "add grain to image"
+msgstr "Ajouter du grain à l'image"
+
+msgid "Embed the overlay"
+msgstr "Intégrer la vidéo"
+
+msgid "Embed the framebuffer overlay into a X11 window"
+msgstr "Intégrer le framebuffer dans une fenêtre X11"
+
+msgid "Allows you to modify what OpenGL provider should be used"
+msgstr "Permet de modifier le module OpenGL à utiliser"
+
+msgid "Cache size (number of images)"
+msgstr "Taille du cache (nombre d'images)"
+
+msgid "Snapshot cache size (number of images to keep)."
+msgstr "Taille du cache de capture (nombre d'images à garder)."
+
+msgid "ID of the video output X window"
+msgstr "ID de la fenêtre X de sortie vidéo"
+
+msgid ""
+"VLC can embed its video output in an existing X11 window. This is the X "
+"identifier of that window (0 means none)."
+msgstr ""
+"VLC peut utiliser une fenêtre X11 existante pour afficher la sortie vidéo. "
+"Ceci est l'identificant X de cette fenêtre (0 pour aucune)."
+
+msgid "Use shared memory"
+msgstr "Utiliser la mémoire partagée"
+
+msgid "Use shared memory to communicate between VLC and the X server."
+msgstr ""
+"Utiliser la mémoire partagée pour communiquer entre VLC et le serveur X."
+
+msgid "More bands : 80 / 20"
+msgstr "Plus de bandes :80 / 20"
+
+msgid "Band separator"
+msgstr "Séparation entre les bandes"
+
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+"#838383;\">http://www.example.com/stream.avi</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+"#838383;\">rtp://@:1234</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+"#838383;\">mms://mms.examples.com/stream.asx</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+"#838383;\">rtsp://server.example.org:8080/test.sdp</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+"#838383;\">http://www.yourtube.com/watch?v=gg64x</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+"#838383;\">http://www.example.com/stream.avi</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+"#838383;\">rtp://@:1234</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+"#838383;\">mms://mms.examples.com/stream.asx</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+"#838383;\">rtsp://server.example.org:8080/test.sdp</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+"#838383;\">http://www.yourtube.com/watch?v=gg64x</span></p></body></html>"
+
+msgid "Minimal view mode (no toolbars)"
+msgstr "Vue minimale (sans les barres d'outils)"
+
+msgid "No v4l2 instance found. Press the refresh button to try again."
+msgstr ""
+"Impossible de trouver une instance de « v4l2 ». Appuyez sur le  bouton "
+"[Rafraîchir] pour ré-essayer."
+
+msgid "Use media key control when VLC is in background"
+msgstr "Utiliser les touches média quand VLC est en arrière-plan"
+
+msgid ""
+"By default, VLC will accept media key events also when being in background."
+msgstr ""
+"Par défaut, VLC permet d'utiliser les touches média également quand il est "
+"en arrière-plan."
+
+msgid "...when VLC is in background"
+msgstr "… quand VLC est en arrière-plan"
+
+msgid "GME demuxer (Game_Music_Emu)"
+msgstr "Démultiplexeur GME (Game Music Emu)"
+
+msgid "Disable DVD Menus (for compatibility)"
+msgstr "Désactiver les menus DVD (pour la compatibilité)"
+
+#, fuzzy
+msgid "%.1f MHz (%d services)"
+msgstr ""
+"%.1f MHz (%d services)\n"
+"~%s restants"
+
+msgid "Scanning DVB"
+msgstr "Recherche DVB"
+
+msgid ""
+"To make sure that VLC no longer listens to your media key events, it needs "
+"to be restarted."
+msgstr ""
+"Pour être certain que VLC ne réagisse plus aux appuis sur les touches "
+"multimédias, il est nécessaire de redémarrer."
+
+msgid "Relaunch VLC"
+msgstr "Re-démarrer VLC"
+
+msgid "Use systems codecs if available, for WMV codecs"
+msgstr "Utiliser les codecs système disponibles (pour WMV)"
+
+#, fuzzy
+msgid "1/2"
+msgstr "F12"
+
+#, fuzzy
+msgid "2"
+msgstr "F2"
+
+#, fuzzy
+msgid "4"
+msgstr "F4"
+
+#, fuzzy
+msgid ""
+"Force the subtiles format. Use \"auto\", the set of supported values varies."
+msgstr ""
+"Force le format des sous-titres. Choisir « auto » (autodetection du format) "
+"devrait toujours fonctionner."
+
+msgid "Find: %s"
+msgstr "Trouver : %s"
+
+msgid ""
+"It is possible to apply effects to the rendered text to improve its "
+"readability."
+msgstr ""
+"Il est possible d'appliquer des effets au texte afin d'améliorer sa "
+"lisibilité."
+
+msgid "Browser Favorites"
+msgstr "Favoris de l'explorateur"
+
+msgid "Browser Refresh"
+msgstr "Rafraîchir l'explorateur"
+
+msgid "Down"
+msgstr "Bas"
+
+msgid "Esc"
+msgstr "Échap"
+
+msgid "F10"
+msgstr "F10"
+
+msgid "F3"
+msgstr "F3"
+
+msgid "F5"
+msgstr "F5"
+
+msgid "F6"
+msgstr "F6"
+
+msgid "F7"
+msgstr "F7"
+
+msgid "F8"
+msgstr "F8"
+
+msgid "F9"
+msgstr "F9"
+
+msgid "Home"
+msgstr "Début"
+
+msgid "Media Next Track"
+msgstr "Média piste suivante"
+
+msgid "Tab"
+msgstr "Tab"
+
+msgid "Up"
+msgstr "Haut"
+
+msgid "Alt+"
+msgstr "Alt+"
+
+msgid ""
+"The volume can be recorded and automatically restored next time VLC is used."
+msgstr ""
+"Le volume peut être enregistré et restoré automatiquement au prochain "
+"démarrage de vlc."
+
+msgid "192000 Hz"
+msgstr "192000 Hz"
+
+msgid "11025 Hz"
+msgstr "11025 Hz"
+
+msgid "DC1394"
+msgstr "DC1394"
+
+msgid "Display ID. If not specified, main display ID is used. "
+msgstr ""
+"Identifiant écran. Si ce n'est pas précisé l'écran principal sera utilisé."
+
+msgid "Index of screen (1, 2, 3, ...). Alternative to Display ID."
+msgstr ""
+"Index de l'écran (1, 2, 3, ...). Alternative à l'identifiant de l'écran."
+
+msgid "Use VLC frequency bands"
+msgstr "Utiliser les bandes de fréquence de VLC"
+
+msgid ""
+"Use the VLC frequency bands. Otherwise, use the ISO Standard frequency bands."
+msgstr ""
+"Utiliser les bandes de fréquence de VLC, sinon utiliser les bandes de "
+"fréquences ISO."
+
+msgid "Sinc function (fast)"
+msgstr "Fonction Sinc (rapide)"
+
+msgid "Zero Order Hold (fastest)"
+msgstr "Zero Order Hold (plus rapide)"
+
+msgid "Linear (fastest)"
+msgstr "Linéaire (plus rapide)"
+
+msgid "Chorus"
+msgstr "Choeurs"
+
+msgid "Polyphony"
+msgstr "Polyphonie"
+
+#, fuzzy
+msgid "Default tune setting used"
+msgstr "Définition de l'algorithme de hachage par défaut à %s (%d)\n"
+
+msgid "checkerboard"
+msgstr "damier"
+
+msgid "side by side"
+msgstr "côte à côte"
+
+msgid "Fix when necessary"
+msgstr "Répare si nécessaire"
+
+msgid "National Folk"
+msgstr "National Folk"
+
+msgid "Swing"
+msgstr "Swing"
+
+msgid "Bebob"
+msgstr "Bebob"
+
+msgid "Revival"
+msgstr "Revival"
+
+msgid "Celtic"
+msgstr "Celtique"
+
+msgid "Avantgarde"
+msgstr "Avantgarde"
+
+msgid "Progressive Rock"
+msgstr "Rock progressif"
+
+msgid "Symphonic Rock"
+msgstr "Rock symphonique"
+
+msgid "Acoustic"
+msgstr "Acoustique"
+
+msgid "Humour"
+msgstr "Humour"
+
+msgid "Opera"
+msgstr "Opéra"
+
+msgid "Chamber Music"
+msgstr "Musique de chambre"
+
+msgid "Sonata"
+msgstr "Sonate"
+
+msgid "Symphony"
+msgstr "Symphonie"
+
+msgid "Booty Bass"
+msgstr "Booty Bass"
+
+msgid "Primus"
+msgstr "Primus"
+
+msgid "Porn Groove"
+msgstr "Porn Groove"
+
+msgid "Satire"
+msgstr "Satire"
+
+msgid "Slow Jam"
+msgstr "Slow Jam"
+
+msgid "Samba"
+msgstr "Samba"
+
+msgid "Folklore"
+msgstr "Folklore"
+
+msgid "Power Ballad"
+msgstr "Power Ballad"
+
+msgid "Rhythmic Soul"
+msgstr "Soul rythmique"
+
+msgid "Freestyle"
+msgstr "Freestyle"
+
+msgid "Duet"
+msgstr "Duo"
+
+msgid "Drum Solo"
+msgstr "Solo de batterie"
+
+msgid "Acapella"
+msgstr "Acapella"
+
+msgid "Drum & Bass"
+msgstr "Drum & Bass"
+
+msgid "Club - House"
+msgstr "Club - House"
+
+msgid "Indie"
+msgstr "Indie"
+
+msgid "BritPop"
+msgstr "BritPop"
+
+msgid "Negerpunk"
+msgstr "Negerpunk"
+
+msgid "Polsk Punk"
+msgstr "Polsk Punk"
+
+msgid "Beat"
+msgstr "Beat"
+
+msgid "Crossover"
+msgstr "Crossover"
+
+msgid "Contemporary Christian"
+msgstr "Contemporary Christian"
+
+msgid "Salsa"
+msgstr "Salsa"
+
+msgid "Anime"
+msgstr "Anime"
+
+msgid "JPop"
+msgstr "JPop"
+
+msgid "Synthpop"
+msgstr "Synthpop"
+
+msgid "Desktop level hotkey"
+msgstr "Raccourci de niveau bureau"
+
+msgid "Assign"
+msgstr "Affecter"
+
+msgid "Co&dec"
+msgstr "Co&dec"
+
+msgid "Select the syslog facility where logs will be forwarded."
+msgstr "Choisir le type de gestion des messages « syslog »"
+
+msgid "Buffer Size (Seconds)"
+msgstr "Taille du tampon (en secondes)"
+
+msgid "Anti-transpose"
+msgstr "Anti-transposition"
+
+msgid "vsxu"
+msgstr "vsxu"
+
+msgid "Set up media sources to stream"
+msgstr "Choisissez la source média pour le flux"
+
+msgid "Multichannel television sound (MTS)"
+msgstr "Son télé multi-canaux (MTS)"
+
+msgid "Simple stereo widening effect"
+msgstr "Effet simplifié d'élargissement stéréo"
+
+msgid "Define the glasses' color scheme"
+msgstr "Définir le type de couleur des lunettes 3D"
+
+msgid "Convert 3D picture to anaglyph image video filter"
+msgstr "Convertir une image 3D avec le filtre vidéo image anaglyphe"
+
+msgid "Anaglyph"
+msgstr "Anaglyphe"
 
 #~ msgid "Okay"
 #~ msgstr "D'accord"
 
-#~ msgid "Left front"
-#~ msgstr "Avant Gauche"
-
-#~ msgid "Exposure"
-#~ msgstr "Exposition"
-
-#~ msgid "Exposure."
-#~ msgstr "Exposition."
-
-#~ msgid " - Empty - "
-#~ msgstr " - Vide - "
-
-#~ msgid ""
-#~ "This saves the audio output volume when you use the mute function. You "
-#~ "should not change this option manually."
-#~ msgstr ""
-#~ "Le volume courant est enregistré dans cette variable quand vous "
-#~ "sélectionnez « couper le son ». Vous ne devriez pas modifier cette valeur "
-#~ "manuellement."
-
-#~ msgid "Prefer system plugins over VLC"
-#~ msgstr "Préférer les plugins systèmes plutôt que ceux de VLC"
-
-#~ msgid ""
-#~ "Indicates whether VLC will prefer native plugins installed on system over "
-#~ "VLC owns plugins whenever a choice is available."
-#~ msgstr ""
-#~ "Indique si VLC doit préférer les plugins natifs installés sur le système "
-#~ "plutôt que les propres plugins de VLC chaque fois que le choix est "
-#~ "possible."
-
-#~ msgid ""
-#~ "If your processor supports the MMX instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "Si votre processeur reconnaît le jeu d'instructions MMX, VLC peut en "
-#~ "profiter."
-
-#~ msgid ""
-#~ "If your processor supports the 3D Now! instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "Si votre processeur reconnaît le jeu d'instructions 3D Now!, VLC peut en "
-#~ "profiter."
-
-#~ msgid "Enable CPU MMX EXT support"
-#~ msgstr "Activer le support MMX EXT du processeur"
-
-#~ msgid ""
-#~ "If your processor supports the MMX EXT instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "Si votre processeur reconnaît le jeu d'instructions MMX EXT, VLC peut en "
-#~ "profiter."
-
-#~ msgid ""
-#~ "If your processor supports the SSE instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "Si votre processeur reconnaît le jeu d'instructions SSE, VLC peut en "
-#~ "profiter."
-
-#~ msgid "Enable CPU SSE2 support"
-#~ msgstr "Activer le support SSE2 du processeur"
-
-#~ msgid ""
-#~ "If your processor supports the SSE2 instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "Si votre processeur reconnaît le jeu d'instructions SSE2, VLC peut en "
-#~ "profiter."
-
-#~ msgid "Enable CPU SSE3 support"
-#~ msgstr "Activer le support SSE du processeur"
-
-#~ msgid ""
-#~ "If your processor supports the SSE3 instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "Si votre processeur reconnaît le jeu d'instructions SSE, VLC peut en "
-#~ "profiter."
-
-#~ msgid "Enable CPU SSSE3 support"
-#~ msgstr "Activer le support SSSE3 du processeur"
-
-#~ msgid ""
-#~ "If your processor supports the SSSE3 instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "Si votre processeur reconnaît le jeu d'instructions SSSE3 , VLC peut en "
-#~ "profiter."
-
-#~ msgid "Enable CPU SSE4.1 support"
-#~ msgstr "Activer le support SSE4.1 du processeur"
-
-#~ msgid ""
-#~ "If your processor supports the SSE4.1 instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "Si votre processeur reconnaît le jeu d'instructions SSE4.1, VLC peut en "
-#~ "profiter."
-
-#~ msgid "Enable CPU SSE4.2 support"
-#~ msgstr "Activer le support SSE4.2 du processeur"
-
-#~ msgid ""
-#~ "If your processor supports the SSE4.2 instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "Si votre processeur reconnaît le jeu d'instructions SSE4.2, VLC peut en "
-#~ "profiter."
-
-#~ msgid ""
-#~ "If your processor supports the AltiVec instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "Si votre processeur reconnaît le jeu d'instructions AltiVec, VLC peut en "
-#~ "profiter."
-
-#~ msgid "Go back in browsing history"
-#~ msgstr "Précédent (historique)"
-
-#~ msgid "Go forward in browsing history"
-#~ msgstr "Suivant (historique)"
-
-#~ msgid ""
-#~ "%s\n"
-#~ "Done %s (100.0%%)"
-#~ msgstr ""
-#~ "%s\n"
-#~ "Fait %s (100.0%%)"
-
-#~ msgid "Alsa"
-#~ msgstr "ALSA"
-
-#~ msgid "Avio"
-#~ msgstr "Avio"
-
-#~ msgid ""
-#~ "Adapter cards have a device file in directory named /dev/dvb/adapter[n] "
-#~ "with n>=0."
-#~ msgstr ""
-#~ "Les cartes ont un nom de périphérique dans le dossier /dev/dvb/adapter[n] "
-#~ "où n>=0"
-
-#~ msgid "In kHz for DVB-S or Hz for DVB-C/T"
-#~ msgstr "En kHz pour le DVB-S ou Hz pour le DVB-C/T"
-
-#~ msgid "In kHz for DVB-C/S/T"
-#~ msgstr "En kHz pour le DVB-C/S/T"
-
-#~ msgid "Inversion mode [0=off, 1=on, 2=auto]"
-#~ msgstr "Mode d'inversion [0=off, 1=on, 2=auto]"
-
-#~ msgid ""
-#~ "This allows you to stream an entire transponder with a \"budget\" card."
-#~ msgstr "Diffuser un transpondeur entier avec une carte « budget »."
-
-#~ msgid "Satellite number in the Diseqc system"
-#~ msgstr "Numéro du satellite dans le système Diseqc"
-
-#~ msgid "[0=no diseqc, 1-4=satellite number]."
-#~ msgstr "[0=pas de diseqc, 1-4=numéro du satellite]."
-
-#~ msgid "In Volts [0, 13=vertical, 18=horizontal]."
-#~ msgstr "En Volts [0, 13=vertival, 18=horizontal]."
-
-#~ msgid ""
-#~ "Enable high voltage if your cables are particularly long. This is not "
-#~ "supported by all frontends."
-#~ msgstr ""
-#~ "Activer le voltage élevé si vos câbles sont particulièrement longs. Cette "
-#~ "option n'est pas suportée par tous les adaptateurs."
-
-#~ msgid "[0=off, 1=on, -1=auto]."
-#~ msgstr "[0=off, 1=on, -1=auto]."
-
-#~ msgid "FEC=Forward Error Correction mode [9=auto]."
-#~ msgstr "FEC=Forward Error Correction mode [9=auto]."
-
-#~ msgid "Antenna lnb_lof1 (kHz)"
-#~ msgstr "lnb_lof1 de l'antenne (kHz)"
-
-#~ msgid "Low Band Local Osc Freq in kHz (usually 9.75GHz)"
-#~ msgstr "« Low Band Local Osc Freq » en kHz, habituellement 9.75GHz"
-
-#~ msgid "Antenna lnb_lof2 (kHz)"
-#~ msgstr "lnb_lof2 de l'antenne (kHz)"
-
-#~ msgid "High Band Local Osc Freq in kHz (usually 10.6GHz)"
-#~ msgstr "« High Band Local Osc Freq » en kHz, habituellement 10.6GHz"
-
-#~ msgid "Antenna lnb_slof (kHz)"
-#~ msgstr "lnb_slof de l'antenne (kHz)"
-
-#~ msgid "Low Noise Block switch freq in kHz (usually 11.7GHz)"
-#~ msgstr "« Low Noise Block switch freq » en kHz, habituellement 11.7GHz"
-
-#~ msgid "QAM, PSK or VSB modulation method"
-#~ msgstr "Méthode de modulation QAM, PSK ou VSB"
-
-#~ msgid "QAM16"
-#~ msgstr "QAM16"
-
-#~ msgid "QAM32"
-#~ msgstr "QAM32"
-
-#~ msgid "QAM64"
-#~ msgstr "QAM64"
-
-#~ msgid "QAM128"
-#~ msgstr "QAM128"
-
-#~ msgid "QAM256"
-#~ msgstr "QAM256"
-
-#~ msgid "BPSK"
-#~ msgstr "BPSK"
-
-#~ msgid "QPSK"
-#~ msgstr "QPSK"
-
-#~ msgid "8VSB"
-#~ msgstr "8VSB"
-
-#~ msgid "16VSB"
-#~ msgstr "16VSB"
-
-#~ msgid "FEC rate includes DVB-T high priority stream FEC Rate"
-#~ msgstr "FEC terrestre haute priorité"
-
-#~ msgid "2/3"
-#~ msgstr "2/3"
-
-#~ msgid "3/4"
-#~ msgstr "3/4"
-
-#~ msgid "5/6"
-#~ msgstr "5/6"
-
-#~ msgid "7/8"
-#~ msgstr "7/8"
-
-#~ msgid "Terrestrial low priority stream code rate (FEC)"
-#~ msgstr "FEC terrestre basse priorité"
-
-#~ msgid "Low Priority FEC Rate [Undefined,1/2,2/3,3/4,5/6,7/8]"
-#~ msgstr "Taux FEC de basse priorité [Indéfini,1/2,2/3,3/4,5/6,7/8]"
-
-#~ msgid "Terrestrial bandwidth"
-#~ msgstr "Bande passante terrestre"
-
-#~ msgid "Terrestrial bandwidth [0=auto,6,7,8 in MHz]"
-#~ msgstr "Bande passante terrestre [0=auto,6,7,8 en MHz]"
-
-#~ msgid "Guard interval [Undefined,1/4,1/8,1/16,1/32]"
-#~ msgstr "Intervalle de garde [Indéfini,1/4,1/8,1/16,1/32]"
-
-#~ msgid "1/4"
-#~ msgstr "1/4"
-
-#~ msgid "1/8"
-#~ msgstr "1/8"
-
-#~ msgid "1/16"
-#~ msgstr "1/16"
-
-#~ msgid "1/32"
-#~ msgstr "1/32"
-
-#~ msgid "2k"
-#~ msgstr "2k"
-
-#~ msgid "8k"
-#~ msgstr "8k"
-
-#~ msgid "Hierarchy alpha value [Undefined,1,2,4]"
-#~ msgstr "Hiérarchie des valeurs alpha [Indéfinie,1,2,4]"
-
-#~ msgid "Modulation type for front-end device."
-#~ msgstr "Type de modulation pour le périphérique de frontend."
-
-#~ msgid "Terrestrial high priority stream code rate (FEC)"
-#~ msgstr "FEC terrestre haute priorité"
-
-#~ msgid "To enable the internal HTTP server, set its address and port here."
-#~ msgstr ""
-#~ "Entrez ici l'adresse et le port à utiliser pour activer le serveur HTTP "
-#~ "spécifique aux cartes DVB."
-
-#~ msgid ""
-#~ "User name the administrator will use to log into the internal HTTP server."
-#~ msgstr "Nom d'utilisateur pour le serveur HTTP spécifique aux cartes DVB."
-
-#~ msgid ""
-#~ "Password the administrator will use to log into the internal HTTP server."
-#~ msgstr "Mot de passe pour le serveur HTTP spécifique aux cartes DVB."
-
-#~ msgid "HTTP ACL"
-#~ msgstr "ACL HTTP"
-
-#~ msgid ""
-#~ "Access control list (equivalent to .hosts) file path, which will limit "
-#~ "the range of IPs entitled to log into the internal HTTP server."
-#~ msgstr ""
-#~ "Nom de fichier de la liste de contrôle d'accès (équivalent à un fichier ."
-#~ "hosts), qui permet de limiter les adresses IP autorisées à utiliser le "
-#~ "serveur HTTP interne."
-
-#~ msgid "HTTP interface x509 PEM certificate file (enables SSL)"
-#~ msgstr "Fichier de certificat x509 pour l'interface HTTP (active SSL)"
-
-#~ msgid "HTTP interface x509 PEM private key file"
-#~ msgstr "Fichier de clé privée x509 pour l'interface HTTP"
-
-#~ msgid "HTTP interface x509 PEM trusted root CA certificates file"
-#~ msgstr "Fichier d'autorité de certification x509 pour l'interface HTTP"
-
-#~ msgid ""
-#~ "The given syntax is deprecated. Run \"vlc -p dvb\" to see an explanation "
-#~ "of the new syntax."
-#~ msgstr ""
-#~ "La syntaxe est obsolète. Lancer « vlc -p dvb » pour voir une explication "
-#~ "de la nouvelle syntaxe."
-
-#~ msgid "The provided polarization \"%c\" is not valid."
-#~ msgstr "La polarisation fournie « %c » n'est pas valide."
-
-#~ msgid "Number of frames per second (eg. 24, 25, 29.97, 30)."
-#~ msgstr "Nombre d'images par seconde (i.e. 24; 25; 29,997; 30)."
-
-#~ msgid ""
-#~ "Set the ID of the fake elementary stream for use in #duplicate{} "
-#~ "constructs (default 0)."
-#~ msgstr ""
-#~ "Ceci vous permet de spécifier un identifiant pour le flux factice, pour "
-#~ "être utilisé dans les chaînes de flux de sortie (0 par défaut)."
-
-#~ msgid ""
-#~ "Duration of the fake streaming before faking an end-of-file (default is "
-#~ "-1 meaning that the stream is unlimited when fake is forced, or lasts for "
-#~ "10 seconds otherwise. 0, means that the stream is unlimited)."
-#~ msgstr ""
-#~ "Durée du flux factice. La valeur par défaut (-1) signifie que le flux est "
-#~ "illimité quand on le force à factive, sinon 10 secondes. 0 signifie "
-#~ "illimité."
-
-#~ msgid "Limit the number of redirection to follow."
-#~ msgstr "Limiter le nombre de redirection à propager."
-
-#~ msgid "Use Internet Explorer entered HTTP proxy server"
-#~ msgstr "Utiliser le serveur mandataire défini pour Internet Explorer"
-
-#~ msgid ""
-#~ "Use Internet Explorer entered HTTP proxy server for all URL. Don't take "
-#~ "into account bypasses settings and auto configuration scripts."
-#~ msgstr ""
-#~ "Utiliser le serveur mandataire défini pour Internet Explorer pour toutes "
-#~ "les URL. Ne pas prendre en compte les configurations de contournement ou "
-#~ "celles venant de scripts d'auto-configuration."
-
-#~ msgid ""
-#~ "Make VLC buffer audio data captured from jack for the specified length in "
-#~ "milliseconds."
-#~ msgstr ""
-#~ "Forcer VLC à bufferiser les données audio capturées depuis « Jack » pour "
-#~ "le temps spécifié en millisecondes."
-
-#~ msgid "Use file memory mapping"
-#~ msgstr "Utiliser le mapping fichier-mémoire"
-
-#~ msgid "Try to use memory mapping to read files and block devices."
-#~ msgstr ""
-#~ "Essayer d'utiliser le mappage mémoire pour lire les fichiers et "
-#~ "périphériques de type bloc."
-
-#~ msgid "MMap"
-#~ msgstr "MMap"
-
-#~ msgid "Audio Channel to use, if there are several audio inputs."
-#~ msgstr "Canal audio à utiliser, s'il existe plusieurs entrées audio."
-
-#~ msgid "Decimation level for MJPEG streams"
-#~ msgstr "Niveau de décimation des flux MJPEG"
-
-#~ msgid ""
-#~ "Alsa or OSS audio capture in the v4l access is deprecated. please use "
-#~ "'v4l:// :input-slave=alsa://' or 'v4l:// :input-slave=oss://' instead."
-#~ msgstr ""
-#~ "Capture audio Alsa ou OSS obsolète pour l'accès v4l. Utilisez  « v4l:// :"
-#~ "input-slave=alsa:// » ou « v4l:// :input-slave=oss:// » à la place."
-
-#~ msgid "IO Method (READ, MMAP, USERPTR)."
-#~ msgstr "Méthode d'entrée/sortie (READ, MMAP, USERPTR)."
-
-#~ msgid ""
-#~ "Automatically set the white balance of the video input (if supported by "
-#~ "the v4l2 driver)."
-#~ msgstr ""
-#~ "Gérer automatiquement la balance des blancs de l'entrée vidéo (si "
-#~ "supporté par le driver v4l2)."
-
-#~ msgid ""
-#~ "Trigger a white balancing action, useless if auto white balance is "
-#~ "activated (if supported by the v4l2 driver)."
-#~ msgstr ""
-#~ "Déclencher la balance des blancs, inutile si la balance automatique des "
-#~ "blancs est activée (si supporté par le driver v4l2)."
-
-#~ msgid "Blue balance of the video input (if supported by the v4l2 driver)."
-#~ msgstr ""
-#~ "Balance des bleus de l'entrée vidéo (si supporté par le driver v4l2)."
-
-#~ msgid ""
-#~ "Set the camera's horizontal centering (if supported by the v4l2 driver)."
-#~ msgstr ""
-#~ "Activer le centrage horizontal de la caméra (si supporté par le driver "
-#~ "v4l2)."
-
-#~ msgid "Treble level of the audio input (if supported by the v4l2 driver)."
-#~ msgstr "Niveau d'aiguës de l'entrée audio (si supporté par le driver v4l2)."
-
-#~ msgid ""
-#~ "Alsa or OSS audio capture in the v4l2 access is deprecated. please use "
-#~ "'v4l2:// :input-slave=alsa://' or 'v4l2:// :input-slave=oss://' instead."
-#~ msgstr ""
-#~ "Capture audio Alsa ou OSS obsolète pour l'accès v4l2. Utilisez  "
-#~ "« v4l2:// :input-slave=alsa:// » ou « v4l2:// :input-slave=oss:// » à la "
-#~ "place."
-
-#~ msgid "AUTO"
-#~ msgstr "AUTO"
-
-#~ msgid "READ"
-#~ msgstr "READ"
-
-#~ msgid "MMAP"
-#~ msgstr "MMAP"
-
-#~ msgid "USERPTR"
-#~ msgstr "USERPTR"
-
-#~ msgid ""
-#~ "Path to the x509 PEM private key file that will be used for HTTPS. Leave "
-#~ "empty if you don't have one."
-#~ msgstr ""
-#~ "Chemin du fichier x509 de clé privée à utiliser pour HTTPS. Ne rien "
-#~ "entrer si vous n'en n'avez pas."
-
-#~ msgid ""
-#~ "Path to the x509 PEM trusted root CA certificates (certificate authority) "
-#~ "file that will be used for HTTPS. Leave empty if you don't have one."
-#~ msgstr ""
-#~ "Chemin du fichier x509 d'autorité de certification qui sera utilisé pour "
-#~ "HTTPS. Ne rien entrer si vous n'en n'avez pas."
-
-#~ msgid ""
-#~ "Path to the x509 PEM Certificates Revocation List file that will be used "
-#~ "for SSL. Leave empty if you don't have one."
-#~ msgstr ""
-#~ "Chemin du fichier x509 de liste de révocation de certificats qui sera "
-#~ "utilisé pour HTTPS. Ne rien entrer si vous n'en n'avez pas"
-
-#~ msgid "No audio device name was given. You might want to enter \"default\"."
-#~ msgstr "Pas de périphérique audio spécifié. Utilisez « Prédéfini(e) »."
-
-#~ msgid "Try to work around buggy OSS drivers"
-#~ msgstr "Tentative de coutournement pour les pilotes OSS bogués"
-
-#~ msgid ""
-#~ "Some buggy OSS drivers just don't like when their internal buffers are "
-#~ "completely filled (the sound gets heavily hashed). If you have one of "
-#~ "these drivers, then you need to enable this option."
-#~ msgstr ""
-#~ "Certains drivers OSS bogués ne supportent pas lorsque leurs tampons "
-#~ "internes sont pleins (le son devient très haché). Si vous avez l'un de "
-#~ "ces drivers, vous devez activer cette option."
-
-#~ msgid "AltiVec FFmpeg audio/video decoder ((MS)MPEG4,SVQ1,H263,WMV,WMA)"
-#~ msgstr "Décodeur audio/vidéo FFmpeg Altivec ((MS)MPEG4,SVQ1,H263,WMV,WMA)"
-
-#~ msgid "Reload image file every n seconds."
-#~ msgstr "Recharger l'image toutes les n secondes."
-
-#~ msgid "Consider width and height as maximum values."
-#~ msgstr "Considérer les dimensions comme des valeurs maximales"
-
-#~ msgid ""
-#~ "This integer when viewed in binary is a debugging mask\n"
-#~ "calls                 1\n"
-#~ "packet assembly info  2\n"
-#~ msgstr ""
-#~ "Cet entier quand il est vu en binaire avec un masque de débogage\n"
-#~ "appels                  1\n"
-#~ "info assemblage paquet  2\n"
-
-#~ msgid "Text is always opaque"
-#~ msgstr "Texte toujours opaque"
-
-#~ msgid "Subpage"
-#~ msgstr "Sous-page"
-
-#~ msgid "1.00x"
-#~ msgstr "1.00x"
-
-#~ msgid "Handlers"
-#~ msgstr "Prise en charge d'extensions"
-
-#~ msgid ""
-#~ "List of handler extensions and executable paths (for instance: php=/usr/"
-#~ "bin/php,pl=/usr/bin/perl)."
-#~ msgstr ""
-#~ "Programmes de prise en charge pour diverses extensions et le chemin du "
-#~ "programme en question (par exemple: php=/usr/bin/php,pl=/usr/bin/perl)."
-
-#~ msgid "Export album art as /art"
-#~ msgstr "Exporter la jaquette vers « /art »"
-
-#~ msgid ""
-#~ "Allow exporting album art for current playlist items at the /art and /art?"
-#~ "id=<id> URLs."
-#~ msgstr ""
-#~ "Permet d'exporter les jaquettes pour les éléments de la liste de lecture "
-#~ "courante vers les URLs /art et /art? id=<id>."
-
-#~ msgid "HTTP interface x509 PEM certificate file (enables SSL)."
-#~ msgstr "Fichier de certificat x509 pour l'interface HTTP (active SSL)."
-
-#~ msgid "HTTP interface x509 PEM private key file."
-#~ msgstr "Fichier de clé privée x509 pour l'interface HTTP."
-
-#~ msgid "HTTP interface x509 PEM trusted root CA certificates file."
-#~ msgstr "Fichier d'autorité de certification x509 pour l'interface HTTP."
-
-#~ msgid "Signals"
-#~ msgstr "Signaux"
-
-#~ msgid ""
-#~ "This AVI file is broken. Seeking will not work correctly.\n"
-#~ "Do you want to try to fix it?\n"
-#~ "\n"
-#~ "This might take a long time."
-#~ msgstr ""
-#~ "Ce fichier AVI est cassé, il ne sera pas possible de se déplacer dedans "
-#~ "correctement.\n"
-#~ "Souhaitez-vous essayer de le réparer ?\n"
-#~ "\n"
-#~ "Cette opération peut prendre du temps."
-
-#~ msgid "Repair"
-#~ msgstr "Réparer"
-
-#~ msgid "Control word for the CSA encryption algorithm"
-#~ msgstr "Mot de contrôle pour lCSA"
-
-#~ msgid "VLC was brought to you by:"
-#~ msgstr "VLC vous a été amené par :"
-
-#~ msgid "Rewind"
-#~ msgstr "Retour arrière"
-
-#~ msgid "Apply the equalizer filter twice. The effect will be sharper."
-#~ msgstr ""
-#~ "Si vous appliquez ce réglage, le filtrage par l'égaliseur sera fait deux "
-#~ "fois, produisant un effet plus accentué."
-
-#~ msgid "Enable the equalizer. Bands can be set manually or using a preset."
-#~ msgstr ""
-#~ "Activer l'égaliseur. Vous pouvez soit changer manuellement les bandes "
-#~ "soit utiliser un préréglage."
-
-#~ msgid "Shows more information about the available video filters."
-#~ msgstr "Montre plus d'information sur les filtres vidéos disponibles."
-
-#~ msgid "Blur"
-#~ msgstr "Flou"
-
-#~ msgid "Adds motion blurring to the image"
-#~ msgstr "Ajoute un effet de flou à l'image"
-
-#~ msgid "Creates several copies of the Video output window"
-#~ msgstr "Crée des clones de l'image"
-
-#~ msgid "Enables an interactive Zoom feature"
-#~ msgstr "Active le zoom interactif"
-
-#~ msgid "Prevents the audio output from going over a predefined value."
-#~ msgstr ""
-#~ "Empêche la puissance de la sortie audio de dépasser une valeur prédéfinie."
-
-#~ msgid "Imitates the effect of surround sound when using headphones."
-#~ msgstr "Ce filtre donne l'effet d'un kit 5.1 avec un casque."
-
-#~ msgid "Adjust Image"
-#~ msgstr "Ajuster l'image"
-
-#~ msgid ""
-#~ "This panel allows on-the-fly selection of various video effects.\n"
-#~ "These filters can be configured individually in the Preferences, in the "
-#~ "subsections of Video/Filters.\n"
-#~ "To choose the order in which the filter are applied, a filter option "
-#~ "string can be set in the Preferences, Video / Filters section."
-#~ msgstr ""
-#~ "Ce panneau permet de régler les filtres vidéo à appliquer.\n"
-#~ "Ces filtres peuvent être configurés individuellement dans les "
-#~ "préférences, dans les sous-sections de Vidéo/Filtres.\n"
-#~ "Pour choisir l'ordre d'application, une chaîne d'option peut être "
-#~ "indiquée à ce même endroit."
-
-#~ msgid ""
-#~ "Stretch the video to fill the entire window when resizing the video "
-#~ "instead of keeping the aspect ratio and displaying black borders."
-#~ msgstr ""
-#~ "Etirer la vidéo pour remplir la fenêtre entière lors des "
-#~ "redimensionnements, au lieu de garder le ratio et d'afficher des bordures "
-#~ "noires."
-
-#~ msgid "Use as Desktop Background"
-#~ msgstr "Utiliser en tant que fond d'écran"
-
-#~ msgid ""
-#~ "Use the video as the Desktop Background Desktop icons cannot be "
-#~ "interacted with in this mode."
-#~ msgstr ""
-#~ "Ceci permet d'utiliser la vidéo comme fond d'écran du Finder. Lorsque "
-#~ "vous utilisez ce mode, vous ne pouvez pas utiliser les icônes du bureau."
-
-#~ msgid ""
-#~ "VLC could not detect any EyeTV compatible device.\n"
-#~ "\n"
-#~ "Check the device's connection, make sure that the latest EyeTV software "
-#~ "is installed and try again."
-#~ msgstr ""
-#~ "VLC n'a trouvé aucun périphérique compatible Eye TV.\n"
-#~ "\n"
-#~ "Vérifiez la connectique du périphérique et controllez que la dernière "
-#~ "version du logiciel EyeTV est installée avant de recommencer."
-
-#~ msgid "Add controls to the video window"
-#~ msgstr "Ajouter des contrôles à la fenêtre vidéo"
-
-#~ msgid "Input Settings not saved"
-#~ msgstr "Paramètres d'entrée non enregistrés"
-
-#~ msgid " State    : Playing %s"
-#~ msgstr " État      :  Lecture  %s"
-
-#~ msgid " State    : Opening/Connecting %s"
-#~ msgstr " État      : Ouverture/Connexion %s"
-
-#~ msgid "     c           Switch color on/off"
-#~ msgstr "     c           Basculer l'affichage des couleurs"
-
-#~ msgid "[Boxes]"
-#~ msgstr "[Boites]"
-
-#~ msgid "No item currently playing"
-#~ msgstr "Aucun élement dans la liste de lecture"
-
-#~ msgid " Logs "
-#~ msgstr " Messages "
-
-#~ msgid " Objects "
-#~ msgstr " Objets"
-
-#~ msgid " Playlist (All, one level) "
-#~ msgstr " Liste de lecture (À plat) "
-
-#~ msgid " Playlist (Manually added) "
-#~ msgstr " Liste de lecture (Vue manuelle) "
-
-#~ msgid ""
-#~ "<p><i>VideoLAN</i> prefers when applications request authorization before "
-#~ "accessing Internet.</p>\n"
-#~ "<p><b>VLC media player</b> can get information from the Internet in order "
-#~ "to get <b>media informations</b> or to check for available <b>updates</b>."
-#~ "</p>\n"
-#~ "<p><i>VLC media player</i> <b>doesn't</b> send or collect any "
-#~ "information, even anonymously, about your usage.</p>\n"
-#~ msgstr ""
-#~ "<p><i>VideoLAN</i> préfère que les applications demandent l'autorisation "
-#~ "avant d'accéder à Internet.</p>\n"
-#~ "<p><b>Le lecteur multimédia VLC</b> peut récupérer des informations "
-#~ "d'Internet pour avoir les <b>informations de média</b> ou pour vérifier "
-#~ "la disponibilité des <b>mises à jour</b>.</p>\n"
-#~ "<p><i>Le lecteur multimédia VLC</i> <b>n'émet ni ne collecte</b> "
-#~ "d'informations, même anonymes, sur votre utilisation.</p>\n"
-
-#~ msgid "&Update"
-#~ msgstr "Mise à jo&ur"
-
-#~ msgid "Sca&le"
-#~ msgstr "Eche&lle"
-
-#~ msgid "Allow the volume to be set to 400%"
-#~ msgstr "Permettre au volume de monter jusque 400%"
-
-#~ msgid ""
-#~ "Allow the volume to have range from 0% to 400%, instead of 0% to 200%. "
-#~ "This option can distort the audio, since it uses software amplification."
-#~ msgstr ""
-#~ "Permettre au volume d'aller de 0% à 400%, au lieu de 0% à 200%. Cette "
-#~ "option peut déformer la sortie audio."
-
-#~ msgid "Skins loader demux"
-#~ msgstr "Démultiplexeur de chargement de thème"
-
-#~ msgid "ID3v1/2 and APEv1/2 tags parser"
-#~ msgstr "Parseur de balises ID3v1/2 et APEv1/2"
-
-#~ msgid "Expiration time for resumed TLS sessions"
-#~ msgstr "Délai d'expiration pour les sessions TLS reprises"
-
-#~ msgid ""
-#~ "It is possible to cache the resumed TLS sessions. This is the expiration "
-#~ "time of the sessions stored in this cache, in seconds."
-#~ msgstr ""
-#~ "Il est possible de mettre en cache les sessions TLS reprises. Ceci est le "
-#~ "temps d'expiration en secondes des sessions stockées dans ce cache."
-
-#~ msgid ""
-#~ "This is the maximum number of resumed TLS sessions that the cache will "
-#~ "hold."
-#~ msgstr ""
-#~ "Ceci vous permet de spécifier le nombre de sessions TLS reprises que le "
-#~ "cache pourra contenir."
-
-#~ msgid "OSSO"
-#~ msgstr "OSSO"
-
-#~ msgid ""
-#~ "This is the host to which Growl notifications will be sent. By default, "
-#~ "notifications are sent locally."
-#~ msgstr "Hôte recevant les notifications Growl."
-
-#~ msgid "Growl password on the Growl server."
-#~ msgstr "Mot de passe sur le serveur Growl."
-
-#~ msgid "Growl UDP port on the Growl server."
-#~ msgstr "Port UDP du serveur Growl."
-
-#~ msgid "Simple XML Parser"
-#~ msgstr "Parseur XML simple"
-
-#~ msgid "IPv4 SAP"
-#~ msgstr "SAP IPv4"
-
-#~ msgid "Listen to IPv4 announcements on the standard addresses."
-#~ msgstr "Ecouter les annonces IPv4 sur les adresses standards."
-
-#~ msgid "IPv6 SAP"
-#~ msgstr "SAP IPv6"
-
-#~ msgid "Listen to IPv6 announcements on the standard addresses."
-#~ msgstr "Ecouter les annonces IPv6 sur les adresses standards."
-
-#~ msgid "IPv6 SAP scope"
-#~ msgstr "Scope des annonces IPv6"
-
-#~ msgid "Scope for IPv6 announcements (default is 8)."
-#~ msgstr "Portée des annonces IPv6 (8 par défaut)."
-
-#~ msgid ""
-#~ "This enables a SAP caching mechanism. This will result in lower SAP "
-#~ "startup time, but you could end up with items corresponding to legacy "
-#~ "streams."
-#~ msgstr ""
-#~ "Mécanisme de cache SAP. Cela accélerera le SAP au lancement, mais vous "
-#~ "pourriez vous retrouver avec des éléments correspondant à des flux "
-#~ "inexistants."
-
-#~ msgid "add grain to image"
-#~ msgstr "Ajouter du grain à l'image"
-
-#~ msgid "Embed the overlay"
-#~ msgstr "Intégrer la vidéo"
-
-#~ msgid "Embed the framebuffer overlay into a X11 window"
-#~ msgstr "Intégrer le framebuffer dans une fenêtre X11"
-
-#~ msgid "Allows you to modify what OpenGL provider should be used"
-#~ msgstr "Permet de modifier le module OpenGL à utiliser"
-
-#~ msgid "Cache size (number of images)"
-#~ msgstr "Taille du cache (nombre d'images)"
-
-#~ msgid "Snapshot cache size (number of images to keep)."
-#~ msgstr "Taille du cache de capture (nombre d'images à garder)."
-
-#~ msgid "ID of the video output X window"
-#~ msgstr "ID de la fenêtre X de sortie vidéo"
-
-#~ msgid ""
-#~ "VLC can embed its video output in an existing X11 window. This is the X "
-#~ "identifier of that window (0 means none)."
-#~ msgstr ""
-#~ "VLC peut utiliser une fenêtre X11 existante pour afficher la sortie "
-#~ "vidéo. Ceci est l'identificant X de cette fenêtre (0 pour aucune)."
-
-#~ msgid "Use shared memory"
-#~ msgstr "Utiliser la mémoire partagée"
-
-#~ msgid "Use shared memory to communicate between VLC and the X server."
-#~ msgstr ""
-#~ "Utiliser la mémoire partagée pour communiquer entre VLC et le serveur X."
-
-#~ msgid "More bands : 80 / 20"
-#~ msgstr "Plus de bandes :80 / 20"
-
-#~ msgid "Band separator"
-#~ msgstr "Séparation entre les bandes"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-#~ "#838383;\">http://www.example.com/stream.avi</span></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-#~ "#838383;\">rtp://@:1234</span></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-#~ "#838383;\">mms://mms.examples.com/stream.asx</span></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-#~ "#838383;\">rtsp://server.example.org:8080/test.sdp</span></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-#~ "#838383;\">http://www.yourtube.com/watch?v=gg64x</span></p></body></html>"
-#~ msgstr ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-#~ "#838383;\">http://www.example.com/stream.avi</span></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-#~ "#838383;\">rtp://@:1234</span></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-#~ "#838383;\">mms://mms.examples.com/stream.asx</span></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-#~ "#838383;\">rtsp://server.example.org:8080/test.sdp</span></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-#~ "#838383;\">http://www.yourtube.com/watch?v=gg64x</span></p></body></html>"
-
-#~ msgid "Minimal view mode (no toolbars)"
-#~ msgstr "Vue minimale (sans les barres d'outils)"
-
-#~ msgid "No v4l2 instance found. Press the refresh button to try again."
-#~ msgstr ""
-#~ "Impossible de trouver une instance de « v4l2 ». Appuyez sur le  bouton "
-#~ "[Rafraîchir] pour ré-essayer."
-
-#~ msgid "Use media key control when VLC is in background"
-#~ msgstr "Utiliser les touches média quand VLC est en arrière-plan"
-
-#~ msgid ""
-#~ "By default, VLC will accept media key events also when being in "
-#~ "background."
-#~ msgstr ""
-#~ "Par défaut, VLC permet d'utiliser les touches média également quand il "
-#~ "est en arrière-plan."
-
-#~ msgid "...when VLC is in background"
-#~ msgstr "… quand VLC est en arrière-plan"
-
-#~ msgid "GME demuxer (Game_Music_Emu)"
-#~ msgstr "Démultiplexeur GME (Game Music Emu)"
-
-#~ msgid "Disable DVD Menus (for compatibility)"
-#~ msgstr "Désactiver les menus DVD (pour la compatibilité)"
-
 #, fuzzy
-#~ msgid "%.1f MHz (%d services)"
-#~ msgstr ""
-#~ "%.1f MHz (%d services)\n"
-#~ "~%s restants"
-
-#~ msgid "Scanning DVB"
-#~ msgstr "Recherche DVB"
+#~ msgid "No item currently playing"
+#~ msgstr "Nouvelle entrée en lecture"
 
 #, fuzzy
 #~ msgid "Crops a defined part of the image"
@@ -29217,18 +29429,9 @@ msgstr "Liste du gestionnaire de médias"
 #~ msgid "iSight Capture Input"
 #~ msgstr "Entrée capture audio « ALSA »"
 
+#, fuzzy
 #~ msgid "Relaunch required"
-#~ msgstr "Re-démarrage nécessaire"
-
-#~ msgid ""
-#~ "To make sure that VLC no longer listens to your media key events, it "
-#~ "needs to be restarted."
-#~ msgstr ""
-#~ "Pour être certain que VLC ne réagisse plus aux appuis sur les touches "
-#~ "multimédias, il est nécessaire de redémarrer."
-
-#~ msgid "Relaunch VLC"
-#~ msgstr "Re-démarrer VLC"
+#~ msgstr "SDP nécessaire"
 
 #, fuzzy
 #~ msgid "Advance of subtitles over video:"
@@ -29242,9 +29445,6 @@ msgstr "Liste du gestionnaire de médias"
 #~ msgid "Video output is not supported"
 #~ msgstr "Module de sortie vidéo"
 
-#~ msgid "Use systems codecs if available, for WMV codecs"
-#~ msgstr "Utiliser les codecs système disponibles (pour WMV)"
-
 #, fuzzy
 #~ msgid "Front speakers"
 #~ msgstr "3 à l'avant ; 2 à l'arrière"
@@ -29253,8 +29453,9 @@ msgstr "Liste du gestionnaire de médias"
 #~ msgid "Rear speakers"
 #~ msgstr "Arrière central"
 
+#, fuzzy
 #~ msgid "Surround 7.1"
-#~ msgstr "Surround 7.1"
+#~ msgstr "Surround 4.1"
 
 #, fuzzy
 #~ msgid "ALSA device"
@@ -29295,7 +29496,7 @@ msgstr "Liste du gestionnaire de médias"
 
 #, fuzzy
 #~ msgid "&Open a Media"
-#~ msgstr "&Ouvrir un média"
+#~ msgstr "Ouvrir un média"
 
 #, fuzzy
 #~ msgid "Display on &Desktop"
@@ -29307,7 +29508,7 @@ msgstr "Liste du gestionnaire de médias"
 
 #, fuzzy
 #~ msgid "Elasped time"
-#~ msgstr "Temps écoulé"
+#~ msgstr "Durée écoulée"
 
 #, fuzzy
 #~ msgid "Video standard (Default, SECAM_D, PAL_B, NTSC_M, etc...)."
@@ -29333,21 +29534,17 @@ msgstr "Liste du gestionnaire de médias"
 #~ msgid "Library"
 #~ msgstr "Bibliothèque"
 
-#, fuzzy
 #~ msgid "Media Browser"
-#~ msgstr "Média : %s"
+#~ msgstr "Navigateur de médias"
 
-#, fuzzy
 #~ msgid "No"
-#~ msgstr "&Non"
+#~ msgstr "Non"
 
-#, fuzzy
 #~ msgid "Full Screen"
 #~ msgstr "Plein écran"
 
-#, fuzzy
 #~ msgid "Easy Stream"
-#~ msgstr "Flux"
+#~ msgstr "Flux facile"
 
 #~ msgid "Hide / Show Library"
 #~ msgstr "Afficher/cacher la bibliothèque"
@@ -29364,9 +29561,8 @@ msgstr "Liste du gestionnaire de médias"
 #~ msgid "VLM Batch Commands"
 #~ msgstr "Commandes VLM"
 
-#, fuzzy
 #~ msgid "Seek Time"
-#~ msgstr "Heure de début"
+#~ msgstr "Heure de recherche"
 
 #~ msgid "Empty Playlist"
 #~ msgstr "Vider la liste de lecture"
@@ -29380,69 +29576,53 @@ msgstr "Liste du gestionnaire de médias"
 #~ msgid "Refresh List"
 #~ msgstr "Rafraîchir la liste"
 
-#, fuzzy
 #~ msgid "Graphical Equalizer"
 #~ msgstr "Égaliseur graphique"
 
-#, fuzzy
 #~ msgid "VLC media player - Flash Viewer"
-#~ msgstr "Lecteur multimédia VLC - Interface web"
+#~ msgstr "Lecteur multimédia VLC - Afficheur flash"
 
-#, fuzzy
 #~ msgid "Streaming Output"
 #~ msgstr "Flux de sortie"
 
-#, fuzzy
 #~ msgid "Create Stream"
-#~ msgstr "Gérer les flux"
+#~ msgstr "Créer un flux"
 
-#, fuzzy
 #~ msgid "Media File"
-#~ msgstr "Fichiers multimédias"
+#~ msgstr "Fichier multimédia"
 
-#, fuzzy
 #~ msgid "Capture Screen"
-#~ msgstr "Mode de capture"
+#~ msgstr "Capture d'écran"
 
-#, fuzzy
 #~ msgid "Close"
-#~ msgstr "&Fermer"
+#~ msgstr "Fermer"
 
-#, fuzzy
 #~ msgid "Error!"
-#~ msgstr "Erreur"
+#~ msgstr "Erreur !"
 
-#, fuzzy
 #~ msgid "Create Mosaic"
-#~ msgstr "Créer"
+#~ msgstr "Créer une mosaïque"
 
-#, fuzzy
 #~ msgid "Stream Input Configuration"
-#~ msgstr "Configuration des hauts-parleurs"
+#~ msgstr "Configuration du flux en entrée"
 
-#, fuzzy
 #~ msgid "Remove Stream"
-#~ msgstr "Supprimer la sélection"
+#~ msgstr "Supprimer le flux"
 
-#, fuzzy
 #~ msgid "Create New Stream"
-#~ msgstr "Créer un nouveau profil"
+#~ msgstr "Créer un nouveau flux"
 
-#, fuzzy
 #~ msgid "Delete All Streams"
-#~ msgstr "Effacer tous les signets"
+#~ msgstr "Effacer tous les flux"
 
-#, fuzzy
 #~ msgid "Configure Stream Defaults"
-#~ msgstr "Configurer les raccourcis claviers"
+#~ msgstr "Configurer les défaults pour les flux"
 
-#, fuzzy
 #~ msgid "Refresh Streams"
-#~ msgstr "Délai de rafraichissement"
+#~ msgstr "Rafraîchir les flux"
 
-#, fuzzy
 #~ msgid "Enqueue"
-#~ msgstr "Mettre à la &file"
+#~ msgstr "Mettre à la file"
 
 #, fuzzy
 #~ msgid "Left rear"
@@ -29461,29 +29641,6 @@ msgstr "Liste du gestionnaire de médias"
 #~ "Un fichier banque de sons (.sf2) est nécessaire pour la synthèse MIDI.\n"
 #~ "Intallez un fichier et indiquez son chemin dans les préférences de VLC "
 #~ "pour « Codecs / audio / FluidSynth ».\n"
-
-#, fuzzy
-#~ msgid "1/2"
-#~ msgstr "F12"
-
-#, fuzzy
-#~ msgid "2"
-#~ msgstr "F2"
-
-#, fuzzy
-#~ msgid "4"
-#~ msgstr "F4"
-
-#, fuzzy
-#~ msgid ""
-#~ "Force the subtiles format. Use \"auto\", the set of supported values "
-#~ "varies."
-#~ msgstr ""
-#~ "Force le format des sous-titres. Choisir « auto » (autodetection du "
-#~ "format) devrait toujours fonctionner."
-
-#~ msgid "Find: %s"
-#~ msgstr "Trouver : %s"
 
 #, fuzzy
 #~ msgid "Audio filter for ugly resampling"
@@ -29515,7 +29672,7 @@ msgstr "Liste du gestionnaire de médias"
 
 #, fuzzy
 #~ msgid "Zoom playlist"
-#~ msgstr "Liste de lecture"
+#~ msgstr "Afficher la liste de lecture"
 
 #, fuzzy
 #~ msgid "IO Method"
@@ -29664,7 +29821,7 @@ msgstr "Liste du gestionnaire de médias"
 
 #, fuzzy
 #~ msgid "Transponder FEC"
-#~ msgstr "Transpose"
+#~ msgstr "Transcode"
 
 #, fuzzy
 #~ msgid "Transponder symbol rate in kHz"
@@ -30015,7 +30172,7 @@ msgstr "Liste du gestionnaire de médias"
 
 #, fuzzy
 #~ msgid "Vertical centering"
-#~ msgstr "Retournement vertical"
+#~ msgstr "Décalage vertical"
 
 #, fuzzy
 #~ msgid ""
@@ -30065,7 +30222,7 @@ msgstr "Liste du gestionnaire de médias"
 
 #, fuzzy
 #~ msgid "Dummy S/PDIF audio mixer"
-#~ msgstr "Pseudo démultipléxeur ifo "
+#~ msgstr "Multiplexeur Dummy/Raw"
 
 #, fuzzy
 #~ msgid "Trivial audio mixer"
@@ -30101,12 +30258,14 @@ msgstr "Liste du gestionnaire de médias"
 
 #, fuzzy
 #~ msgid "Reload image file"
-#~ msgstr "Filtre vidéo rotation"
+#~ msgstr "Fichier d'image"
 
 #, fuzzy
 #~ msgid ""
 #~ "Aspect ratio of the image file (4:3, 16:9). Default is square pixels."
-#~ msgstr "Proportions (4:3, 16:9). Le défaut est 1:1 (pixels carrés)."
+#~ msgstr ""
+#~ "Proportions de l'image vidéo (4:3, 16:9). Le défaut est 1:1 (pixels "
+#~ "carrés)"
 
 #, fuzzy
 #~ msgid "Deinterlace the image after loading it."
@@ -30258,7 +30417,7 @@ msgstr "Liste du gestionnaire de médias"
 
 #, fuzzy
 #~ msgid "Extended controls"
-#~ msgstr "Options étendues "
+#~ msgstr "Mettre à zéro les contrôles"
 
 #, fuzzy
 #~ msgid "General editing filters"
@@ -30366,7 +30525,7 @@ msgstr "Liste du gestionnaire de médias"
 
 #, fuzzy
 #~ msgid "Hotkeys not saved"
-#~ msgstr "Paramètres des raccourcis"
+#~ msgstr "Raccourci pour "
 
 #, fuzzy
 #~ msgid " State    : Paused %s"
@@ -30412,8 +30571,9 @@ msgstr "Liste du gestionnaire de médias"
 #~ msgid " Playlist (By category) "
 #~ msgstr "Catégorie podcast"
 
+#, fuzzy
 #~ msgid "Open: %s"
-#~ msgstr "Ouvrir : %s"
+#~ msgstr "Ouvrir"
 
 #, fuzzy
 #~ msgid "Input caching:"
@@ -30520,18 +30680,13 @@ msgstr "Liste du gestionnaire de médias"
 #~ msgid "Stats video output function"
 #~ msgstr "Statistiques fonction démultiplexeur"
 
+#, fuzzy
 #~ msgid "Font Effect"
-#~ msgstr "Effet de police"
+#~ msgstr "Effets audio"
 
-#~ msgid ""
-#~ "It is possible to apply effects to the rendered text to improve its "
-#~ "readability."
-#~ msgstr ""
-#~ "Il est possible d'appliquer des effets au texte afin d'améliorer sa "
-#~ "lisibilité."
-
+#, fuzzy
 #~ msgid "Fat Outline"
-#~ msgstr "Contour épais"
+#~ msgstr "Contour"
 
 #, fuzzy
 #~ msgid "Number of resumed TLS sessions"
@@ -30743,6 +30898,7 @@ msgstr "Liste du gestionnaire de médias"
 #~ "Conteneurs (*.ps *.ts *.mpg *.ogg *.asf *.mp4 *.mov *.wav *.raw *.flv *."
 #~ "webm)"
 
+#, fuzzy
 #~ msgid "Fontfile for the font you want to use"
 #~ msgstr "Fichier de police à utiliser"
 
@@ -30750,663 +30906,519 @@ msgstr "Liste du gestionnaire de médias"
 #~ msgid "No EPG Data Available"
 #~ msgstr "Aucune aide disponible"
 
+#, fuzzy
 #~ msgid "Backspace"
 #~ msgstr "Retour"
 
+#, fuzzy
 #~ msgid "Browser Back"
-#~ msgstr "Explorateur retour"
+#~ msgstr "Parcourir "
 
-#~ msgid "Browser Favorites"
-#~ msgstr "Favoris de l'explorateur"
-
+#, fuzzy
 #~ msgid "Browser Forward"
-#~ msgstr "Explorateur avance"
+#~ msgstr "Avancer"
 
+#, fuzzy
 #~ msgid "Browser Home"
-#~ msgstr "Explorateur Début"
+#~ msgstr "Parcourir "
 
-#~ msgid "Browser Refresh"
-#~ msgstr "Rafraîchir l'explorateur"
-
+#, fuzzy
 #~ msgid "Browser Search"
-#~ msgstr "Explorateur Chercher"
+#~ msgstr "Chercher"
 
+#, fuzzy
 #~ msgid "Browser Stop"
-#~ msgstr "Explorateur stop"
+#~ msgstr "Parcourir "
 
-#~ msgid "Down"
-#~ msgstr "Bas"
-
+#, fuzzy
 #~ msgid "Enter"
-#~ msgstr "Entrée"
+#~ msgstr "Centré"
 
-#~ msgid "Esc"
-#~ msgstr "Échap"
-
+#, fuzzy
 #~ msgid "F1"
-#~ msgstr "F1"
+#~ msgstr "1"
 
-#~ msgid "F10"
-#~ msgstr "F10"
-
+#, fuzzy
 #~ msgid "F11"
-#~ msgstr "F11"
+#~ msgstr "X11"
 
-#~ msgid "F3"
-#~ msgstr "F3"
-
-#~ msgid "F5"
-#~ msgstr "F5"
-
-#~ msgid "F6"
-#~ msgstr "F6"
-
-#~ msgid "F7"
-#~ msgstr "F7"
-
-#~ msgid "F8"
-#~ msgstr "F8"
-
-#~ msgid "F9"
-#~ msgstr "F9"
-
-#~ msgid "Home"
-#~ msgstr "Début"
-
+#, fuzzy
 #~ msgid "Insert"
-#~ msgstr "Insérer"
+#~ msgstr "Insérer un disque"
 
-#~ msgid "Media Next Track"
-#~ msgstr "Média piste suivante"
-
+#, fuzzy
 #~ msgid "Media Play Pause"
-#~ msgstr "Média Lecture/Pause"
+#~ msgstr "Lecture/Pause"
 
+#, fuzzy
 #~ msgid "Media Prev Track"
-#~ msgstr "Média piste précédente"
+#~ msgstr "Navigateur de médias"
 
+#, fuzzy
 #~ msgid "Media Stop"
-#~ msgstr "Média stop"
+#~ msgstr "Fichiers multimédias dans un Zip"
 
+#, fuzzy
 #~ msgid "Mouse Wheel Down"
-#~ msgstr "Souris molette vers le bas"
+#~ msgstr "Mouvements de la souris"
 
+#, fuzzy
 #~ msgid "Mouse Wheel Left"
-#~ msgstr "Souris molette vers la gauche"
+#~ msgstr "Mouvements de la souris"
 
+#, fuzzy
 #~ msgid "Mouse Wheel Right"
-#~ msgstr "Souris molette vers la droite"
+#~ msgstr "Hauteur du maillage"
 
+#, fuzzy
 #~ msgid "Mouse Wheel Up"
-#~ msgstr "Souris molette vers le haut"
+#~ msgstr "Mouvements de la souris"
 
+#, fuzzy
 #~ msgid "Page Down"
-#~ msgstr "Page suivante"
+#~ msgstr "Page"
 
+#, fuzzy
 #~ msgid "Page Up"
-#~ msgstr "Page précédente"
+#~ msgstr "Page"
 
-#~ msgid "Tab"
-#~ msgstr "Tab"
-
-#~ msgid "Up"
-#~ msgstr "Haut"
-
+#, fuzzy
 #~ msgid "Volume Mute"
-#~ msgstr "Volume muet"
+#~ msgstr "Augmenter le volume"
 
+#, fuzzy
 #~ msgid "Ctrl+"
-#~ msgstr "Ctrl+"
+#~ msgstr "Ctrl+L"
 
-#~ msgid "Alt+"
-#~ msgstr "Alt+"
-
+#, fuzzy
 #~ msgid "Shift+"
-#~ msgstr "Shift+"
+#~ msgstr "Shift+L"
 
+#, fuzzy
 #~ msgid "Meta+"
-#~ msgstr "Méta+"
+#~ msgstr "Métal"
 
+#, fuzzy
 #~ msgid "Command+"
-#~ msgstr "Commande+"
+#~ msgstr "Commande"
 
+#, fuzzy
 #~ msgid "Remember the audio volume"
-#~ msgstr "Mémoriser le volume audio"
+#~ msgstr "Volume audio par défaut"
 
-#~ msgid ""
-#~ "The volume can be recorded and automatically restored next time VLC is "
-#~ "used."
-#~ msgstr ""
-#~ "Le volume peut être enregistré et restoré automatiquement au prochain "
-#~ "démarrage de vlc."
-
+#, fuzzy
 #~ msgid "Audio resampler"
-#~ msgstr "Ré-échantillonnage audio"
+#~ msgstr "Fréquence d'échantillonnage audio"
 
+#, fuzzy
 #~ msgid "This selects which plugin to use for audio resampling."
-#~ msgstr ""
-#~ "Ceci  sélectionne le greffon à utiliser pour le ré-échantillonnage audio."
+#~ msgstr "Ceci  sélectionne le protocole de transport pour RTP."
 
+#, fuzzy
 #~ msgid "Very Low Definition (240 lines)"
-#~ msgstr "Très basse définition (240 lignes)"
+#~ msgstr "Basse définition (320 lignes)"
 
+#, fuzzy
 #~ msgid "Exit fullscreen"
-#~ msgstr "Sortir du mode plein écran"
+#~ msgstr "Plein écran"
 
+#, fuzzy
 #~ msgid "Select the hotkey to use to exit fullscreen state."
 #~ msgstr ""
 #~ "Sélectionnez la combinaison de touches à utiliser pour quitter le plein "
 #~ "écran."
 
+#, fuzzy
 #~ msgid ""
 #~ "Pass alsa:// to open the default ALSA capture device, or alsa://SOURCE to "
 #~ "open a specific device named SOURCE."
 #~ msgstr ""
-#~ "Utilisez alsa:// pour ouvrir la source ALSA par défaut, ou alsa://SOURCE "
-#~ "pour ouvrir la source spécifique nommée SOURCE."
+#~ "Utilisez pulse:// pour ouvrir la source PulsAudio par défaut, ou pulse://"
+#~ "SOURCE pour ouvrir la source spécifique nommée SOURCE."
 
-#~ msgid "192000 Hz"
-#~ msgstr "192000 Hz"
-
+#, fuzzy
 #~ msgid "176400 Hz"
-#~ msgstr "176400 Hz"
+#~ msgstr "60 Hz"
 
+#, fuzzy
 #~ msgid "96000 Hz"
-#~ msgstr "96000 Hz"
+#~ msgstr "60 Hz"
 
+#, fuzzy
 #~ msgid "88200 Hz"
-#~ msgstr "88200 Hz"
+#~ msgstr "50 Hz"
 
+#, fuzzy
 #~ msgid "48000 Hz"
-#~ msgstr "48000 Hz"
+#~ msgstr "50 Hz"
 
+#, fuzzy
 #~ msgid "44100 Hz"
-#~ msgstr "44100 Hz"
+#~ msgstr "50 Hz"
 
+#, fuzzy
 #~ msgid "32000 Hz"
-#~ msgstr "32000 Hz"
+#~ msgstr "50 Hz"
 
+#, fuzzy
 #~ msgid "22050 Hz"
-#~ msgstr "22050 Hz"
+#~ msgstr "50 Hz"
 
+#, fuzzy
 #~ msgid "24000 Hz"
-#~ msgstr "24000 Hz"
+#~ msgstr "50 Hz"
 
+#, fuzzy
 #~ msgid "16000 Hz"
-#~ msgstr "16000 Hz"
+#~ msgstr "60 Hz"
 
-#~ msgid "11025 Hz"
-#~ msgstr "11025 Hz"
-
+#, fuzzy
 #~ msgid "8000 Hz"
-#~ msgstr "8000 Hz"
+#~ msgstr "50 Hz"
 
+#, fuzzy
 #~ msgid "4000 Hz"
-#~ msgstr "4000 Hz"
+#~ msgstr "50 Hz"
 
-#~ msgid "DC1394"
-#~ msgstr "DC1394"
-
+#, fuzzy
 #~ msgid "IIDC Digital Camera (FireWire) input"
-#~ msgstr "Entrée Digitale Vidéo IIDC (Firewire/ieee1394)"
+#~ msgstr "Entrée Digitale Vidéo (Firewire/ieee1394)"
 
+#, fuzzy
 #~ msgid "Do not sort the items."
-#~ msgstr "Ne pas trier les éléments"
+#~ msgstr "Police de caractères utilisée pour les titres"
 
+#, fuzzy
 #~ msgid "Directory sort order"
-#~ msgstr "Ordre de tri des dossiers"
+#~ msgstr "Index de dossier"
 
+#, fuzzy
 #~ msgid "Display ID"
-#~ msgstr "Identifiant écran"
+#~ msgstr "Affichage"
 
-#~ msgid "Display ID. If not specified, main display ID is used. "
-#~ msgstr ""
-#~ "Identifiant écran. Si ce n'est pas précisé l'écran principal sera utilisé."
-
+#, fuzzy
 #~ msgid "Screen index"
-#~ msgstr "Index écran"
+#~ msgstr "Module de capture d'écran"
 
-#~ msgid "Index of screen (1, 2, 3, ...). Alternative to Display ID."
-#~ msgstr ""
-#~ "Index de l'écran (1, 2, 3, ...). Alternative à l'identifiant de l'écran."
-
+#, fuzzy
 #~ msgid "Audio channel remapper"
-#~ msgstr "Remappage canal audio"
+#~ msgstr "Canaux audio"
 
-#~ msgid "Use VLC frequency bands"
-#~ msgstr "Utiliser les bandes de fréquence de VLC"
-
-#~ msgid ""
-#~ "Use the VLC frequency bands. Otherwise, use the ISO Standard frequency "
-#~ "bands."
-#~ msgstr ""
-#~ "Utiliser les bandes de fréquence de VLC, sinon utiliser les bandes de "
-#~ "fréquences ISO."
-
+#, fuzzy
 #~ msgid "Gain multiplier"
-#~ msgstr "Multiplicateur de gain"
+#~ msgstr "Multiplexeur"
 
+#, fuzzy
 #~ msgid "Increase or decrease the gain (default 1.0)"
-#~ msgstr "Augmenter ou diminuer le gain (1,0 par défaut)"
+#~ msgstr ""
+#~ "Sélectionnez la combinaison de touches à utiliser pour diminuer le retard "
+#~ "de l'audio."
 
+#, fuzzy
 #~ msgid "Gain control filter"
 #~ msgstr "Filtre d'ajustement du grain"
 
+#, fuzzy
 #~ msgid "Sinc function (best quality)"
-#~ msgstr "Sinus cardinal (meilleure qualité)"
-
-#~ msgid "Sinc function (medium quality)"
-#~ msgstr "Sinus cardinal (qualité moyenne)"
-
-#~ msgid "Sinc function (fast)"
-#~ msgstr "Fonction Sinc (rapide)"
-
-#~ msgid "Zero Order Hold (fastest)"
-#~ msgstr "Zero Order Hold (plus rapide)"
-
-#~ msgid "Linear (fastest)"
-#~ msgstr "Linéaire (plus rapide)"
-
-#~ msgid "OpenBSD sndio audio output"
-#~ msgstr "Sortie audio OpenBSD sndio"
-
-#~ msgid "Chorus"
-#~ msgstr "Choeurs"
-
-#~ msgid "Polyphony"
-#~ msgstr "Polyphonie"
-
-#~ msgid "Frame packing"
-#~ msgstr "Combinaison de trame "
+#~ msgstr "Bicubique (bonne qualité)"
 
 #, fuzzy
-#~ msgid "Default tune setting used"
-#~ msgstr "Définition de l'algorithme de hachage par défaut à %s (%d)\n"
+#~ msgid "Sinc function (medium quality)"
+#~ msgstr "Bicubique (bonne qualité)"
 
+#, fuzzy
+#~ msgid "OpenBSD sndio audio output"
+#~ msgstr "Sortie audio OpenSLES"
+
+#, fuzzy
+#~ msgid "Frame packing"
+#~ msgstr "Débit d'images "
+
+#, fuzzy
 #~ msgid "Default preset setting used"
-#~ msgstr "Paramètres par défaut utilisés"
+#~ msgstr "Paramètres des fournisseurs de dialogues"
 
+#, fuzzy
 #~ msgid "x264 advanced options."
-#~ msgstr "Options x264 avancées"
+#~ msgstr "Afficher les options avancées"
 
-#~ msgid "checkerboard"
-#~ msgstr "damier"
-
+#, fuzzy
 #~ msgid "column alternation"
-#~ msgstr "Alternance de colonne"
+#~ msgstr "Normalisation du volume"
 
+#, fuzzy
 #~ msgid "row alternation"
-#~ msgstr "Alternance de ligne"
+#~ msgstr "Saturation"
 
-#~ msgid "side by side"
-#~ msgstr "côte à côte"
-
+#, fuzzy
 #~ msgid "top bottom"
-#~ msgstr "de haut en bas"
+#~ msgstr "Zone 2 : bas"
 
+#, fuzzy
 #~ msgid "frame alternation"
-#~ msgstr "Alternance de trame"
+#~ msgstr "Interaction avec l'utilisateur"
 
+#, fuzzy
 #~ msgid "H.264/MPEG4 AVC encoder (x264 10-bit)"
-#~ msgstr "Encodeur vidéo H264/MPEG4 (x264 10-bit)"
+#~ msgstr "Encodeur vidéo H264/MPEG4 utilisant la bibliothèque x264"
 
-#~ msgid "Fix when necessary"
-#~ msgstr "Répare si nécessaire"
-
+#, fuzzy
 #~ msgid "RTSP connection failed"
-#~ msgstr "La connexion RTSP a échoué"
+#~ msgstr "La connexion a échoué"
 
+#, fuzzy
 #~ msgid "Psychadelic"
 #~ msgstr "Psychédélique"
 
+#, fuzzy
 #~ msgid "Folk"
 #~ msgstr "Pop-Folk"
 
+#, fuzzy
 #~ msgid "Folk-Rock"
-#~ msgstr "Folk-Rock"
+#~ msgstr "Rock"
 
-#~ msgid "National Folk"
-#~ msgstr "National Folk"
-
-#~ msgid "Swing"
-#~ msgstr "Swing"
-
+#, fuzzy
 #~ msgid "Fast Fusion"
-#~ msgstr "Fast Fusion"
+#~ msgstr "Fusion"
 
-#~ msgid "Bebob"
-#~ msgstr "Bebob"
-
-#~ msgid "Revival"
-#~ msgstr "Revival"
-
-#~ msgid "Celtic"
-#~ msgstr "Celtique"
-
+#, fuzzy
 #~ msgid "Bluegrass"
-#~ msgstr "Bluegrass"
+#~ msgstr "Blues"
 
-#~ msgid "Avantgarde"
-#~ msgstr "Avantgarde"
-
+#, fuzzy
 #~ msgid "Gothic Rock"
-#~ msgstr "Rock gothique"
+#~ msgstr "Gothique"
 
-#~ msgid "Progressive Rock"
-#~ msgstr "Rock progressif"
-
+#, fuzzy
 #~ msgid "Psychedelic Rock"
-#~ msgstr "Rock psychédélique"
+#~ msgstr "Psychédélique"
 
-#~ msgid "Symphonic Rock"
-#~ msgstr "Rock symphonique"
-
+#, fuzzy
 #~ msgid "Slow Rock"
-#~ msgstr "Rock lent"
+#~ msgstr "Rock"
 
+#, fuzzy
 #~ msgid "Big Band"
-#~ msgstr "Big Band"
+#~ msgstr "Gros bouton"
 
+#, fuzzy
 #~ msgid "Easy Listening"
-#~ msgstr "Easy Listening"
+#~ msgstr "Liste de lecture"
 
-#~ msgid "Acoustic"
-#~ msgstr "Acoustique"
-
-#~ msgid "Humour"
-#~ msgstr "Humour"
-
+#, fuzzy
 #~ msgid "Speech"
-#~ msgstr "Parole"
+#~ msgstr "Speex"
 
+#, fuzzy
 #~ msgid "Chanson"
-#~ msgstr "Chanson"
+#~ msgstr "Canal"
 
-#~ msgid "Opera"
-#~ msgstr "Opéra"
-
-#~ msgid "Chamber Music"
-#~ msgstr "Musique de chambre"
-
-#~ msgid "Sonata"
-#~ msgstr "Sonate"
-
-#~ msgid "Symphony"
-#~ msgstr "Symphonie"
-
-#~ msgid "Booty Bass"
-#~ msgstr "Booty Bass"
-
-#~ msgid "Primus"
-#~ msgstr "Primus"
-
-#~ msgid "Porn Groove"
-#~ msgstr "Porn Groove"
-
-#~ msgid "Satire"
-#~ msgstr "Satire"
-
-#~ msgid "Slow Jam"
-#~ msgstr "Slow Jam"
-
+#, fuzzy
 #~ msgid "Tango"
-#~ msgstr "Tango"
+#~ msgstr "Sango"
 
-#~ msgid "Samba"
-#~ msgstr "Samba"
-
-#~ msgid "Folklore"
-#~ msgstr "Folklore"
-
+#, fuzzy
 #~ msgid "Ballad"
-#~ msgstr "Ballade"
+#~ msgstr "Balles"
 
-#~ msgid "Power Ballad"
-#~ msgstr "Power Ballad"
-
-#~ msgid "Rhythmic Soul"
-#~ msgstr "Soul rythmique"
-
-#~ msgid "Freestyle"
-#~ msgstr "Freestyle"
-
-#~ msgid "Duet"
-#~ msgstr "Duo"
-
+#, fuzzy
 #~ msgid "Punk Rock"
-#~ msgstr "Punk Rock"
+#~ msgstr "Rock"
 
-#~ msgid "Drum Solo"
-#~ msgstr "Solo de batterie"
-
-#~ msgid "Acapella"
-#~ msgstr "Acapella"
-
+#, fuzzy
 #~ msgid "Euro-House"
-#~ msgstr "Euro-House"
+#~ msgstr "House"
 
+#, fuzzy
 #~ msgid "Dance Hall"
-#~ msgstr "Dance Hall"
+#~ msgstr "Grand Hall"
 
+#, fuzzy
 #~ msgid "Goa"
-#~ msgstr "Goa"
+#~ msgstr "&Aller"
 
-#~ msgid "Drum & Bass"
-#~ msgstr "Drum & Bass"
-
-#~ msgid "Club - House"
-#~ msgstr "Club - House"
-
+#, fuzzy
 #~ msgid "Hardcore"
-#~ msgstr "Hardcore"
+#~ msgstr "Score"
 
+#, fuzzy
 #~ msgid "Terror"
-#~ msgstr "Terror"
+#~ msgstr "erreurs"
 
-#~ msgid "Indie"
-#~ msgstr "Indie"
-
-#~ msgid "BritPop"
-#~ msgstr "BritPop"
-
-#~ msgid "Negerpunk"
-#~ msgstr "Negerpunk"
-
-#~ msgid "Polsk Punk"
-#~ msgstr "Polsk Punk"
-
-#~ msgid "Beat"
-#~ msgstr "Beat"
-
+#, fuzzy
 #~ msgid "Christian Gangsta Rap"
-#~ msgstr "Christian Gangsta Rap"
+#~ msgstr "Rap chrétien"
 
+#, fuzzy
 #~ msgid "Heavy Metal"
-#~ msgstr "Heavy Metal"
+#~ msgstr "Death metal"
 
+#, fuzzy
 #~ msgid "Black Metal"
-#~ msgstr "Black Metal"
+#~ msgstr "Emplacement vide"
 
-#~ msgid "Crossover"
-#~ msgstr "Crossover"
-
-#~ msgid "Contemporary Christian"
-#~ msgstr "Contemporary Christian"
-
+#, fuzzy
 #~ msgid "Christian Rock"
-#~ msgstr "Rock chrétien"
+#~ msgstr "Rap chrétien"
 
+#, fuzzy
 #~ msgid "Merengue"
-#~ msgstr "Merengue"
+#~ msgstr "Interlingue"
 
-#~ msgid "Salsa"
-#~ msgstr "Salsa"
-
+#, fuzzy
 #~ msgid "Thrash Metal"
-#~ msgstr "Thrash Metal"
+#~ msgstr "Death metal"
 
-#~ msgid "Anime"
-#~ msgstr "Anime"
-
-#~ msgid "JPop"
-#~ msgstr "JPop"
-
-#~ msgid "Synthpop"
-#~ msgstr "Synthpop"
-
+#, fuzzy
 #~ msgid "Video Device"
 #~ msgstr "Périphérique vidéo"
 
+#, fuzzy
 #~ msgid "Screen:"
 #~ msgstr "Écran"
 
+#, fuzzy
 #~ msgid " ;                      Look for the next item"
-#~ msgstr " ;                      Rechercher l'élément suivant"
+#~ msgstr "     /            Rechercher"
 
+#, fuzzy
 #~ msgid "Toggle playlist"
-#~ msgstr "Basculer la liste de lecture"
+#~ msgstr "Effacer la liste de lecture"
 
+#, fuzzy
 #~ msgid ""
 #~ "Select or double click an action to change the associated hotkey. Use "
 #~ "delete key to remove hotkeys"
-#~ msgstr ""
-#~ "Sélectionnez ou double-cliquez une action pour changer la touche "
-#~ "associée. Utiliser [Suppr] pour enlever la touche"
+#~ msgstr "Sélectionnez une action pour changer la touche associée"
 
+#, fuzzy
 #~ msgid "Application level hotkey"
-#~ msgstr "Raccourci de niveau application"
+#~ msgstr "Application"
 
-#~ msgid "Desktop level hotkey"
-#~ msgstr "Raccourci de niveau bureau"
-
+#, fuzzy
 #~ msgid "Double click to change"
-#~ msgstr "Double-cliquez pour changer"
+#~ msgstr "Nombre de ligne pour le changement"
 
+#, fuzzy
 #~ msgid "Hotkey change"
-#~ msgstr "Modification raccourci clavier"
+#~ msgstr "Raccourci clavier"
 
+#, fuzzy
 #~ msgid "Press the new key or combination for "
 #~ msgstr "Appuyez sur la nouvelle combinaison pour "
 
-#~ msgid "Assign"
-#~ msgstr "Affecter"
-
+#, fuzzy
 #~ msgid "Key or combination: "
-#~ msgstr "Raccourci clavier :"
+#~ msgstr "Combinaison invalide"
 
-#~ msgid "Co&dec"
-#~ msgstr "Co&dec"
-
+#, fuzzy
 #~ msgid "C&onvert"
-#~ msgstr "C&onvertir"
+#~ msgstr "Convertir"
 
+#, fuzzy
 #~ msgid "Aspect ratio selector"
-#~ msgstr "Sélection du ratio d'aspect"
+#~ msgstr "Ratio d'aspect : %s"
 
+#, fuzzy
 #~ msgid "Speed selector"
-#~ msgstr "Sélection vitesse"
+#~ msgstr "Ré-échantillonnage Speex"
 
+#, fuzzy
 #~ msgid "&Increase Volume"
-#~ msgstr "&Augmenter le volume"
+#~ msgstr "Augmenter le volume"
 
+#, fuzzy
 #~ msgid "&Decrease Volume"
-#~ msgstr "&Réduire le volume"
+#~ msgstr "Réduire le volume"
 
+#, fuzzy
 #~ msgid "&Mute"
-#~ msgstr "Couper le &son"
+#~ msgstr "Couper le son"
 
+#, fuzzy
 #~ msgid "Never"
-#~ msgstr "Jamais"
+#~ msgstr "Réverbération"
 
+#, fuzzy
 #~ msgid "When minimized"
-#~ msgstr "Si minimisé"
+#~ msgstr "Infobulles depuis la zone de notification si minimisé"
 
+#, fuzzy
 #~ msgid "Always"
-#~ msgstr "Toujours"
+#~ msgstr "Toujours réparer"
 
+#, fuzzy
 #~ msgid "Command-line interface"
-#~ msgstr "Interface en ligne de commandes"
+#~ msgstr "Interfaces principales"
 
+#, fuzzy
 #~ msgid "Specify the logging format."
-#~ msgstr "Indiquez le format pour le journal."
+#~ msgstr "Indiquez le nom du fichier pour le journal"
 
-#~ msgid "Select the syslog facility where logs will be forwarded."
-#~ msgstr "Choisir le type de gestion des messages « syslog »"
-
+#, fuzzy
 #~ msgid "Preferred Width"
-#~ msgstr "Largeur préférée"
+#~ msgstr "Liste de résolutions vidéos préférées"
 
+#, fuzzy
 #~ msgid "Preferred Height"
-#~ msgstr "Hauteur préférée"
+#~ msgstr "Liste de décodeurs préférés."
 
-#~ msgid "Buffer Size (Seconds)"
-#~ msgstr "Taille du tampon (en secondes)"
-
+#, fuzzy
 #~ msgid "Buffer size in seconds"
-#~ msgstr "Taille de tampon (en secondes)"
+#~ msgstr "Durée (s)"
 
+#, fuzzy
 #~ msgid "Debanding algorithm"
-#~ msgstr "Algorithme de « Debanding »"
+#~ msgstr "Activer l'algorithme de passage en mono"
 
+#, fuzzy
 #~ msgid "Text file"
-#~ msgstr "Fichier texte"
+#~ msgstr "Fichier d'index"
 
-#~ msgid "Anti-transpose"
-#~ msgstr "Anti-transposition"
-
-#~ msgid "vsxu"
-#~ msgstr "vsxu"
-
-#~ msgid "Set up media sources to stream"
-#~ msgstr "Choisissez la source média pour le flux"
-
+#, fuzzy
 #~ msgid "Select destinations to stream to"
-#~ msgstr "Sélectionnez la destnation du flux"
+#~ msgstr "Sélectionnez un flux"
 
+#, fuzzy
 #~ msgid "Transcoding Options"
 #~ msgstr "Options de transcodage"
 
+#, fuzzy
 #~ msgid "Select and choose transcoding options"
-#~ msgstr "Sélectionnez les options de trancodage"
+#~ msgstr "Options de l'assistant de diffusion/trancodage"
 
+#, fuzzy
 #~ msgid "Show media change popup when"
-#~ msgstr "Montrer les changement de média par une info-bulle quand"
+#~ msgstr "Incruster le titre dans la vidéo."
 
+#, fuzzy
 #~ msgid "Video device node."
-#~ msgstr "Nom du périphérique de noeud vidéo"
+#~ msgstr "Nom du périphérique vidéo"
 
-#~ msgid "Multichannel television sound (MTS)"
-#~ msgstr "Son télé multi-canaux (MTS)"
-
+#, fuzzy
 #~ msgid "Primary language"
-#~ msgstr "Langue principale"
+#~ msgstr "Langue audio"
 
 #~ msgid "ARM NEON video chroma YUV->RGBA"
-#~ msgstr "Conversions de chroma YUVA->RGBA ARM NEON"
+#~ msgstr "Conversions de chroma YUV->RGBA ARM NEON"
 
+#, fuzzy
 #~ msgid "Feedback gain"
 #~ msgstr "Gain de rétroaction"
 
+#, fuzzy
 #~ msgid "Dry mix"
-#~ msgstr "Dry mix"
+#~ msgstr "Sec"
 
+#, fuzzy
 #~ msgid "Level of input signal of original channel."
-#~ msgstr "Niveau du signal d'entrée du canal d'origine"
+#~ msgstr "Niveau du signal d'entrée"
 
+#, fuzzy
 #~ msgid "Stereo Enhancer"
-#~ msgstr "Amélioration Stéréo"
+#~ msgstr "Mode Stéréo"
 
-#~ msgid "Simple stereo widening effect"
-#~ msgstr "Effet simplifié d'élargissement stéréo"
-
+#, fuzzy
 #~ msgid "Color scheme"
-#~ msgstr "Type  de couleurs"
-
-#~ msgid "Define the glasses' color scheme"
-#~ msgstr "Définir le type de couleur des lunettes 3D"
-
-#~ msgid "Convert 3D picture to anaglyph image video filter"
-#~ msgstr "Convertir une image 3D avec le filtre vidéo image anaglyphe"
-
-#~ msgid "Anaglyph"
-#~ msgstr "Anaglyphe"
+#~ msgstr "Effet de couleur"
