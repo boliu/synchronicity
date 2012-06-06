@@ -5,16 +5,16 @@
 # This file is distributed under the same license as the VLC package.
 #
 # Eero <eerove gmail com> 2009.
-# Mihkel <turakas gmail com> 2010 - 2011.
+# Mihkel <turakas gmail com> 2010 - 2012.
 # Mattias Põldaru <mahfiaz gmail com> 2010.
 #
 #: modules/gui/macosx/prefs.m:481 modules/gui/macosx/simple_prefs.m:445
 msgid ""
 msgstr ""
-"Project-Id-Version: vlc 2.0.0\n"
+"Project-Id-Version: vlc 2.0.2\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-03-16 18:33+0000\n"
-"PO-Revision-Date: 2012-02-13 11:26+0200\n"
+"PO-Revision-Date: 2012-05-25 22:20+0300\n"
 "Last-Translator: mihkel <turakas gmail com>\n"
 "Language-Team: Estonian\n"
 "Language: et\n"
@@ -2655,11 +2655,11 @@ msgstr "HD (720p)"
 
 #: src/libvlc-module.c:759
 msgid "Standard Definition (576 or 480 lines)"
-msgstr ""
+msgstr "Standardne definitsioon (576 või 480 rida)"
 
 #: src/libvlc-module.c:760
 msgid "Low definition (320 lines)"
-msgstr ""
+msgstr "Madal definitsioon (320 rida)"
 
 #: src/libvlc-module.c:763
 msgid "Input repetitions"
@@ -3764,7 +3764,7 @@ msgstr "Laadi meediakogu"
 
 #: src/libvlc-module.c:1326
 msgid "Enable this option to load the SQL-based Media Library at VLC startup"
-msgstr ""
+msgstr "Võimalda see valik, et laadida SQL-põhine meediakogu VLC käivitamisel"
 
 #: src/libvlc-module.c:1328 modules/gui/qt4/ui/sprefs_interface.h:530
 msgid "Display playlist tree"
@@ -5673,15 +5673,16 @@ msgstr "Blu-Ray ketta sisend"
 
 #: modules/access/bluray.c:51
 msgid "Bluray menus"
-msgstr ""
+msgstr "Bluray menüüd"
 
 #: modules/access/bluray.c:52
 msgid "Use bluray menus. If disabled, the movie will start directly"
 msgstr ""
+"Kasuta bluray menüüsid. Kui keelatud, siis hakatakse kohe filmi esitama"
 
 #: modules/access/bluray.c:60 modules/gui/qt4/ui/open_disk.h:299
 msgid "BluRay"
-msgstr ""
+msgstr "BluRay"
 
 #: modules/access/bluray.c:61
 msgid "Blu-Ray Disc support (libbluray)"
@@ -5692,20 +5693,24 @@ msgid ""
 "This Blu-Ray Disc needs a library for AACS decoding, and your system does "
 "not have it."
 msgstr ""
+"See Blu-Ray plaat vajab teeki AACS dekodeerimiseks, aga sinu süsteemis seda "
+"pole."
 
 #: modules/access/bluray.c:226
 msgid "Your system AACS decoding library does not work. Missing keys?"
-msgstr ""
+msgstr "Sinu süsteemi AACS dekodeerimise teek ei tööta. Puuduvad võtmed?"
 
 #: modules/access/bluray.c:235
 msgid ""
 "This Blu-Ray Disc needs a library for BD+ decoding, and your system does not "
 "have it."
 msgstr ""
+"See Blu-Ray plaat vajab BD+ dekodeerimiseks teeki ja sinu süsteemis seda "
+"pole."
 
 #: modules/access/bluray.c:240
 msgid "Your system BD+ decoding library does not work. Missing configuration?"
-msgstr ""
+msgstr "Sinu süsteemi BD+ dekodeerimise teek ei tööta. Puuduv seadistus?"
 
 #: modules/access/bluray.c:296
 msgid "Blu-Ray error"
@@ -5758,6 +5763,7 @@ msgid ""
 "DeckLink capture card to use, if multiple exist. The cards are numbered from "
 "0."
 msgstr ""
+"Kasutatav DeckLink-i hõivekaart, kui on mitu. Kaarte hakatakse loendama 0-st."
 
 #: modules/access/decklink.cpp:48
 msgid "Desired input video mode"
@@ -5768,6 +5774,8 @@ msgid ""
 "Desired input video mode for DeckLink captures. This value should be a "
 "FOURCC code in textual form, e.g. \"ntsc\"."
 msgstr ""
+"Soovitud DeckLink-i hõive sisendi videorežiim. See väärtus peab olema FOURCC "
+"kood teksit kujul nt. \"ntsc\"."
 
 #: modules/access/decklink.cpp:54
 msgid "Audio connection"
@@ -6149,9 +6157,8 @@ msgid ""
 msgstr ""
 
 #: modules/access/dtv/access.c:41
-#, fuzzy
 msgid "DVB device"
-msgstr "DVD seade"
+msgstr "DVB seade"
 
 #: modules/access/dtv/access.c:43
 msgid ""
@@ -6329,15 +6336,15 @@ msgstr "Kihi C segmentide arv"
 
 #: modules/access/dtv/access.c:148
 msgid "Layer A time interleaving"
-msgstr ""
+msgstr "Kihi A aja sektsioneerimine"
 
 #: modules/access/dtv/access.c:149
 msgid "Layer B time interleaving"
-msgstr ""
+msgstr "Kihi B aja sektsioneerimine"
 
 #: modules/access/dtv/access.c:150
 msgid "Layer C time interleaving"
-msgstr ""
+msgstr "Kihi C aja sektsioneerimine"
 
 #: modules/access/dtv/access.c:152
 msgid "Pilot"
@@ -6794,7 +6801,7 @@ msgstr "Teekann"
 
 #: modules/access/htcpcp.c:140
 msgid "The server is a teapot. You can't brew coffee with a teapot."
-msgstr ""
+msgstr "Server on teepott. Sa ei saa teepotiga kohvi keeta."
 
 #: modules/access/htcpcp.c:143 modules/access/htcpcp.c:149
 msgid "Coffee pot"
@@ -6803,7 +6810,7 @@ msgstr "Kohvikann"
 #: modules/access/htcpcp.c:144
 #, c-format
 msgid "The pot failed to brew coffee (server error %u)."
-msgstr ""
+msgstr "Kann ei suuda kohvi keeta (serveri viga %u)"
 
 #: modules/access/htcpcp.c:149
 msgid "Coffee is ready."
@@ -7278,12 +7285,13 @@ msgstr "TS voogude segmentide pikkus"
 
 #: modules/access_output/livehttp.c:66
 msgid "Split segments anywhere"
-msgstr ""
+msgstr "Poolita segmente igalpool"
 
 #: modules/access_output/livehttp.c:67
 msgid ""
 "Don't require a keyframe before splitting a segment. Needed for audio only."
 msgstr ""
+"Ära nõua võtmekaadrit enne segmendi poolitamist. Vajalik ainult audio jaoks."
 
 #: modules/access_output/livehttp.c:70
 msgid "Number of segments"
@@ -7303,7 +7311,7 @@ msgstr "Asukoht loodava indeksi failini"
 
 #: modules/access_output/livehttp.c:76
 msgid "Full URL to put in index file"
-msgstr ""
+msgstr "Täis URL, mis pannakse indeksi faili"
 
 #: modules/access_output/livehttp.c:77
 msgid "Full URL to put in index file. Use #'s to represent segment number"
@@ -7315,11 +7323,11 @@ msgstr "Kustuta segmente"
 
 #: modules/access_output/livehttp.c:81
 msgid "Delete segments when they are no longer needed"
-msgstr ""
+msgstr "Kustuta enam mittevajalikud segmendid"
 
 #: modules/access_output/livehttp.c:83
 msgid "Use muxers rate control mechanism"
-msgstr ""
+msgstr "Kasuta mukserite kiiruse kontrolli mehhanisme"
 
 #: modules/access_output/livehttp.c:86
 msgid "HTTP Live streaming output"
@@ -7470,6 +7478,8 @@ msgid ""
 "Pass pulse:// to open the default PulseAudio source, or pulse://SOURCE to "
 "open a specific source named SOURCE."
 msgstr ""
+"Edasta pulse:// avamaks vaikimisi PulseAudio allikat või pulse://ALLIKAS "
+"avamaks kindlaks määratud allikas nimega ALLIKAS."
 
 #: modules/access/pulse.c:43
 msgid "PulseAudio"
@@ -8279,7 +8289,7 @@ msgstr "Automaatselt kontrolli värviformaadi sisendtundlikkust."
 
 #: modules/access/v4l2/video.c:136
 msgid "Power line frequency"
-msgstr ""
+msgstr "Toiteliini sagedus"
 
 #: modules/access/v4l2/video.c:138
 msgid "Power line frequency anti-flicker filter."
@@ -8415,11 +8425,11 @@ msgstr "Audiosisendi bassi kohandamine."
 
 #: modules/access/v4l2/video.c:186
 msgid "Treble level"
-msgstr ""
+msgstr "Kõrgete toonide nivoo"
 
 #: modules/access/v4l2/video.c:188
 msgid "Treble adjustment of the audio input."
-msgstr ""
+msgstr "Audiosisendi kõrgete toonide kohandamine."
 
 #: modules/access/v4l2/video.c:191
 msgid "Mute the audio."
@@ -8724,7 +8734,7 @@ msgstr "Esitusloendi \"pealkirja\" väljal kasutatav vorming."
 
 #: modules/access/vdr.c:87
 msgid "Support for VDR recordings (http://www.tvdr.de/)."
-msgstr ""
+msgstr "Tugi VDR salvestistele (http://www.tvdr.de/)."
 
 #: modules/access/vdr.c:89
 msgid "Chapter offset in ms"
@@ -8748,7 +8758,7 @@ msgstr "VDR salvestamine"
 
 #: modules/access/vdr.c:824
 msgid "VDR Cut Marks"
-msgstr ""
+msgstr "VDR lõikamise märgid"
 
 #: modules/access/vdr.c:887
 msgid "Start"
@@ -8986,7 +8996,7 @@ msgstr "Tagumine parem"
 
 #: modules/audio_filter/channel_mixer/mono.c:96
 msgid "Low-frequency effects"
-msgstr ""
+msgstr "Madalsageduslikud efektid"
 
 #: modules/audio_filter/channel_mixer/mono.c:97
 msgid "Side left"
@@ -9085,7 +9095,7 @@ msgstr "RMS/tipp"
 
 #: modules/audio_filter/compressor.c:156
 msgid "Set the RMS/peak (0 ... 1)."
-msgstr ""
+msgstr "Määra RMS/tipp (0 ... 1)."
 
 #: modules/audio_filter/compressor.c:158
 msgid "Attack time"
@@ -9093,7 +9103,7 @@ msgstr "Ründeaeg"
 
 #: modules/audio_filter/compressor.c:160
 msgid "Set the attack time in milliseconds (1.5 ... 400)."
-msgstr ""
+msgstr "Määra ründeaeg millisekundites (1.5 ... 400)."
 
 #: modules/audio_filter/compressor.c:162
 msgid "Release time"
@@ -9118,7 +9128,7 @@ msgstr "Suhe"
 
 #: modules/audio_filter/compressor.c:170
 msgid "Set the ratio (n:1) (1 ... 20)."
-msgstr ""
+msgstr "Määra suhe (n:1) (1 ... 20)."
 
 #: modules/audio_filter/compressor.c:172 modules/gui/macosx/AudioEffects.m:84
 msgid "Knee radius"
@@ -9422,11 +9432,13 @@ msgstr "Audiofilter sagedus-piiratud interpolarisatsiooni ümberdiskreetimiseks"
 
 #: modules/audio_filter/resampler/speex.c:32
 msgid "Resampling quality"
-msgstr "Ümber diskreetimise kvaliteet"
+msgstr "Ümberdiskreetimise kvaliteet"
 
 #: modules/audio_filter/resampler/speex.c:34
 msgid "Resampling quality (0 = worst and fastest, 10 = best and slowest)."
 msgstr ""
+"Ümberdiskreetimise kvaliteet (0 = halvim aga kiireim, 10 = parim aga "
+"aeglaseim)."
 
 #: modules/audio_filter/resampler/speex.c:40
 #: modules/audio_filter/resampler/speex.c:41
@@ -9544,18 +9556,16 @@ msgid "Dummy audio output"
 msgstr "Libaaudioväljund"
 
 #: modules/audio_output/alsa.c:56
-#, fuzzy
 msgid "Audio output device"
-msgstr "Audioväljundi pistik"
+msgstr "Audioväljundi seade"
 
 #: modules/audio_output/alsa.c:57
 msgid "Audio output device (using ALSA syntax)."
-msgstr ""
+msgstr "Audioväljundi seade (kasutab ALSA süntaksit)."
 
 #: modules/audio_output/alsa.c:65
-#, fuzzy
 msgid "Audio output channels"
-msgstr "Audioväljundi kanalite režiim"
+msgstr "Audioväljundi kanalid"
 
 #: modules/audio_output/alsa.c:66
 msgid ""
@@ -9758,17 +9768,17 @@ msgstr "JACK audioväljund"
 
 #: modules/audio_output/kai.c:67
 msgid "Select a proper audio device to be used by KAI."
-msgstr ""
+msgstr "Vali KAI kasutamiseks kohane audioseade."
 
 #: modules/audio_output/kai.c:70
 msgid "Open audio in exclusive mode."
-msgstr ""
+msgstr "Ava audio ainurežiimis."
 
 #: modules/audio_output/kai.c:72
 msgid ""
 "Enable this option if you want your audio not to be interrupted by the other "
 "audio."
-msgstr ""
+msgstr "Võimalda see valik, kui soovid, et heli ei segaks mõni teine audio."
 
 #: modules/audio_output/kai.c:82
 msgid "K Audio Interface audio output"
@@ -10038,7 +10048,7 @@ msgstr "Koodeki nimi"
 
 #: modules/codec/avcodec/avcodec.h:119
 msgid "Internal libavcodec codec name"
-msgstr ""
+msgstr "Sisemine libavcodec-i koodeki nimi"
 
 #: modules/codec/avcodec/avcodec.h:122
 msgid "Visualize motion vectors"
@@ -10261,12 +10271,11 @@ msgid "Strict standard compliance"
 msgstr "Range standarditele vastavus"
 
 #: modules/codec/avcodec/avcodec.h:228
-#, fuzzy
 msgid ""
 "Force a strict standard compliance when encoding (accepted values: -2 to 2)."
 msgstr ""
-"Enkoodimisel määra jõuga range standarditele vastavus (Lubatud väärtused: "
-"-1, 0, 1)."
+"Enkoodimisel määra jõuga range standarditele vastavus (Lubatud väärtused: -2 "
+"kuni 2)."
 
 #: modules/codec/avcodec/avcodec.h:231
 msgid "Luminance masking"
@@ -11127,7 +11136,7 @@ msgstr "Sageduse kontrolli meetod"
 
 #: modules/codec/schroedinger.c:64
 msgid "Method used to encode the video sequence"
-msgstr ""
+msgstr "Meetod selle videojada enkodeerimiseks"
 
 #: modules/codec/schroedinger.c:77
 msgid "Constant noise threshold mode"
@@ -11163,7 +11172,7 @@ msgstr "GOP struktuur"
 
 #: modules/codec/schroedinger.c:88
 msgid "GOP structure used to encode the video sequence"
-msgstr ""
+msgstr "GOP struktuur videojada enkodeerimiseks"
 
 #: modules/codec/schroedinger.c:100
 msgid ""
@@ -11970,7 +11979,7 @@ msgstr ""
 
 #: modules/codec/x264.c:81
 msgid "Enable compatibility hacks for Blu-ray support"
-msgstr ""
+msgstr "Võimalda ühilduvuse häkid Blu-ray toes"
 
 #: modules/codec/x264.c:82
 msgid ""
@@ -12499,7 +12508,7 @@ msgstr ""
 
 #: modules/codec/x264.c:306
 msgid "RD based mode decision for B-frames"
-msgstr ""
+msgstr "B-kaadrite RD baasil režiimi otsus"
 
 #: modules/codec/x264.c:307
 msgid "RD based mode decision for B-frames. This requires subme 6 (or higher)."
@@ -13703,21 +13712,20 @@ msgid "Force use of a specific avformat muxer."
 msgstr "Jõuga kasuta spetsiifilist avformat mukserit."
 
 #: modules/demux/avformat/avformat.h:37
-#, fuzzy
 msgid "Format name"
-msgstr "Vorming"
+msgstr "Vormingu nimi"
 
 #: modules/demux/avformat/avformat.h:38
 msgid "Internal libavcodec format name"
-msgstr ""
+msgstr "Sisemise libavcodec-i vormingu nimi"
 
 #: modules/demux/avi/avi.c:51
 msgid "Force interleaved method"
-msgstr ""
+msgstr "Sunni sektsioneeritud meetod"
 
 #: modules/demux/avi/avi.c:52
 msgid "Force interleaved method."
-msgstr ""
+msgstr "Sunni sektsioneeritud meetod."
 
 #: modules/demux/avi/avi.c:54
 msgid "Force index creation"
@@ -14072,7 +14080,7 @@ msgstr "Kasuta segmendis leitud peatüki koodekeid."
 #: modules/demux/mkv/mkv.cpp:62 modules/gui/macosx/simple_prefs.m:262
 #: modules/gui/qt4/ui/sprefs_input.h:355
 msgid "Preload MKV files in the same directory"
-msgstr ""
+msgstr "Eellaadi MKV failid samas kataloogis"
 
 #: modules/demux/mkv/mkv.cpp:63
 msgid ""
@@ -15768,7 +15776,7 @@ msgstr "Vaikimisi kasutab VLC tumedat liidese stiili."
 
 #: modules/gui/macosx/macosx.m:90 modules/gui/macosx/simple_prefs.m:270
 msgid "Use the native fullscreen mode on OS X Lion"
-msgstr ""
+msgstr "Kasuta loomulikku täisekraani režiimi OS X Lion-is"
 
 #: modules/gui/macosx/macosx.m:91
 msgid ""
@@ -15807,6 +15815,8 @@ msgid ""
 "With this option enabled, the playback will be automatically paused when "
 "minimizing the window."
 msgstr ""
+"Kui see valik on võimaldatud, siis taasesitamine peatatakse automaatselt, "
+"kui aken minimeerida."
 
 #: modules/gui/macosx/macosx.m:106
 msgid "Mac OS X interface"
@@ -16131,6 +16141,10 @@ msgid ""
 "Choose available device in above pull-down menu\n"
 "."
 msgstr ""
+"Ühtegi seadet pole valitud.\n"
+"\n"
+"Vali saadavalolev seade alla tõmmatavast menüüst\n"
+"."
 
 #: modules/gui/macosx/open.m:114
 msgid "Open Source"
@@ -18340,9 +18354,8 @@ msgid "Stop the A to B loop"
 msgstr "Lõpeta A-st B-ni kordus"
 
 #: modules/gui/qt4/components/controller_widget.cpp:281
-#, fuzzy
 msgid "Aspect Ratio"
-msgstr "&Külgede suhe"
+msgstr "Külgede suhe"
 
 #: modules/gui/qt4/components/extended_panels.cpp:418
 #: modules/video_filter/logo.c:48
@@ -19391,9 +19404,8 @@ msgid "&Search:"
 msgstr "&Otsi:"
 
 #: modules/gui/qt4/dialogs/plugins.cpp:196
-#, fuzzy
 msgid "Get more extensions from"
-msgstr "Eiratavad laiendused"
+msgstr "Hangi rohkem laiendusi"
 
 #: modules/gui/qt4/dialogs/plugins.cpp:228
 msgid "More information..."
@@ -20256,7 +20268,7 @@ msgstr "Luba automaatne ikoonide muutmine"
 #: modules/gui/qt4/qt4.cpp:184
 msgid ""
 "This option allows the interface to change its icon on various occasions."
-msgstr ""
+msgstr "See valik lubab liidesel muuta oma ikoone erinevatel juhtudel."
 
 #: modules/gui/qt4/qt4.cpp:189
 msgid "Qt interface"
@@ -21507,7 +21519,7 @@ msgstr "Lahtipakkimine"
 
 #: modules/stream_filter/httplive.c:56
 msgid "Http Live Streaming stream filter"
-msgstr ""
+msgstr "Http laiv voogedastuse voo filter"
 
 #: modules/stream_filter/record.c:49
 msgid "Internal stream record"
@@ -21942,17 +21954,15 @@ msgid ""
 msgstr "See on seansi nimi, mida teavitatakse SDP-s (Session Descriptor)."
 
 #: modules/stream_out/rtp.c:96
-#, fuzzy
 msgid "Session category"
-msgstr "Seansi nimi"
+msgstr "Seansi kategooria"
 
 #: modules/stream_out/rtp.c:98
-#, fuzzy
 msgid ""
 "This allows you to specify a category for the session, that will be "
 "announced if you choose to use SAP."
 msgstr ""
-"See lubab sul määrata grupi seansiks, mis teavitatakse, kui valid "
+"See lubab sul määrata seansi kategooria, mida teavitatakse, kui valid "
 "kasutamiseks SAP-i."
 
 #: modules/stream_out/rtp.c:100 modules/stream_out/standard.c:62
@@ -22111,7 +22121,7 @@ msgstr "Luba ES-i id"
 
 #: modules/stream_out/select.c:55
 msgid "Only enable ES id at startup."
-msgstr ""
+msgstr "Lülita ES-i id sisse ainult käivitamisel."
 
 #: modules/stream_out/select.c:61
 msgid "Select individual es to enable or disable from stream"
@@ -22792,7 +22802,7 @@ msgstr "AltiVec teisendused"
 
 #: modules/video_chroma/omxdl.c:35
 msgid "OpenMAX DL image processing"
-msgstr ""
+msgstr "OpenMAX DL pilditöötlus"
 
 #: modules/video_chroma/rv32.c:45
 msgid "RV32 conversion filter"
@@ -25431,11 +25441,11 @@ msgstr "Videostseeni filter"
 
 #: modules/video_filter/sepia.c:57
 msgid "Sepia intensity"
-msgstr ""
+msgstr "Sepia intensiivsus"
 
 #: modules/video_filter/sepia.c:58
 msgid "Intensity of sepia effect"
-msgstr ""
+msgstr "Sepia efekti intensiivsus"
 
 #: modules/video_filter/sepia.c:63
 msgid "Sepia video filter"
@@ -25443,7 +25453,7 @@ msgstr "Sepia videofilter"
 
 #: modules/video_filter/sepia.c:65
 msgid "Gives video a warmer tone by applying sepia effect"
-msgstr ""
+msgstr "Sepia efekti lisamine annab videole soojema tooni"
 
 #: modules/video_filter/sharpen.c:46
 msgid "Sharpen strength (0-2)"
@@ -25844,7 +25854,7 @@ msgstr "WarpOverlay!"
 
 #: modules/video_output/kva.c:62
 msgid "VMAN"
-msgstr ""
+msgstr "VMAN"
 
 #: modules/video_output/kva.c:62
 msgid "DIVE"
@@ -26580,7 +26590,7 @@ msgstr ""
 
 #: share/lua/http/index.html:248
 msgid "If nothing appears, check your internet connection."
-msgstr ""
+msgstr "Kui midagi ei juhtu, kontrolli interneti ühendust."
 
 #: share/lua/http/index.html:259
 msgid ""
@@ -26621,7 +26631,7 @@ msgstr ""
 
 #: share/lua/http/index.html:274
 msgid "Are you sure you wish to create the stream ?"
-msgstr ""
+msgstr "Oled kindel, et soovid seda voogu luua?"
 
 #: share/lua/http/mobile_equalizer.html:62
 msgid "Preamp: "
@@ -30130,3 +30140,33 @@ msgstr "Meediahalduri loend"
 
 #~ msgid "Number of stars to draw with random effect."
 #~ msgstr "Mitu tähekest juhuslikus korras joonistada."
+
+#~ msgid "BluRay Disc is corrupted."
+#~ msgstr "BluRay ketas on rikutud."
+
+#~ msgid "Missing AACS configuration file!"
+#~ msgstr "Puudub AACS seadetefail!"
+
+#~ msgid "No valid processing key found in AACS config file."
+#~ msgstr "AACS seadetefailist ei leitud ühtegi kehtivat töötluse võtit."
+
+#~ msgid "No valid host certificate found in AACS config file."
+#~ msgstr "AACS seadetefailist ei leitud ühtegi kehtivat hosti sertifikaati."
+
+#~ msgid "AACS Host certificate revoked."
+#~ msgstr "AACS hosti sertifikaat tühistatud."
+
+#~ msgid "AACS MMC failed."
+#~ msgstr "AACS MMC nurjus."
+
+#~ msgid "Western European (IBM 00850)"
+#~ msgstr "Lääne-Euroopa (IBM 00850)"
+
+#~ msgid "Outline Color"
+#~ msgstr "Kontuuri värv"
+
+#~ msgid "Outline Thickness"
+#~ msgstr "Kontuuri paksus"
+
+#~ msgid "New input playing"
+#~ msgstr "Uus sisend mängib"
