@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: vlc 1.1.1\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-03-16 18:33+0000\n"
-"PO-Revision-Date: 2011-05-23 03:13-0000\n"
+"PO-Revision-Date: 2012-06-03 03:03-0000\n"
 "Last-Translator: Seanán Ó Coistín <seananoc@gmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -227,7 +227,7 @@ msgstr ""
 
 #: include/vlc_config_cat.h:114
 msgid "Audio codecs"
-msgstr ""
+msgstr "Comhbhrú/dí-chomhbhrú fuaime"
 
 #: include/vlc_config_cat.h:115
 msgid "Settings for the audio-only decoders and encoders."
@@ -448,7 +448,6 @@ msgid "There is no help available for these modules."
 msgstr "Níl cabhair ar fáil do na modúil seo."
 
 #: include/vlc_interface.h:124
-#, fuzzy
 msgid ""
 "\n"
 "Warning: if you cannot access the GUI anymore, open a command-line window, "
@@ -622,7 +621,7 @@ msgstr "Taisc an sheinnréim chuig comhad..."
 
 #: include/vlc_intf_strings.h:96
 msgid "Open Play&list..."
-msgstr ""
+msgstr "Oscail seinnréim..."
 
 #: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:147
 #: modules/gui/qt4/components/preferences_widgets.cpp:1320
@@ -749,7 +748,7 @@ msgstr "Speictriméadar"
 
 #: src/audio_output/common.c:91
 msgid "Scope"
-msgstr ""
+msgstr "Cuimse"
 
 #: src/audio_output/common.c:94
 msgid "Spectrum"
@@ -777,7 +776,7 @@ msgid "Audio filtering failed"
 msgstr "Theip ar an scagaireacht fhuaime"
 
 #: src/audio_output/filters.c:143
-#, fuzzy, c-format
+#, c-format
 msgid "The maximum number of filters (%u) was reached."
 msgstr "Sroicheadh uaslíon na scagairí (%d)."
 
@@ -1016,7 +1015,7 @@ msgstr "Scrofa"
 
 #: src/input/es_out.c:1368
 msgid "Yes"
-msgstr ""
+msgstr "Tá"
 
 #: src/input/es_out.c:2023
 #, c-format
@@ -1253,9 +1252,9 @@ msgid "Previous title"
 msgstr "Teideal roimhe"
 
 #: src/input/var.c:312
-#, fuzzy, c-format
+#, c-format
 msgid "Title %i%s"
-msgstr "Teideal %i"
+msgstr "Teideal %i%s"
 
 #: src/input/var.c:338 src/input/var.c:397
 #, c-format
@@ -1285,14 +1284,12 @@ msgid "Console"
 msgstr "Eallóg"
 
 #: src/interface/interface.c:95
-#, fuzzy
 msgid "Telnet"
-msgstr "Lua Telnet"
+msgstr "Telnet"
 
 #: src/interface/interface.c:98
-#, fuzzy
 msgid "Web"
-msgstr "Webm"
+msgstr "Gréasán"
 
 #: src/interface/interface.c:101
 msgid "Debug logging"
@@ -1750,6 +1747,8 @@ msgid ""
 "Custom title for the video window (in case the video is not embedded in the "
 "interface)."
 msgstr ""
+"Teideal saincheaptha do fhuinneog an fhíseáin (ar eagla na heagla nach "
+"bhfuil an físeán leabaithe sa chomhéadan)."
 
 #: src/libvlc-module.c:422
 msgid "Video alignment"
@@ -1977,7 +1976,7 @@ msgstr ""
 
 #: src/libvlc-module.c:502 modules/video_filter/deinterlace/deinterlace.h:58
 msgid "Film NTSC (IVTC)"
-msgstr ""
+msgstr "Scannán NTSC (IVTC)"
 
 #: src/libvlc-module.c:510
 msgid "Disable screensaver"
@@ -2431,17 +2430,16 @@ msgid ""
 msgstr ""
 
 #: src/libvlc-module.c:758
-#, fuzzy
 msgid "Best available"
-msgstr ") ar fáil."
+msgstr "An ceann is fearr ar fáil"
 
 #: src/libvlc-module.c:758
 msgid "Full HD (1080p)"
-msgstr ""
+msgstr "Ardghléine iomlán (1080p)"
 
 #: src/libvlc-module.c:758
 msgid "HD (720p)"
-msgstr ""
+msgstr "Ardghléine (720p)"
 
 #: src/libvlc-module.c:759
 msgid "Standard Definition (576 or 480 lines)"
@@ -2473,7 +2471,7 @@ msgstr "Am críochnaithe"
 
 #: src/libvlc-module.c:773
 msgid "The stream will stop at this position (in seconds)."
-msgstr ""
+msgstr "Críochnóidh an sruth ag an suíomh seo (i gceann soicindí)."
 
 #: src/libvlc-module.c:775
 msgid "Run time"
@@ -2569,9 +2567,8 @@ msgid ""
 msgstr ""
 
 #: src/libvlc-module.c:822
-#, fuzzy
 msgid "Change title according to current media"
-msgstr "Athraigh am tosaithe don meán"
+msgstr "Athraigh an teideal de réir an mheáin reatha"
 
 #: src/libvlc-module.c:823
 msgid ""
@@ -2994,7 +2991,7 @@ msgstr "Taispeáin fad agus atá sé á sruthú"
 
 #: src/libvlc-module.c:1068
 msgid "Play locally the stream while streaming it."
-msgstr ""
+msgstr "Seinn an sruth go logánta fad is atá sé á sruthú."
 
 #: src/libvlc-module.c:1070
 msgid "Enable video stream output"
@@ -3443,9 +3440,8 @@ msgstr ""
 "é gach uair a thosaíonn tú VLC."
 
 #: src/libvlc-module.c:1324
-#, fuzzy
 msgid "Load Media Library"
-msgstr "Leabharlann Meán"
+msgstr "Luchtaigh an leabharlann meán"
 
 #: src/libvlc-module.c:1326
 msgid "Enable this option to load the SQL-based Media Library at VLC startup"
@@ -4067,9 +4063,8 @@ msgid "Cycle through deinterlace modes."
 msgstr ""
 
 #: src/libvlc-module.c:1507
-#, fuzzy
 msgid "Show controller in fullscreen"
-msgstr "Taispeáin rialaitheoir sa lánscáileán"
+msgstr "Taispeáin rialtán sa lánscáileán"
 
 #: src/libvlc-module.c:1508
 msgid "Show interface"
@@ -4088,9 +4083,8 @@ msgid "Lower the interface below all other windows."
 msgstr "Ísligh an comhéadan faoi gach fhuinneog eile."
 
 #: src/libvlc-module.c:1512
-#, fuzzy
 msgid "Boss key"
-msgstr "Eochracha aicearra"
+msgstr "Cnaipe aicearra"
 
 #: src/libvlc-module.c:1513
 msgid "Hide the interface and pause playback."
@@ -5233,84 +5227,83 @@ msgstr ""
 
 #: modules/access/alsa.c:95
 msgid "PCM U8"
-msgstr ""
+msgstr "PCM U8"
 
 #: modules/access/alsa.c:95
 msgid "PCM S8"
-msgstr ""
+msgstr "PCM S8"
 
 #: modules/access/alsa.c:95
-#, fuzzy
 msgid "GSM Audio"
-msgstr "Fuaim"
+msgstr "Fuaim GSM"
 
 #: modules/access/alsa.c:96
 msgid "PCM U16 LE"
-msgstr ""
+msgstr "PCM U16 LE"
 
 #: modules/access/alsa.c:96
 msgid "PCM S16 LE"
-msgstr ""
+msgstr "PCM S16 LE"
 
 #: modules/access/alsa.c:97
 msgid "PCM U16 BE"
-msgstr ""
+msgstr "PCM U16 BE"
 
 #: modules/access/alsa.c:97
 msgid "PCM S16 BE"
-msgstr ""
+msgstr "PCM S16 BE"
 
 #: modules/access/alsa.c:98
 msgid "PCM U24 LE"
-msgstr ""
+msgstr "PCM U24 LE"
 
 #: modules/access/alsa.c:98
 msgid "PCM S24 LE"
-msgstr ""
+msgstr "PCM S24 LE"
 
 #: modules/access/alsa.c:99
 msgid "PCM U24 BE"
-msgstr ""
+msgstr "PCM U24 BE"
 
 #: modules/access/alsa.c:99
 msgid "PCM S24 BE"
-msgstr ""
+msgstr "PCM S24 BE"
 
 #: modules/access/alsa.c:100
 msgid "PCM U32 LE"
-msgstr ""
+msgstr "PCM U32 LE"
 
 #: modules/access/alsa.c:100
 msgid "PCM S32 LE"
-msgstr ""
+msgstr "PCM S32 LE"
 
 #: modules/access/alsa.c:101
 msgid "PCM U32 BE"
-msgstr ""
+msgstr "PCM U32 BE"
 
 #: modules/access/alsa.c:101
 msgid "PCM S32 BE"
-msgstr ""
+msgstr "PCM S32 BE"
 
 #: modules/access/alsa.c:102
 msgid "PCM F32 LE"
-msgstr ""
+msgstr "PCM F32 LE"
 
 #: modules/access/alsa.c:102
 msgid "PCM F32 BE"
-msgstr ""
+msgstr "PCM F32 BE"
 
 #: modules/access/alsa.c:103
 msgid "PCM F64 LE"
-msgstr ""
+msgstr "PCM F64 LE"
 
 #: modules/access/alsa.c:103
 msgid "PCM F64 BE"
-msgstr ""
+msgstr "PCM F64 BE"
 
 #: modules/access/alsa.c:107
 msgid "ALSA"
-msgstr ""
+msgstr "ALSA"
 
 #: modules/access/alsa.c:108
 #, fuzzy
@@ -5326,9 +5319,8 @@ msgid "Attachment input"
 msgstr "Ionchur iatáin"
 
 #: modules/access/avio.h:39
-#, fuzzy
 msgid "FFmpeg"
-msgstr "Ilphléacsóir FFmpeg"
+msgstr "FFmpeg"
 
 #: modules/access/avio.h:40
 msgid "FFmpeg access"
@@ -5357,7 +5349,7 @@ msgstr ""
 
 #: modules/access/bluray.c:60 modules/gui/qt4/ui/open_disk.h:299
 msgid "BluRay"
-msgstr ""
+msgstr "BluRay"
 
 #: modules/access/bluray.c:61
 #, fuzzy
@@ -5385,9 +5377,8 @@ msgid "Your system BD+ decoding library does not work. Missing configuration?"
 msgstr ""
 
 #: modules/access/bluray.c:296
-#, fuzzy
 msgid "Blu-Ray error"
-msgstr "Blu-Ray"
+msgstr "Botún Blu-Ray"
 
 #: modules/access/cdda.c:62 modules/gui/macosx/open.m:145
 #: modules/gui/qt4/ui/open_disk.h:300
@@ -5449,9 +5440,8 @@ msgid ""
 msgstr ""
 
 #: modules/access/decklink.cpp:54
-#, fuzzy
 msgid "Audio connection"
-msgstr "Nasc uathoibríoch"
+msgstr "Nasc fuaime"
 
 #: modules/access/decklink.cpp:56
 msgid ""
@@ -5480,9 +5470,8 @@ msgid ""
 msgstr ""
 
 #: modules/access/decklink.cpp:70
-#, fuzzy
 msgid "Video connection"
-msgstr "Nasc uathoibríoch"
+msgstr "Nasc físe"
 
 #: modules/access/decklink.cpp:72
 msgid ""
@@ -5491,13 +5480,12 @@ msgid ""
 msgstr ""
 
 #: modules/access/decklink.cpp:81 modules/access/linsys/linsys_sdi.c:93
-#, fuzzy
 msgid "SDI"
-msgstr "SDP"
+msgstr "SDI"
 
 #: modules/access/decklink.cpp:81
 msgid "HDMI"
-msgstr ""
+msgstr "HDMI"
 
 #: modules/access/decklink.cpp:81
 #, fuzzy
@@ -5505,33 +5493,28 @@ msgid "Optical SDI"
 msgstr "Tiomántán optúil"
 
 #: modules/access/decklink.cpp:81
-#, fuzzy
 msgid "Component"
-msgstr "Ionchur ilchodach"
+msgstr "Mír"
 
 #: modules/access/decklink.cpp:81
-#, fuzzy
 msgid "Composite"
-msgstr "Ionchur ilchodach"
+msgstr "Comhábhar"
 
 #: modules/access/decklink.cpp:81
-#, fuzzy
 msgid "S-video"
-msgstr "Físeán"
+msgstr "S-Físeán"
 
 #: modules/access/decklink.cpp:88
-#, fuzzy
 msgid "Embedded"
-msgstr "Físeán leabaithe"
+msgstr "Leabaithe"
 
 #: modules/access/decklink.cpp:88
 msgid "AES/EBU"
-msgstr ""
+msgstr "AES/EBU"
 
 #: modules/access/decklink.cpp:88
-#, fuzzy
 msgid "Analog"
-msgstr "Fógra"
+msgstr "Analóg"
 
 #: modules/access/decklink.cpp:91 modules/access/linsys/linsys_hdsdi.c:78
 #: modules/access/linsys/linsys_sdi.c:73 modules/demux/rawvid.c:59
@@ -5547,7 +5530,7 @@ msgstr ""
 
 #: modules/access/decklink.cpp:96
 msgid "DeckLink"
-msgstr ""
+msgstr "DeckLink"
 
 #: modules/access/decklink.cpp:97
 msgid "Blackmagic DeckLink SDI input"
@@ -5665,9 +5648,8 @@ msgid "Set the TV channel the tuner will set to (0 means default)."
 msgstr ""
 
 #: modules/access/dshow/dshow.cpp:172
-#, fuzzy
 msgid "Tuner Frequency"
-msgstr "Minicíocht"
+msgstr "Minicíocht iulchairt"
 
 #: modules/access/dshow/dshow.cpp:173
 msgid "This overrides the channel. Measured in Hz."
@@ -5793,7 +5775,6 @@ msgid "No video or audio device selected."
 msgstr "Níor roghnaíodh gléas físeáin nó fuaime."
 
 #: modules/access/dshow/dshow.cpp:604
-#, fuzzy
 msgid "VLC cannot open ANY capture device.Check the error log for details."
 msgstr ""
 "Ní féidir le VLC AON ghléas gabhála a oscailt. Féach an t-oireas chun na "
@@ -5843,27 +5824,24 @@ msgid ""
 msgstr ""
 
 #: modules/access/dtv/access.c:50
-#, fuzzy
 msgid "Network name"
-msgstr "Ainm an Líonra"
+msgstr "Ainm an líonra"
 
 #: modules/access/dtv/access.c:51
 msgid "Unique network name in the System Tuning Spaces"
 msgstr ""
 
 #: modules/access/dtv/access.c:53
-#, fuzzy
 msgid "Network name to create"
-msgstr "Ainm Líonra le Cruthú"
+msgstr "Ainm líonra le cruthú"
 
 #: modules/access/dtv/access.c:54
 msgid "Create unique name in the System Tuning Spaces"
 msgstr ""
 
 #: modules/access/dtv/access.c:56
-#, fuzzy
 msgid "Frequency (Hz)"
-msgstr "Minicíocht"
+msgstr "Minicíocht (Hz)"
 
 #: modules/access/dtv/access.c:58
 msgid ""
@@ -5967,9 +5945,8 @@ msgid "Bandwidth (MHz)"
 msgstr "Leithead banda"
 
 #: modules/access/dtv/access.c:124
-#, fuzzy
 msgid "10 MHz"
-msgstr "6 MHz"
+msgstr "10 MHz"
 
 #: modules/access/dtv/access.c:124
 msgid "8 MHz"
@@ -5984,14 +5961,12 @@ msgid "6 MHz"
 msgstr "6 MHz"
 
 #: modules/access/dtv/access.c:125
-#, fuzzy
 msgid "5 MHz"
-msgstr "6 MHz"
+msgstr "5 MHz"
 
 #: modules/access/dtv/access.c:125
-#, fuzzy
 msgid "1.712 MHz"
-msgstr "7 MHz"
+msgstr "1.712 MHz"
 
 #: modules/access/dtv/access.c:128
 #, fuzzy
@@ -6037,15 +6012,15 @@ msgstr ""
 
 #: modules/access/dtv/access.c:159
 msgid "0.35 (same as DVB-S)"
-msgstr ""
+msgstr "0.35 (mar i gcéanna le DVB-S)"
 
 #: modules/access/dtv/access.c:159
 msgid "0.20"
-msgstr ""
+msgstr "0.20"
 
 #: modules/access/dtv/access.c:159
 msgid "0.25"
-msgstr ""
+msgstr "0.25"
 
 #: modules/access/dtv/access.c:162
 #, fuzzy
@@ -6064,17 +6039,15 @@ msgstr ""
 
 #: modules/access/dtv/access.c:169
 msgid "Unspecified (0V)"
-msgstr ""
+msgstr "Neamhshainithe (0V)"
 
 #: modules/access/dtv/access.c:170
-#, fuzzy
 msgid "Vertical (13V)"
-msgstr "Ingearach"
+msgstr "Ingearach (13V)"
 
 #: modules/access/dtv/access.c:170
-#, fuzzy
 msgid "Horizontal (18V)"
-msgstr "Cothrománach"
+msgstr "Cothrománach (18V)"
 
 #: modules/access/dtv/access.c:171
 msgid "Circular Right Hand (13V)"
@@ -6148,12 +6121,11 @@ msgstr ""
 #: modules/access/v4l2/video.c:171 modules/access/v4l2/video.c:219
 #: modules/access/v4l2/video.c:282
 msgid "Unspecified"
-msgstr ""
+msgstr "Gan sonrú"
 
 #: modules/access/dtv/access.c:208
-#, fuzzy
 msgid "Network identifier"
-msgstr "Aitheantóir Líonra"
+msgstr "Aitheantóir líonra"
 
 #: modules/access/dtv/access.c:209
 msgid "Satellite azimuth"
@@ -6189,9 +6161,8 @@ msgid "Satellite range code as defined by manufacturer e.g. DISEqC switch code"
 msgstr ""
 
 #: modules/access/dtv/access.c:222
-#, fuzzy
 msgid "Major channel"
-msgstr "Bealaí fuaime"
+msgstr "Bealach mór"
 
 #: modules/access/dtv/access.c:223
 #, fuzzy
@@ -6199,9 +6170,8 @@ msgid "ATSC minor channel"
 msgstr "Bealaí fuaime"
 
 #: modules/access/dtv/access.c:224
-#, fuzzy
 msgid "Physical channel"
-msgstr "Bealaí fuaime"
+msgstr "Bealach aiceanta"
 
 #: modules/access/dtv/access.c:230
 #, fuzzy
@@ -6343,14 +6313,14 @@ msgid "File reading failed"
 msgstr "Theip ar léamh an comhad"
 
 #: modules/access/file.c:181 modules/access/mtp.c:303 modules/access/vdr.c:548
-#, fuzzy, c-format
+#, c-format
 msgid "VLC could not open the file \"%s\". (%m)"
-msgstr "Níorbh fhéidir le VLC an comhad \"%s\" a oscailt."
+msgstr "Níorbh fhéidir le VLC an comhad \"%s\" a oscailt. (%m)"
 
 #: modules/access/file.c:302
-#, fuzzy, c-format
+#, c-format
 msgid "VLC could not read the file (%m)."
-msgstr "Níorbh fhéidir le VLC an comhad a léamh."
+msgstr "Níorbh fhéidir le VLC an comhad (%m) a léamh."
 
 #: modules/access/fs.c:33
 msgid "Subdirectory behavior"
@@ -6478,15 +6448,15 @@ msgstr "Athshocraigh rialtáin v4l2"
 
 #: modules/access/htcpcp.c:139
 msgid "Teapot"
-msgstr ""
+msgstr "Ruacan"
 
 #: modules/access/htcpcp.c:140
 msgid "The server is a teapot. You can't brew coffee with a teapot."
-msgstr ""
+msgstr "Is ruacan é an freastalaí. Ní féidir caifé a fhiuchadh i ruacan."
 
 #: modules/access/htcpcp.c:143 modules/access/htcpcp.c:149
 msgid "Coffee pot"
-msgstr ""
+msgstr "Corcán caifé"
 
 #: modules/access/htcpcp.c:144
 #, c-format
@@ -6495,11 +6465,11 @@ msgstr ""
 
 #: modules/access/htcpcp.c:149
 msgid "Coffee is ready."
-msgstr ""
+msgstr "Tá an caifé réidh."
 
 #: modules/access/http.c:72 modules/access/mms/mms.c:58
 msgid "HTTP proxy"
-msgstr ""
+msgstr "Seachfhreastalaí HTTP"
 
 #: modules/access/http.c:74
 msgid ""
@@ -6537,7 +6507,7 @@ msgstr ""
 
 #: modules/access/http.c:93
 msgid "Forward Cookies"
-msgstr ""
+msgstr "Cuir fianáin ar aghaidh"
 
 #: modules/access/http.c:94
 msgid "Forward Cookies across http redirections."
@@ -6587,9 +6557,8 @@ msgid "Dummy"
 msgstr ""
 
 #: modules/access/idummy.c:43
-#, fuzzy
 msgid "Dummy input"
-msgstr "Ionchur UDP"
+msgstr "Ionchur caoch"
 
 #: modules/access/imem.c:49 modules/gui/qt4/components/playlist/sorting.h:54
 #: modules/stream_out/bridge.c:41 modules/stream_out/mosaic_bridge.c:105
@@ -6602,7 +6571,7 @@ msgstr ""
 
 #: modules/access/imem.c:53 modules/demux/image.c:48
 msgid "Group"
-msgstr ""
+msgstr "Baicle"
 
 #: modules/access/imem.c:55 modules/demux/image.c:50
 msgid "Set the group of the elementary stream"
@@ -6752,7 +6721,7 @@ msgstr ""
 #: modules/access/linsys/linsys_hdsdi.c:72
 #: modules/access/linsys/linsys_sdi.c:67
 msgid "Link #"
-msgstr ""
+msgstr "Nasc #"
 
 #: modules/access/linsys/linsys_hdsdi.c:74
 #: modules/access/linsys/linsys_sdi.c:69
@@ -6779,9 +6748,8 @@ msgstr ""
 
 #: modules/access/linsys/linsys_hdsdi.c:81
 #: modules/access/linsys/linsys_sdi.c:76
-#, fuzzy
 msgid "Audio configuration"
-msgstr "Cumraíocht &VLM"
+msgstr "Cumraíocht fhuaime"
 
 #: modules/access/linsys/linsys_hdsdi.c:83
 #: modules/access/linsys/linsys_sdi.c:78
@@ -6790,16 +6758,15 @@ msgstr ""
 
 #: modules/access/linsys/linsys_hdsdi.c:89
 msgid "HD-SDI Input"
-msgstr ""
+msgstr "Inchur Ardghléine-SDI"
 
 #: modules/access/linsys/linsys_hdsdi.c:90
 msgid "HD-SDI"
-msgstr ""
+msgstr "HD-SDI"
 
 #: modules/access/linsys/linsys_sdi.c:79
-#, fuzzy
 msgid "Teletext configuration"
-msgstr "Cumraíocht na gcallairí"
+msgstr "Cumraíocht an teilithéacsí"
 
 #: modules/access/linsys/linsys_sdi.c:81
 msgid ""
@@ -6807,23 +6774,20 @@ msgid ""
 msgstr ""
 
 #: modules/access/linsys/linsys_sdi.c:82
-#, fuzzy
 msgid "Teletext language"
-msgstr "Teanga an fhotheidil"
+msgstr "Teanga an teilithéacs"
 
 #: modules/access/linsys/linsys_sdi.c:84
 msgid "Allows you to set Teletext language (page=lang/type,...)."
 msgstr ""
 
 #: modules/access/linsys/linsys_sdi.c:92
-#, fuzzy
 msgid "SDI Input"
-msgstr "Inchur"
+msgstr "Inchur SDI"
 
 #: modules/access/linsys/linsys_sdi.c:113
-#, fuzzy
 msgid "SDI Demux"
-msgstr "Dí-ilphléacstha"
+msgstr "Dí-ilphléacstha SDI"
 
 #: modules/access/mms/mms.c:49
 msgid "Force selection of all streams"
@@ -6951,9 +6915,8 @@ msgid "HTTP stream output"
 msgstr "Aschur srutha HTTP"
 
 #: modules/access_output/livehttp.c:63
-#, fuzzy
 msgid "Segment length"
-msgstr "Deighleán"
+msgstr "Aga na míre"
 
 #: modules/access_output/livehttp.c:64
 msgid "Length of TS stream segments"
@@ -6969,18 +6932,16 @@ msgid ""
 msgstr ""
 
 #: modules/access_output/livehttp.c:70
-#, fuzzy
 msgid "Number of segments"
-msgstr "Líon na gcolún"
+msgstr "Líon na míreanna"
 
 #: modules/access_output/livehttp.c:71
 msgid "Number of segments to include in index"
 msgstr ""
 
 #: modules/access_output/livehttp.c:73
-#, fuzzy
 msgid "Index file"
-msgstr "Comhad íomhá"
+msgstr "Comhad treoráin"
 
 #: modules/access_output/livehttp.c:74
 msgid "Path to the index file to create"
@@ -6995,13 +6956,12 @@ msgid "Full URL to put in index file. Use #'s to represent segment number"
 msgstr ""
 
 #: modules/access_output/livehttp.c:80
-#, fuzzy
 msgid "Delete segments"
-msgstr "Deighleáin"
+msgstr "Scrios míreanna"
 
 #: modules/access_output/livehttp.c:81
 msgid "Delete segments when they are no longer needed"
-msgstr ""
+msgstr "Scrios míreanna nuair nach bhfuil gá leo a thuilleadh"
 
 #: modules/access_output/livehttp.c:83
 msgid "Use muxers rate control mechanism"
@@ -7013,9 +6973,8 @@ msgid "HTTP Live streaming output"
 msgstr "Aschur srutha HTTP"
 
 #: modules/access_output/livehttp.c:87
-#, fuzzy
 msgid "LiveHTTP"
-msgstr "Beo"
+msgstr "BeoHTTP"
 
 #: modules/access_output/rtmp.c:44
 msgid "Active TCP connection"
@@ -7104,7 +7063,7 @@ msgstr ""
 
 #: modules/access_output/shout.c:104
 msgid "Stream public"
-msgstr ""
+msgstr "Sruthaigh go poiblí"
 
 #: modules/access_output/shout.c:105
 msgid ""
@@ -7462,7 +7421,7 @@ msgstr ""
 
 #: modules/access/rtsp/access.c:47 modules/access/rtsp/access.c:48
 msgid "Real RTSP"
-msgstr ""
+msgstr "Fíor RTSP"
 
 #: modules/access/rtsp/access.c:86
 msgid "Connection failed"
@@ -7677,29 +7636,24 @@ msgid "Path of the memory mapped file of the frame buffer"
 msgstr ""
 
 #: modules/access/shm.c:73
-#, fuzzy
 msgid "8 bits"
-msgstr "bearta"
+msgstr "8 mbeart"
 
 #: modules/access/shm.c:73
-#, fuzzy
 msgid "15 bits"
-msgstr "bearta"
+msgstr "15 beart"
 
 #: modules/access/shm.c:73
-#, fuzzy
 msgid "16 bits"
-msgstr "bearta"
+msgstr "16 beart"
 
 #: modules/access/shm.c:73
-#, fuzzy
 msgid "24 bits"
-msgstr "bearta"
+msgstr "24 beart"
 
 #: modules/access/shm.c:73
-#, fuzzy
 msgid "32 bits"
-msgstr "bearta"
+msgstr "32 beart"
 
 #: modules/access/shm.c:80
 #, fuzzy
@@ -7751,9 +7705,8 @@ msgid "UDP input"
 msgstr "Ionchur UDP"
 
 #: modules/access/v4l2/controls.c:721
-#, fuzzy
 msgid "Reset defaults"
-msgstr "Athshocraigh na Réamhshocruithe"
+msgstr "Athshocraigh na réamhshocruithe"
 
 #: modules/access/v4l2/video.c:59
 msgid "Video device (Default: /dev/video0)."
@@ -7808,12 +7761,10 @@ msgid "Force usage of the libv4l2 wrapper."
 msgstr ""
 
 #: modules/access/v4l2/video.c:91
-#, fuzzy
 msgid "Reset controls"
-msgstr "Athshocraigh rialtáin v4l2"
+msgstr "Athshocraigh na rialtáin"
 
 #: modules/access/v4l2/video.c:92
-#, fuzzy
 msgid "Reset controls to defaults."
 msgstr "Athshocraigh na rialtáin go dtí na réamhshocruithe"
 
@@ -7828,9 +7779,8 @@ msgid "Picture brightness or black level."
 msgstr ""
 
 #: modules/access/v4l2/video.c:95
-#, fuzzy
 msgid "Automatic brightness"
-msgstr "Bearradh uathoibríoch"
+msgstr "Gile uathoibríoch"
 
 #: modules/access/v4l2/video.c:97
 #, fuzzy
@@ -7868,14 +7818,12 @@ msgid "Hue or color balance."
 msgstr "Airde ghorm"
 
 #: modules/access/v4l2/video.c:104
-#, fuzzy
 msgid "Automatic hue"
-msgstr "Uathoibríoch"
+msgstr "Fordhath uathoibríoch"
 
 #: modules/access/v4l2/video.c:106
-#, fuzzy
 msgid "Automatically adjust the picture hue."
-msgstr "Coinnigh go huathoibríoch an airde reatha nuair a scoirtear"
+msgstr "Athraigh go huathoibríoch fordhath an phictiúir."
 
 #: modules/access/v4l2/video.c:107
 msgid "White balance temperature (K)"
@@ -7924,28 +7872,24 @@ msgid "Gamma adjust."
 msgstr "Mionathrú na híomhá"
 
 #: modules/access/v4l2/video.c:123
-#, fuzzy
 msgid "Automatic gain"
-msgstr "Bearradh uathoibríoch"
+msgstr "Neartú uathoibríoch"
 
 #: modules/access/v4l2/video.c:125
-#, fuzzy
 msgid "Automatically set the video gain."
-msgstr "Coinnigh go huathoibríoch an airde reatha nuair a scoirtear"
+msgstr "Socraigh neartú an fhíseáin go huathoibríoch."
 
 #: modules/access/v4l2/video.c:126
 msgid "Gain"
 msgstr "Neartúchán"
 
 #: modules/access/v4l2/video.c:128
-#, fuzzy
 msgid "Picture gain."
-msgstr "Pictiúr"
+msgstr "Neartú an phictiúir."
 
 #: modules/access/v4l2/video.c:129
-#, fuzzy
 msgid "Sharpness"
-msgstr "Géaraigh"
+msgstr "Géire"
 
 #: modules/access/v4l2/video.c:130
 #, fuzzy
@@ -7981,11 +7925,11 @@ msgstr ""
 
 #: modules/access/v4l2/video.c:145
 msgid "50 Hz"
-msgstr ""
+msgstr "50 Hz"
 
 #: modules/access/v4l2/video.c:145
 msgid "60 Hz"
-msgstr ""
+msgstr "60 Hz"
 
 #: modules/access/v4l2/video.c:147
 #, fuzzy
@@ -8011,32 +7955,28 @@ msgid "Horizontal flip"
 msgstr "Smeach cothrománach"
 
 #: modules/access/v4l2/video.c:154
-#, fuzzy
 msgid "Flip the picture horizontally."
-msgstr "Smeach go cothrománach"
+msgstr "Smeach an íomhá go cothrománach."
 
 #: modules/access/v4l2/video.c:155
 msgid "Vertical flip"
 msgstr "Smeach ingearach"
 
 #: modules/access/v4l2/video.c:157
-#, fuzzy
 msgid "Flip the picture vertically."
-msgstr "Smeach go hingearach"
+msgstr "Smeach an íomhá go hingearach."
 
 #: modules/access/v4l2/video.c:158
-#, fuzzy
 msgid "Rotate (degrees)"
-msgstr "Rothlaigh 90 céim"
+msgstr "Rothlaigh (céimeanna)"
 
 #: modules/access/v4l2/video.c:159
 msgid "Picture rotation angle (in degrees)."
 msgstr ""
 
 #: modules/access/v4l2/video.c:160
-#, fuzzy
 msgid "Color killer"
-msgstr "Aisiompú dathanna"
+msgstr "Marfóir na ndathanna"
 
 #: modules/access/v4l2/video.c:162
 msgid ""
@@ -8045,19 +7985,16 @@ msgid ""
 msgstr ""
 
 #: modules/access/v4l2/video.c:164
-#, fuzzy
 msgid "Color effect"
-msgstr "Maisíocht uisce"
+msgstr "Maisíocht datha"
 
 #: modules/access/v4l2/video.c:165
-#, fuzzy
 msgid "Select a color effect."
-msgstr "Roghnaigh comhadlann"
+msgstr "Roghnaigh maisíocht datha."
 
 #: modules/access/v4l2/video.c:172
-#, fuzzy
 msgid "Black & white"
-msgstr "Dubh"
+msgstr "Dubh & bán"
 
 #: modules/access/v4l2/video.c:172 modules/gui/macosx/VideoEffects.m:117
 #: modules/video_filter/sepia.c:64 modules/gui/qt4/ui/video_effects.h:1336
@@ -8065,9 +8002,8 @@ msgid "Sepia"
 msgstr ""
 
 #: modules/access/v4l2/video.c:172
-#, fuzzy
 msgid "Negative"
-msgstr "Machnamhach"
+msgstr "Diúltach"
 
 #: modules/access/v4l2/video.c:173
 msgid "Emboss"
@@ -8082,9 +8018,8 @@ msgid "Sky blue"
 msgstr ""
 
 #: modules/access/v4l2/video.c:174
-#, fuzzy
 msgid "Grass green"
-msgstr "Uaine"
+msgstr "Féar uaine"
 
 #: modules/access/v4l2/video.c:174
 #, fuzzy
@@ -8096,19 +8031,16 @@ msgid "Vivid"
 msgstr ""
 
 #: modules/access/v4l2/video.c:177
-#, fuzzy
 msgid "Audio volume"
-msgstr "Comhaid Fuaime"
+msgstr "Airde na fuaime"
 
 #: modules/access/v4l2/video.c:179
-#, fuzzy
 msgid "Volume of the audio input."
-msgstr "Fordhath an ionchuir fhíseáin."
+msgstr "Airde an ionchuir fhuaime."
 
 #: modules/access/v4l2/video.c:180
-#, fuzzy
 msgid "Audio balance"
-msgstr "Airde dhearg"
+msgstr "Cothromaíocht na fuaime"
 
 #: modules/access/v4l2/video.c:182
 #, fuzzy
@@ -8136,9 +8068,8 @@ msgid "Treble adjustment of the audio input."
 msgstr "Codarsnacht an ionchuir fhíseáin."
 
 #: modules/access/v4l2/video.c:191
-#, fuzzy
 msgid "Mute the audio."
-msgstr "Balbhaigh an fhuaim"
+msgstr "Balbhaigh an fhuaim."
 
 #: modules/access/v4l2/video.c:192
 #, fuzzy
@@ -8188,11 +8119,11 @@ msgstr "Uile"
 
 #: modules/access/v4l2/video.c:262
 msgid "525 lines / 60 Hz"
-msgstr ""
+msgstr "525 líne / 60 Hz"
 
 #: modules/access/v4l2/video.c:262
 msgid "625 lines / 50 Hz"
-msgstr ""
+msgstr "625 líne / 50 Hz"
 
 #: modules/access/v4l2/video.c:270
 msgid "PAL N Argentina"
@@ -8446,9 +8377,8 @@ msgid "Default frame rate for chapter import."
 msgstr ""
 
 #: modules/access/vdr.c:99
-#, fuzzy
 msgid "VDR"
-msgstr "FAÉ"
+msgstr "VDR"
 
 #: modules/access/vdr.c:102
 #, fuzzy
@@ -8460,7 +8390,6 @@ msgid "VDR Cut Marks"
 msgstr ""
 
 #: modules/access/vdr.c:887
-#, fuzzy
 msgid "Start"
 msgstr "Tosaigh"
 
@@ -8692,7 +8621,7 @@ msgstr "Airde an fhíseáin"
 #: modules/audio_filter/channel_mixer/mono.c:97
 #, fuzzy
 msgid "Rear center"
-msgstr "Céatadán"
+msgstr "Cúlchallairí"
 
 #: modules/audio_filter/channel_mixer/mono.c:113
 msgid "Audio filter for stereo to mono conversion"
@@ -8780,27 +8709,24 @@ msgid "Set the RMS/peak (0 ... 1)."
 msgstr ""
 
 #: modules/audio_filter/compressor.c:158
-#, fuzzy
 msgid "Attack time"
-msgstr "Iatán"
+msgstr "Am an ionsaithe"
 
 #: modules/audio_filter/compressor.c:160
 msgid "Set the attack time in milliseconds (1.5 ... 400)."
 msgstr ""
 
 #: modules/audio_filter/compressor.c:162
-#, fuzzy
 msgid "Release time"
-msgstr "Am athnuachana"
+msgstr "Am an scaoilte"
 
 #: modules/audio_filter/compressor.c:164
 msgid "Set the release time in milliseconds (2 ... 800)."
 msgstr ""
 
 #: modules/audio_filter/compressor.c:166
-#, fuzzy
 msgid "Threshold level"
-msgstr "Tairseach an datha"
+msgstr "Airde na tairsí"
 
 #: modules/audio_filter/compressor.c:167
 msgid "Set the threshold level in dB (-30 ... 0)."
@@ -8808,9 +8734,8 @@ msgstr ""
 
 #: modules/audio_filter/compressor.c:169 modules/gui/macosx/AudioEffects.m:83
 #: modules/gui/qt4/components/extended_panels.cpp:1196
-#, fuzzy
 msgid "Ratio"
-msgstr "Measúnú"
+msgstr "Cóimheas"
 
 #: modules/audio_filter/compressor.c:170
 msgid "Set the ratio (n:1) (1 ... 20)."
@@ -8835,9 +8760,8 @@ msgstr ""
 
 #: modules/audio_filter/compressor.c:179 modules/gui/macosx/AudioEffects.m:103
 #: modules/gui/qt4/dialogs/extended.cpp:67
-#, fuzzy
 msgid "Compressor"
-msgstr "Dí-chomhbhrú"
+msgstr "Comhbhrúiteoir"
 
 #: modules/audio_filter/compressor.c:180
 msgid "Dynamic range compressor"
@@ -9232,9 +9156,8 @@ msgid "Float32 audio mixer"
 msgstr ""
 
 #: modules/audio_output/adummy.c:41
-#, fuzzy
 msgid "Dummy audio output"
-msgstr "Aschur an fhíseáin chaochadáin"
+msgstr "Aschur fuaime caoch"
 
 #: modules/audio_output/alsa.c:56
 #, fuzzy
@@ -9258,24 +9181,20 @@ msgid ""
 msgstr ""
 
 #: modules/audio_output/alsa.c:74
-#, fuzzy
 msgid "Surround 4.0"
-msgstr "Colbha"
+msgstr "Surround 4.0"
 
 #: modules/audio_output/alsa.c:74
-#, fuzzy
 msgid "Surround 4.1"
-msgstr "Colbha"
+msgstr "Surround 4.1"
 
 #: modules/audio_output/alsa.c:75
-#, fuzzy
 msgid "Surround 5.0"
-msgstr "Colbha"
+msgstr "Surround 5.0"
 
 #: modules/audio_output/alsa.c:75
-#, fuzzy
 msgid "Surround 5.1"
-msgstr "Colbha"
+msgstr "Surround 5.1"
 
 #: modules/audio_output/alsa.c:80
 msgid "ALSA audio output"
@@ -9294,16 +9213,17 @@ msgid "Audio output failed"
 msgstr "Theip ar an aschur fuaime"
 
 #: modules/audio_output/alsa.c:353
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The audio device \"%s\" could not be used:\n"
 "%s."
-msgstr "Tá feidhm a bhaint as an ngléas fuaime \"%s\" cheana féin."
+msgstr ""
+"Níorbh fhéidir feidhm a bhaint as an ngléas fuaime \"%s\":\n"
+"%s."
 
 #: modules/audio_output/amem.c:34
-#, fuzzy
 msgid "Audio memory"
-msgstr "Físchuimhne"
+msgstr "Fuaimchuimhne"
 
 #: modules/audio_output/amem.c:35
 #, fuzzy
@@ -9384,7 +9304,7 @@ msgstr "2 Chun Tosaigh 2 Ar Chúl"
 #: modules/audio_output/directx.c:532 modules/audio_output/oss.c:238
 #: modules/audio_output/waveout.c:452
 msgid "A/52 over S/PDIF"
-msgstr ""
+msgstr "A/52 thar S/PDIF"
 
 #: modules/audio_output/file.c:80
 msgid "Output format"
@@ -9469,14 +9389,12 @@ msgid "OpenSLES audio output"
 msgstr "Aschur físeán OpenGL"
 
 #: modules/audio_output/opensles_android.c:87
-#, fuzzy
 msgid "OpenSLES"
-msgstr "Oscail"
+msgstr "OpenSLES"
 
 #: modules/audio_output/oss.c:99
-#, fuzzy
 msgid "Open Sound System"
-msgstr "Oscail Foinse"
+msgstr "Oscail an córas fuaime"
 
 #: modules/audio_output/oss.c:104
 msgid "OSS DSP device"
@@ -9499,9 +9417,8 @@ msgid "Pulseaudio audio output"
 msgstr "Aschur fuaime Pulseaudio"
 
 #: modules/audio_output/pulse.c:926
-#, fuzzy
 msgid "Audio device"
-msgstr "Gléas Fuaime"
+msgstr "Gléas fuaime"
 
 #: modules/audio_output/waveout.c:77
 msgid "Microsoft Soundmapper"
@@ -9569,7 +9486,7 @@ msgstr ""
 
 #: modules/codec/avcodec/avcodec.c:70
 msgid "Bidir"
-msgstr ""
+msgstr "Bidir"
 
 #: modules/codec/avcodec/avcodec.c:70
 msgid "Non-key"
@@ -10789,9 +10706,8 @@ msgid "Quality factor to use in constant quality mode"
 msgstr ""
 
 #: modules/codec/schroedinger.c:113
-#, fuzzy
 msgid "Noise Threshold"
-msgstr "Tairseach an scagaire"
+msgstr "Tairseach torann"
 
 #: modules/codec/schroedinger.c:114
 msgid "Noise threshold to use in constant noise threshold mode"
@@ -10829,18 +10745,16 @@ msgid ""
 msgstr ""
 
 #: modules/codec/schroedinger.c:147
-#, fuzzy
 msgid "No pre-filtering"
-msgstr "Gan scagadh"
+msgstr "Gan réamhscagadh"
 
 #: modules/codec/schroedinger.c:149
 msgid "Gaussian Low Pass Filter"
 msgstr ""
 
 #: modules/codec/schroedinger.c:150
-#, fuzzy
 msgid "Add Noise"
-msgstr "Cuir Comhad Leis..."
+msgstr "Cuir torann leis"
 
 #: modules/codec/schroedinger.c:151
 msgid "Gaussian Adaptive Low Pass Filter"
@@ -12212,23 +12126,23 @@ msgstr ""
 
 #: modules/codec/x264.c:402
 msgid "dia"
-msgstr ""
+msgstr "dia"
 
 #: modules/codec/x264.c:402
 msgid "hex"
-msgstr ""
+msgstr "hex"
 
 #: modules/codec/x264.c:402
 msgid "umh"
-msgstr ""
+msgstr "umh"
 
 #: modules/codec/x264.c:402
 msgid "esa"
-msgstr ""
+msgstr "esa"
 
 #: modules/codec/x264.c:402
 msgid "tesa"
-msgstr ""
+msgstr "tesa"
 
 #: modules/codec/x264.c:413
 msgid "fast"
@@ -13103,9 +13017,9 @@ msgid "+-[Video Decoding]"
 msgstr "+-[Díchódú Físeáin]"
 
 #: modules/control/rc.c:1868
-#, fuzzy, c-format
+#, c-format
 msgid "| video decoded    :    %5<PRIi64>"
-msgstr "| físeán díchódaithe    :    %5i"
+msgstr "| físeán díchódaithe    :    %5<PRIi64>"
 
 #: modules/control/rc.c:1870
 #, fuzzy, c-format
@@ -13113,37 +13027,37 @@ msgid "| frames displayed :    %5<PRIi64>"
 msgstr "| maolairí seinnte   :    %5i"
 
 #: modules/control/rc.c:1872
-#, fuzzy, c-format
+#, c-format
 msgid "| frames lost      :    %5<PRIi64>"
-msgstr "| maolairí caillte     :    %5i"
+msgstr "| frámaí caillte     :    %5<PRIi64>"
 
 #: modules/control/rc.c:1876
 msgid "+-[Audio Decoding]"
 msgstr "+-[Díchódú Fuaime]"
 
 #: modules/control/rc.c:1877
-#, fuzzy, c-format
+#, c-format
 msgid "| audio decoded    :    %5<PRIi64>"
-msgstr "| fuaim díchódaithe    :    %5i"
+msgstr "| fuaim díchódaithe    :    %5<PRIi64>"
 
 #: modules/control/rc.c:1879
-#, fuzzy, c-format
+#, c-format
 msgid "| buffers played   :    %5<PRIi64>"
-msgstr "| maolairí seinnte   :    %5i"
+msgstr "| maolairí seinnte   :    %5<PRIi64>i"
 
 #: modules/control/rc.c:1881
-#, fuzzy, c-format
+#, c-format
 msgid "| buffers lost     :    %5<PRIi64>"
-msgstr "| maolairí caillte     :    %5i"
+msgstr "| maolairí caillte     :    %5<PRIi64>"
 
 #: modules/control/rc.c:1885
 msgid "+-[Streaming]"
 msgstr "+-[Sruthú]"
 
 #: modules/control/rc.c:1886
-#, fuzzy, c-format
+#, c-format
 msgid "| packets sent     :    %5<PRIi64>"
-msgstr "| maolairí caillte     :    %5i"
+msgstr "| beartáin seolta     :    %5<PRIi64>"
 
 #: modules/control/rc.c:1888
 #, c-format
@@ -13243,9 +13157,8 @@ msgid "AVI demuxer"
 msgstr ""
 
 #: modules/demux/avi/avi.c:675
-#, fuzzy
 msgid "Broken or missing AVI Index"
-msgstr "Ag deisiú an treorán AVI..."
+msgstr "Treorán AVI briste nó ar iarraidh"
 
 #: modules/demux/avi/avi.c:676
 msgid ""
@@ -13262,13 +13175,12 @@ msgid "Build index then play"
 msgstr ""
 
 #: modules/demux/avi/avi.c:682
-#, fuzzy
 msgid "Play as is"
-msgstr "Seinn agus stad"
+msgstr "Seinn mar atá"
 
 #: modules/demux/avi/avi.c:682
 msgid "Do not play"
-msgstr ""
+msgstr "Ná seinn"
 
 #: modules/demux/avi/avi.c:2406
 msgid "Fixing AVI Index..."
@@ -13315,9 +13227,8 @@ msgid "ES ID"
 msgstr ""
 
 #: modules/demux/image.c:52
-#, fuzzy
 msgid "Decode"
-msgstr "Díchódaithe"
+msgstr "Díchódaigh"
 
 #: modules/demux/image.c:54
 msgid "Decode at the demuxer stage"
@@ -13336,7 +13247,7 @@ msgstr ""
 #: modules/demux/image.c:61
 #, fuzzy
 msgid "Duration in seconds"
-msgstr "Aga i ms"
+msgstr "Aga i soicind"
 
 #: modules/demux/image.c:63
 msgid ""
@@ -13350,9 +13261,8 @@ msgid "Frame rate of the elementary stream produced."
 msgstr "Cuir isteach URL líonra an tsrutha anseo."
 
 #: modules/demux/image.c:70
-#, fuzzy
 msgid "Real-time"
-msgstr "Aga na moille"
+msgstr "Fíor-am"
 
 #: modules/demux/image.c:72
 msgid ""
@@ -13361,14 +13271,12 @@ msgid ""
 msgstr ""
 
 #: modules/demux/image.c:76
-#, fuzzy
 msgid "Image demuxer"
-msgstr "Dí-ilphléacsóir Real"
+msgstr "Dí-ilphléacsóir íomhá"
 
 #: modules/demux/image.c:77
-#, fuzzy
 msgid "Image"
-msgstr "Comhad íomhá"
+msgstr "Íomhá"
 
 #: modules/demux/kate_categories.c:40
 msgid "Closed captions"
@@ -13799,7 +13707,7 @@ msgstr ""
 
 #: modules/demux/mp4/id3genres.h:67 modules/gui/macosx/VideoEffects.m:119
 msgid "Noise"
-msgstr ""
+msgstr "Fuaim"
 
 #: modules/demux/mp4/id3genres.h:68
 msgid "Alternative rock"
@@ -13973,16 +13881,16 @@ msgstr "MP4"
 
 #: modules/demux/mp4/mp4.c:966
 msgid "Writer"
-msgstr ""
+msgstr "Scríobhnóir"
 
 #: modules/demux/mp4/mp4.c:967
 #, fuzzy
 msgid "Composer"
-msgstr "Ionchur ilchodach"
+msgstr "Cumadóir"
 
 #: modules/demux/mp4/mp4.c:968
 msgid "Producer"
-msgstr ""
+msgstr "Léiritheoir"
 
 #: modules/demux/mp4/mp4.c:969 modules/gui/macosx/playlistinfo.m:381
 #: modules/gui/qt4/components/controller.hpp:119
@@ -13991,19 +13899,16 @@ msgid "Information"
 msgstr "Eolas"
 
 #: modules/demux/mp4/mp4.c:970
-#, fuzzy
 msgid "Director"
-msgstr "Comhadlann"
+msgstr "Stiúrthóir"
 
 #: modules/demux/mp4/mp4.c:971
-#, fuzzy
 msgid "Disclaimer"
-msgstr "Cuileáil"
+msgstr "Séanadh"
 
 #: modules/demux/mp4/mp4.c:972
-#, fuzzy
 msgid "Requirements"
-msgstr "Deighleáin"
+msgstr "Riachtanais"
 
 #: modules/demux/mp4/mp4.c:973
 #, fuzzy
@@ -14016,19 +13921,16 @@ msgid "Display Source As"
 msgstr "Socruithe Taispeána"
 
 #: modules/demux/mp4/mp4.c:975
-#, fuzzy
 msgid "Host Computer"
-msgstr "Mo Ríomhaire"
+msgstr "Óstríomhaire"
 
 #: modules/demux/mp4/mp4.c:976
-#, fuzzy
 msgid "Performers"
-msgstr "Roghanna feidhmíochta"
+msgstr "Seinnteoirí"
 
 #: modules/demux/mp4/mp4.c:977
-#, fuzzy
 msgid "Original Performer"
-msgstr "Méid Bhunaidh"
+msgstr "Seinnteoir bunaidh"
 
 #: modules/demux/mp4/mp4.c:978
 msgid "Providers Source Content"
@@ -14036,25 +13938,23 @@ msgstr ""
 
 #: modules/demux/mp4/mp4.c:979
 msgid "Warning"
-msgstr ""
+msgstr "Rabhadh"
 
 #: modules/demux/mp4/mp4.c:980
-#, fuzzy
 msgid "Software"
-msgstr "Bog"
+msgstr "Oideasra"
 
 #: modules/demux/mp4/mp4.c:982
 msgid "Make"
-msgstr ""
+msgstr "Déantús"
 
 #: modules/demux/mp4/mp4.c:983
-#, fuzzy
 msgid "Model"
-msgstr "\"Modh"
+msgstr "Samhail"
 
 #: modules/demux/mp4/mp4.c:984
 msgid "Product"
-msgstr ""
+msgstr "Táirge"
 
 #: modules/demux/mp4/mp4.c:985
 #, fuzzy
@@ -14853,25 +14753,22 @@ msgstr "Athshocraigh"
 
 #: modules/gui/macosx/AudioEffects.m:80
 #: modules/gui/qt4/components/extended_panels.cpp:1193
-#, fuzzy
 msgid "Attack"
-msgstr "Iatán"
+msgstr "Ionsaí"
 
 #: modules/gui/macosx/AudioEffects.m:81
 #: modules/gui/qt4/components/extended_panels.cpp:1194
 msgid "Release"
-msgstr ""
+msgstr "Scaoil"
 
 #: modules/gui/macosx/AudioEffects.m:82
 #: modules/gui/qt4/components/extended_panels.cpp:1195
-#, fuzzy
 msgid "Threshold"
-msgstr "Tairseach an datha"
+msgstr "Tairseach"
 
 #: modules/gui/macosx/AudioEffects.m:88
-#, fuzzy
 msgid "Enable Spatializer"
-msgstr "Cumasaigh an fuaimshuiteoir"
+msgstr "Cumasaigh an  fuaimshuiteoir"
 
 #: modules/gui/macosx/AudioEffects.m:97
 msgid "Headphone virtualization"
@@ -14886,9 +14783,8 @@ msgid "Maximum level"
 msgstr "Uasairde"
 
 #: modules/gui/macosx/AudioEffects.m:105
-#, fuzzy
 msgid "Filter"
-msgstr "Scagairí"
+msgstr "Scagaire"
 
 #: modules/gui/macosx/AudioEffects.m:106
 #: modules/gui/qt4/dialogs/extended.cpp:73
@@ -15130,7 +15026,7 @@ msgstr ""
 
 #: modules/gui/macosx/intf.m:2057
 msgid "Relaunch required"
-msgstr ""
+msgstr "Atosú de dhíth"
 
 #: modules/gui/macosx/intf.m:2058
 msgid ""
@@ -15140,7 +15036,7 @@ msgstr ""
 
 #: modules/gui/macosx/intf.m:2059
 msgid "Relaunch VLC"
-msgstr ""
+msgstr "Atosaigh VLC"
 
 #: modules/gui/macosx/macosx.m:55
 msgid "Video device"
@@ -15188,6 +15084,7 @@ msgstr "Athsheinm uathoibríoch míreanna nua"
 #: modules/gui/macosx/macosx.m:73
 msgid "Start playback of new items immediately once they were added."
 msgstr ""
+"Tosaigh athsheinm míreanna nua láithreach bonn nuair a chuirtear leis iad"
 
 #: modules/gui/macosx/macosx.m:76
 msgid "Keep Recent Items"
@@ -15223,7 +15120,7 @@ msgstr ""
 
 #: modules/gui/macosx/macosx.m:87
 msgid "Run VLC with dark or bright interface style"
-msgstr ""
+msgstr "Rith VLC le comhéadan dorcha nó geal"
 
 #: modules/gui/macosx/macosx.m:88
 msgid "By default, VLC will use the dark interface style."
@@ -15258,15 +15155,16 @@ msgstr ""
 
 #: modules/gui/macosx/macosx.m:101 modules/gui/macosx/simple_prefs.m:282
 #: modules/gui/qt4/qt4.cpp:178
-#, fuzzy
 msgid "Pause the video playback when minimized"
-msgstr "Cuir an athsheinm ar sos"
+msgstr "Cuir athsheinm an fhíseáin ar sos nuair a íoslaghdaítear é"
 
 #: modules/gui/macosx/macosx.m:103 modules/gui/qt4/qt4.cpp:180
 msgid ""
 "With this option enabled, the playback will be automatically paused when "
 "minimizing the window."
 msgstr ""
+"Nuair atá an rogha seo cumasaithe, sosfaidh athsheinm go huathoibríoch nuair "
+"atá an fhuinneog á íoslaghdú."
 
 #: modules/gui/macosx/macosx.m:106
 msgid "Mac OS X interface"
@@ -15359,7 +15257,6 @@ msgid "Playback"
 msgstr "Athsheinm"
 
 #: modules/gui/macosx/MainMenu.m:270 modules/gui/macosx/MainMenu.m:271
-#, fuzzy
 msgid "Playback Speed"
 msgstr "Luas athsheanma"
 
@@ -15444,19 +15341,16 @@ msgid "Player..."
 msgstr "Seinnteoir..."
 
 #: modules/gui/macosx/MainMenu.m:342
-#, fuzzy
 msgid "Main Window..."
-msgstr "Íoslaghdaigh an Fhuinneog"
+msgstr "An phríomhfhuinneog"
 
 #: modules/gui/macosx/MainMenu.m:343
-#, fuzzy
 msgid "Audio Effects..."
-msgstr "Maisíocht Fhuaime"
+msgstr "Maisíocht Fhuaime..."
 
 #: modules/gui/macosx/MainMenu.m:344
-#, fuzzy
 msgid "Video Filters..."
-msgstr "Scagaire Físeáin"
+msgstr "Scagaire Físeáin..."
 
 #: modules/gui/macosx/MainMenu.m:345
 msgid "Bookmarks..."
@@ -15464,7 +15358,7 @@ msgstr "Ceanáin..."
 
 #: modules/gui/macosx/MainMenu.m:346
 msgid "Playlist..."
-msgstr ""
+msgstr "Seinnréim..."
 
 #: modules/gui/macosx/MainMenu.m:347 modules/gui/macosx/playlist.m:491
 msgid "Media Information..."
@@ -15524,14 +15418,12 @@ msgid "Lock Aspect Ratio"
 msgstr "Glasaigh an Cóimheas Treoíochta"
 
 #: modules/gui/macosx/MainWindow.m:136
-#, fuzzy
 msgid "Backward"
-msgstr "Céim Siar"
+msgstr "Siar"
 
 #: modules/gui/macosx/MainWindow.m:138
-#, fuzzy
 msgid "Forward"
-msgstr "Céim Ar Aghaidh"
+msgstr "Ar aghaidh"
 
 #: modules/gui/macosx/MainWindow.m:141
 #, fuzzy
@@ -15539,13 +15431,12 @@ msgid "Show/Hide Playlist"
 msgstr "Cuardaigh i Seinnréim"
 
 #: modules/gui/macosx/MainWindow.m:142 modules/gui/qt4/dialogs/vlm.cpp:560
-#, fuzzy
 msgid "Repeat"
-msgstr "Athsheinn:"
+msgstr "Athsheinn"
 
 #: modules/gui/macosx/MainWindow.m:143
 msgid "Shuffle"
-msgstr ""
+msgstr "Seinn go fánach"
 
 #: modules/gui/macosx/MainWindow.m:144 modules/gui/macosx/simple_prefs.m:225
 #: modules/gui/qt4/ui/sprefs_audio.h:440
@@ -15553,48 +15444,44 @@ msgid "Effects"
 msgstr "Maisíocht"
 
 #: modules/gui/macosx/MainWindow.m:145
-#, fuzzy
 msgid "Toggle Fullscreen mode"
-msgstr "Scáileáin dhubha i modh Lánscáileáin"
+msgstr "Scoránaigh go lánscáileáin"
 
 #: modules/gui/macosx/MainWindow.m:150
-#, fuzzy
 msgid "Full Volume"
-msgstr "Airde Réamhshocraithe"
+msgstr "Airde Iomlán"
 
 #: modules/gui/macosx/MainWindow.m:153
-#, fuzzy
 msgid "Open media..."
-msgstr "Oscail Meán"
+msgstr "Oscail meán..."
 
 #: modules/gui/macosx/MainWindow.m:154
 msgid "Drop media here"
-msgstr ""
+msgstr "Scaoil meán anseo"
 
 #: modules/gui/macosx/MainWindow.m:340
 msgid "LIBRARY"
-msgstr ""
+msgstr "LEABHARLANN"
 
 #: modules/gui/macosx/MainWindow.m:345
 msgid "MY COMPUTER"
-msgstr ""
+msgstr "MO RÍOMHAIRE"
 
 #: modules/gui/macosx/MainWindow.m:346
 msgid "DEVICES"
-msgstr ""
+msgstr "GLÉASANNA"
 
 #: modules/gui/macosx/MainWindow.m:347
 msgid "LOCAL NETWORK"
-msgstr ""
+msgstr "LÍONRA LOGÁNTA"
 
 #: modules/gui/macosx/MainWindow.m:348
 msgid "INTERNET"
-msgstr ""
+msgstr "IDIRLÍON"
 
 #: modules/gui/macosx/open.m:55
-#, fuzzy
 msgid "No device is selected"
-msgstr "Níor roghnaíodh comhad"
+msgstr "Níor roghnaíodh gléas"
 
 #: modules/gui/macosx/open.m:56
 msgid ""
@@ -15625,9 +15512,8 @@ msgid "Capture"
 msgstr "Gabh"
 
 #: modules/gui/macosx/open.m:126 modules/gui/macosx/open.m:312
-#, fuzzy
 msgid "Choose a file"
-msgstr "Roghnaigh inchur"
+msgstr "Roghnaigh comhad"
 
 #: modules/gui/macosx/open.m:128 modules/gui/macosx/open.m:316
 #: modules/gui/macosx/output.m:145 modules/gui/macosx/prefs_widgets.m:1197
@@ -15661,23 +15547,20 @@ msgid "Open VIDEO_TS folder"
 msgstr "Fillteán VIDEO_TS"
 
 #: modules/gui/macosx/open.m:141
-#, fuzzy
 msgid "Open BDMV folder"
-msgstr "Oscail Fillteán"
+msgstr "Oscail fillteán BDMV"
 
 #: modules/gui/macosx/open.m:142
 msgid "Insert Disc"
-msgstr ""
+msgstr "Ionsáigh diosc"
 
 #: modules/gui/macosx/open.m:150
-#, fuzzy
 msgid "Disable DVD menus"
-msgstr "Rogchláir DVD"
+msgstr "Díchumasaigh rogchláir DVD"
 
 #: modules/gui/macosx/open.m:154
-#, fuzzy
 msgid "Enable DVD menus"
-msgstr "Rogchláir DVD"
+msgstr "Cumasaigh rogchláir DVD"
 
 #: modules/gui/macosx/open.m:166 modules/gui/macosx/open.m:168
 #: modules/gui/macosx/output.m:147
@@ -15746,9 +15629,8 @@ msgstr "Ilchraolacháin"
 
 #: modules/gui/macosx/open.m:188 modules/gui/macosx/open.m:442
 #: modules/gui/macosx/open.m:1204
-#, fuzzy
 msgid "Capture Device"
-msgstr "Gléas Gabhála"
+msgstr "Gléas gabhála"
 
 #: modules/gui/macosx/open.m:195
 msgid ""
@@ -15762,7 +15644,7 @@ msgstr ""
 
 #: modules/gui/macosx/open.m:197
 msgid "Subscreen left:"
-msgstr ""
+msgstr "Foscáileán ar chlé:"
 
 #: modules/gui/macosx/open.m:198
 msgid "Subscreen top:"
@@ -15820,14 +15702,12 @@ msgid ""
 msgstr ""
 
 #: modules/gui/macosx/open.m:211
-#, fuzzy
 msgid "Image width:"
-msgstr "Leithead na híomhá"
+msgstr "Leithead na híomhá:"
 
 #: modules/gui/macosx/open.m:212
-#, fuzzy
 msgid "Image height:"
-msgstr "Airde na híomhá"
+msgstr "Airde na híomhá:"
 
 #: modules/gui/macosx/open.m:311
 msgid "Load subtitles file:"
@@ -15868,9 +15748,9 @@ msgid "Open File"
 msgstr "Oscail Comhad"
 
 #: modules/gui/macosx/open.m:836
-#, fuzzy, c-format
+#, c-format
 msgid "%i tracks"
-msgstr "Fuaimrian"
+msgstr "%i rianta"
 
 #: modules/gui/macosx/open.m:1308
 msgid "Composite input"
@@ -16074,7 +15954,7 @@ msgstr "Fairsingigh an nód"
 
 #: modules/gui/macosx/playlist.m:492
 msgid "Download Cover Art"
-msgstr ""
+msgstr "Íosluchtaigh ealaíon an chlúdaigh"
 
 #: modules/gui/macosx/playlist.m:493
 msgid "Fetch Meta Data"
@@ -16131,9 +16011,8 @@ msgid "Reset All"
 msgstr "Athshocraigh Uile"
 
 #: modules/gui/macosx/prefs.m:208
-#, fuzzy
 msgid "Show Basic"
-msgstr "Bunúsach"
+msgstr "Taispeáin an ceann bunúsach"
 
 #: modules/gui/macosx/prefs.m:226 modules/gui/macosx/simple_prefs.m:740
 #: modules/gui/qt4/dialogs/preferences.cpp:339
@@ -16284,21 +16163,19 @@ msgstr "Modúl an chomhéadain"
 
 #: modules/gui/macosx/simple_prefs.m:266
 msgid "Dark"
-msgstr ""
+msgstr "Dorcha"
 
 #: modules/gui/macosx/simple_prefs.m:267
-#, fuzzy
 msgid "Bright"
-msgstr "Gile"
+msgstr "Geal"
 
 #: modules/gui/macosx/simple_prefs.m:268
 msgid "Album art download policy"
 msgstr "Beartas i dtaca le ealaíon albaim a íosluchtú"
 
 #: modules/gui/macosx/simple_prefs.m:269
-#, fuzzy
 msgid "Show video within the main window"
-msgstr "Sín an físeán chun an fhuinneog a líonadh"
+msgstr "Taispeáin an físeán sa phríomhfhuinneog"
 
 #: modules/gui/macosx/simple_prefs.m:271
 msgid "Show Fullscreen Controller"
@@ -16499,7 +16376,7 @@ msgstr "Luas na bhfotheideal:"
 
 #: modules/gui/macosx/TrackSynchronization.m:63
 msgid "fps"
-msgstr ""
+msgstr "fps"
 
 #: modules/gui/macosx/VideoEffects.m:63
 #: modules/gui/qt4/dialogs/extended.cpp:84
@@ -16516,13 +16393,11 @@ msgid "Geometry"
 msgstr "Céimseata"
 
 #: modules/gui/macosx/VideoEffects.m:74
-#, fuzzy
 msgid "Image Adjust"
 msgstr "Mionathrú na híomhá"
 
 #: modules/gui/macosx/VideoEffects.m:78
 #: modules/gui/qt4/ui/video_effects.h:1300
-#, fuzzy
 msgid "Brightness Threshold"
 msgstr "Tairseach na gile"
 
@@ -16545,7 +16420,7 @@ msgstr ""
 #: modules/gui/macosx/VideoEffects.m:85 modules/video_filter/gradfun.c:47
 #: modules/gui/qt4/ui/video_effects.h:1307
 msgid "Radius"
-msgstr ""
+msgstr "Ga"
 
 #: modules/gui/macosx/VideoEffects.m:86
 #: modules/gui/qt4/ui/video_effects.h:1308
@@ -16555,9 +16430,8 @@ msgstr "Gráinne"
 
 #: modules/gui/macosx/VideoEffects.m:87 modules/video_filter/grain.c:53
 #: modules/gui/qt4/ui/video_effects.h:1309
-#, fuzzy
 msgid "Variance"
-msgstr "Cothromaíocht"
+msgstr "Aithritheas"
 
 #: modules/gui/macosx/VideoEffects.m:92
 #: modules/gui/qt4/ui/video_effects.h:1317
@@ -16632,9 +16506,8 @@ msgstr "Comhchosúlacht"
 
 #: modules/gui/macosx/VideoEffects.m:118
 #: modules/gui/qt4/ui/video_effects.h:1337
-#, fuzzy
 msgid "Intensity"
-msgstr "Idirlíon"
+msgstr "Déine"
 
 #: modules/gui/macosx/VideoEffects.m:120 modules/gui/macosx/VideoEffects.m:123
 #: modules/video_filter/gradient.c:76 modules/video_filter/gradient.c:82
@@ -17192,7 +17065,6 @@ msgid "yes: %@ @ %@ kb/s"
 msgstr "tá: %@ @ %@ kb/s"
 
 #: modules/gui/macosx/wizard.m:1659
-#, fuzzy
 msgid "This allows streaming on a network."
 msgstr "Ceadaíonn seo sruthú ar líonra."
 
@@ -17272,9 +17144,8 @@ msgid "      %s: %s"
 msgstr "      %s: %s"
 
 #: modules/gui/ncurses.c:808
-#, fuzzy
 msgid "  [Incoming]"
-msgstr "+-[Isteach]"
+msgstr "  [Isteach]"
 
 #: modules/gui/ncurses.c:810
 #, fuzzy, c-format
@@ -17297,14 +17168,13 @@ msgid "      demux bitrate    :   %6.0f kb/s"
 msgstr ""
 
 #: modules/gui/ncurses.c:822
-#, fuzzy
 msgid "  [Video Decoding]"
-msgstr "+-[Díchódú Físeáin]"
+msgstr "  [Díchódú Físeáin]"
 
 #: modules/gui/ncurses.c:824
-#, fuzzy, c-format
+#, c-format
 msgid "      video decoded    :    %<PRId64>"
-msgstr "| físeán díchódaithe    :    %5i"
+msgstr "      físeán díchódaithe    :    %5<PRIi64>"
 
 #: modules/gui/ncurses.c:826
 #, c-format
@@ -17317,14 +17187,13 @@ msgid "      frames lost      :    %<PRId64>"
 msgstr "| maolairí caillte     :    %5i"
 
 #: modules/gui/ncurses.c:834
-#, fuzzy
 msgid "  [Audio Decoding]"
-msgstr "+-[Díchódú Fuaime]"
+msgstr "  [Díchódú Fuaime]"
 
 #: modules/gui/ncurses.c:836
-#, fuzzy, c-format
+#, c-format
 msgid "      audio decoded    :    %<PRId64>"
-msgstr "| fuaim díchódaithe    :    %5i"
+msgstr "      fuaim díchódaithe    :    %<PRIi64>"
 
 #: modules/gui/ncurses.c:838
 #, fuzzy, c-format
@@ -17332,24 +17201,23 @@ msgid "      buffers played   :    %<PRId64>"
 msgstr "| maolairí seinnte   :    %5i"
 
 #: modules/gui/ncurses.c:840
-#, fuzzy, c-format
+#, c-format
 msgid "      buffers lost     :    %<PRId64>"
-msgstr "| maolairí caillte     :    %5i"
+msgstr "      maolairí caillte     :    %<PRId64>"
 
 #: modules/gui/ncurses.c:845
-#, fuzzy
 msgid "  [Streaming]"
-msgstr "+-[Sruthú]"
+msgstr " [Ag sruthú]"
 
 #: modules/gui/ncurses.c:847
-#, fuzzy, c-format
+#, c-format
 msgid "      packets sent     :    %5i"
-msgstr "| maolairí caillte     :    %5i"
+msgstr "      bearta seolta     :    %5i"
 
 #: modules/gui/ncurses.c:848
-#, fuzzy, c-format
+#, c-format
 msgid "      bytes sent       : %8.0f KiB"
-msgstr "| bearta seolta       : %8.0f KiB"
+msgstr "      bearta seolta       : %8.0f KiB"
 
 #: modules/gui/ncurses.c:850
 #, c-format
@@ -17366,9 +17234,8 @@ msgid " h,H                    Show/Hide help box"
 msgstr "     .           Taispeáin/Folaigh comhaid i bhfolach"
 
 #: modules/gui/ncurses.c:871
-#, fuzzy
 msgid " i                      Show/Hide info box"
-msgstr "     .           Taispeáin/Folaigh comhaid i bhfolach"
+msgstr " i                     Taispeáin/folaigh an bosca eolais"
 
 #: modules/gui/ncurses.c:872
 #, fuzzy
@@ -17405,33 +17272,28 @@ msgid " Esc                    Close Add/Search entry"
 msgstr ""
 
 #: modules/gui/ncurses.c:879
-#, fuzzy
 msgid " Ctrl-l                 Refresh the screen"
-msgstr "     Ctrl-l          Athnuaigh an scáileán"
+msgstr " Ctrl-l                 Athnuaigh an scáileán"
 
 #: modules/gui/ncurses.c:883
 msgid "[Global]"
 msgstr "[Comhchoiteann]"
 
 #: modules/gui/ncurses.c:885
-#, fuzzy
 msgid " q, Q, Esc              Quit"
-msgstr "     q, Q, Esc   Scoir"
+msgstr " q, Q, Esc              Scoir"
 
 #: modules/gui/ncurses.c:886
-#, fuzzy
 msgid " s                      Stop"
-msgstr "     s           Stad"
+msgstr "s                       Stad"
 
 #: modules/gui/ncurses.c:887
-#, fuzzy
 msgid " <space>                Pause/Play"
-msgstr "     <space>     Cuir ar sos/Seinn"
+msgstr " <space>                Cuir ar sos/Seinn"
 
 #: modules/gui/ncurses.c:888
-#, fuzzy
 msgid " f                      Toggle Fullscreen"
-msgstr "     f           Scoránaigh Lánscáileán"
+msgstr " f                      Scoránaigh Lánscáileán"
 
 #: modules/gui/ncurses.c:889
 #, fuzzy
@@ -17439,9 +17301,8 @@ msgid " n, p                   Next/Previous playlist item"
 msgstr "     [, ]        Teideal Ar Aghaidh/Roimhe"
 
 #: modules/gui/ncurses.c:890
-#, fuzzy
 msgid " [, ]                   Next/Previous title"
-msgstr "     [, ]        Teideal Ar Aghaidh/Roimhe"
+msgstr " [, ]                   Teideal Ar Aghaidh/Roimhe"
 
 #: modules/gui/ncurses.c:891
 #, fuzzy
@@ -17450,14 +17311,13 @@ msgstr "     <, >        Caibidil Ar Aghaidh/Roimhe"
 
 #. xgettext: You can use ← and → characters
 #: modules/gui/ncurses.c:893
-#, fuzzy, c-format
+#, c-format
 msgid " <left>,<right>         Seek -/+ 1%%"
-msgstr "     <deas>     Cuardach +1%%"
+msgstr " <clé>,<deas>         Cuardach +1%%"
 
 #: modules/gui/ncurses.c:894
-#, fuzzy
 msgid " a, z                   Volume Up/Down"
-msgstr "     z          Airde Síos"
+msgstr " a, z                  Airde Suas/Síos"
 
 #. xgettext: You can use ↑ and ↓ characters
 #: modules/gui/ncurses.c:896
@@ -17476,7 +17336,7 @@ msgstr ""
 
 #: modules/gui/ncurses.c:904
 msgid "[Playlist]"
-msgstr ""
+msgstr "[Seinnréim]"
 
 #: modules/gui/ncurses.c:906
 #, fuzzy
@@ -17509,9 +17369,8 @@ msgid " g                      Go to the current playing item"
 msgstr "     g           Téigh chuig an mhír atá á seinm faoi láthair"
 
 #: modules/gui/ncurses.c:912
-#, fuzzy
 msgid " /                      Look for an item"
-msgstr "     /           Lorg mír"
+msgstr " /                      Lorg mír"
 
 #: modules/gui/ncurses.c:913
 #, fuzzy
@@ -17541,9 +17400,8 @@ msgid " <space>                Add the selected directory to the playlist"
 msgstr ""
 
 #: modules/gui/ncurses.c:924
-#, fuzzy
 msgid " .                      Show/Hide hidden files"
-msgstr "     .           Taispeáin/Folaigh comhaid i bhfolach"
+msgstr " .                     Taispeáin/Folaigh comhaid i bhfolach"
 
 #: modules/gui/ncurses.c:928
 msgid "[Player]"
@@ -17551,9 +17409,9 @@ msgstr "[Seinnteoir]"
 
 #. xgettext: You can use ↑ and ↓ characters
 #: modules/gui/ncurses.c:931
-#, fuzzy, c-format
+#, c-format
 msgid " <up>,<down>            Seek +/-5%%"
-msgstr "     <suas>,<síos>     Cuardaigh +/-5%%"
+msgstr " <suas>,<síos>           Cuardaigh +/-5%%"
 
 #: modules/gui/ncurses.c:1051
 msgid "[Repeat] "
@@ -17573,24 +17431,24 @@ msgid " Source   : %s"
 msgstr "Foinse   : %s"
 
 #: modules/gui/ncurses.c:1095
-#, fuzzy, c-format
+#, c-format
 msgid " Position : %s/%s"
-msgstr "Suíomh : %s/%s (%.2f%%)"
+msgstr " Suíomh : %s/%s"
 
 #: modules/gui/ncurses.c:1098
-#, fuzzy, c-format
+#, c-format
 msgid " Volume   : %u%%"
-msgstr "Airde   : %i%%"
+msgstr " Airde   : %u%%"
 
 #: modules/gui/ncurses.c:1104
-#, fuzzy, c-format
+#, c-format
 msgid " Title    : %<PRId64>/%d"
-msgstr " Teideal   : %d/%d"
+msgstr " Teideal    : %<PRId64>/%d"
 
 #: modules/gui/ncurses.c:1110
-#, fuzzy, c-format
+#, c-format
 msgid " Chapter  : %<PRId64>/%d"
-msgstr " Caibidil : %d/%d"
+msgstr " Caibidil  : %<PRId64>/%d"
 
 #: modules/gui/ncurses.c:1115
 #, fuzzy
@@ -17635,16 +17493,18 @@ msgid ""
 "Play\n"
 "If the playlist is empty, open a medium"
 msgstr ""
+"Seinn\n"
+"Má tá an tseinnréim folamh, oscail meán"
 
 #: modules/gui/qt4/components/controller.hpp:115
 #, fuzzy
 msgid "Previous / Backward"
-msgstr "Caibidil roimhe"
+msgstr "Roimhe/siar"
 
 #: modules/gui/qt4/components/controller.hpp:115
 #, fuzzy
 msgid "Next / Forward"
-msgstr "Céim Ar Aghaidh"
+msgstr "Ar Aghaidh"
 
 #: modules/gui/qt4/components/controller.hpp:116
 msgid "De-Fullscreen"
@@ -17660,7 +17520,7 @@ msgstr "Lúb A->B"
 
 #: modules/gui/qt4/components/controller.hpp:117
 msgid "Frame By Frame"
-msgstr ""
+msgstr "Fráma ar fhráma"
 
 #: modules/gui/qt4/components/controller.hpp:117
 msgid "Trickplay Reverse"
@@ -17721,7 +17581,7 @@ msgstr "Taispeáin socruithe breisithe"
 
 #: modules/gui/qt4/components/controller.hpp:127
 msgid "Show playlist"
-msgstr ""
+msgstr "Taispeáin an tseinnréim"
 
 #: modules/gui/qt4/components/controller.hpp:128
 msgid "Take a snapshot"
@@ -17733,7 +17593,7 @@ msgstr ""
 
 #: modules/gui/qt4/components/controller.hpp:129
 msgid "Frame by frame"
-msgstr ""
+msgstr "Fráma ar fhráma"
 
 #: modules/gui/qt4/components/controller.hpp:130
 msgid "Reverse"
@@ -17832,7 +17692,6 @@ msgstr " ms"
 #: modules/gui/qt4/components/extended_panels.cpp:1195
 #: modules/gui/qt4/components/extended_panels.cpp:1197
 #: modules/gui/qt4/components/extended_panels.cpp:1198
-#, fuzzy
 msgid " dB"
 msgstr "dB"
 
@@ -17853,14 +17712,12 @@ msgid "Enable spatializer"
 msgstr "Cumasaigh an fuaimshuiteoir"
 
 #: modules/gui/qt4/components/extended_panels.cpp:1521
-#, fuzzy
 msgid "(Hastened)"
-msgstr "Níos tapúla (mín)"
+msgstr "(Brostaithe)"
 
 #: modules/gui/qt4/components/extended_panels.cpp:1523
-#, fuzzy
 msgid "(Delayed)"
-msgstr "Moill"
+msgstr "(Moillithe)"
 
 #: modules/gui/qt4/components/extended_panels.cpp:1549
 #, fuzzy
@@ -17873,9 +17730,8 @@ msgid "Subtitle track syncronization:"
 msgstr "Rian fotheideal: %s"
 
 #: modules/gui/qt4/components/extended_panels.cpp:1568
-#, fuzzy
 msgid "Subtitles speed:"
-msgstr "Fotheidil"
+msgstr "Luas na bhfotheidil:"
 
 #: modules/gui/qt4/components/extended_panels.cpp:1582
 #, fuzzy
@@ -17968,7 +17824,7 @@ msgstr "Taispeánta"
 #: modules/gui/qt4/components/info_panels.cpp:536
 #: modules/gui/qt4/components/info_panels.cpp:538
 msgid "frames"
-msgstr ""
+msgstr "frámaí"
 
 #: modules/gui/qt4/components/info_panels.cpp:537
 #: modules/gui/qt4/components/info_panels.cpp:550
@@ -17986,7 +17842,7 @@ msgstr "ceangaltáin"
 
 #: modules/gui/qt4/components/info_panels.cpp:543
 msgid "Upstream rate"
-msgstr ""
+msgstr "Luas uas-shruthú"
 
 #: modules/gui/qt4/components/info_panels.cpp:548
 msgid "Played"
@@ -18015,13 +17871,13 @@ msgstr "Fill ar an ngnáthluas seanma"
 
 #: modules/gui/qt4/components/interface_widgets.cpp:518
 msgid "Download cover art"
-msgstr ""
+msgstr "Íosluchtaigh ealaíon an chlúdaigh"
 
 #: modules/gui/qt4/components/interface_widgets.cpp:561
 #: modules/gui/qt4/dialogs/toolbar.cpp:458
 #, fuzzy
 msgid "Elapsed time"
-msgstr "Am athnuachana"
+msgstr "Am an scaoilte"
 
 #: modules/gui/qt4/components/interface_widgets.cpp:565
 #: modules/gui/qt4/dialogs/toolbar.cpp:462
@@ -18107,7 +17963,7 @@ msgstr "Tiúnóir"
 
 #: modules/gui/qt4/components/open_panels.cpp:920
 msgid "Delivery system"
-msgstr ""
+msgstr "Córas seachadta"
 
 #: modules/gui/qt4/components/open_panels.cpp:950
 msgid "Transponder/multiplex frequency"
@@ -18186,19 +18042,16 @@ msgid "Descending"
 msgstr "Íslitheach"
 
 #: modules/gui/qt4/components/playlist/playlist_model.cpp:1009
-#, fuzzy
 msgid "Display size"
-msgstr "Taispeáin an gléas"
+msgstr "Méid taispeána"
 
 #: modules/gui/qt4/components/playlist/playlist_model.cpp:1010
-#, fuzzy
 msgid "Increase"
-msgstr "Méadaigh an Airde"
+msgstr "Méadaigh"
 
 #: modules/gui/qt4/components/playlist/playlist_model.cpp:1011
-#, fuzzy
 msgid "Decrease"
-msgstr "Laghdaigh an Airde"
+msgstr "Laghdaigh"
 
 #: modules/gui/qt4/components/playlist/selector.cpp:203
 msgid "My Computer"
@@ -18292,7 +18145,7 @@ msgstr "Brúigh cnaipí nua do "
 
 #: modules/gui/qt4/components/preferences_widgets.cpp:1581
 msgid "Warning: the key is already assigned to \""
-msgstr ""
+msgstr "Rabhadh: tá an cnaipe sannta chuig \" cheana féin"
 
 #: modules/gui/qt4/components/preferences_widgets.cpp:1601
 #: modules/gui/qt4/components/preferences_widgets.cpp:1609
@@ -18563,7 +18416,7 @@ msgstr "Botúin"
 
 #: modules/gui/qt4/dialogs/errors.cpp:47
 msgid "Cl&ear"
-msgstr ""
+msgstr "Gl&an"
 
 #: modules/gui/qt4/dialogs/errors.cpp:54
 msgid "Hide future errors"
@@ -18612,9 +18465,8 @@ msgid "Allow downloading media information"
 msgstr "Brúigh faoi dhó chun faisnéis an mheáin a léamh"
 
 #: modules/gui/qt4/dialogs/firstrun.cpp:105
-#, fuzzy
 msgid "Allow checking for VLC updates"
-msgstr "Ag dul ar thóir nuashonrú..."
+msgstr "Ceadaigh dul ar thóir nuashonruithe VLC"
 
 #: modules/gui/qt4/dialogs/firstrun.cpp:111
 #, fuzzy
@@ -18692,9 +18544,8 @@ msgid "VLC media player updates"
 msgstr "Nuashonruithe seinnteoir meán VLC"
 
 #: modules/gui/qt4/dialogs/help.cpp:237
-#, fuzzy
 msgid "A new version of VLC (%1.%2.%3%4) is available."
-msgstr "Tá leagan nua de VLC("
+msgstr "Tá leagan nua de VLC(%1. %2. %3%4) ar fáil."
 
 #: modules/gui/qt4/dialogs/help.cpp:253
 msgid "You have the latest version of VLC media player."
@@ -18709,9 +18560,8 @@ msgid "&General"
 msgstr "Coiteann"
 
 #: modules/gui/qt4/dialogs/mediainfo.cpp:62
-#, fuzzy
 msgid "&Metadata"
-msgstr "Meiteashonraí"
+msgstr "&Meiteashonraí"
 
 #: modules/gui/qt4/dialogs/mediainfo.cpp:64
 #, fuzzy
@@ -18719,9 +18569,8 @@ msgid "&Codec"
 msgstr "Comhbhrúite/díchomhbhrúite"
 
 #: modules/gui/qt4/dialogs/mediainfo.cpp:68
-#, fuzzy
 msgid "S&tatistics"
-msgstr "Staidreamh"
+msgstr "S&taidreamh"
 
 #: modules/gui/qt4/dialogs/mediainfo.cpp:74
 msgid "&Save Metadata"
@@ -18736,9 +18585,8 @@ msgid "Saves all the displayed logs to a file"
 msgstr ""
 
 #: modules/gui/qt4/dialogs/messages.cpp:105
-#, fuzzy
 msgid "Update the tree"
-msgstr "Faoin Fhíseán"
+msgstr "Nuashonraigh an crann"
 
 #: modules/gui/qt4/dialogs/messages.cpp:241
 msgid "Save log file as..."
@@ -18898,9 +18746,8 @@ msgid "Cannot save Configuration"
 msgstr "Cumraíocht na gcallairí"
 
 #: modules/gui/qt4/dialogs/preferences.cpp:320
-#, fuzzy
 msgid "Preferences file could not be saved"
-msgstr "Níorbh fhéidir an comhad a fhíordheimhniú"
+msgstr "Níorbh fhéidir comhad na sainroghanna a chuir i dtaisce"
 
 #: modules/gui/qt4/dialogs/preferences.cpp:340
 msgid "Are you sure you want to reset your VLC media player preferences?"
@@ -19043,9 +18890,8 @@ msgid "Select profile:"
 msgstr "Roghnaigh beathaisnéisín:"
 
 #: modules/gui/qt4/dialogs/toolbar.cpp:159
-#, fuzzy
 msgid "New profile"
-msgstr "Roghnaigh beathaisnéisín:"
+msgstr "Beathaisnéisín nua"
 
 #: modules/gui/qt4/dialogs/toolbar.cpp:162
 msgid "Delete the current profile"
@@ -19094,7 +18940,7 @@ msgstr "Cnaipí Breise"
 #: modules/gui/qt4/dialogs/toolbar.cpp:446
 #, fuzzy
 msgid "Playback Buttons"
-msgstr "Athsheinm"
+msgstr "Luas athsheanma"
 
 #: modules/gui/qt4/dialogs/vlm.cpp:73
 msgid "Broadcast"
@@ -19122,7 +18968,7 @@ msgstr "Athsheinn:"
 
 #: modules/gui/qt4/dialogs/vlm.cpp:86
 msgid "Repeat delay:"
-msgstr ""
+msgstr "Déan an mhoill arís:"
 
 #: modules/gui/qt4/dialogs/vlm.cpp:111
 #: modules/gui/qt4/ui/sprefs_interface.h:525
@@ -19131,11 +18977,11 @@ msgstr " lá"
 
 #: modules/gui/qt4/dialogs/vlm.cpp:130
 msgid "I&mport"
-msgstr ""
+msgstr "Tabhair isteach"
 
 #: modules/gui/qt4/dialogs/vlm.cpp:133
 msgid "E&xport"
-msgstr ""
+msgstr "Tabhair amach"
 
 #: modules/gui/qt4/dialogs/vlm.cpp:270
 msgid "Save VLM configuration as..."
@@ -19143,7 +18989,7 @@ msgstr ""
 
 #: modules/gui/qt4/dialogs/vlm.cpp:272 modules/gui/qt4/dialogs/vlm.cpp:346
 msgid "VLM conf (*.vlm);;All (*)"
-msgstr ""
+msgstr "Cumraíocht VLM conf (*.vlm);;Uile (*)"
 
 #: modules/gui/qt4/dialogs/vlm.cpp:344
 msgid "Open VLM configuration..."
@@ -19198,9 +19044,8 @@ msgid "&Help"
 msgstr "Cab&hair"
 
 #: modules/gui/qt4/menus.cpp:337
-#, fuzzy
 msgid "Open &File..."
-msgstr "Oscail Comhad..."
+msgstr "Oscail &comhad..."
 
 #: modules/gui/qt4/menus.cpp:341 modules/gui/qt4/menus.cpp:897
 msgid "Open &Disc..."
@@ -19215,31 +19060,28 @@ msgid "Open &Capture Device..."
 msgstr "Oscail an Gléas Gabhála..."
 
 #: modules/gui/qt4/menus.cpp:350
-#, fuzzy
 msgid "&Open (advanced)..."
-msgstr "&Oscail Comhad..."
+msgstr "&Oscail (le hardroghanna)..."
 
 #: modules/gui/qt4/menus.cpp:354
 msgid "Open &Location from clipboard"
 msgstr "Oscail Suíomh ón ngearrthaisce"
 
 #: modules/gui/qt4/menus.cpp:359
-#, fuzzy
 msgid "Open &Recent Media"
-msgstr "Meáin le déanaí"
+msgstr "Oscail meáin le déanaí"
 
 #: modules/gui/qt4/menus.cpp:370
 msgid "Conve&rt / Save..."
 msgstr "Tiontaigh / Cuir i dtaisce..."
 
 #: modules/gui/qt4/menus.cpp:372
-#, fuzzy
 msgid "&Stream..."
-msgstr "Sruth..."
+msgstr "&Sruthaigh..."
 
 #: modules/gui/qt4/menus.cpp:377
 msgid "Quit at the end of playlist"
-msgstr ""
+msgstr "Scoir ag deireadh na seamna"
 
 #: modules/gui/qt4/menus.cpp:384
 msgid "Close to systray"
@@ -19286,9 +19128,8 @@ msgid "Ctrl+L"
 msgstr "Ctrl+L"
 
 #: modules/gui/qt4/menus.cpp:475
-#, fuzzy
 msgid "Mi&nimal Interface"
-msgstr "Comhéadan na gcraiceann"
+msgstr "Comhéadan íosta"
 
 #: modules/gui/qt4/menus.cpp:476
 msgid "Ctrl+H"
@@ -19344,19 +19185,16 @@ msgid "&Fullscreen"
 msgstr "Lánscáileán"
 
 #: modules/gui/qt4/menus.cpp:644
-#, fuzzy
 msgid "Always Fit &Window"
-msgstr "Ar barr i gcónaí"
+msgstr "Oiriúnaigh don fhuinneog i gcónaí"
 
 #: modules/gui/qt4/menus.cpp:645
-#, fuzzy
 msgid "Always &on Top"
 msgstr "Ar barr i gcónaí"
 
 #: modules/gui/qt4/menus.cpp:646
-#, fuzzy
 msgid "Set as Wall&paper"
-msgstr "Cúlbhrat DirectX"
+msgstr "Socraigh mar chúlbhrat"
 
 #: modules/gui/qt4/menus.cpp:650
 msgid "&Zoom"
@@ -19383,7 +19221,6 @@ msgid "&Post processing"
 msgstr "&Iar-chóireáil"
 
 #: modules/gui/qt4/menus.cpp:662
-#, fuzzy
 msgid "Take &Snapshot"
 msgstr "Tóg roghbhlúire"
 
@@ -19404,14 +19241,12 @@ msgid "&Program"
 msgstr "Ríomhchlár"
 
 #: modules/gui/qt4/menus.cpp:692
-#, fuzzy
 msgid "Custom &Bookmarks"
-msgstr "Astail"
+msgstr "Ceanáin saincheaptha"
 
 #: modules/gui/qt4/menus.cpp:694
-#, fuzzy
 msgid "&Manage"
-msgstr "Bainisteoir Físeáin"
+msgstr "&Bainistigh"
 
 #: modules/gui/qt4/menus.cpp:750
 msgid "&Help..."
@@ -19470,7 +19305,6 @@ msgid "Leave Fullscreen"
 msgstr "Fág Lánscáileán"
 
 #: modules/gui/qt4/menus.cpp:1028
-#, fuzzy
 msgid "Subti&tle"
 msgstr "Fotheideal"
 
@@ -19479,7 +19313,6 @@ msgid "&Playback"
 msgstr "Athsheinm"
 
 #: modules/gui/qt4/menus.cpp:1044
-#, fuzzy
 msgid "Tools"
 msgstr "Uirlisí"
 
@@ -19614,7 +19447,7 @@ msgstr ""
 
 #: modules/gui/qt4/qt4.cpp:138
 msgid "Define the colors of the volume slider "
-msgstr ""
+msgstr "Sainmhínigh dathanna an tsleamhnáin fhuaime"
 
 #: modules/gui/qt4/qt4.cpp:139
 msgid ""
@@ -19697,9 +19530,8 @@ msgid ""
 msgstr ""
 
 #: modules/gui/qt4/qt4.cpp:182
-#, fuzzy
 msgid "Allow automatic icon changes"
-msgstr "Bearradh uathoibríoch"
+msgstr "Ceadaigh athrú uathoibríoch do na deilbhíní"
 
 #: modules/gui/qt4/qt4.cpp:184
 msgid ""
@@ -19711,13 +19543,12 @@ msgid "Qt interface"
 msgstr "Comhéadan Qt"
 
 #: modules/gui/qt4/util/customwidgets.cpp:80
-#, fuzzy
 msgid "errors"
-msgstr "Botúin"
+msgstr "botúin"
 
 #: modules/gui/qt4/util/customwidgets.cpp:81
 msgid "warnings"
-msgstr ""
+msgstr "rabhaidh"
 
 #: modules/gui/qt4/util/customwidgets.cpp:82
 msgid "debug"
@@ -19871,9 +19702,8 @@ msgid ""
 msgstr ""
 
 #: modules/lua/vlc.c:82
-#, fuzzy
 msgid "CLI input"
-msgstr "Ionchur TCP"
+msgstr "Ionchur CLI"
 
 #: modules/lua/vlc.c:83
 msgid ""
@@ -19991,9 +19821,8 @@ msgstr ""
 
 #: modules/media_library/sql_media_library.c:120
 #: modules/media_library/sql_media_library.c:121
-#, fuzzy
 msgid "Password for the database"
-msgstr "Focal faire don gléas sprice."
+msgstr "Focal faire don bhunachar sonraí"
 
 #: modules/media_library/sql_media_library.c:123
 msgid "Port for the database"
@@ -20096,9 +19925,8 @@ msgid "GNU TLS transport layer security"
 msgstr ""
 
 #: modules/misc/gnutls.c:98
-#, fuzzy
 msgid "GNU TLS server"
-msgstr "Freastalaí GnuTLS"
+msgstr "Freastalaí GNU TLS"
 
 #: modules/misc/inhibit.c:96
 msgid "Power Management Inhibitor"
@@ -20110,7 +19938,7 @@ msgstr "Ag seinm roinnt meáin."
 
 #: modules/misc/inhibit/mce.c:39
 msgid "MCE"
-msgstr ""
+msgstr "MCE"
 
 #: modules/misc/inhibit/mce.c:40
 msgid "Nokia MCE screen unblanking"
@@ -20344,7 +20172,7 @@ msgstr ""
 
 #: modules/mux/mp4.c:46
 msgid "Create \"Fast Start\" files"
-msgstr ""
+msgstr "Cruthaigh comhaid \"Fast Start"
 
 #: modules/mux/mp4.c:48
 msgid ""
@@ -20400,7 +20228,7 @@ msgstr ""
 
 #: modules/mux/mpeg/ts.c:91
 msgid "SPU PID"
-msgstr ""
+msgstr "SPU PID"
 
 #: modules/mux/mpeg/ts.c:92
 msgid "Assign a fixed PID to the SPU."
@@ -20408,7 +20236,7 @@ msgstr ""
 
 #: modules/mux/mpeg/ts.c:93
 msgid "PMT PID"
-msgstr ""
+msgstr "PMT PID"
 
 #: modules/mux/mpeg/ts.c:94
 msgid "Assign a fixed PID to the PMT"
@@ -20766,14 +20594,13 @@ msgid "Audio capture"
 msgstr "Fuaim-ghabháil"
 
 #: modules/services_discovery/pulse.c:43
-#, fuzzy
 msgid "Audio capture (PulseAudio)"
-msgstr "Gabháil fuaime (ALSA)"
+msgstr "Gabháil fuaime (PulseAudio)"
 
 #: modules/services_discovery/pulse.c:183
 #, c-format
 msgid "Card %<PRIu32>"
-msgstr ""
+msgstr "Cárta %<PRIu32>"
 
 #: modules/services_discovery/pulse.c:186 modules/stream_out/es.c:85
 msgid "Generic"
@@ -20882,9 +20709,8 @@ msgid "Universal Plug'n'Play"
 msgstr "Universal Plug'n'Play"
 
 #: modules/services_discovery/windrive.c:83
-#, fuzzy
 msgid "Local drives"
-msgstr "Tiomántán optúil"
+msgstr "Tiomántáin logánta"
 
 #: modules/services_discovery/xcb_apps.c:48
 #: modules/services_discovery/xcb_apps.c:49
@@ -21045,9 +20871,8 @@ msgid ""
 msgstr ""
 
 #: modules/stream_out/delay.c:55
-#, fuzzy
 msgid "Delay a stream"
-msgstr "Roghnaigh sruth"
+msgstr "Moilligh sruth"
 
 #: modules/stream_out/description.c:54
 msgid "Description stream output"
@@ -21062,9 +20887,8 @@ msgid "Enable/disable video rendering."
 msgstr ""
 
 #: modules/stream_out/display.c:44
-#, fuzzy
 msgid "Delay (ms)"
-msgstr "Aga na moille"
+msgstr "Moill (ms)"
 
 #: modules/stream_out/display.c:45
 msgid "Introduces a delay in the display of the stream."
@@ -21169,7 +20993,7 @@ msgstr ""
 
 #: modules/stream_out/langfromtelx.c:45
 msgid "Magazine"
-msgstr ""
+msgstr "Irisleabhar"
 
 #: modules/stream_out/langfromtelx.c:47
 msgid "Specify the magazine containing the language page"
@@ -21184,9 +21008,8 @@ msgid "Specify the page containing the language"
 msgstr ""
 
 #: modules/stream_out/langfromtelx.c:51
-#, fuzzy
 msgid "Row"
-msgstr "Sraitheanna"
+msgstr "Sraith"
 
 #: modules/stream_out/langfromtelx.c:53
 msgid "Specify the row containing the language"
@@ -21229,7 +21052,7 @@ msgstr "Scagaire físeáin"
 
 #: modules/stream_out/mosaic_bridge.c:121
 msgid "Video filters will be applied to the video stream."
-msgstr ""
+msgstr "Cuirfear scagairí físeáin i bhfeidhm ar an sruth físeáin."
 
 #: modules/stream_out/mosaic_bridge.c:123
 msgid "Image chroma"
@@ -21526,9 +21349,8 @@ msgid "Specify an ISO-639 code (three characters) for this elementary stream"
 msgstr ""
 
 #: modules/stream_out/setid.c:61
-#, fuzzy
 msgid "Set ID"
-msgstr "Socraigh an QP"
+msgstr "Socraigh aitheantas"
 
 #: modules/stream_out/setid.c:62
 msgid "Set ES id"
@@ -21544,7 +21366,7 @@ msgstr ""
 
 #: modules/stream_out/setid.c:75
 msgid "Set Lang"
-msgstr ""
+msgstr "Socraigh teanga"
 
 #: modules/stream_out/setid.c:76
 msgid "Change the language of an elementary stream"
@@ -21691,7 +21513,7 @@ msgstr ""
 
 #: modules/stream_out/switcher.c:104
 msgid "Command"
-msgstr ""
+msgstr "Ordú"
 
 #: modules/stream_out/switcher.c:106
 msgid "Initial command to execute."
@@ -21956,9 +21778,8 @@ msgid ""
 msgstr ""
 
 #: modules/text_renderer/freetype.c:126
-#, fuzzy
 msgid "Text opacity"
-msgstr "Imlíne"
+msgstr "Teimhneachta an téacs"
 
 #: modules/text_renderer/freetype.c:127 modules/text_renderer/win32text.c:67
 msgid ""
@@ -21998,14 +21819,12 @@ msgid "Force bold"
 msgstr "Éignigh fuaim aonfhónach"
 
 #: modules/text_renderer/freetype.c:141
-#, fuzzy
 msgid "Background opacity"
-msgstr "Cúlra"
+msgstr "Teimhneacht an chúlra"
 
 #: modules/text_renderer/freetype.c:142
-#, fuzzy
 msgid "Background color"
-msgstr "Cúlra"
+msgstr "Dath an chúlra"
 
 #: modules/text_renderer/freetype.c:144
 #, fuzzy
@@ -22014,29 +21833,25 @@ msgstr "Imlíne"
 
 #: modules/text_renderer/freetype.c:145
 #: modules/gui/qt4/ui/sprefs_subtitles.h:283
-#, fuzzy
 msgid "Outline color"
-msgstr "Imlíne"
+msgstr "Dath na himlíne"
 
 #: modules/text_renderer/freetype.c:146
 #: modules/gui/qt4/ui/sprefs_subtitles.h:282
 msgid "Outline thickness"
-msgstr ""
+msgstr "Tiús na himlíne"
 
 #: modules/text_renderer/freetype.c:148
-#, fuzzy
 msgid "Shadow opacity"
-msgstr "Scáth"
+msgstr "Teimhneacht an scátha"
 
 #: modules/text_renderer/freetype.c:149
-#, fuzzy
 msgid "Shadow color"
-msgstr "Scáth"
+msgstr "Dath an scátha"
 
 #: modules/text_renderer/freetype.c:150
-#, fuzzy
 msgid "Shadow angle"
-msgstr "Scáth"
+msgstr "Uilleann an scátha"
 
 #: modules/text_renderer/freetype.c:151
 msgid "Shadow distance"
@@ -22074,11 +21889,11 @@ msgstr ""
 
 #: modules/text_renderer/freetype.c:175
 msgid "Thin"
-msgstr ""
+msgstr "Tanaí"
 
 #: modules/text_renderer/freetype.c:175
 msgid "Thick"
-msgstr ""
+msgstr "Tiubh"
 
 #: modules/text_renderer/freetype.c:179 modules/text_renderer/win32text.c:94
 msgid "Text renderer"
@@ -22136,15 +21951,15 @@ msgstr "Tiontuithe ó "
 
 #: modules/video_chroma/i420_rgb.c:84
 msgid "I420,IYUV,YV12 to RGB2,RV15,RV16,RV24,RV32 conversions"
-msgstr ""
+msgstr "Tiontuithe I420,IYUV,YV12 go RGB2,RV15,RV16,RV24,RV32"
 
 #: modules/video_chroma/i420_rgb.c:89
 msgid "MMX I420,IYUV,YV12 to RV15,RV16,RV24,RV32 conversions"
-msgstr ""
+msgstr "Tiontuithe MMX I420,IYUV,YV12 go RV15,RV16,RV24,RV32"
 
 #: modules/video_chroma/i420_rgb.c:94
 msgid "SSE2 I420,IYUV,YV12 to RV15,RV16,RV24,RV32 conversions"
-msgstr ""
+msgstr "Tiontuithe SSE2 I420,IYUV,YV12 go RV15,RV16,RV24,RV32"
 
 #: modules/video_chroma/i420_yuy2.c:93 modules/video_chroma/i422_yuy2.c:77
 msgid "MMX conversions from "
@@ -22186,19 +22001,22 @@ msgstr ""
 
 #: modules/video_filter/adjust.c:72
 msgid "Image hue (0-360)"
-msgstr ""
+msgstr "Fordhath na híomha (0-360)"
 
 #: modules/video_filter/adjust.c:73
 msgid "Set the image hue, between 0 and 360. Defaults to 0."
 msgstr ""
+"Socraigh fordhath na híomhá, idir a 0 agus a 360. Réamhshocraíonn sé go dtí "
+"a 0."
 
 #: modules/video_filter/adjust.c:74
 msgid "Image saturation (0-3)"
-msgstr ""
+msgstr "Sáithiú na híomhá (0-3)"
 
 #: modules/video_filter/adjust.c:75
 msgid "Set the image saturation, between 0 and 3. Defaults to 1."
 msgstr ""
+"Socraigh sáithiú na híomhá, idir a 0 agus a 3. Réamhshocraíonn sé go dtí a 1."
 
 #: modules/video_filter/adjust.c:76
 msgid "Image brightness (0-2)"
@@ -22207,6 +22025,7 @@ msgstr "Gile na híomhá (0-2)"
 #: modules/video_filter/adjust.c:77
 msgid "Set the image brightness, between 0 and 2. Defaults to 1."
 msgstr ""
+"Socraigh gile na híomhá, idir a 0 agus a 2. Réamhshocraíonn sé go dtí a 1."
 
 #: modules/video_filter/adjust.c:78
 msgid "Image gamma (0-10)"
@@ -22218,7 +22037,7 @@ msgstr ""
 
 #: modules/video_filter/adjust.c:82
 msgid "Image properties filter"
-msgstr ""
+msgstr "Scagaire airíonna na híomhá"
 
 #: modules/video_filter/adjust.c:83 modules/gui/qt4/ui/video_effects.h:1297
 msgid "Image adjust"
@@ -22245,9 +22064,8 @@ msgid "Alpha mask"
 msgstr ""
 
 #: modules/video_filter/antiflicker.c:49
-#, fuzzy
 msgid "Window size"
-msgstr "Méid an fhíseáin"
+msgstr "Méid na fuinneoga"
 
 #: modules/video_filter/antiflicker.c:50
 msgid "Number of frames (0 to 100)"
@@ -22255,7 +22073,7 @@ msgstr ""
 
 #: modules/video_filter/antiflicker.c:52
 msgid "Softening value"
-msgstr ""
+msgstr "Luach an mhaolaithe"
 
 #: modules/video_filter/antiflicker.c:53
 msgid "Number of frames consider for smoothening (0 to 30)"
@@ -22314,7 +22132,7 @@ msgstr "DMX"
 
 #: modules/video_filter/atmo/atmo.cpp:156
 msgid "MoMoLight"
-msgstr ""
+msgstr "MoMoLight"
 
 #: modules/video_filter/atmo/atmo.cpp:157
 msgid "fnordlicht"
@@ -22565,7 +22383,7 @@ msgstr ""
 
 #: modules/video_filter/atmo/atmo.cpp:264
 msgid "Darkness Limit"
-msgstr ""
+msgstr "Teorainn an dorchadais"
 
 #: modules/video_filter/atmo/atmo.cpp:265
 msgid ""
@@ -22606,11 +22424,11 @@ msgstr ""
 
 #: modules/video_filter/atmo/atmo.cpp:279
 msgid "Filter Smoothness (in %)"
-msgstr ""
+msgstr "Míne an scagaire (i %)"
 
 #: modules/video_filter/atmo/atmo.cpp:280
 msgid "Filter Smoothness"
-msgstr ""
+msgstr "Míne an scagaire"
 
 #: modules/video_filter/atmo/atmo.cpp:282
 msgid "Output Color filter mode"
@@ -22983,7 +22801,7 @@ msgstr ""
 
 #: modules/video_filter/blendbench.c:86
 msgid "Base image"
-msgstr ""
+msgstr "Íomhá bhunúsach"
 
 #: modules/video_filter/blendbench.c:92
 msgid "Blend image"
@@ -23145,7 +22963,7 @@ msgstr "Roghnaigh dath amháin sa bhfíseán"
 
 #: modules/video_filter/colorthres.c:69
 msgid "Color threshold filter"
-msgstr ""
+msgstr "Scagaire tairsí na ndathanna"
 
 #: modules/video_filter/colorthres.c:79
 #, fuzzy
@@ -23154,7 +22972,7 @@ msgstr "Tairseach sáithiúcháin"
 
 #: modules/video_filter/colorthres.c:81
 msgid "Similarity threshold"
-msgstr ""
+msgstr "Tairseach na comhchosúlachta"
 
 #: modules/video_filter/crop.c:71
 msgid "Crop geometry (pixels)"
@@ -23199,7 +23017,7 @@ msgstr ""
 
 #: modules/video_filter/crop.c:86
 msgid "Number of images for change"
-msgstr ""
+msgstr "Líon na n-íomhánna le hathrú"
 
 #: modules/video_filter/crop.c:87
 msgid ""
@@ -23210,7 +23028,7 @@ msgstr ""
 
 #: modules/video_filter/crop.c:89
 msgid "Number of lines for change"
-msgstr ""
+msgstr "Líon na línte le hathrú"
 
 #: modules/video_filter/crop.c:90
 msgid ""
@@ -23336,7 +23154,7 @@ msgstr ""
 
 #: modules/video_filter/deinterlace/algo_phosphor.h:45
 msgid "Latest"
-msgstr ""
+msgstr "Is déanaí"
 
 #: modules/video_filter/deinterlace/algo_phosphor.h:46
 #, fuzzy
@@ -23344,24 +23162,20 @@ msgid "AltLine"
 msgstr "Líneach"
 
 #: modules/video_filter/deinterlace/algo_phosphor.h:48
-#, fuzzy
 msgid "Upconvert"
-msgstr "Tiontaigh"
+msgstr "Uas-tiontaigh"
 
 #: modules/video_filter/deinterlace/algo_phosphor.h:56
-#, fuzzy
 msgid "Low"
-msgstr "Laoisis"
+msgstr "Íseal"
 
 #: modules/video_filter/deinterlace/algo_phosphor.h:57
-#, fuzzy
 msgid "Medium"
-msgstr "&Meáin"
+msgstr "Meánach"
 
 #: modules/video_filter/deinterlace/algo_phosphor.h:58
-#, fuzzy
 msgid "High"
-msgstr "Is airde"
+msgstr "Ard"
 
 #: modules/video_filter/deinterlace/deinterlace.c:54
 msgid "Deinterlace method to use for local playback."
@@ -23497,14 +23311,12 @@ msgid "Gaussian Blur"
 msgstr "Geamhú Gauss"
 
 #: modules/video_filter/gradfun.c:48
-#, fuzzy
 msgid "Radius in pixels"
-msgstr "Méid na clófhoirne i bpicteilíní"
+msgstr "Ga i bpicteilíní"
 
 #: modules/video_filter/gradfun.c:52
-#, fuzzy
 msgid "Strength"
-msgstr "Neart AQ"
+msgstr "Neart"
 
 #: modules/video_filter/gradfun.c:53
 msgid "Strength used to modify the value of a pixel"
@@ -23559,9 +23371,8 @@ msgid "Variance of the gaussian noise"
 msgstr ""
 
 #: modules/video_filter/grain.c:58
-#, fuzzy
 msgid "Minimal period"
-msgstr "Amharc Íosta"
+msgstr "Tréimhse íosta"
 
 #: modules/video_filter/grain.c:59
 msgid "Minimal period of the noise grain in pixel"
@@ -24900,11 +24711,11 @@ msgstr "Gauss"
 
 #: modules/video_filter/swscale.c:60
 msgid "SincR"
-msgstr ""
+msgstr "SincR"
 
 #: modules/video_filter/swscale.c:60
 msgid "Lanczos"
-msgstr ""
+msgstr "Lanczos"
 
 #: modules/video_filter/swscale.c:60
 msgid "Bicubic spline"
@@ -24916,7 +24727,7 @@ msgstr ""
 
 #: modules/video_filter/transform.c:47
 msgid "Transform type"
-msgstr ""
+msgstr "Cineál athrú"
 
 #: modules/video_filter/transform.c:48
 msgid "One of '90', '180', '270', 'hflip' and 'vflip'"
@@ -24948,7 +24759,7 @@ msgstr ""
 
 #: modules/video_filter/wall.c:55
 msgid "Element aspect ratio"
-msgstr ""
+msgstr "Cóimheas treoíochta na míre"
 
 #: modules/video_filter/wall.c:56
 msgid "Aspect ratio of the individual displays building the wall."
@@ -25014,9 +24825,8 @@ msgid "Embedded window video"
 msgstr "Físeán fuinneoige leabaithe"
 
 #: modules/video_output/egl.c:46
-#, fuzzy
 msgid "EGL"
-msgstr "GLX"
+msgstr "EGL"
 
 #: modules/video_output/egl.c:47
 #, fuzzy
@@ -25089,7 +24899,7 @@ msgstr ""
 
 #: modules/video_output/gl.c:51
 msgid "OpenGL ES2"
-msgstr ""
+msgstr "OpenGL ES2"
 
 #: modules/video_output/gl.c:52
 #, fuzzy
@@ -25142,7 +24952,7 @@ msgstr ""
 
 #: modules/video_output/kva.c:62
 msgid "SNAP"
-msgstr ""
+msgstr "SNAP"
 
 #: modules/video_output/kva.c:62
 #, fuzzy
@@ -25155,7 +24965,7 @@ msgstr ""
 
 #: modules/video_output/kva.c:62
 msgid "DIVE"
-msgstr ""
+msgstr "DIVE"
 
 #: modules/video_output/kva.c:72
 #, fuzzy
@@ -25435,7 +25245,7 @@ msgstr "XVideo"
 
 #: modules/video_output/xcb/xvideo.c:61
 msgid "XVideo output (XCB)"
-msgstr ""
+msgstr "Aschur XVideo (XCB)"
 
 #: modules/video_output/xcb/xvideo.c:336
 msgid "Video acceleration not available"
@@ -25453,7 +25263,7 @@ msgstr ""
 
 #: modules/video_output/yuv.c:41
 msgid "device, fifo or filename"
-msgstr ""
+msgstr "gléas, fifo nó comhadainm"
 
 #: modules/video_output/yuv.c:42
 msgid "device, fifo or filename to write yuv frames too."
@@ -25713,12 +25523,10 @@ msgstr ""
 
 #: share/lua/http/dialogs/browse_window.html:40
 #: share/lua/http/mobile_browse.html:48
-#, fuzzy
 msgid "Play List"
 msgstr "Seinnréim"
 
 #: share/lua/http/dialogs/create_stream.html:139
-#, fuzzy
 msgid "Stream Name"
 msgstr "Ainm an tsrutha"
 
@@ -25743,9 +25551,8 @@ msgid "Subtitle Codec"
 msgstr "Moill sna fotheidil"
 
 #: share/lua/http/dialogs/create_stream.html:200
-#, fuzzy
 msgid "Output Method"
-msgstr "Leithead an aschuir"
+msgstr "Modh aschurtha"
 
 #: share/lua/http/dialogs/create_stream.html:212
 #, fuzzy
@@ -25772,9 +25579,8 @@ msgid "Audio Sample Rate"
 msgstr "Léirshamhluithe fuaime"
 
 #: share/lua/http/dialogs/create_stream.html:297
-#, fuzzy
 msgid "MUX Options"
-msgstr "Roghanna DMX"
+msgstr "Roghanna MUX"
 
 #: share/lua/http/dialogs/create_stream.html:303
 #, fuzzy
@@ -25783,9 +25589,8 @@ msgstr "Fís-ghabháil"
 
 #: share/lua/http/dialogs/create_stream.html:330
 #: share/lua/http/dialogs/create_stream.html:374
-#, fuzzy
 msgid "Output Port"
-msgstr "Aschur"
+msgstr "Port aschurtha"
 
 #: share/lua/http/dialogs/create_stream.html:334
 #: share/lua/http/dialogs/create_stream.html:378
@@ -25795,26 +25600,22 @@ msgstr "Sprioc an aschuir"
 
 #: share/lua/http/dialogs/create_stream.html:338
 #: share/lua/http/dialogs/create_stream.html:382
-#, fuzzy
 msgid "Output File"
 msgstr "Comhad aschurtha"
 
 #: share/lua/http/dialogs/create_stream.html:355
-#, fuzzy
 msgid "Input Media"
-msgstr "Sruth ionchuir"
+msgstr "Meán ionchuir"
 
 #: share/lua/http/dialogs/create_stream.html:367
-#, fuzzy
 msgid "Error:"
-msgstr "Botún"
+msgstr "Botún:"
 
 #: share/lua/http/dialogs/create_stream.html:367
 msgid "Sample ui-state-error style."
 msgstr ""
 
 #: share/lua/http/dialogs/create_stream.html:390
-#, fuzzy
 msgid "File Name"
 msgstr "Comhadainm"
 
@@ -25824,9 +25625,8 @@ msgid "Preamp:"
 msgstr "Sruth"
 
 #: share/lua/http/dialogs/mosaic_window.html:96
-#, fuzzy
 msgid "Rows:"
-msgstr "Sraitheanna"
+msgstr "Sraitheanna:"
 
 #: share/lua/http/dialogs/mosaic_window.html:100
 #, fuzzy
@@ -25835,17 +25635,15 @@ msgstr "X seach-chur"
 
 #: share/lua/http/dialogs/mosaic_window.html:104
 msgid "row border"
-msgstr ""
+msgstr "imeall na sraithe"
 
 #: share/lua/http/dialogs/mosaic_window.html:108
-#, fuzzy
 msgid "width"
-msgstr "Leithead"
+msgstr "leithead"
 
 #: share/lua/http/dialogs/mosaic_window.html:114
-#, fuzzy
 msgid "Columns:"
-msgstr "Colúin"
+msgstr "Colúin:"
 
 #: share/lua/http/dialogs/mosaic_window.html:118
 #, fuzzy
@@ -25854,15 +25652,13 @@ msgstr "X seach-chur"
 
 #: share/lua/http/dialogs/mosaic_window.html:122
 msgid "column border"
-msgstr ""
+msgstr "imeall an cholúin"
 
 #: share/lua/http/dialogs/mosaic_window.html:126
-#, fuzzy
 msgid "height"
-msgstr "Airde"
+msgstr "airde"
 
 #: share/lua/http/dialogs/mosaic_window.html:133
-#, fuzzy
 msgid "Background"
 msgstr "Cúlra"
 
@@ -25872,14 +25668,12 @@ msgid "Mosaic Tiles"
 msgstr "Mósáic"
 
 #: share/lua/http/dialogs/offset_window.html:68
-#, fuzzy
 msgid "Playback Rate"
-msgstr "Athsheinm"
+msgstr "Luas athsheanma"
 
 #: share/lua/http/dialogs/offset_window.html:72
-#, fuzzy
 msgid "Audio Delay"
-msgstr "Moill fhuaime suas"
+msgstr "Moill fhuaime"
 
 #: share/lua/http/dialogs/offset_window.html:76
 #, fuzzy
@@ -25887,15 +25681,13 @@ msgid "Subtitle Delay"
 msgstr "Moill sna fotheidil"
 
 #: share/lua/http/dialogs/stream_window.html:65
-#, fuzzy
 msgid "Time:"
-msgstr "Am"
+msgstr "Am:"
 
 #: share/lua/http/index.html:26 share/lua/http/mobile_browse.html:25
 #: share/lua/http/mobile_equalizer.html:25 share/lua/http/mobile_view.html:25
-#, fuzzy
 msgid "VLC media player - Web Interface"
-msgstr "Cabhair do sheinnteoir meán VLC"
+msgstr "Seinnteoir meán VLC - Comhéadan Gréasáin"
 
 #: share/lua/http/index.html:248
 msgid "Loading flowplayer..."
@@ -25966,7 +25758,6 @@ msgid "Thanks"
 msgstr "Admhálacha"
 
 #: modules/gui/qt4/ui/about.h:188
-#, fuzzy
 msgid "Licence"
 msgstr "Ceadúnas"
 
@@ -25984,9 +25775,8 @@ msgid "Preset"
 msgstr "Réamhshocrú"
 
 #: modules/gui/qt4/ui/messages_panel.h:142
-#, fuzzy
 msgid "Verbosity:"
-msgstr "Foclachas"
+msgstr "Foclachas:"
 
 #: modules/gui/qt4/ui/messages_panel.h:145
 msgid "&Save as..."
@@ -26048,12 +25838,11 @@ msgstr "Athraigh am tosaithe don meán"
 
 #: modules/gui/qt4/ui/open.h:252
 msgid "HH'H':mm'm':ss's'.zzz"
-msgstr ""
+msgstr "UU'U':nn'n':ss's'.zzz"
 
 #: modules/gui/qt4/ui/open_capture.h:98
-#, fuzzy
 msgid "Capture mode"
-msgstr "Gabh"
+msgstr "Mód gabhála"
 
 #: modules/gui/qt4/ui/open_capture.h:100
 msgid "Select the capture device type"
@@ -26084,9 +25873,8 @@ msgid "SVCD/VCD"
 msgstr "SVCD/VCD"
 
 #: modules/gui/qt4/ui/open_disk.h:303
-#, fuzzy
 msgid "Disable Disc Menus"
-msgstr "Rogchláir DVD"
+msgstr "Díchumsaigh rogchláir dhiosca"
 
 #: modules/gui/qt4/ui/open_disk.h:305
 #, fuzzy
@@ -26136,9 +25924,8 @@ msgid "Select the subtitles file"
 msgstr "Roghnaigh comhad na bhfotheideal"
 
 #: modules/gui/qt4/ui/open_net.h:91
-#, fuzzy
 msgid "Network Protocol"
-msgstr "Comhghnás"
+msgstr "Comhghnás líonra"
 
 #: modules/gui/qt4/ui/open_net.h:92
 msgid "Please enter a network URL:"
@@ -26255,9 +26042,8 @@ msgid "Keep original audio track"
 msgstr "Coinnigh an fuaimrian bunaidh"
 
 #: modules/gui/qt4/ui/profiles.h:500
-#, fuzzy
 msgid "Sample Rate"
-msgstr "Léirshamhluithe fuaime"
+msgstr ""
 
 #: modules/gui/qt4/ui/profiles.h:501
 #, fuzzy
@@ -26300,14 +26086,12 @@ msgid "Miscellaneous Options"
 msgstr "Roghanna Ilghnéitheacha"
 
 #: modules/gui/qt4/ui/sout.h:341
-#, fuzzy
 msgid "Stream all elementary streams"
-msgstr "Cuir isteach URL líonra an tsrutha anseo."
+msgstr ""
 
 #: modules/gui/qt4/ui/sout.h:343
-#, fuzzy
 msgid "Group name"
-msgstr "Ainm úsáideora"
+msgstr "Ainm na baicle"
 
 #: modules/gui/qt4/ui/sout.h:345
 #, fuzzy
@@ -26315,9 +26099,8 @@ msgid "Generated stream output string"
 msgstr "Socruithe coiteann aschurtha an tsrutha"
 
 #: modules/gui/qt4/ui/sout.h:347
-#, fuzzy
 msgid "Option Setup"
-msgstr "Roghanna"
+msgstr "Socrú roghanna"
 
 #: modules/gui/qt4/ui/sprefs_audio.h:434
 msgid " %"
@@ -26423,9 +26206,8 @@ msgid "RTP over RTSP (TCP)"
 msgstr "RTP thar RTSP (TCP)"
 
 #: modules/gui/qt4/ui/sprefs_input.h:360
-#, fuzzy
 msgid "Live555 stream transport"
-msgstr "Aschur srutha HTTP"
+msgstr ""
 
 #: modules/gui/qt4/ui/sprefs_input.h:361
 #, fuzzy
@@ -26471,7 +26253,7 @@ msgstr "Teanga na roghchlár:"
 
 #: modules/gui/qt4/ui/sprefs_interface.h:531
 msgid "Pause on the last frame of a video"
-msgstr ""
+msgstr "Stad ar an bhfráma deiridh d'fhíseán"
 
 #: modules/gui/qt4/ui/sprefs_interface.h:532
 #, fuzzy
@@ -26483,9 +26265,8 @@ msgid "Set up associations..."
 msgstr "Socraigh na comhcheangail..."
 
 #: modules/gui/qt4/ui/sprefs_interface.h:534
-#, fuzzy
 msgid "Configure Media Library"
-msgstr "Leabharlann Meán"
+msgstr "Cumraigh an leabharlann meán"
 
 #: modules/gui/qt4/ui/sprefs_interface.h:535
 msgid "Look and feel"
@@ -26514,14 +26295,12 @@ msgid "Start in minimal view mode"
 msgstr "Tosaigh in amharc íosta (gan roghchláir)"
 
 #: modules/gui/qt4/ui/sprefs_interface.h:543
-#, fuzzy
 msgid "Pause playback when minimized"
-msgstr "Cuir an athsheinm ar sos"
+msgstr "Cuir athsheinm ar sos nuair a íoslaghdaítear é"
 
 #: modules/gui/qt4/ui/sprefs_interface.h:544
-#, fuzzy
 msgid "Integrate video in interface"
-msgstr "Leabaigh an físeán sa chomhéadan"
+msgstr "Comhtháthaigh an físeán sa chomhéadan"
 
 #: modules/gui/qt4/ui/sprefs_interface.h:545
 msgid "Resize interface to video size"
@@ -26576,12 +26355,11 @@ msgstr "Dath na clófhoirne"
 
 #: modules/gui/qt4/ui/sprefs_subtitles.h:284
 msgid "Add a shadow"
-msgstr ""
+msgstr "Cuir scáth leis"
 
 #: modules/gui/qt4/ui/sprefs_subtitles.h:285
-#, fuzzy
 msgid "Add a background"
-msgstr "Cúlra"
+msgstr "Cuir cúlra leis"
 
 #: modules/gui/qt4/ui/sprefs_subtitles.h:287
 #: modules/gui/qt4/ui/video_effects.h:1312
@@ -26596,9 +26374,8 @@ msgid " px"
 msgstr " px"
 
 #: modules/gui/qt4/ui/sprefs_video.h:341
-#, fuzzy
 msgid "Accelerated video output (Overlay)"
-msgstr "Aschur fuaime DirectX"
+msgstr ""
 
 #: modules/gui/qt4/ui/sprefs_video.h:343
 msgid "DirectX"
@@ -26653,9 +26430,8 @@ msgid "Setup schedule"
 msgstr "Clár Ama"
 
 #: modules/gui/qt4/ui/streampanel.h:178
-#, fuzzy
 msgid "Run on schedule"
-msgstr "Clár Ama"
+msgstr "Rith ar chlár ama"
 
 #: modules/gui/qt4/ui/streampanel.h:179
 msgid "Status"
@@ -26682,25 +26458,20 @@ msgid "Clear List"
 msgstr "Glan"
 
 #: modules/gui/qt4/ui/update.h:149
-#, fuzzy
 msgid "Check for VLC updates"
-msgstr "Téigh ar thóir nuashonruithe"
+msgstr "Lorg nuashonruithe VLC"
 
 #: modules/gui/qt4/ui/update.h:150
 msgid "Launching an update request..."
 msgstr "Ag tosú iarratas nuashonraihte..."
 
 #: modules/gui/qt4/ui/update.h:151
-#, fuzzy
 msgid "Do you want to download it ?"
-msgstr ""
-"\n"
-"An mian leat é a íosluchtú?\n"
+msgstr "An mian leat é a íosluchtú?"
 
 #: modules/gui/qt4/ui/video_effects.h:1310
-#, fuzzy
 msgid "Essential"
-msgstr "spásúil"
+msgstr "Riachtanach"
 
 #: modules/gui/qt4/ui/video_effects.h:1324
 #: modules/gui/qt4/ui/video_effects.h:1333
@@ -26708,14 +26479,12 @@ msgid ">HHHHHH;#"
 msgstr ">HHHHHH;#"
 
 #: modules/gui/qt4/ui/video_effects.h:1325
-#, fuzzy
 msgid "Negate colors"
-msgstr "Aisiompaigh dathanna"
+msgstr "Frithoibrigh na dathanna"
 
 #: modules/gui/qt4/ui/video_effects.h:1338
-#, fuzzy
 msgid "Colors"
-msgstr "Dath"
+msgstr "Dathanna"
 
 #: modules/gui/qt4/ui/video_effects.h:1339
 msgid "Interactive Zoom"
@@ -26736,13 +26505,12 @@ msgstr "Dubh"
 
 #: modules/gui/qt4/ui/video_effects.h:1353
 #: modules/gui/qt4/ui/video_effects.h:1370
-#, fuzzy
 msgid "..."
-msgstr "Cuir leis..."
+msgstr "..."
 
 #: modules/gui/qt4/ui/video_effects.h:1358
 msgid "full"
-msgstr ""
+msgstr "lán"
 
 #: modules/gui/qt4/ui/video_effects.h:1364
 msgid "Logo erase"
@@ -26767,7 +26535,7 @@ msgstr "Gile (%)"
 
 #: modules/gui/qt4/ui/video_effects.h:1376
 msgid "Darkness limit"
-msgstr ""
+msgstr "Teorainn an dorchadais"
 
 #: modules/gui/qt4/ui/video_effects.h:1377
 msgid "Mark analyzed Pixels"
@@ -26790,9 +26558,8 @@ msgid "Anti-Flickering"
 msgstr ""
 
 #: modules/gui/qt4/ui/video_effects.h:1387
-#, fuzzy
 msgid "Soften"
-msgstr "Bog"
+msgstr "Bogaigh"
 
 #: modules/gui/qt4/ui/video_effects.h:1391
 #, fuzzy
@@ -26800,9 +26567,8 @@ msgid "Spatial blur"
 msgstr "Fuaimshuiteoir"
 
 #: modules/gui/qt4/ui/video_effects.h:1393
-#, fuzzy
 msgid "Mirror"
-msgstr "Botún"
+msgstr "Scáthán"
 
 #: modules/gui/qt4/ui/vlm.h:287
 msgid "VLM configurator"
@@ -26859,17 +26625,14 @@ msgstr "Lúb"
 msgid "Media Manager List"
 msgstr "Meán go dtí Zip"
 
-#, fuzzy
 #~ msgid "Front speakers"
-#~ msgstr "2 Chun Tosaigh 2 Ar Chúl"
+#~ msgstr "Tulchallairí"
 
-#, fuzzy
 #~ msgid "Surround 7.1"
-#~ msgstr "Colbha"
+#~ msgstr "Surround 7.1"
 
-#, fuzzy
 #~ msgid "ALSA device"
-#~ msgstr "Gléas DVD"
+#~ msgstr "Gléas ALSA"
 
 #~ msgid "Dump"
 #~ msgstr "Folmhaigh"
@@ -26884,13 +26647,11 @@ msgstr "Meán go dtí Zip"
 #~ msgid "Default Volume"
 #~ msgstr "Airde Réamhshocraithe"
 
-#, fuzzy
 #~ msgid "Open a Media"
-#~ msgstr "Oscail Meán"
+#~ msgstr "Oscail meán"
 
-#, fuzzy
 #~ msgid "&Open a Media"
-#~ msgstr "&Oscail Meán"
+#~ msgstr "&Oscail meán"
 
 #~ msgid "Ball color, one of \"red\", \"blue\" and \"green\"."
 #~ msgstr "Dath na liathróide, ceann de \"dearg\", \"gorm\" agus \"uaine\""
@@ -26903,13 +26664,12 @@ msgstr "Meán go dtí Zip"
 #~ msgid "Display on &Desktop"
 #~ msgstr "Taifeach na taispeána"
 
-#, fuzzy
 #~ msgid "Enable wallpaper mode"
-#~ msgstr "Cumasaigh VLC mar chúlbhrat "
+#~ msgstr "Cumasaigh mód an chúlbhrait"
 
 #, fuzzy
 #~ msgid "Elasped time"
-#~ msgstr "Am athnuachana"
+#~ msgstr "Am an scaoilte"
 
 #~ msgid ""
 #~ "One of \"u8\", \"s8\", \"u16\", \"s16\", \"u16_le\", \"s16_le\", \"u16_be"
@@ -26925,22 +26685,18 @@ msgstr "Meán go dtí Zip"
 #~ msgid "Fullscreen controller width toggle"
 #~ msgstr "Rialtán Lánscáileáin"
 
-#, fuzzy
 #~ msgid "Viewer"
-#~ msgstr "Amharc"
+#~ msgstr "Amharcóir"
 
-#, fuzzy
 #~ msgid "Library"
-#~ msgstr "Leabharlann Meán"
+#~ msgstr "Leabharlann"
 
 #~ msgid "Media Browser"
 #~ msgstr "Siortaitheoir Meán"
 
-#, fuzzy
 #~ msgid "No"
-#~ msgstr "Téi&gh"
+#~ msgstr "Níl"
 
-#, fuzzy
 #~ msgid "Full Screen"
 #~ msgstr "Lánscáileán"
 
@@ -26948,9 +26704,8 @@ msgstr "Meán go dtí Zip"
 #~ msgid "Easy Stream"
 #~ msgstr "Sruth"
 
-#, fuzzy
 #~ msgid "Manage Streams"
-#~ msgstr "Sruth"
+#~ msgstr "Bainistigh sruthanna"
 
 #, fuzzy
 #~ msgid "Track Synchronisation"
@@ -26968,13 +26723,11 @@ msgstr "Meán go dtí Zip"
 #~ msgid "Empty Playlist"
 #~ msgstr "Seinnréim"
 
-#, fuzzy
 #~ msgid "Queue Selected"
-#~ msgstr "Bain an Roghnaithe"
+#~ msgstr "Cuir na nithe roghnaithe sa scuaine"
 
-#, fuzzy
 #~ msgid "Play Selected"
-#~ msgstr "Luas athsheanma"
+#~ msgstr "Seinn an ní roghnaithe"
 
 #, fuzzy
 #~ msgid "Refresh List"
@@ -26984,33 +26737,27 @@ msgstr "Meán go dtí Zip"
 #~ msgid "Graphical Equalizer"
 #~ msgstr "Cothromóir"
 
-#, fuzzy
 #~ msgid "VLC media player - Flash Viewer"
-#~ msgstr "Cabhair do sheinnteoir meán VLC"
+#~ msgstr "Seinnteoir meán VLC - Amharcóir Flash"
 
 #, fuzzy
 #~ msgid "Streaming Output"
 #~ msgstr "Aschur an tsrutha"
 
-#, fuzzy
 #~ msgid "Create Stream"
-#~ msgstr "Sruth réamhshocraithe"
+#~ msgstr "Cruthaigh sruth"
 
-#, fuzzy
 #~ msgid "Media File"
-#~ msgstr "Comhaid mheáin"
+#~ msgstr "Comhad meáin"
 
-#, fuzzy
 #~ msgid "Capture Screen"
-#~ msgstr "Gléas Gabhála"
+#~ msgstr "Gabháil Scáileána"
 
-#, fuzzy
 #~ msgid "Close"
 #~ msgstr "Dún"
 
-#, fuzzy
 #~ msgid "Error!"
-#~ msgstr "Botún"
+#~ msgstr "Botún!"
 
 #, fuzzy
 #~ msgid "Create Mosaic"
@@ -27020,13 +26767,11 @@ msgstr "Meán go dtí Zip"
 #~ msgid "Stream Input Configuration"
 #~ msgstr "Cumraíocht na gcallairí"
 
-#, fuzzy
 #~ msgid "Remove Stream"
-#~ msgstr "Bain an Roghnaithe"
+#~ msgstr "Bain sruth"
 
-#, fuzzy
 #~ msgid "Create New Stream"
-#~ msgstr "Cruthaigh beathaisnéisín nua"
+#~ msgstr "Cruthaigh sruth nua"
 
 #, fuzzy
 #~ msgid "Delete All Streams"
@@ -27036,11 +26781,9 @@ msgstr "Meán go dtí Zip"
 #~ msgid "Configure Stream Defaults"
 #~ msgstr "Cumraigh cnaipí aicearra"
 
-#, fuzzy
 #~ msgid "Refresh Streams"
-#~ msgstr "Am athnuachana"
+#~ msgstr "Athnuaigh na sruthanna"
 
-#, fuzzy
 #~ msgid "Enqueue"
 #~ msgstr "I scuaine"
 
@@ -27638,3 +27381,18 @@ msgstr "Meán go dtí Zip"
 
 #~ msgid "...when VLC is in background"
 #~ msgstr "...nuair atá VLC sa chúlra"
+
+#~ msgid "Side speakers"
+#~ msgstr "Taobhchallairí"
+
+#~ msgid "S/PDIF"
+#~ msgstr "S/PDIF"
+
+#~ msgid "Hide / Show Library"
+#~ msgstr "Folaigh / taispeáin an leabharlann"
+
+#~ msgid "Hide / Show Viewer"
+#~ msgstr "Folaigh / taispeáin an t-amharcóir"
+
+#~ msgid "Okay"
+#~ msgstr "Tá go maith"
