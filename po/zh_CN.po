@@ -5510,30 +5510,28 @@ msgid ""
 msgstr "这张 Blu-Ray 碟需要库解码 AACS，而您的系统中似乎没有。"
 
 #: modules/access/bluray.c:230
-#, fuzzy
 msgid "BluRay Disc is corrupted."
-msgstr "Blu-Ray 光碟输入"
+msgstr "BluRay 光盘已损坏。"
 
 #: modules/access/bluray.c:233
-#, fuzzy
 msgid "Missing AACS configuration file!"
-msgstr "VLM 设置文件"
+msgstr "缺 AACS 配置文件!"
 
 #: modules/access/bluray.c:236
 msgid "No valid processing key found in AACS config file."
-msgstr ""
+msgstr "AACS 配置文件中未找到有效的处理密钥。"
 
 #: modules/access/bluray.c:239
 msgid "No valid host certificate found in AACS config file."
-msgstr ""
+msgstr "AACS 配置文件中未找到有效的主机证书。"
 
 #: modules/access/bluray.c:242
 msgid "AACS Host certificate revoked."
-msgstr ""
+msgstr "AACS 主机证书已被吊销。"
 
 #: modules/access/bluray.c:245
 msgid "AACS MMC failed."
-msgstr ""
+msgstr "AACS MMC 失败。"
 
 #: modules/access/bluray.c:251
 msgid "Your system AACS decoding library does not work. Missing keys?"
@@ -11328,9 +11326,8 @@ msgid "Western European (Windows-1252)"
 msgstr "西欧 (Windows-1252)"
 
 #: modules/codec/subsdec.c:107
-#, fuzzy
 msgid "Western European (IBM 00850)"
-msgstr "西欧 (Latin-9)"
+msgstr "西欧 (IBM 00850)"
 
 #: modules/codec/subsdec.c:109
 msgid "Eastern European (Latin-2)"
@@ -15460,14 +15457,13 @@ msgid "Use the native fullscreen mode on OS X Lion"
 msgstr "使用 OS X Lion 的原生全屏模式"
 
 #: modules/gui/macosx/macosx.m:91
-#, fuzzy
 msgid ""
 "By default, VLC uses the fullscreen mode known from previous Mac OS X "
 "releases. It can also use the native fullscreen mode on Mac OS X 10.7 and "
 "later."
 msgstr ""
-"VLC 默认在 Mac OS X 10.7 或更高版本上使用原生全屏模式。也可以使用早期 Mac OS "
-"X 版本的自定义模式。"
+"VLC 默认使用早期 Mac OS X 发行版中的全屏模式。也可以使用 Mac OS X 10.7 或更高"
+"版本提供的原生全屏模式。"
 
 #: modules/gui/macosx/macosx.m:93 modules/gui/qt4/qt4.cpp:128
 msgid "Automatically save the volume on exit"
@@ -16576,12 +16572,10 @@ msgid "Force Bold"
 msgstr "强制粗体"
 
 #: modules/gui/macosx/simple_prefs.m:298
-#, fuzzy
 msgid "Outline Color"
 msgstr "轮廓颜色"
 
 #: modules/gui/macosx/simple_prefs.m:299
-#, fuzzy
 msgid "Outline Thickness"
 msgstr "轮廓宽度"
 
@@ -20824,9 +20818,8 @@ msgid "Growl Notification Plugin"
 msgstr "Growl 提示插件"
 
 #: modules/notify/growl.m:286
-#, fuzzy
 msgid "New input playing"
-msgstr "现在正在播放"
+msgstr "正在播放新文件"
 
 #: modules/notify/growl.m:309
 msgid "Now playing"
@@ -25497,15 +25490,16 @@ msgstr "Mac OS X OpenGL 视频输出 (需要 drawable-nsobject)"
 
 #: modules/video_output/macosx.m:131
 msgid "OpenGL acceleration is not supported on your Mac"
-msgstr ""
+msgstr "您的 Mac 不支持 OpenGL 加速"
 
 #: modules/video_output/macosx.m:131
-#, fuzzy
 msgid ""
 "Your Mac lacks Quartz Extreme acceleration, which is required for video "
 "output. It will still work, but much slower and with possibly unexpected "
 "results."
-msgstr "您的 Mac 缺视频输出所需的 Quartz Extreme 加速。"
+msgstr ""
+"您的 Mac 缺视频输出所需的 Quartz Extreme 加速组件。视频输出仍然可用，但速度会"
+"非常慢，并且可能会出现异常结果。"
 
 #: modules/video_output/msw/direct2d.c:56
 msgid "Video output for Windows 7/Windows Vista with Platform update"
