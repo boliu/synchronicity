@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vlc\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2012-05-24 23:46+0100\n"
+"POT-Creation-Date: 2012-06-07 16:44+0200\n"
 "PO-Revision-Date: 2012-05-30 22:22+0100\n"
 "Last-Translator: Marian Hikanik <mhikanik@users.sourceforge.net>\n"
 "Language-Team: Marián Hikaník\n"
@@ -29,7 +29,7 @@ msgstr ""
 "pre podrobnejšie informácie si prečítajte text v súbore COPYING.\n"
 "Vytvorené tímom VideoLAN; pozrite si súbor AUTHORS.\n"
 
-#: include/vlc_config_cat.h:32 modules/audio_output/alsa.c:788
+#: include/vlc_config_cat.h:32 modules/audio_output/alsa.c:797
 msgid "VLC preferences"
 msgstr "Nastavenia programu VLC"
 
@@ -41,7 +41,7 @@ msgstr ""
 
 #: include/vlc_config_cat.h:37 modules/gui/macosx/simple_prefs.m:178
 #: modules/gui/qt4/components/simple_preferences.cpp:86
-#: modules/gui/qt4/menus.cpp:1051
+#: modules/gui/qt4/menus.cpp:1053
 msgid "Interface"
 msgstr "Rozhranie"
 
@@ -359,12 +359,12 @@ msgid "VLC's implementation of Video On Demand"
 msgstr "Implementácia funkcie videa na požiadanie (Video on Demand)"
 
 #: include/vlc_config_cat.h:175 src/libvlc-module.c:2163
-#: src/playlist/engine.c:217 modules/demux/playlist/playlist.c:63
-#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:370
+#: src/playlist/engine.c:230 modules/demux/playlist/playlist.c:63
+#: modules/demux/playlist/playlist.c:64 modules/gui/macosx/MainWindow.m:395
 #: modules/gui/qt4/components/controller.hpp:116
 #: modules/gui/qt4/components/playlist/playlist.cpp:191
 #: modules/gui/qt4/components/playlist/selector.cpp:189
-#: modules/gui/qt4/dialogs/playlist.cpp:41 modules/gui/qt4/menus.cpp:1080
+#: modules/gui/qt4/dialogs/playlist.cpp:41 modules/gui/qt4/menus.cpp:1082
 #: modules/gui/qt4/ui/sprefs_interface.h:519
 msgid "Playlist"
 msgstr "Playlist"
@@ -549,7 +549,7 @@ msgstr "&O programe"
 #: modules/gui/macosx/MainMenu.m:266 modules/gui/macosx/MainMenu.m:363
 #: modules/gui/macosx/MainMenu.m:370 modules/gui/macosx/MainMenu.m:843
 #: modules/gui/macosx/MainMenu.m:844 modules/gui/macosx/MainMenu.m:845
-#: modules/gui/macosx/MainWindow.m:1444 modules/gui/macosx/MainWindow.m:1449
+#: modules/gui/macosx/MainWindow.m:1469 modules/gui/macosx/MainWindow.m:1474
 #: modules/gui/macosx/playlist.m:476
 #: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/dialogs/vlm.cpp:550 modules/gui/qt4/menus.cpp:788
@@ -654,7 +654,7 @@ msgstr "Uložiť playlist do &súboru..."
 msgid "Open Play&list..."
 msgstr "Otvoriť p&laylist..."
 
-#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:154
+#: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:179
 #: modules/gui/qt4/components/preferences_widgets.cpp:1320
 msgid "Search"
 msgstr "Hľadať"
@@ -799,7 +799,7 @@ msgstr ""
 
 #: src/audio_output/common.c:85 src/audio_output/common.c:125
 #: src/input/es_out.c:934 src/libvlc-module.c:683
-#: src/video_output/postprocessing.c:98 modules/gui/macosx/MainWindow.m:2336
+#: src/video_output/postprocessing.c:98 modules/gui/macosx/MainWindow.m:2361
 #: modules/video_filter/postproc.c:228
 msgid "Disable"
 msgstr "Zablokovať"
@@ -852,7 +852,7 @@ msgstr "Zvukové kanály"
 #: src/audio_output/output.c:103 src/audio_output/output.c:139
 #: modules/access/alsa.c:69 modules/access/oss.c:64
 #: modules/access/v4l2/video.c:284 modules/audio_output/alsa.c:74
-#: modules/audio_output/directx.c:427 modules/audio_output/kai.c:219
+#: modules/audio_output/directx.c:432 modules/audio_output/kai.c:219
 #: modules/audio_output/oss.c:194 modules/audio_output/portaudio.c:400
 #: modules/audio_output/waveout.c:413 modules/codec/twolame.c:70
 msgid "Stereo"
@@ -1257,7 +1257,7 @@ msgid "Title"
 msgstr "Titul"
 
 #: src/input/meta.c:55 modules/gui/macosx/playlistinfo.m:79
-#: modules/gui/macosx/playlist.m:1179
+#: modules/gui/macosx/playlist.m:1193
 msgid "Artist"
 msgstr "Interpret"
 
@@ -1813,7 +1813,7 @@ msgstr ""
 #: modules/codec/avcodec/avcodec.c:70 modules/codec/kate.c:202
 #: modules/gui/macosx/open.m:226
 #: modules/gui/qt4/components/interface_widgets.cpp:299
-#: modules/text_renderer/freetype.c:175
+#: modules/text_renderer/freetype.c:184
 msgid "None"
 msgstr "Žiaden"
 
@@ -2545,7 +2545,7 @@ msgstr ""
 #: src/video_output/vout_intf.c:112 modules/access/dshow/dshow.cpp:91
 #: modules/access/dshow/dshow.cpp:94 modules/access/dshow/dshow.cpp:98
 #: modules/access/dshow/dshow.cpp:105 modules/access/dshow/dshow.cpp:125
-#: modules/audio_output/alsa.c:62 modules/audio_output/alsa.c:781
+#: modules/audio_output/alsa.c:62 modules/audio_output/alsa.c:790
 #: modules/gui/fbosd.c:172 modules/gui/macosx/MainMenu.m:502
 #: modules/gui/macosx/prefs_widgets.m:1311
 #: modules/gui/macosx/simple_prefs.m:433 modules/gui/macosx/simple_prefs.m:588
@@ -2557,7 +2557,7 @@ msgid "Default"
 msgstr "Predvolený"
 
 #: src/libvlc-module.c:683 modules/gui/macosx/AudioEffects.m:66
-#: modules/gui/macosx/MainWindow.m:2334 modules/gui/macosx/wizard.m:357
+#: modules/gui/macosx/MainWindow.m:2359 modules/gui/macosx/wizard.m:357
 #: modules/gui/qt4/ui/equalizer.h:133 modules/gui/qt4/ui/vlm.h:290
 msgid "Enable"
 msgstr "Aktivovať"
@@ -3937,7 +3937,7 @@ msgstr ""
 "Vyberte si klávesu, ktorú chcete používať pre ukončenie celoobrazovkového "
 "režimu."
 
-#: src/libvlc-module.c:1346 modules/gui/macosx/MainWindow.m:141
+#: src/libvlc-module.c:1346 modules/gui/macosx/MainWindow.m:166
 msgid "Play/Pause"
 msgstr "Prehrať/Pozastaviť"
 
@@ -4034,7 +4034,7 @@ msgstr ""
 
 #: src/libvlc-module.c:1366 modules/gui/macosx/MainMenu.m:267
 #: modules/gui/macosx/MainMenu.m:364 modules/gui/macosx/MainMenu.m:371
-#: modules/gui/macosx/MainMenu.m:1161 modules/gui/macosx/MainWindow.m:147
+#: modules/gui/macosx/MainMenu.m:1161 modules/gui/macosx/MainWindow.m:172
 #: modules/gui/qt4/components/controller.hpp:114
 #: modules/gui/qt4/dialogs/vlm.cpp:556 modules/notify/xosd.c:234
 #: modules/gui/qt4/ui/streampanel.h:181
@@ -4047,7 +4047,7 @@ msgstr "Vyberte si klávesu, ktorú chcete používať pre zastavenie prehrávan
 
 #: src/libvlc-module.c:1368 modules/gui/fbosd.c:128 modules/gui/fbosd.c:196
 #: modules/gui/macosx/bookmarks.m:93 modules/gui/macosx/bookmarks.m:102
-#: modules/gui/macosx/MainWindow.m:158 modules/gui/macosx/VideoEffects.m:145
+#: modules/gui/macosx/MainWindow.m:183 modules/gui/macosx/VideoEffects.m:145
 #: modules/gui/macosx/VideoEffects.m:167 modules/video_filter/marq.c:157
 #: modules/video_filter/rss.c:200 modules/gui/qt4/ui/sprefs_subtitles.h:274
 #: modules/gui/qt4/ui/video_effects.h:1362
@@ -4173,7 +4173,7 @@ msgstr "Dĺžka veľkého skoku, v sekundách."
 
 #: src/libvlc-module.c:1409 modules/control/hotkeys.c:183
 #: modules/gui/qt4/components/controller.hpp:118
-#: modules/gui/qt4/components/controller.hpp:130 modules/gui/qt4/menus.cpp:912
+#: modules/gui/qt4/components/controller.hpp:130 modules/gui/qt4/menus.cpp:914
 #: modules/gui/skins2/commands/cmd_quit.cpp:44
 msgid "Quit"
 msgstr "Koniec"
@@ -4293,7 +4293,7 @@ msgstr "Vyberte si klávesu pre zníženie hlasitosti zvuku."
 #: src/libvlc-module.c:1435 modules/access/v4l2/video.c:189
 #: modules/gui/macosx/MainMenu.m:295 modules/gui/macosx/MainMenu.m:367
 #: modules/gui/macosx/MainMenu.m:376 modules/gui/macosx/MainMenu.m:1215
-#: modules/gui/macosx/MainWindow.m:156 modules/gui/qt4/menus.cpp:573
+#: modules/gui/macosx/MainWindow.m:181 modules/gui/qt4/menus.cpp:573
 msgid "Mute"
 msgstr "Stlmiť"
 
@@ -4994,8 +4994,8 @@ msgstr ""
 msgid "Install"
 msgstr "Nainštalovať"
 
-#: src/playlist/engine.c:230 src/playlist/loadsave.c:152 lib/media_list.c:254
-#: modules/gui/macosx/MainWindow.m:372
+#: src/playlist/engine.c:243 src/playlist/loadsave.c:152 lib/media_list.c:254
+#: modules/gui/macosx/MainWindow.m:397
 #: modules/gui/qt4/components/playlist/selector.cpp:195
 msgid "Media Library"
 msgstr "Knižnica s médiami"
@@ -5859,7 +5859,7 @@ msgstr "BluRay"
 msgid "Blu-Ray Disc support (libbluray)"
 msgstr "Podpora diskov Blu-Ray (libbluray)"
 
-#: modules/access/bluray.c:221
+#: modules/access/bluray.c:225
 msgid ""
 "This Blu-Ray Disc needs a library for AACS decoding, and your system does "
 "not have it."
@@ -5867,38 +5867,38 @@ msgstr ""
 "Tento disk Blu-Ray vyžaduje knižnicu pre dekódovanie AACS, ktorá nie je "
 "prítomná vo vašom systéme."
 
-#: modules/access/bluray.c:230
+#: modules/access/bluray.c:234
 msgid "BluRay Disc is corrupted."
 msgstr "Disk BluRay je poškodený."
 
-#: modules/access/bluray.c:233
+#: modules/access/bluray.c:237
 msgid "Missing AACS configuration file!"
 msgstr "Konfiguračný súbor AACS chýba!"
 
-#: modules/access/bluray.c:236
+#: modules/access/bluray.c:240
 msgid "No valid processing key found in AACS config file."
 msgstr ""
 "V konfiguračnom súbore AACS sa nenašiel žiadny platný kľúč pre spracovanie."
 
-#: modules/access/bluray.c:239
+#: modules/access/bluray.c:243
 msgid "No valid host certificate found in AACS config file."
 msgstr ""
 "V konfiguračnom súbore AACS sa nenašiel žiadny platný certifikát hostiteľa."
 
-#: modules/access/bluray.c:242
+#: modules/access/bluray.c:246
 msgid "AACS Host certificate revoked."
 msgstr "Certifikát hostiteľa AACS bol odvolaný."
 
-#: modules/access/bluray.c:245
+#: modules/access/bluray.c:249
 msgid "AACS MMC failed."
 msgstr "AACS MMC zlyhalo."
 
-#: modules/access/bluray.c:251
+#: modules/access/bluray.c:255
 msgid "Your system AACS decoding library does not work. Missing keys?"
 msgstr ""
 "Vaša systémová knižnica pre dekódovanie AACS nie je funkčná. Chýbajúce kľúče?"
 
-#: modules/access/bluray.c:261
+#: modules/access/bluray.c:265
 msgid ""
 "This Blu-Ray Disc needs a library for BD+ decoding, and your system does not "
 "have it."
@@ -5906,13 +5906,13 @@ msgstr ""
 "Tento Blu-Ray disk vyžaduje knižnicu pre dekódovanie BD+, ktorá nie je "
 "prítomná vo vašom systéme."
 
-#: modules/access/bluray.c:266
+#: modules/access/bluray.c:270
 msgid "Your system BD+ decoding library does not work. Missing configuration?"
 msgstr ""
 "Vaša systémová knižnica pre dekódovanie BD+ nie je funkčná. Nesprávna "
 "konfigurácia?"
 
-#: modules/access/bluray.c:322
+#: modules/access/bluray.c:326
 msgid "Blu-Ray error"
 msgstr "Chyba Blu-Ray"
 
@@ -6342,7 +6342,7 @@ msgid "DirectShow input"
 msgstr "Vstup DirectShow"
 
 #: modules/access/dshow/dshow.cpp:232 modules/access/dshow/dshow.cpp:237
-#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:136
+#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:140
 #: modules/audio_output/waveout.c:99 modules/video_output/msw/directx.c:109
 msgid "Refresh list"
 msgstr "Obnoviť zoznam"
@@ -7875,7 +7875,7 @@ msgid "Bitmask that will get used by the audio part of the card."
 msgstr "Bitová maska, ktorú bude používať zvuková časť karty."
 
 #: modules/access/pvr.c:103 modules/access/vcdx/info.c:69
-#: modules/gui/macosx/MainWindow.m:155 modules/gui/qt4/dialogs/toolbar.cpp:362
+#: modules/gui/macosx/MainWindow.m:180 modules/gui/qt4/dialogs/toolbar.cpp:362
 #: modules/stream_out/raop.c:150 modules/gui/qt4/ui/sprefs_audio.h:431
 msgid "Volume"
 msgstr "Hlasitosť"
@@ -8822,7 +8822,7 @@ msgid "NTSC M South Korea"
 msgstr "NTSC M - Južná Kórea"
 
 #: modules/access/v4l2/video.c:283 modules/audio_output/alsa.c:74
-#: modules/audio_output/directx.c:445 modules/audio_output/kai.c:222
+#: modules/audio_output/directx.c:450 modules/audio_output/kai.c:222
 #: modules/audio_output/oss.c:214 modules/audio_output/portaudio.c:392
 #: modules/audio_output/waveout.c:428
 msgid "Mono"
@@ -9948,19 +9948,19 @@ msgstr "Surround 5.1"
 msgid "ALSA audio output"
 msgstr "Zvukový výstup ALSA"
 
-#: modules/audio_output/alsa.c:158 modules/audio_output/auhal.c:129
-#: modules/audio_output/auhal.c:978 modules/audio_output/directx.c:330
+#: modules/audio_output/alsa.c:154 modules/audio_output/auhal.c:129
+#: modules/audio_output/auhal.c:978 modules/audio_output/directx.c:335
 #: modules/audio_output/kai.c:215 modules/audio_output/oss.c:121
 #: modules/audio_output/portaudio.c:386 modules/audio_output/waveout.c:358
 #: modules/gui/macosx/MainMenu.m:300 modules/gui/macosx/MainMenu.m:301
 msgid "Audio Device"
 msgstr "Zvukové zariadenie"
 
-#: modules/audio_output/alsa.c:352 modules/audio_output/auhal.c:249
+#: modules/audio_output/alsa.c:343 modules/audio_output/auhal.c:249
 msgid "Audio output failed"
 msgstr "Nesprávny výstup zvuku"
 
-#: modules/audio_output/alsa.c:353
+#: modules/audio_output/alsa.c:344
 #, c-format
 msgid ""
 "The audio device \"%s\" could not be used:\n"
@@ -10021,19 +10021,19 @@ msgstr ""
 msgid "%s (Encoded Output)"
 msgstr "%s (kódovaný výstup)"
 
-#: modules/audio_output/directx.c:118 modules/audio_output/portaudio.c:107
+#: modules/audio_output/directx.c:122 modules/audio_output/portaudio.c:107
 msgid "Output device"
 msgstr "Výstupné zariadenie"
 
-#: modules/audio_output/directx.c:119
+#: modules/audio_output/directx.c:123
 msgid "Select your audio output device"
 msgstr "Vyberte vaše výstupné zvukové zariadenie"
 
-#: modules/audio_output/directx.c:121
+#: modules/audio_output/directx.c:125
 msgid "Speaker configuration"
 msgstr "Konfigurácia reproduktorov"
 
-#: modules/audio_output/directx.c:122
+#: modules/audio_output/directx.c:126
 msgid ""
 "Select speaker configuration you want to use. This option doesn't upmix! So "
 "NO e.g. Stereo -> 5.1 conversion."
@@ -10042,20 +10042,20 @@ msgstr ""
 "nespôsobuje upmixovanie. Takže napríklad nie je možné prekonvertovať stereo-"
 "zvuk do formátu 5.1."
 
-#: modules/audio_output/directx.c:126
+#: modules/audio_output/directx.c:130
 msgid "DirectX audio output"
 msgstr "Zvukový výstup DirectX"
 
-#: modules/audio_output/directx.c:385 modules/audio_output/portaudio.c:419
+#: modules/audio_output/directx.c:390 modules/audio_output/portaudio.c:419
 msgid "3 Front 2 Rear"
 msgstr "3 vpredu, 2 vzadu"
 
-#: modules/audio_output/directx.c:408 modules/audio_output/oss.c:170
+#: modules/audio_output/directx.c:413 modules/audio_output/oss.c:170
 #: modules/audio_output/portaudio.c:411 modules/audio_output/waveout.c:396
 msgid "2 Front 2 Rear"
 msgstr "2 reproduktory vpredu, 2 vzadu"
 
-#: modules/audio_output/directx.c:532 modules/audio_output/oss.c:238
+#: modules/audio_output/directx.c:537 modules/audio_output/oss.c:238
 #: modules/audio_output/waveout.c:446
 msgid "A/52 over S/PDIF"
 msgstr "A/52 cez výstup S/PDIF"
@@ -11200,43 +11200,43 @@ msgid "Outline"
 msgstr "Podčiarknuté"
 
 #: modules/codec/kate.c:210 modules/gui/fbosd.c:172
-#: modules/text_renderer/freetype.c:167 modules/text_renderer/quartztext.c:108
+#: modules/text_renderer/freetype.c:176 modules/text_renderer/quartztext.c:108
 #: modules/text_renderer/win32text.c:89 modules/video_filter/marq.c:59
 #: modules/video_filter/rss.c:71
 msgid "Black"
 msgstr "Čierna"
 
 #: modules/codec/kate.c:210 modules/gui/fbosd.c:173
-#: modules/text_renderer/freetype.c:167 modules/text_renderer/quartztext.c:108
+#: modules/text_renderer/freetype.c:176 modules/text_renderer/quartztext.c:108
 #: modules/text_renderer/win32text.c:89 modules/video_filter/marq.c:59
 #: modules/video_filter/rss.c:72
 msgid "Gray"
 msgstr "Šedá"
 
 #: modules/codec/kate.c:210 modules/gui/fbosd.c:173
-#: modules/text_renderer/freetype.c:167 modules/text_renderer/quartztext.c:108
+#: modules/text_renderer/freetype.c:176 modules/text_renderer/quartztext.c:108
 #: modules/text_renderer/win32text.c:89 modules/video_filter/marq.c:60
 #: modules/video_filter/rss.c:72
 msgid "Silver"
 msgstr "Strieborná"
 
 #: modules/codec/kate.c:210 modules/gui/fbosd.c:173
-#: modules/text_renderer/freetype.c:167 modules/text_renderer/quartztext.c:108
+#: modules/text_renderer/freetype.c:176 modules/text_renderer/quartztext.c:108
 #: modules/text_renderer/win32text.c:89 modules/video_filter/ball.c:120
 #: modules/video_filter/marq.c:60 modules/video_filter/rss.c:72
 msgid "White"
 msgstr "Biela"
 
 #: modules/codec/kate.c:210 modules/gui/fbosd.c:173
-#: modules/text_renderer/freetype.c:167 modules/text_renderer/quartztext.c:108
+#: modules/text_renderer/freetype.c:176 modules/text_renderer/quartztext.c:108
 #: modules/text_renderer/win32text.c:89 modules/video_filter/marq.c:60
 #: modules/video_filter/rss.c:72
 msgid "Maroon"
 msgstr "Tmavohnedá"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:173
-#: modules/gui/macosx/controls.m:190 modules/gui/macosx/MainMenu.m:333
-#: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
+#: modules/gui/macosx/controls.m:192 modules/gui/macosx/MainMenu.m:333
+#: modules/text_renderer/freetype.c:177 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/ball.c:119
 #: modules/video_filter/colorthres.c:64 modules/video_filter/marq.c:60
 #: modules/video_filter/rss.c:72
@@ -11244,66 +11244,66 @@ msgid "Red"
 msgstr "Červená"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
-#: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
+#: modules/text_renderer/freetype.c:177 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/colorthres.c:64
 #: modules/video_filter/marq.c:61 modules/video_filter/rss.c:73
 msgid "Fuchsia"
 msgstr "Staro-ružová"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
-#: modules/gui/macosx/controls.m:194 modules/gui/macosx/MainMenu.m:335
-#: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
+#: modules/gui/macosx/controls.m:196 modules/gui/macosx/MainMenu.m:335
+#: modules/text_renderer/freetype.c:177 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/colorthres.c:64
 #: modules/video_filter/marq.c:61 modules/video_filter/rss.c:73
 msgid "Yellow"
 msgstr "Žltá"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
-#: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
+#: modules/text_renderer/freetype.c:177 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/marq.c:61
 #: modules/video_filter/rss.c:73
 msgid "Olive"
 msgstr "Olivovo-zelená"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:174
-#: modules/gui/macosx/controls.m:192 modules/gui/macosx/MainMenu.m:334
-#: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
+#: modules/gui/macosx/controls.m:194 modules/gui/macosx/MainMenu.m:334
+#: modules/text_renderer/freetype.c:177 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/ball.c:119
 #: modules/video_filter/marq.c:61 modules/video_filter/rss.c:73
 msgid "Green"
 msgstr "Zelená"
 
 #: modules/codec/kate.c:211 modules/gui/fbosd.c:175
-#: modules/text_renderer/freetype.c:168 modules/text_renderer/quartztext.c:109
+#: modules/text_renderer/freetype.c:177 modules/text_renderer/quartztext.c:109
 #: modules/text_renderer/win32text.c:90 modules/video_filter/marq.c:62
 #: modules/video_filter/rss.c:74
 msgid "Teal"
 msgstr "Čajovníková zelená"
 
 #: modules/codec/kate.c:212 modules/gui/fbosd.c:175
-#: modules/text_renderer/freetype.c:169 modules/text_renderer/quartztext.c:110
+#: modules/text_renderer/freetype.c:178 modules/text_renderer/quartztext.c:110
 #: modules/text_renderer/win32text.c:91 modules/video_filter/colorthres.c:64
 #: modules/video_filter/marq.c:62 modules/video_filter/rss.c:74
 msgid "Lime"
 msgstr "Citrusová"
 
 #: modules/codec/kate.c:212 modules/gui/fbosd.c:175
-#: modules/text_renderer/freetype.c:169 modules/text_renderer/quartztext.c:110
+#: modules/text_renderer/freetype.c:178 modules/text_renderer/quartztext.c:110
 #: modules/text_renderer/win32text.c:91 modules/video_filter/marq.c:62
 #: modules/video_filter/rss.c:74
 msgid "Purple"
 msgstr "Ružová"
 
 #: modules/codec/kate.c:212 modules/gui/fbosd.c:175
-#: modules/text_renderer/freetype.c:169 modules/text_renderer/quartztext.c:110
+#: modules/text_renderer/freetype.c:178 modules/text_renderer/quartztext.c:110
 #: modules/text_renderer/win32text.c:91 modules/video_filter/marq.c:62
 #: modules/video_filter/rss.c:74
 msgid "Navy"
 msgstr "Námornícka modrá"
 
 #: modules/codec/kate.c:212 modules/gui/fbosd.c:175
-#: modules/gui/macosx/controls.m:196 modules/gui/macosx/MainMenu.m:336
-#: modules/text_renderer/freetype.c:169 modules/text_renderer/quartztext.c:110
+#: modules/gui/macosx/controls.m:198 modules/gui/macosx/MainMenu.m:336
+#: modules/text_renderer/freetype.c:178 modules/text_renderer/quartztext.c:110
 #: modules/text_renderer/win32text.c:91 modules/video_filter/ball.c:120
 #: modules/video_filter/colorthres.c:64 modules/video_filter/marq.c:62
 #: modules/video_filter/rss.c:74
@@ -11311,7 +11311,7 @@ msgid "Blue"
 msgstr "Modrá"
 
 #: modules/codec/kate.c:212 modules/gui/fbosd.c:176
-#: modules/text_renderer/freetype.c:169 modules/text_renderer/quartztext.c:110
+#: modules/text_renderer/freetype.c:178 modules/text_renderer/quartztext.c:110
 #: modules/text_renderer/win32text.c:91 modules/video_filter/colorthres.c:64
 #: modules/video_filter/marq.c:63 modules/video_filter/rss.c:75
 msgid "Aqua"
@@ -11465,7 +11465,7 @@ msgstr "Titulky (pokročilé)"
 msgid "Subtitle renderers using libass"
 msgstr "Vykresľovače titulkov s použitím libass"
 
-#: modules/codec/libass.c:220 modules/text_renderer/freetype.c:461
+#: modules/codec/libass.c:220 modules/text_renderer/freetype.c:470
 msgid "Building font cache"
 msgstr "Vytváranie vyrovnávacej pamäti pre písmo"
 
@@ -13322,8 +13322,8 @@ msgstr "DBus"
 msgid "D-Bus control interface"
 msgstr "Ovládacie rozhranie D-Bus"
 
-#: modules/control/dbus/dbus_root.c:75 modules/gui/macosx/MainWindow.m:310
-#: modules/gui/macosx/MainWindow.m:1349 modules/gui/qt4/dialogs/help.cpp:99
+#: modules/control/dbus/dbus_root.c:75 modules/gui/macosx/MainWindow.m:335
+#: modules/gui/macosx/MainWindow.m:1374 modules/gui/qt4/dialogs/help.cpp:99
 #: modules/gui/qt4/main_interface.cpp:989
 #: modules/gui/qt4/main_interface.cpp:993
 #: modules/gui/qt4/main_interface.cpp:1032
@@ -13331,7 +13331,7 @@ msgstr "Ovládacie rozhranie D-Bus"
 #: modules/gui/qt4/main_interface.cpp:1134
 #: modules/gui/qt4/main_interface.cpp:1151
 #: modules/gui/qt4/main_interface.cpp:1158
-#: modules/gui/qt4/main_interface.cpp:1181 modules/notify/growl.m:285
+#: modules/gui/qt4/main_interface.cpp:1181 modules/notify/growl.m:274
 #: modules/video_output/xcb/window.c:313
 msgid "VLC media player"
 msgstr "VLC media player"
@@ -13505,7 +13505,7 @@ msgstr "Nahrávanie"
 msgid "Recording done"
 msgstr "Nahrávanie ukončené"
 
-#: modules/control/hotkeys.c:1030 modules/gui/macosx/CoreInteraction.m:478
+#: modules/control/hotkeys.c:1030
 #, c-format
 msgid "Volume %d%%"
 msgstr "Hlasitosť %d%%"
@@ -13658,7 +13658,7 @@ msgstr "Otváranie"
 
 #: modules/control/rc.c:73 modules/gui/macosx/MainMenu.m:850
 #: modules/gui/macosx/MainMenu.m:851 modules/gui/macosx/MainMenu.m:852
-#: modules/gui/macosx/MainWindow.m:1430 modules/gui/macosx/MainWindow.m:1435
+#: modules/gui/macosx/MainWindow.m:1455 modules/gui/macosx/MainWindow.m:1460
 #: modules/gui/qt4/menus.cpp:796 modules/notify/xosd.c:238
 msgid "Pause"
 msgstr "Pozastaviť"
@@ -14427,7 +14427,7 @@ msgid "Transcript"
 msgstr "Prepis (opis)"
 
 #: modules/demux/kate_categories.c:49 modules/demux/kate_categories.c:56
-#: modules/demux/mp4/mp4.c:981
+#: modules/demux/mp4/mp4.c:985
 msgid "Lyrics"
 msgstr "Texty"
 
@@ -15023,81 +15023,81 @@ msgstr "Demuxér streamov MP4"
 msgid "MP4"
 msgstr "MP4"
 
-#: modules/demux/mp4/mp4.c:966
+#: modules/demux/mp4/mp4.c:970
 msgid "Writer"
 msgstr "Autor"
 
-#: modules/demux/mp4/mp4.c:967
+#: modules/demux/mp4/mp4.c:971
 msgid "Composer"
 msgstr "Skladateľ"
 
-#: modules/demux/mp4/mp4.c:968
+#: modules/demux/mp4/mp4.c:972
 msgid "Producer"
 msgstr "Producent"
 
-#: modules/demux/mp4/mp4.c:969 modules/gui/macosx/playlistinfo.m:386
+#: modules/demux/mp4/mp4.c:973 modules/gui/macosx/playlistinfo.m:386
 #: modules/gui/qt4/components/controller.hpp:119
 #: modules/gui/qt4/components/controller.hpp:131
 msgid "Information"
 msgstr "Informácia"
 
-#: modules/demux/mp4/mp4.c:970
+#: modules/demux/mp4/mp4.c:974
 msgid "Director"
 msgstr "Režisér"
 
-#: modules/demux/mp4/mp4.c:971
+#: modules/demux/mp4/mp4.c:975
 msgid "Disclaimer"
 msgstr "Odvolanie"
 
-#: modules/demux/mp4/mp4.c:972
+#: modules/demux/mp4/mp4.c:976
 msgid "Requirements"
 msgstr "Požiadavky"
 
-#: modules/demux/mp4/mp4.c:973
+#: modules/demux/mp4/mp4.c:977
 msgid "Original Format"
 msgstr "Originálny formát"
 
-#: modules/demux/mp4/mp4.c:974
+#: modules/demux/mp4/mp4.c:978
 msgid "Display Source As"
 msgstr "Zobraziť zdroj ako"
 
-#: modules/demux/mp4/mp4.c:975
+#: modules/demux/mp4/mp4.c:979
 msgid "Host Computer"
 msgstr "Hostiteľský počítač"
 
-#: modules/demux/mp4/mp4.c:976
+#: modules/demux/mp4/mp4.c:980
 msgid "Performers"
 msgstr "Účinkujúci"
 
-#: modules/demux/mp4/mp4.c:977
+#: modules/demux/mp4/mp4.c:981
 msgid "Original Performer"
 msgstr "Pôvodný účinkujúci"
 
-#: modules/demux/mp4/mp4.c:978
+#: modules/demux/mp4/mp4.c:982
 msgid "Providers Source Content"
 msgstr "Zdrojový obsah poskytovateľa"
 
-#: modules/demux/mp4/mp4.c:979
+#: modules/demux/mp4/mp4.c:983
 msgid "Warning"
 msgstr "Upozornenie"
 
-#: modules/demux/mp4/mp4.c:980
+#: modules/demux/mp4/mp4.c:984
 msgid "Software"
 msgstr "Software"
 
-#: modules/demux/mp4/mp4.c:982
+#: modules/demux/mp4/mp4.c:986
 msgid "Make"
 msgstr "Vytvoriť"
 
-#: modules/demux/mp4/mp4.c:983
+#: modules/demux/mp4/mp4.c:987
 msgid "Model"
 msgstr "Model"
 
-#: modules/demux/mp4/mp4.c:984
+#: modules/demux/mp4/mp4.c:988
 msgid "Product"
 msgstr "Produkt"
 
-#: modules/demux/mp4/mp4.c:985
+#: modules/demux/mp4/mp4.c:989
 msgid "Grouping"
 msgstr "Zoskupenie"
 
@@ -15896,7 +15896,7 @@ msgstr ""
 "pre prekrývanie."
 
 #: modules/gui/fbosd.c:204 modules/gui/macosx/simple_prefs.m:291
-#: modules/notify/xosd.c:81 modules/text_renderer/freetype.c:116
+#: modules/notify/xosd.c:81 modules/text_renderer/freetype.c:125
 #: modules/text_renderer/quartztext.c:90 modules/text_renderer/win32text.c:59
 #: modules/video_filter/marq.c:163 modules/video_filter/rss.c:206
 #: modules/gui/qt4/ui/sprefs_subtitles.h:279
@@ -15934,7 +15934,7 @@ msgstr "Licencia"
 msgid "VLC media player Help"
 msgstr "Pomocník programu VLC media player"
 
-#: modules/gui/macosx/about.m:213 modules/gui/macosx/controls.m:188
+#: modules/gui/macosx/about.m:213 modules/gui/macosx/controls.m:190
 #: modules/gui/macosx/MainMenu.m:332
 msgid "Index"
 msgstr "Index"
@@ -16496,8 +16496,8 @@ msgstr "Rýchlosť prehrávania"
 
 #: modules/gui/macosx/MainMenu.m:273 modules/gui/macosx/simple_prefs.m:627
 #: modules/gui/qt4/components/simple_preferences.cpp:497
-#: modules/misc/gnutls.c:83 modules/text_renderer/freetype.c:156
-#: modules/text_renderer/freetype.c:175 modules/text_renderer/quartztext.c:114
+#: modules/misc/gnutls.c:83 modules/text_renderer/freetype.c:165
+#: modules/text_renderer/freetype.c:184 modules/text_renderer/quartztext.c:114
 #: modules/text_renderer/win32text.c:82
 msgid "Normal"
 msgstr "Normálne"
@@ -16611,7 +16611,7 @@ msgid "Bring All to Front"
 msgstr "Preniesť všetky do popredia"
 
 #: modules/gui/macosx/MainMenu.m:353 modules/gui/qt4/dialogs/help.cpp:54
-#: modules/gui/qt4/menus.cpp:908
+#: modules/gui/qt4/menus.cpp:910
 msgid "Help"
 msgstr "Pomocník"
 
@@ -16647,64 +16647,64 @@ msgstr "Zvýšiť hlasitosť"
 msgid "Volume Down"
 msgstr "Znížiť hlasitosť"
 
-#: modules/gui/macosx/MainWindow.m:143
+#: modules/gui/macosx/MainWindow.m:168
 msgid "Backward"
 msgstr "Dozadu"
 
-#: modules/gui/macosx/MainWindow.m:145
+#: modules/gui/macosx/MainWindow.m:170
 msgid "Forward"
 msgstr "Dopredu"
 
-#: modules/gui/macosx/MainWindow.m:148
+#: modules/gui/macosx/MainWindow.m:173
 msgid "Show/Hide Playlist"
 msgstr "Zobraziť/skryť playlist"
 
-#: modules/gui/macosx/MainWindow.m:149 modules/gui/qt4/dialogs/vlm.cpp:560
+#: modules/gui/macosx/MainWindow.m:174 modules/gui/qt4/dialogs/vlm.cpp:560
 msgid "Repeat"
 msgstr "Zopakovať"
 
-#: modules/gui/macosx/MainWindow.m:150
+#: modules/gui/macosx/MainWindow.m:175
 msgid "Shuffle"
 msgstr "Náhodne"
 
-#: modules/gui/macosx/MainWindow.m:151 modules/gui/macosx/simple_prefs.m:226
+#: modules/gui/macosx/MainWindow.m:176 modules/gui/macosx/simple_prefs.m:226
 #: modules/gui/qt4/ui/sprefs_audio.h:440
 msgid "Effects"
 msgstr "Efekty"
 
-#: modules/gui/macosx/MainWindow.m:152
+#: modules/gui/macosx/MainWindow.m:177
 msgid "Toggle Fullscreen mode"
 msgstr "Prepnúť na celoobrazovkový režim"
 
-#: modules/gui/macosx/MainWindow.m:157
+#: modules/gui/macosx/MainWindow.m:182
 msgid "Full Volume"
 msgstr "Plná hlasitosť"
 
-#: modules/gui/macosx/MainWindow.m:160
+#: modules/gui/macosx/MainWindow.m:185
 msgid "Open media..."
 msgstr "Otvoriť médium..."
 
-#: modules/gui/macosx/MainWindow.m:161
+#: modules/gui/macosx/MainWindow.m:186
 msgid "Drop media here"
 msgstr "Ťahajte médium sem"
 
-#: modules/gui/macosx/MainWindow.m:369
+#: modules/gui/macosx/MainWindow.m:394
 msgid "LIBRARY"
 msgstr "KNIŽNICA"
 
-#: modules/gui/macosx/MainWindow.m:374
+#: modules/gui/macosx/MainWindow.m:399
 msgid "MY COMPUTER"
 msgstr "TENTO POČÍTAČ"
 
-#: modules/gui/macosx/MainWindow.m:375
+#: modules/gui/macosx/MainWindow.m:400
 msgid "DEVICES"
 msgstr "ZARIADENIA"
 
-#: modules/gui/macosx/MainWindow.m:376
+#: modules/gui/macosx/MainWindow.m:401
 msgid "LOCAL NETWORK"
 msgstr "LOKÁLNA SIEŤ"
 
-#: modules/gui/macosx/MainWindow.m:377
+#: modules/gui/macosx/MainWindow.m:402
 msgid "INTERNET"
 msgstr "INTERNET"
 
@@ -17238,7 +17238,7 @@ msgstr "HTML Playlist"
 msgid "Save Playlist"
 msgstr "Uložiť playlist"
 
-#: modules/gui/macosx/playlist.m:1179
+#: modules/gui/macosx/playlist.m:1193
 msgid "Meta-information"
 msgstr "Meta-informácia"
 
@@ -19986,8 +19986,8 @@ msgstr ""
 "Nemožno zapisovať do súboru %1:\n"
 "%2."
 
-#: modules/gui/qt4/dialogs/open.cpp:79 modules/gui/qt4/menus.cpp:892
-#: modules/gui/qt4/menus.cpp:1133
+#: modules/gui/qt4/dialogs/open.cpp:79 modules/gui/qt4/menus.cpp:894
+#: modules/gui/qt4/menus.cpp:1135
 msgid "Open Media"
 msgstr "Otvoriť médium"
 
@@ -20407,11 +20407,11 @@ msgstr "&Médium"
 msgid "P&layback"
 msgstr "P&rehrávanie"
 
-#: modules/gui/qt4/menus.cpp:316 modules/gui/qt4/menus.cpp:1016
+#: modules/gui/qt4/menus.cpp:316 modules/gui/qt4/menus.cpp:1018
 msgid "&Audio"
 msgstr "&Zvuk"
 
-#: modules/gui/qt4/menus.cpp:317 modules/gui/qt4/menus.cpp:1023
+#: modules/gui/qt4/menus.cpp:317 modules/gui/qt4/menus.cpp:1025
 msgid "&Video"
 msgstr "&Video"
 
@@ -20419,7 +20419,7 @@ msgstr "&Video"
 msgid "&Tools"
 msgstr "&Nástroje"
 
-#: modules/gui/qt4/menus.cpp:322 modules/gui/qt4/menus.cpp:1072
+#: modules/gui/qt4/menus.cpp:322 modules/gui/qt4/menus.cpp:1074
 msgid "V&iew"
 msgstr "Zo&braziť"
 
@@ -20431,7 +20431,7 @@ msgstr "&Pomocník"
 msgid "Open &File..."
 msgstr "Otvoriť &súbor..."
 
-#: modules/gui/qt4/menus.cpp:341 modules/gui/qt4/menus.cpp:897
+#: modules/gui/qt4/menus.cpp:341 modules/gui/qt4/menus.cpp:899
 msgid "Open &Disc..."
 msgstr "Otvoriť &disk..."
 
@@ -20439,7 +20439,7 @@ msgstr "Otvoriť &disk..."
 msgid "Open &Network Stream..."
 msgstr "Otvoriť stream v &sieti..."
 
-#: modules/gui/qt4/menus.cpp:345 modules/gui/qt4/menus.cpp:901
+#: modules/gui/qt4/menus.cpp:345 modules/gui/qt4/menus.cpp:903
 msgid "Open &Capture Device..."
 msgstr "Pripojiť &snímacie zariadenie..."
 
@@ -20471,7 +20471,7 @@ msgstr "Ukončiť na konci playlistu"
 msgid "Close to systray"
 msgstr "Zatvoriť do systémovej lišty"
 
-#: modules/gui/qt4/menus.cpp:388 modules/gui/qt4/menus.cpp:1135
+#: modules/gui/qt4/menus.cpp:388 modules/gui/qt4/menus.cpp:1137
 msgid "&Quit"
 msgstr "&Koniec"
 
@@ -20675,39 +20675,44 @@ msgstr "Preskočiť &dopredu"
 msgid "Jump Bac&kward"
 msgstr "Preskočiť do&zadu"
 
-#: modules/gui/qt4/menus.cpp:893
+#: modules/gui/qt4/menus.cpp:886
+#, fuzzy
+msgid "Ctrl+T"
+msgstr "Ctrl+L"
+
+#: modules/gui/qt4/menus.cpp:895
 msgid "&Open File..."
 msgstr "&Otvoriť súbor..."
 
-#: modules/gui/qt4/menus.cpp:899
+#: modules/gui/qt4/menus.cpp:901
 msgid "Open &Network..."
 msgstr "Otvoriť súbor v &sieti..."
 
-#: modules/gui/qt4/menus.cpp:1002
+#: modules/gui/qt4/menus.cpp:1004
 msgid "Leave Fullscreen"
 msgstr "Vypnúť celoobrazovkový režim"
 
-#: modules/gui/qt4/menus.cpp:1028
+#: modules/gui/qt4/menus.cpp:1030
 msgid "Subti&tle"
 msgstr "Ti&tulky"
 
-#: modules/gui/qt4/menus.cpp:1034
+#: modules/gui/qt4/menus.cpp:1036
 msgid "&Playback"
 msgstr "P&rehrávanie"
 
-#: modules/gui/qt4/menus.cpp:1044
+#: modules/gui/qt4/menus.cpp:1046
 msgid "Tools"
 msgstr "&Nástroje"
 
-#: modules/gui/qt4/menus.cpp:1116
+#: modules/gui/qt4/menus.cpp:1118
 msgid "Hide VLC media player in taskbar"
 msgstr "Skryť VLC media player v paneli úloh"
 
-#: modules/gui/qt4/menus.cpp:1122
+#: modules/gui/qt4/menus.cpp:1124
 msgid "Show VLC media player"
 msgstr "Zobraziť VLC media player"
 
-#: modules/gui/qt4/menus.cpp:1546 modules/gui/qt4/ui/messages_panel.h:143
+#: modules/gui/qt4/menus.cpp:1548 modules/gui/qt4/ui/messages_panel.h:143
 msgid "&Clear"
 msgstr "Vyčis&tiť"
 
@@ -21905,11 +21910,11 @@ msgstr "Muxér pre formát WAV"
 msgid "Growl Notification Plugin"
 msgstr "Notifikačný prídavný modul Growl"
 
-#: modules/notify/growl.m:286
+#: modules/notify/growl.m:275
 msgid "New input playing"
 msgstr "Prehrávanie nového vstupu"
 
-#: modules/notify/growl.m:309
+#: modules/notify/growl.m:298
 msgid "Now playing"
 msgstr "Práve sa prehráva"
 
@@ -23370,19 +23375,19 @@ msgstr "Prekódovať výstup streamu"
 msgid "Overlays/Subtitles"
 msgstr "Prekrývanie/Titulky"
 
-#: modules/text_renderer/freetype.c:118
+#: modules/text_renderer/freetype.c:127
 msgid "Font family for the font you want to use"
 msgstr "Rodina písiem pre písmo, ktoré chcete použiť"
 
-#: modules/text_renderer/freetype.c:119
+#: modules/text_renderer/freetype.c:128
 msgid "Font file for the font you want to use"
 msgstr "Súbor s písmom pre písmo, ktoré chcete použiť"
 
-#: modules/text_renderer/freetype.c:121 modules/text_renderer/win32text.c:61
+#: modules/text_renderer/freetype.c:130 modules/text_renderer/win32text.c:61
 msgid "Font size in pixels"
 msgstr "Veľkosť písma v pixeloch"
 
-#: modules/text_renderer/freetype.c:122 modules/text_renderer/win32text.c:62
+#: modules/text_renderer/freetype.c:131 modules/text_renderer/win32text.c:62
 msgid ""
 "This is the default size of the fonts that will be rendered on the video. If "
 "set to something different than 0 this option will override the relative "
@@ -23392,11 +23397,11 @@ msgstr ""
 "nastavíte hodnotu inú ako 0, toto nastavenie nebude rešpektovať relatívnu "
 "veľkosť písma."
 
-#: modules/text_renderer/freetype.c:126
+#: modules/text_renderer/freetype.c:135
 msgid "Text opacity"
 msgstr "Nepriehľadnosť textu"
 
-#: modules/text_renderer/freetype.c:127 modules/text_renderer/win32text.c:67
+#: modules/text_renderer/freetype.c:136 modules/text_renderer/win32text.c:67
 msgid ""
 "The opacity (inverse of transparency) of the text that will be rendered on "
 "the video. 0 = transparent, 255 = totally opaque. "
@@ -23404,12 +23409,12 @@ msgstr ""
 "Nepriehľadnosť (opak efektu priehľadnosti) textu, ktorý sa vykreslí vo "
 "vnútri videa. 0 = priehľadný text, 255 = úplne nepriehľadný text."
 
-#: modules/text_renderer/freetype.c:130 modules/text_renderer/quartztext.c:96
+#: modules/text_renderer/freetype.c:139 modules/text_renderer/quartztext.c:96
 #: modules/text_renderer/win32text.c:70
 msgid "Text default color"
 msgstr "Predvolená farba textu"
 
-#: modules/text_renderer/freetype.c:131 modules/text_renderer/quartztext.c:97
+#: modules/text_renderer/freetype.c:140 modules/text_renderer/quartztext.c:97
 #: modules/text_renderer/win32text.c:71
 msgid ""
 "The color of the text that will be rendered on the video. This must be an "
@@ -23423,12 +23428,12 @@ msgstr ""
 "#FF0000 = červená farba, #00FF00 = zelená farba, #FFFF00 = žltá farba "
 "(červená a zelená), #FFFFFF = biela farba."
 
-#: modules/text_renderer/freetype.c:135 modules/text_renderer/quartztext.c:92
+#: modules/text_renderer/freetype.c:144 modules/text_renderer/quartztext.c:92
 #: modules/text_renderer/win32text.c:75
 msgid "Relative font size"
 msgstr "Relatívna veľkosť písma"
 
-#: modules/text_renderer/freetype.c:136 modules/text_renderer/quartztext.c:93
+#: modules/text_renderer/freetype.c:145 modules/text_renderer/quartztext.c:93
 #: modules/text_renderer/win32text.c:76
 msgid ""
 "This is the relative default size of the fonts that will be rendered on the "
@@ -23438,73 +23443,73 @@ msgstr ""
 "nastavená absolútna veľkosť písma, na relatívnu veľkosť program neberie "
 "ohľad."
 
-#: modules/text_renderer/freetype.c:139
+#: modules/text_renderer/freetype.c:148
 msgid "Force bold"
 msgstr "Vynútiť si tučné"
 
-#: modules/text_renderer/freetype.c:141
+#: modules/text_renderer/freetype.c:150
 msgid "Background opacity"
 msgstr "Nepriehľadnosť pozadia"
 
-#: modules/text_renderer/freetype.c:142
+#: modules/text_renderer/freetype.c:151
 msgid "Background color"
 msgstr "Farba pozadia"
 
-#: modules/text_renderer/freetype.c:144
+#: modules/text_renderer/freetype.c:153
 msgid "Outline opacity"
 msgstr "Nepriehľadnosť kontúr"
 
-#: modules/text_renderer/freetype.c:145
+#: modules/text_renderer/freetype.c:154
 #: modules/gui/qt4/ui/sprefs_subtitles.h:283
 msgid "Outline color"
 msgstr "Farba kontúr"
 
-#: modules/text_renderer/freetype.c:146
+#: modules/text_renderer/freetype.c:155
 #: modules/gui/qt4/ui/sprefs_subtitles.h:282
 msgid "Outline thickness"
 msgstr "Hrúbka kontúry"
 
-#: modules/text_renderer/freetype.c:148
+#: modules/text_renderer/freetype.c:157
 msgid "Shadow opacity"
 msgstr "Nepriehľadnosť tieňa"
 
-#: modules/text_renderer/freetype.c:149
+#: modules/text_renderer/freetype.c:158
 msgid "Shadow color"
 msgstr "Farba tieňa"
 
-#: modules/text_renderer/freetype.c:150
+#: modules/text_renderer/freetype.c:159
 msgid "Shadow angle"
 msgstr "Uhol tieňa"
 
-#: modules/text_renderer/freetype.c:151
+#: modules/text_renderer/freetype.c:160
 msgid "Shadow distance"
 msgstr "Vzdialenosť tieňa"
 
-#: modules/text_renderer/freetype.c:156 modules/text_renderer/quartztext.c:114
+#: modules/text_renderer/freetype.c:165 modules/text_renderer/quartztext.c:114
 #: modules/text_renderer/win32text.c:82
 msgid "Smaller"
 msgstr "Menšie"
 
-#: modules/text_renderer/freetype.c:156 modules/text_renderer/quartztext.c:114
+#: modules/text_renderer/freetype.c:165 modules/text_renderer/quartztext.c:114
 #: modules/text_renderer/win32text.c:82
 msgid "Small"
 msgstr "Malé"
 
-#: modules/text_renderer/freetype.c:156 modules/text_renderer/quartztext.c:114
+#: modules/text_renderer/freetype.c:165 modules/text_renderer/quartztext.c:114
 #: modules/text_renderer/win32text.c:82
 msgid "Large"
 msgstr "Veľké"
 
-#: modules/text_renderer/freetype.c:156 modules/text_renderer/quartztext.c:114
+#: modules/text_renderer/freetype.c:165 modules/text_renderer/quartztext.c:114
 #: modules/text_renderer/win32text.c:82
 msgid "Larger"
 msgstr "Väčšie"
 
-#: modules/text_renderer/freetype.c:157
+#: modules/text_renderer/freetype.c:166
 msgid "Use YUVP renderer"
 msgstr "Použiť vykresľovanie YUVP"
 
-#: modules/text_renderer/freetype.c:158
+#: modules/text_renderer/freetype.c:167
 msgid ""
 "This renders the font using \"paletized YUV\". This option is only needed if "
 "you want to encode into DVB subtitles"
@@ -23513,23 +23518,23 @@ msgstr ""
 "YUV. Takéto vykresľovanie je však potrebné len v prípade, že chcete kódovať "
 "aj titulky v DVB-streame."
 
-#: modules/text_renderer/freetype.c:175
+#: modules/text_renderer/freetype.c:184
 msgid "Thin"
 msgstr "Tenká"
 
-#: modules/text_renderer/freetype.c:175
+#: modules/text_renderer/freetype.c:184
 msgid "Thick"
 msgstr "Hrubá"
 
-#: modules/text_renderer/freetype.c:179 modules/text_renderer/win32text.c:94
+#: modules/text_renderer/freetype.c:188 modules/text_renderer/win32text.c:94
 msgid "Text renderer"
 msgstr "Vykresľovač textov"
 
-#: modules/text_renderer/freetype.c:180
+#: modules/text_renderer/freetype.c:189
 msgid "Freetype2 font renderer"
 msgstr "Vykresľovač písma Freetype 2"
 
-#: modules/text_renderer/freetype.c:462
+#: modules/text_renderer/freetype.c:471
 msgid ""
 "Please wait while your font cache is rebuilt.\n"
 "This should take less than a few minutes."
@@ -28593,1025 +28598,1042 @@ msgstr "Opakovanie"
 msgid "Media Manager List"
 msgstr "Zoznam správcov médií"
 
-msgid "Side speakers"
-msgstr "Bočné reproduktory"
+#~ msgid "Side speakers"
+#~ msgstr "Bočné reproduktory"
 
-msgid "Center and subwoofer"
-msgstr "Stred a subwoofer"
+#~ msgid "Center and subwoofer"
+#~ msgstr "Stred a subwoofer"
 
-msgid "S/PDIF"
-msgstr "S/PDIF"
+#~ msgid "S/PDIF"
+#~ msgstr "S/PDIF"
 
-msgid "Dump"
-msgstr "Vypísať"
+#~ msgid "Dump"
+#~ msgstr "Vypísať"
 
-msgid "Probe DVB card for capabilities"
-msgstr "Skontrolovať možnosti karty DVB"
+#~ msgid "Probe DVB card for capabilities"
+#~ msgstr "Skontrolovať možnosti karty DVB"
 
-msgid ""
-"Some DVB cards do not like to be probed for their capabilities, you can "
-"disable this feature if you experience some trouble."
-msgstr ""
-"Niektoré karty DVB nepodporujú skúšku svojich schopností, preto môžete túto "
-"funkciu v prípade problémov zablokovať."
+#~ msgid ""
+#~ "Some DVB cards do not like to be probed for their capabilities, you can "
+#~ "disable this feature if you experience some trouble."
+#~ msgstr ""
+#~ "Niektoré karty DVB nepodporujú skúšku svojich schopností, preto môžete "
+#~ "túto funkciu v prípade problémov zablokovať."
 
-msgid "filename of config file in share/dvb/dvb-s"
-msgstr "názov súbor alebo konfigur. súboru v share/dvb/dvb-s"
+#~ msgid "filename of config file in share/dvb/dvb-s"
+#~ msgstr "názov súbor alebo konfigur. súboru v share/dvb/dvb-s"
 
-msgid "DVB input with v4l2 support"
-msgstr "Vstup DVB s podporou v4l2"
+#~ msgid "DVB input with v4l2 support"
+#~ msgstr "Vstup DVB s podporou v4l2"
 
-msgid "dbus"
-msgstr "dbus"
+#~ msgid "dbus"
+#~ msgstr "dbus"
 
-msgid "Ball color, one of \"red\", \"blue\" and \"green\"."
-msgstr "Farba guľôčky, jedna z hodnôt \"červená\", \"modrá\" a \"zelená\"."
+#~ msgid "Ball color, one of \"red\", \"blue\" and \"green\"."
+#~ msgstr "Farba guľôčky, jedna z hodnôt \"červená\", \"modrá\" a \"zelená\"."
 
-msgid ""
-"One of \"u8\", \"s8\", \"u16\", \"s16\", \"u16_le\", \"s16_le\", \"u16_be\", "
-"\"s16_be\", \"fixed32\", \"float32\" or \"spdif\""
-msgstr ""
-"Niektorý z formátov \"u8\", \"s8\", \"u16\", \"s16\", \"u16_le\", \"s16_le"
-"\", \"u16_be\", \"s16_be\", \"fixed32\", \"float32\" or \"spdif\""
+#~ msgid ""
+#~ "One of \"u8\", \"s8\", \"u16\", \"s16\", \"u16_le\", \"s16_le\", \"u16_be"
+#~ "\", \"s16_be\", \"fixed32\", \"float32\" or \"spdif\""
+#~ msgstr ""
+#~ "Niektorý z formátov \"u8\", \"s8\", \"u16\", \"s16\", \"u16_le\", \"s16_le"
+#~ "\", \"u16_be\", \"s16_be\", \"fixed32\", \"float32\" or \"spdif\""
 
-msgid ""
-"This defines the address, port and path the RTSP VOD server will listen on.\n"
-"Syntax is address:port/path. The default is to listen on all interfaces "
-"(address 0.0.0.0), on port 554, with no path.\n"
-"To listen only on the local interface, use \"localhost\" as address."
-msgstr ""
-"Tu môžete definovať adresu, port a cestu k RTSP VOD serveru, z ktorého "
-"chcete prijímať príkazy. \n"
-"Syntax je: adresa:port/cesta. V predvolenom nastavení program prijíma "
-"príkazy zo všetkých rozhraní (adresa je 0.0.0.0), na porte 554 a cesta nie "
-"je zadaná. \n"
-" Ak chcete prijímať príkazy len z lokálneho rozhrania, zadajte ako adresu "
-"príkaz \"localhost\".Ak chcete prijímať príkazy len z lokálneho rozhrania, "
-"do políčka s adresou zadajte slovo \"localhost\"."
+#~ msgid ""
+#~ "This defines the address, port and path the RTSP VOD server will listen "
+#~ "on.\n"
+#~ "Syntax is address:port/path. The default is to listen on all interfaces "
+#~ "(address 0.0.0.0), on port 554, with no path.\n"
+#~ "To listen only on the local interface, use \"localhost\" as address."
+#~ msgstr ""
+#~ "Tu môžete definovať adresu, port a cestu k RTSP VOD serveru, z ktorého "
+#~ "chcete prijímať príkazy. \n"
+#~ "Syntax je: adresa:port/cesta. V predvolenom nastavení program prijíma "
+#~ "príkazy zo všetkých rozhraní (adresa je 0.0.0.0), na porte 554 a cesta "
+#~ "nie je zadaná. \n"
+#~ " Ak chcete prijímať príkazy len z lokálneho rozhrania, zadajte ako adresu "
+#~ "príkaz \"localhost\".Ak chcete prijímať príkazy len z lokálneho "
+#~ "rozhrania, do políčka s adresou zadajte slovo \"localhost\"."
 
-msgid "Hide / Show Library"
-msgstr "Skryť / zobraziť knižnicu"
+#~ msgid "Hide / Show Library"
+#~ msgstr "Skryť / zobraziť knižnicu"
 
-msgid "Hide / Show Viewer"
-msgstr "Skryť / zobraziť zobrazovač"
+#~ msgid "Hide / Show Viewer"
+#~ msgstr "Skryť / zobraziť zobrazovač"
 
-msgid "Okay"
-msgstr "OK"
+#~ msgid "Okay"
+#~ msgstr "OK"
 
-msgid "Exposure"
-msgstr "Expozícia"
+#~ msgid "Exposure"
+#~ msgstr "Expozícia"
 
 #, fuzzy
-msgid "Exposure."
-msgstr "Expozícia"
-
-msgid " - Empty - "
-msgstr " - Prázdne -"
-
-msgid ""
-"This saves the audio output volume when you use the mute function. You "
-"should not change this option manually."
-msgstr ""
-"Zvolením tejto funkcie môžete uložiť hlasitosť prehrávaného zvuku aj v "
-"prípade, že použijete umlčanie zvuku. Neodporúčame vám, aby ste toto "
-"nastavenie menili manuálne. "
-
-msgid "Prefer system plugins over VLC"
-msgstr "Preferovať systémové prídavné moduly pred modulmi programu VLC"
-
-msgid ""
-"Indicates whether VLC will prefer native plugins installed on system over "
-"VLC owns plugins whenever a choice is available."
-msgstr ""
-"Nastavenie udáva, či bude program VLC preferovať svoje vlastné prídavné "
-"moduly, alebo radšej systémové prídavné moduly v prípade, že budú dostupné "
-"obidva."
-
-msgid ""
-"If your processor supports the MMX instructions set, VLC can take advantage "
-"of them."
-msgstr ""
-"Ak váš procesor podporuje inštrukčnú sadu MMX, program VLC dokáže túto "
-"funkciu využiť."
-
-msgid ""
-"If your processor supports the 3D Now! instructions set, VLC can take "
-"advantage of them."
-msgstr ""
-"Ak váš procesor podporuje inštrukčnú sadu 3D Now!, program VLC dokáže túto "
-"funkciu využiť."
-
-msgid "Enable CPU MMX EXT support"
-msgstr "Zapnúť podporu technológie MMX EXT"
-
-msgid ""
-"If your processor supports the MMX EXT instructions set, VLC can take "
-"advantage of them."
-msgstr ""
-"Ak váš procesor podporuje inštrukčnú sadu MMX EXT, program VLC dokáže túto "
-"funkciu využiť."
-
-msgid ""
-"If your processor supports the SSE instructions set, VLC can take advantage "
-"of them."
-msgstr ""
-"Ak váš procesor podporuje inštrukčnú sadu SSE, program VLC dokáže túto "
-"funkciu využiť."
-
-msgid "Enable CPU SSE2 support"
-msgstr "Zapnúť podporu technológie SSE2"
-
-msgid ""
-"If your processor supports the SSE2 instructions set, VLC can take advantage "
-"of them."
-msgstr ""
-"Ak váš procesor podporuje inštrukčnú sadu SSE2, program VLC dokáže túto "
-"funkciu využiť."
-
-msgid "Enable CPU SSE3 support"
-msgstr "Zapnúť podporu technológieSSE3"
-
-msgid ""
-"If your processor supports the SSE3 instructions set, VLC can take advantage "
-"of them."
-msgstr ""
-"Ak váš procesor podporuje inštrukčnú sadu SSE3, program VLC dokáže túto "
-"funkciu využiť."
-
-msgid "Enable CPU SSSE3 support"
-msgstr "Zapnúť podporu technológie SSSE3"
-
-msgid ""
-"If your processor supports the SSSE3 instructions set, VLC can take "
-"advantage of them."
-msgstr ""
-"Ak váš procesor podporuje inštrukčnú sadu SSSE3, program VLC dokáže túto "
-"funkciu využiť."
-
-msgid "Enable CPU SSE4.1 support"
-msgstr "Zapnúť podporu technológie SSE4.1"
-
-msgid ""
-"If your processor supports the SSE4.1 instructions set, VLC can take "
-"advantage of them."
-msgstr ""
-"Ak váš procesor podporuje inštrukčnú sadu SSE4.1, program VLC dokáže túto "
-"funkciu využiť."
-
-msgid "Enable CPU SSE4.2 support"
-msgstr "Zapnúť podporu technológie SSE4.2"
-
-msgid ""
-"If your processor supports the SSE4.2 instructions set, VLC can take "
-"advantage of them."
-msgstr ""
-"Ak váš procesor podporuje inštrukčnú sadu SSE4.2, program VLC dokáže túto "
-"funkciu využiť."
+#~ msgid "Exposure."
+#~ msgstr "Expozícia"
+
+#~ msgid " - Empty - "
+#~ msgstr " - Prázdne -"
+
+#~ msgid ""
+#~ "This saves the audio output volume when you use the mute function. You "
+#~ "should not change this option manually."
+#~ msgstr ""
+#~ "Zvolením tejto funkcie môžete uložiť hlasitosť prehrávaného zvuku aj v "
+#~ "prípade, že použijete umlčanie zvuku. Neodporúčame vám, aby ste toto "
+#~ "nastavenie menili manuálne. "
+
+#~ msgid "Prefer system plugins over VLC"
+#~ msgstr "Preferovať systémové prídavné moduly pred modulmi programu VLC"
+
+#~ msgid ""
+#~ "Indicates whether VLC will prefer native plugins installed on system over "
+#~ "VLC owns plugins whenever a choice is available."
+#~ msgstr ""
+#~ "Nastavenie udáva, či bude program VLC preferovať svoje vlastné prídavné "
+#~ "moduly, alebo radšej systémové prídavné moduly v prípade, že budú "
+#~ "dostupné obidva."
+
+#~ msgid ""
+#~ "If your processor supports the MMX instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "Ak váš procesor podporuje inštrukčnú sadu MMX, program VLC dokáže túto "
+#~ "funkciu využiť."
+
+#~ msgid ""
+#~ "If your processor supports the 3D Now! instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "Ak váš procesor podporuje inštrukčnú sadu 3D Now!, program VLC dokáže "
+#~ "túto funkciu využiť."
+
+#~ msgid "Enable CPU MMX EXT support"
+#~ msgstr "Zapnúť podporu technológie MMX EXT"
+
+#~ msgid ""
+#~ "If your processor supports the MMX EXT instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "Ak váš procesor podporuje inštrukčnú sadu MMX EXT, program VLC dokáže "
+#~ "túto funkciu využiť."
+
+#~ msgid ""
+#~ "If your processor supports the SSE instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "Ak váš procesor podporuje inštrukčnú sadu SSE, program VLC dokáže túto "
+#~ "funkciu využiť."
+
+#~ msgid "Enable CPU SSE2 support"
+#~ msgstr "Zapnúť podporu technológie SSE2"
+
+#~ msgid ""
+#~ "If your processor supports the SSE2 instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "Ak váš procesor podporuje inštrukčnú sadu SSE2, program VLC dokáže túto "
+#~ "funkciu využiť."
+
+#~ msgid "Enable CPU SSE3 support"
+#~ msgstr "Zapnúť podporu technológieSSE3"
+
+#~ msgid ""
+#~ "If your processor supports the SSE3 instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "Ak váš procesor podporuje inštrukčnú sadu SSE3, program VLC dokáže túto "
+#~ "funkciu využiť."
+
+#~ msgid "Enable CPU SSSE3 support"
+#~ msgstr "Zapnúť podporu technológie SSSE3"
+
+#~ msgid ""
+#~ "If your processor supports the SSSE3 instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "Ak váš procesor podporuje inštrukčnú sadu SSSE3, program VLC dokáže túto "
+#~ "funkciu využiť."
+
+#~ msgid "Enable CPU SSE4.1 support"
+#~ msgstr "Zapnúť podporu technológie SSE4.1"
+
+#~ msgid ""
+#~ "If your processor supports the SSE4.1 instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "Ak váš procesor podporuje inštrukčnú sadu SSE4.1, program VLC dokáže túto "
+#~ "funkciu využiť."
+
+#~ msgid "Enable CPU SSE4.2 support"
+#~ msgstr "Zapnúť podporu technológie SSE4.2"
+
+#~ msgid ""
+#~ "If your processor supports the SSE4.2 instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "Ak váš procesor podporuje inštrukčnú sadu SSE4.2, program VLC dokáže túto "
+#~ "funkciu využiť."
 
-msgid ""
-"If your processor supports the AltiVec instructions set, VLC can take "
-"advantage of them."
-msgstr ""
-"Ak váš procesor podporuje inštrukčnú sadu AltiVecT, program VLC dokáže túto "
-"funkciu využiť."
+#~ msgid ""
+#~ "If your processor supports the AltiVec instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "Ak váš procesor podporuje inštrukčnú sadu AltiVecT, program VLC dokáže "
+#~ "túto funkciu využiť."
 
-msgid "Go back in browsing history"
-msgstr "Vrátiť sa späť v prehliadači"
+#~ msgid "Go back in browsing history"
+#~ msgstr "Vrátiť sa späť v prehliadači"
 
-msgid "Go forward in browsing history"
-msgstr "Prejsť v prehliadači dopredu"
+#~ msgid "Go forward in browsing history"
+#~ msgstr "Prejsť v prehliadači dopredu"
 
-msgid ""
-"%s\n"
-"Done %s (100.0%%)"
-msgstr ""
-"%s\n"
-"Hotovo: %s (100.0%%)"
+#~ msgid ""
+#~ "%s\n"
+#~ "Done %s (100.0%%)"
+#~ msgstr ""
+#~ "%s\n"
+#~ "Hotovo: %s (100.0%%)"
 
-msgid "Alsa"
-msgstr "Alsa"
+#~ msgid "Alsa"
+#~ msgstr "Alsa"
 
-msgid "Avio"
-msgstr "Avio"
+#~ msgid "Avio"
+#~ msgstr "Avio"
 
-msgid ""
-"Adapter cards have a device file in directory named /dev/dvb/adapter[n] with "
-"n>=0."
-msgstr ""
-"Karty adaptéra majú zvyčajne aj špeciálny súbor, umiestnený v zložke /dev/"
-"dvb/adapter [číslo] a číslo je väčšie alebo sa rovná nule."
+#~ msgid ""
+#~ "Adapter cards have a device file in directory named /dev/dvb/adapter[n] "
+#~ "with n>=0."
+#~ msgstr ""
+#~ "Karty adaptéra majú zvyčajne aj špeciálny súbor, umiestnený v zložke /dev/"
+#~ "dvb/adapter [číslo] a číslo je väčšie alebo sa rovná nule."
 
-msgid "In kHz for DVB-S or Hz for DVB-C/T"
-msgstr "V kHz pre DVB-S alebo v Hz pre DVB-C/T"
+#~ msgid "In kHz for DVB-S or Hz for DVB-C/T"
+#~ msgstr "V kHz pre DVB-S alebo v Hz pre DVB-C/T"
 
-msgid "In kHz for DVB-C/S/T"
-msgstr "V kHz pre DVB-C/S/T"
+#~ msgid "In kHz for DVB-C/S/T"
+#~ msgstr "V kHz pre DVB-C/S/T"
 
-msgid "Inversion mode [0=off, 1=on, 2=auto]"
-msgstr "Inverzný režim [0=vypnuté, 1=zapnuté, 2=automaticky]"
+#~ msgid "Inversion mode [0=off, 1=on, 2=auto]"
+#~ msgstr "Inverzný režim [0=vypnuté, 1=zapnuté, 2=automaticky]"
 
-msgid "This allows you to stream an entire transponder with a \"budget\" card."
-msgstr ""
-"Táto voľba umožňuje streamovať celý transponder pomocou tzv. \"budget\" "
-"karty."
+#~ msgid ""
+#~ "This allows you to stream an entire transponder with a \"budget\" card."
+#~ msgstr ""
+#~ "Táto voľba umožňuje streamovať celý transponder pomocou tzv. \"budget\" "
+#~ "karty."
 
-msgid "Satellite number in the Diseqc system"
-msgstr "Číslo satelitu v systéme Diseq C"
+#~ msgid "Satellite number in the Diseqc system"
+#~ msgstr "Číslo satelitu v systéme Diseq C"
 
-msgid "[0=no diseqc, 1-4=satellite number]."
-msgstr "[0=žiadne z čísel 1-4 v diseqc]."
+#~ msgid "[0=no diseqc, 1-4=satellite number]."
+#~ msgstr "[0=žiadne z čísel 1-4 v diseqc]."
 
-msgid "In Volts [0, 13=vertical, 18=horizontal]."
-msgstr "Vo voltoch [0, 13=vertikálne, 18=horizontálne]."
+#~ msgid "In Volts [0, 13=vertical, 18=horizontal]."
+#~ msgstr "Vo voltoch [0, 13=vertikálne, 18=horizontálne]."
 
-msgid ""
-"Enable high voltage if your cables are particularly long. This is not "
-"supported by all frontends."
-msgstr ""
-"Ak sú prívodné káble obzvlášť dlhé, môžete zapnúť vyššie napätie pre LNB "
-"konvertor. Toto napätie však niektoré zariadenia nepodporujú."
+#~ msgid ""
+#~ "Enable high voltage if your cables are particularly long. This is not "
+#~ "supported by all frontends."
+#~ msgstr ""
+#~ "Ak sú prívodné káble obzvlášť dlhé, môžete zapnúť vyššie napätie pre LNB "
+#~ "konvertor. Toto napätie však niektoré zariadenia nepodporujú."
 
-msgid "[0=off, 1=on, -1=auto]."
-msgstr "[0=vypnuté, 1=zapnuté, -1=automaticky]."
+#~ msgid "[0=off, 1=on, -1=auto]."
+#~ msgstr "[0=vypnuté, 1=zapnuté, -1=automaticky]."
 
-msgid "FEC=Forward Error Correction mode [9=auto]."
-msgstr ""
-"FEC=Forward Error Correction mode (v preklade: režim pre korekciu chýb pri "
-"prenose) [9=automaticky]."
+#~ msgid "FEC=Forward Error Correction mode [9=auto]."
+#~ msgstr ""
+#~ "FEC=Forward Error Correction mode (v preklade: režim pre korekciu chýb "
+#~ "pri prenose) [9=automaticky]."
 
-msgid "Antenna lnb_lof1 (kHz)"
-msgstr "Anténový lnb_1z1 (kHz)"
+#~ msgid "Antenna lnb_lof1 (kHz)"
+#~ msgstr "Anténový lnb_1z1 (kHz)"
 
-msgid "Low Band Local Osc Freq in kHz (usually 9.75GHz)"
-msgstr "Nízkopásmová lokálna osc. frekvencia v kHz (zvyčajne 9,75 GHz)"
+#~ msgid "Low Band Local Osc Freq in kHz (usually 9.75GHz)"
+#~ msgstr "Nízkopásmová lokálna osc. frekvencia v kHz (zvyčajne 9,75 GHz)"
 
-msgid "Antenna lnb_lof2 (kHz)"
-msgstr "Anténový lnb_1z2 (kHz)"
+#~ msgid "Antenna lnb_lof2 (kHz)"
+#~ msgstr "Anténový lnb_1z2 (kHz)"
 
-msgid "High Band Local Osc Freq in kHz (usually 10.6GHz)"
-msgstr "Vysokofrekvenčná lokálna osc. frekvencia v kHz (zvyčajne 10,6 GHz)"
+#~ msgid "High Band Local Osc Freq in kHz (usually 10.6GHz)"
+#~ msgstr "Vysokofrekvenčná lokálna osc. frekvencia v kHz (zvyčajne 10,6 GHz)"
 
-msgid "Antenna lnb_slof (kHz)"
-msgstr "Anténový lnb_slof (kHz)"
+#~ msgid "Antenna lnb_slof (kHz)"
+#~ msgstr "Anténový lnb_slof (kHz)"
 
-msgid "Low Noise Block switch freq in kHz (usually 11.7GHz)"
-msgstr "Prepínacia frekv. pre bloky s nízkym šumom (zvyčajne 11,7 GHz)"
+#~ msgid "Low Noise Block switch freq in kHz (usually 11.7GHz)"
+#~ msgstr "Prepínacia frekv. pre bloky s nízkym šumom (zvyčajne 11,7 GHz)"
 
-msgid "QAM, PSK or VSB modulation method"
-msgstr "Metóda modulácie QAM, PSK alebo VSB"
+#~ msgid "QAM, PSK or VSB modulation method"
+#~ msgstr "Metóda modulácie QAM, PSK alebo VSB"
 
-msgid "QAM16"
-msgstr "QAM16"
+#~ msgid "QAM16"
+#~ msgstr "QAM16"
 
-msgid "QAM32"
-msgstr "QAM32"
+#~ msgid "QAM32"
+#~ msgstr "QAM32"
 
-msgid "QAM64"
-msgstr "QAM64"
+#~ msgid "QAM64"
+#~ msgstr "QAM64"
 
-msgid "QAM128"
-msgstr "QAM128"
+#~ msgid "QAM128"
+#~ msgstr "QAM128"
 
-msgid "QAM256"
-msgstr "QAM256"
+#~ msgid "QAM256"
+#~ msgstr "QAM256"
 
-msgid "BPSK"
-msgstr "BPSK"
+#~ msgid "BPSK"
+#~ msgstr "BPSK"
 
-msgid "QPSK"
-msgstr "QPSK"
+#~ msgid "QPSK"
+#~ msgstr "QPSK"
 
-msgid "8VSB"
-msgstr "8VSB"
+#~ msgid "8VSB"
+#~ msgstr "8VSB"
 
-msgid "16VSB"
-msgstr "16VSB"
+#~ msgid "16VSB"
+#~ msgstr "16VSB"
 
-msgid "FEC rate includes DVB-T high priority stream FEC Rate"
-msgstr "Rýchlosť FEC zahŕňa aj rýchlosť FEC prioritného streamu v DVB-T"
+#~ msgid "FEC rate includes DVB-T high priority stream FEC Rate"
+#~ msgstr "Rýchlosť FEC zahŕňa aj rýchlosť FEC prioritného streamu v DVB-T"
 
-msgid "1/2"
-msgstr "1/2"
+#~ msgid "1/2"
+#~ msgstr "1/2"
 
-msgid "2/3"
-msgstr "2/3"
+#~ msgid "2/3"
+#~ msgstr "2/3"
 
-msgid "3/4"
-msgstr "3/4"
+#~ msgid "3/4"
+#~ msgstr "3/4"
 
-msgid "5/6"
-msgstr "5/6"
+#~ msgid "5/6"
+#~ msgstr "5/6"
 
-msgid "7/8"
-msgstr "7/8"
+#~ msgid "7/8"
+#~ msgstr "7/8"
 
-msgid "Terrestrial low priority stream code rate (FEC)"
-msgstr "Rýchlosť kódovania terestriálneho streamu s nízkou prioritou (FEC)"
+#~ msgid "Terrestrial low priority stream code rate (FEC)"
+#~ msgstr "Rýchlosť kódovania terestriálneho streamu s nízkou prioritou (FEC)"
 
-msgid "Low Priority FEC Rate [Undefined,1/2,2/3,3/4,5/6,7/8]"
-msgstr "Nízka priorita FEC [Nedefinovaná,1/2,2/3,3/4,5/6,7/8] "
+#~ msgid "Low Priority FEC Rate [Undefined,1/2,2/3,3/4,5/6,7/8]"
+#~ msgstr "Nízka priorita FEC [Nedefinovaná,1/2,2/3,3/4,5/6,7/8] "
 
-msgid "Terrestrial bandwidth"
-msgstr "Šírka terestriálneho pásma"
+#~ msgid "Terrestrial bandwidth"
+#~ msgstr "Šírka terestriálneho pásma"
 
-msgid "Terrestrial bandwidth [0=auto,6,7,8 in MHz]"
-msgstr "Šírka terestriálneho pásma [0=automaticky,6,7,8 v MHz]"
+#~ msgid "Terrestrial bandwidth [0=auto,6,7,8 in MHz]"
+#~ msgstr "Šírka terestriálneho pásma [0=automaticky,6,7,8 v MHz]"
 
-msgid "Guard interval [Undefined,1/4,1/8,1/16,1/32]"
-msgstr "Interval stráženia [Nedefinovaný,1/4,1/8,1/16,1/32]"
+#~ msgid "Guard interval [Undefined,1/4,1/8,1/16,1/32]"
+#~ msgstr "Interval stráženia [Nedefinovaný,1/4,1/8,1/16,1/32]"
 
-msgid "1/4"
-msgstr "1/4"
+#~ msgid "1/4"
+#~ msgstr "1/4"
 
-msgid "1/8"
-msgstr "1/8"
+#~ msgid "1/8"
+#~ msgstr "1/8"
 
-msgid "1/16"
-msgstr "16"
+#~ msgid "1/16"
+#~ msgstr "16"
 
-msgid "1/32"
-msgstr "32"
+#~ msgid "1/32"
+#~ msgstr "32"
 
-msgid "2k"
-msgstr "2k"
+#~ msgid "2k"
+#~ msgstr "2k"
 
-msgid "8k"
-msgstr "8k"
+#~ msgid "8k"
+#~ msgstr "8k"
 
-msgid "Hierarchy alpha value [Undefined,1,2,4]"
-msgstr "Hierarchia hodnoty alfa [Nedefinované,1,2,4]"
+#~ msgid "Hierarchy alpha value [Undefined,1,2,4]"
+#~ msgstr "Hierarchia hodnoty alfa [Nedefinované,1,2,4]"
 
-msgid "2"
-msgstr "2"
+#~ msgid "2"
+#~ msgstr "2"
 
-msgid "4"
-msgstr "4"
+#~ msgid "4"
+#~ msgstr "4"
 
-msgid "Modulation type for front-end device."
-msgstr "Typ modulácie pre koncové zariadenie."
+#~ msgid "Modulation type for front-end device."
+#~ msgstr "Typ modulácie pre koncové zariadenie."
 
-msgid "Terrestrial high priority stream code rate (FEC)"
-msgstr "Rýchlosť kódovania vysoko-prioritného terestriálneho streamu (FEC)"
+#~ msgid "Terrestrial high priority stream code rate (FEC)"
+#~ msgstr "Rýchlosť kódovania vysoko-prioritného terestriálneho streamu (FEC)"
 
-msgid "To enable the internal HTTP server, set its address and port here."
-msgstr "Ak chcete zapnúť interný HTTP server, nastavte jeho adresu a port."
+#~ msgid "To enable the internal HTTP server, set its address and port here."
+#~ msgstr "Ak chcete zapnúť interný HTTP server, nastavte jeho adresu a port."
 
-msgid ""
-"User name the administrator will use to log into the internal HTTP server."
-msgstr ""
-"Užívateľské meno administrátora bude použité pri prihlasovaní na interný "
-"HTTP server."
+#~ msgid ""
+#~ "User name the administrator will use to log into the internal HTTP server."
+#~ msgstr ""
+#~ "Užívateľské meno administrátora bude použité pri prihlasovaní na interný "
+#~ "HTTP server."
 
-msgid ""
-"Password the administrator will use to log into the internal HTTP server."
-msgstr ""
-"Heslo administrátora bude použité pri prihlasovaní na interný HTTP server."
+#~ msgid ""
+#~ "Password the administrator will use to log into the internal HTTP server."
+#~ msgstr ""
+#~ "Heslo administrátora bude použité pri prihlasovaní na interný HTTP server."
 
-msgid "HTTP ACL"
-msgstr "HTTP ACL"
+#~ msgid "HTTP ACL"
+#~ msgstr "HTTP ACL"
 
-msgid ""
-"Access control list (equivalent to .hosts) file path, which will limit the "
-"range of IPs entitled to log into the internal HTTP server."
-msgstr ""
-"Cesta ku kontrolnému zoznamu prístupov (zoznam je ekvivalentom súboru ."
-"hosts), v ktorom sú uložené IP adresy počítačov, ktoré sa môžu prihlásiť na "
-"interný HTTP server."
+#~ msgid ""
+#~ "Access control list (equivalent to .hosts) file path, which will limit "
+#~ "the range of IPs entitled to log into the internal HTTP server."
+#~ msgstr ""
+#~ "Cesta ku kontrolnému zoznamu prístupov (zoznam je ekvivalentom súboru ."
+#~ "hosts), v ktorom sú uložené IP adresy počítačov, ktoré sa môžu prihlásiť "
+#~ "na interný HTTP server."
 
-msgid "HTTP interface x509 PEM certificate file (enables SSL)"
-msgstr "Certifikačný súbor HTTP rozhrania x509 PEM (zapne sa šifrovanie SSL)."
+#~ msgid "HTTP interface x509 PEM certificate file (enables SSL)"
+#~ msgstr ""
+#~ "Certifikačný súbor HTTP rozhrania x509 PEM (zapne sa šifrovanie SSL)."
 
-msgid "HTTP interface x509 PEM private key file"
-msgstr "Súbor s privátnym kľúčom HTTP rozhrania x509 PEM."
+#~ msgid "HTTP interface x509 PEM private key file"
+#~ msgstr "Súbor s privátnym kľúčom HTTP rozhrania x509 PEM."
 
-msgid "HTTP interface x509 PEM trusted root CA certificates file"
-msgstr "Súbor s certifikátmi dôveryhodných serverov x509 PEM v HTTP rozhraní."
+#~ msgid "HTTP interface x509 PEM trusted root CA certificates file"
+#~ msgstr ""
+#~ "Súbor s certifikátmi dôveryhodných serverov x509 PEM v HTTP rozhraní."
 
-msgid ""
-"The given syntax is deprecated. Run \"vlc -p dvb\" to see an explanation of "
-"the new syntax."
-msgstr ""
-"Zadaná syntax bola odmietnutá. Spustite prosím \"vlc -p dvb\" a pozrite si "
-"vysvetlivky k novej syntaxi."
+#~ msgid ""
+#~ "The given syntax is deprecated. Run \"vlc -p dvb\" to see an explanation "
+#~ "of the new syntax."
+#~ msgstr ""
+#~ "Zadaná syntax bola odmietnutá. Spustite prosím \"vlc -p dvb\" a pozrite "
+#~ "si vysvetlivky k novej syntaxi."
 
-msgid "The provided polarization \"%c\" is not valid."
-msgstr "Zadaná polarizácia \"%c\" nie je platná"
+#~ msgid "The provided polarization \"%c\" is not valid."
+#~ msgstr "Zadaná polarizácia \"%c\" nie je platná"
 
-msgid "%.1f MHz (%d services)"
-msgstr "%.1f MHz (%d služieb)"
+#~ msgid "%.1f MHz (%d services)"
+#~ msgstr "%.1f MHz (%d služieb)"
 
-msgid "Scanning DVB"
-msgstr "Skenovanie DVB"
+#~ msgid "Scanning DVB"
+#~ msgstr "Skenovanie DVB"
 
-msgid "Number of frames per second (eg. 24, 25, 29.97, 30)."
-msgstr "Počet snímok za sekundu (napr. 24, 25, 29.97, 30)."
+#~ msgid "Number of frames per second (eg. 24, 25, 29.97, 30)."
+#~ msgstr "Počet snímok za sekundu (napr. 24, 25, 29.97, 30)."
 
-msgid ""
-"Set the ID of the fake elementary stream for use in #duplicate{} constructs "
-"(default 0)."
-msgstr ""
-"Nastavte ident. číslo pre fingovaný elementárny stream (predvolená hodnota "
-"je 0)."
+#~ msgid ""
+#~ "Set the ID of the fake elementary stream for use in #duplicate{} "
+#~ "constructs (default 0)."
+#~ msgstr ""
+#~ "Nastavte ident. číslo pre fingovaný elementárny stream (predvolená "
+#~ "hodnota je 0)."
 
-msgid ""
-"Duration of the fake streaming before faking an end-of-file (default is -1 "
-"meaning that the stream is unlimited when fake is forced, or lasts for 10 "
-"seconds otherwise. 0, means that the stream is unlimited)."
-msgstr ""
-"Trvanie fingovaného streamovania pred fingovaným ukončením súboru "
-"(predvolená hodnota je -1, čo znamená, že stream nie je pri limitovaný, "
-"alebo trvá 10 sekúnd. Hodnota 0 znamená, že stream nie je limitovaný)."
+#~ msgid ""
+#~ "Duration of the fake streaming before faking an end-of-file (default is "
+#~ "-1 meaning that the stream is unlimited when fake is forced, or lasts for "
+#~ "10 seconds otherwise. 0, means that the stream is unlimited)."
+#~ msgstr ""
+#~ "Trvanie fingovaného streamovania pred fingovaným ukončením súboru "
+#~ "(predvolená hodnota je -1, čo znamená, že stream nie je pri limitovaný, "
+#~ "alebo trvá 10 sekúnd. Hodnota 0 znamená, že stream nie je limitovaný)."
 
-msgid "Limit the number of redirection to follow."
-msgstr "Limitovať počet sledovaných presmerovaní."
+#~ msgid "Limit the number of redirection to follow."
+#~ msgstr "Limitovať počet sledovaných presmerovaní."
 
-msgid "Use Internet Explorer entered HTTP proxy server"
-msgstr "Použiť HTTP proxy server zadaný v programe Internet Explorer"
+#~ msgid "Use Internet Explorer entered HTTP proxy server"
+#~ msgstr "Použiť HTTP proxy server zadaný v programe Internet Explorer"
 
-msgid ""
-"Use Internet Explorer entered HTTP proxy server for all URL. Don't take into "
-"account bypasses settings and auto configuration scripts."
-msgstr ""
-"Pre všetky URL adresy použiť HTTP proxy server nastavený v programe Internet "
-"Explorer. Nezadávajte nastavenia na vyhnutie sa nastaveniam účtu a "
-"konfiguračné skripty:"
-
-msgid ""
-"Make VLC buffer audio data captured from jack for the specified length in "
-"milliseconds."
-msgstr ""
-"Zachytávať údaje o zvuku vo vyrovnávacej pamäti programu VLC z jack "
-"konektora počas zadaného času (čas sa udáva v milisekundách). "
-
-msgid "Use file memory mapping"
-msgstr "Použiť mapovanie pamäti súboru"
-
-msgid "Try to use memory mapping to read files and block devices."
-msgstr "Pokúsiť sa použiť mapovanie pamäti pri čítaní súborov a blokov."
-
-msgid "MMap"
-msgstr "MMap"
-
-msgid "Audio Channel to use, if there are several audio inputs."
-msgstr "Zvukový kanál, ktorý sa práve používa."
-
-msgid "Decimation level for MJPEG streams"
-msgstr "Úroveň zoslabovania MJPEG streamov"
-
-msgid ""
-"Alsa or OSS audio capture in the v4l access is deprecated. please use "
-"'v4l:// :input-slave=alsa://' or 'v4l:// :input-slave=oss://' instead."
-msgstr ""
-"Neodporúča sa používanie zvukových záznamov Alsa alebo OSS pri prístupe cez "
-"v4l. Namiesto toho prosím použite príkaz 'v4l:// :input-slave=alsa://' alebo "
-"'v4l:// :input-slave=oss://'."
-
-msgid "IO Method (READ, MMAP, USERPTR)."
-msgstr "Metóda IO (READ, MMAP, USERPTR)."
-
-msgid ""
-"Automatically set the white balance of the video input (if supported by the "
-"v4l2 driver)."
-msgstr ""
-"Automaticky nastaviť vyváženie bielej na vstupe videa (ak je táto funkcia "
-"podporovaná ovládačom v4l2)."
-
-msgid ""
-"Trigger a white balancing action, useless if auto white balance is activated "
-"(if supported by the v4l2 driver)."
-msgstr ""
-"Spúšťač vyvažovania bielej farby, nie je účinný v prípade, že je aktivované "
-"automatické vyvažovanie bielej farby (ak je takáto funkcia podporovaná "
-"ovládačom I4l2)."
-
-msgid "Blue balance of the video input (if supported by the v4l2 driver)."
-msgstr ""
-"Vyváženie modrej farby na vstupe videa (ak je táto funkcia podporovaná "
-"ovládačom v4l2)."
-
-msgid ""
-"Set the camera's horizontal centering (if supported by the v4l2 driver)."
-msgstr ""
-"Nastaviť horizontálne vycentrovanie kamery (ak je táto funkcia podporovaná "
-"ovládačom v4l2)."
-
-msgid "Treble level of the audio input (if supported by the v4l2 driver)."
-msgstr ""
-"Úroveň výšok na vstupe zvuku (ak je táto funkcia podporovaná ovládačom v4l2)."
-
-msgid ""
-"Alsa or OSS audio capture in the v4l2 access is deprecated. please use "
-"'v4l2:// :input-slave=alsa://' or 'v4l2:// :input-slave=oss://' instead."
-msgstr ""
-"Neodporúča sa používanie zvukových záznamov Alsa alebo OSS pri prístupe cez "
-"v4l2. Namiesto toho použite prosím príkaz 'v4l2:// :input-slave=alsa://' "
-"alebo 'v4l2:// :input-slave=oss://'."
-
-msgid "AUTO"
-msgstr "AUTO"
-
-msgid "READ"
-msgstr "READ"
-
-msgid "MMAP"
-msgstr "MMAP"
-
-msgid "USERPTR"
-msgstr "USERPTR"
-
-msgid ""
-"Path to the x509 PEM private key file that will be used for HTTPS. Leave "
-"empty if you don't have one."
-msgstr ""
-"Cesta k súboru s privátnym kľúčom x509 PEM, ktorý sa používa pri prenose "
-"pomocou protokolu HTTPS. Ak súbor s privátnym kľúčom nemáte, ponechajte "
-"políčko prázdne. "
-
-msgid ""
-"Path to the x509 PEM trusted root CA certificates (certificate authority) "
-"file that will be used for HTTPS. Leave empty if you don't have one."
-msgstr ""
-"Cesta k certifikátom dôveryhodných serverov, ktoré sa používajú pri prenose "
-"pomocou protokolu HTTPS. Ak certifikáty nemáte, ponechajte políčko prázdne."
-
-msgid ""
-"Path to the x509 PEM Certificates Revocation List file that will be used for "
-"SSL. Leave empty if you don't have one."
-msgstr ""
-"Cesta k zoznamu s odvolanými certifikátmi X509. Tento zoznam sa používa pri "
-"SSL-spojení. Ak takýto súbor nemáte, ponechajte políčko prázdne."
-
-msgid "No audio device name was given. You might want to enter \"default\"."
-msgstr ""
-"Nie je zadaný žiaden názov zvuk. zariadenia. Zadajte aspoň hodnotu \"default"
-"\"."
-
-msgid "Try to work around buggy OSS drivers"
-msgstr "Pokúsiť sa obísť chybné ovládače operačného systému"
-
-msgid ""
-"Some buggy OSS drivers just don't like when their internal buffers are "
-"completely filled (the sound gets heavily hashed). If you have one of these "
-"drivers, then you need to enable this option."
-msgstr ""
-"Niektoré chybné ovládače (prítomné v operačných systémoch) nepracujú správne "
-"v prípade, že sa úplne zaplní ich interná vyrovnávacia pamäť (spoznáte to "
-"podľa toho, že zvuk bude trhaný). Ak používate nejaké takéto ovládače, "
-"skúste aktivovať túto voľbu."
-
-msgid "AltiVec FFmpeg audio/video decoder ((MS)MPEG4,SVQ1,H263,WMV,WMA)"
-msgstr ""
-"Dekodér/kodér videa/zvuku AltiVec FF mpeg ((MS)MPEG4,SVQ1,H263,WMV,WMA)"
-
-msgid "Reload image file every n seconds."
-msgstr "Obnoviť súbor s obrázkom každých n sekúnd."
-
-msgid "Consider width and height as maximum values."
-msgstr "Považovať šírku a výšku za maximálne hodnoty."
-
-msgid ""
-"This integer when viewed in binary is a debugging mask\n"
-"calls                 1\n"
-"packet assembly info  2\n"
-msgstr ""
-"Táto hodnota (ak sa zobrazí binárne) môže byť aj maskou pre ladenie chýb:\n"
-"pre zobrazenie volaní zadajte hodnotu 1\n"
-"pre zobrazenie kompletných informácií o pakete zadajte hodnotu 2\n"
-
-msgid "Text is always opaque"
-msgstr "Text je vždy nepriehľadný"
-
-msgid "Subpage"
-msgstr "Podstránka"
-
-msgid "1.00x"
-msgstr "1.00x"
-
-msgid "Handlers"
-msgstr "Obslužné súbory"
-
-msgid ""
-"List of handler extensions and executable paths (for instance: php=/usr/bin/"
-"php,pl=/usr/bin/perl)."
-msgstr ""
-"Zoznam prípon a cesty k obslužným súborom. (napr.: php=/usr/bin/php,pl=/usr/"
-"bin/perl)."
-
-msgid "Export album art as /art"
-msgstr "Exportovať album do parametra /art."
-
-msgid ""
-"Allow exporting album art for current playlist items at the /art and /art?"
-"id=<id> URLs."
-msgstr ""
-"Táto voľba umožňuje exportovať informácie o druhu albumu v aktuálnom "
-"playliste do parametra /art alebo /art?id=<id> v URL adrese."
-
-msgid "HTTP interface x509 PEM certificate file (enables SSL)."
-msgstr "Certifikačný súbor HTTP rozhrania x509 PEM (zapne sa šifrovanie SSL)"
-
-msgid "HTTP interface x509 PEM private key file."
-msgstr "Súbor s privátnym kľúčom HTTP rozhrania x509 PEM"
-
-msgid "HTTP interface x509 PEM trusted root CA certificates file."
-msgstr "Súbor s certifikátmi dôveryhodných serverov x509 PEM v HTTP rozhraní"
-
-msgid "Signals"
-msgstr "Signály"
-
-msgid ""
-"This AVI file is broken. Seeking will not work correctly.\n"
-"Do you want to try to fix it?\n"
-"\n"
-"This might take a long time."
-msgstr ""
-"Tento AVI súbor je porušený. Vyhľadávanie preto nebude fungovať správne. \n"
-"Chcete sa pokúsiť o opravu súboru? \n"
-"\n"
-"Môže to trvať pomerne dlho."
-
-msgid "Repair"
-msgstr "Opraviť"
-
-msgid ""
-"Force the subtiles format. Use \"auto\", the set of supported values varies."
-msgstr ""
-"Vynútiť si formát titulkov. Použite hodnotu \"auto\", existuje veľké "
-"množstvo podporovaných hodnôt."
-
-msgid "Control word for the CSA encryption algorithm"
-msgstr "Heslo pre kryptovací algoritmus CSA"
-
-msgid "VLC was brought to you by:"
-msgstr "Program VLC vám sprostredkoval:"
-
-msgid "Rewind"
-msgstr "Previnúť"
-
-msgid "Apply the equalizer filter twice. The effect will be sharper."
-msgstr "Aplikovať efekt ekvalizéra dvakrát. Výsledný efekt bude silnejší."
-
-msgid "Enable the equalizer. Bands can be set manually or using a preset."
-msgstr ""
-"Zapnúť ekvalizér. Pásma môžete nastaviť manuálne alebo použiť niektoré z "
-"predvolených nastavení"
-
-msgid "Shows more information about the available video filters."
-msgstr "Zobrazia sa podrobnejšie informácie o dostupných filtroch videa."
-
-msgid "Blur"
-msgstr "Rozmazať"
-
-msgid "Adds motion blurring to the image"
-msgstr "Do obrázku pridá efekt rozmazania"
-
-msgid "Creates several copies of the Video output window"
-msgstr "Vytvorí viac kópií výstupného okna s videom"
-
-msgid "Enables an interactive Zoom feature"
-msgstr "Zapne funkciu interaktívneho približovania"
-
-msgid "Prevents the audio output from going over a predefined value."
-msgstr "Zabráni tomu, aby zvuk na výstupe prekročil definovanú hodnotu."
-
-msgid "Imitates the effect of surround sound when using headphones."
-msgstr ""
-"Zvolením tejto funkcie môžete aktivovať imitovanie surround-efektu aj pri "
-"použití slúchadiel."
-
-msgid "Adjust Image"
-msgstr "Prispôsobiť obrázok"
-
-msgid ""
-"This panel allows on-the-fly selection of various video effects.\n"
-"These filters can be configured individually in the Preferences, in the "
-"subsections of Video/Filters.\n"
-"To choose the order in which the filter are applied, a filter option string "
-"can be set in the Preferences, Video / Filters section."
-msgstr ""
-"V tomto paneli si môžete vybrať, ktoré efekty sa použijú pri prehrávaní "
-"videa.\n"
-"Filtre je možné individuálne nakonfigurovať v Nastaveniach, v podsekciách "
-"Video/Filtre.\n"
-"Ak chcete zmeniť poradie, v ktorom budú filtre aplikované, toto poradie "
-"zmeňte ho v Nastaveniach, v sekcii Video / Filtre."
-
-msgid ""
-"Stretch the video to fill the entire window when resizing the video instead "
-"of keeping the aspect ratio and displaying black borders."
-msgstr ""
-"Touto voľbou môžete roztiahnuť video tak, aby bolo vyplnené celé okno. "
-"Nemusí sa však dodržať stranový pomer videa."
-
-msgid "Use as Desktop Background"
-msgstr "Použiť ako pozadie pracovnej plochy"
-
-msgid ""
-"Use the video as the Desktop Background Desktop icons cannot be interacted "
-"with in this mode."
-msgstr ""
-"Uloženie videa ako pozadia pracovnej plochy, nie je v tomto režime možné."
-
-msgid ""
-"VLC could not detect any EyeTV compatible device.\n"
-"\n"
-"Check the device's connection, make sure that the latest EyeTV software is "
-"installed and try again."
-msgstr ""
-"Program VLC nezistil žiadne zariadenie kompatibilné s EyeTV.\n"
-"\n"
-"Skontrolujte, či je zariadenie pripojené, že je nainštalovaný najnovší EyeTV "
-"softvér a skúste to znova."
-
-msgid "Add controls to the video window"
-msgstr "Pridať ovládače do okna s videom"
-
-msgid "Input Settings not saved"
-msgstr "Nastavenia vstupu neboli uložené"
-
-msgid " State    : Playing %s"
-msgstr "Stav: Prehráva sa %s"
-
-msgid " State    : Opening/Connecting %s"
-msgstr "Stav: Otvára sa/Pripája sa %s"
-
-msgid "     c           Switch color on/off"
-msgstr "     c           Prepinanie farieb zapnute/vypnute"
-
-msgid "[Boxes]"
-msgstr "[Boxy]"
-
-msgid " Logs "
-msgstr "Záznamy"
-
-msgid " Objects "
-msgstr "Objekty"
-
-msgid " Playlist (All, one level) "
-msgstr " Playlist (všetky, jedna úroveň)"
-
-msgid " Playlist (Manually added) "
-msgstr " Playlist (manuálne pridávané)"
-
-msgid "Find: %s"
-msgstr "Hľadať: %s"
-
-msgid ""
-"<p><i>VideoLAN</i> prefers when applications request authorization before "
-"accessing Internet.</p>\n"
-"<p><b>VLC media player</b> can get information from the Internet in order to "
-"get <b>media informations</b> or to check for available <b>updates</b>.</p>\n"
-"<p><i>VLC media player</i> <b>doesn't</b> send or collect any information, "
-"even anonymously, about your usage.</p>\n"
-msgstr ""
-"<p><i>Tím VideoLAN</i> preferuje, ak nejaký program komunikuje cez internet "
-"až po opýtaní.</p>\n"
-" <p><b>Program VLC media player</b> však môže preberať určité informácie "
-"dostupné z internetu. Je to potrebné pre to, aby mohol sprostredkovať "
-"<b>informácie o médiu</b> alebo skontrolovať dostupnosť <b>aktualizácií</b>."
-"</p>\n"
-"<p><i>VLC media player</i> <b>NE</b>zbiera ani neodosiela žiadne informácie "
-"o používaní, a to ani anonymné.</p>\n"
-
-msgid "Sca&le"
-msgstr "Zmeniť &veľkosť"
-
-msgid "Allow the volume to be set to 400%"
-msgstr "Povoliť nastavenie hlasitosti na 400%"
-
-msgid ""
-"Allow the volume to have range from 0% to 400%, instead of 0% to 200%. This "
-"option can distort the audio, since it uses software amplification."
-msgstr ""
-"Povoliť nastavenie hlasitosti v rozsahu 0% - 400%, namiesto 0% - 200%. Táto "
-"voľba môže spôsobovať rušenie zvuku, pokiaľ sa používa softvérové "
-"zosilňovanie."
-
-msgid "Skins loader demux"
-msgstr "Demuxovať zavádzač skinov (súborov so vzhľadom)"
-
-msgid "ID3v1/2 and APEv1/2 tags parser"
-msgstr "Analyzátor ID 3 tagov 1/2 a APE tagov 1/2"
-
-msgid ""
-"It is possible to apply effects to the rendered text to improve its "
-"readability."
-msgstr ""
-"Ak chcete zlepšiť čitateľnosť písma, môžete naň aplikovať rôzne efekty."
-
-msgid "Expiration time for resumed TLS sessions"
-msgstr "Čas expirácie dokončených relácií TLS"
-
-msgid ""
-"It is possible to cache the resumed TLS sessions. This is the expiration "
-"time of the sessions stored in this cache, in seconds."
-msgstr ""
-"Dokončené TLS-relácie môže program ukladať do vyrovnávacej pamäti. Tu môžete "
-"zadať čas, počas ktorého sa budú relácie ukladať do vyrovnávacej pamäti. Čas "
-"zadávajte v sekundách."
-
-msgid ""
-"This is the maximum number of resumed TLS sessions that the cache will hold."
-msgstr ""
-"Toto je maximálny počet relácií TLS, ktoré sa budú udržiavať vo vyrovnávacej "
-"pamäti."
-
-msgid "OSSO"
-msgstr "OSSO"
-
-msgid ""
-"This is the host to which Growl notifications will be sent. By default, "
-"notifications are sent locally."
-msgstr ""
-"Toto je adresa hostiteľa, na ktorú sa budú odosielať notifikácie Growl. V "
-"predvolenom nastavení sú notifikácie zasielané len lokálne."
-
-msgid "Growl password on the Growl server."
-msgstr "Heslo pre Growl server."
-
-msgid "Growl UDP port on the Growl server."
-msgstr "UDP port na Growl-serveri."
-
-msgid "Simple XML Parser"
-msgstr "Jednoduchý analyzátor XML"
-
-msgid "IPv4 SAP"
-msgstr "IPv4 SAP"
-
-msgid "Listen to IPv4 announcements on the standard addresses."
-msgstr "Prijímať oznamy IPv4 na štandardnej adrese."
-
-msgid "IPv6 SAP"
-msgstr "IPv6 SAP"
-
-msgid "Listen to IPv6 announcements on the standard addresses."
-msgstr "Prijímať oznamy IPv6 na štandardnej adrese."
-
-msgid "IPv6 SAP scope"
-msgstr "Rozsah IPv6 SAP"
-
-msgid "Scope for IPv6 announcements (default is 8)."
-msgstr "Rozsah oznamov cez IPv6 (predvolená hodnota je 8)"
-
-msgid ""
-"This enables a SAP caching mechanism. This will result in lower SAP startup "
-"time, but you could end up with items corresponding to legacy streams."
-msgstr ""
-"Touto voľbou môžete zapnúť vyrovnávaciu pamäť pre protokol SAP. Protokol sa "
-"potom rýchlejšie spustí."
-
-msgid "add grain to image"
-msgstr "pridať zrnitosť do obrázka"
-
-msgid "Embed the overlay"
-msgstr "Vložiť prekrývanie"
-
-msgid "Embed the framebuffer overlay into a X11 window"
-msgstr "Vložiť prekrývanie z vyrovnávacej pamäti snímok do okna X11"
-
-msgid "Allows you to modify what OpenGL provider should be used"
-msgstr "Umožňuje zmeniť poskytovateľa OpenGL, ktorý sa použije"
-
-msgid "Cache size (number of images)"
-msgstr "Veľkosť vyrovnávacej pamäti (počet obrázkov)"
-
-msgid "Snapshot cache size (number of images to keep)."
-msgstr ""
-"Vyrovnávacia pamäť pre screenshoty (počet obrázkov udržiavaných v pamäti)."
-
-msgid "ID of the video output X window"
-msgstr "ID výstupu videa v okne X"
-
-msgid ""
-"VLC can embed its video output in an existing X11 window. This is the X "
-"identifier of that window (0 means none)."
-msgstr ""
-"Program VLC môže výstupné video vložiť do okna X11. Toto je identifikátor X "
-"pre toto okno (0 = žiaden)."
-
-msgid "Use shared memory"
-msgstr "Použiť zdieľanú pamäť"
-
-msgid "Use shared memory to communicate between VLC and the X server."
-msgstr ""
-"Použiť zdieľanú pamäť pre komunikáciu medzi programom VLC a X serverom."
-
-msgid "More bands : 80 / 20"
-msgstr "Viac pásiem : 80 / 20"
-
-msgid "Band separator"
-msgstr "Oddeľovač pásiem"
-
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-"#838383;\">http://www.example.com/stream.avi</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-"#838383;\">rtp://@:1234</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-"#838383;\">mms://mms.examples.com/stream.asx</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-"#838383;\">rtsp://server.example.org:8080/test.sdp</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-"#838383;\">http://www.yourtube.com/watch?v=gg64x</span></p></body></html>"
-msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-"#838383;\">http://www.example.com/stream.avi</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-"#838383;\">rtp://@:1234</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-"#838383;\">mms://mms.examples.com/stream.asx</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-"#838383;\">rtsp://server.example.org:8080/test.sdp</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
-"#838383;\">http://www.yourtube.com/watch?v=gg64x</span></p></body></html>"
-
-msgid "Minimal view mode (no toolbars)"
-msgstr "Režim minimálneho zobrazenia (bez panelov nástrojov)"
-
-msgid "No v4l2 instance found. Press the refresh button to try again."
-msgstr ""
-"Nenašla sa žiadna inštancia v4l2. Skúste to ešte raz stlačením tlačidla "
-"Obnoviť."
-
-msgid ""
-"Use the input picture to determine how to code it - interlaced or progressive"
-msgstr ""
-"Použiť vstupný obrázok na zistenie kódovania - prekladaného alebo "
-"progresívneho"
-
-msgid "Use media key control when VLC is in background"
-msgstr "POužiť ovládanie mediálnymi klávesami keď je program VLC na pozadí"
-
-msgid ""
-"By default, VLC will accept media key events also when being in background."
-msgstr ""
-"V predvolenom nastavení bude program VLC akceptovať udalosti vyvolané "
-"mediálnymi klávesom aj v prípade, že program je na pozadí."
-
-msgid "...when VLC is in background"
-msgstr "... keď je program VLC na pozadí"
-
-msgid "GME demuxer (Game_Music_Emu)"
-msgstr "Demuxér formátu GME (Game_Music_Emu)"
-
-msgid "Disable DVD Menus (for compatibility)"
-msgstr "Zablokovať menu DVD (vyššia kompatibilita)"
-
-msgid "Left front"
-msgstr "Ľavý predný"
-
-msgid "Live Update"
-msgstr "Live-aktualizácia"
+#~ msgid ""
+#~ "Use Internet Explorer entered HTTP proxy server for all URL. Don't take "
+#~ "into account bypasses settings and auto configuration scripts."
+#~ msgstr ""
+#~ "Pre všetky URL adresy použiť HTTP proxy server nastavený v programe "
+#~ "Internet Explorer. Nezadávajte nastavenia na vyhnutie sa nastaveniam účtu "
+#~ "a konfiguračné skripty:"
+
+#~ msgid ""
+#~ "Make VLC buffer audio data captured from jack for the specified length in "
+#~ "milliseconds."
+#~ msgstr ""
+#~ "Zachytávať údaje o zvuku vo vyrovnávacej pamäti programu VLC z jack "
+#~ "konektora počas zadaného času (čas sa udáva v milisekundách). "
+
+#~ msgid "Use file memory mapping"
+#~ msgstr "Použiť mapovanie pamäti súboru"
+
+#~ msgid "Try to use memory mapping to read files and block devices."
+#~ msgstr "Pokúsiť sa použiť mapovanie pamäti pri čítaní súborov a blokov."
+
+#~ msgid "MMap"
+#~ msgstr "MMap"
+
+#~ msgid "Audio Channel to use, if there are several audio inputs."
+#~ msgstr "Zvukový kanál, ktorý sa práve používa."
+
+#~ msgid "Decimation level for MJPEG streams"
+#~ msgstr "Úroveň zoslabovania MJPEG streamov"
+
+#~ msgid ""
+#~ "Alsa or OSS audio capture in the v4l access is deprecated. please use "
+#~ "'v4l:// :input-slave=alsa://' or 'v4l:// :input-slave=oss://' instead."
+#~ msgstr ""
+#~ "Neodporúča sa používanie zvukových záznamov Alsa alebo OSS pri prístupe "
+#~ "cez v4l. Namiesto toho prosím použite príkaz 'v4l:// :input-"
+#~ "slave=alsa://' alebo 'v4l:// :input-slave=oss://'."
+
+#~ msgid "IO Method (READ, MMAP, USERPTR)."
+#~ msgstr "Metóda IO (READ, MMAP, USERPTR)."
+
+#~ msgid ""
+#~ "Automatically set the white balance of the video input (if supported by "
+#~ "the v4l2 driver)."
+#~ msgstr ""
+#~ "Automaticky nastaviť vyváženie bielej na vstupe videa (ak je táto funkcia "
+#~ "podporovaná ovládačom v4l2)."
+
+#~ msgid ""
+#~ "Trigger a white balancing action, useless if auto white balance is "
+#~ "activated (if supported by the v4l2 driver)."
+#~ msgstr ""
+#~ "Spúšťač vyvažovania bielej farby, nie je účinný v prípade, že je "
+#~ "aktivované automatické vyvažovanie bielej farby (ak je takáto funkcia "
+#~ "podporovaná ovládačom I4l2)."
+
+#~ msgid "Blue balance of the video input (if supported by the v4l2 driver)."
+#~ msgstr ""
+#~ "Vyváženie modrej farby na vstupe videa (ak je táto funkcia podporovaná "
+#~ "ovládačom v4l2)."
+
+#~ msgid ""
+#~ "Set the camera's horizontal centering (if supported by the v4l2 driver)."
+#~ msgstr ""
+#~ "Nastaviť horizontálne vycentrovanie kamery (ak je táto funkcia "
+#~ "podporovaná ovládačom v4l2)."
+
+#~ msgid "Treble level of the audio input (if supported by the v4l2 driver)."
+#~ msgstr ""
+#~ "Úroveň výšok na vstupe zvuku (ak je táto funkcia podporovaná ovládačom "
+#~ "v4l2)."
+
+#~ msgid ""
+#~ "Alsa or OSS audio capture in the v4l2 access is deprecated. please use "
+#~ "'v4l2:// :input-slave=alsa://' or 'v4l2:// :input-slave=oss://' instead."
+#~ msgstr ""
+#~ "Neodporúča sa používanie zvukových záznamov Alsa alebo OSS pri prístupe "
+#~ "cez v4l2. Namiesto toho použite prosím príkaz 'v4l2:// :input-"
+#~ "slave=alsa://' alebo 'v4l2:// :input-slave=oss://'."
+
+#~ msgid "AUTO"
+#~ msgstr "AUTO"
+
+#~ msgid "READ"
+#~ msgstr "READ"
+
+#~ msgid "MMAP"
+#~ msgstr "MMAP"
+
+#~ msgid "USERPTR"
+#~ msgstr "USERPTR"
+
+#~ msgid ""
+#~ "Path to the x509 PEM private key file that will be used for HTTPS. Leave "
+#~ "empty if you don't have one."
+#~ msgstr ""
+#~ "Cesta k súboru s privátnym kľúčom x509 PEM, ktorý sa používa pri prenose "
+#~ "pomocou protokolu HTTPS. Ak súbor s privátnym kľúčom nemáte, ponechajte "
+#~ "políčko prázdne. "
+
+#~ msgid ""
+#~ "Path to the x509 PEM trusted root CA certificates (certificate authority) "
+#~ "file that will be used for HTTPS. Leave empty if you don't have one."
+#~ msgstr ""
+#~ "Cesta k certifikátom dôveryhodných serverov, ktoré sa používajú pri "
+#~ "prenose pomocou protokolu HTTPS. Ak certifikáty nemáte, ponechajte "
+#~ "políčko prázdne."
+
+#~ msgid ""
+#~ "Path to the x509 PEM Certificates Revocation List file that will be used "
+#~ "for SSL. Leave empty if you don't have one."
+#~ msgstr ""
+#~ "Cesta k zoznamu s odvolanými certifikátmi X509. Tento zoznam sa používa "
+#~ "pri SSL-spojení. Ak takýto súbor nemáte, ponechajte políčko prázdne."
+
+#~ msgid "No audio device name was given. You might want to enter \"default\"."
+#~ msgstr ""
+#~ "Nie je zadaný žiaden názov zvuk. zariadenia. Zadajte aspoň hodnotu "
+#~ "\"default\"."
+
+#~ msgid "Try to work around buggy OSS drivers"
+#~ msgstr "Pokúsiť sa obísť chybné ovládače operačného systému"
+
+#~ msgid ""
+#~ "Some buggy OSS drivers just don't like when their internal buffers are "
+#~ "completely filled (the sound gets heavily hashed). If you have one of "
+#~ "these drivers, then you need to enable this option."
+#~ msgstr ""
+#~ "Niektoré chybné ovládače (prítomné v operačných systémoch) nepracujú "
+#~ "správne v prípade, že sa úplne zaplní ich interná vyrovnávacia pamäť "
+#~ "(spoznáte to podľa toho, že zvuk bude trhaný). Ak používate nejaké takéto "
+#~ "ovládače, skúste aktivovať túto voľbu."
+
+#~ msgid "AltiVec FFmpeg audio/video decoder ((MS)MPEG4,SVQ1,H263,WMV,WMA)"
+#~ msgstr ""
+#~ "Dekodér/kodér videa/zvuku AltiVec FF mpeg ((MS)MPEG4,SVQ1,H263,WMV,WMA)"
+
+#~ msgid "Reload image file every n seconds."
+#~ msgstr "Obnoviť súbor s obrázkom každých n sekúnd."
+
+#~ msgid "Consider width and height as maximum values."
+#~ msgstr "Považovať šírku a výšku za maximálne hodnoty."
+
+#~ msgid ""
+#~ "This integer when viewed in binary is a debugging mask\n"
+#~ "calls                 1\n"
+#~ "packet assembly info  2\n"
+#~ msgstr ""
+#~ "Táto hodnota (ak sa zobrazí binárne) môže byť aj maskou pre ladenie "
+#~ "chýb:\n"
+#~ "pre zobrazenie volaní zadajte hodnotu 1\n"
+#~ "pre zobrazenie kompletných informácií o pakete zadajte hodnotu 2\n"
+
+#~ msgid "Text is always opaque"
+#~ msgstr "Text je vždy nepriehľadný"
+
+#~ msgid "Subpage"
+#~ msgstr "Podstránka"
+
+#~ msgid "1.00x"
+#~ msgstr "1.00x"
+
+#~ msgid "Handlers"
+#~ msgstr "Obslužné súbory"
+
+#~ msgid ""
+#~ "List of handler extensions and executable paths (for instance: php=/usr/"
+#~ "bin/php,pl=/usr/bin/perl)."
+#~ msgstr ""
+#~ "Zoznam prípon a cesty k obslužným súborom. (napr.: php=/usr/bin/php,pl=/"
+#~ "usr/bin/perl)."
+
+#~ msgid "Export album art as /art"
+#~ msgstr "Exportovať album do parametra /art."
+
+#~ msgid ""
+#~ "Allow exporting album art for current playlist items at the /art and /art?"
+#~ "id=<id> URLs."
+#~ msgstr ""
+#~ "Táto voľba umožňuje exportovať informácie o druhu albumu v aktuálnom "
+#~ "playliste do parametra /art alebo /art?id=<id> v URL adrese."
+
+#~ msgid "HTTP interface x509 PEM certificate file (enables SSL)."
+#~ msgstr ""
+#~ "Certifikačný súbor HTTP rozhrania x509 PEM (zapne sa šifrovanie SSL)"
+
+#~ msgid "HTTP interface x509 PEM private key file."
+#~ msgstr "Súbor s privátnym kľúčom HTTP rozhrania x509 PEM"
+
+#~ msgid "HTTP interface x509 PEM trusted root CA certificates file."
+#~ msgstr ""
+#~ "Súbor s certifikátmi dôveryhodných serverov x509 PEM v HTTP rozhraní"
+
+#~ msgid "Signals"
+#~ msgstr "Signály"
+
+#~ msgid ""
+#~ "This AVI file is broken. Seeking will not work correctly.\n"
+#~ "Do you want to try to fix it?\n"
+#~ "\n"
+#~ "This might take a long time."
+#~ msgstr ""
+#~ "Tento AVI súbor je porušený. Vyhľadávanie preto nebude fungovať "
+#~ "správne. \n"
+#~ "Chcete sa pokúsiť o opravu súboru? \n"
+#~ "\n"
+#~ "Môže to trvať pomerne dlho."
+
+#~ msgid "Repair"
+#~ msgstr "Opraviť"
+
+#~ msgid ""
+#~ "Force the subtiles format. Use \"auto\", the set of supported values "
+#~ "varies."
+#~ msgstr ""
+#~ "Vynútiť si formát titulkov. Použite hodnotu \"auto\", existuje veľké "
+#~ "množstvo podporovaných hodnôt."
+
+#~ msgid "Control word for the CSA encryption algorithm"
+#~ msgstr "Heslo pre kryptovací algoritmus CSA"
+
+#~ msgid "VLC was brought to you by:"
+#~ msgstr "Program VLC vám sprostredkoval:"
+
+#~ msgid "Rewind"
+#~ msgstr "Previnúť"
+
+#~ msgid "Apply the equalizer filter twice. The effect will be sharper."
+#~ msgstr "Aplikovať efekt ekvalizéra dvakrát. Výsledný efekt bude silnejší."
+
+#~ msgid "Enable the equalizer. Bands can be set manually or using a preset."
+#~ msgstr ""
+#~ "Zapnúť ekvalizér. Pásma môžete nastaviť manuálne alebo použiť niektoré z "
+#~ "predvolených nastavení"
+
+#~ msgid "Shows more information about the available video filters."
+#~ msgstr "Zobrazia sa podrobnejšie informácie o dostupných filtroch videa."
+
+#~ msgid "Blur"
+#~ msgstr "Rozmazať"
+
+#~ msgid "Adds motion blurring to the image"
+#~ msgstr "Do obrázku pridá efekt rozmazania"
+
+#~ msgid "Creates several copies of the Video output window"
+#~ msgstr "Vytvorí viac kópií výstupného okna s videom"
+
+#~ msgid "Enables an interactive Zoom feature"
+#~ msgstr "Zapne funkciu interaktívneho približovania"
+
+#~ msgid "Prevents the audio output from going over a predefined value."
+#~ msgstr "Zabráni tomu, aby zvuk na výstupe prekročil definovanú hodnotu."
+
+#~ msgid "Imitates the effect of surround sound when using headphones."
+#~ msgstr ""
+#~ "Zvolením tejto funkcie môžete aktivovať imitovanie surround-efektu aj pri "
+#~ "použití slúchadiel."
+
+#~ msgid "Adjust Image"
+#~ msgstr "Prispôsobiť obrázok"
+
+#~ msgid ""
+#~ "This panel allows on-the-fly selection of various video effects.\n"
+#~ "These filters can be configured individually in the Preferences, in the "
+#~ "subsections of Video/Filters.\n"
+#~ "To choose the order in which the filter are applied, a filter option "
+#~ "string can be set in the Preferences, Video / Filters section."
+#~ msgstr ""
+#~ "V tomto paneli si môžete vybrať, ktoré efekty sa použijú pri prehrávaní "
+#~ "videa.\n"
+#~ "Filtre je možné individuálne nakonfigurovať v Nastaveniach, v podsekciách "
+#~ "Video/Filtre.\n"
+#~ "Ak chcete zmeniť poradie, v ktorom budú filtre aplikované, toto poradie "
+#~ "zmeňte ho v Nastaveniach, v sekcii Video / Filtre."
+
+#~ msgid ""
+#~ "Stretch the video to fill the entire window when resizing the video "
+#~ "instead of keeping the aspect ratio and displaying black borders."
+#~ msgstr ""
+#~ "Touto voľbou môžete roztiahnuť video tak, aby bolo vyplnené celé okno. "
+#~ "Nemusí sa však dodržať stranový pomer videa."
+
+#~ msgid "Use as Desktop Background"
+#~ msgstr "Použiť ako pozadie pracovnej plochy"
+
+#~ msgid ""
+#~ "Use the video as the Desktop Background Desktop icons cannot be "
+#~ "interacted with in this mode."
+#~ msgstr ""
+#~ "Uloženie videa ako pozadia pracovnej plochy, nie je v tomto režime možné."
+
+#~ msgid ""
+#~ "VLC could not detect any EyeTV compatible device.\n"
+#~ "\n"
+#~ "Check the device's connection, make sure that the latest EyeTV software "
+#~ "is installed and try again."
+#~ msgstr ""
+#~ "Program VLC nezistil žiadne zariadenie kompatibilné s EyeTV.\n"
+#~ "\n"
+#~ "Skontrolujte, či je zariadenie pripojené, že je nainštalovaný najnovší "
+#~ "EyeTV softvér a skúste to znova."
+
+#~ msgid "Add controls to the video window"
+#~ msgstr "Pridať ovládače do okna s videom"
+
+#~ msgid "Input Settings not saved"
+#~ msgstr "Nastavenia vstupu neboli uložené"
+
+#~ msgid " State    : Playing %s"
+#~ msgstr "Stav: Prehráva sa %s"
+
+#~ msgid " State    : Opening/Connecting %s"
+#~ msgstr "Stav: Otvára sa/Pripája sa %s"
+
+#~ msgid "     c           Switch color on/off"
+#~ msgstr "     c           Prepinanie farieb zapnute/vypnute"
+
+#~ msgid "[Boxes]"
+#~ msgstr "[Boxy]"
+
+#~ msgid " Logs "
+#~ msgstr "Záznamy"
+
+#~ msgid " Objects "
+#~ msgstr "Objekty"
+
+#~ msgid " Playlist (All, one level) "
+#~ msgstr " Playlist (všetky, jedna úroveň)"
+
+#~ msgid " Playlist (Manually added) "
+#~ msgstr " Playlist (manuálne pridávané)"
+
+#~ msgid "Find: %s"
+#~ msgstr "Hľadať: %s"
+
+#~ msgid ""
+#~ "<p><i>VideoLAN</i> prefers when applications request authorization before "
+#~ "accessing Internet.</p>\n"
+#~ "<p><b>VLC media player</b> can get information from the Internet in order "
+#~ "to get <b>media informations</b> or to check for available <b>updates</b>."
+#~ "</p>\n"
+#~ "<p><i>VLC media player</i> <b>doesn't</b> send or collect any "
+#~ "information, even anonymously, about your usage.</p>\n"
+#~ msgstr ""
+#~ "<p><i>Tím VideoLAN</i> preferuje, ak nejaký program komunikuje cez "
+#~ "internet až po opýtaní.</p>\n"
+#~ " <p><b>Program VLC media player</b> však môže preberať určité informácie "
+#~ "dostupné z internetu. Je to potrebné pre to, aby mohol sprostredkovať "
+#~ "<b>informácie o médiu</b> alebo skontrolovať dostupnosť <b>aktualizácií</"
+#~ "b>.</p>\n"
+#~ "<p><i>VLC media player</i> <b>NE</b>zbiera ani neodosiela žiadne "
+#~ "informácie o používaní, a to ani anonymné.</p>\n"
+
+#~ msgid "Sca&le"
+#~ msgstr "Zmeniť &veľkosť"
+
+#~ msgid "Allow the volume to be set to 400%"
+#~ msgstr "Povoliť nastavenie hlasitosti na 400%"
+
+#~ msgid ""
+#~ "Allow the volume to have range from 0% to 400%, instead of 0% to 200%. "
+#~ "This option can distort the audio, since it uses software amplification."
+#~ msgstr ""
+#~ "Povoliť nastavenie hlasitosti v rozsahu 0% - 400%, namiesto 0% - 200%. "
+#~ "Táto voľba môže spôsobovať rušenie zvuku, pokiaľ sa používa softvérové "
+#~ "zosilňovanie."
+
+#~ msgid "Skins loader demux"
+#~ msgstr "Demuxovať zavádzač skinov (súborov so vzhľadom)"
+
+#~ msgid "ID3v1/2 and APEv1/2 tags parser"
+#~ msgstr "Analyzátor ID 3 tagov 1/2 a APE tagov 1/2"
+
+#~ msgid ""
+#~ "It is possible to apply effects to the rendered text to improve its "
+#~ "readability."
+#~ msgstr ""
+#~ "Ak chcete zlepšiť čitateľnosť písma, môžete naň aplikovať rôzne efekty."
+
+#~ msgid "Expiration time for resumed TLS sessions"
+#~ msgstr "Čas expirácie dokončených relácií TLS"
+
+#~ msgid ""
+#~ "It is possible to cache the resumed TLS sessions. This is the expiration "
+#~ "time of the sessions stored in this cache, in seconds."
+#~ msgstr ""
+#~ "Dokončené TLS-relácie môže program ukladať do vyrovnávacej pamäti. Tu "
+#~ "môžete zadať čas, počas ktorého sa budú relácie ukladať do vyrovnávacej "
+#~ "pamäti. Čas zadávajte v sekundách."
+
+#~ msgid ""
+#~ "This is the maximum number of resumed TLS sessions that the cache will "
+#~ "hold."
+#~ msgstr ""
+#~ "Toto je maximálny počet relácií TLS, ktoré sa budú udržiavať vo "
+#~ "vyrovnávacej pamäti."
+
+#~ msgid "OSSO"
+#~ msgstr "OSSO"
+
+#~ msgid ""
+#~ "This is the host to which Growl notifications will be sent. By default, "
+#~ "notifications are sent locally."
+#~ msgstr ""
+#~ "Toto je adresa hostiteľa, na ktorú sa budú odosielať notifikácie Growl. V "
+#~ "predvolenom nastavení sú notifikácie zasielané len lokálne."
+
+#~ msgid "Growl password on the Growl server."
+#~ msgstr "Heslo pre Growl server."
+
+#~ msgid "Growl UDP port on the Growl server."
+#~ msgstr "UDP port na Growl-serveri."
+
+#~ msgid "Simple XML Parser"
+#~ msgstr "Jednoduchý analyzátor XML"
+
+#~ msgid "IPv4 SAP"
+#~ msgstr "IPv4 SAP"
+
+#~ msgid "Listen to IPv4 announcements on the standard addresses."
+#~ msgstr "Prijímať oznamy IPv4 na štandardnej adrese."
+
+#~ msgid "IPv6 SAP"
+#~ msgstr "IPv6 SAP"
+
+#~ msgid "Listen to IPv6 announcements on the standard addresses."
+#~ msgstr "Prijímať oznamy IPv6 na štandardnej adrese."
+
+#~ msgid "IPv6 SAP scope"
+#~ msgstr "Rozsah IPv6 SAP"
+
+#~ msgid "Scope for IPv6 announcements (default is 8)."
+#~ msgstr "Rozsah oznamov cez IPv6 (predvolená hodnota je 8)"
+
+#~ msgid ""
+#~ "This enables a SAP caching mechanism. This will result in lower SAP "
+#~ "startup time, but you could end up with items corresponding to legacy "
+#~ "streams."
+#~ msgstr ""
+#~ "Touto voľbou môžete zapnúť vyrovnávaciu pamäť pre protokol SAP. Protokol "
+#~ "sa potom rýchlejšie spustí."
+
+#~ msgid "add grain to image"
+#~ msgstr "pridať zrnitosť do obrázka"
+
+#~ msgid "Embed the overlay"
+#~ msgstr "Vložiť prekrývanie"
+
+#~ msgid "Embed the framebuffer overlay into a X11 window"
+#~ msgstr "Vložiť prekrývanie z vyrovnávacej pamäti snímok do okna X11"
+
+#~ msgid "Allows you to modify what OpenGL provider should be used"
+#~ msgstr "Umožňuje zmeniť poskytovateľa OpenGL, ktorý sa použije"
+
+#~ msgid "Cache size (number of images)"
+#~ msgstr "Veľkosť vyrovnávacej pamäti (počet obrázkov)"
+
+#~ msgid "Snapshot cache size (number of images to keep)."
+#~ msgstr ""
+#~ "Vyrovnávacia pamäť pre screenshoty (počet obrázkov udržiavaných v pamäti)."
+
+#~ msgid "ID of the video output X window"
+#~ msgstr "ID výstupu videa v okne X"
+
+#~ msgid ""
+#~ "VLC can embed its video output in an existing X11 window. This is the X "
+#~ "identifier of that window (0 means none)."
+#~ msgstr ""
+#~ "Program VLC môže výstupné video vložiť do okna X11. Toto je identifikátor "
+#~ "X pre toto okno (0 = žiaden)."
+
+#~ msgid "Use shared memory"
+#~ msgstr "Použiť zdieľanú pamäť"
+
+#~ msgid "Use shared memory to communicate between VLC and the X server."
+#~ msgstr ""
+#~ "Použiť zdieľanú pamäť pre komunikáciu medzi programom VLC a X serverom."
+
+#~ msgid "More bands : 80 / 20"
+#~ msgstr "Viac pásiem : 80 / 20"
+
+#~ msgid "Band separator"
+#~ msgstr "Oddeľovač pásiem"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+#~ "#838383;\">http://www.example.com/stream.avi</span></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+#~ "#838383;\">rtp://@:1234</span></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+#~ "#838383;\">mms://mms.examples.com/stream.asx</span></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+#~ "#838383;\">rtsp://server.example.org:8080/test.sdp</span></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+#~ "#838383;\">http://www.yourtube.com/watch?v=gg64x</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+#~ "#838383;\">http://www.example.com/stream.avi</span></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+#~ "#838383;\">rtp://@:1234</span></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+#~ "#838383;\">mms://mms.examples.com/stream.asx</span></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+#~ "#838383;\">rtsp://server.example.org:8080/test.sdp</span></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
+#~ "#838383;\">http://www.yourtube.com/watch?v=gg64x</span></p></body></html>"
+
+#~ msgid "Minimal view mode (no toolbars)"
+#~ msgstr "Režim minimálneho zobrazenia (bez panelov nástrojov)"
+
+#~ msgid "No v4l2 instance found. Press the refresh button to try again."
+#~ msgstr ""
+#~ "Nenašla sa žiadna inštancia v4l2. Skúste to ešte raz stlačením tlačidla "
+#~ "Obnoviť."
+
+#~ msgid ""
+#~ "Use the input picture to determine how to code it - interlaced or "
+#~ "progressive"
+#~ msgstr ""
+#~ "Použiť vstupný obrázok na zistenie kódovania - prekladaného alebo "
+#~ "progresívneho"
+
+#~ msgid "Use media key control when VLC is in background"
+#~ msgstr "POužiť ovládanie mediálnymi klávesami keď je program VLC na pozadí"
+
+#~ msgid ""
+#~ "By default, VLC will accept media key events also when being in "
+#~ "background."
+#~ msgstr ""
+#~ "V predvolenom nastavení bude program VLC akceptovať udalosti vyvolané "
+#~ "mediálnymi klávesom aj v prípade, že program je na pozadí."
+
+#~ msgid "...when VLC is in background"
+#~ msgstr "... keď je program VLC na pozadí"
+
+#~ msgid "GME demuxer (Game_Music_Emu)"
+#~ msgstr "Demuxér formátu GME (Game_Music_Emu)"
+
+#~ msgid "Disable DVD Menus (for compatibility)"
+#~ msgstr "Zablokovať menu DVD (vyššia kompatibilita)"
+
+#~ msgid "Left front"
+#~ msgstr "Ľavý predný"
+
+#~ msgid "Live Update"
+#~ msgstr "Live-aktualizácia"
 
 #, fuzzy
-msgid "&Update"
-msgstr "Live-aktualizácia"
+#~ msgid "&Update"
+#~ msgstr "Live-aktualizácia"
 
-msgid ""
-"To make sure that VLC no longer listens to your media key events, it needs "
-"to be restarted."
-msgstr ""
-"Aby sa zaručilo, že program VLC už nesníma udalosti mediálnych klávesov, je "
-"potrebné ho reštartovať."
+#~ msgid ""
+#~ "To make sure that VLC no longer listens to your media key events, it "
+#~ "needs to be restarted."
+#~ msgstr ""
+#~ "Aby sa zaručilo, že program VLC už nesníma udalosti mediálnych klávesov, "
+#~ "je potrebné ho reštartovať."
 
-msgid "Relaunch VLC"
-msgstr "Opäť spustiť VLC"
+#~ msgid "Relaunch VLC"
+#~ msgstr "Opäť spustiť VLC"
 
-msgid ""
-"More options on background, shadow and outline are available in the advanced "
-"preferences."
-msgstr ""
-"Viac možností na pozadí, tieň a obrys sú dostupné v pokročilých nastaveniach."
+#~ msgid ""
+#~ "More options on background, shadow and outline are available in the "
+#~ "advanced preferences."
+#~ msgstr ""
+#~ "Viac možností na pozadí, tieň a obrys sú dostupné v pokročilých "
+#~ "nastaveniach."
 
-msgid "Advance of audio over video:"
-msgstr "Predstih zvuku pred videom:"
+#~ msgid "Advance of audio over video:"
+#~ msgstr "Predstih zvuku pred videom:"
 
-msgid "Use systems codecs if available, for WMV codecs"
-msgstr "Použiť systémové kodeky, ak sú dostupné, pre WMV kodeky"
+#~ msgid "Use systems codecs if available, for WMV codecs"
+#~ msgstr "Použiť systémové kodeky, ak sú dostupné, pre WMV kodeky"
 
 #, fuzzy
 #~ msgid "No item currently playing"
