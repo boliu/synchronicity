@@ -88,7 +88,7 @@ MessagesDialog::MessagesDialog( intf_thread_t *_p_intf)
 
     int verbosity = var_InheritInteger( p_intf, "verbose" );
     vlc_atomic_set( &this->verbosity, verbosity );
-    ui.verbosityBox->setValue( verbosity );
+    ui.verbosityBox->setValue( qMin( verbosity, 2 ) );
 
     char *objs = var_InheritString( p_intf, "verbose-objects" );
     if( objs != NULL )
