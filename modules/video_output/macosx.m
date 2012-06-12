@@ -52,6 +52,17 @@
 - (BOOL)isFullscreen;
 @end
 
+/* compilation support for 10.5 and 10.6 */
+#define OSX_LION NSAppKitVersionNumber >= 1115.2
+#ifndef MAC_OS_X_VERSION_10_7
+
+@interface NSView (IntroducedInLion)
+- (NSRect)convertRectToBacking:(NSRect)aRect;
+- (void)setWantsBestResolutionOpenGLSurface:(BOOL)aBool;
+@end
+
+#endif
+
 /**
  * Forward declarations
  */
@@ -378,7 +389,12 @@ static int Control (vout_display_t *vd, int query, va_list ap)
 
             if (!config_GetInt(vd, "macosx-video-autoresize"))
             {
-                NSRect bounds = [sys->glView bounds];
+                NSRect bounds;
+                /* on HiDPI displays, the point bounds don't equal the actual pixel based bounds */
+                if (OSX_LION)
+                    bounds = [sys->glView convertRectToBacking:[sys->glView bounds]];
+                else
+                    bounds = [sys->glView bounds];
                 cfg_tmp.display.width = bounds.size.width;
                 cfg_tmp.display.height = bounds.size.height;
             }
@@ -495,6 +511,10 @@ static void OpenglSwap (vlc_gl_t *gl)
     if (!self)
         return nil;
 
+    /* enable HiDPI support on OS X 10.7 and later */
+    if (OSX_LION)
+        [self setWantsBestResolutionOpenGLSurface:YES];
+
     /* Swap buffers only during the vertical retrace of the monitor.
      http://developer.apple.com/documentation/GraphicsImaging/
      Conceptual/OpenGL/chap5/chapter_5_section_44.html */
@@ -607,7 +627,12 @@ static void OpenglSwap (vlc_gl_t *gl)
 {
     VLCAssertMainThread();
 
-    NSRect bounds = [self bounds];
+    NSRect bounds;
+    /* on HiDPI displays, the point bounds don't equal the actual pixel based bounds */
+    if (OSX_LION)
+        bounds = [self convertRectToBacking:[self bounds]];
+    else
+        bounds = [self bounds];
     vout_display_place_t place;
     
     @synchronized(self) {
@@ -741,7 +766,11 @@ static void OpenglSwap (vlc_gl_t *gl)
     NSRect s_rect;
     BOOL b_inside;
 
-    s_rect = [self bounds];
+    /* on HiDPI displays, the point bounds don't equal the actual pixel based bounds */
+    if (OSX_LION)
+        s_rect = [self convertRectToBacking:[self bounds]];
+    else
+        s_rect = [self bounds];
     ml = [self convertPoint: [o_event locationInWindow] fromView: nil];
     b_inside = [self mouse: ml inRect: s_rect];
     
