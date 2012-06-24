@@ -176,6 +176,9 @@ static const GUID guid_wmv_enc = { 0x3181343b, 0x94a2, 0x4feb, { 0xad, 0xef, 0x3
 static const GUID guid_wmv_enc2 = { 0x96b57cdd, 0x8966, 0x410c,{ 0xbb, 0x1f, 0xc9, 0x7e, 0xea, 0x76, 0x5c, 0x04 } };
 static const GUID guid_wma_enc = { 0x70f598e9, 0xf4ab, 0x495a, { 0x99, 0xe2, 0xa7, 0xc4, 0xd3, 0xd8, 0x9a, 0xbf } };
 
+#define VLC_CODEC_MSS1      VLC_FOURCC('M','S','S','1')
+#define VLC_CODEC_MSS2      VLC_FOURCC('M','S','S','2')
+
 typedef struct
 {
     vlc_fourcc_t i_fourcc;
@@ -195,10 +198,8 @@ static const codec_dll decoders_table[] =
     /* WMV1 */
     { VLC_CODEC_WMV1,   "wmvdmod.dll", &guid_wmv },
     /* Screen codecs */
-    { VLC_FOURCC('M','S','S','2'), "wmsdmod.dll", &guid_wms },
-    { VLC_FOURCC('m','s','s','2'), "wmsdmod.dll", &guid_wms },
-    { VLC_FOURCC('M','S','S','1'), "wmsdmod.dll", &guid_wms },
-    { VLC_FOURCC('m','s','s','1'), "wmsdmod.dll", &guid_wms },
+    { VLC_CODEC_MSS2,   "wmsdmod.dll", &guid_wms },
+    { VLC_CODEC_MSS1,   "wmsdmod.dll", &guid_wms },
     /* Windows Media Video Adv */
     { VLC_CODEC_WMVA,   "wmvadvd.dll", &guid_wmva },
 
