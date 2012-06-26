@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vlc\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2012-06-07 16:44+0200\n"
+"POT-Creation-Date: 2012-06-27 01:19+0200\n"
 "PO-Revision-Date: 2010-09-21 15:58+0400\n"
 "Last-Translator: Eduard Babayan <edo248@gmail.com>\n"
 "Language-Team: VLC Armenian <edo248@gmail.com>\n"
@@ -906,7 +906,7 @@ msgstr "Ձայնային կանալներ"
 #: src/audio_output/output.c:103 src/audio_output/output.c:139
 #: modules/access/alsa.c:69 modules/access/oss.c:64
 #: modules/access/v4l2/video.c:284 modules/audio_output/alsa.c:74
-#: modules/audio_output/directx.c:432 modules/audio_output/kai.c:219
+#: modules/audio_output/directx.c:427 modules/audio_output/kai.c:219
 #: modules/audio_output/oss.c:194 modules/audio_output/portaudio.c:400
 #: modules/audio_output/waveout.c:413 modules/codec/twolame.c:70
 msgid "Stereo"
@@ -4298,7 +4298,7 @@ msgid "Slower (fine)"
 msgstr "Ավելի դանդաղ (չնչին)"
 
 #: src/libvlc-module.c:1362 modules/control/hotkeys.c:687
-#: modules/gui/macosx/about.m:211 modules/gui/macosx/MainMenu.m:277
+#: modules/gui/macosx/about.m:216 modules/gui/macosx/MainMenu.m:277
 #: modules/gui/macosx/MainMenu.m:365 modules/gui/macosx/MainMenu.m:373
 #: modules/gui/macosx/MainMenu.m:1170 modules/gui/macosx/wizard.m:312
 #: modules/gui/macosx/wizard.m:324 modules/gui/macosx/wizard.m:1560
@@ -4314,7 +4314,7 @@ msgid "Select the hotkey to use to skip to the next item in the playlist."
 msgstr "Ընտրեք կոճակ օգտագործել է ցատկանցելու հաջորդ կետին, երգացանկ\"."
 
 #: src/libvlc-module.c:1364 modules/control/hotkeys.c:693
-#: modules/gui/macosx/about.m:212 modules/gui/macosx/MainMenu.m:276
+#: modules/gui/macosx/about.m:217 modules/gui/macosx/MainMenu.m:276
 #: modules/gui/macosx/MainMenu.m:366 modules/gui/macosx/MainMenu.m:372
 #: modules/gui/macosx/MainMenu.m:1169
 #: modules/gui/qt4/components/controller.hpp:119 modules/notify/notify.c:339
@@ -6719,7 +6719,7 @@ msgid "DirectShow input"
 msgstr "DirectShow մուտք"
 
 #: modules/access/dshow/dshow.cpp:232 modules/access/dshow/dshow.cpp:237
-#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:140
+#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:136
 #: modules/audio_output/waveout.c:99 modules/video_output/msw/directx.c:109
 msgid "Refresh list"
 msgstr "Թարմացնել ցուցակը"
@@ -7321,7 +7321,7 @@ msgstr ""
 msgid "EyeTV input"
 msgstr "EyeTV մուտք"
 
-#: modules/access/file.c:182 modules/access/file.c:303
+#: modules/access/file.c:182 modules/access/file.c:310
 #: modules/access/mtp.c:213 modules/access/mtp.c:302 modules/access/vdr.c:378
 #: modules/access/vdr.c:548
 msgid "File reading failed"
@@ -7332,7 +7332,7 @@ msgstr "Ֆայլի ընթերցումը ձախողվեց"
 msgid "VLC could not open the file \"%s\". (%m)"
 msgstr "VLCն չի կարող բացել \"%s\" ֆայլը"
 
-#: modules/access/file.c:304
+#: modules/access/file.c:311
 #, fuzzy, c-format
 msgid "VLC could not read the file (%m)."
 msgstr "VLCն չի կարող կարդալ ֆայլը"
@@ -9461,7 +9461,7 @@ msgid "NTSC M South Korea"
 msgstr ""
 
 #: modules/access/v4l2/video.c:283 modules/audio_output/alsa.c:74
-#: modules/audio_output/directx.c:450 modules/audio_output/kai.c:222
+#: modules/audio_output/directx.c:445 modules/audio_output/kai.c:222
 #: modules/audio_output/oss.c:214 modules/audio_output/portaudio.c:392
 #: modules/audio_output/waveout.c:428
 msgid "Mono"
@@ -10738,7 +10738,7 @@ msgid "ALSA audio output"
 msgstr "ALSA աուդիո ելք"
 
 #: modules/audio_output/alsa.c:154 modules/audio_output/auhal.c:129
-#: modules/audio_output/auhal.c:978 modules/audio_output/directx.c:335
+#: modules/audio_output/auhal.c:978 modules/audio_output/directx.c:330
 #: modules/audio_output/kai.c:215 modules/audio_output/oss.c:121
 #: modules/audio_output/portaudio.c:386 modules/audio_output/waveout.c:358
 #: modules/gui/macosx/MainMenu.m:300 modules/gui/macosx/MainMenu.m:301
@@ -10819,22 +10819,22 @@ msgstr ""
 msgid "%s (Encoded Output)"
 msgstr "%s (կոդավորված ելք)"
 
-#: modules/audio_output/directx.c:122 modules/audio_output/portaudio.c:107
+#: modules/audio_output/directx.c:118 modules/audio_output/portaudio.c:107
 #, fuzzy
 msgid "Output device"
 msgstr "Ելքային սարքի"
 
-#: modules/audio_output/directx.c:123
+#: modules/audio_output/directx.c:119
 #, fuzzy
 msgid "Select your audio output device"
 msgstr "Ընտրեք Ձեր ձայնային ելքային սարքի"
 
-#: modules/audio_output/directx.c:125
+#: modules/audio_output/directx.c:121
 #, fuzzy
 msgid "Speaker configuration"
 msgstr "նախագահ կոնֆիգուրացիան"
 
-#: modules/audio_output/directx.c:126
+#: modules/audio_output/directx.c:122
 #, fuzzy
 msgid ""
 "Select speaker configuration you want to use. This option doesn't upmix! So "
@@ -10843,21 +10843,21 @@ msgstr ""
 "Ընտրել դինամիկի կոնֆիգուրացիան ցանկանում եք օգտվել. Այս տարբերակը չի upmix! "
 "Այնպես որ, օրինակ Stereo -> 5.1 փոխակերպման\"."
 
-#: modules/audio_output/directx.c:130
+#: modules/audio_output/directx.c:126
 #, fuzzy
 msgid "DirectX audio output"
 msgstr "DirectX աուդիո ելքային"
 
-#: modules/audio_output/directx.c:390 modules/audio_output/portaudio.c:419
+#: modules/audio_output/directx.c:385 modules/audio_output/portaudio.c:419
 msgid "3 Front 2 Rear"
 msgstr "3 դիմացի 2 ետևի"
 
-#: modules/audio_output/directx.c:413 modules/audio_output/oss.c:170
+#: modules/audio_output/directx.c:408 modules/audio_output/oss.c:170
 #: modules/audio_output/portaudio.c:411 modules/audio_output/waveout.c:396
 msgid "2 Front 2 Rear"
 msgstr "2 դիմացի 2 ետևի"
 
-#: modules/audio_output/directx.c:537 modules/audio_output/oss.c:238
+#: modules/audio_output/directx.c:532 modules/audio_output/oss.c:238
 #: modules/audio_output/waveout.c:446
 msgid "A/52 over S/PDIF"
 msgstr "A/52 over S/PDIF"
@@ -14594,7 +14594,7 @@ msgstr "Ձայնի վերահսկում"
 msgid "Position Control"
 msgstr "Դիրքի Վերահսկում"
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1944
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1953
 msgid "Ignore"
 msgstr "Անտեսել"
 
@@ -17420,25 +17420,25 @@ msgstr "GNU / Linux osd / խուփ կադրի բուֆեր ինտերֆեյսի"
 msgid "Maemo hildon interface"
 msgstr "Maemo hildon ինտերֆեյսի"
 
-#: modules/gui/macosx/about.m:93 modules/gui/macosx/MainMenu.m:235
+#: modules/gui/macosx/about.m:98 modules/gui/macosx/MainMenu.m:235
 msgid "About VLC media player"
 msgstr "VLC media player-ի մասին"
 
-#: modules/gui/macosx/about.m:104
+#: modules/gui/macosx/about.m:109
 #, fuzzy
 msgid "Compiled by %@ with %@"
 msgstr "Կոմպիլացրել է %s-ը"
 
-#: modules/gui/macosx/about.m:132 modules/gui/macosx/about.m:197
+#: modules/gui/macosx/about.m:137 modules/gui/macosx/about.m:202
 #: modules/gui/macosx/MainMenu.m:356
 msgid "License"
 msgstr "Լիցենզիա"
 
-#: modules/gui/macosx/about.m:210
+#: modules/gui/macosx/about.m:215
 msgid "VLC media player Help"
 msgstr "VLC մեդիա նվագարկչի Օգնություն"
 
-#: modules/gui/macosx/about.m:213 modules/gui/macosx/controls.m:190
+#: modules/gui/macosx/about.m:218 modules/gui/macosx/controls.m:190
 #: modules/gui/macosx/MainMenu.m:332
 msgid "Index"
 msgstr "Ինդեքս"
@@ -17725,41 +17725,41 @@ msgstr ""
 "Միայն ձեր նախնական E-Mail հասցեն կներկայացվի, այդ թվում, ոչ մի լրացուցիչ "
 "տեղեկություն."
 
-#: modules/gui/macosx/intf.m:1812
+#: modules/gui/macosx/intf.m:1821
 #, fuzzy
 msgid "Error when sending the Crash Report"
 msgstr "Սխալ, երբ ուղարկելով վթարի Ռեպորտաժ"
 
-#: modules/gui/macosx/intf.m:1903
+#: modules/gui/macosx/intf.m:1912
 msgid "No CrashLog found"
 msgstr "CrashLog չի հայտնաբերվել"
 
-#: modules/gui/macosx/intf.m:1903 modules/gui/macosx/prefs.m:229
+#: modules/gui/macosx/intf.m:1912 modules/gui/macosx/prefs.m:229
 #: modules/gui/macosx/simple_prefs.m:752
 msgid "Continue"
 msgstr "Շարունակել"
 
-#: modules/gui/macosx/intf.m:1903
+#: modules/gui/macosx/intf.m:1912
 #, fuzzy
 msgid "Couldn't find any trace of a previous crash."
 msgstr " msgstr \"Հնարավոր չէ գտնել որեւէ հետք է նախորդ վթարի."
 
-#: modules/gui/macosx/intf.m:1942
+#: modules/gui/macosx/intf.m:1951
 msgid "Remove old preferences?"
 msgstr "Ջնջե՞լ հին նախընտրանքները"
 
-#: modules/gui/macosx/intf.m:1943
+#: modules/gui/macosx/intf.m:1952
 #, fuzzy
 msgid "We just found an older version of VLC's preferences files."
 msgstr ""
 "Մենք պարզապես գտել ավելի հին տարբերակ է VLC ի նախընտրությունների ֆայլեր."
 
-#: modules/gui/macosx/intf.m:1944
+#: modules/gui/macosx/intf.m:1953
 #, fuzzy
 msgid "Move To Trash and Relaunch VLC"
 msgstr "Թափոն փոխադրել եւ Relaunch VLC"
 
-#: modules/gui/macosx/intf.m:2059
+#: modules/gui/macosx/intf.m:2068
 #, fuzzy, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr "VLC Debug Մուտք (%s). Rtfd`"
@@ -29450,16 +29450,16 @@ msgstr ""
 msgid "K Video Acceleration video output"
 msgstr "XVideo extension վիդեո ելք"
 
-#: modules/video_output/macosx.m:76
+#: modules/video_output/macosx.m:87
 #, fuzzy
 msgid "Mac OS X OpenGL video output (requires drawable-nsobject)"
 msgstr "Նվազագույն Mac OS X OpenGL վիդեո ելք (բացում ա borderless window)"
 
-#: modules/video_output/macosx.m:131
+#: modules/video_output/macosx.m:142
 msgid "OpenGL acceleration is not supported on your Mac"
 msgstr ""
 
-#: modules/video_output/macosx.m:131
+#: modules/video_output/macosx.m:142
 msgid ""
 "Your Mac lacks Quartz Extreme acceleration, which is required for video "
 "output. It will still work, but much slower and with possibly unexpected "

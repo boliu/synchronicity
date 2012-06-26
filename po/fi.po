@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vlc 1.0.0\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2012-06-07 16:44+0200\n"
+"POT-Creation-Date: 2012-06-27 01:19+0200\n"
 "PO-Revision-Date: 2012-02-08 21:42+0200\n"
 "Last-Translator: Juha Jeronen <juha.jeronen@jyu.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -867,7 +867,7 @@ msgstr "Äänikanavat"
 #: src/audio_output/output.c:103 src/audio_output/output.c:139
 #: modules/access/alsa.c:69 modules/access/oss.c:64
 #: modules/access/v4l2/video.c:284 modules/audio_output/alsa.c:74
-#: modules/audio_output/directx.c:432 modules/audio_output/kai.c:219
+#: modules/audio_output/directx.c:427 modules/audio_output/kai.c:219
 #: modules/audio_output/oss.c:194 modules/audio_output/portaudio.c:400
 #: modules/audio_output/waveout.c:413 modules/codec/twolame.c:70
 msgid "Stereo"
@@ -4018,7 +4018,7 @@ msgid "Slower (fine)"
 msgstr "Hitaammin (hivenen)"
 
 #: src/libvlc-module.c:1362 modules/control/hotkeys.c:687
-#: modules/gui/macosx/about.m:211 modules/gui/macosx/MainMenu.m:277
+#: modules/gui/macosx/about.m:216 modules/gui/macosx/MainMenu.m:277
 #: modules/gui/macosx/MainMenu.m:365 modules/gui/macosx/MainMenu.m:373
 #: modules/gui/macosx/MainMenu.m:1170 modules/gui/macosx/wizard.m:312
 #: modules/gui/macosx/wizard.m:324 modules/gui/macosx/wizard.m:1560
@@ -4034,7 +4034,7 @@ msgstr ""
 "Valitse pikanäppäin, jolla siirrytään soittolistassa seuraavaan kohteeseen."
 
 #: src/libvlc-module.c:1364 modules/control/hotkeys.c:693
-#: modules/gui/macosx/about.m:212 modules/gui/macosx/MainMenu.m:276
+#: modules/gui/macosx/about.m:217 modules/gui/macosx/MainMenu.m:276
 #: modules/gui/macosx/MainMenu.m:366 modules/gui/macosx/MainMenu.m:372
 #: modules/gui/macosx/MainMenu.m:1169
 #: modules/gui/qt4/components/controller.hpp:119 modules/notify/notify.c:339
@@ -6330,7 +6330,7 @@ msgid "DirectShow input"
 msgstr "DirectShow-lähde"
 
 #: modules/access/dshow/dshow.cpp:232 modules/access/dshow/dshow.cpp:237
-#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:140
+#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:136
 #: modules/audio_output/waveout.c:99 modules/video_output/msw/directx.c:109
 msgid "Refresh list"
 msgstr "Virkistä lista"
@@ -6920,7 +6920,7 @@ msgstr ""
 msgid "EyeTV input"
 msgstr "EyeTV-lähde"
 
-#: modules/access/file.c:182 modules/access/file.c:303
+#: modules/access/file.c:182 modules/access/file.c:310
 #: modules/access/mtp.c:213 modules/access/mtp.c:302 modules/access/vdr.c:378
 #: modules/access/vdr.c:548
 msgid "File reading failed"
@@ -6931,7 +6931,7 @@ msgstr "Tiedoston lukeminen epäonnistui"
 msgid "VLC could not open the file \"%s\". (%m)"
 msgstr "VLC ei voinut avata tiedostoa \"%s\". (%m)"
 
-#: modules/access/file.c:304
+#: modules/access/file.c:311
 #, c-format
 msgid "VLC could not read the file (%m)."
 msgstr "VLC ei voinut lukea tiedostoa (%m)."
@@ -8839,7 +8839,7 @@ msgid "NTSC M South Korea"
 msgstr "NTSC M Etelä-Korea"
 
 #: modules/access/v4l2/video.c:283 modules/audio_output/alsa.c:74
-#: modules/audio_output/directx.c:450 modules/audio_output/kai.c:222
+#: modules/audio_output/directx.c:445 modules/audio_output/kai.c:222
 #: modules/audio_output/oss.c:214 modules/audio_output/portaudio.c:392
 #: modules/audio_output/waveout.c:428
 msgid "Mono"
@@ -9971,7 +9971,7 @@ msgid "ALSA audio output"
 msgstr "ALSA-äänilähtö"
 
 #: modules/audio_output/alsa.c:154 modules/audio_output/auhal.c:129
-#: modules/audio_output/auhal.c:978 modules/audio_output/directx.c:335
+#: modules/audio_output/auhal.c:978 modules/audio_output/directx.c:330
 #: modules/audio_output/kai.c:215 modules/audio_output/oss.c:121
 #: modules/audio_output/portaudio.c:386 modules/audio_output/waveout.c:358
 #: modules/gui/macosx/MainMenu.m:300 modules/gui/macosx/MainMenu.m:301
@@ -10044,19 +10044,19 @@ msgstr ""
 msgid "%s (Encoded Output)"
 msgstr "%s (Pakattu lähtö)"
 
-#: modules/audio_output/directx.c:122 modules/audio_output/portaudio.c:107
+#: modules/audio_output/directx.c:118 modules/audio_output/portaudio.c:107
 msgid "Output device"
 msgstr "Lähtölaite"
 
-#: modules/audio_output/directx.c:123
+#: modules/audio_output/directx.c:119
 msgid "Select your audio output device"
 msgstr "Valitse äänilähtölaite"
 
-#: modules/audio_output/directx.c:125
+#: modules/audio_output/directx.c:121
 msgid "Speaker configuration"
 msgstr "Kaiuttimien määrä"
 
-#: modules/audio_output/directx.c:126
+#: modules/audio_output/directx.c:122
 msgid ""
 "Select speaker configuration you want to use. This option doesn't upmix! So "
 "NO e.g. Stereo -> 5.1 conversion."
@@ -10064,20 +10064,20 @@ msgstr ""
 "Valitse kaiuttimien määrä. Huomaa, että tämä asetus ei tee ns. upmix-"
 "muunnoksia, joten stereosignaali EI muutu 5.1-signaaliksi."
 
-#: modules/audio_output/directx.c:130
+#: modules/audio_output/directx.c:126
 msgid "DirectX audio output"
 msgstr "DirectX-äänilähtö"
 
-#: modules/audio_output/directx.c:390 modules/audio_output/portaudio.c:419
+#: modules/audio_output/directx.c:385 modules/audio_output/portaudio.c:419
 msgid "3 Front 2 Rear"
 msgstr "3 edessä 2 takana"
 
-#: modules/audio_output/directx.c:413 modules/audio_output/oss.c:170
+#: modules/audio_output/directx.c:408 modules/audio_output/oss.c:170
 #: modules/audio_output/portaudio.c:411 modules/audio_output/waveout.c:396
 msgid "2 Front 2 Rear"
 msgstr "2 edessä 2 takana"
 
-#: modules/audio_output/directx.c:537 modules/audio_output/oss.c:238
+#: modules/audio_output/directx.c:532 modules/audio_output/oss.c:238
 #: modules/audio_output/waveout.c:446
 msgid "A/52 over S/PDIF"
 msgstr "A/52 S/PDIF:n yli"
@@ -13460,7 +13460,7 @@ msgstr "Äänen voimakkuuden hallinta"
 msgid "Position Control"
 msgstr "Sijainnin hallinta"
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1944
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1953
 msgid "Ignore"
 msgstr "Älä huomioi"
 
@@ -15994,24 +15994,24 @@ msgstr "GNU/Linux osd/ylipiirto-framebuffer -käyttöliittymä"
 msgid "Maemo hildon interface"
 msgstr "Maemo hildon -käyttöliittymä"
 
-#: modules/gui/macosx/about.m:93 modules/gui/macosx/MainMenu.m:235
+#: modules/gui/macosx/about.m:98 modules/gui/macosx/MainMenu.m:235
 msgid "About VLC media player"
 msgstr "Tietoja VLC-mediasoittimesta"
 
-#: modules/gui/macosx/about.m:104
+#: modules/gui/macosx/about.m:109
 msgid "Compiled by %@ with %@"
 msgstr "Sovelluskäännös: %@, käyttäen %@"
 
-#: modules/gui/macosx/about.m:132 modules/gui/macosx/about.m:197
+#: modules/gui/macosx/about.m:137 modules/gui/macosx/about.m:202
 #: modules/gui/macosx/MainMenu.m:356
 msgid "License"
 msgstr "Lisenssi"
 
-#: modules/gui/macosx/about.m:210
+#: modules/gui/macosx/about.m:215
 msgid "VLC media player Help"
 msgstr "VLC-mediasoittimen ohjeet"
 
-#: modules/gui/macosx/about.m:213 modules/gui/macosx/controls.m:190
+#: modules/gui/macosx/about.m:218 modules/gui/macosx/controls.m:190
 #: modules/gui/macosx/MainMenu.m:332
 msgid "Index"
 msgstr "Indeksi"
@@ -16283,36 +16283,36 @@ msgid ""
 "information."
 msgstr "Vain oletussähköpostiosoitteesi lähetetään. Muuta tietoa ei."
 
-#: modules/gui/macosx/intf.m:1812
+#: modules/gui/macosx/intf.m:1821
 msgid "Error when sending the Crash Report"
 msgstr "Virhe tapahtui kaatumisraporttia lähettäessä"
 
-#: modules/gui/macosx/intf.m:1903
+#: modules/gui/macosx/intf.m:1912
 msgid "No CrashLog found"
 msgstr "Kaatumislokia ei löydy"
 
-#: modules/gui/macosx/intf.m:1903 modules/gui/macosx/prefs.m:229
+#: modules/gui/macosx/intf.m:1912 modules/gui/macosx/prefs.m:229
 #: modules/gui/macosx/simple_prefs.m:752
 msgid "Continue"
 msgstr "Jatka"
 
-#: modules/gui/macosx/intf.m:1903
+#: modules/gui/macosx/intf.m:1912
 msgid "Couldn't find any trace of a previous crash."
 msgstr "Edellisestä kaatumisesta ei löydy mitään jälkeä."
 
-#: modules/gui/macosx/intf.m:1942
+#: modules/gui/macosx/intf.m:1951
 msgid "Remove old preferences?"
 msgstr "Nollaa asetukset?"
 
-#: modules/gui/macosx/intf.m:1943
+#: modules/gui/macosx/intf.m:1952
 msgid "We just found an older version of VLC's preferences files."
 msgstr "Löytyi vanha versio VLC:n asetustiedostoista."
 
-#: modules/gui/macosx/intf.m:1944
+#: modules/gui/macosx/intf.m:1953
 msgid "Move To Trash and Relaunch VLC"
 msgstr "Siirrä roskakoriin ja käynnistä VLC uudelleen"
 
-#: modules/gui/macosx/intf.m:2059
+#: modules/gui/macosx/intf.m:2068
 #, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr "VLC Debug Log (%s).rtfd"
@@ -26997,15 +26997,15 @@ msgstr "DIVE"
 msgid "K Video Acceleration video output"
 msgstr "K Video Acceleration -videolähtö"
 
-#: modules/video_output/macosx.m:76
+#: modules/video_output/macosx.m:87
 msgid "Mac OS X OpenGL video output (requires drawable-nsobject)"
 msgstr "Mac OS X OpenGL -videolähtö (vaatii drawable-nsobjectin)"
 
-#: modules/video_output/macosx.m:131
+#: modules/video_output/macosx.m:142
 msgid "OpenGL acceleration is not supported on your Mac"
 msgstr ""
 
-#: modules/video_output/macosx.m:131
+#: modules/video_output/macosx.m:142
 #, fuzzy
 msgid ""
 "Your Mac lacks Quartz Extreme acceleration, which is required for video "

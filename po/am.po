@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2012-06-07 16:44+0200\n"
+"POT-Creation-Date: 2012-06-27 01:19+0200\n"
 "PO-Revision-Date: 2011-04-06 00:53+0200\n"
 "Last-Translator: Solomon Gizaw <solohavi@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -799,7 +799,7 @@ msgstr "የተሰሚ ቻናሎች "
 #: src/audio_output/output.c:103 src/audio_output/output.c:139
 #: modules/access/alsa.c:69 modules/access/oss.c:64
 #: modules/access/v4l2/video.c:284 modules/audio_output/alsa.c:74
-#: modules/audio_output/directx.c:432 modules/audio_output/kai.c:219
+#: modules/audio_output/directx.c:427 modules/audio_output/kai.c:219
 #: modules/audio_output/oss.c:194 modules/audio_output/portaudio.c:400
 #: modules/audio_output/waveout.c:413 modules/codec/twolame.c:70
 msgid "Stereo"
@@ -3658,7 +3658,7 @@ msgid "Slower (fine)"
 msgstr "ዝግ ያለ (ደህና) "
 
 #: src/libvlc-module.c:1362 modules/control/hotkeys.c:687
-#: modules/gui/macosx/about.m:211 modules/gui/macosx/MainMenu.m:277
+#: modules/gui/macosx/about.m:216 modules/gui/macosx/MainMenu.m:277
 #: modules/gui/macosx/MainMenu.m:365 modules/gui/macosx/MainMenu.m:373
 #: modules/gui/macosx/MainMenu.m:1170 modules/gui/macosx/wizard.m:312
 #: modules/gui/macosx/wizard.m:324 modules/gui/macosx/wizard.m:1560
@@ -3673,7 +3673,7 @@ msgid "Select the hotkey to use to skip to the next item in the playlist."
 msgstr ""
 
 #: src/libvlc-module.c:1364 modules/control/hotkeys.c:693
-#: modules/gui/macosx/about.m:212 modules/gui/macosx/MainMenu.m:276
+#: modules/gui/macosx/about.m:217 modules/gui/macosx/MainMenu.m:276
 #: modules/gui/macosx/MainMenu.m:366 modules/gui/macosx/MainMenu.m:372
 #: modules/gui/macosx/MainMenu.m:1169
 #: modules/gui/qt4/components/controller.hpp:119 modules/notify/notify.c:339
@@ -6016,7 +6016,7 @@ msgid "DirectShow input"
 msgstr "ኤስ-ቪድዮ ግቢት"
 
 #: modules/access/dshow/dshow.cpp:232 modules/access/dshow/dshow.cpp:237
-#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:140
+#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:136
 #: modules/audio_output/waveout.c:99 modules/video_output/msw/directx.c:109
 #, fuzzy
 msgid "Refresh list"
@@ -6593,7 +6593,7 @@ msgstr ""
 msgid "EyeTV input"
 msgstr "ግቢት የለም  "
 
-#: modules/access/file.c:182 modules/access/file.c:303
+#: modules/access/file.c:182 modules/access/file.c:310
 #: modules/access/mtp.c:213 modules/access/mtp.c:302 modules/access/vdr.c:378
 #: modules/access/vdr.c:548
 msgid "File reading failed"
@@ -6604,7 +6604,7 @@ msgstr ""
 msgid "VLC could not open the file \"%s\". (%m)"
 msgstr ""
 
-#: modules/access/file.c:304
+#: modules/access/file.c:311
 #, c-format
 msgid "VLC could not read the file (%m)."
 msgstr ""
@@ -8548,7 +8548,7 @@ msgid "NTSC M South Korea"
 msgstr ""
 
 #: modules/access/v4l2/video.c:283 modules/audio_output/alsa.c:74
-#: modules/audio_output/directx.c:450 modules/audio_output/kai.c:222
+#: modules/audio_output/directx.c:445 modules/audio_output/kai.c:222
 #: modules/audio_output/oss.c:214 modules/audio_output/portaudio.c:392
 #: modules/audio_output/waveout.c:428
 msgid "Mono"
@@ -9664,7 +9664,7 @@ msgid "ALSA audio output"
 msgstr ""
 
 #: modules/audio_output/alsa.c:154 modules/audio_output/auhal.c:129
-#: modules/audio_output/auhal.c:978 modules/audio_output/directx.c:335
+#: modules/audio_output/auhal.c:978 modules/audio_output/directx.c:330
 #: modules/audio_output/kai.c:215 modules/audio_output/oss.c:121
 #: modules/audio_output/portaudio.c:386 modules/audio_output/waveout.c:358
 #: modules/gui/macosx/MainMenu.m:300 modules/gui/macosx/MainMenu.m:301
@@ -9734,40 +9734,40 @@ msgstr ""
 msgid "%s (Encoded Output)"
 msgstr ""
 
-#: modules/audio_output/directx.c:122 modules/audio_output/portaudio.c:107
+#: modules/audio_output/directx.c:118 modules/audio_output/portaudio.c:107
 #, fuzzy
 msgid "Output device"
 msgstr "የውጽአት ሞጁል  "
 
-#: modules/audio_output/directx.c:123
+#: modules/audio_output/directx.c:119
 msgid "Select your audio output device"
 msgstr ""
 
-#: modules/audio_output/directx.c:125
+#: modules/audio_output/directx.c:121
 #, fuzzy
 msgid "Speaker configuration"
 msgstr "ቪኤሌም ውቅረትን ክፈት ..."
 
-#: modules/audio_output/directx.c:126
+#: modules/audio_output/directx.c:122
 msgid ""
 "Select speaker configuration you want to use. This option doesn't upmix! So "
 "NO e.g. Stereo -> 5.1 conversion."
 msgstr ""
 
-#: modules/audio_output/directx.c:130
+#: modules/audio_output/directx.c:126
 msgid "DirectX audio output"
 msgstr ""
 
-#: modules/audio_output/directx.c:390 modules/audio_output/portaudio.c:419
+#: modules/audio_output/directx.c:385 modules/audio_output/portaudio.c:419
 msgid "3 Front 2 Rear"
 msgstr ""
 
-#: modules/audio_output/directx.c:413 modules/audio_output/oss.c:170
+#: modules/audio_output/directx.c:408 modules/audio_output/oss.c:170
 #: modules/audio_output/portaudio.c:411 modules/audio_output/waveout.c:396
 msgid "2 Front 2 Rear"
 msgstr ""
 
-#: modules/audio_output/directx.c:537 modules/audio_output/oss.c:238
+#: modules/audio_output/directx.c:532 modules/audio_output/oss.c:238
 #: modules/audio_output/waveout.c:446
 msgid "A/52 over S/PDIF"
 msgstr ""
@@ -12910,7 +12910,7 @@ msgstr "የሰአት መቆጣጠሪያ  "
 msgid "Position Control"
 msgstr "አቀማመጥ  "
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1944
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1953
 msgid "Ignore"
 msgstr "ተው  "
 
@@ -15415,25 +15415,25 @@ msgstr "ጂኤንዩ/ሊኑክስ ኦኤስዲ/የተሸፈነ የንዑስ ክ�
 msgid "Maemo hildon interface"
 msgstr "ማኢሞ ሂልደን በይነገጽ "
 
-#: modules/gui/macosx/about.m:93 modules/gui/macosx/MainMenu.m:235
+#: modules/gui/macosx/about.m:98 modules/gui/macosx/MainMenu.m:235
 msgid "About VLC media player"
 msgstr "ስለ ቪኤልሲ ማጫወቻ"
 
-#: modules/gui/macosx/about.m:104
+#: modules/gui/macosx/about.m:109
 #, fuzzy
 msgid "Compiled by %@ with %@"
 msgstr "በ   %@ የተቀናበረ "
 
-#: modules/gui/macosx/about.m:132 modules/gui/macosx/about.m:197
+#: modules/gui/macosx/about.m:137 modules/gui/macosx/about.m:202
 #: modules/gui/macosx/MainMenu.m:356
 msgid "License"
 msgstr "ፈቃድ "
 
-#: modules/gui/macosx/about.m:210
+#: modules/gui/macosx/about.m:215
 msgid "VLC media player Help"
 msgstr "የቪኤልሲ ማጫወቻ እገዛ "
 
-#: modules/gui/macosx/about.m:213 modules/gui/macosx/controls.m:190
+#: modules/gui/macosx/about.m:218 modules/gui/macosx/controls.m:190
 #: modules/gui/macosx/MainMenu.m:332
 msgid "Index"
 msgstr "ማጣቀሻ"
@@ -15696,36 +15696,36 @@ msgid ""
 "information."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1812
+#: modules/gui/macosx/intf.m:1821
 msgid "Error when sending the Crash Report"
 msgstr "የስንከላ ዘገባ በሚልክበት ጊዜ የተፈጠረ ስህተት "
 
-#: modules/gui/macosx/intf.m:1903
+#: modules/gui/macosx/intf.m:1912
 msgid "No CrashLog found"
 msgstr "የስንከላ ምዝግብ ማስታወሻ አልተገኘም "
 
-#: modules/gui/macosx/intf.m:1903 modules/gui/macosx/prefs.m:229
+#: modules/gui/macosx/intf.m:1912 modules/gui/macosx/prefs.m:229
 #: modules/gui/macosx/simple_prefs.m:752
 msgid "Continue"
 msgstr "ቀጥል "
 
-#: modules/gui/macosx/intf.m:1903
+#: modules/gui/macosx/intf.m:1912
 msgid "Couldn't find any trace of a previous crash."
 msgstr "ምንም የቀድሞ የመሰናከል ዱካ ማግኘት አልቻለም። "
 
-#: modules/gui/macosx/intf.m:1942
+#: modules/gui/macosx/intf.m:1951
 msgid "Remove old preferences?"
 msgstr "የቆዮ ምርጫዎችን አስወግድ? "
 
-#: modules/gui/macosx/intf.m:1943
+#: modules/gui/macosx/intf.m:1952
 msgid "We just found an older version of VLC's preferences files."
 msgstr "የቆየ የቪኤልሲ ምርጫ ፋይሎች ቅጂ አሁን አገኘን "
 
-#: modules/gui/macosx/intf.m:1944
+#: modules/gui/macosx/intf.m:1953
 msgid "Move To Trash and Relaunch VLC"
 msgstr "ወደ መጣያ አንቀሳቅስና ቪኤልሲን ዳግም አስጀምር "
 
-#: modules/gui/macosx/intf.m:2059
+#: modules/gui/macosx/intf.m:2068
 #, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr ""
@@ -26043,16 +26043,16 @@ msgstr ""
 msgid "K Video Acceleration video output"
 msgstr "የተጣደፈ የቪድዮ ውጽአት (ሽፋን) "
 
-#: modules/video_output/macosx.m:76
+#: modules/video_output/macosx.m:87
 #, fuzzy
 msgid "Mac OS X OpenGL video output (requires drawable-nsobject)"
 msgstr "ትንሹ የ Mac OS X OpenGL  ቪድዮ ውፅአት (ክፈፍ የሌለው መስኮት ይከፍታል ) "
 
-#: modules/video_output/macosx.m:131
+#: modules/video_output/macosx.m:142
 msgid "OpenGL acceleration is not supported on your Mac"
 msgstr ""
 
-#: modules/video_output/macosx.m:131
+#: modules/video_output/macosx.m:142
 msgid ""
 "Your Mac lacks Quartz Extreme acceleration, which is required for video "
 "output. It will still work, but much slower and with possibly unexpected "

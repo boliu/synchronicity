@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vlc\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2012-06-07 16:44+0200\n"
+"POT-Creation-Date: 2012-06-27 01:19+0200\n"
 "PO-Revision-Date: 2011-04-04 12:45+0600\n"
 "Last-Translator: israt <israt@ankur.org.bd>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
@@ -843,7 +843,7 @@ msgstr "অডিও চ্যানেল"
 #: src/audio_output/output.c:103 src/audio_output/output.c:139
 #: modules/access/alsa.c:69 modules/access/oss.c:64
 #: modules/access/v4l2/video.c:284 modules/audio_output/alsa.c:74
-#: modules/audio_output/directx.c:432 modules/audio_output/kai.c:219
+#: modules/audio_output/directx.c:427 modules/audio_output/kai.c:219
 #: modules/audio_output/oss.c:194 modules/audio_output/portaudio.c:400
 #: modules/audio_output/waveout.c:413 modules/codec/twolame.c:70
 msgid "Stereo"
@@ -3908,7 +3908,7 @@ msgid "Slower (fine)"
 msgstr "ধীরতম (ভাল)"
 
 #: src/libvlc-module.c:1362 modules/control/hotkeys.c:687
-#: modules/gui/macosx/about.m:211 modules/gui/macosx/MainMenu.m:277
+#: modules/gui/macosx/about.m:216 modules/gui/macosx/MainMenu.m:277
 #: modules/gui/macosx/MainMenu.m:365 modules/gui/macosx/MainMenu.m:373
 #: modules/gui/macosx/MainMenu.m:1170 modules/gui/macosx/wizard.m:312
 #: modules/gui/macosx/wizard.m:324 modules/gui/macosx/wizard.m:1560
@@ -3923,7 +3923,7 @@ msgid "Select the hotkey to use to skip to the next item in the playlist."
 msgstr "প্লেলিস্টের পরবর্তী আইটেমে যাওয়ার জন্য হট কী নির্বাচন করা হবে।"
 
 #: src/libvlc-module.c:1364 modules/control/hotkeys.c:693
-#: modules/gui/macosx/about.m:212 modules/gui/macosx/MainMenu.m:276
+#: modules/gui/macosx/about.m:217 modules/gui/macosx/MainMenu.m:276
 #: modules/gui/macosx/MainMenu.m:366 modules/gui/macosx/MainMenu.m:372
 #: modules/gui/macosx/MainMenu.m:1169
 #: modules/gui/qt4/components/controller.hpp:119 modules/notify/notify.c:339
@@ -6209,7 +6209,7 @@ msgid "DirectShow input"
 msgstr "DirectShow ইনপুট"
 
 #: modules/access/dshow/dshow.cpp:232 modules/access/dshow/dshow.cpp:237
-#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:140
+#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:136
 #: modules/audio_output/waveout.c:99 modules/video_output/msw/directx.c:109
 msgid "Refresh list"
 msgstr "তালিকা রিফ্রেশ করা হবে"
@@ -6795,7 +6795,7 @@ msgstr ""
 msgid "EyeTV input"
 msgstr "EyeTV ইনপুট"
 
-#: modules/access/file.c:182 modules/access/file.c:303
+#: modules/access/file.c:182 modules/access/file.c:310
 #: modules/access/mtp.c:213 modules/access/mtp.c:302 modules/access/vdr.c:378
 #: modules/access/vdr.c:548
 msgid "File reading failed"
@@ -6806,7 +6806,7 @@ msgstr "ফাইল পড়তে ব্যর্থ"
 msgid "VLC could not open the file \"%s\". (%m)"
 msgstr "VLC \"%s\" ফাইলটি খুলতে পারেনি।"
 
-#: modules/access/file.c:304
+#: modules/access/file.c:311
 #, fuzzy, c-format
 msgid "VLC could not read the file (%m)."
 msgstr "VLC ফাইলটি পড়তে পারেনি।"
@@ -8767,7 +8767,7 @@ msgstr ""
 
 # translated by sazzad
 #: modules/access/v4l2/video.c:283 modules/audio_output/alsa.c:74
-#: modules/audio_output/directx.c:450 modules/audio_output/kai.c:222
+#: modules/audio_output/directx.c:445 modules/audio_output/kai.c:222
 #: modules/audio_output/oss.c:214 modules/audio_output/portaudio.c:392
 #: modules/audio_output/waveout.c:428
 msgid "Mono"
@@ -9912,7 +9912,7 @@ msgid "ALSA audio output"
 msgstr "ALSA অডিও আউটপুট"
 
 #: modules/audio_output/alsa.c:154 modules/audio_output/auhal.c:129
-#: modules/audio_output/auhal.c:978 modules/audio_output/directx.c:335
+#: modules/audio_output/auhal.c:978 modules/audio_output/directx.c:330
 #: modules/audio_output/kai.c:215 modules/audio_output/oss.c:121
 #: modules/audio_output/portaudio.c:386 modules/audio_output/waveout.c:358
 #: modules/gui/macosx/MainMenu.m:300 modules/gui/macosx/MainMenu.m:301
@@ -9986,19 +9986,19 @@ msgstr ""
 msgid "%s (Encoded Output)"
 msgstr "%s (এনকোড করা আউটপুট)"
 
-#: modules/audio_output/directx.c:122 modules/audio_output/portaudio.c:107
+#: modules/audio_output/directx.c:118 modules/audio_output/portaudio.c:107
 msgid "Output device"
 msgstr "আউটপুট ডিভাইস"
 
-#: modules/audio_output/directx.c:123
+#: modules/audio_output/directx.c:119
 msgid "Select your audio output device"
 msgstr "অডিও আউটপুট ডিভাইস নির্বাচন করা হবে"
 
-#: modules/audio_output/directx.c:125
+#: modules/audio_output/directx.c:121
 msgid "Speaker configuration"
 msgstr "স্পিকার কনফিগারেশন"
 
-#: modules/audio_output/directx.c:126
+#: modules/audio_output/directx.c:122
 msgid ""
 "Select speaker configuration you want to use. This option doesn't upmix! So "
 "NO e.g. Stereo -> 5.1 conversion."
@@ -10006,20 +10006,20 @@ msgstr ""
 "আপনি যে স্পিকার কনফিগারেশন ব্যবহার করতে চান তা নির্বাচন করুন। এই অপশনটি আপমিক্স "
 "করা যাবেনা! তাই কোনো স্টেরিও -> ৫.১ রূপান্তর নয়।"
 
-#: modules/audio_output/directx.c:130
+#: modules/audio_output/directx.c:126
 msgid "DirectX audio output"
 msgstr "DirectX অডিও আউটপুট"
 
-#: modules/audio_output/directx.c:390 modules/audio_output/portaudio.c:419
+#: modules/audio_output/directx.c:385 modules/audio_output/portaudio.c:419
 msgid "3 Front 2 Rear"
 msgstr "৩ টি সামনে ২টি পেছনে"
 
-#: modules/audio_output/directx.c:413 modules/audio_output/oss.c:170
+#: modules/audio_output/directx.c:408 modules/audio_output/oss.c:170
 #: modules/audio_output/portaudio.c:411 modules/audio_output/waveout.c:396
 msgid "2 Front 2 Rear"
 msgstr "২টি সামনে ২টি পেছনে"
 
-#: modules/audio_output/directx.c:537 modules/audio_output/oss.c:238
+#: modules/audio_output/directx.c:532 modules/audio_output/oss.c:238
 #: modules/audio_output/waveout.c:446
 msgid "A/52 over S/PDIF"
 msgstr "S/PDIF এর উপরে A/52"
@@ -13347,7 +13347,7 @@ msgstr "ভলিউম নিয়ন্ত্রন"
 msgid "Position Control"
 msgstr "অবস্থান নিয়ন্ত্রন"
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1944
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1953
 msgid "Ignore"
 msgstr "উপেক্ষা করা হবে"
 
@@ -15856,25 +15856,25 @@ msgstr "GNU/লিনাক্স ওএসডি/ওভারলে ফ্র�
 msgid "Maemo hildon interface"
 msgstr "মিমো হিলডন ইনটারফেস"
 
-#: modules/gui/macosx/about.m:93 modules/gui/macosx/MainMenu.m:235
+#: modules/gui/macosx/about.m:98 modules/gui/macosx/MainMenu.m:235
 msgid "About VLC media player"
 msgstr "VLC মিডিয়া প্লেয়ার পরিচিতি"
 
-#: modules/gui/macosx/about.m:104
+#: modules/gui/macosx/about.m:109
 #, fuzzy
 msgid "Compiled by %@ with %@"
 msgstr "%s দ্বারা কম্পাইলকৃত"
 
-#: modules/gui/macosx/about.m:132 modules/gui/macosx/about.m:197
+#: modules/gui/macosx/about.m:137 modules/gui/macosx/about.m:202
 #: modules/gui/macosx/MainMenu.m:356
 msgid "License"
 msgstr "লাইসেন্স"
 
-#: modules/gui/macosx/about.m:210
+#: modules/gui/macosx/about.m:215
 msgid "VLC media player Help"
 msgstr "VLC মিডিয়া প্লেয়ার সহায়তা"
 
-#: modules/gui/macosx/about.m:213 modules/gui/macosx/controls.m:190
+#: modules/gui/macosx/about.m:218 modules/gui/macosx/controls.m:190
 #: modules/gui/macosx/MainMenu.m:332
 msgid "Index"
 msgstr "সূচী"
@@ -16153,36 +16153,36 @@ msgstr ""
 "আর কোনো তথ্য অন্তর্ভুক্ত না করে শুধুমাত্র আপনার পূর্বনির্ধারিত ই-মেইল ঠিকানা জমা দেয়া "
 "হবে।"
 
-#: modules/gui/macosx/intf.m:1812
+#: modules/gui/macosx/intf.m:1821
 msgid "Error when sending the Crash Report"
 msgstr "ক্র্যাশ রিপোর্ট প্রেরনের সময় ত্রুটি"
 
-#: modules/gui/macosx/intf.m:1903
+#: modules/gui/macosx/intf.m:1912
 msgid "No CrashLog found"
 msgstr "কোনো CrashLog পাওয়া যায়নি"
 
-#: modules/gui/macosx/intf.m:1903 modules/gui/macosx/prefs.m:229
+#: modules/gui/macosx/intf.m:1912 modules/gui/macosx/prefs.m:229
 #: modules/gui/macosx/simple_prefs.m:752
 msgid "Continue"
 msgstr "চালিয়ে যান"
 
-#: modules/gui/macosx/intf.m:1903
+#: modules/gui/macosx/intf.m:1912
 msgid "Couldn't find any trace of a previous crash."
 msgstr "পূর্ববর্তী ক্র্যাশের কোনো প্রমাণ পাওয়া যায়নি।"
 
-#: modules/gui/macosx/intf.m:1942
+#: modules/gui/macosx/intf.m:1951
 msgid "Remove old preferences?"
 msgstr "পুরনো পছন্দসমূহ মুছে ফেলা হবে?"
 
-#: modules/gui/macosx/intf.m:1943
+#: modules/gui/macosx/intf.m:1952
 msgid "We just found an older version of VLC's preferences files."
 msgstr "আমরা এইমাত্র VLC এর পছন্দসমূহ ফাইলের একটি পুরাতন সংস্করন খুজে পেয়েছি।"
 
-#: modules/gui/macosx/intf.m:1944
+#: modules/gui/macosx/intf.m:1953
 msgid "Move To Trash and Relaunch VLC"
 msgstr "ট্র্যাশে সরিয়ে নিন এবং VLC পুনরায় চালু করা"
 
-#: modules/gui/macosx/intf.m:2059
+#: modules/gui/macosx/intf.m:2068
 #, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr "VLC ডিবাগ লগ (%s).rtfd"
@@ -26843,15 +26843,15 @@ msgstr ""
 msgid "K Video Acceleration video output"
 msgstr "একসিলারেটেড ভিডিও আউটপুট (ওভারলে)"
 
-#: modules/video_output/macosx.m:76
+#: modules/video_output/macosx.m:87
 msgid "Mac OS X OpenGL video output (requires drawable-nsobject)"
 msgstr "সর্বনিম্ন ম্যাক OS X OpenGL ভিডিও আউটপুট (drawable-nsobject প্রয়োজন)"
 
-#: modules/video_output/macosx.m:131
+#: modules/video_output/macosx.m:142
 msgid "OpenGL acceleration is not supported on your Mac"
 msgstr ""
 
-#: modules/video_output/macosx.m:131
+#: modules/video_output/macosx.m:142
 msgid ""
 "Your Mac lacks Quartz Extreme acceleration, which is required for video "
 "output. It will still work, but much slower and with possibly unexpected "

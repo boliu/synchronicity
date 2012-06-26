@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vlc 2.0.1\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2012-06-07 16:44+0200\n"
+"POT-Creation-Date: 2012-06-27 01:19+0200\n"
 "PO-Revision-Date: 2012-05-20 03:09+0300\n"
 "Last-Translator: Сяргей Дар'ічаў <charnabog@gmail.com>\n"
 "Language-Team: One-man\n"
@@ -843,7 +843,7 @@ msgstr "Каналы аўдыё"
 #: src/audio_output/output.c:103 src/audio_output/output.c:139
 #: modules/access/alsa.c:69 modules/access/oss.c:64
 #: modules/access/v4l2/video.c:284 modules/audio_output/alsa.c:74
-#: modules/audio_output/directx.c:432 modules/audio_output/kai.c:219
+#: modules/audio_output/directx.c:427 modules/audio_output/kai.c:219
 #: modules/audio_output/oss.c:194 modules/audio_output/portaudio.c:400
 #: modules/audio_output/waveout.c:413 modules/codec/twolame.c:70
 msgid "Stereo"
@@ -3921,7 +3921,7 @@ msgid "Slower (fine)"
 msgstr "Крыху павольней"
 
 #: src/libvlc-module.c:1362 modules/control/hotkeys.c:687
-#: modules/gui/macosx/about.m:211 modules/gui/macosx/MainMenu.m:277
+#: modules/gui/macosx/about.m:216 modules/gui/macosx/MainMenu.m:277
 #: modules/gui/macosx/MainMenu.m:365 modules/gui/macosx/MainMenu.m:373
 #: modules/gui/macosx/MainMenu.m:1170 modules/gui/macosx/wizard.m:312
 #: modules/gui/macosx/wizard.m:324 modules/gui/macosx/wizard.m:1560
@@ -3937,7 +3937,7 @@ msgstr ""
 "Выберыце гарачую клавішу для пераключэння на наступны элемент плэйліста."
 
 #: src/libvlc-module.c:1364 modules/control/hotkeys.c:693
-#: modules/gui/macosx/about.m:212 modules/gui/macosx/MainMenu.m:276
+#: modules/gui/macosx/about.m:217 modules/gui/macosx/MainMenu.m:276
 #: modules/gui/macosx/MainMenu.m:366 modules/gui/macosx/MainMenu.m:372
 #: modules/gui/macosx/MainMenu.m:1169
 #: modules/gui/qt4/components/controller.hpp:119 modules/notify/notify.c:339
@@ -6213,7 +6213,7 @@ msgid "DirectShow input"
 msgstr "Крыніца DirectShow"
 
 #: modules/access/dshow/dshow.cpp:232 modules/access/dshow/dshow.cpp:237
-#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:140
+#: modules/audio_output/alsa.c:86 modules/audio_output/directx.c:136
 #: modules/audio_output/waveout.c:99 modules/video_output/msw/directx.c:109
 msgid "Refresh list"
 msgstr "Абнавіць спіс"
@@ -6792,7 +6792,7 @@ msgstr ""
 msgid "EyeTV input"
 msgstr "Увод з EyeTV"
 
-#: modules/access/file.c:182 modules/access/file.c:303
+#: modules/access/file.c:182 modules/access/file.c:310
 #: modules/access/mtp.c:213 modules/access/mtp.c:302 modules/access/vdr.c:378
 #: modules/access/vdr.c:548
 msgid "File reading failed"
@@ -6803,7 +6803,7 @@ msgstr "Памылка чытання файла"
 msgid "VLC could not open the file \"%s\". (%m)"
 msgstr "VLC не можа адкрыць файл \"%s\". (%m)"
 
-#: modules/access/file.c:304
+#: modules/access/file.c:311
 #, c-format
 msgid "VLC could not read the file (%m)."
 msgstr "VLC не можа прачытаць файл (%m)."
@@ -8687,7 +8687,7 @@ msgid "NTSC M South Korea"
 msgstr "NTSC M Паўднёвая Карэя"
 
 #: modules/access/v4l2/video.c:283 modules/audio_output/alsa.c:74
-#: modules/audio_output/directx.c:450 modules/audio_output/kai.c:222
+#: modules/audio_output/directx.c:445 modules/audio_output/kai.c:222
 #: modules/audio_output/oss.c:214 modules/audio_output/portaudio.c:392
 #: modules/audio_output/waveout.c:428
 msgid "Mono"
@@ -9793,7 +9793,7 @@ msgid "ALSA audio output"
 msgstr "Вывад гуку праз ALSA"
 
 #: modules/audio_output/alsa.c:154 modules/audio_output/auhal.c:129
-#: modules/audio_output/auhal.c:978 modules/audio_output/directx.c:335
+#: modules/audio_output/auhal.c:978 modules/audio_output/directx.c:330
 #: modules/audio_output/kai.c:215 modules/audio_output/oss.c:121
 #: modules/audio_output/portaudio.c:386 modules/audio_output/waveout.c:358
 #: modules/gui/macosx/MainMenu.m:300 modules/gui/macosx/MainMenu.m:301
@@ -9867,19 +9867,19 @@ msgstr ""
 msgid "%s (Encoded Output)"
 msgstr "%s (Закадаваны вывад)"
 
-#: modules/audio_output/directx.c:122 modules/audio_output/portaudio.c:107
+#: modules/audio_output/directx.c:118 modules/audio_output/portaudio.c:107
 msgid "Output device"
 msgstr "Прылада вываду"
 
-#: modules/audio_output/directx.c:123
+#: modules/audio_output/directx.c:119
 msgid "Select your audio output device"
 msgstr "Выберыце прыладу вываду гуку"
 
-#: modules/audio_output/directx.c:125
+#: modules/audio_output/directx.c:121
 msgid "Speaker configuration"
 msgstr "Канфігурацыя дынамікаў"
 
-#: modules/audio_output/directx.c:126
+#: modules/audio_output/directx.c:122
 msgid ""
 "Select speaker configuration you want to use. This option doesn't upmix! So "
 "NO e.g. Stereo -> 5.1 conversion."
@@ -9887,20 +9887,20 @@ msgstr ""
 "Бягучая канфігурацыя аўдыёканалаў. Павышальнае міксаванне (напрыклад, са "
 "стэрэа на 5.1) не ажыццяўляецца!"
 
-#: modules/audio_output/directx.c:130
+#: modules/audio_output/directx.c:126
 msgid "DirectX audio output"
 msgstr "Вывад гуку праз DirectX"
 
-#: modules/audio_output/directx.c:390 modules/audio_output/portaudio.c:419
+#: modules/audio_output/directx.c:385 modules/audio_output/portaudio.c:419
 msgid "3 Front 2 Rear"
 msgstr "3 пярэдніх 2 задніх"
 
-#: modules/audio_output/directx.c:413 modules/audio_output/oss.c:170
+#: modules/audio_output/directx.c:408 modules/audio_output/oss.c:170
 #: modules/audio_output/portaudio.c:411 modules/audio_output/waveout.c:396
 msgid "2 Front 2 Rear"
 msgstr "2 пярэдніх 2 задніх"
 
-#: modules/audio_output/directx.c:537 modules/audio_output/oss.c:238
+#: modules/audio_output/directx.c:532 modules/audio_output/oss.c:238
 #: modules/audio_output/waveout.c:446
 msgid "A/52 over S/PDIF"
 msgstr "A/52 праз S/PDIF"
@@ -13201,7 +13201,7 @@ msgstr "узроўнем гучнасці"
 msgid "Position Control"
 msgstr "пазіцыяй паўзунка"
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1944
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:1953
 msgid "Ignore"
 msgstr "нічым"
 
@@ -15701,24 +15701,24 @@ msgstr "GNU / Linux-інтэрфейс кадравага буфера экра�
 msgid "Maemo hildon interface"
 msgstr "Інтэрфейс Maemo Hildon"
 
-#: modules/gui/macosx/about.m:93 modules/gui/macosx/MainMenu.m:235
+#: modules/gui/macosx/about.m:98 modules/gui/macosx/MainMenu.m:235
 msgid "About VLC media player"
 msgstr "Пра прайгравальнік VLC"
 
-#: modules/gui/macosx/about.m:104
+#: modules/gui/macosx/about.m:109
 msgid "Compiled by %@ with %@"
 msgstr "Скампілявана %@ %@"
 
-#: modules/gui/macosx/about.m:132 modules/gui/macosx/about.m:197
+#: modules/gui/macosx/about.m:137 modules/gui/macosx/about.m:202
 #: modules/gui/macosx/MainMenu.m:356
 msgid "License"
 msgstr "Ліцэнзія"
 
-#: modules/gui/macosx/about.m:210
+#: modules/gui/macosx/about.m:215
 msgid "VLC media player Help"
 msgstr "Даведка пра прайгравальнік VLC"
 
-#: modules/gui/macosx/about.m:213 modules/gui/macosx/controls.m:190
+#: modules/gui/macosx/about.m:218 modules/gui/macosx/controls.m:190
 #: modules/gui/macosx/MainMenu.m:332
 msgid "Index"
 msgstr "Індэкс"
@@ -15991,36 +15991,36 @@ msgstr ""
 "Будзе высланы толькі ваш электронны адрас па змаўчанні без якой-небудзь "
 "дадатковай інфармацыі."
 
-#: modules/gui/macosx/intf.m:1812
+#: modules/gui/macosx/intf.m:1821
 msgid "Error when sending the Crash Report"
 msgstr "Памылка пры высылцы справаздачы аб збоі"
 
-#: modules/gui/macosx/intf.m:1903
+#: modules/gui/macosx/intf.m:1912
 msgid "No CrashLog found"
 msgstr "Журнал збояў не знойдзены"
 
-#: modules/gui/macosx/intf.m:1903 modules/gui/macosx/prefs.m:229
+#: modules/gui/macosx/intf.m:1912 modules/gui/macosx/prefs.m:229
 #: modules/gui/macosx/simple_prefs.m:752
 msgid "Continue"
 msgstr "Працягнуць"
 
-#: modules/gui/macosx/intf.m:1903
+#: modules/gui/macosx/intf.m:1912
 msgid "Couldn't find any trace of a previous crash."
 msgstr "Ніякіх прыкмет папярэдняга збою не выяўлена."
 
-#: modules/gui/macosx/intf.m:1942
+#: modules/gui/macosx/intf.m:1951
 msgid "Remove old preferences?"
 msgstr "Выдаліць старыя налады?"
 
-#: modules/gui/macosx/intf.m:1943
+#: modules/gui/macosx/intf.m:1952
 msgid "We just found an older version of VLC's preferences files."
 msgstr "Знойдзена старэйшая версія файлаў налад VLC."
 
-#: modules/gui/macosx/intf.m:1944
+#: modules/gui/macosx/intf.m:1953
 msgid "Move To Trash and Relaunch VLC"
 msgstr "Перамясціць у сметніцу і перазапусціць VLC"
 
-#: modules/gui/macosx/intf.m:2059
+#: modules/gui/macosx/intf.m:2068
 #, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr "Адладачныя паведамленні VLC (%s).rtfd"
@@ -26477,15 +26477,15 @@ msgstr "DIVE"
 msgid "K Video Acceleration video output"
 msgstr "Вывад відэа праз K Video Acceleration"
 
-#: modules/video_output/macosx.m:76
+#: modules/video_output/macosx.m:87
 msgid "Mac OS X OpenGL video output (requires drawable-nsobject)"
 msgstr "Вывад відэа праз Mac OS X OpenGL (патрабуецца drawable-nsobject)"
 
-#: modules/video_output/macosx.m:131
+#: modules/video_output/macosx.m:142
 msgid "OpenGL acceleration is not supported on your Mac"
 msgstr ""
 
-#: modules/video_output/macosx.m:131
+#: modules/video_output/macosx.m:142
 #, fuzzy
 msgid ""
 "Your Mac lacks Quartz Extreme acceleration, which is required for video "
