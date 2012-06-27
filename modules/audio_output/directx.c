@@ -29,8 +29,6 @@
 # include "config.h"
 #endif
 
-#include <math.h>
-
 #include <vlc_common.h>
 #include <vlc_plugin.h>
 #include <vlc_aout.h>
@@ -75,7 +73,6 @@ struct aout_sys_t
     LPDIRECTSOUNDBUFFER p_dsbuffer;   /* the sound buffer we use (direct sound
                                        * takes care of mixing all the
                                        * secondary buffers into the primary) */
-    LONG                volume;
 
     notification_thread_t notif;                  /* DirectSoundThread id */
 
@@ -96,7 +93,6 @@ struct aout_sys_t
 static int  OpenAudio  ( vlc_object_t * );
 static void CloseAudio ( vlc_object_t * );
 static void Play       ( audio_output_t *, block_t * );
-static int  VolumeSet  ( audio_output_t *, float, bool );
 
 /* local functions */
 static void Probe             ( audio_output_t * );
@@ -232,7 +228,6 @@ static int OpenAudio( vlc_object_t *p_this )
         }
 
         aout_PacketInit( p_aout, &p_aout->sys->packet, A52_FRAME_NB );
-        p_aout->sys->volume = -1;
         aout_VolumeNoneInit( p_aout );
     }
     else
@@ -287,7 +282,7 @@ static int OpenAudio( vlc_object_t *p_this )
         /* Calculate the frame size in bytes */
         aout_FormatPrepare( &p_aout->format );
         aout_PacketInit( p_aout, &p_aout->sys->packet, FRAME_SIZE );
-        aout_VolumeHardInit( p_aout, VolumeSet, true );
+        aout_VolumeSoftInit( p_aout );
     }
 
     /* Now we need to setup our DirectSound play notification structure */
@@ -575,34 +570,6 @@ static void Play( audio_output_t *p_aout, block_t *p_buffer )
 }
 
 /*****************************************************************************
- * VolumeSet: change audio device volume
- *****************************************************************************/
-static int VolumeSet( audio_output_t *p_aout, float vol, bool mute )
-{
-    aout_sys_t *sys = p_aout->sys;
-
-    /* Convert UI volume to linear factor (cube) */
-    vol = vol * vol * vol;
-
-    /* millibels from linear amplification */
-    LONG mb = lroundf(2000.f * log10f(vol));
-
-    /* Clamp to allowed DirectSound range */
-    static_assert( DSBVOLUME_MIN < DSBVOLUME_MAX, "DSBVOLUME_* confused" );
-    if( mb >= DSBVOLUME_MAX )
-        mb = DSBVOLUME_MAX;
-    if( mb <= DSBVOLUME_MIN )
-        mb = DSBVOLUME_MIN;
-
-    InterlockedExchange(&sys->volume, mute ? DSBVOLUME_MIN : mb);
-
-    /* Convert back to UI volume */
-    vol = cbrtf(powf(10.f, ((float)mb) / -2000.f));
-    aout_VolumeHardSet( p_aout, vol, mute );
-    return 0;
-}
-
-/*****************************************************************************
  * CloseAudio: close the audio device
  *****************************************************************************/
 static void CloseAudio( vlc_object_t *p_this )
@@ -825,8 +792,7 @@ static int CreateDSBuffer( audio_output_t *p_aout, int i_format,
     memset(&dsbdesc, 0, sizeof(DSBUFFERDESC));
     dsbdesc.dwSize = sizeof(DSBUFFERDESC);
     dsbdesc.dwFlags = DSBCAPS_GETCURRENTPOSITION2/* Better position accuracy */
-                    | DSBCAPS_GLOBALFOCUS       /* Allows background playing */
-                    | DSBCAPS_CTRLVOLUME;       /* Allows volume control */
+                    | DSBCAPS_GLOBALFOCUS;      /* Allows background playing */
 
     /* Only use the new WAVE_FORMAT_EXTENSIBLE format for multichannel audio */
     if( i_nb_channels <= 2 )
@@ -1064,11 +1030,6 @@ static void* DirectSoundThread( void *data )
         unsigned i_frame_siz = p_aout->sys->packet.samples;
         mtime_t mtime = mdate();
         int i;
-
-        /* Update volume if required */
-        LONG volume = InterlockedExchange( &p_aout->sys->volume, -1 );
-        if( unlikely(volume != -1) )
-            IDirectSoundBuffer_SetVolume( p_aout->sys->p_dsbuffer, volume );
 
         /*
          * Fill in as much audio data as we can in our circular buffer
