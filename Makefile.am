@@ -194,6 +194,7 @@ EXTRA_DIST += \
 	extras/package/macosx/Resources/mainwindow/bottombar-mini.png \
 	extras/package/macosx/Resources/mainwindow/dropzone-background.png \
 	extras/package/macosx/Resources/mainwindow/dropzone.png \
+	extras/package/macosx/Resources/mainwindow/dropzone@2x.png \
 	extras/package/macosx/Resources/mainwindow/effects-double-buttons-blue.png \
 	extras/package/macosx/Resources/mainwindow/effects-double-buttons-pressed.png \
 	extras/package/macosx/Resources/mainwindow/effects-double-buttons.png \
