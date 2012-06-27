@@ -35,8 +35,6 @@
     BOOL b_displayed;
     BOOL b_voutWasUpdated;
     int i_device;
-
-    BOOL b_usingBigScreen;
 }
 - (id)initWithContentRect: (NSRect)contentRect
                 styleMask: (NSUInteger)aStyle
@@ -73,7 +71,6 @@
 
 - (BOOL)isDisplayed;
 - (void)setVoutWasUpdated: (int)i_screen;
-- (void)adaptWindowSizeToScreen;
 @end
 
 @interface VLCFSPanelView : NSView
@@ -82,8 +79,6 @@
     NSButton *o_prev, *o_next, *o_bwd, *o_fwd, *o_play, *o_fullscreen;
     NSTextField *o_streamTitle_txt, *o_streamPosition_txt;
     NSSlider *o_fs_timeSlider, *o_fs_volumeSlider;
-
-    BOOL b_usingBigScreen;
 }
 - (id)initWithFrame: (NSRect)frameRect;
 - (void)drawRect: (NSRect)rect;
@@ -101,7 +96,6 @@
 - (IBAction)backward:(id)sender;
 - (IBAction)fsTimeSliderUpdate: (id)sender;
 - (IBAction)fsVolumeSliderUpdate: (id)sender;
-- (void)adaptViewSizeToScreen: (BOOL)b_value;
 
 @end
 
