@@ -287,7 +287,7 @@ static int OpenAudio( vlc_object_t *p_this )
         /* Calculate the frame size in bytes */
         aout_FormatPrepare( &p_aout->format );
         aout_PacketInit( p_aout, &p_aout->sys->packet, FRAME_SIZE );
-        aout_VolumeHardInit( p_aout, VolumeSet );
+        aout_VolumeHardInit( p_aout, VolumeSet, true );
     }
 
     /* Now we need to setup our DirectSound play notification structure */
@@ -588,6 +588,7 @@ static int VolumeSet( audio_output_t *p_aout, float vol, bool mute )
     LONG mb = lroundf(2000.f * log10f(vol));
 
     /* Clamp to allowed DirectSound range */
+    static_assert( DSBVOLUME_MIN < DSBVOLUME_MAX, "DSBVOLUME_* confused" );
     if( mb >= DSBVOLUME_MAX )
         mb = DSBVOLUME_MAX;
     if( mb <= DSBVOLUME_MIN )
