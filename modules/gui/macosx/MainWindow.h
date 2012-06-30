@@ -200,6 +200,7 @@
 - (void)windowDidEnterFullScreen:(NSNotification *)notification;
 - (void)windowWillExitFullScreen:(NSNotification *)notification;
 
+- (id)detachedTitlebarView;
 @end
 
 @interface VLCDetachedVideoWindow : NSWindow
