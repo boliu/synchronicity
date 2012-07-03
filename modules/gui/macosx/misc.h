@@ -118,6 +118,7 @@
 {
     NSImage *o_knob_img;
     NSRect img_rect;
+    BOOL b_dark;
 }
 - (CGFloat)knobPosition;
 
