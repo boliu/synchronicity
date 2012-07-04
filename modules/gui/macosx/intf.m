@@ -973,10 +973,12 @@ static VLCMain *_o_sharedMainInstance = nil;
                 [[VLCCoreInteraction sharedInstance] backward];
                 break;
             case kRemoteButtonVolume_Plus_Hold:
-                [[VLCCoreInteraction sharedInstance] volumeUp];
+                if( p_intf )
+                    var_SetInteger( p_intf->p_libvlc, "key-action", ACTIONID_VOL_UP );
                 break;
             case kRemoteButtonVolume_Minus_Hold:
-                [[VLCCoreInteraction sharedInstance] volumeDown];
+                if( p_intf )
+                    var_SetInteger( p_intf->p_libvlc, "key-action", ACTIONID_VOL_DOWN );
                 break;
         }
         if(b_remote_button_hold)
@@ -1010,10 +1012,12 @@ static VLCMain *_o_sharedMainInstance = nil;
             }
             break;
         case kRemoteButtonVolume_Plus:
-            [[VLCCoreInteraction sharedInstance] volumeUp];
+            if( p_intf )
+                var_SetInteger( p_intf->p_libvlc, "key-action", ACTIONID_VOL_UP );
             break;
         case kRemoteButtonVolume_Minus:
-            [[VLCCoreInteraction sharedInstance] volumeDown];
+            if( p_intf )
+                var_SetInteger( p_intf->p_libvlc, "key-action", ACTIONID_VOL_DOWN );
             break;
         case kRemoteButtonRight:
             [[VLCCoreInteraction sharedInstance] next];
