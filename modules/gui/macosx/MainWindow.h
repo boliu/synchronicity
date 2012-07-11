@@ -186,7 +186,6 @@
 /* fullscreen handling */
 - (void)showFullscreenController;
 - (BOOL)isFullscreen;
-- (void)updateFullscreen;
 - (void)lockFullscreenAnimation;
 - (void)unlockFullscreenAnimation;
 - (void)enterFullscreen;
@@ -211,7 +210,6 @@
 }
 
 - (BOOL)isFullscreen;
-- (void)updateFullscreen;
 - (void)customZoom:(id)sender;
 
 @end
