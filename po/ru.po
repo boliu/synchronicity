@@ -9,22 +9,21 @@
 # Andrey Wolk (Lorni) <andywolk@gmail.com>, 2009.
 # Roustam Ghizdatov <roustam@2-u.ru>, 2009.
 # Konstantin Pavlov <thresh@videolan.org>, 2011.
-# Alexander LAW <exclusion@gmail.com>, 2011
-#: modules/gui/macosx/prefs.m:483 modules/gui/macosx/simple_prefs.m:451
+# Alexander Lakhin <exclusion@gmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: vlc\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-06-27 01:19+0200\n"
-"PO-Revision-Date: 2012-01-28 16:02+0300\n"
-"Last-Translator: Alexander LAW <exclusion@gmail.com>\n"
+"PO-Revision-Date: 2012-07-16 17:24+0400\n"
+"Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <translators@videolan.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Russian\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
@@ -5759,11 +5758,11 @@ msgstr "Ввод с диска Blu-ray"
 
 #: modules/access/bluray.c:51
 msgid "Bluray menus"
-msgstr ""
+msgstr "Меню Bluray"
 
 #: modules/access/bluray.c:52
 msgid "Use bluray menus. If disabled, the movie will start directly"
-msgstr ""
+msgstr "Показывать меню Bluray. Если отключено, воспроизведение начнётся сразу"
 
 #: modules/access/bluray.c:60 modules/gui/qt4/ui/open_disk.h:300
 msgid "BluRay"
@@ -5782,30 +5781,28 @@ msgstr ""
 "но её нет в вашей системе."
 
 #: modules/access/bluray.c:234
-#, fuzzy
 msgid "BluRay Disc is corrupted."
-msgstr "Ввод с диска Blu-ray"
+msgstr "Диск BluRay испорчен"
 
 #: modules/access/bluray.c:237
-#, fuzzy
 msgid "Missing AACS configuration file!"
-msgstr "Конфигурационный файл VLM"
+msgstr "Отсутствует файл конфигурации AACS!"
 
 #: modules/access/bluray.c:240
 msgid "No valid processing key found in AACS config file."
-msgstr ""
+msgstr "В файле конфигурации AACS не найден подходящий ключ обработки."
 
 #: modules/access/bluray.c:243
 msgid "No valid host certificate found in AACS config file."
-msgstr ""
+msgstr "В файле конфигурации AACS не найден годный сертификат проигрывателя."
 
 #: modules/access/bluray.c:246
 msgid "AACS Host certificate revoked."
-msgstr ""
+msgstr "Сертификат проигрывателя AACS отозван."
 
 #: modules/access/bluray.c:249
 msgid "AACS MMC failed."
-msgstr ""
+msgstr "Сбой в AACS MMC."
 
 #: modules/access/bluray.c:255
 msgid "Your system AACS decoding library does not work. Missing keys?"
@@ -6282,18 +6279,16 @@ msgstr ""
 "указать номер используемого адаптера (начиная с 0)."
 
 #: modules/access/dtv/access.c:41
-#, fuzzy
 msgid "DVB device"
-msgstr "Устройство DVD"
+msgstr "DVB-устройство"
 
 #: modules/access/dtv/access.c:43
-#, fuzzy
 msgid ""
 "If the adapter provides multiple independent tuner devices, the device "
 "number must be selected. Numbering starts from zero."
 msgstr ""
-"Если подключено несколько приёмников цифрового телесигнала, необходимо "
-"указать номер используемого адаптера (начиная с 0)."
+"Если в адаптере несколько независимых тюнеров, необходимо выбрать номер "
+"используемого устройства (начиная с 0)."
 
 #: modules/access/dtv/access.c:45
 msgid "Do not demultiplex"
@@ -9179,7 +9174,7 @@ msgstr "Эффект наушников"
 
 #: modules/audio_filter/channel_mixer/mono.c:83
 msgid "Use downmix algorithm"
-msgstr "Вкл. алгоритм пониж. микширования"
+msgstr "Вкл. алгоритм сведения каналов"
 
 #: modules/audio_filter/channel_mixer/mono.c:84
 msgid ""
@@ -9777,18 +9772,16 @@ msgid "Dummy audio output"
 msgstr "Фиктивный вывод звука"
 
 #: modules/audio_output/alsa.c:56
-#, fuzzy
 msgid "Audio output device"
-msgstr "Точка вывода звука"
+msgstr "Устройство вывода звука"
 
 #: modules/audio_output/alsa.c:57
 msgid "Audio output device (using ALSA syntax)."
-msgstr ""
+msgstr "Устройство вывода звука (в формате ALSA)."
 
 #: modules/audio_output/alsa.c:65
-#, fuzzy
 msgid "Audio output channels"
-msgstr "Режим каналов вывода звука"
+msgstr "Каналы вывода звука"
 
 #: modules/audio_output/alsa.c:66
 msgid ""
@@ -9796,6 +9789,9 @@ msgid ""
 "output, it will be down-mixed.This parameter is ignored when digital pass-"
 "through is active."
 msgstr ""
+"Каналы, через которые будет выводиться звук. Если на входе больше каналов, "
+"чем на выходе, они будут сведены. Если включен цифровой вывод, этот параметр "
+"игнорируется."
 
 #: modules/audio_output/alsa.c:74
 msgid "Surround 4.0"
@@ -10520,12 +10516,11 @@ msgid "Strict standard compliance"
 msgstr "Строгое следование стандартам"
 
 #: modules/codec/avcodec/avcodec.h:228
-#, fuzzy
 msgid ""
 "Force a strict standard compliance when encoding (accepted values: -2 to 2)."
 msgstr ""
-"Включить строгое следование стандартом при кодировании (допустимые значения: "
-"-1, 0, 1)."
+"Включить строгое следование стандартам при кодировании (допустимые значения: "
+"-2..2)."
 
 #: modules/codec/avcodec/avcodec.h:231
 msgid "Luminance masking"
@@ -11008,13 +11003,15 @@ msgstr "Для программного синтеза требуется бан
 
 #: modules/codec/fluidsynth.c:60
 msgid "Synthesis gain"
-msgstr ""
+msgstr "Усиление синтезатора"
 
 #: modules/codec/fluidsynth.c:61
 msgid ""
 "This gain is applied to synthesis output. High values may cause saturation "
 "when many notes are played at a time."
 msgstr ""
+"Усиление синтезированного звука. При больших значениях наложение множества "
+"нот может приводить к насыщению."
 
 #: modules/codec/fluidsynth.c:69
 msgid "FluidSynth MIDI synthesizer"
@@ -11572,7 +11569,7 @@ msgstr "Метод взвешивания"
 
 #: modules/codec/schroedinger.c:272
 msgid "perceptual distance"
-msgstr "воспринимаемое расстояние"
+msgstr "Воспринимаемое расстояние"
 
 #: modules/codec/schroedinger.c:273
 msgid "perceptual distance to calculate perceptual weight"
@@ -11839,9 +11836,8 @@ msgid "Western European (Windows-1252)"
 msgstr "Западноевропейская (Windows-1252)"
 
 #: modules/codec/subsdec.c:107
-#, fuzzy
 msgid "Western European (IBM 00850)"
-msgstr "Западноевропейская (Latin-9)"
+msgstr "Западноевропейская (IBM 00850)"
 
 #: modules/codec/subsdec.c:109
 msgid "Eastern European (Latin-2)"
@@ -13156,7 +13152,7 @@ msgstr ""
 
 #: modules/control/dbus/dbus.c:143
 msgid "DBus"
-msgstr ""
+msgstr "D-Bus"
 
 #: modules/control/dbus/dbus.c:146
 msgid "D-Bus control interface"
@@ -14064,14 +14060,12 @@ msgid "Force use of a specific avformat muxer."
 msgstr "Принудительно использовать указанный мультиплексор avformat."
 
 #: modules/demux/avformat/avformat.h:37
-#, fuzzy
 msgid "Format name"
-msgstr "Формат"
+msgstr "Название формата"
 
 #: modules/demux/avformat/avformat.h:38
-#, fuzzy
 msgid "Internal libavcodec format name"
-msgstr "Внутреннее название кодека libavcodec"
+msgstr "Внутреннее название формата libavcodec"
 
 #: modules/demux/avi/avi.c:51
 msgid "Force interleaved method"
@@ -16161,15 +16155,15 @@ msgid "Use the native fullscreen mode on OS X Lion"
 msgstr "Использовать стандартный полноэкранный режим в OS X Lion"
 
 #: modules/gui/macosx/macosx.m:91
-#, fuzzy
 msgid ""
 "By default, VLC uses the fullscreen mode known from previous Mac OS X "
 "releases. It can also use the native fullscreen mode on Mac OS X 10.7 and "
 "later."
 msgstr ""
-"По умолчанию VLC использует стандартный полноэкранный режим в Mac OS X 10.7 "
-"и новее. Также VLC может использовать режим, работавший в предыдущих версиях "
-"Mac OS X."
+"По умолчанию VLC использует переключение полноэкранного режима, работавшее в "
+"ранних выпусках Mac OS X."
+"Также VLC может включать полноэкранный режим, используя новый метод в Mac OS "
+"X версии 10.7 и новее."
 
 #: modules/gui/macosx/macosx.m:93 modules/gui/qt4/qt4.cpp:128
 msgid "Automatically save the volume on exit"
@@ -17288,12 +17282,10 @@ msgid "Force Bold"
 msgstr "Полужирный шрифт"
 
 #: modules/gui/macosx/simple_prefs.m:298
-#, fuzzy
 msgid "Outline Color"
 msgstr "Цвет контура"
 
 #: modules/gui/macosx/simple_prefs.m:299
-#, fuzzy
 msgid "Outline Thickness"
 msgstr "Толщина контура"
 
@@ -18815,7 +18807,6 @@ msgid "Stop the A to B loop"
 msgstr "Останов цикла от A до Б"
 
 #: modules/gui/qt4/components/controller_widget.cpp:281
-#, fuzzy
 msgid "Aspect Ratio"
 msgstr "Соотношение сторон"
 
@@ -19839,9 +19830,8 @@ msgid "&Search:"
 msgstr "Поиск:"
 
 #: modules/gui/qt4/dialogs/plugins.cpp:196
-#, fuzzy
 msgid "Get more extensions from"
-msgstr "Пропускать расширения"
+msgstr "Выберите другие расширения на"
 
 #: modules/gui/qt4/dialogs/plugins.cpp:228
 msgid "More information..."
@@ -20443,9 +20433,8 @@ msgid "Jump Bac&kward"
 msgstr "Скачок назад"
 
 #: modules/gui/qt4/menus.cpp:886
-#, fuzzy
 msgid "Ctrl+T"
-msgstr "Ctrl+L"
+msgstr "Ctrl+T"
 
 #: modules/gui/qt4/menus.cpp:895
 msgid "&Open File..."
@@ -21653,9 +21642,8 @@ msgid "Growl Notification Plugin"
 msgstr "Оповещения Growl"
 
 #: modules/notify/growl.m:275
-#, fuzzy
 msgid "New input playing"
-msgstr "Сейчас играет"
+msgstr "Играет новый медиа-объект"
 
 #: modules/notify/growl.m:298
 msgid "Now playing"
@@ -22463,17 +22451,16 @@ msgid ""
 msgstr "Название сессии, которое будет указано в SDP (Описание сессии)."
 
 #: modules/stream_out/rtp.c:96
-#, fuzzy
 msgid "Session category"
-msgstr "Название сессии"
+msgstr "Категория сессии"
 
 #: modules/stream_out/rtp.c:98
-#, fuzzy
 msgid ""
 "This allows you to specify a category for the session, that will be "
 "announced if you choose to use SAP."
 msgstr ""
-"Группа сессии, которая будет указана в оповещениях при использовании SAP."
+"Вы можете задать категорию сессии, которая будет указана в оповещениях при "
+"использовании SAP."
 
 #: modules/stream_out/rtp.c:100 modules/stream_out/standard.c:62
 msgid "Session description"
@@ -22484,7 +22471,8 @@ msgid ""
 "This allows you to give a short description with details about the stream, "
 "that will be announced in the SDP (Session Descriptor)."
 msgstr ""
-"Дать короткое описание потока, которое будет указано в SDP (Описание сессии)."
+"Вы можете задать короткое описание потока, которое будет указано в SDP "
+"(Описание сессии)."
 
 #: modules/stream_out/rtp.c:104 modules/stream_out/standard.c:66
 msgid "Session URL"
@@ -22508,7 +22496,8 @@ msgid ""
 "This allows you to give a contact mail address for the stream, that will be "
 "announced in the SDP (Session Descriptor)."
 msgstr ""
-"Позволяет задать e-mail для контактов, которое будет указано в SDP (Описание "
+"Вы можете задать контактный e-mail для потока, который будет указан в SDP "
+"(Описание "
 "сессии)."
 
 #: modules/stream_out/rtp.c:113 modules/stream_out/standard.c:75
@@ -22520,7 +22509,7 @@ msgid ""
 "This allows you to give a contact telephone number for the stream, that will "
 "be announced in the SDP (Session Descriptor)."
 msgstr ""
-"Дать контактный телефонный номер для потока, который будет указан в SDP "
+"Вы можете задать контактный телефон для потока, который будет указан в SDP "
 "(Описание сессии)."
 
 #: modules/stream_out/rtp.c:120
@@ -26534,7 +26523,7 @@ msgstr "WarpOverlay!"
 
 #: modules/video_output/kva.c:62
 msgid "VMAN"
-msgstr ""
+msgstr "VMAN"
 
 #: modules/video_output/kva.c:62
 msgid "DIVE"
@@ -26550,17 +26539,17 @@ msgstr "Вывод видео через Mac OS X OpenGL (требуется dra
 
 #: modules/video_output/macosx.m:142
 msgid "OpenGL acceleration is not supported on your Mac"
-msgstr ""
+msgstr "Ваш Mac не поддерживает ускорение OpenGL"
 
 #: modules/video_output/macosx.m:142
-#, fuzzy
 msgid ""
 "Your Mac lacks Quartz Extreme acceleration, which is required for video "
 "output. It will still work, but much slower and with possibly unexpected "
 "results."
 msgstr ""
 "Ваш Mac не поддерживает ускорение Quartz Extreme, необходимое для вывода "
-"видео."
+"видео. Воспроизведение будет работать, но гораздо медленнее и возможно "
+"непредсказуемым образом."
 
 #: modules/video_output/msw/direct2d.c:56
 msgid "Video output for Windows 7/Windows Vista with Platform update"
