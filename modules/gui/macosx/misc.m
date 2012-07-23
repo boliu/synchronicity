@@ -180,7 +180,6 @@ static NSMutableArray *blackoutWindows = NULL;
     self = [super initWithContentRect:contentRect styleMask:styleMask backing:backingType defer:flag];
     if( self )
     {
-        b_isFullscreen = NO;
         b_isset_canBecomeKeyWindow = NO;
         /* we don't want this window to be restored on relaunch */
         if (OSX_LION)
@@ -367,16 +366,6 @@ static NSMutableArray *blackoutWindows = NULL;
         if ((invoc = [anim userInfo]))
             [invoc invoke];
     }
-}
-
-- (void)setFullscreen:(BOOL)b_var
-{
-    b_isFullscreen = b_var;
-}
-
-- (BOOL)isFullscreen
-{
-    return b_isFullscreen;
 }
 
 - (IBAction)fullscreen:(id)sender

@@ -209,7 +209,6 @@
     NSRect previousSavedFrame;
 }
 
-- (BOOL)isFullscreen;
 - (void)customZoom:(id)sender;
 
 @end
