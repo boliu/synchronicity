@@ -294,7 +294,7 @@ SPrefsPanel::SPrefsPanel( intf_thread_t *_p_intf, QWidget *_parent,
 #ifdef WIN32
             audioControl( DirectX );
             optionWidgets.append( DirectXControl );
-            CONFIG_GENERIC_NO_UI( "directx-audio-device-name", StringList,
+            CONFIG_GENERIC_NO_UI( "directx-audio-device", StringList,
                     DirectXLabel, DirectXDevice );
 #elif defined( __OS2__ )
             audioControl( kai );
@@ -472,14 +472,11 @@ SPrefsPanel::SPrefsPanel( intf_thread_t *_p_intf, QWidget *_parent,
             }
             CONFIG_BOOL( "ffmpeg-hw", hwAccelBox );
 #ifdef WIN32
-            CONFIG_BOOL( "prefer-system-codecs", systemCodecBox );
             HINSTANCE hdxva2_dll = LoadLibrary(TEXT("DXVA2.DLL") );
             if( !hdxva2_dll )
                 ui.hwAccelBox->setEnabled( false );
             else
                 FreeLibrary( hdxva2_dll );
-#else
-            ui.systemCodecBox->hide();
 #endif
             optionWidgets.append( ui.DVDDeviceComboBox );
             optionWidgets.append( ui.cachingCombo );
@@ -615,7 +612,8 @@ SPrefsPanel::SPrefsPanel( intf_thread_t *_p_intf, QWidget *_parent,
             CONNECT( ui.updatesBox, toggled( bool ),
                      ui.updatesDays, setEnabled( bool ) );
 #else
-            ui.updateNotifierZone->hide();
+            ui.updatesBox->hide();
+            ui.updatesDays->hide();
 #endif
             /* ONE INSTANCE options */
 #if defined( WIN32 ) || defined( HAVE_DBUS ) || defined(__APPLE__)
@@ -930,15 +928,15 @@ bool SPrefsPanel::addType( const char * psz_ext, QTreeWidgetItem* current,
 
 void SPrefsPanel::assoDialog()
 {
-    LPAPPASSOCREGUI p_appassoc;
+    IApplicationAssociationRegistrationUI *p_appassoc;
     CoInitialize( 0 );
 
-    if( S_OK == CoCreateInstance( &clsid_IApplication2,
+    if( S_OK == CoCreateInstance(CLSID_ApplicationAssociationRegistrationUI,
                 NULL, CLSCTX_INPROC_SERVER,
                 IID_IApplicationAssociationRegistrationUI,
                 (void **)&p_appassoc) )
     {
-        if(S_OK == p_appassoc->vt->LaunchAdvancedAssociationUI(p_appassoc, L"VLC" ) )
+        if(S_OK == p_appassoc->LaunchAdvancedAssociationUI(L"VLC" ) )
         {
             CoUninitialize();
             return;

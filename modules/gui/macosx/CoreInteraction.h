@@ -27,7 +27,6 @@
 
 @interface VLCCoreInteraction : NSObject {
     int i_currentPlaybackRate;
-    BOOL b_lockAspectRatio;
 }
 + (VLCCoreInteraction *)sharedInstance;
 
@@ -71,7 +70,11 @@
 - (int)volume;
 - (void)setVolume:(int)i_value;
 
+- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender;
+
 - (void)setAspectRatioLocked:(BOOL)b_value;
 - (BOOL)aspectRatioIsLocked;
 - (void)toggleFullscreen;
+
+- (BOOL)fixPreferences;
 @end

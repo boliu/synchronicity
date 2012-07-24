@@ -530,7 +530,7 @@ static int Open( vlc_object_t * p_this )
                 fmt.video.i_frame_rate = tk->i_rate;
                 fmt.video.i_frame_rate_base = tk->i_scale;
                 fmt.i_extra =
-                    __MIN( p_vids->p_bih->biSize - sizeof( BITMAPINFOHEADER ),
+                    __MAX( p_vids->p_bih->biSize - sizeof( BITMAPINFOHEADER ),
                            p_vids->i_chunk_size - sizeof(BITMAPINFOHEADER) );
                 if( fmt.i_extra > 0 )
                 {
@@ -2527,6 +2527,7 @@ static void AVI_MetaLoad( demux_t *p_demux,
         { AVIFOURCC_ICOP, vlc_meta_Copyright },
         { AVIFOURCC_IGNR, vlc_meta_Genre },
         { AVIFOURCC_INAM, vlc_meta_Title },
+        { AVIFOURCC_ICRD, vlc_meta_Date },
         { 0, -1 }
     };
     for( int i = 0; p_dsc[i].i_id != 0; i++ )

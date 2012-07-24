@@ -261,7 +261,7 @@ void SeekSlider::mouseMoveEvent( QMouseEvent *event )
         mTimeTooltip->setText( psz_length, chapterLabel );
 
         QPoint p( event->globalX() - ( event->x() - posX ) - ( mTimeTooltip->width() / 2 ),
-                  QWidget::mapToGlobal( pos() ).y() - ( mTimeTooltip->height() + 2 ) );
+                  QWidget::mapToGlobal( QPoint( 0, 0 ) ).y() - ( mTimeTooltip->height() - 2 ) );
         mTimeTooltip->move( p );
     }
     event->accept();

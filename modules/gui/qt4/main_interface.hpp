@@ -189,7 +189,7 @@ private:
 
 #ifdef WIN32
     HIMAGELIST himl;
-    LPTASKBARLIST3 p_taskbl;
+    ITaskbarList3 *p_taskbl;
     UINT taskbar_wmsg;
     void createTaskBarButtons();
 #endif
@@ -261,6 +261,7 @@ private slots:
     }
 
     void setVideoSize( unsigned int, unsigned int );
+    void videoSizeChanged( int, int );
     void setVideoFullScreen( bool );
     void setVideoOnTop( bool );
     void hostButton_Click();

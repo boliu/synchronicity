@@ -74,6 +74,10 @@ extern OSErr UpdateSystemActivity(UInt8 activity);
 - (void)setPresentationOptions:(NSApplicationPresentationOptions)newOptions;
 - (NSApplicationPresentationOptions)currentSystemPresentationOptions;
 @end
+
+@interface NSURL (IntroducedInSnowLeopard)
+- (NSArray *)pathComponents;
+@end
 #endif
 
 #pragma mark -
@@ -95,6 +99,7 @@ enum {
 - (void)setRestorable:(BOOL)b_value;
 - (void)toggleFullScreen:(id)id_value;
 - (void)windowWillEnterFullScreen:(NSNotification *)notification;
+- (void)windowDidEnterFullScreen:(NSNotification *)notification;
 - (void)windowWillExitFullScreen:(NSNotification *)notification;
 @end
 

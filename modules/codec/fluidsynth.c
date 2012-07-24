@@ -74,7 +74,7 @@ vlc_module_begin ()
     set_callbacks (Open, Close)
     add_loadfile ("soundfont", "",
                   SOUNDFONT_TEXT, SOUNDFONT_LONGTEXT, false)
-    add_float ("synth-gain", 0.8, GAIN_TEXT, GAIN_LONGTEXT, false)
+    add_float ("synth-gain", .5, GAIN_TEXT, GAIN_LONGTEXT, false)
         change_float_range (0., 10.)
 vlc_module_end ()
 

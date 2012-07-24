@@ -217,7 +217,7 @@ MainInterface::MainInterface( intf_thread_t *_p_intf ) : QVLCMW( _p_intf )
             CONNECT( this, askVideoToResize( unsigned int, unsigned int ),
                      this, setVideoSize( unsigned int, unsigned int ) );
             CONNECT( videoWidget, sizeChanged( int, int ),
-                     this, resizeStack( int,  int ) );
+                     this, videoSizeChanged( int,  int ) );
         }
         CONNECT( this, askVideoSetFullScreen( bool ),
                  this, setVideoFullScreen( bool ) );
@@ -274,7 +274,7 @@ MainInterface::~MainInterface()
     if( himl )
         ImageList_Destroy( himl );
     if(p_taskbl)
-        p_taskbl->vt->Release(p_taskbl);
+        p_taskbl->Release();
     CoUninitialize();
 #endif
 
@@ -360,6 +360,8 @@ void MainInterface::recreateToolbars()
                  this, handleKeyPress( QKeyEvent * ) );
         THEMIM->requestVoutUpdate();
     }
+
+    setMinimalView( b_minimalView );
 }
 
 void MainInterface::reloadPrefs()
@@ -576,6 +578,11 @@ inline void MainInterface::showTab( QWidget *widget )
 #ifdef DEBUG_INTF
     msg_Warn( p_intf, "Old stackCentralOldWidget %i", stackCentralW->indexOf( stackCentralOldWidget ) );
 #endif
+    /* fixing when the playlist has been undocked after been hidden.
+       restoreStackOldWidget() is called when video stops but
+       stackCentralOldWidget would still be pointing to playlist */
+    if ( widget == playlistWidget && !isPlDocked() )
+        widget = bgWidget;
 
     stackCentralOldWidget = stackCentralW->currentWidget();
     stackWidgetsSizes[stackCentralOldWidget] = stackCentralW->size();
@@ -601,7 +608,9 @@ inline void MainInterface::showTab( QWidget *widget )
         /* Embedded playlist -> Non-embedded playlist */
         if( bgWidget == stackCentralOldWidget && widget == videoWidget )
         {
-            playlistWidget->artContainer->removeWidget( videoWidget );
+            /* In rare case when video is started before the interface */
+            if( playlistWidget != NULL )
+                playlistWidget->artContainer->removeWidget( videoWidget );
             videoWidget->show(); videoWidget->raise();
             stackCentralW->addWidget( videoWidget );
             stackCentralW->setCurrentWidget( videoWidget );
@@ -724,6 +733,12 @@ void MainInterface::setVideoSize( unsigned int w, unsigned int h )
 {
     if( !isFullScreen() && !isMaximized() )
         videoWidget->SetSizing( w, h );
+}
+
+void MainInterface::videoSizeChanged( int w, int h )
+{
+    if( !playlistWidget || playlistWidget->artContainer->currentWidget() != videoWidget )
+        resizeStack( w, h );
 }
 
 void MainInterface::setVideoFullScreen( bool fs )
@@ -1467,7 +1482,8 @@ void MainInterface::keyPressEvent( QKeyEvent *e )
 
 void MainInterface::handleKeyPress( QKeyEvent *e )
 {
-    if( ( e->modifiers() &  Qt::ControlModifier ) && ( e->key() == Qt::Key_H ) )
+    if( ( ( e->modifiers() & Qt::ControlModifier ) && ( e->key() == Qt::Key_H ) ) ||
+        ( b_minimalView && !b_videoFullScreen && e->key() == Qt::Key_Escape ) )
     {
         toggleMinimalView( !b_minimalView );
         e->accept();

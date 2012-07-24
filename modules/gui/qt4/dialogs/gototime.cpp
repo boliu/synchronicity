@@ -74,10 +74,13 @@ GotoTimeDialog::GotoTimeDialog( intf_thread_t *_p_intf)
     BUTTONACT( gotoButton, close() );
     BUTTONACT( cancelButton, cancel() );
     BUTTONACT( resetButton, reset() );
+
+    QVLCTools::restoreWidgetPosition( p_intf, "gototimedialog", this );
 }
 
 GotoTimeDialog::~GotoTimeDialog()
 {
+    QVLCTools::saveWidgetPosition( p_intf, "gototimedialog", this );
 }
 
 void GotoTimeDialog::toggleVisible()
@@ -89,6 +92,7 @@ void GotoTimeDialog::toggleVisible()
         timeEdit->setTime( timeEdit->time().addSecs( i_time / 1000000 ) );
     }
     QVLCDialog::toggleVisible();
+    activateWindow ();
 }
 
 void GotoTimeDialog::cancel()

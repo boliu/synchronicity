@@ -23,7 +23,6 @@
  *****************************************************************************/
 
 #import <Cocoa/Cocoa.h>
-#import <ApplicationServices/ApplicationServices.h>
 #import "CompatibilityFixes.h"
 
 /*****************************************************************************
@@ -61,11 +60,15 @@
 {
     BOOL b_canBecomeKeyWindow;
     BOOL b_isset_canBecomeKeyWindow;
+    BOOL b_canBecomeMainWindow;
+    BOOL b_isset_canBecomeMainWindow;
     BOOL b_isFullscreen;
     NSViewAnimation *animation;
 }
 
 - (void)setCanBecomeKeyWindow: (BOOL)canBecomeKey;
+
+- (void)setCanBecomeMainWindow: (BOOL)canBecomeMain;
 
 /* animate mode is only supported in >=10.4 */
 - (void)orderFront: (id)sender animate: (BOOL)animate;
@@ -84,16 +87,6 @@
 - (BOOL)isFullscreen;
 @end
 
-
-/*****************************************************************************
- * VLCControllerView
- *****************************************************************************/
-
-@interface VLCControllerView : NSView
-{
-}
-
-@end
 
 /*****************************************************************************
  * VLBrushedMetalImageView
@@ -125,6 +118,7 @@
 {
     NSImage *o_knob_img;
     NSRect img_rect;
+    BOOL b_dark;
 }
 - (CGFloat)knobPosition;
 
@@ -187,7 +181,7 @@
 @end
 
 /*****************************************************************************
- * VLCThreePartImageView interface
+ * VLCThreePartDropView interface
  *****************************************************************************/
 @interface VLCThreePartDropView : VLCThreePartImageView
 {
