@@ -113,11 +113,15 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
     unsigned int i_keyModifiers = [[VLCMain sharedInstance] VLCModifiersToCocoa:o_key];
 
-    return [[[o_event charactersIgnoringModifiers] lowercaseString] isEqualToString: [[VLCMain sharedInstance] VLCKeyToString: o_key]] && 
-            (i_keyModifiers & NSShiftKeyMask)     == ([o_event modifierFlags] & NSShiftKeyMask) && 
-            (i_keyModifiers & NSControlKeyMask)   == ([o_event modifierFlags] & NSControlKeyMask) && 
-            (i_keyModifiers & NSAlternateKeyMask) == ([o_event modifierFlags] & NSAlternateKeyMask) && 
-            (i_keyModifiers & NSCommandKeyMask)   == ([o_event modifierFlags] & NSCommandKeyMask);
+    NSString * characters = [o_event charactersIgnoringModifiers];
+    if ([characters length] > 0) {
+        return [[characters lowercaseString] isEqualToString: [[VLCMain sharedInstance] VLCKeyToString: o_key]] &&
+                (i_keyModifiers & NSShiftKeyMask)     == ([o_event modifierFlags] & NSShiftKeyMask) &&
+                (i_keyModifiers & NSControlKeyMask)   == ([o_event modifierFlags] & NSControlKeyMask) &&
+                (i_keyModifiers & NSAlternateKeyMask) == ([o_event modifierFlags] & NSAlternateKeyMask) &&
+                (i_keyModifiers & NSCommandKeyMask)   == ([o_event modifierFlags] & NSCommandKeyMask);
+    }
+    return NO;
 }
 
 - (BOOL)performKeyEquivalent:(NSEvent *)o_event
@@ -750,7 +754,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
     [o_split_view setHidden: YES];
     [o_video_view setHidden: NO];
-    
+
     if( [[o_video_view subviews] count] > 0 )
         [self makeFirstResponder: [[o_video_view subviews] objectAtIndex:0]];
 }
@@ -821,7 +825,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 - (void)setRepeatOne
 {
     [o_repeat_btn setImage: o_repeat_one_img];
-    [o_repeat_btn setAlternateImage: o_repeat_one_pressed_img];   
+    [o_repeat_btn setAlternateImage: o_repeat_one_pressed_img];
 }
 
 - (void)setRepeatAll
@@ -1026,7 +1030,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
  * which will fit inside the screen.
  *
  * This method is based upon NSWindow.m, part of the GNUstep GUI Library, licensed under LGPLv2+.
- *    Authors:  Scott Christley <scottc@net-community.com>, Venkat Ajjanagadde <venkat@ocbi.com>,   
+ *    Authors:  Scott Christley <scottc@net-community.com>, Venkat Ajjanagadde <venkat@ocbi.com>,
  *              Felipe A. Rodriguez <far@ix.netcom.com>, Richard Frith-Macdonald <richard@brainstorm.co.uk>
  *    Copyright (C) 1996 Free Software Foundation, Inc.
  */
@@ -1052,7 +1056,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
         difference2 = screenRect.origin.y - frameRect.origin.y;
         difference2 -= difference;
-        // Take in account the space between the top of window and the top of the 
+        // Take in account the space between the top of window and the top of the
         // screen which can be used to move the bottom of the window on the screen
         if (difference2 > 0)
         {
@@ -1080,7 +1084,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
  be allowed to zoom to full screen.
  *
  * This method is based upon NSWindow.m, part of the GNUstep GUI Library, licensed under LGPLv2+.
- *    Authors:  Scott Christley <scottc@net-community.com>, Venkat Ajjanagadde <venkat@ocbi.com>,   
+ *    Authors:  Scott Christley <scottc@net-community.com>, Venkat Ajjanagadde <venkat@ocbi.com>,
  *              Felipe A. Rodriguez <far@ix.netcom.com>, Richard Frith-Macdonald <richard@brainstorm.co.uk>
  *    Copyright (C) 1996 Free Software Foundation, Inc.
  */
@@ -1163,7 +1167,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
     // needed when entering lion fullscreen mode
     if( b_fullscreen )
         return proposedFrameSize;
-    
+
     if( [[VLCCoreInteraction sharedInstance] aspectRatioIsLocked] )
     {
         NSRect videoWindowFrame = [videoWindow frame];
@@ -2163,14 +2167,14 @@ static VLCMainWindow *_o_sharedInstance = nil;
     [NSApp setPresentationOptions:(NSApplicationPresentationFullScreen | NSApplicationPresentationAutoHideDock | NSApplicationPresentationAutoHideMenuBar)];
 
     var_SetBool( pl_Get( VLCIntf ), "fullscreen", true );
-    
+
     vout_thread_t *p_vout = getVout();
     if( p_vout )
     {
         var_SetBool( p_vout, "fullscreen", true );
         vlc_object_release( p_vout );
     }
-    
+
     [o_video_view setFrame: [[self contentView] frame]];
     b_fullscreen = YES;
 
@@ -2195,7 +2199,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
     if ([[VLCMain sharedInstance] activeVideoPlayback])
         [o_bottombar_view setHidden: YES];
-    
+
     [self setMovableByWindowBackground: NO];
 }
 
@@ -2213,7 +2217,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 {
 
     var_SetBool( pl_Get( VLCIntf ), "fullscreen", false );
-    
+
     vout_thread_t *p_vout = getVout();
     if( p_vout )
     {
@@ -2247,7 +2251,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
     if ([[VLCMain sharedInstance] activeVideoPlayback])
         [o_bottombar_view setHidden: NO];
-    
+
     [self setMovableByWindowBackground: YES];
 }
 
@@ -2594,7 +2598,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
         if( [o_attribute_name isEqualTo: NSAccessibilityMinimizeButtonAttribute] )
             return [[o_tbv minimizeButton] cell];
-        
+
         if( [o_attribute_name isEqualTo: NSAccessibilityZoomButtonAttribute] )
             return [[o_tbv zoomButton] cell];
     }
@@ -2712,7 +2716,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
  * which will fit inside the screen.
  *
  * This method is based upon NSWindow.m, part of the GNUstep GUI Library, licensed under LGPLv2+.
- *    Authors:  Scott Christley <scottc@net-community.com>, Venkat Ajjanagadde <venkat@ocbi.com>,   
+ *    Authors:  Scott Christley <scottc@net-community.com>, Venkat Ajjanagadde <venkat@ocbi.com>,
  *              Felipe A. Rodriguez <far@ix.netcom.com>, Richard Frith-Macdonald <richard@brainstorm.co.uk>
  *    Copyright (C) 1996 Free Software Foundation, Inc.
  */
@@ -2738,7 +2742,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 
         difference2 = screenRect.origin.y - frameRect.origin.y;
         difference2 -= difference;
-        // Take in account the space between the top of window and the top of the 
+        // Take in account the space between the top of window and the top of the
         // screen which can be used to move the bottom of the window on the screen
         if (difference2 > 0)
         {
@@ -2766,7 +2770,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
  be allowed to zoom to full screen.
  *
  * This method is based upon NSWindow.m, part of the GNUstep GUI Library, licensed under LGPLv2+.
- *    Authors:  Scott Christley <scottc@net-community.com>, Venkat Ajjanagadde <venkat@ocbi.com>,   
+ *    Authors:  Scott Christley <scottc@net-community.com>, Venkat Ajjanagadde <venkat@ocbi.com>,
  *              Felipe A. Rodriguez <far@ix.netcom.com>, Richard Frith-Macdonald <richard@brainstorm.co.uk>
  *    Copyright (C) 1996 Free Software Foundation, Inc.
  */
@@ -2810,7 +2814,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 {
     if( !b_dark_interface )
         return [super accessibilityAttributeNames];
-    
+
     static NSMutableArray *attributes = nil;
     if ( attributes == nil ) {
         attributes = [[super accessibilityAttributeNames] mutableCopy];
@@ -2819,7 +2823,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
                                      NSAccessibilityMinimizeButtonAttribute,
                                      NSAccessibilityZoomButtonAttribute,
                                      nil];
-        
+
         for( NSString *attribute in appendAttributes )
         {
             if( ![attributes containsObject:attribute] )
@@ -2834,20 +2838,20 @@ static VLCMainWindow *_o_sharedInstance = nil;
     if( b_dark_interface )
     {
         VLCMainWindowTitleView *o_tbv = [[VLCMainWindow sharedInstance] detachedTitlebarView];
-        
+
         if( [o_attribute_name isEqualTo: NSAccessibilitySubroleAttribute] )
             return NSAccessibilityStandardWindowSubrole;
-        
+
         if( [o_attribute_name isEqualTo: NSAccessibilityCloseButtonAttribute] )
             return [[o_tbv closeButton] cell];
-        
+
         if( [o_attribute_name isEqualTo: NSAccessibilityMinimizeButtonAttribute] )
             return [[o_tbv minimizeButton] cell];
-        
+
         if( [o_attribute_name isEqualTo: NSAccessibilityZoomButtonAttribute] )
             return [[o_tbv zoomButton] cell];
     }
-    
+
     return [super accessibilityAttributeValue: o_attribute_name];
 }
 
