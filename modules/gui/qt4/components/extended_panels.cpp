@@ -450,7 +450,7 @@ void ExtVideo::initComboBoxItems( QObject *widget )
                                    p_item->pi_list[i_index] );
             else if( i_type == CONFIG_ITEM_STRING )
                 combobox->addItem( qtr( p_item->ppsz_list_text[i_index] ),
-                                   p_item->ppsz_list[i_index] );
+                                   qfu(p_item->ppsz_list[i_index]) );
         }
     }
     else
