@@ -159,7 +159,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
     BOOL b_splitviewShouldBeHidden = NO;
 
     /* setup the styled interface */
-    b_video_deco = config_GetInt( VLCIntf, "video-deco" );
+    b_video_deco = var_InheritBool( VLCIntf, "video-deco" );
     b_nativeFullscreenMode = NO;
 #ifdef MAC_OS_X_VERSION_10_7
     if( OSX_LION && b_video_deco )
@@ -1571,7 +1571,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
 - (id)setupVideoView
 {
     vout_thread_t *p_vout = getVout();
-    if ((config_GetInt( VLCIntf, "embedded-video" ) || b_nativeFullscreenMode) && b_video_deco)
+    if ((var_InheritBool( VLCIntf, "embedded-video" ) || b_nativeFullscreenMode) && b_video_deco)
     {
         if ([o_video_view window] != self)
         {
@@ -2647,7 +2647,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
                   backing:(NSBackingStoreType)backingType defer:(BOOL)flag
 {
     b_dark_interface = config_GetInt( VLCIntf, "macosx-interfacestyle" );
-    b_video_deco = config_GetInt( VLCIntf, "video-deco" );
+    b_video_deco = var_InheritBool( VLCIntf, "video-deco" );
 
     if (b_dark_interface || !b_video_deco)
     {
