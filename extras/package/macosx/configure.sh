@@ -9,7 +9,6 @@ OPTIONS="
         --enable-flac
         --enable-theora
         --enable-shout
-        --enable-caca
         --enable-ncurses
         --enable-twolame
         --enable-realrtsp
@@ -19,6 +18,7 @@ OPTIONS="
         --enable-macosx-eyetv
         --enable-macosx-qtkit
         --enable-macosx-vout
+        --disable-caca
         --disable-skins2
         --disable-xcb
         --disable-sdl
