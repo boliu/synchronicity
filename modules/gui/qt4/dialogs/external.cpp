@@ -62,9 +62,6 @@ DialogHandler::DialogHandler (intf_thread_t *intf, QObject *_parent)
     connect (&progressBar, SIGNAL(pointerChanged(vlc_object_t *, void *)),
              SLOT(startProgressBar(vlc_object_t *, void *)),
              Qt::BlockingQueuedConnection);
-    connect (this,
-             SIGNAL(progressBarDestroyed(QWidget *)),
-             SLOT(stopProgressBar(QWidget *)));
 
     dialog_Register (intf);
 }
@@ -201,6 +198,7 @@ QVLCProgressDialog::QVLCProgressDialog (DialogHandler *parent,
     connect (this, SIGNAL(described(const QString&)),
                    SLOT(setLabelText(const QString&)));
     connect (this, SIGNAL(canceled(void)), SLOT(saveCancel(void)));
+    connect (this, SIGNAL(released(void)), SLOT(deleteLater(void)));
 
     data->pf_update = update;
     data->pf_check = check;
@@ -230,7 +228,7 @@ void QVLCProgressDialog::destroy (void *priv)
 {
     QVLCProgressDialog *self = static_cast<QVLCProgressDialog *>(priv);
 
-    emit self->handler->progressBarDestroyed (self);
+    emit self->released ();
 }
 
 void QVLCProgressDialog::saveCancel (void)
