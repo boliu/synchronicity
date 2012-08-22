@@ -615,14 +615,13 @@
    deleted. We don't do it when not required since this verification takes
    quite a long time on big playlists (yes, pretty hacky). */
 
-- (BOOL)isItem: (playlist_item_t *)p_item
-                    inNode: (playlist_item_t *)p_node
-                    checkItemExistence:(BOOL)b_check
-                    locked:(BOOL)b_locked
-
+- (BOOL)isItem: (playlist_item_t *)p_item inNode: (playlist_item_t *)p_node checkItemExistence:(BOOL)b_check locked:(BOOL)b_locked
 {
     playlist_t * p_playlist = pl_Get( VLCIntf );
     playlist_item_t *p_temp_item = p_item;
+
+    if (!p_node)
+        return NO;
 
     if( p_node == p_item )
         return YES;
@@ -642,7 +641,8 @@
            in the playlist. Any cleaner solution welcomed. */
             for( i = 0; i < p_playlist->all_items.i_size; i++ )
             {
-                if( ARRAY_VAL( p_playlist->all_items, i) == p_item ) break;
+                if( ARRAY_VAL( p_playlist->all_items, i) == p_item )
+                    break;
                 else if ( i == p_playlist->all_items.i_size - 1 )
                 {
                     if(!b_locked) PL_UNLOCK;
@@ -663,13 +663,6 @@
         if(!b_locked) PL_UNLOCK;
     }
     return NO;
-}
-
-- (BOOL)isItem: (playlist_item_t *)p_item
-                    inNode: (playlist_item_t *)p_node
-                    checkItemExistence:(BOOL)b_check
-{
-    return [self isItem:p_item inNode:p_node checkItemExistence:b_check locked:NO];
 }
 
 /* This method is useful for instance to remove the selected children of an
@@ -1417,8 +1410,7 @@
     o_playing_item = [o_outline_dict objectForKey: [NSString stringWithFormat:@"%p",  playlist_CurrentPlayingItem( p_playlist )]];
     PL_UNLOCK;
 
-    if( [self isItem: [o_playing_item pointerValue] inNode:
-                        [item pointerValue] checkItemExistence: YES]
+    if( [self isItem: [o_playing_item pointerValue] inNode: [item pointerValue] checkItemExistence:YES locked:NO]
                         || [o_playing_item isEqual: item] )
     {
         [cell setFont: [[NSFontManager sharedFontManager] convertFont:[cell font] toHaveTrait:NSBoldFontMask]];
@@ -1516,8 +1508,8 @@
     /* We refuse to drop an item in anything else than a child of the General
        Node. We still accept items that would be root nodes of the outlineview
        however, to allow drop in an empty playlist. */
-    if( !( ([self isItem: [item pointerValue] inNode: p_playlist->p_local_category checkItemExistence: NO] ||
-        ( var_CreateGetBool( p_playlist, "media-library" ) && [self isItem: [item pointerValue] inNode: p_playlist->p_ml_category checkItemExistence: NO] ) ) || item == nil ) )
+    if( !( ([self isItem: [item pointerValue] inNode: p_playlist->p_local_category checkItemExistence: NO locked: NO] ||
+            ( var_CreateGetBool( p_playlist, "media-library" ) && [self isItem: [item pointerValue] inNode: p_playlist->p_ml_category checkItemExistence: NO locked: NO] ) ) || item == nil ) )
     {
         return NSDragOperationNone;
     }
@@ -1529,9 +1521,7 @@
         for( NSUInteger i = 0 ; i < count ; i++ )
         {
             /* We refuse to Drop in a child of an item we are moving */
-            if( [self isItem: [item pointerValue] inNode:
-                    [[o_nodes_array objectAtIndex: i] pointerValue]
-                    checkItemExistence: NO] )
+            if( [self isItem: [item pointerValue] inNode: [[o_nodes_array objectAtIndex: i] pointerValue] checkItemExistence: NO locked:NO] )
             {
                 return NSDragOperationNone;
             }
