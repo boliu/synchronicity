@@ -1568,7 +1568,7 @@ static VLCMainWindow *_o_sharedInstance = nil;
     return o_video_view;
 }
 
-- (id)setupVideoView
+- (void)setupVideoView
 {
     vout_thread_t *p_vout = getVout();
     if ((var_InheritBool( VLCIntf, "embedded-video" ) || b_nativeFullscreenMode) && b_video_deco)
@@ -1619,7 +1619,6 @@ static VLCMainWindow *_o_sharedInstance = nil;
             [[o_video_view window] setLevel: NSNormalWindowLevel];
         vlc_object_release( p_vout );
     }
-    return o_video_view;
 }
 
 - (void)setVideoplayEnabled
