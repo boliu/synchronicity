@@ -156,8 +156,8 @@ cppcheck = $(shell $(CC) $(CFLAGS) -E -dM - < /dev/null | grep -E $(1))
 
 EXTRA_CFLAGS += -I$(PREFIX)/include
 CPPFLAGS := $(CPPFLAGS) $(EXTRA_CFLAGS)
-CFLAGS := $(CFLAGS) $(EXTRA_CFLAGS)
-CXXFLAGS := $(CXXFLAGS) $(EXTRA_CFLAGS)
+CFLAGS := $(CFLAGS) $(EXTRA_CFLAGS) -g
+CXXFLAGS := $(CXXFLAGS) $(EXTRA_CFLAGS) -g
 EXTRA_LDFLAGS += -L$(PREFIX)/lib
 LDFLAGS := $(LDFLAGS) $(EXTRA_LDFLAGS)
 # Do not export those! Use HOSTVARS.
