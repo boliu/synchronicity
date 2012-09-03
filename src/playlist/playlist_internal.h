@@ -36,6 +36,7 @@
 
 #include "input/input_interface.h"
 #include <assert.h>
+#include <synchronicity/syn_connection.h>
 
 #include "art.h"
 #include "fetcher.h"
@@ -92,6 +93,20 @@ typedef struct playlist_private_t
     bool     b_auto_preparse;
     mtime_t  last_rebuild_date;
 
+    SynConnection syn_connection;
+    bool     b_syn_can_send;
+    bool     b_syn_created;
+    bool     b_need_send_seek;
+    char*    psz_syn_server_host;
+    char*    psz_syn_user;
+    int      i_syn_port;
+
+    mtime_t  offline_sync_threshold;
+    mtime_t  t_wall_minus_video;
+    bool     b_correcting;
+    mtime_t  t_last_correction_time;
+
+    mtime_t  last_diff_diff;
 } playlist_private_t;
 
 #define pl_priv( pl ) ((playlist_private_t *)(pl))

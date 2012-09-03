@@ -293,6 +293,9 @@ playlist_t * playlist_Create( vlc_object_t *p_parent )
     pl_priv(p_playlist)->request.b_request = false;
     pl_priv(p_playlist)->status.i_status = PLAYLIST_STOPPED;
 
+    /* this is read in PlayItem so it needs to be initialized here */
+    pl_priv(p_playlist)->b_syn_created = false;
+
     if(b_ml)
     {
         const bool b_auto_preparse = pl_priv(p_playlist)->b_auto_preparse;
@@ -470,6 +473,13 @@ static void VariablesInit( playlist_t *p_playlist )
     /* FIXME: horrible hack for audio output interface code */
     var_Create( p_playlist, "find-input-callback", VLC_VAR_ADDRESS );
     var_SetAddress( p_playlist, "find-input-callback", playlist_FindInput );
+
+    /* Synchronicity Variable */
+    var_Create( p_playlist, "synchronicity", VLC_VAR_INTEGER );
+    var_SetInteger( p_playlist, "synchronicity", 0 );
+
+    var_Create( p_playlist, "synchronicity-user", VLC_VAR_STRING );
+    var_SetString( p_playlist, "synchronicity-user", "Anonymous" );
 }
 
 playlist_item_t * playlist_CurrentPlayingItem( playlist_t * p_playlist )

@@ -35,6 +35,7 @@
 
 #include <QSystemTrayIcon>
 #include <QStackedWidget>
+#include <QLineEdit>
 
 class QSettings;
 class QCloseEvent;
@@ -90,6 +91,9 @@ public:
     bool isInterfaceFullScreen() { return b_interfaceFullScreen; }
     StandardPLPanel* getPlaylistView();
 
+
+    bool isSynchVisible;
+
 protected:
     void dropEventPlay( QDropEvent* event, bool b_play ) { dropEventPlay(event, b_play, true); }
     void dropEventPlay( QDropEvent *, bool, bool );
@@ -126,6 +130,13 @@ private:
     void setMinimalView( bool );
     void setInterfaceFullScreen( bool );
     void computeMinimumSize();
+
+    void displayMessage( const char* );
+    void hostButtonVisible();
+    void leaveButtonVisible();
+
+    /* Synchronicity bar */
+    void createSynchronicityBar();
 
     /* */
     QSettings           *settings;
@@ -173,6 +184,17 @@ private:
 
     bool                 b_hasPausedWhenMinimized;
     bool                 b_statusbarVisible;
+    bool                 b_connectionKeyBlanked;
+
+    /*Synchronicity Bar*/
+    QLabel *synchronicityLabel;
+    QPushButton *hostButton;
+    QPushButton *connectButton;
+    QPushButton *copyButton;
+    QPushButton *leaveButton;
+    QLineEdit *connectionKey;
+    QGridLayout *synchLayout;
+    QWidget *synchWidget;
 
 #ifdef WIN32
     HIMAGELIST himl;
@@ -195,6 +217,8 @@ public slots:
     void setStatusBarVisibility(bool b_visible);
     void setPlaylistVisibility(bool b_visible);
 
+    void setSynchronicityBarVisibility(bool b_visible);
+
     void popupMenu( const QPoint& );
 #ifdef WIN32
     void changeThumbbarButtons( int );
@@ -204,6 +228,11 @@ public slots:
     void getVideoSlot( WId *p_id, int *pi_x, int *pi_y,
                        unsigned *pi_width, unsigned *pi_height );
     void releaseVideoSlot( void );
+    void updateSynchronicity ( int );
+    void updateUser ( char * );
+    void checkConnectionKey( const QString& );
+    void clearConnectionKey( int, int );
+    void resetConnectionKey();
 
     void emitBoss();
     void emitRaise();
@@ -247,6 +276,10 @@ private slots:
     void videoSizeChanged( int, int );
     void setVideoFullScreen( bool );
     void setVideoOnTop( bool );
+    void hostButton_Click();
+    void connectButton_Click();
+    void copyButton_Click();
+    void leaveButton_Click();
     void setBoss();
     void setRaise();
 

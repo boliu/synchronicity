@@ -75,6 +75,17 @@ public:
         FullscreenControlShow,
         FullscreenControlHide,
         FullscreenControlPlanHide,
+
+
+        SynchronicityChanged_CON_SUCCESS_Type,
+        SynchronicityChanged_HOST_SUCCESS_Type,
+        SynchronicityChanged_CLIENT_CONNECT_Type,
+        SynchronicityChanged_PEER_SNAP_Type,
+        SynchronicityChanged_CON_FAIL_Type,
+        SynchronicityChanged_PEER_DIS_Type,
+        SynchronicityChanged_ITEM_PLAY_Type,
+        SynchronicityChanged_ITEM_STOP_Type,
+        SynchronicityUserChanged_Type
     };
 
     IMEvent( event_types type, input_item_t *p_input = NULL )
@@ -110,7 +121,7 @@ public:
         PLItemAppended = QEvent::User + PLEventTypeOffset + 1,
         PLItemRemoved,
         LeafToParent,
-        PLEmpty
+        PLEmpty,
     };
 
     PLEvent( PLEventTypes t, int i, int p = 0 )
@@ -322,6 +333,9 @@ signals:
     void randomChanged( bool );
     void repeatLoopChanged( int );
     void leafBecameParent( int );
+
+    void synchronicityChanged(int messageId);
+    void synchronicityUserChanged(char* name);
 };
 
 #endif

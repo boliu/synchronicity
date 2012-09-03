@@ -42,6 +42,7 @@
 #include <QDir>
 
 #include <assert.h>
+#include <synchronicity/syn_error_codes.h>  /* error codes for synchronicity */
 
 static int ItemChanged( vlc_object_t *, const char *,
                         vlc_value_t, vlc_value_t, void * );
@@ -58,6 +59,12 @@ static int InputEvent( vlc_object_t *, const char *,
                        vlc_value_t, vlc_value_t, void * );
 static int VbiEvent( vlc_object_t *, const char *,
                      vlc_value_t, vlc_value_t, void * );
+
+static int SynchronicityChanged( vlc_object_t *, const char *,
+                        vlc_value_t, vlc_value_t, void * );
+
+static int SynchronicityUserChanged( vlc_object_t *, const char *,
+                            vlc_value_t, vlc_value_t, void * );
 
 /* Ensure arbitratry (not dynamically allocated) event IDs are not in use */
 static inline void registerAndCheckEventIds( int start, int end )
@@ -998,6 +1005,8 @@ MainInputManager::MainInputManager( intf_thread_t *_p_intf )
     var_AddCallback( THEPL, "leaf-to-parent", LeafToParent, this );
     var_AddCallback( THEPL, "playlist-item-append", PLItemAppended, this );
     var_AddCallback( THEPL, "playlist-item-deleted", PLItemRemoved, this );
+    var_AddCallback( THEPL, "synchronicity", SynchronicityChanged, this );
+    var_AddCallback( THEPL, "synchronicity-user", SynchronicityUserChanged, this );
     random.addCallback( this, SLOT(notifyRandom(bool)) );
     repeat.addCallback( this, SLOT(notifyRepeatLoop(bool)) );
     loop.addCallback( this, SLOT(notifyRepeatLoop(bool)) );
@@ -1035,6 +1044,9 @@ MainInputManager::~MainInputManager()
     var_DelCallback( THEPL, "item-current", PLItemChanged, this );
     var_DelCallback( THEPL, "playlist-item-append", PLItemAppended, this );
     var_DelCallback( THEPL, "playlist-item-deleted", PLItemRemoved, this );
+
+    var_DelCallback( THEPL, "synchronicity", SynchronicityChanged, this );
+    var_DelCallback( THEPL, "synchronicity-user", SynchronicityUserChanged, this );
 }
 
 vout_thread_t* MainInputManager::getVout()
@@ -1072,6 +1084,32 @@ void MainInputManager::customEvent( QEvent *event )
         plEv = static_cast<PLEvent*>( event );
         emit leafBecameParent( plEv->getItemId() );
         return;
+    case IMEvent::SynchronicityChanged_CON_SUCCESS_Type:
+        emit synchronicityChanged( CONNECT_SUCCESS );
+        return;
+    case IMEvent::SynchronicityChanged_HOST_SUCCESS_Type:
+        emit synchronicityChanged( HOST_SUCCESS );
+        return;
+    case IMEvent::SynchronicityChanged_CLIENT_CONNECT_Type:
+        emit synchronicityChanged( CLIENT_CONNECTED );
+        return;
+    case IMEvent::SynchronicityChanged_PEER_SNAP_Type:
+        emit synchronicityChanged( PEER_SNAP );
+        return;
+    case IMEvent::SynchronicityChanged_CON_FAIL_Type:
+        emit synchronicityChanged( CONNECTION_FAILURE );
+        return;
+    case IMEvent::SynchronicityChanged_PEER_DIS_Type:
+        emit synchronicityChanged( PEER_DISCONNECT );
+        return;
+    case IMEvent::SynchronicityChanged_ITEM_PLAY_Type:
+        emit synchronicityChanged( ITEM_PLAYING );
+        return;
+    case IMEvent::SynchronicityChanged_ITEM_STOP_Type:
+        emit synchronicityChanged( ITEM_STOPPED );
+        return;
+    case IMEvent::SynchronicityUserChanged_Type:
+        emit synchronicityUserChanged( var_GetString( THEPL, "synchronicity-user" ) );
     default:
         if( type != IMEvent::ItemChanged ) return;
     }
@@ -1269,6 +1307,35 @@ void MainInputManager::notifyVolume( float volume )
 void MainInputManager::notifyMute( bool mute )
 {
     emit soundMuteChanged(mute);
+}
+
+static int SynchronicityChanged (vlc_object_t *p_this, const char *psz_var,
+                            vlc_value_t oldval, vlc_value_t newval, void *param )
+{
+    MainInputManager *mim = (MainInputManager*)param;
+    IMEvent *event;
+
+    int newValue = newval.i_int;
+    if ( CONNECT_SUCCESS == newValue ) event = new IMEvent( IMEvent::SynchronicityChanged_CON_SUCCESS_Type );
+    else if ( HOST_SUCCESS == newValue ) event = new IMEvent( IMEvent::SynchronicityChanged_HOST_SUCCESS_Type );
+    else if ( CLIENT_CONNECTED == newValue ) event = new IMEvent( IMEvent::SynchronicityChanged_CLIENT_CONNECT_Type );
+    else if ( PEER_SNAP == newValue ) event = new IMEvent( IMEvent::SynchronicityChanged_PEER_SNAP_Type );
+    else if ( CONNECTION_FAILURE == newValue ) event = new IMEvent( IMEvent::SynchronicityChanged_CON_FAIL_Type );
+    else if ( PEER_DISCONNECT == newValue ) event = new IMEvent( IMEvent::SynchronicityChanged_PEER_DIS_Type );
+    else if ( ITEM_PLAYING == newValue ) event = new IMEvent( IMEvent::SynchronicityChanged_ITEM_PLAY_Type );
+    else if ( ITEM_STOPPED == newValue ) event = new IMEvent( IMEvent::SynchronicityChanged_ITEM_STOP_Type );
+
+    QApplication::postEvent( mim, event );
+    return VLC_SUCCESS;
+}
+
+static int SynchronicityUserChanged (vlc_object_t *p_this, const char *psz_var,
+                                vlc_value_t oldval, vlc_value_t newval, void *param )
+{
+    MainInputManager *mim = (MainInputManager*)param;
+    IMEvent *event = new IMEvent( IMEvent::SynchronicityUserChanged_Type );
+    QApplication::postEvent( mim, event );
+    return VLC_SUCCESS;
 }
 
 static int PLItemAppended

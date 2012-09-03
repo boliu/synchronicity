@@ -127,6 +127,7 @@ public slots:
     void vlmDialog();
 #endif
     void helpDialog();
+    void synchDialog();
 #ifdef UPDATE_CHECK
     void updateDialog();
 #endif
@@ -168,6 +169,8 @@ public slots:
     void loadSubtitlesFile();
 
     void quit();
+
+    void synConnectionReady();
 private slots:
     void menuAction( QObject *);
     void menuUpdateAction( QObject * );

@@ -740,8 +740,6 @@ int var_SetChecked( vlc_object_t *p_this, const char *psz_name,
 #endif
 
 
-    WaitUnused( p_this, p_var );
-
     /* Duplicate data if needed */
     p_var->ops->pf_dup( &val );
 
@@ -756,6 +754,8 @@ int var_SetChecked( vlc_object_t *p_this, const char *psz_name,
 
     /* Deal with callbacks */
     i_ret = TriggerCallback( p_this, p_var, psz_name, oldval );
+
+    WaitUnused( p_this, p_var );
 
     /* Free data if needed */
     p_var->ops->pf_free( &oldval );

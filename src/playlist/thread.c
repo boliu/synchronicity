@@ -27,6 +27,9 @@
 
 #include <assert.h>
 
+#include <synchronicity/syn_connection.h>
+#include <synchronicity/syn_parsing.h>
+#include <synchronicity/syn_error_codes.h>
 #include <vlc_common.h>
 #include <vlc_es.h>
 #include <vlc_input.h>
@@ -73,6 +76,8 @@ void playlist_Deactivate( playlist_t *p_playlist )
     playlist_private_t *p_sys = pl_priv(p_playlist);
 
     msg_Dbg( p_playlist, "deactivating the playlist" );
+
+    playlist_SynDisconnect(p_playlist);
 
     PL_LOCK;
     p_sys->killed = true;
@@ -211,6 +216,186 @@ void ResetCurrentlyPlaying( playlist_t *p_playlist,
     p_sys->b_reset_currently_playing = false;
 }
 
+// Debugging callback
+static int StateListener( vlc_object_t *p_this, const char *psz_var,
+                            vlc_value_t oldval, vlc_value_t newval, void *param ) {
+  VLC_UNUSED(oldval);
+  VLC_UNUSED(param);
+
+  msg_Info(p_this, "%s", psz_var);
+  SynCommand syn;
+  char buffer[80];
+  int numbytes;
+  switch (newval.i_int)
+  {
+  case PLAYING_S:
+    msg_Info(p_this, "Playing");
+    syn.type = SYNCOMMAND_PLAY;
+    input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &syn.data.i_time);
+    numbytes = StringFromCommand(syn, buffer, 80);
+    if(numbytes > 0) {
+      buffer[numbytes] = '\0';
+      msg_Info(p_this, "%s", buffer);
+      sprintf(buffer, "%d", syn.data.i_time);
+      msg_Info(p_this, "%s", buffer);
+    } else {
+      msg_Info(p_this, "Problem w/Play");
+    }
+    break;
+  case PAUSE_S:
+    msg_Info(p_this, "Paused");
+    break;
+  }
+  //var_SetFloat(p_this, "position", 0.5f);
+  return VLC_SUCCESS;
+}
+
+static int PositionListener( vlc_object_t *p_this, const char *psz_var,
+                            vlc_value_t oldval, vlc_value_t newval, void *param ) {
+  VLC_UNUSED(oldval);
+  VLC_UNUSED(param);
+
+  msg_Info(p_this, "%s", psz_var);
+  char formatted[30];
+  sprintf(formatted, "%f", newval.f_float);
+  msg_Info(p_this, "%s", formatted);
+  //var_SetInteger(p_this, "state", PAUSE_S);
+
+  SynCommand syn;
+  char buffer[80];
+  int numbytes;
+  syn.type = SYNCOMMAND_SEEK;
+  input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &syn.data.i_time);
+  numbytes = StringFromCommand(syn, buffer, 80);
+  if(numbytes > 0) {
+    buffer[numbytes] = '\0';
+    msg_Info(p_this, "%s", buffer);
+  }
+  SynCommand test;
+  test = CommandFromString(buffer, 80);
+  switch(test.type) {
+    case SYNCOMMAND_SEEK:
+      msg_Info(p_this, "Successful decode");
+      sprintf(formatted, "%i", test.data.i_time);
+      msg_Info(p_this, "%s", formatted);
+      break;
+    default:
+      msg_Info(p_this, "Problem");
+      break;
+  }
+  return VLC_SUCCESS;
+}
+
+/*****************************************
+ * Synchronicity callback functions
+ ****************************************/
+
+static void SynFreeMemory(int rv, void* param) {
+  VLC_UNUSED(rv);
+  free(param);
+}
+
+static int SendSynCommand(playlist_t* p_playlist, SynCommand syn) {
+  playlist_private_t *p_sys = pl_priv(p_playlist);
+  if(SYNCOMMAND_MYNAMEIS != syn.type) {
+    p_sys->t_wall_minus_video = mdate() - syn.data.i_time;
+  }
+  if(!p_sys->b_syn_can_send) {
+    return VLC_SUCCESS;
+  }
+  char* buffer = calloc(sizeof(char), 80);
+  int numbytes;
+  numbytes = StringFromCommand(syn, buffer, 80);
+  if (numbytes > 0) {
+    SynConnection_Send(
+        p_sys->syn_connection,
+        buffer, numbytes,
+        &SynFreeMemory, buffer);
+    return VLC_SUCCESS;
+  }
+  msg_Info(p_playlist, "SendSynCommand: Error");
+  return VLC_EGENERIC;
+}
+
+static int SynStateListener( vlc_object_t *p_this, const char *psz_var,
+                           vlc_value_t oldval, vlc_value_t newval,
+                           void *param ) {
+  VLC_UNUSED(p_this);
+  VLC_UNUSED(psz_var);
+  VLC_UNUSED(oldval);
+
+  SynCommand syn;
+  switch (newval.i_int) {
+    case PLAYING_S:
+      syn.type = SYNCOMMAND_PLAY;
+      break;
+    case PAUSE_S:
+      syn.type = SYNCOMMAND_PAUSE;
+      break;
+    default:
+      return VLC_EGENERIC;
+  }
+  input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &syn.data.i_time);
+  return SendSynCommand((playlist_t*)param, syn);
+}
+
+static int SynEventListener( vlc_object_t *p_this, const char *psz_var,
+                           vlc_value_t oldval, vlc_value_t newval,
+                           void *param ) {
+  playlist_private_t* p_playlist = pl_priv((playlist_t*)param);
+  if(!p_playlist->b_syn_can_send) {
+    return VLC_SUCCESS;
+  }
+  if(INPUT_EVENT_POSITION == newval.i_int ) {
+    // calculate current wall clock - video time
+    mtime_t current_wall = mdate();
+    mtime_t current_time;
+    input_Control((input_thread_t*)p_this, INPUT_GET_TIME, &current_time);
+    mtime_t current_difference = current_wall - current_time;
+
+    if(p_playlist->b_need_send_seek) {
+      p_playlist->b_need_send_seek = false;
+      SynCommand syn;
+      syn.type = SYNCOMMAND_SEEK;
+      syn.data.i_time = current_time;
+      return SendSynCommand((playlist_t*)param, syn);
+    } else {
+      // immediately after a position change, the difference is totally messed up, so
+      // this is in the else block
+      int playpause;
+      input_Control((input_thread_t*)p_this, INPUT_GET_STATE, &playpause);
+      if(p_playlist->t_wall_minus_video
+        && !p_playlist->b_correcting
+        && PLAYING_S == playpause
+        //&& current_wall - p_playlist->t_last_correction_time > 200000
+        ) {
+        mtime_t diff_diff = current_difference - p_playlist->t_wall_minus_video;
+        if(diff_diff > p_playlist->offline_sync_threshold
+          || diff_diff < -p_playlist->offline_sync_threshold) {
+          p_playlist->t_last_correction_time = current_wall;
+          p_playlist->last_diff_diff = (4 * diff_diff + p_playlist->last_diff_diff) / 5;
+
+          p_playlist->b_correcting = true;
+          input_Control((input_thread_t*)p_this, INPUT_SET_TIME, current_time +
+              p_playlist->last_diff_diff);
+          p_playlist->b_correcting = false;
+        }
+      }
+    }
+  }
+  return VLC_SUCCESS;
+}
+
+static int SynPositionListener( vlc_object_t *p_this, const char *psz_var,
+                           vlc_value_t oldval, vlc_value_t newval,
+                           void *param ) {
+  VLC_UNUSED(p_this);
+  VLC_UNUSED(psz_var);
+  VLC_UNUSED(oldval);
+
+  pl_priv((playlist_t*)param)->b_need_send_seek = true;
+  return VLC_SUCCESS;
+}
 
 /**
  * Start the input for an item
@@ -244,6 +429,37 @@ static int PlayItem( playlist_t *p_playlist, playlist_item_t *p_item )
     {
         p_sys->p_input = p_input_thread;
         var_AddCallback( p_input_thread, "intf-event", InputEvent, p_playlist );
+
+        // Add Synchronicity callbacks
+        //var_AddCallback( p_input_thread, "state", StateListener, p_input_thread );
+        var_AddCallback( p_input_thread, "state", SynStateListener, p_playlist );
+        var_AddCallback( p_input_thread, "position", SynPositionListener, p_playlist );
+        var_AddCallback( p_input_thread, "intf-event", SynEventListener, p_playlist);
+        //var_AddCallback( p_input_thread, "position", PositionListener, p_input_thread );
+
+
+        if(p_sys->b_syn_created && var_GetBool( p_playlist, "repeat" ) /* loop one */) {
+          // continuing a loop single video while connected
+          p_sys->b_need_send_seek = true;
+        } else {
+          //set synchronicity variable to enable gui
+          var_SetInteger( p_playlist, "synchronicity", ITEM_PLAYING);
+
+          // Re-initialize synchronicity variables on every playlist item
+          p_sys->b_syn_can_send = false;
+          p_sys->b_syn_created = false;
+          p_sys->b_need_send_seek = false;
+        }
+
+        p_sys->psz_syn_server_host =
+          var_InheritString( p_playlist->p_libvlc, "synchronicity-server" );
+        p_sys->i_syn_port =
+          var_InheritInteger( p_playlist->p_libvlc, "synchronicity-port" );
+        p_sys->psz_syn_user =
+          var_InheritString( p_playlist->p_libvlc, "synchronicity-user" );
+        int threshold_in_ms = var_InheritInteger( p_playlist->p_libvlc, "synchronicity-offline-sync-threshold" );
+        if(threshold_in_ms < 20) threshold_in_ms = 20;
+        p_sys->offline_sync_threshold = threshold_in_ms * 1000;
 
         var_SetAddress( p_playlist, "input-current", p_input_thread );
 
@@ -482,6 +698,30 @@ static int LoopInput( playlist_t *p_playlist )
         /* The DelCallback must be issued without playlist lock */
         var_DelCallback( p_input, "intf-event", InputEvent, p_playlist );
 
+        // Delete Synchronicity callbacks
+        //var_DelCallback( p_input, "state", StateListener, p_input );
+        var_DelCallback( p_input, "state", SynStateListener, p_playlist );
+        var_DelCallback( p_input, "position", SynPositionListener, p_playlist );
+        var_DelCallback( p_input, "intf-event", SynEventListener, p_playlist );
+        //var_DelCallback( p_input, "position", PositionListener, p_input );
+
+        // Disconnect when ends
+        bool b_repeat = var_GetBool( p_playlist, "repeat" ) /* loop one */;
+        if(p_sys->b_syn_created && (
+            PLAYLIST_STOPPED == p_sys->request.i_status ||
+            !b_repeat)) {
+          var_SetInteger( p_playlist, "synchronicity", PEER_DISCONNECT);
+          SynConnection_Destroy(p_sys->syn_connection, NULL, NULL);
+          p_sys->b_syn_created = false;
+        }
+        if(PLAYLIST_STOPPED == p_sys->request.i_status ||
+          !p_sys->b_syn_created || !b_repeat) {
+          //set synchronicity variable to disable GUI
+          var_SetInteger( p_playlist, "synchronicity", ITEM_STOPPED);
+        }
+        free(p_sys->psz_syn_server_host);
+        free(p_sys->psz_syn_user);
+
         PL_LOCK;
 
         p_sys->p_input = NULL;
@@ -502,6 +742,7 @@ static int LoopInput( playlist_t *p_playlist )
         PL_DEBUG( "finished input" );
         input_Stop( p_input, false );
     }
+
     return VLC_SUCCESS;
 }
 
