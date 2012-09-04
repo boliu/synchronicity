@@ -4,15 +4,26 @@ Changes between 2.0.3 and 2.0.4:
 Audio Output:
  * Improve playback synchronization with PulseAudio.
  * Fix ALSA digital pass-through ("S/PDIF").
+ * Fix live audio device selection on Mac OS X
+
+Access:
+ * Fix numerous DVD (dvdnav) crashes
+ * Fix HTTP playback through proxy
 
 Codecs:
- * Support for OPUS via libopus.
+ * Support for Opus decoding via libopus, including multi-channel files
+
+Demuxers:
+ * Fix issues in Ogg with zero length packets
+ * Fix file duration of Ogg/Theora files
 
 Windows:
  * Fix Wallpaper mode on Windows 7
 
 Qt:
  * Fix media info dialog update
+ * Fix random/repeat preferences saving
+ * Fix crash when opening audio effects dialog
 
 Mac OS X:
  * Fix audio output behavior when the output device is plugged or unplugged
