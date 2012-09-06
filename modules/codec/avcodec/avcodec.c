@@ -37,6 +37,7 @@
 
 /* ffmpeg header */
 #define HAVE_MMX 1
+#include <libavutil/mem.h>
 #ifdef HAVE_LIBAVCODEC_AVCODEC_H
 #   include <libavcodec/avcodec.h>
 #else
