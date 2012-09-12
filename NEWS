@@ -5,6 +5,7 @@ Audio Output:
  * Improve playback synchronization with PulseAudio.
  * Fix ALSA digital pass-through ("S/PDIF").
  * Fix live audio device selection on Mac OS X
+ * Fix detection of some 5.1 and 7.1 kits on Windows.
 
 Access:
  * Fix numerous DVD (dvdnav) crashes
@@ -15,15 +16,16 @@ Codecs:
 
 Demuxers:
  * Fix issues in Ogg with zero length packets
- * Fix file duration of Ogg/Theora files
+ * Fix file duration of Ogg/Theora and Ogg/Vorbis files
+ * Fix vimeo lua parser
 
 Windows:
- * Fix Wallpaper mode on Windows 7
+ * Fix Wallpaper mode on Windows 7/8
 
 Qt:
  * Fix media info dialog update
  * Fix random/repeat preferences saving
- * Fix crash when opening audio effects dialog
+ * Fix crashes when opening audio effects dialog, with skins and playlist
 
 Mac OS X:
  * Fix audio output behavior when the output device is plugged or unplugged
@@ -42,6 +44,7 @@ Miscellaneous:
  * Improve Blu-Ray support
  * Fix issues on selection of playlist items for WebUI
  * Codec and other 3rd party library updates
+ * Fix swscale and canvas behaviour with Aspect Ratio
 
 
 Changes between 2.0.2 and 2.0.3:
