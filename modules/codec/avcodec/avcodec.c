@@ -132,7 +132,7 @@ vlc_module_begin ()
     add_bool( "ffmpeg-hw", false, HW_TEXT, HW_LONGTEXT, false )
 #endif
 #if defined(FF_THREAD_FRAME)
-    add_integer( "ffmpeg-threads", 0, THREADS_TEXT, THREADS_LONGTEXT, true );
+    add_integer( "ffmpeg-threads", 1, THREADS_TEXT, THREADS_LONGTEXT, true );
 #endif
 
 
