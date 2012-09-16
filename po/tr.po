@@ -1,5 +1,5 @@
-# Turkish localisation file for VLC
-# Copyright (C) 2008-2012 the VideoLAN team
+# Turkish translation
+# Copyright (C) 2012 VideoLAN
 # This file is distributed under the same license as the VLC package.
 #
 # Translators:
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: VLC - Trans\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-07-18 21:49+0200\n"
-"PO-Revision-Date: 2012-06-10 04:16+0000\n"
+"PO-Revision-Date: 2012-09-07 10:34+0000\n"
 "Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/vlc-trans/"
 "language/tr/)\n"
@@ -20,7 +20,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: include/vlc_common.h:1024
 msgid ""
@@ -2673,13 +2673,13 @@ msgstr "Yeğlenen görüntü çözünürlüğü"
 msgid ""
 "When several video formats are available, select one whose resolution is "
 "closest to (but not higher than) this setting, in number of lines. Use this "
-"option if you don't have enough CPU power or network bandwidth to play higher "
-"resolutions."
+"option if you don't have enough CPU power or network bandwidth to play "
+"higher resolutions."
 msgstr ""
-"Birden fazla görüntü biçimi uygun olduğunda, bu ayara en yakın olan (ancak "
-"büyük olmayan) satır sayısını seçin. Daha yüksek çözünürlüklerde oynatmak "
-"için yeterli işlemci gücü ya da ağ bant genişliğiniz yoksa bu seçeneği "
-"kullanın."
+"Birkaç görüntü biçimi kullanılabilir olduğunda, burada belirtilen satır "
+"sayısı çözünürlüğüne en yakın olan (altında kalacak şekilde) seçilir. Bu "
+"seçeneği daha yüksek çözünürlükleri oynatmak için yeterli işlemci gücü ya da "
+"bant genişliğiniz yoksa kullanın."
 
 #: src/libvlc-module.c:768
 msgid "Best available"
@@ -16514,7 +16514,6 @@ msgid "No device is selected"
 msgstr "Hiç bir aygıt seçilmemiş"
 
 #: modules/gui/macosx/open.m:56
-#, fuzzy
 msgid ""
 "No device is selected.\n"
 "\n"
@@ -16522,8 +16521,7 @@ msgid ""
 msgstr ""
 "Henüz bir aygıt seçilmemiş.\n"
 "\n"
-"Yukarıdaki açılan menüden uygun bir aygıt seçin\n"
-"."
+"Yukarıdaki açılan kutudan uygun bir aygıt seçin.\n"
 
 #: modules/gui/macosx/open.m:104
 msgid "Open Source"
@@ -28228,10 +28226,6 @@ msgstr "Çevrim"
 msgid "Media Manager List"
 msgstr "Ortam Yöneticisi Listesi"
 
-#, fuzzy
-#~ msgid "Relaunch required"
-#~ msgstr "SDP gerekli"
-
 #~ msgid ""
 #~ "To make sure that VLC no longer listens to your media key events, it "
 #~ "needs to be restarted."
@@ -28252,6 +28246,1547 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Advance of audio over video:"
 #~ msgstr "Sesi görüntüye göre ileriye/geriye kaydır:"
 
+#~ msgid "Use systems codecs if available, for WMV codecs"
+#~ msgstr ""
+#~ "WMV kodlayıcı/çözücüleri için, varsa sistem kodlayıcı/çözücülerini kullan"
+
+#~ msgid "Dump"
+#~ msgstr "Dök"
+
+#~ msgid "Probe DVB card for capabilities"
+#~ msgstr "DVB kartının yeteneklerini öğren"
+
+#~ msgid ""
+#~ "Some DVB cards do not like to be probed for their capabilities, you can "
+#~ "disable this feature if you experience some trouble."
+#~ msgstr ""
+#~ "Bazı DVB kartları yeteneklerinin okunmasından hoşlanmazlar. Sorun "
+#~ "yaşıyorsanız bu özelliği devre dışı bırakabilirsiniz."
+
+#~ msgid "DVB input with v4l2 support"
+#~ msgstr "v4l2 destekli DVB girişi"
+
+#~ msgid "dbus"
+#~ msgstr "dbus"
+
+#~ msgid "Ball color, one of \"red\", \"blue\" and \"green\"."
+#~ msgstr "Top rengi, \"kırmızı\", \"mavi\" ya da \"yeşil\"."
+
+#, fuzzy
+#~ msgid "Live Update"
+#~ msgstr "Güncelle"
+
+#~ msgid ""
+#~ "One of \"u8\", \"s8\", \"u16\", \"s16\", \"u16_le\", \"s16_le\", \"u16_be"
+#~ "\", \"s16_be\", \"fixed32\", \"float32\" or \"spdif\""
+#~ msgstr ""
+#~ "Bu seçeneklerden birini seçebilirsiniz: \"u8\", \"s8\", \"u16\", \"s16\", "
+#~ "\"u16_le\", \"s16_le\", \"u16_be\", \"s16_be\", \"fixed32\", \"float32\" "
+#~ "ya da \"spdif\""
+
+#~ msgid ""
+#~ "This defines the address, port and path the RTSP VOD server will listen "
+#~ "on.\n"
+#~ "Syntax is address:port/path. The default is to listen on all interfaces "
+#~ "(address 0.0.0.0), on port 554, with no path.\n"
+#~ "To listen only on the local interface, use \"localhost\" as address."
+#~ msgstr ""
+#~ "Bu seçenek RTSP VOD sunucusunun dinleyeceği adres, kapı ve yolu "
+#~ "belirtir.\n"
+#~ "adres:kapı/yol şeklinde yazılır. Varsayılan olarak 554 numaralı kapı "
+#~ "üzerinden, yol olmaksızın tüm arayüzler dinlenir (adres 0.0.0.0).\n"
+#~ "Yalnızca yerel arayüz üzerinden dinlemek için adres olarak \"localhost\" "
+#~ "yazın. "
+
+#~ msgid "Left front"
+#~ msgstr "Sol ön"
+
+#~ msgid "Disable DVD Menus (for compatibility)"
+#~ msgstr "Uyumluluk için DVD menülerini devre dışı bırakır"
+
+#~ msgid "Exposure"
+#~ msgstr "Pozlama"
+
+#, fuzzy
+#~ msgid "Exposure."
+#~ msgstr "Pozlama"
+
+#~ msgid " - Empty - "
+#~ msgstr "-Boş-"
+
+#~ msgid ""
+#~ "This saves the audio output volume when you use the mute function. You "
+#~ "should not change this option manually."
+#~ msgstr ""
+#~ "Bu değer, ses kısma işlevini kullandığınızda çıkış sesi düzeyini "
+#~ "kaydeder. Bu seçeneği el ile değiştirmemelisiniz."
+
+#~ msgid "Prefer system plugins over VLC"
+#~ msgstr "VLC yerine sistem eklentilerini yeğle"
+
+#~ msgid ""
+#~ "Indicates whether VLC will prefer native plugins installed on system over "
+#~ "VLC owns plugins whenever a choice is available."
+#~ msgstr ""
+#~ "Yeri geldiğinde VLC'nin, sahip olduğu eklentiler yerine, sisteminizde "
+#~ "kurulu olan doğal eklentilerin kullanıp kullanmayacağını belirtir."
+
+#~ msgid ""
+#~ "If your processor supports the MMX instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "İşlemciniz MMX komutlarını destekliyorsa VLC bunlardan yararlanabilir."
+
+#~ msgid ""
+#~ "If your processor supports the 3D Now! instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "İşlemciniz 3D Now! komutlarını destekliyorsa VLC bunlardan yararlanabilir."
+
+#~ msgid "Enable CPU MMX EXT support"
+#~ msgstr "CPU MMX EXT desteğini etkinleştir"
+
+#~ msgid ""
+#~ "If your processor supports the MMX EXT instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "İşlemciniz MMX EXT komutlarını destekliyorsa VLC bunlardan yararlanabilir."
+
+#~ msgid ""
+#~ "If your processor supports the SSE instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "İşlemciniz SSE komutlarını destekliyorsa VLC bunlardan yararlanabilir."
+
+#~ msgid "Enable CPU SSE2 support"
+#~ msgstr "CPU SSE2 desteğini etkinleştir"
+
+#~ msgid ""
+#~ "If your processor supports the SSE2 instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "İşlemciniz SSE2 komutlarını destekliyorsa VLC bunlardan yararlanabilir."
+
+#~ msgid "Enable CPU SSE3 support"
+#~ msgstr "CPU SSE3 desteğini etkinleştir"
+
+#~ msgid ""
+#~ "If your processor supports the SSE3 instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "İşlemciniz SSE3 komutlarını destekliyorsa VLC bunlardan yararlanabilir."
+
+#~ msgid "Enable CPU SSSE3 support"
+#~ msgstr "CPU SSSE3 desteğini etkinleştir"
+
+#~ msgid ""
+#~ "If your processor supports the SSSE3 instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "İşlemciniz SSSE3 komutlarını destekliyorsa VLC bunlardan yararlanabilir."
+
+#~ msgid "Enable CPU SSE4.1 support"
+#~ msgstr "CPU SSE4.1 desteğini etkinleştir"
+
+#~ msgid ""
+#~ "If your processor supports the SSE4.1 instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "İşlemciniz SSE4.1 komutlarını destekliyorsa VLC bunlardan yararlanabilir."
+
+#~ msgid "Enable CPU SSE4.2 support"
+#~ msgstr "CPU SSE4.2 desteğini etkinleştir"
+
+#~ msgid ""
+#~ "If your processor supports the SSE4.2 instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "İşlemciniz SSE4.2 komutlarını destekliyorsa VLC bunlardan yararlanabilir."
+
+#~ msgid ""
+#~ "If your processor supports the AltiVec instructions set, VLC can take "
+#~ "advantage of them."
+#~ msgstr ""
+#~ "İşlemciniz AltiVec komutlarını destekliyorsa VLC bunlardan yararlanabilir."
+
+#~ msgid "Go back in browsing history"
+#~ msgstr "Gezintide geriye git"
+
+#~ msgid "Go forward in browsing history"
+#~ msgstr "Gezintide ileriye git"
+
+#~ msgid ""
+#~ "%s\n"
+#~ "Done %s (100.0%%)"
+#~ msgstr ""
+#~ "%s\n"
+#~ "Tamamlandı %s (100.0%%)"
+
+#~ msgid "Alsa"
+#~ msgstr "Alsa"
+
+#~ msgid "Avio"
+#~ msgstr "Avio"
+
+#~ msgid ""
+#~ "Adapter cards have a device file in directory named /dev/dvb/adapter[n] "
+#~ "with n>=0."
+#~ msgstr ""
+#~ "Bağdaştırıcı kartları n>=0 olmak üzere /dev/dvb/adapter[n] klasöründe bir "
+#~ "aygıt dosyasına sahiptir."
+
+#~ msgid "In kHz for DVB-S or Hz for DVB-C/T"
+#~ msgstr "DVB-S için kHz ya da DVB-C/T için Hz."
+
+#~ msgid "In kHz for DVB-C/S/T"
+#~ msgstr "DVB-C/S/T için kHz"
+
+#~ msgid "Inversion mode [0=off, 1=on, 2=auto]"
+#~ msgstr "Ters çevirme kipi [0=kapalı, 1=açık, -1=kendiliğinden]."
+
+#~ msgid ""
+#~ "This allows you to stream an entire transponder with a \"budget\" card."
+#~ msgstr ""
+#~ "Bu seçenek, tüm bir transponder'ı, bir \"bütçe\" kartıyla akıtmanızı "
+#~ "sağlar."
+
+#~ msgid "Satellite number in the Diseqc system"
+#~ msgstr "Diseqc sistemindeki uydu numarası"
+
+#~ msgid "[0=no diseqc, 1-4=satellite number]."
+#~ msgstr "[0=diseqc yok, 1-4=uydu numarası]."
+
+#~ msgid "In Volts [0, 13=vertical, 18=horizontal]."
+#~ msgstr "Volt olarak [0, 13=vertical, 18=horizontal]."
+
+#~ msgid ""
+#~ "Enable high voltage if your cables are particularly long. This is not "
+#~ "supported by all frontends."
+#~ msgstr ""
+#~ "Kablolarınız oldukça uzunsa yüksek gerilimi açın. Her ön yüz bu özelliği "
+#~ "desteklemez."
+
+#~ msgid "[0=off, 1=on, -1=auto]."
+#~ msgstr "[0=kapalı, 1=açık, -1=kendiliğinden]."
+
+#~ msgid "FEC=Forward Error Correction mode [9=auto]."
+#~ msgstr "FEC=İleri Hata Düzeltme kipi [9=kendiliğinden]."
+
+#~ msgid "Antenna lnb_lof1 (kHz)"
+#~ msgstr "Anten lnb_lof1 (kHz)"
+
+#~ msgid "Low Band Local Osc Freq in kHz (usually 9.75GHz)"
+#~ msgstr "kHz olarak alçak bant yerel osilatör frekansı (genellikle 9.75GHz)."
+
+#~ msgid "Antenna lnb_lof2 (kHz)"
+#~ msgstr "Anten lnb_lof2 (kHz)"
+
+#~ msgid "High Band Local Osc Freq in kHz (usually 10.6GHz)"
+#~ msgstr ""
+#~ "kHz olarak yüksek bant yerel osilatör frekansı (genellikle 10.6GHz)."
+
+#~ msgid "Antenna lnb_slof (kHz)"
+#~ msgstr "Anten lnb_slof (kHz)"
+
+#~ msgid "Low Noise Block switch freq in kHz (usually 11.7GHz)"
+#~ msgstr "kHz olarak LNB anahtarlama frekansı (genellikle 11.7GHz)."
+
+#~ msgid "QAM, PSK or VSB modulation method"
+#~ msgstr "QAM, PSK ya da VSB modülasyon yöntemi."
+
+#~ msgid "QAM16"
+#~ msgstr "QAM16"
+
+#~ msgid "QAM32"
+#~ msgstr "QAM32"
+
+#~ msgid "QAM64"
+#~ msgstr "QAM64"
+
+#~ msgid "QAM128"
+#~ msgstr "QAM128"
+
+#~ msgid "QAM256"
+#~ msgstr "QAM256"
+
+#~ msgid "BPSK"
+#~ msgstr "BPSK"
+
+#~ msgid "QPSK"
+#~ msgstr "QPSK"
+
+#~ msgid "8VSB"
+#~ msgstr "8VSB"
+
+#~ msgid "16VSB"
+#~ msgstr "16VSB"
+
+#~ msgid "FEC rate includes DVB-T high priority stream FEC Rate"
+#~ msgstr "DVB-T yüksek öncelikli akış FEC hızını içeren FEC hızı."
+
+#~ msgid "1/2"
+#~ msgstr "1/2"
+
+#~ msgid "2/3"
+#~ msgstr "2/3"
+
+#~ msgid "3/4"
+#~ msgstr "3/4"
+
+#~ msgid "5/6"
+#~ msgstr "5/6"
+
+#~ msgid "7/8"
+#~ msgstr "7/8"
+
+#~ msgid "Terrestrial low priority stream code rate (FEC)"
+#~ msgstr "Karasal düşük öncelikli akış kodu hızı (FEC)"
+
+#~ msgid "Low Priority FEC Rate [Undefined,1/2,2/3,3/4,5/6,7/8]"
+#~ msgstr "Düşük öncelikli FEC hızını seçin."
+
+#~ msgid "Terrestrial bandwidth"
+#~ msgstr "Karasal bant genişliği"
+
+#~ msgid "Terrestrial bandwidth [0=auto,6,7,8 in MHz]"
+#~ msgstr "Karasal bant genişliğini seçin [0=kendiliğinden,6,7,8 in MHz]."
+
+#~ msgid "Guard interval [Undefined,1/4,1/8,1/16,1/32]"
+#~ msgstr "Karasal koruma aralığını seçin [Tanımsız, 1/4, 1/8, 1/16, 1/32]."
+
+#~ msgid "1/4"
+#~ msgstr "1/4"
+
+#~ msgid "1/8"
+#~ msgstr "1/8"
+
+#~ msgid "1/16"
+#~ msgstr "1/16"
+
+#~ msgid "1/32"
+#~ msgstr "1/32"
+
+#~ msgid "2k"
+#~ msgstr "2k"
+
+#~ msgid "8k"
+#~ msgstr "8k"
+
+#~ msgid "Hierarchy alpha value [Undefined,1,2,4]"
+#~ msgstr "Karasal hiyerarşi alfa değerini seçin [Tanımsız,1,2,4]."
+
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgid "4"
+#~ msgstr "4"
+
+#~ msgid "Modulation type for front-end device."
+#~ msgstr "Ön yüz aygıtı için modülasyon türü."
+
+#~ msgid "Terrestrial high priority stream code rate (FEC)"
+#~ msgstr "Karasal yüksek öncelikli akış kodu hızı (FEC)"
+
+#~ msgid "To enable the internal HTTP server, set its address and port here."
+#~ msgstr ""
+#~ "İç HTTP sunucuyu etkinleştirmek için adres ve port numarasını buraya "
+#~ "yazın."
+
+#~ msgid ""
+#~ "User name the administrator will use to log into the internal HTTP server."
+#~ msgstr "İç HTTP sunucuya giriş yapacak yönetici adı."
+
+#~ msgid ""
+#~ "Password the administrator will use to log into the internal HTTP server."
+#~ msgstr "İç HTTP sunucuya giriş yapacak yönetici parolası."
+
+#~ msgid "HTTP ACL"
+#~ msgstr "HTTP ACL"
+
+#~ msgid ""
+#~ "Access control list (equivalent to .hosts) file path, which will limit "
+#~ "the range of IPs entitled to log into the internal HTTP server."
+#~ msgstr ""
+#~ "İç HTTP sunucuya giriş yapabilecek olan IP adres aralığını sınırlayacak "
+#~ "erişim denetimi listesi (.host'a eşdeğer) dosya yolu."
+
+#~ msgid "HTTP interface x509 PEM certificate file (enables SSL)"
+#~ msgstr "HTTP arayüzü x509 PEM sertifika dosyası (SSL'i etkinleştirir)"
+
+#~ msgid "HTTP interface x509 PEM private key file"
+#~ msgstr "HTTP arayüzü x509 PEM özel anahtarı"
+
+#~ msgid "HTTP interface x509 PEM trusted root CA certificates file"
+#~ msgstr "HTTP arayüzü x509 PEM güvenilir kök CA sertifika dosyası"
+
+#~ msgid ""
+#~ "The given syntax is deprecated. Run \"vlc -p dvb\" to see an explanation "
+#~ "of the new syntax."
+#~ msgstr ""
+#~ "Yazdığınız söz dizimi hatalı. Yeni söz dizimi hakkındaki açıklamaları "
+#~ "görmek için \"vlc -p dvb\" yazın."
+
+#~ msgid "The provided polarization \"%c\" is not valid."
+#~ msgstr "Yazdığınız \"%c\" polarizasyonu geçersiz."
+
+#~ msgid "%.1f MHz (%d services)"
+#~ msgstr "%.1f MHz (%d services)"
+
+#~ msgid "Scanning DVB"
+#~ msgstr "DVB Taranıyor"
+
+#~ msgid "Number of frames per second (eg. 24, 25, 29.97, 30)."
+#~ msgstr "Saniyedeki kare sayısı (örn. 24, 25, 29.97, 30)."
+
+#~ msgid ""
+#~ "Set the ID of the fake elementary stream for use in #duplicate{} "
+#~ "constructs (default 0)."
+#~ msgstr ""
+#~ "#duplicate{} inşası için kullanılacak sahte temel akış kimliğini belirtir "
+#~ "(varsayılan olarak 0)."
+
+#~ msgid ""
+#~ "Duration of the fake streaming before faking an end-of-file (default is "
+#~ "-1 meaning that the stream is unlimited when fake is forced, or lasts for "
+#~ "10 seconds otherwise. 0, means that the stream is unlimited)."
+#~ msgstr ""
+#~ "Bir sahte dosya sonu işaretinden önce sahte akışın süresi (varsayılan -1 "
+#~ "sahte kullanıldığında, akışın sınırsız olduğu ya da 10 saniyede sona "
+#~ "ereceği anlamına gelir. 0 akışın sınırsız olduğu anlamına gelir)."
+
+#~ msgid "Limit the number of redirection to follow."
+#~ msgstr "Yeniden yönlendirme sayısının ne kadar olacağını belirler."
+
+#~ msgid "Use Internet Explorer entered HTTP proxy server"
+#~ msgstr "Internet Explorer için tanımlanmış HTTP vekil sunucusunu kullan"
+
+#~ msgid ""
+#~ "Use Internet Explorer entered HTTP proxy server for all URL. Don't take "
+#~ "into account bypasses settings and auto configuration scripts."
+#~ msgstr ""
+#~ "Tüm İnternet adreslerinde Internet Explorer için tanımlanmış HTTP vekil "
+#~ "sunucusunu kullanır. Atlama ve kendiliğinden yapılandırma ayarlarını "
+#~ "dikkate almaz."
+
+#~ msgid ""
+#~ "Make VLC buffer audio data captured from jack for the specified length in "
+#~ "milliseconds."
+#~ msgstr ""
+#~ "VLC, fişten yakalanan ses verisi için belirtilen saniye uzunluğunda "
+#~ "arabelleği ayırır."
+
+#~ msgid "Use file memory mapping"
+#~ msgstr "Dosya bellek haritalaması kullan"
+
+#~ msgid "Try to use memory mapping to read files and block devices."
+#~ msgstr ""
+#~ "Dosyaları okumak ve aygıtları engellemek için bellek haritalaması "
+#~ "kullanmayı dene."
+
+#~ msgid "MMap"
+#~ msgstr "MMap"
+
+#~ msgid "Audio Channel to use, if there are several audio inputs."
+#~ msgstr "Birden fazla ses girişi varsa kullanılacak ses kanalı."
+
+#~ msgid "Decimation level for MJPEG streams"
+#~ msgstr "MJPEG akışlarının elenme düzeyi"
+
+#~ msgid ""
+#~ "Alsa or OSS audio capture in the v4l access is deprecated. please use "
+#~ "'v4l:// :input-slave=alsa://' or 'v4l:// :input-slave=oss://' instead."
+#~ msgstr ""
+#~ "v4l erişimi içinden Alsa ya da OSS ses yakalama yapılamadı. Lütfen "
+#~ "'v4l:// :input-slave=alsa://' ya da 'v4l:// :input-slave=oss://' kullanın."
+
+#~ msgid "IO Method (READ, MMAP, USERPTR)."
+#~ msgstr "IO Yöntemi (READ, MMAP, USERPTR)."
+
+#~ msgid ""
+#~ "Automatically set the white balance of the video input (if supported by "
+#~ "the v4l2 driver)."
+#~ msgstr ""
+#~ "v4l2 sürücüsü destekliyorsa, görüntü girişinin beyaz dengesini "
+#~ "kendiliğinden ayarla."
+
+#~ msgid ""
+#~ "Trigger a white balancing action, useless if auto white balance is "
+#~ "activated (if supported by the v4l2 driver)."
+#~ msgstr ""
+#~ "v4l2 sürücüsü destekliyorsa, beyaz dengeleme eyleminin eşik değeri. "
+#~ "Kendiliğinden beyaz dengesi ayarı etkin ise kullanılmaz."
+
+#~ msgid "Blue balance of the video input (if supported by the v4l2 driver)."
+#~ msgstr "v4l2 sürücüsü destekliyorsa, görüntü girişinin mavi dengesi."
+
+#~ msgid ""
+#~ "Set the camera's horizontal centering (if supported by the v4l2 driver)."
+#~ msgstr "v4l2 sürücüsü destekliyorsa, kameranın yatay ortalamasını ayarlar."
+
+#~ msgid "Treble level of the audio input (if supported by the v4l2 driver)."
+#~ msgstr "v4l2 sürücüsü destekliyorsa, ses girişinin tiz düzeyi."
+
+#~ msgid ""
+#~ "Alsa or OSS audio capture in the v4l2 access is deprecated. please use "
+#~ "'v4l2:// :input-slave=alsa://' or 'v4l2:// :input-slave=oss://' instead."
+#~ msgstr ""
+#~ "v4l2 erişimi içinden Alsa ya da OSS ses yakalama yapılamadı. Lütfen "
+#~ "'v4l2:// :input-slave=alsa://' ya da 'v4l2:// :input-slave=oss://' "
+#~ "kullanın."
+
+#~ msgid "AUTO"
+#~ msgstr "OTO"
+
+#~ msgid "READ"
+#~ msgstr "READ"
+
+#~ msgid "MMAP"
+#~ msgstr "MMAP"
+
+#~ msgid "USERPTR"
+#~ msgstr "USERPTR"
+
+#~ msgid ""
+#~ "Path to the x509 PEM private key file that will be used for HTTPS. Leave "
+#~ "empty if you don't have one."
+#~ msgstr ""
+#~ "HTTPS için kullanılacak x509 PEM özel anahtarının yolu. Anahtarınız yoksa "
+#~ "boş bırakın."
+
+#~ msgid ""
+#~ "Path to the x509 PEM trusted root CA certificates (certificate authority) "
+#~ "file that will be used for HTTPS. Leave empty if you don't have one."
+#~ msgstr ""
+#~ "HTTPS için kullanılacak x509 PEM güvenilir kök sertifikası (sertifika "
+#~ "otoritesi) dosyasının yolu. Sertifikanız yoksa boş bırakın."
+
+#~ msgid ""
+#~ "Path to the x509 PEM Certificates Revocation List file that will be used "
+#~ "for SSL. Leave empty if you don't have one."
+#~ msgstr ""
+#~ "SSL için kullanılacak x509 PEM sertifikası iptal listesi dosyasının yolu. "
+#~ "Liste dosyanız yoksa boş bırakın."
+
+#~ msgid "No audio device name was given. You might want to enter \"default\"."
+#~ msgstr "Ses aygıtı adı belirtilmemiş. \"default\" yazmak isteyebilirsiniz."
+
+#~ msgid "Try to work around buggy OSS drivers"
+#~ msgstr "Hatalı OSS sürücüleri üzerinden çalışmayı dene"
+
+#~ msgid ""
+#~ "Some buggy OSS drivers just don't like when their internal buffers are "
+#~ "completely filled (the sound gets heavily hashed). If you have one of "
+#~ "these drivers, then you need to enable this option."
+#~ msgstr ""
+#~ "Bazı hatalı OSS sürücüleri iç arabellekleri tamamen doluyken çalışmayı "
+#~ "sevmezler (sesler ağır şekilde karıştığında). Bu sürücülerden birine "
+#~ "sahipseniz bu seçeneği etkinleştirmelisiniz."
+
+#~ msgid "AltiVec FFmpeg audio/video decoder ((MS)MPEG4,SVQ1,H263,WMV,WMA)"
+#~ msgstr ""
+#~ "AltiVec FFmpeg ses/görüntü kodlayıcısı ((MS)MPEG4,SVQ1,H263,WMV,WMA)"
+
+#~ msgid "Reload image file every n seconds."
+#~ msgstr "Resim dosyasını her n saniyede yeniden yükler"
+
+#~ msgid "Consider width and height as maximum values."
+#~ msgstr "En ve boyu en büyük değerler olarak değerlendir."
+
+#~ msgid ""
+#~ "This integer when viewed in binary is a debugging mask\n"
+#~ "calls                 1\n"
+#~ "packet assembly info  2\n"
+#~ msgstr ""
+#~ "Bu tamsayı bir binary içinde görülen hata ayıklama maskesidir \n"
+#~ "calls                 1\n"
+#~ "packet assembly info  2\n"
+
+#~ msgid "Text is always opaque"
+#~ msgstr "Metin her zaman mat"
+
+#~ msgid "Subpage"
+#~ msgstr "Alt sayfa"
+
+#~ msgid "1.00x"
+#~ msgstr "1.00x"
+
+#~ msgid "Handlers"
+#~ msgstr "İşleyiciler"
+
+#~ msgid ""
+#~ "List of handler extensions and executable paths (for instance: php=/usr/"
+#~ "bin/php,pl=/usr/bin/perl)."
+#~ msgstr ""
+#~ "İşleyici uzantılarının ve çalışan dosyaların yollarının listesi (örneğin: "
+#~ "php=/usr/bin/php,pl=/usr/bin/perl)."
+
+#~ msgid "Export album art as /art"
+#~ msgstr "Albüm kapağını /art olarak ver"
+
+#~ msgid ""
+#~ "Allow exporting album art for current playlist items at the /art and /art?"
+#~ "id=<id> URLs."
+#~ msgstr ""
+#~ "Geçerli oynatma listesi ögesinin albüm kapağının  /art ve /art?id=<id> "
+#~ "İnternet adresiyle verilmesini sağlar."
+
+#~ msgid "HTTP interface x509 PEM certificate file (enables SSL)."
+#~ msgstr "HTTP arayüzü x509 PEM sertifika dosyası (SSL'i etkinleştirir)."
+
+#~ msgid "HTTP interface x509 PEM private key file."
+#~ msgstr "HTTP arayüzü x509 PEM özel anahtar dosyası."
+
+#~ msgid "HTTP interface x509 PEM trusted root CA certificates file."
+#~ msgstr "HTTP arayüzü x509 PEM güvenilir kök CA sertifikaları dosyası."
+
+#~ msgid "Signals"
+#~ msgstr "Sinyaller"
+
+#~ msgid ""
+#~ "This AVI file is broken. Seeking will not work correctly.\n"
+#~ "Do you want to try to fix it?\n"
+#~ "\n"
+#~ "This might take a long time."
+#~ msgstr ""
+#~ "AVI dosyası kırık. Arama doğru çalışmaz.\n"
+#~ "Düzeltmeyi denemek ister misiniz?\n"
+#~ "\n"
+#~ "Bu işlem oldukça uzun sürebilir."
+
+#~ msgid "Repair"
+#~ msgstr "Düzelt"
+
+#~ msgid ""
+#~ "Force the subtiles format. Use \"auto\", the set of supported values "
+#~ "varies."
+#~ msgstr ""
+#~ "Altyazıların biçimini belirler. Desteklenen değerlerin kendiliğinden "
+#~ "seçilmesi için \"auto\" kullanın."
+
+#~ msgid "Control word for the CSA encryption algorithm"
+#~ msgstr "CSA şifreleme algoritması için denetim kelimesi."
+
+#~ msgid "VLC was brought to you by:"
+#~ msgstr "VLC'yi sizler için hazırlayan:"
+
+#~ msgid "Rewind"
+#~ msgstr "Başa Sar"
+
+#~ msgid "Apply the equalizer filter twice. The effect will be sharper."
+#~ msgstr "Dengeleyici süzgeci iki kat uygulanır. Etki daha keskin olur."
+
+#~ msgid "Enable the equalizer. Bands can be set manually or using a preset."
+#~ msgstr ""
+#~ "Dengeleyiciyi etkinleştir. Bantlar elle ya da ön tanımlar kullanılarak "
+#~ "ayarlanabilir."
+
+#~ msgid "Shows more information about the available video filters."
+#~ msgstr ""
+#~ "Kullanılabilecek görüntü süzgeçleri ile ilgili ayrıntılı bilgi gösterir."
+
+#~ msgid "Blur"
+#~ msgstr "Bulanık"
+
+#~ msgid "Adds motion blurring to the image"
+#~ msgstr "Resim üzerine hareket bulanıklığı ekler"
+
+#~ msgid "Creates several copies of the Video output window"
+#~ msgstr "Görüntü çıkış penceresinin bir kaç kopyasını oluşturur"
+
+#~ msgid "Enables an interactive Zoom feature"
+#~ msgstr "Etkileşimli yakınlaştırma özelliğini etkinleştirir"
+
+#~ msgid "Prevents the audio output from going over a predefined value."
+#~ msgstr ""
+#~ "Ses çıkışının önceden belirlenmiş bir değerin üzerine çıkmasını engeller."
+
+#~ msgid "Imitates the effect of surround sound when using headphones."
+#~ msgstr "Kulaklık kullanırken çevresel ses etkisini taklit eder."
+
+#~ msgid "Adjust Image"
+#~ msgstr "Resim Ayarlama"
+
+#~ msgid ""
+#~ "This panel allows on-the-fly selection of various video effects.\n"
+#~ "These filters can be configured individually in the Preferences, in the "
+#~ "subsections of Video/Filters.\n"
+#~ "To choose the order in which the filter are applied, a filter option "
+#~ "string can be set in the Preferences, Video / Filters section."
+#~ msgstr ""
+#~ "Bu panel değişik görüntü etkilerini çalışma sırasında seçebilmenizi "
+#~ "sağlar.\n"
+#~ "Bu süzgeçler Görüntü/Süzgeçler bölümünde Ayarlar başlığından tek tek "
+#~ "yapılandırılabilir.\n"
+#~ "Süzgeçlerin hangi sırayla uygulanacağını seçmek için Görüntü/Süzgeçler "
+#~ "bölümünde Ayarlar başlığından bir süzgeç seçeneği dizgesi yazabilirsiniz."
+
+#~ msgid ""
+#~ "Stretch the video to fill the entire window when resizing the video "
+#~ "instead of keeping the aspect ratio and displaying black borders."
+#~ msgstr ""
+#~ "Görüntüyü yeniden boyutlandırırken en boy oranını korumak ya da siyah "
+#~ "çerçeveleri göstermek yerine, tüm pencereyi dolduracak şekilde genişlet."
+
+#~ msgid "Use as Desktop Background"
+#~ msgstr "Masaüstü Arkaplanı yap"
+
+#~ msgid ""
+#~ "Use the video as the Desktop Background Desktop icons cannot be "
+#~ "interacted with in this mode."
+#~ msgstr ""
+#~ "Görüntü masaüstü art alanı olarak kullanılır. Masaüstündeki simgeler bu "
+#~ "kipte işlemez."
+
+#~ msgid ""
+#~ "VLC could not detect any EyeTV compatible device.\n"
+#~ "\n"
+#~ "Check the device's connection, make sure that the latest EyeTV software "
+#~ "is installed and try again."
+#~ msgstr ""
+#~ "VLC EyeTV uyumlu bir aygıt algılayamadı.\n"
+#~ "\n"
+#~ "Aygıt bağlantısını denetleyin ve EyeTV yazılımının son sürümünün kurulu "
+#~ "olduğundan emin olup yeniden deneyin."
+
+#~ msgid "Add controls to the video window"
+#~ msgstr "Görüntü penceresine denetimleri ekle"
+
+#~ msgid "Input Settings not saved"
+#~ msgstr "Giriş Ayarları kaydedilmedi"
+
+#~ msgid " State    : Playing %s"
+#~ msgstr " Durum    : %s oynatılıyor"
+
+#~ msgid " State    : Opening/Connecting %s"
+#~ msgstr " Durum    : Açılıyor/Bağlanıyor %s"
+
+#~ msgid "     c           Switch color on/off"
+#~ msgstr "     c           Rengi Aç/Kapat"
+
+#~ msgid "[Boxes]"
+#~ msgstr "[Kutular]"
+
+#~ msgid " Logs "
+#~ msgstr "Log'lar "
+
+#~ msgid " Objects "
+#~ msgstr " Nesneler "
+
+#~ msgid " Playlist (All, one level) "
+#~ msgstr " Oynatma Listesi (Tümü, tek düzey) "
+
+#~ msgid " Playlist (Manually added) "
+#~ msgstr "Oynatma Listesi (El ile eklenen) "
+
+#~ msgid "Find: %s"
+#~ msgstr "Bul: %s"
+
+#~ msgid ""
+#~ "<p><i>VideoLAN</i> prefers when applications request authorization before "
+#~ "accessing Internet.</p>\n"
+#~ "<p><b>VLC media player</b> can get information from the Internet in order "
+#~ "to get <b>media informations</b> or to check for available <b>updates</b>."
+#~ "</p>\n"
+#~ "<p><i>VLC media player</i> <b>doesn't</b> send or collect any "
+#~ "information, even anonymously, about your usage.</p>\n"
+#~ msgstr ""
+#~ "<p><i>VideoLAN</i> uygulamalar İnternet'e erişmeden önce izninizi sormayı "
+#~ "yeğler.</p>\n"
+#~ "<p><b>VLC media player</b> İnternet üzerinden <b>medya bilgisi</b> ya da "
+#~ "<b>güncelleme denetimi</b> bilgilerini alabilir.</p>\n"
+#~ "<p><i>VLC media player</i> anonim dahi olsa kullanım şekliniz ile ilgili "
+#~ "<b>bilgi toplamaz ya da aktarmaz</b>.</p>\n"
+
+#~ msgid "&Update"
+#~ msgstr "&Güncelle"
+
+#~ msgid "Sca&le"
+#~ msgstr "Ölçek&le"
+
+#~ msgid "Allow the volume to be set to 400%"
+#~ msgstr "Sesin %400 aralığında ayarlanmasına izin ver"
+
+#~ msgid ""
+#~ "Allow the volume to have range from 0% to 400%, instead of 0% to 200%. "
+#~ "This option can distort the audio, since it uses software amplification."
+#~ msgstr ""
+#~ "Sesin %0 - %200 aralığı yerine %0 - %400 aralığında ayarlanmasını sağlar. "
+#~ "Bu seçenek yazılımsal bir kuvvetlendirme yaptığından sesi bozabilir."
+
+#~ msgid "Skins loader demux"
+#~ msgstr "Tema yükleyici tekleyicisi"
+
+#~ msgid "ID3v1/2 and APEv1/2 tags parser"
+#~ msgstr "ID3v1/2 ve APEv1/2 etiketleme yorumcusu"
+
+#~ msgid ""
+#~ "It is possible to apply effects to the rendered text to improve its "
+#~ "readability."
+#~ msgstr ""
+#~ "Okunabilirliği artırmak için görüntülenecek yazıya çeşitli etkiler "
+#~ "uygulayabilirsiniz."
+
+#~ msgid "Expiration time for resumed TLS sessions"
+#~ msgstr "Sürdürülen TLS oturumları için geçerlilik süresi"
+
+#~ msgid ""
+#~ "It is possible to cache the resumed TLS sessions. This is the expiration "
+#~ "time of the sessions stored in this cache, in seconds."
+#~ msgstr ""
+#~ "Sürdürülen TLS oturumları önbelleklenebilir. Bu değer, saniye olarak, "
+#~ "önbellekte saklanacak oturumların geçerlilik süresidir."
+
+#~ msgid ""
+#~ "This is the maximum number of resumed TLS sessions that the cache will "
+#~ "hold."
+#~ msgstr "Önbellekte saklanacak en çok TLS oturumunun sayısı."
+
+#~ msgid "OSSO"
+#~ msgstr "OSSO"
+
+#~ msgid ""
+#~ "This is the host to which Growl notifications will be sent. By default, "
+#~ "notifications are sent locally."
+#~ msgstr ""
+#~ "Bu seçenek Growl uyarılarının gönderileceği sunucuyu belirtir. Varsayılan "
+#~ "olarak uyarılar yerel olarak gönderilir."
+
+#~ msgid "Growl password on the Growl server."
+#~ msgstr "Growl sunucundaki Growl parolası."
+
+#~ msgid "Growl UDP port on the Growl server."
+#~ msgstr "Growl sunucundaki Growl UDP portu."
+
+#~ msgid "Simple XML Parser"
+#~ msgstr "Basit XML Yorumlayıcısı"
+
+#~ msgid "IPv4 SAP"
+#~ msgstr "IPv4 SAP"
+
+#~ msgid "Listen to IPv4 announcements on the standard addresses."
+#~ msgstr "IPv4 duyurularını standart adresler üzerinden dinler."
+
+#~ msgid "IPv6 SAP"
+#~ msgstr "IPv6 SAP"
+
+#~ msgid "Listen to IPv6 announcements on the standard addresses."
+#~ msgstr "IPv6 duyurularını standart adresler üzerinden dinler."
+
+#~ msgid "IPv6 SAP scope"
+#~ msgstr "IPv6 SAP kapsamı"
+
+#~ msgid "Scope for IPv6 announcements (default is 8)."
+#~ msgstr "IPv6 duyurularının kapsamı (varsayılan 8)."
+
+#~ msgid ""
+#~ "This enables a SAP caching mechanism. This will result in lower SAP "
+#~ "startup time, but you could end up with items corresponding to legacy "
+#~ "streams."
+#~ msgstr ""
+#~ "Bu ayar SAP önbellekleme mekanizmasını etkinleştirir. Böylece SAP daha "
+#~ "hızlı başlar ancak eski tip akışlardaki ögelerle ilgili sorun çıkabilir."
+
+#~ msgid "add grain to image"
+#~ msgstr "Görüntüye tanecikler ekler."
+
+#~ msgid "Embed the overlay"
+#~ msgstr "Bindirmeyi göm"
+
+#~ msgid "Embed the framebuffer overlay into a X11 window"
+#~ msgstr "Kare arabelleği bindirmesini X11 penceresine göm"
+
+#~ msgid "Allows you to modify what OpenGL provider should be used"
+#~ msgstr "Hangi OpenGL sağlayıcının kullanılacağını belirler"
+
+#~ msgid "Cache size (number of images)"
+#~ msgstr "Önbellek boyutu (resim sayısı)"
+
+#~ msgid "Snapshot cache size (number of images to keep)."
+#~ msgstr "Fotoğraf önbelleği boyutu (tutulacak resim sayısı)."
+
+#~ msgid "ID of the video output X window"
+#~ msgstr "Görüntü çıkışı X penceresinin kimliği"
+
+#~ msgid ""
+#~ "VLC can embed its video output in an existing X11 window. This is the X "
+#~ "identifier of that window (0 means none)."
+#~ msgstr ""
+#~ "VLC görüntü çıkışını varolan bir X11 penceresine gömebilir. Bu değer bu "
+#~ "pencerenin X belirleyicisidir (0 hiç anlamına gelir)."
+
+#~ msgid "Use shared memory"
+#~ msgstr "Paylaşımlı bellek kullan"
+
+#~ msgid "Use shared memory to communicate between VLC and the X server."
+#~ msgstr ""
+#~ "VLC ile X sunucu arasında iletişim için paylaşılmış bellek kullanılır."
+
+#~ msgid "More bands : 80 / 20"
+#~ msgstr "Daha fazla bant: 80 / 20"
+
+#~ msgid "Band separator"
+#~ msgstr "Bant ayırıcı"
+
+#~ msgid "Use system codecs if available (better quality, but dangerous)"
+#~ msgstr "Varsa sistem kodeklerini kullan (daha iyi kalite, fakat riskli)"
+
+#~ msgid "Minimal view mode (no toolbars)"
+#~ msgstr "Sade görünüm kipi (araç çubukları yok)"
+
+#~ msgid "No v4l2 instance found. Press the refresh button to try again."
+#~ msgstr ""
+#~ "Çalışan bir v4l2 bulunamadı. Yenile düğmesine tıklayıp yeniden deneyin."
+
+#~ msgid "Use media key control when VLC is in background"
+#~ msgstr "VLC art alandayken medya tuşu denetimini kullan"
+
+#~ msgid ""
+#~ "By default, VLC will accept media key events also when being in "
+#~ "background."
+#~ msgstr ""
+#~ "VLC, varsayılan olarak art alanda çalışırken de medya tuşlarını kabul "
+#~ "eder."
+
+#~ msgid "...when VLC is in background"
+#~ msgstr "...VLC art alanda çalışırken"
+
+#~ msgid "GME demuxer (Game_Music_Emu)"
+#~ msgstr "GME tekleyici (Game_Music_Emu)"
+
+#~ msgid "%s: option `%s' is ambiguous\n"
+#~ msgstr "%s: `%s' seçeneği belirsiz\n"
+
+#~ msgid "%s: option `--%s' doesn't allow an argument\n"
+#~ msgstr "%s: `--%s' seçeneği bir argümana izin vermez\n"
+
+#~ msgid "%s: option `%c%s' doesn't allow an argument\n"
+#~ msgstr "%s: `%c%s' seçeneği bir argümana izin vermez\n"
+
+#~ msgid "%s: option `%s' requires an argument\n"
+#~ msgstr "%s: `%s' seçeneği bir argüman gerektirir\n"
+
+#~ msgid "%s: unrecognized option `%s%s'\n"
+#~ msgstr "%s: tanınmayan seçenek `%s%s'\n"
+
+#~ msgid "%s: illegal option -- %c\n"
+#~ msgstr "%s: illegal seçenek -- %c\n"
+
+#~ msgid "%s: invalid option -- %c\n"
+#~ msgstr "%s: geçersiz seçenek -- %c\n"
+
+#~ msgid "%s: option requires an argument -- %c\n"
+#~ msgstr "%s: seçenek bir argüman gerektiriyor -- %c\n"
+
+#~ msgid "%s: option `-W %s' is ambiguous\n"
+#~ msgstr "%s: `-W %s' seçeneği belirsiz\n"
+
+#~ msgid "%s: option `-W %s' doesn't allow an argument\n"
+#~ msgstr "%s: `-W %s' seçeneği bir argümana izin vermez\n"
+
+#~ msgid "Full support"
+#~ msgstr "Tam destek"
+
+#~ msgid "Compact Disc Digital Audio (CD-DA) input"
+#~ msgstr "Compact Disc Digital Audio (CD-DA) girdisi"
+
+#~ msgid "Additional debug"
+#~ msgstr "Ek hata ayıklama"
+
+#, fuzzy
+#~ msgid "Do CD-Text lookups?"
+#~ msgstr "CDDB araştır?"
+
+#, fuzzy
+#~ msgid "If set, get CD-Text information"
+#~ msgstr "Üst-veri"
+
+#, fuzzy
+#~ msgid "CDDB lookups"
+#~ msgstr "CDDB araştır?"
+
+#, fuzzy
+#~ msgid "Cache CDDB lookups?"
+#~ msgstr "CDDB araştır?"
+
+#~ msgid "Media Catalog Number (MCN)"
+#~ msgstr "Medya Katalog Numarası (MCN)"
+
+#~ msgid "Ask"
+#~ msgstr "Sor"
+
+#~ msgid "50%"
+#~ msgstr "%50"
+
+#~ msgid "100%"
+#~ msgstr "%100"
+
+#~ msgid "200%"
+#~ msgstr "%200"
+
+#~ msgid "Do you want VLC to check for updates automatically?"
+#~ msgstr "Güncellemeler VLC tarafından otomatik denetlesin ister misiniz?"
+
+#~ msgid "The current release is %d.%d.%d%c."
+#~ msgstr "Şuanki uyarlama: %d.%d.%d%c."
+
+#~ msgid "Owner"
+#~ msgstr "Sahibi"
+
+#~ msgid "00:00:00"
+#~ msgstr "00:00:00"
+
+#~ msgid "MRL:"
+#~ msgstr "MRL:"
+
+#~ msgid "udp"
+#~ msgstr "udp"
+
+#~ msgid "udp6"
+#~ msgstr "udp6"
+
+#~ msgid "rtp"
+#~ msgstr "rtp"
+
+#~ msgid "rtp4"
+#~ msgstr "rtp4"
+
+#~ msgid "http"
+#~ msgstr "http"
+
+#~ msgid "sout"
+#~ msgstr "sout"
+
+#~ msgid "ntsc"
+#~ msgstr "ntsc"
+
+#~ msgid "secam"
+#~ msgstr "secam"
+
+#~ msgid "240x192"
+#~ msgstr "240x192"
+
+#~ msgid "320x240"
+#~ msgstr "320x240"
+
+#~ msgid "qsif"
+#~ msgstr "qsif"
+
+#~ msgid "qcif"
+#~ msgstr "qcif"
+
+#~ msgid "sif"
+#~ msgstr "sif"
+
+#~ msgid "cif"
+#~ msgstr "cif"
+
+#~ msgid "vga"
+#~ msgstr "vga"
+
+#~ msgid "kHz"
+#~ msgstr "kHz"
+
+#~ msgid "Hz/s"
+#~ msgstr "Hz/s"
+
+#~ msgid "huffyuv"
+#~ msgstr "huffyuv"
+
+#~ msgid "mp1v"
+#~ msgstr "mp1v"
+
+#~ msgid "mp2v"
+#~ msgstr "mp2v"
+
+#~ msgid "mp4v"
+#~ msgstr "mp4v"
+
+#~ msgid "H263"
+#~ msgstr "H263"
+
+#~ msgid "WMV1"
+#~ msgstr "WMV1"
+
+#~ msgid "WMV2"
+#~ msgstr "WMV2"
+
+#~ msgid "URL:"
+#~ msgstr "URL:"
+
+#~ msgid "127.0.0.1"
+#~ msgstr "127.0.0.1"
+
+#~ msgid "localhost"
+#~ msgstr "localhost"
+
+#~ msgid "localhost.localdomain"
+#~ msgstr "localhost.localdomain"
+
+#~ msgid "239.0.0.42"
+#~ msgstr "239.0.0.42"
+
+#~ msgid "OGG"
+#~ msgstr "OGG"
+
+#~ msgid "alaw"
+#~ msgstr "alaw"
+
+#~ msgid "ulaw"
+#~ msgstr "ulaw"
+
+#~ msgid "mpga"
+#~ msgstr "mpga"
+
+#~ msgid "mp3"
+#~ msgstr "mp3"
+
+#~ msgid "a52"
+#~ msgstr "a52"
+
+#~ msgid "vorb"
+#~ msgstr "vorb"
+
+#~ msgid "Authors: the VideoLAN Team, http://www.videolan.org/team/"
+#~ msgstr "Yazarlar: VideoLAN Ekibi, http://www.videolan.org/team/"
+
+#~ msgid "(c) 1996-2004 the the VideoLAN team team"
+#~ msgstr "(c) 1996-2004 VideoLAN ekibi"
+
+#~ msgid "Statistics about the currently playing media or stream."
+#~ msgstr "Şuanki oynatılan medya veya akış hakkında istatistikler."
+
+#~ msgid "Complete look with information area"
+#~ msgstr "Bilgi alanları ile birlikte tam görünüm"
+
+#~ msgid "last.fm"
+#~ msgstr "last.fm"
+
+#~ msgid ""
+#~ "The VideoLAN team <videolan@videolan.org>\n"
+#~ "http://www.videolan.org/"
+#~ msgstr ""
+#~ "VideoLAN Ekibi <videolan@videolan.org>\n"
+#~ "http://www.videolan.org/"
+
+#~ msgid ""
+#~ "Alternatively, you can build an MRL using one of the following predefined "
+#~ "targets:"
+#~ msgstr ""
+#~ "Alternatif olarak aşağıadki ön tanımlı hedefleri kullanarak bir MRL "
+#~ "oluşturabilirsiniz:"
+
+#~ msgid "WinCE dialogs provider"
+#~ msgstr "WinCE iletişim sağlayıcı"
+
+#~ msgid "Gtk+ GUI helper"
+#~ msgstr "Gtk+ GUI yardımcısı"
+
+#~ msgid "Qt Embedded GUI helper"
+#~ msgstr "Qt Gömülü GUI yardımcısı"
+
+#~ msgid "Les Guignols"
+#~ msgstr "Les Guignols"
+
+#~ msgid "Canal +"
+#~ msgstr "Canal +"
+
+#~ msgid "Freebox TV listing (French ISP free.fr services)"
+#~ msgstr "Freebox TV listesi (French ISP free.fr servisleri)"
+
+#~ msgid "OpenGL(GLX) provider"
+#~ msgstr "OpenGL(GLX) sağlayıcısı"
+
+#, fuzzy
+#~ msgid "You can choose the crop style to apply."
+#~ msgstr "WinCE arayüz modülü"
+
+#, fuzzy
+#~ msgid "(Experimental) XCB video window"
+#~ msgstr "DirectX video çıktısı"
+
+#~ msgid "Number of stars to draw with random effect."
+#~ msgstr "Rastgele efektinde çizdirilecek yıldızların sayısı."
+
+#~ msgid "UDP/RTP"
+#~ msgstr "UDP/RTP"
+
+#~ msgid ""
+#~ "These are the settings for the input, demultiplexing and decoding parts "
+#~ "of VLC. Encoder settings can also be found here."
+#~ msgstr ""
+#~ "Bunlar VLCnin girdi, ayrıştırma ve kod çözme kısımlarına ait ayarlardır. "
+#~ "Burada Kodlayıcı ayarları da bulunabilir."
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "Geleneksel Çince"
+
+#~ msgid "Galician"
+#~ msgstr "Galician"
+
+#~ msgid "Occitan"
+#~ msgstr "Occitan"
+
+#~ msgid "32"
+#~ msgstr "32"
+
+#~ msgid "64"
+#~ msgstr "64"
+
+#~ msgid "dv"
+#~ msgstr "dv"
+
+#~ msgid "Maximum size of temporary file (Mb)"
+#~ msgstr "Maksimum geçici dosya büyüklüğü (Mb)"
+
+#~ msgid "Esound server"
+#~ msgstr "Esound sunucusu"
+
+#~ msgid "%d Hz"
+#~ msgstr "%d Hz"
+
+#~ msgid "Theora comment"
+#~ msgstr "Theora açıklama"
+
+#~ msgid "Vorbis comment"
+#~ msgstr "Vorbis açıklama"
+
+#~ msgid "HTTP/FTP/MMS/RTSP"
+#~ msgstr "HTTP/FTP/MMS/RTSP"
+
+#~ msgid "Allow timeshifting"
+#~ msgstr "Zaman kaymasına izin ver"
+
+#~ msgid "Prefer UDP over RTP"
+#~ msgstr "RTP üzerinden UDP tercih et"
+
+#~ msgid "Cube"
+#~ msgstr "Küp"
+
+#~ msgid "Cylinder"
+#~ msgstr "Silindir"
+
+#~ msgid "Torus"
+#~ msgstr "Halka"
+
+#~ msgid "Sphere"
+#~ msgstr "Küre"
+
+#~ msgid "SQUAREXY"
+#~ msgstr "SQUAREXY"
+
+#~ msgid "SQUARER"
+#~ msgstr "SQUARER"
+
+#~ msgid "ASINXY"
+#~ msgstr "ASINXY"
+
+#~ msgid "ASINR"
+#~ msgstr "ASINR"
+
+#~ msgid "SINEXY"
+#~ msgstr "SINEXY"
+
+#, fuzzy
+#~ msgid "SINER"
+#~ msgstr "SINEXY"
+
+#~ msgid "OpenGL Cylinder radius"
+#~ msgstr "OpenGL Silindir yarıçapı"
+
+#~ msgid "OpenGL cube rotation speed"
+#~ msgstr "OpenGL küp döndürme hızı"
+
+#~ msgid "Fetch the metadata from the Internet"
+#~ msgstr "Üstverileri Internetten toparla"
+
+#~ msgid "M3U file|*.m3u|XSPF playlist|*.xspf"
+#~ msgstr "M3U dosyası|*.m3u|XSPF listesi|*.xspf"
+
+#~ msgid "A to B"
+#~ msgstr "A - B"
+
+#~ msgid "&Update List"
+#~ msgstr "&Güncelleme Listesi"
+
+#~ msgid "Subtitles files (*.cdg *.idx *.srt *.sub *.utf);;All files (*)"
+#~ msgstr "Altyazı dosyaları (*.cdg *.idx *.srt *.sub *.utf);;Tüm dosyalar (*)"
+
+#~ msgid "%s: unrecognized option `--%s'\n"
+#~ msgstr "%s: bilinmeyen seçenek `--%s'\n"
+
+#, fuzzy
+#~ msgid "Choose a filename to save the logs under..."
+#~ msgstr "Listede %i öge"
+
+#, fuzzy
+#~ msgid "Stream and Media Info"
+#~ msgstr "Akış ve medya bilgisi"
+
+#, fuzzy
+#~ msgid "Don't show further errors"
+#~ msgstr "Fazla hataları bastır"
+
+#~ msgid "HTTP/HTTPS/FTP/MMS"
+#~ msgstr "HTTP/HTTPS/FTP/MMS"
+
+#, fuzzy
+#~ msgid "&Reverse Sort by Title"
+#~ msgstr "Başlığa göre &Sırala"
+
+#~ msgid "S&ort"
+#~ msgstr "&Sırala"
+
+#~ msgid "root"
+#~ msgstr "kök"
+
+#~ msgid "Can't save"
+#~ msgstr "Kaydedilemedi"
+
+#~ msgid "MMSH"
+#~ msgstr "MMSH"
+
+#, fuzzy
+#~ msgid "Gradient effects (cartoon) on the image"
+#~ msgstr "Resmi kırpar"
+
+#~ msgid "Blurring"
+#~ msgstr "Bulanık"
+
+#~ msgid "&Wizard...\tCtrl-W"
+#~ msgstr "&Sihirbaz...\tCtrl-W"
+
+#~ msgid "E&xit\tCtrl-X"
+#~ msgstr "Çı&kış\tCtrl-X"
+
+#, fuzzy
+#~ msgid "Stream and Media &Info...\tCtrl-I"
+#~ msgstr "Akış ve Dosya &Bilgisi...\tCtrl-I"
+
+#, fuzzy
+#~ msgid "Online Help"
+#~ msgstr "Çevrimiçi Dokümantasyon"
+
+#~ msgid ""
+#~ "The VideoLAN team <videolan@videolan.org>\n"
+#~ "http://www.videolan.org/\n"
+#~ "\n"
+#~ msgstr ""
+#~ "VideoLAN Ekibi <videolan@videolan.org>\n"
+#~ "http://www.videolan.org/\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid "Show bookmarks dialog at startup"
+#~ msgstr "Yer imi %i"
+
+#, fuzzy
+#~ msgid "Taskbar"
+#~ msgstr "Tatar"
+
+#, fuzzy
+#~ msgid "Both"
+#~ msgstr "Alt"
+
+#, fuzzy
+#~ msgid "Prompt"
+#~ msgstr "Pop"
+
+#, fuzzy
+#~ msgid "Authorise meta information fetching"
+#~ msgstr "Üst-veri"
+
+#, fuzzy
+#~ msgid "Distribution License"
+#~ msgstr "Bozulma"
+
+#, fuzzy
+#~ msgid "Always show video area"
+#~ msgstr "Videodan enstantane çek"
+
+#, fuzzy
+#~ msgid "DCCP transport"
+#~ msgstr "UDP port"
+
+#, fuzzy
+#~ msgid "Charset"
+#~ msgstr "Kabare"
+
+#, fuzzy
+#~ msgid "Remember wizard options"
+#~ msgstr "Kaynak en-boy oranı"
+
+#~ msgid "Report a Bug"
+#~ msgstr "Hata Raporla"
+
+#, fuzzy
+#~ msgid "Listen to IPv4 announcements on the standard address."
+#~ msgstr "SAP anons aralığı"
+
+#~ msgid "CDDB Disc ID"
+#~ msgstr "CDDB Disc ID"
+
+#~ msgid "CD-Text Disc ID"
+#~ msgstr "CD-Metin Disc ID"
+
+#~ msgid "CD-Text Songwriter"
+#~ msgstr "CD-Metin Sözyazarı"
+
+#~ msgid "ISO-9660 Volume"
+#~ msgstr "ISO-9660 Birim"
+
+#~ msgid "All items, unsorted"
+#~ msgstr "Tüm ögeler, sırasız"
+
+#~ msgid "Open Messages Window"
+#~ msgstr "Mesaj Penceresini Aç"
+
+#~ msgid "Dismiss"
+#~ msgstr "Reddet"
+
+#, fuzzy
+#~ msgid "Growl"
+#~ msgstr "Grubu"
+
+#, fuzzy
+#~ msgid "MSN"
+#~ msgstr "MMS"
+
+#~ msgid "Creates a motion blurring on the image"
+#~ msgstr "Resmin üzerinde bir hareket bulanıklığı yaratır"
+
+#~ msgid ""
+#~ "Use the settings of the \"freetype\" module to choose the font you  want "
+#~ "VLC to use for text rendering (to display subtitles for example)."
+#~ msgstr ""
+#~ "VLC'nin metin gösteriminde (örn, altyazıların ekranda gösterilmesi) "
+#~ "kullanmasını isteğiniz yazıtipini seçmek için \"freetype\" modülünün "
+#~ "ayarlarını kullanın"
+
+#~ msgid "Telnet Interface password"
+#~ msgstr "Telnet Arayüzü parolası"
+
+#~ msgid "Last skin used"
+#~ msgstr "Son kullanılan dış görünüm"
+
+#~ msgid "M3U file|*.m3u"
+#~ msgstr "M3U dosyası|*.m3u"
+
+#~ msgid "B pyramid"
+#~ msgstr "B piramidi"
+
+#~ msgid "Sub-pixel refinement quality."
+#~ msgstr "Alt-piksel iyileştirme kalitesi"
+
+#, fuzzy
+#~ msgid "URL : "
+#~ msgstr "URL:"
+
+#~ msgid "&Undock Ext. GUI"
+#~ msgstr "Geniş GUI &Parket"
+
+#~ msgid "HTTP/HTTPS"
+#~ msgstr "HTTP/HTTPS"
+
+#~ msgid "Settings related to the various access filter used by VLC.\n"
+#~ msgstr ""
+#~ "VLC tarafından kullanılan çeşitli erişim süzgeçlerine ilişkin ayarlar.\n"
+
+#~ msgid "Choose program (SID)"
+#~ msgstr "Program seçin (SID)"
+
+#~ msgid "[0=stereo, 1=dual-mono, 2=joint-stereo]"
+#~ msgstr "[0=stereo, 1=çift-mono, 2=bitişik-stereo]"
+
+#, fuzzy
+#~ msgid "Wizard..."
+#~ msgstr "&Sihirbaz...\tCtrl-W"
+
+#~ msgid "_Jump..."
+#~ msgstr "_Git..."
+
+#~ msgid "FEC"
+#~ msgstr "FEC"
+
+#~ msgid "Open a Satellite Card"
+#~ msgstr "Bir Uydu Kartı Aç"
+
+#~ msgid "the VideoLAN team <videolan@videolan.org>"
+#~ msgstr "VideoLAN Ekibi <videolan@videolan.org>"
+
+#~ msgid "HTTP/FTP/MMS"
+#~ msgstr "HTTP/FTP/MMS"
+
+#~ msgid "Go To:"
+#~ msgstr "Git:"
+
+#~ msgid "m:"
+#~ msgstr "m:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#~ msgid "Fas&t"
+#~ msgstr "Hı&zlı"
+
+#~ msgid "Ready."
+#~ msgstr "Hazır."
+
+#~ msgid "Toggle the status bar..."
+#~ msgstr "Durum çubuğunu aç/kapat..."
+
+#~ msgid "WMV (Windows Media Video) 1"
+#~ msgstr "WMV (Windows Media Video) 1"
+
+#~ msgid "WMV (Windows Media Video) 2"
+#~ msgstr "WMV (Windows Media Video) 2"
+
+#~ msgid "I263"
+#~ msgstr "I263"
+
+#, fuzzy
+#~ msgid "margin"
+#~ msgstr "Amharic"
+
+#, fuzzy
+#~ msgid "spacing"
+#~ msgstr "Arabellek"
+
+#, fuzzy
+#~ msgid "checkable"
+#~ msgstr "etkin"
+
+#, fuzzy
+#~ msgid "Disk"
+#~ msgstr "Disc"
+
+#~ msgid "Jump"
+#~ msgstr "Atla"
+
+#~ msgid "filename of config file in share/dvb/dvb-s"
+#~ msgstr "share/dvb/dvb-s içindeki yapılandırma dosyasının adı"
+
+#~ msgid "Side speakers"
+#~ msgstr "Yan hoparlörler"
+
+#~ msgid "Center and subwoofer"
+#~ msgstr "Orta ve bas hoparlörler "
+
+#~ msgid "S/PDIF"
+#~ msgstr "S/PDIF"
+
+#~ msgid "Hide / Show Library"
+#~ msgstr "Kütphaneyi Göster / Gizle"
+
+#~ msgid "Hide / Show Viewer"
+#~ msgstr "Görüntüleyiciyi Göster / Gizle"
+
+#~ msgid "Okay"
+#~ msgstr "Tamam"
+
+#, fuzzy
+#~ msgid "Relaunch required"
+#~ msgstr "SDP gerekli"
+
 #, fuzzy
 #~ msgid "Advance of subtitles over video:"
 #~ msgstr "Altyazıları görüntü üzerine bindir"
@@ -28263,10 +29798,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Video output is not supported"
 #~ msgstr "Görüntü çıkış modülü"
-
-#~ msgid "Use systems codecs if available, for WMV codecs"
-#~ msgstr ""
-#~ "WMV kodlayıcı/çözücüleri için, varsa sistem kodlayıcı/çözücülerini kullan"
 
 #, fuzzy
 #~ msgid "Front speakers"
@@ -28280,22 +29811,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "ALSA device"
 #~ msgstr "Ses aygıtı"
 
-#~ msgid "Dump"
-#~ msgstr "Dök"
-
 #, fuzzy
 #~ msgid "Session groupname"
 #~ msgstr "Oturum adı"
-
-#~ msgid "Probe DVB card for capabilities"
-#~ msgstr "DVB kartının yeteneklerini öğren"
-
-#~ msgid ""
-#~ "Some DVB cards do not like to be probed for their capabilities, you can "
-#~ "disable this feature if you experience some trouble."
-#~ msgstr ""
-#~ "Bazı DVB kartları yeteneklerinin okunmasından hoşlanmazlar. Sorun "
-#~ "yaşıyorsanız bu özelliği devre dışı bırakabilirsiniz."
 
 #, fuzzy
 #~ msgid "Satellite scanning config"
@@ -28304,12 +29822,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "DVB"
 #~ msgstr "DV"
-
-#~ msgid "DVB input with v4l2 support"
-#~ msgstr "v4l2 destekli DVB girişi"
-
-#~ msgid "dbus"
-#~ msgstr "dbus"
 
 #, fuzzy
 #~ msgid "Default Volume"
@@ -28322,13 +29834,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "&Open a Media"
 #~ msgstr "Ortam Aç"
-
-#~ msgid "Ball color, one of \"red\", \"blue\" and \"green\"."
-#~ msgstr "Top rengi, \"kırmızı\", \"mavi\" ya da \"yeşil\"."
-
-#, fuzzy
-#~ msgid "Live Update"
-#~ msgstr "Güncelle"
 
 #, fuzzy
 #~ msgid "Display on &Desktop"
@@ -28346,14 +29851,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Video standard (Default, SECAM_D, PAL_B, NTSC_M, etc...)."
 #~ msgstr "Görüntü standartı (Varsayılan, SECAM, PAL ya da NTSC)."
 
-#~ msgid ""
-#~ "One of \"u8\", \"s8\", \"u16\", \"s16\", \"u16_le\", \"s16_le\", \"u16_be"
-#~ "\", \"s16_be\", \"fixed32\", \"float32\" or \"spdif\""
-#~ msgstr ""
-#~ "Bu seçeneklerden birini seçebilirsiniz: \"u8\", \"s8\", \"u16\", \"s16\", "
-#~ "\"u16_le\", \"s16_le\", \"u16_be\", \"s16_be\", \"fixed32\", \"float32\" "
-#~ "ya da \"spdif\""
-
 #, fuzzy
 #~ msgid "Clear Menu"
 #~ msgstr "Tümünü Sil"
@@ -28365,20 +29862,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "RTSP host address"
 #~ msgstr "RTSP sunucu adresi"
-
-#~ msgid ""
-#~ "This defines the address, port and path the RTSP VOD server will listen "
-#~ "on.\n"
-#~ "Syntax is address:port/path. The default is to listen on all interfaces "
-#~ "(address 0.0.0.0), on port 554, with no path.\n"
-#~ "To listen only on the local interface, use \"localhost\" as address."
-#~ msgstr ""
-#~ "Bu seçenek RTSP VOD sunucusunun dinleyeceği adres, kapı ve yolu "
-#~ "belirtir.\n"
-#~ "adres:kapı/yol şeklinde yazılır. Varsayılan olarak 554 numaralı kapı "
-#~ "üzerinden, yol olmaksızın tüm arayüzler dinlenir (adres 0.0.0.0).\n"
-#~ "Yalnızca yerel arayüz üzerinden dinlemek için adres olarak \"localhost\" "
-#~ "yazın. "
 
 #, fuzzy
 #~ msgid "Viewer"
@@ -28508,9 +29991,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Right rear"
 #~ msgstr "Sağ"
 
-#~ msgid "Left front"
-#~ msgstr "Sol ön"
-
 #, fuzzy
 #~ msgid ""
 #~ "The specified sound font file (%s) is incorrect.\n"
@@ -28541,26 +30021,13 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Apply"
 #~ msgstr "&Uygula"
 
-#~ msgid "Disable DVD Menus (for compatibility)"
-#~ msgstr "Uyumluluk için DVD menülerini devre dışı bırakır"
-
 #, fuzzy
 #~ msgid "Effect"
 #~ msgstr "Etkiler"
 
-#~ msgid "Exposure"
-#~ msgstr "Pozlama"
-
-#, fuzzy
-#~ msgid "Exposure."
-#~ msgstr "Pozlama"
-
 #, fuzzy
 #~ msgid "Zoom playlist"
 #~ msgstr "Oynatma listesini göster/gizle"
-
-#~ msgid " - Empty - "
-#~ msgstr "-Boş-"
 
 #, fuzzy
 #~ msgid "key"
@@ -28577,13 +30044,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Audio output saved volume"
 #~ msgstr "Ses çıkış düzeyi adımı"
-
-#~ msgid ""
-#~ "This saves the audio output volume when you use the mute function. You "
-#~ "should not change this option manually."
-#~ msgstr ""
-#~ "Bu değer, ses kısma işlevini kullandığınızda çıkış sesi düzeyini "
-#~ "kaydeder. Bu seçeneği el ile değiştirmemelisiniz."
 
 #, fuzzy
 #~ msgid ""
@@ -28639,112 +30099,21 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "IPv4 will be used by default for all connections."
 #~ msgstr "Bağlantı için gereken parola."
 
-#~ msgid "Prefer system plugins over VLC"
-#~ msgstr "VLC yerine sistem eklentilerini yeğle"
-
-#~ msgid ""
-#~ "Indicates whether VLC will prefer native plugins installed on system over "
-#~ "VLC owns plugins whenever a choice is available."
-#~ msgstr ""
-#~ "Yeri geldiğinde VLC'nin, sahip olduğu eklentiler yerine, sisteminizde "
-#~ "kurulu olan doğal eklentilerin kullanıp kullanmayacağını belirtir."
-
 #, fuzzy
 #~ msgid "Enable CPU MMX support"
 #~ msgstr "SPU akış çıkışını etkinleştir"
-
-#~ msgid ""
-#~ "If your processor supports the MMX instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "İşlemciniz MMX komutlarını destekliyorsa VLC bunlardan yararlanabilir."
 
 #, fuzzy
 #~ msgid "Enable CPU 3D Now! support"
 #~ msgstr "SPU akış çıkışını etkinleştir"
 
-#~ msgid ""
-#~ "If your processor supports the 3D Now! instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "İşlemciniz 3D Now! komutlarını destekliyorsa VLC bunlardan yararlanabilir."
-
-#~ msgid "Enable CPU MMX EXT support"
-#~ msgstr "CPU MMX EXT desteğini etkinleştir"
-
-#~ msgid ""
-#~ "If your processor supports the MMX EXT instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "İşlemciniz MMX EXT komutlarını destekliyorsa VLC bunlardan yararlanabilir."
-
 #, fuzzy
 #~ msgid "Enable CPU SSE support"
 #~ msgstr "SPU akış çıkışını etkinleştir"
 
-#~ msgid ""
-#~ "If your processor supports the SSE instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "İşlemciniz SSE komutlarını destekliyorsa VLC bunlardan yararlanabilir."
-
-#~ msgid "Enable CPU SSE2 support"
-#~ msgstr "CPU SSE2 desteğini etkinleştir"
-
-#~ msgid ""
-#~ "If your processor supports the SSE2 instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "İşlemciniz SSE2 komutlarını destekliyorsa VLC bunlardan yararlanabilir."
-
-#~ msgid "Enable CPU SSE3 support"
-#~ msgstr "CPU SSE3 desteğini etkinleştir"
-
-#~ msgid ""
-#~ "If your processor supports the SSE3 instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "İşlemciniz SSE3 komutlarını destekliyorsa VLC bunlardan yararlanabilir."
-
-#~ msgid "Enable CPU SSSE3 support"
-#~ msgstr "CPU SSSE3 desteğini etkinleştir"
-
-#~ msgid ""
-#~ "If your processor supports the SSSE3 instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "İşlemciniz SSSE3 komutlarını destekliyorsa VLC bunlardan yararlanabilir."
-
-#~ msgid "Enable CPU SSE4.1 support"
-#~ msgstr "CPU SSE4.1 desteğini etkinleştir"
-
-#~ msgid ""
-#~ "If your processor supports the SSE4.1 instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "İşlemciniz SSE4.1 komutlarını destekliyorsa VLC bunlardan yararlanabilir."
-
-#~ msgid "Enable CPU SSE4.2 support"
-#~ msgstr "CPU SSE4.2 desteğini etkinleştir"
-
-#~ msgid ""
-#~ "If your processor supports the SSE4.2 instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "İşlemciniz SSE4.2 komutlarını destekliyorsa VLC bunlardan yararlanabilir."
-
 #, fuzzy
 #~ msgid "Enable CPU AltiVec support"
 #~ msgstr "SPU akış çıkışını etkinleştir"
-
-#~ msgid ""
-#~ "If your processor supports the AltiVec instructions set, VLC can take "
-#~ "advantage of them."
-#~ msgstr ""
-#~ "İşlemciniz AltiVec komutlarını destekliyorsa VLC bunlardan yararlanabilir."
-
-#~ msgid "Go back in browsing history"
-#~ msgstr "Gezintide geriye git"
 
 #, fuzzy
 #~ msgid ""
@@ -28753,9 +30122,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr ""
 #~ "Oynatma listesinde önceki ögeye geçmek için kullanılacak kestirme tuşu "
 #~ "seçin."
-
-#~ msgid "Go forward in browsing history"
-#~ msgstr "Gezintide ileriye git"
 
 #, fuzzy
 #~ msgid ""
@@ -28769,13 +30135,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Media dump access filter trigger."
 #~ msgstr "Kayıt erişim süzgecini başlat/durdur."
 
-#~ msgid ""
-#~ "%s\n"
-#~ "Done %s (100.0%%)"
-#~ msgstr ""
-#~ "%s\n"
-#~ "Tamamlandı %s (100.0%%)"
-
 #, fuzzy
 #~ msgid "Caching value in ms"
 #~ msgstr "Ön bellekleme değeri (ms)"
@@ -28785,12 +30144,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ "Caching value for Alsa captures. This value should be set in milliseconds."
 #~ msgstr "Tüm bölümleri taşı. Bu değer milisaniye cinsinden olmalıdır."
 
-#~ msgid "Alsa"
-#~ msgstr "Alsa"
-
-#~ msgid "Avio"
-#~ msgstr "Avio"
-
 #, fuzzy
 #~ msgid ""
 #~ "Caching value for DVB streams. This value should be set in milliseconds."
@@ -28798,198 +30151,45 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ "Milisaniye cinsinden, giden UDP akışlarının varsayılan ön bellekleme "
 #~ "değeri."
 
-#~ msgid ""
-#~ "Adapter cards have a device file in directory named /dev/dvb/adapter[n] "
-#~ "with n>=0."
-#~ msgstr ""
-#~ "Bağdaştırıcı kartları n>=0 olmak üzere /dev/dvb/adapter[n] klasöründe bir "
-#~ "aygıt dosyasına sahiptir."
-
 #, fuzzy
 #~ msgid "Device number to use on adapter"
 #~ msgstr "Sunucunun kullandığı SFTP kapı numarası"
-
-#~ msgid "In kHz for DVB-S or Hz for DVB-C/T"
-#~ msgstr "DVB-S için kHz ya da DVB-C/T için Hz."
-
-#~ msgid "In kHz for DVB-C/S/T"
-#~ msgstr "DVB-C/S/T için kHz"
 
 #, fuzzy
 #~ msgid "Inversion mode"
 #~ msgstr "Aktarım kipi"
 
-#~ msgid "Inversion mode [0=off, 1=on, 2=auto]"
-#~ msgstr "Ters çevirme kipi [0=kapalı, 1=açık, -1=kendiliğinden]."
-
 #, fuzzy
 #~ msgid "Budget mode"
 #~ msgstr "Sessiz kip"
-
-#~ msgid ""
-#~ "This allows you to stream an entire transponder with a \"budget\" card."
-#~ msgstr ""
-#~ "Bu seçenek, tüm bir transponder'ı, bir \"bütçe\" kartıyla akıtmanızı "
-#~ "sağlar."
-
-#~ msgid "Satellite number in the Diseqc system"
-#~ msgstr "Diseqc sistemindeki uydu numarası"
-
-#~ msgid "[0=no diseqc, 1-4=satellite number]."
-#~ msgstr "[0=diseqc yok, 1-4=uydu numarası]."
 
 #, fuzzy
 #~ msgid "LNB voltage"
 #~ msgstr "Yüksek LNB gerilimi"
 
-#~ msgid "In Volts [0, 13=vertical, 18=horizontal]."
-#~ msgstr "Volt olarak [0, 13=vertical, 18=horizontal]."
-
-#~ msgid ""
-#~ "Enable high voltage if your cables are particularly long. This is not "
-#~ "supported by all frontends."
-#~ msgstr ""
-#~ "Kablolarınız oldukça uzunsa yüksek gerilimi açın. Her ön yüz bu özelliği "
-#~ "desteklemez."
-
 #, fuzzy
 #~ msgid "22 kHz tone"
 #~ msgstr "Kesintisiz 22kHz ton"
-
-#~ msgid "[0=off, 1=on, -1=auto]."
-#~ msgstr "[0=kapalı, 1=açık, -1=kendiliğinden]."
 
 #, fuzzy
 #~ msgid "Transponder FEC"
 #~ msgstr "Dönüşüm"
 
-#~ msgid "FEC=Forward Error Correction mode [9=auto]."
-#~ msgstr "FEC=İleri Hata Düzeltme kipi [9=kendiliğinden]."
-
 #, fuzzy
 #~ msgid "Transponder symbol rate in kHz"
 #~ msgstr "Transponder simge hızı"
-
-#~ msgid "Antenna lnb_lof1 (kHz)"
-#~ msgstr "Anten lnb_lof1 (kHz)"
-
-#~ msgid "Low Band Local Osc Freq in kHz (usually 9.75GHz)"
-#~ msgstr "kHz olarak alçak bant yerel osilatör frekansı (genellikle 9.75GHz)."
-
-#~ msgid "Antenna lnb_lof2 (kHz)"
-#~ msgstr "Anten lnb_lof2 (kHz)"
-
-#~ msgid "High Band Local Osc Freq in kHz (usually 10.6GHz)"
-#~ msgstr ""
-#~ "kHz olarak yüksek bant yerel osilatör frekansı (genellikle 10.6GHz)."
-
-#~ msgid "Antenna lnb_slof (kHz)"
-#~ msgstr "Anten lnb_slof (kHz)"
-
-#~ msgid "Low Noise Block switch freq in kHz (usually 11.7GHz)"
-#~ msgstr "kHz olarak LNB anahtarlama frekansı (genellikle 11.7GHz)."
-
-#~ msgid "QAM, PSK or VSB modulation method"
-#~ msgstr "QAM, PSK ya da VSB modülasyon yöntemi."
-
-#~ msgid "QAM16"
-#~ msgstr "QAM16"
-
-#~ msgid "QAM32"
-#~ msgstr "QAM32"
-
-#~ msgid "QAM64"
-#~ msgstr "QAM64"
-
-#~ msgid "QAM128"
-#~ msgstr "QAM128"
-
-#~ msgid "QAM256"
-#~ msgstr "QAM256"
-
-#~ msgid "BPSK"
-#~ msgstr "BPSK"
-
-#~ msgid "QPSK"
-#~ msgstr "QPSK"
-
-#~ msgid "8VSB"
-#~ msgstr "8VSB"
-
-#~ msgid "16VSB"
-#~ msgstr "16VSB"
-
-#~ msgid "FEC rate includes DVB-T high priority stream FEC Rate"
-#~ msgstr "DVB-T yüksek öncelikli akış FEC hızını içeren FEC hızı."
-
-#~ msgid "1/2"
-#~ msgstr "1/2"
-
-#~ msgid "2/3"
-#~ msgstr "2/3"
-
-#~ msgid "3/4"
-#~ msgstr "3/4"
-
-#~ msgid "5/6"
-#~ msgstr "5/6"
-
-#~ msgid "7/8"
-#~ msgstr "7/8"
-
-#~ msgid "Terrestrial low priority stream code rate (FEC)"
-#~ msgstr "Karasal düşük öncelikli akış kodu hızı (FEC)"
-
-#~ msgid "Low Priority FEC Rate [Undefined,1/2,2/3,3/4,5/6,7/8]"
-#~ msgstr "Düşük öncelikli FEC hızını seçin."
-
-#~ msgid "Terrestrial bandwidth"
-#~ msgstr "Karasal bant genişliği"
-
-#~ msgid "Terrestrial bandwidth [0=auto,6,7,8 in MHz]"
-#~ msgstr "Karasal bant genişliğini seçin [0=kendiliğinden,6,7,8 in MHz]."
 
 #, fuzzy
 #~ msgid "Terrestrial guard interval"
 #~ msgstr "Koruyucu aralığı"
 
-#~ msgid "Guard interval [Undefined,1/4,1/8,1/16,1/32]"
-#~ msgstr "Karasal koruma aralığını seçin [Tanımsız, 1/4, 1/8, 1/16, 1/32]."
-
-#~ msgid "1/4"
-#~ msgstr "1/4"
-
-#~ msgid "1/8"
-#~ msgstr "1/8"
-
-#~ msgid "1/16"
-#~ msgstr "1/16"
-
-#~ msgid "1/32"
-#~ msgstr "1/32"
-
 #, fuzzy
 #~ msgid "Transmission mode [Undefined,2k,8k]"
 #~ msgstr "Aktarım kipi"
 
-#~ msgid "2k"
-#~ msgstr "2k"
-
-#~ msgid "8k"
-#~ msgstr "8k"
-
 #, fuzzy
 #~ msgid "Terrestrial hierarchy mode"
 #~ msgstr "Hiyerarşi kipi"
-
-#~ msgid "Hierarchy alpha value [Undefined,1,2,4]"
-#~ msgstr "Karasal hiyerarşi alfa değerini seçin [Tanımsız,1,2,4]."
-
-#~ msgid "2"
-#~ msgstr "2"
-
-#~ msgid "4"
-#~ msgstr "4"
 
 #, fuzzy
 #~ msgid "Satellite Polarisation"
@@ -29026,59 +30226,21 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ "Milisaniye cinsinden, giden UDP akışlarının varsayılan ön bellekleme "
 #~ "değeri."
 
-#~ msgid "Modulation type for front-end device."
-#~ msgstr "Ön yüz aygıtı için modülasyon türü."
-
-#~ msgid "Terrestrial high priority stream code rate (FEC)"
-#~ msgstr "Karasal yüksek öncelikli akış kodu hızı (FEC)"
-
-#~ msgid "To enable the internal HTTP server, set its address and port here."
-#~ msgstr ""
-#~ "İç HTTP sunucuyu etkinleştirmek için adres ve port numarasını buraya "
-#~ "yazın."
-
-#~ msgid ""
-#~ "User name the administrator will use to log into the internal HTTP server."
-#~ msgstr "İç HTTP sunucuya giriş yapacak yönetici adı."
-
 #, fuzzy
 #~ msgid "HTTP password"
 #~ msgstr "FTP parolası"
-
-#~ msgid ""
-#~ "Password the administrator will use to log into the internal HTTP server."
-#~ msgstr "İç HTTP sunucuya giriş yapacak yönetici parolası."
-
-#~ msgid "HTTP ACL"
-#~ msgstr "HTTP ACL"
-
-#~ msgid ""
-#~ "Access control list (equivalent to .hosts) file path, which will limit "
-#~ "the range of IPs entitled to log into the internal HTTP server."
-#~ msgstr ""
-#~ "İç HTTP sunucuya giriş yapabilecek olan IP adres aralığını sınırlayacak "
-#~ "erişim denetimi listesi (.host'a eşdeğer) dosya yolu."
 
 #, fuzzy
 #~ msgid "Certificate file"
 #~ msgstr "Dikey döndür"
 
-#~ msgid "HTTP interface x509 PEM certificate file (enables SSL)"
-#~ msgstr "HTTP arayüzü x509 PEM sertifika dosyası (SSL'i etkinleştirir)"
-
 #, fuzzy
 #~ msgid "Private key file"
 #~ msgstr "Yeni bir profil oluştur"
 
-#~ msgid "HTTP interface x509 PEM private key file"
-#~ msgstr "HTTP arayüzü x509 PEM özel anahtarı"
-
 #, fuzzy
 #~ msgid "Root CA file"
 #~ msgstr "Bir dosya seçin"
-
-#~ msgid "HTTP interface x509 PEM trusted root CA certificates file"
-#~ msgstr "HTTP arayüzü x509 PEM güvenilir kök CA sertifika dosyası"
 
 #, fuzzy
 #~ msgid "CRL file"
@@ -29088,25 +30250,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Input syntax is deprecated"
 #~ msgstr "Giriş değişti"
 
-#~ msgid ""
-#~ "The given syntax is deprecated. Run \"vlc -p dvb\" to see an explanation "
-#~ "of the new syntax."
-#~ msgstr ""
-#~ "Yazdığınız söz dizimi hatalı. Yeni söz dizimi hakkındaki açıklamaları "
-#~ "görmek için \"vlc -p dvb\" yazın."
-
 #, fuzzy
 #~ msgid "Invalid polarization"
 #~ msgstr "Geçersiz kombinasyon"
-
-#~ msgid "The provided polarization \"%c\" is not valid."
-#~ msgstr "Yazdığınız \"%c\" polarizasyonu geçersiz."
-
-#~ msgid "%.1f MHz (%d services)"
-#~ msgstr "%.1f MHz (%d services)"
-
-#~ msgid "Scanning DVB"
-#~ msgstr "DVB Taranıyor"
 
 #, fuzzy
 #~ msgid "Caching value for DVDs. This value should be set in milliseconds."
@@ -29126,25 +30272,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr ""
 #~ "Milisaniye cinsinden, giden UDP akışlarının varsayılan ön bellekleme "
 #~ "değeri."
-
-#~ msgid "Number of frames per second (eg. 24, 25, 29.97, 30)."
-#~ msgstr "Saniyedeki kare sayısı (örn. 24, 25, 29.97, 30)."
-
-#~ msgid ""
-#~ "Set the ID of the fake elementary stream for use in #duplicate{} "
-#~ "constructs (default 0)."
-#~ msgstr ""
-#~ "#duplicate{} inşası için kullanılacak sahte temel akış kimliğini belirtir "
-#~ "(varsayılan olarak 0)."
-
-#~ msgid ""
-#~ "Duration of the fake streaming before faking an end-of-file (default is "
-#~ "-1 meaning that the stream is unlimited when fake is forced, or lasts for "
-#~ "10 seconds otherwise. 0, means that the stream is unlimited)."
-#~ msgstr ""
-#~ "Bir sahte dosya sonu işaretinden önce sahte akışın süresi (varsayılan -1 "
-#~ "sahte kullanıldığında, akışın sınırsız olduğu ya da 10 saniyede sona "
-#~ "ereceği anlamına gelir. 0 akışın sınırsız olduğu anlamına gelir)."
 
 #, fuzzy
 #~ msgid "Fake"
@@ -29192,44 +30319,12 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Max number of redirection"
 #~ msgstr "En fazla bağlantı sayısı"
 
-#~ msgid "Limit the number of redirection to follow."
-#~ msgstr "Yeniden yönlendirme sayısının ne kadar olacağını belirler."
-
-#~ msgid "Use Internet Explorer entered HTTP proxy server"
-#~ msgstr "Internet Explorer için tanımlanmış HTTP vekil sunucusunu kullan"
-
-#~ msgid ""
-#~ "Use Internet Explorer entered HTTP proxy server for all URL. Don't take "
-#~ "into account bypasses settings and auto configuration scripts."
-#~ msgstr ""
-#~ "Tüm İnternet adreslerinde Internet Explorer için tanımlanmış HTTP vekil "
-#~ "sunucusunu kullanır. Atlama ve kendiliğinden yapılandırma ayarlarını "
-#~ "dikkate almaz."
-
 #, fuzzy
 #~ msgid ""
 #~ "Caching value for imem streams. This value should be set in milliseconds."
 #~ msgstr ""
 #~ "Milisaniye cinsinden, giden UDP akışlarının varsayılan ön bellekleme "
 #~ "değeri."
-
-#~ msgid ""
-#~ "Make VLC buffer audio data captured from jack for the specified length in "
-#~ "milliseconds."
-#~ msgstr ""
-#~ "VLC, fişten yakalanan ses verisi için belirtilen saniye uzunluğunda "
-#~ "arabelleği ayırır."
-
-#~ msgid "Use file memory mapping"
-#~ msgstr "Dosya bellek haritalaması kullan"
-
-#~ msgid "Try to use memory mapping to read files and block devices."
-#~ msgstr ""
-#~ "Dosyaları okumak ve aygıtları engellemek için bellek haritalaması "
-#~ "kullanmayı dene."
-
-#~ msgid "MMap"
-#~ msgstr "MMap"
 
 #, fuzzy
 #~ msgid "Memory-mapped file input"
@@ -29350,9 +30445,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Audio Channel"
 #~ msgstr "Ses Kanalları"
 
-#~ msgid "Audio Channel to use, if there are several audio inputs."
-#~ msgstr "Birden fazla ses girişi varsa kullanılacak ses kanalı."
-
 #, fuzzy
 #~ msgid "Width of the stream to capture (-1 for autodetect)."
 #~ msgstr "Yakalanacak akışın eni (kendiliğinden algılama için -1)."
@@ -29381,9 +30473,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Decimation"
 #~ msgstr "Hedef"
 
-#~ msgid "Decimation level for MJPEG streams"
-#~ msgstr "MJPEG akışlarının elenme düzeyi"
-
 #, fuzzy
 #~ msgid "Quality"
 #~ msgstr "Kalite düzeyi"
@@ -29391,13 +30480,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Quality of the stream."
 #~ msgstr "Akış için kullanılacak çoklayıcı."
-
-#~ msgid ""
-#~ "Alsa or OSS audio capture in the v4l access is deprecated. please use "
-#~ "'v4l:// :input-slave=alsa://' or 'v4l:// :input-slave=oss://' instead."
-#~ msgstr ""
-#~ "v4l erişimi içinden Alsa ya da OSS ses yakalama yapılamadı. Lütfen "
-#~ "'v4l:// :input-slave=alsa://' ya da 'v4l:// :input-slave=oss://' kullanın."
 
 #, fuzzy
 #~ msgid "Video4Linux"
@@ -29410,9 +30492,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "IO Method"
 #~ msgstr "Çıkış Yöntemi"
-
-#~ msgid "IO Method (READ, MMAP, USERPTR)."
-#~ msgstr "IO Yöntemi (READ, MMAP, USERPTR)."
 
 #, fuzzy
 #~ msgid "Reset controls to defaults provided by the v4l2 driver."
@@ -29438,30 +30517,13 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Black level of the video input (if supported by the v4l2 driver)."
 #~ msgstr "Görüntü yakalama denetimleri (aygıt tarafından destekleniyorsa)"
 
-#~ msgid ""
-#~ "Automatically set the white balance of the video input (if supported by "
-#~ "the v4l2 driver)."
-#~ msgstr ""
-#~ "v4l2 sürücüsü destekliyorsa, görüntü girişinin beyaz dengesini "
-#~ "kendiliğinden ayarla."
-
 #, fuzzy
 #~ msgid "Do white balance"
 #~ msgstr "Kendiliğinden beyaz dengesi"
 
-#~ msgid ""
-#~ "Trigger a white balancing action, useless if auto white balance is "
-#~ "activated (if supported by the v4l2 driver)."
-#~ msgstr ""
-#~ "v4l2 sürücüsü destekliyorsa, beyaz dengeleme eyleminin eşik değeri. "
-#~ "Kendiliğinden beyaz dengesi ayarı etkin ise kullanılmaz."
-
 #, fuzzy
 #~ msgid "Red balance of the video input (if supported by the v4l2 driver)."
 #~ msgstr "Görüntü yakalama denetimleri (aygıt tarafından destekleniyorsa)"
-
-#~ msgid "Blue balance of the video input (if supported by the v4l2 driver)."
-#~ msgstr "v4l2 sürücüsü destekliyorsa, görüntü girişinin mavi dengesi."
 
 #, fuzzy
 #~ msgid "Gamma of the video input (if supported by the v4l2 driver)."
@@ -29492,10 +30554,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Horizontal centering"
 #~ msgstr "Yatay döndür"
-
-#~ msgid ""
-#~ "Set the camera's horizontal centering (if supported by the v4l2 driver)."
-#~ msgstr "v4l2 sürücüsü destekliyorsa, kameranın yatay ortalamasını ayarlar."
 
 #, fuzzy
 #~ msgid "Vertical centering"
@@ -29530,9 +30588,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Treble"
 #~ msgstr "Tiz düzeyi"
 
-#~ msgid "Treble level of the audio input (if supported by the v4l2 driver)."
-#~ msgstr "v4l2 sürücüsü destekliyorsa, ses girişinin tiz düzeyi."
-
 #, fuzzy
 #~ msgid "Loudness of the audio input (if supported by the v4l2 driver)."
 #~ msgstr "Görüntü yakalama denetimleri (aygıt tarafından destekleniyorsa)"
@@ -29543,26 +30598,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr ""
 #~ "Milisaniye cinsinden, giden UDP akışlarının varsayılan ön bellekleme "
 #~ "değeri."
-
-#~ msgid ""
-#~ "Alsa or OSS audio capture in the v4l2 access is deprecated. please use "
-#~ "'v4l2:// :input-slave=alsa://' or 'v4l2:// :input-slave=oss://' instead."
-#~ msgstr ""
-#~ "v4l2 erişimi içinden Alsa ya da OSS ses yakalama yapılamadı. Lütfen "
-#~ "'v4l2:// :input-slave=alsa://' ya da 'v4l2:// :input-slave=oss://' "
-#~ "kullanın."
-
-#~ msgid "AUTO"
-#~ msgstr "OTO"
-
-#~ msgid "READ"
-#~ msgstr "READ"
-
-#~ msgid "MMAP"
-#~ msgstr "MMAP"
-
-#~ msgid "USERPTR"
-#~ msgstr "USERPTR"
 
 #, fuzzy
 #~ msgid "v4l2 driver controls, if supported by your v4l2 driver."
@@ -29577,27 +30612,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Path to the x509 PEM certificate file that will be used for HTTPS."
 #~ msgstr "Bu, ses için kullanılacak varsayılan çoklayıcı yöntemidir."
-
-#~ msgid ""
-#~ "Path to the x509 PEM private key file that will be used for HTTPS. Leave "
-#~ "empty if you don't have one."
-#~ msgstr ""
-#~ "HTTPS için kullanılacak x509 PEM özel anahtarının yolu. Anahtarınız yoksa "
-#~ "boş bırakın."
-
-#~ msgid ""
-#~ "Path to the x509 PEM trusted root CA certificates (certificate authority) "
-#~ "file that will be used for HTTPS. Leave empty if you don't have one."
-#~ msgstr ""
-#~ "HTTPS için kullanılacak x509 PEM güvenilir kök sertifikası (sertifika "
-#~ "otoritesi) dosyasının yolu. Sertifikanız yoksa boş bırakın."
-
-#~ msgid ""
-#~ "Path to the x509 PEM Certificates Revocation List file that will be used "
-#~ "for SSL. Leave empty if you don't have one."
-#~ msgstr ""
-#~ "SSL için kullanılacak x509 PEM sertifikası iptal listesi dosyasının yolu. "
-#~ "Liste dosyanız yoksa boş bırakın."
 
 #, fuzzy
 #~ msgid "Dummy S/PDIF audio mixer"
@@ -29615,9 +30629,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "No Audio Device"
 #~ msgstr "Ses Aygıtı"
 
-#~ msgid "No audio device name was given. You might want to enter \"default\"."
-#~ msgstr "Ses aygıtı adı belirtilmemiş. \"default\" yazmak isteyebilirsiniz."
-
 #, fuzzy
 #~ msgid "VLC could not open the ALSA device \"%s\" (%s)."
 #~ msgstr "VLC dosyayı açamadı: \"%s\". (%m)"
@@ -29630,18 +30641,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Roku HD1000 audio output"
 #~ msgstr "Hayali ses çıkışı"
 
-#~ msgid "Try to work around buggy OSS drivers"
-#~ msgstr "Hatalı OSS sürücüleri üzerinden çalışmayı dene"
-
-#~ msgid ""
-#~ "Some buggy OSS drivers just don't like when their internal buffers are "
-#~ "completely filled (the sound gets heavily hashed). If you have one of "
-#~ "these drivers, then you need to enable this option."
-#~ msgstr ""
-#~ "Bazı hatalı OSS sürücüleri iç arabellekleri tamamen doluyken çalışmayı "
-#~ "sevmezler (sesler ağır şekilde karıştığında). Bu sürücülerden birine "
-#~ "sahipseniz bu seçeneği etkinleştirmelisiniz."
-
 #, fuzzy
 #~ msgid "UNIX OSS audio output"
 #~ msgstr "OpenSLES ses çıkışı"
@@ -29650,19 +30649,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Simple DirectMedia Layer audio output"
 #~ msgstr "Basit DirectMedia Katmanı Görüntü Çıkışı"
 
-#~ msgid "AltiVec FFmpeg audio/video decoder ((MS)MPEG4,SVQ1,H263,WMV,WMA)"
-#~ msgstr ""
-#~ "AltiVec FFmpeg ses/görüntü kodlayıcısı ((MS)MPEG4,SVQ1,H263,WMV,WMA)"
-
 #, fuzzy
 #~ msgid "Reload image file"
 #~ msgstr "Resim dosyası"
-
-#~ msgid "Reload image file every n seconds."
-#~ msgstr "Resim dosyasını her n saniyede yeniden yükler"
-
-#~ msgid "Consider width and height as maximum values."
-#~ msgstr "En ve boyu en büyük değerler olarak değerlendir."
 
 #, fuzzy
 #~ msgid ""
@@ -29718,15 +30707,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Enable debug"
 #~ msgstr "Görüntüyü etkinleştir"
 
-#~ msgid ""
-#~ "This integer when viewed in binary is a debugging mask\n"
-#~ "calls                 1\n"
-#~ "packet assembly info  2\n"
-#~ msgstr ""
-#~ "Bu tamsayı bir binary içinde görülen hata ayıklama maskesidir \n"
-#~ "calls                 1\n"
-#~ "packet assembly info  2\n"
-
 #, fuzzy
 #~ msgid ""
 #~ "Allows B-frames to be used as references for predicting other frames. "
@@ -29739,15 +30719,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ " - hiç: Devre dışı\n"
 #~ " - sıkı: Sıkı hiyerarşik piramit\n"
 #~ " - normal: Sıkı olmayan (Blu-ray ile uyumsuz).\n"
-
-#~ msgid "Text is always opaque"
-#~ msgstr "Metin her zaman mat"
-
-#~ msgid "Subpage"
-#~ msgstr "Alt sayfa"
-
-#~ msgid "1.00x"
-#~ msgstr "1.00x"
 
 #, fuzzy
 #~ msgid "Host address"
@@ -29762,35 +30733,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ "Arayüzün dinleyeceği sunucu adresi. varsayılan olarak tüm ağ arayüzlerini "
 #~ "dinler (0.0.0.0). Bu arayüzün yalnızca yerel bilgisayarda kullanılmasını "
 #~ "istiyorsanız \"127.0.0.1\" yazın."
-
-#~ msgid "Handlers"
-#~ msgstr "İşleyiciler"
-
-#~ msgid ""
-#~ "List of handler extensions and executable paths (for instance: php=/usr/"
-#~ "bin/php,pl=/usr/bin/perl)."
-#~ msgstr ""
-#~ "İşleyici uzantılarının ve çalışan dosyaların yollarının listesi (örneğin: "
-#~ "php=/usr/bin/php,pl=/usr/bin/perl)."
-
-#~ msgid "Export album art as /art"
-#~ msgstr "Albüm kapağını /art olarak ver"
-
-#~ msgid ""
-#~ "Allow exporting album art for current playlist items at the /art and /art?"
-#~ "id=<id> URLs."
-#~ msgstr ""
-#~ "Geçerli oynatma listesi ögesinin albüm kapağının  /art ve /art?id=<id> "
-#~ "İnternet adresiyle verilmesini sağlar."
-
-#~ msgid "HTTP interface x509 PEM certificate file (enables SSL)."
-#~ msgstr "HTTP arayüzü x509 PEM sertifika dosyası (SSL'i etkinleştirir)."
-
-#~ msgid "HTTP interface x509 PEM private key file."
-#~ msgstr "HTTP arayüzü x509 PEM özel anahtar dosyası."
-
-#~ msgid "HTTP interface x509 PEM trusted root CA certificates file."
-#~ msgstr "HTTP arayüzü x509 PEM güvenilir kök CA sertifikaları dosyası."
 
 #, fuzzy
 #~ msgid "HTTP interace Certificates Revocation List file."
@@ -29807,9 +30749,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "HTTP SSL"
 #~ msgstr "HTTP(S)"
-
-#~ msgid "Signals"
-#~ msgstr "Sinyaller"
 
 #, fuzzy
 #~ msgid "POSIX signals handling interface"
@@ -29835,20 +30774,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "AVI Index"
 #~ msgstr "İndeks"
 
-#~ msgid ""
-#~ "This AVI file is broken. Seeking will not work correctly.\n"
-#~ "Do you want to try to fix it?\n"
-#~ "\n"
-#~ "This might take a long time."
-#~ msgstr ""
-#~ "AVI dosyası kırık. Arama doğru çalışmaz.\n"
-#~ "Düzeltmeyi denemek ister misiniz?\n"
-#~ "\n"
-#~ "Bu işlem oldukça uzun sürebilir."
-
-#~ msgid "Repair"
-#~ msgstr "Düzelt"
-
 #, fuzzy
 #~ msgid "Don't repair"
 #~ msgstr "Gönderme"
@@ -29867,13 +30792,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ "Saniyedeki kare hızının normal ayarları yerine geç. Bu ayar yalnızca "
 #~ "MicroDVD ve SubRIP (SRT) altyazılarında geçerlidir."
 
-#~ msgid ""
-#~ "Force the subtiles format. Use \"auto\", the set of supported values "
-#~ "varies."
-#~ msgstr ""
-#~ "Altyazıların biçimini belirler. Desteklenen değerlerin kendiliğinden "
-#~ "seçilmesi için \"auto\" kullanın."
-
 #, fuzzy
 #~ msgid "Subtitles (asa demuxer)"
 #~ msgstr "Altyazılar (gelişmiş)"
@@ -29882,34 +30800,13 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "CSA ck"
 #~ msgstr "CSA Anahtarı"
 
-#~ msgid "Control word for the CSA encryption algorithm"
-#~ msgstr "CSA şifreleme algoritması için denetim kelimesi."
-
-#~ msgid "VLC was brought to you by:"
-#~ msgstr "VLC'yi sizler için hazırlayan:"
-
-#~ msgid "Rewind"
-#~ msgstr "Başa Sar"
-
 #, fuzzy
 #~ msgid "Fast Forward"
 #~ msgstr "İleriye Sar"
 
-#~ msgid "Apply the equalizer filter twice. The effect will be sharper."
-#~ msgstr "Dengeleyici süzgeci iki kat uygulanır. Etki daha keskin olur."
-
-#~ msgid "Enable the equalizer. Bands can be set manually or using a preset."
-#~ msgstr ""
-#~ "Dengeleyiciyi etkinleştir. Bantlar elle ya da ön tanımlar kullanılarak "
-#~ "ayarlanabilir."
-
 #, fuzzy
 #~ msgid "Extended controls"
 #~ msgstr "Denetimleri sıfırla"
-
-#~ msgid "Shows more information about the available video filters."
-#~ msgstr ""
-#~ "Kullanılabilecek görüntü süzgeçleri ile ilgili ayrıntılı bilgi gösterir."
 
 #, fuzzy
 #~ msgid "General editing filters"
@@ -29918,15 +30815,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Distortion filters"
 #~ msgstr "Hedef dosya:"
-
-#~ msgid "Blur"
-#~ msgstr "Bulanık"
-
-#~ msgid "Adds motion blurring to the image"
-#~ msgstr "Resim üzerine hareket bulanıklığı ekler"
-
-#~ msgid "Creates several copies of the Video output window"
-#~ msgstr "Görüntü çıkış penceresinin bir kaç kopyasını oluşturur"
 
 #, fuzzy
 #~ msgid "Image cropping"
@@ -29944,19 +30832,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Rotates or flips the image"
 #~ msgstr "Görüntüyü döndürür ya da çevirir."
 
-#~ msgid "Enables an interactive Zoom feature"
-#~ msgstr "Etkileşimli yakınlaştırma özelliğini etkinleştirir"
-
-#~ msgid "Prevents the audio output from going over a predefined value."
-#~ msgstr ""
-#~ "Ses çıkışının önceden belirlenmiş bir değerin üzerine çıkmasını engeller."
-
-#~ msgid "Imitates the effect of surround sound when using headphones."
-#~ msgstr "Kulaklık kullanırken çevresel ses etkisini taklit eder."
-
-#~ msgid "Adjust Image"
-#~ msgstr "Resim Ayarlama"
-
 #, fuzzy
 #~ msgid "Audio Filter"
 #~ msgstr "Ses süzgeci"
@@ -29964,20 +30839,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "About the video filters"
 #~ msgstr "Görüntü Çevirme Süzgeci"
-
-#~ msgid ""
-#~ "This panel allows on-the-fly selection of various video effects.\n"
-#~ "These filters can be configured individually in the Preferences, in the "
-#~ "subsections of Video/Filters.\n"
-#~ "To choose the order in which the filter are applied, a filter option "
-#~ "string can be set in the Preferences, Video / Filters section."
-#~ msgstr ""
-#~ "Bu panel değişik görüntü etkilerini çalışma sırasında seçebilmenizi "
-#~ "sağlar.\n"
-#~ "Bu süzgeçler Görüntü/Süzgeçler bölümünde Ayarlar başlığından tek tek "
-#~ "yapılandırılabilir.\n"
-#~ "Süzgeçlerin hangi sırayla uygulanacağını seçmek için Görüntü/Süzgeçler "
-#~ "bölümünde Ayarlar başlığından bir süzgeç seçeneği dizgesi yazabilirsiniz."
 
 #, fuzzy
 #~ msgid "Controller..."
@@ -29995,23 +30856,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Volume: %d%%"
 #~ msgstr "Düzey: %d%%"
 
-#~ msgid ""
-#~ "Stretch the video to fill the entire window when resizing the video "
-#~ "instead of keeping the aspect ratio and displaying black borders."
-#~ msgstr ""
-#~ "Görüntüyü yeniden boyutlandırırken en boy oranını korumak ya da siyah "
-#~ "çerçeveleri göstermek yerine, tüm pencereyi dolduracak şekilde genişlet."
-
-#~ msgid "Use as Desktop Background"
-#~ msgstr "Masaüstü Arkaplanı yap"
-
-#~ msgid ""
-#~ "Use the video as the Desktop Background Desktop icons cannot be "
-#~ "interacted with in this mode."
-#~ msgstr ""
-#~ "Görüntü masaüstü art alanı olarak kullanılır. Masaüstündeki simgeler bu "
-#~ "kipte işlemez."
-
 #, fuzzy
 #~ msgid "Keep current Equalizer settings"
 #~ msgstr "Genel görüntü ayarları"
@@ -30027,17 +30871,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "No device connected"
 #~ msgstr "Hiç bir aygıt seçilmemiş"
-
-#~ msgid ""
-#~ "VLC could not detect any EyeTV compatible device.\n"
-#~ "\n"
-#~ "Check the device's connection, make sure that the latest EyeTV software "
-#~ "is installed and try again."
-#~ msgstr ""
-#~ "VLC EyeTV uyumlu bir aygıt algılayamadı.\n"
-#~ "\n"
-#~ "Aygıt bağlantısını denetleyin ve EyeTV yazılımının son sürümünün kurulu "
-#~ "olduğundan emin olup yeniden deneyin."
 
 #, fuzzy
 #~ msgid "Screen Capture Input"
@@ -30075,9 +30908,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Default Server Port"
 #~ msgstr "Varsayılan SWF Önerisi İnternet Adresi"
 
-#~ msgid "Add controls to the video window"
-#~ msgstr "Görüntü penceresine denetimleri ekle"
-
 #, fuzzy
 #~ msgid "Interface Settings not saved"
 #~ msgstr "Arayüz Ayarları"
@@ -30090,9 +30920,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Audio Settings not saved"
 #~ msgstr "Ses Ayarları"
 
-#~ msgid "Input Settings not saved"
-#~ msgstr "Giriş Ayarları kaydedilmedi"
-
 #, fuzzy
 #~ msgid "On Screen Display/Subtitle Settings not saved"
 #~ msgstr "Altyazı ve Ekran Üzerinde Gösterim Ayarları"
@@ -30101,12 +30928,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Hotkeys not saved"
 #~ msgstr "Şunun için kısayol tuşu"
 
-#~ msgid " State    : Playing %s"
-#~ msgstr " Durum    : %s oynatılıyor"
-
-#~ msgid " State    : Opening/Connecting %s"
-#~ msgstr " Durum    : Açılıyor/Bağlanıyor %s"
-
 #, fuzzy
 #~ msgid " State    : Paused %s"
 #~ msgstr "      %s: %s"
@@ -30114,9 +30935,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid " Help "
 #~ msgstr "Yardım"
-
-#~ msgid "     c           Switch color on/off"
-#~ msgstr "     c           Rengi Aç/Kapat"
 
 #, fuzzy
 #~ msgid "     <left>      Seek -1%%"
@@ -30130,9 +30948,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "     D, <del>    Delete an entry"
 #~ msgstr " D, <backspace>, <del>  Bir kayıdı sil"
 
-#~ msgid "[Boxes]"
-#~ msgstr "[Kutular]"
-
 #, fuzzy
 #~ msgid "[Miscellaneous]"
 #~ msgstr "Çeşitli"
@@ -30145,15 +30960,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "No item currently playing"
 #~ msgstr "Yeni giriş çalınıyor"
 
-#~ msgid " Logs "
-#~ msgstr "Log'lar "
-
 #, fuzzy
 #~ msgid " Browse "
 #~ msgstr "Gözat "
-
-#~ msgid " Objects "
-#~ msgstr " Nesneler "
 
 #, fuzzy
 #~ msgid " Stats "
@@ -30163,18 +30972,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "\\ sending bitrate  :   %6.0f kb/s"
 #~ msgstr "| gönderme bit hızı  :   %6.0f kb/s"
 
-#~ msgid " Playlist (All, one level) "
-#~ msgstr " Oynatma Listesi (Tümü, tek düzey) "
-
 #, fuzzy
 #~ msgid " Playlist (By category) "
 #~ msgstr "Podcast Altkategorisi"
-
-#~ msgid " Playlist (Manually added) "
-#~ msgstr "Oynatma Listesi (El ile eklenen) "
-
-#~ msgid "Find: %s"
-#~ msgstr "Bul: %s"
 
 #, fuzzy
 #~ msgid "Open: %s"
@@ -30187,22 +30987,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Privacy and Network Warning"
 #~ msgstr "Gizlilik / Ağ Etkileşimi"
-
-#~ msgid ""
-#~ "<p><i>VideoLAN</i> prefers when applications request authorization before "
-#~ "accessing Internet.</p>\n"
-#~ "<p><b>VLC media player</b> can get information from the Internet in order "
-#~ "to get <b>media informations</b> or to check for available <b>updates</b>."
-#~ "</p>\n"
-#~ "<p><i>VLC media player</i> <b>doesn't</b> send or collect any "
-#~ "information, even anonymously, about your usage.</p>\n"
-#~ msgstr ""
-#~ "<p><i>VideoLAN</i> uygulamalar İnternet'e erişmeden önce izninizi sormayı "
-#~ "yeğler.</p>\n"
-#~ "<p><b>VLC media player</b> İnternet üzerinden <b>medya bilgisi</b> ya da "
-#~ "<b>güncelleme denetimi</b> bilgilerini alabilir.</p>\n"
-#~ "<p><i>VLC media player</i> anonim dahi olsa kullanım şekliniz ile ilgili "
-#~ "<b>bilgi toplamaz ya da aktarmaz</b>.</p>\n"
 
 #, fuzzy
 #~ msgid "A new version of VLC("
@@ -30232,9 +31016,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Message filter"
 #~ msgstr "Sahne Süzgeci"
 
-#~ msgid "&Update"
-#~ msgstr "&Güncelle"
-
 #, fuzzy
 #~ msgid "XSPF playlist (*.xspf)"
 #~ msgstr "XSPF oynatma listesi dışa aktarımı"
@@ -30263,9 +31044,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Sna&pshot"
 #~ msgstr "Fotoğraf"
 
-#~ msgid "Sca&le"
-#~ msgstr "Ölçek&le"
-
 #, fuzzy
 #~ msgid "Manage &bookmarks"
 #~ msgstr "Yer İ&mleri"
@@ -30274,26 +31052,10 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Configure podcasts..."
 #~ msgstr "Kısayol Tuşlarının Yapılandırması"
 
-#~ msgid "Allow the volume to be set to 400%"
-#~ msgstr "Sesin %400 aralığında ayarlanmasına izin ver"
-
-#~ msgid ""
-#~ "Allow the volume to have range from 0% to 400%, instead of 0% to 200%. "
-#~ "This option can distort the audio, since it uses software amplification."
-#~ msgstr ""
-#~ "Sesin %0 - %200 aralığı yerine %0 - %400 aralığında ayarlanmasını sağlar. "
-#~ "Bu seçenek yazılımsal bir kuvvetlendirme yaptığından sesi bozabilir."
-
 #, fuzzy
 #~ msgctxt "Tooltip|Clear"
 #~ msgid "Clear"
 #~ msgstr "Tümünü Sil"
-
-#~ msgid "Skins loader demux"
-#~ msgstr "Tema yükleyici tekleyicisi"
-
-#~ msgid "ID3v1/2 and APEv1/2 tags parser"
-#~ msgstr "ID3v1/2 ve APEv1/2 etiketleme yorumcusu"
 
 #, fuzzy
 #~ msgid "Dummy interface function"
@@ -30331,38 +31093,13 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Font Effect"
 #~ msgstr "Ses Etkileri"
 
-#~ msgid ""
-#~ "It is possible to apply effects to the rendered text to improve its "
-#~ "readability."
-#~ msgstr ""
-#~ "Okunabilirliği artırmak için görüntülenecek yazıya çeşitli etkiler "
-#~ "uygulayabilirsiniz."
-
 #, fuzzy
 #~ msgid "Fat Outline"
 #~ msgstr "Taslak"
 
-#~ msgid "Expiration time for resumed TLS sessions"
-#~ msgstr "Sürdürülen TLS oturumları için geçerlilik süresi"
-
-#~ msgid ""
-#~ "It is possible to cache the resumed TLS sessions. This is the expiration "
-#~ "time of the sessions stored in this cache, in seconds."
-#~ msgstr ""
-#~ "Sürdürülen TLS oturumları önbelleklenebilir. Bu değer, saniye olarak, "
-#~ "önbellekte saklanacak oturumların geçerlilik süresidir."
-
 #, fuzzy
 #~ msgid "Number of resumed TLS sessions"
 #~ msgstr "DWT iterasyonlarının sayısı"
-
-#~ msgid ""
-#~ "This is the maximum number of resumed TLS sessions that the cache will "
-#~ "hold."
-#~ msgstr "Önbellekte saklanacak en çok TLS oturumunun sayısı."
-
-#~ msgid "OSSO"
-#~ msgstr "OSSO"
 
 #, fuzzy
 #~ msgid "Lua Interface Module"
@@ -30379,19 +31116,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Server"
 #~ msgstr "Hizmetler"
-
-#~ msgid ""
-#~ "This is the host to which Growl notifications will be sent. By default, "
-#~ "notifications are sent locally."
-#~ msgstr ""
-#~ "Bu seçenek Growl uyarılarının gönderileceği sunucuyu belirtir. Varsayılan "
-#~ "olarak uyarılar yerel olarak gönderilir."
-
-#~ msgid "Growl password on the Growl server."
-#~ msgstr "Growl sunucundaki Growl parolası."
-
-#~ msgid "Growl UDP port on the Growl server."
-#~ msgstr "Growl sunucundaki Growl UDP portu."
 
 #, fuzzy
 #~ msgid "Growl UDP Notification Plugin"
@@ -30417,41 +31141,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ "= konum (% olarak), $R = hız, $S = ses örnekleme hızı (kHz), $T = zaman, "
 #~ "$U = yayıncı, $V = ses, $_ = yeni satır) "
 
-#~ msgid "Simple XML Parser"
-#~ msgstr "Basit XML Yorumlayıcısı"
-
-#~ msgid "IPv4 SAP"
-#~ msgstr "IPv4 SAP"
-
-#~ msgid "Listen to IPv4 announcements on the standard addresses."
-#~ msgstr "IPv4 duyurularını standart adresler üzerinden dinler."
-
-#~ msgid "IPv6 SAP"
-#~ msgstr "IPv6 SAP"
-
-#~ msgid "Listen to IPv6 announcements on the standard addresses."
-#~ msgstr "IPv6 duyurularını standart adresler üzerinden dinler."
-
-#~ msgid "IPv6 SAP scope"
-#~ msgstr "IPv6 SAP kapsamı"
-
-#~ msgid "Scope for IPv6 announcements (default is 8)."
-#~ msgstr "IPv6 duyurularının kapsamı (varsayılan 8)."
-
 #, fuzzy
 #~ msgid "Use SAP cache"
 #~ msgstr "VLC hızını kullan"
-
-#~ msgid ""
-#~ "This enables a SAP caching mechanism. This will result in lower SAP "
-#~ "startup time, but you could end up with items corresponding to legacy "
-#~ "streams."
-#~ msgstr ""
-#~ "Bu ayar SAP önbellekleme mekanizmasını etkinleştirir. Böylece SAP daha "
-#~ "hızlı başlar ancak eski tip akışlardaki ögelerle ilgili sorun çıkabilir."
-
-#~ msgid "add grain to image"
-#~ msgstr "Görüntüye tanecikler ekler."
 
 #, fuzzy
 #~ msgid ""
@@ -30479,12 +31171,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ "N770/N8xx hardware)."
 #~ msgstr "Çıkış için özel bir renk doygunluğuna bağlı kalır. Varsayılan I420."
 
-#~ msgid "Embed the overlay"
-#~ msgstr "Bindirmeyi göm"
-
-#~ msgid "Embed the framebuffer overlay into a X11 window"
-#~ msgstr "Kare arabelleği bindirmesini X11 penceresine göm"
-
 #, fuzzy
 #~ msgid "OMAP framebuffer"
 #~ msgstr "Kare ara belleği girişi"
@@ -30496,9 +31182,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "OpenGL Provider"
 #~ msgstr "Klasör Aç"
-
-#~ msgid "Allows you to modify what OpenGL provider should be used"
-#~ msgstr "Hangi OpenGL sağlayıcının kullanılacağını belirler"
 
 #, fuzzy
 #~ msgid "Snapshot width"
@@ -30524,12 +31207,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ "Bellek görüntüsünün çıkış renk doygunluğu. 4 karakterli bir dizgedir. "
 #~ "Örneğin \"RV32\"."
 
-#~ msgid "Cache size (number of images)"
-#~ msgstr "Önbellek boyutu (resim sayısı)"
-
-#~ msgid "Snapshot cache size (number of images to keep)."
-#~ msgstr "Fotoğraf önbelleği boyutu (tutulacak resim sayısı)."
-
 #, fuzzy
 #~ msgid "Snapshot output"
 #~ msgstr "Fotoğraf"
@@ -30538,32 +31215,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "SVGAlib video output"
 #~ msgstr "YUV Görüntü Çıkışı"
 
-#~ msgid "ID of the video output X window"
-#~ msgstr "Görüntü çıkışı X penceresinin kimliği"
-
-#~ msgid ""
-#~ "VLC can embed its video output in an existing X11 window. This is the X "
-#~ "identifier of that window (0 means none)."
-#~ msgstr ""
-#~ "VLC görüntü çıkışını varolan bir X11 penceresine gömebilir. Bu değer bu "
-#~ "pencerenin X belirleyicisidir (0 hiç anlamına gelir)."
-
-#~ msgid "Use shared memory"
-#~ msgstr "Paylaşımlı bellek kullan"
-
-#~ msgid "Use shared memory to communicate between VLC and the X server."
-#~ msgstr ""
-#~ "VLC ile X sunucu arasında iletişim için paylaşılmış bellek kullanılır."
-
-#~ msgid "More bands : 80 / 20"
-#~ msgstr "Daha fazla bant: 80 / 20"
-
 #, fuzzy
 #~ msgid "More bands for the spectrum analyzer : 80 if enabled else 20."
 #~ msgstr "Spektrometre için daha fazla bant kullanır: etkinse 80 değilse 20."
-
-#~ msgid "Band separator"
-#~ msgstr "Bant ayırıcı"
 
 #, fuzzy
 #~ msgid "Enable peaks"
@@ -30589,9 +31243,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Enter the URL of the network stream here."
 #~ msgstr "Akışın yapılacağı bilgisayarın adresini yazın."
 
-#~ msgid "Use system codecs if available (better quality, but dangerous)"
-#~ msgstr "Varsa sistem kodeklerini kullan (daha iyi kalite, fakat riskli)"
-
 #, fuzzy
 #~ msgid "Default port (server mode)"
 #~ msgstr "İsteğe bağlı görüntü sunucu modülü"
@@ -30600,16 +31251,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Embed video in interface"
 #~ msgstr "Videoyu arayüzle tümleştir"
 
-#~ msgid "Minimal view mode (no toolbars)"
-#~ msgstr "Sade görünüm kipi (araç çubukları yok)"
-
 #, fuzzy
 #~ msgid "Refresh"
 #~ msgstr "Listeyi yenile"
-
-#~ msgid "No v4l2 instance found. Press the refresh button to try again."
-#~ msgstr ""
-#~ "Çalışan bir v4l2 bulunamadı. Yenile düğmesine tıklayıp yeniden deneyin."
 
 #, fuzzy
 #~ msgid "Color fun"
@@ -30638,22 +31282,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Automate picture coding mode"
 #~ msgstr "Resim kodlama kipi"
-
-#~ msgid "Use media key control when VLC is in background"
-#~ msgstr "VLC art alandayken medya tuşu denetimini kullan"
-
-#~ msgid ""
-#~ "By default, VLC will accept media key events also when being in "
-#~ "background."
-#~ msgstr ""
-#~ "VLC, varsayılan olarak art alanda çalışırken de medya tuşlarını kabul "
-#~ "eder."
-
-#~ msgid "...when VLC is in background"
-#~ msgstr "...VLC art alanda çalışırken"
-
-#~ msgid "GME demuxer (Game_Music_Emu)"
-#~ msgstr "GME tekleyici (Game_Music_Emu)"
 
 #, fuzzy
 #~ msgid ""
@@ -30714,36 +31342,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Add directory..."
 #~ msgstr "Klasör Ekle..."
 
-#~ msgid "%s: option `%s' is ambiguous\n"
-#~ msgstr "%s: `%s' seçeneği belirsiz\n"
-
-#~ msgid "%s: option `--%s' doesn't allow an argument\n"
-#~ msgstr "%s: `--%s' seçeneği bir argümana izin vermez\n"
-
-#~ msgid "%s: option `%c%s' doesn't allow an argument\n"
-#~ msgstr "%s: `%c%s' seçeneği bir argümana izin vermez\n"
-
-#~ msgid "%s: option `%s' requires an argument\n"
-#~ msgstr "%s: `%s' seçeneği bir argüman gerektirir\n"
-
-#~ msgid "%s: unrecognized option `%s%s'\n"
-#~ msgstr "%s: tanınmayan seçenek `%s%s'\n"
-
-#~ msgid "%s: illegal option -- %c\n"
-#~ msgstr "%s: illegal seçenek -- %c\n"
-
-#~ msgid "%s: invalid option -- %c\n"
-#~ msgstr "%s: geçersiz seçenek -- %c\n"
-
-#~ msgid "%s: option requires an argument -- %c\n"
-#~ msgstr "%s: seçenek bir argüman gerektiriyor -- %c\n"
-
-#~ msgid "%s: option `-W %s' is ambiguous\n"
-#~ msgstr "%s: `-W %s' seçeneği belirsiz\n"
-
-#~ msgid "%s: option `-W %s' doesn't allow an argument\n"
-#~ msgstr "%s: `-W %s' seçeneği bir argümana izin vermez\n"
-
 #, fuzzy
 #~ msgid "VLC could not open the packetizer module."
 #~ msgstr "VLC, kod çözücü modülünü açamadı."
@@ -30751,9 +31349,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Show interface with mouse"
 #~ msgstr "Arayüzü göster"
-
-#~ msgid "Full support"
-#~ msgstr "Tam destek"
 
 #, fuzzy
 #~ msgid "Fullscreen-only"
@@ -30775,50 +31370,25 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "cddax://[device-or-file][@[T]track]"
 #~ msgstr "[cdda:][aygıt][@[iz]]"
 
-#~ msgid "Compact Disc Digital Audio (CD-DA) input"
-#~ msgstr "Compact Disc Digital Audio (CD-DA) girdisi"
-
 #, fuzzy
 #~ msgid "Audio Compact Disc"
 #~ msgstr "Ses çıkış aygıtı"
-
-#~ msgid "Additional debug"
-#~ msgstr "Ek hata ayıklama"
 
 #, fuzzy
 #~ msgid "Use CD audio controls and output?"
 #~ msgstr "Ses akış çıkışını etkinleştir"
 
 #, fuzzy
-#~ msgid "Do CD-Text lookups?"
-#~ msgstr "CDDB araştır?"
-
-#, fuzzy
-#~ msgid "If set, get CD-Text information"
-#~ msgstr "Üst-veri"
-
-#, fuzzy
 #~ msgid "CDDB"
 #~ msgstr "CDDB kapısı"
-
-#, fuzzy
-#~ msgid "CDDB lookups"
-#~ msgstr "CDDB araştır?"
 
 #, fuzzy
 #~ msgid "CDDB server"
 #~ msgstr "CDDB Sunucusu"
 
 #, fuzzy
-#~ msgid "Cache CDDB lookups?"
-#~ msgstr "CDDB araştır?"
-
-#, fuzzy
 #~ msgid "CDDB server timeout"
 #~ msgstr "İsteğe bağlı görüntü sunucu modülü"
-
-#~ msgid "Media Catalog Number (MCN)"
-#~ msgstr "Medya Katalog Numarası (MCN)"
 
 #, fuzzy
 #~ msgid "Track %i"
@@ -30847,9 +31417,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Unknown command!"
 #~ msgstr "Bilinmeyen kategori"
-
-#~ msgid "Ask"
-#~ msgstr "Sor"
 
 #, fuzzy
 #~ msgid "MPEG-4 video demuxer"
@@ -30923,15 +31490,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Show Interface"
 #~ msgstr "Arayüzü göster"
 
-#~ msgid "50%"
-#~ msgstr "%50"
-
-#~ msgid "100%"
-#~ msgstr "%100"
-
-#~ msgid "200%"
-#~ msgstr "%200"
-
 #, fuzzy
 #~ msgid "Vertical Sync"
 #~ msgstr "Dikey"
@@ -30956,17 +31514,11 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Download now"
 #~ msgstr "İndirme Eklentisi"
 
-#~ msgid "Do you want VLC to check for updates automatically?"
-#~ msgstr "Güncellemeler VLC tarafından otomatik denetlesin ister misiniz?"
-
 #, fuzzy
 #~ msgid "This version of VLC is outdated."
 #~ msgstr ""
 #~ "VLC yazılımının bu sürümünü derleyen:\n"
 #~ " "
-
-#~ msgid "The current release is %d.%d.%d%c."
-#~ msgstr "Şuanki uyarlama: %d.%d.%d%c."
 
 #, fuzzy
 #~ msgid "Autoplay selected file"
@@ -30979,15 +31531,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Permissions"
 #~ msgstr "Oturum"
-
-#~ msgid "Owner"
-#~ msgstr "Sahibi"
-
-#~ msgid "00:00:00"
-#~ msgstr "00:00:00"
-
-#~ msgid "MRL:"
-#~ msgstr "MRL:"
 
 #, fuzzy
 #~ msgid "Port:"
@@ -31009,27 +31552,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Network: "
 #~ msgstr "Ağ"
 
-#~ msgid "udp"
-#~ msgstr "udp"
-
-#~ msgid "udp6"
-#~ msgstr "udp6"
-
-#~ msgid "rtp"
-#~ msgstr "rtp"
-
-#~ msgid "rtp4"
-#~ msgstr "rtp4"
-
 #, fuzzy
 #~ msgid "ftp"
 #~ msgstr "fps"
-
-#~ msgid "http"
-#~ msgstr "http"
-
-#~ msgid "sout"
-#~ msgstr "sout"
 
 #, fuzzy
 #~ msgid "mms"
@@ -31099,39 +31624,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "pal"
 #~ msgstr "tümü"
 
-#~ msgid "ntsc"
-#~ msgstr "ntsc"
-
-#~ msgid "secam"
-#~ msgstr "secam"
-
-#~ msgid "240x192"
-#~ msgstr "240x192"
-
-#~ msgid "320x240"
-#~ msgstr "320x240"
-
-#~ msgid "qsif"
-#~ msgstr "qsif"
-
-#~ msgid "qcif"
-#~ msgstr "qcif"
-
-#~ msgid "sif"
-#~ msgstr "sif"
-
-#~ msgid "cif"
-#~ msgstr "cif"
-
-#~ msgid "vga"
-#~ msgstr "vga"
-
-#~ msgid "kHz"
-#~ msgstr "kHz"
-
-#~ msgid "Hz/s"
-#~ msgstr "Hz/s"
-
 #, fuzzy
 #~ msgid "mono"
 #~ msgstr "İkili tek kanal"
@@ -31143,27 +31635,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Video Codec:"
 #~ msgstr "Video Kodlayıcı/Çözücü"
-
-#~ msgid "huffyuv"
-#~ msgstr "huffyuv"
-
-#~ msgid "mp1v"
-#~ msgstr "mp1v"
-
-#~ msgid "mp2v"
-#~ msgstr "mp2v"
-
-#~ msgid "mp4v"
-#~ msgstr "mp4v"
-
-#~ msgid "H263"
-#~ msgstr "H263"
-
-#~ msgid "WMV1"
-#~ msgstr "WMV1"
-
-#~ msgid "WMV2"
-#~ msgstr "WMV2"
 
 #, fuzzy
 #~ msgid "Bitrate Tolerance:"
@@ -31181,24 +31652,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Access:"
 #~ msgstr "Erişim Çıkışı"
 
-#~ msgid "URL:"
-#~ msgstr "URL:"
-
 #, fuzzy
 #~ msgid "Time To Live (TTL):"
 #~ msgstr "Canlı Kalma Süresi (TTL)"
-
-#~ msgid "127.0.0.1"
-#~ msgstr "127.0.0.1"
-
-#~ msgid "localhost"
-#~ msgstr "localhost"
-
-#~ msgid "localhost.localdomain"
-#~ msgstr "localhost.localdomain"
-
-#~ msgid "239.0.0.42"
-#~ msgstr "239.0.0.42"
 
 #, fuzzy
 #~ msgid "TS"
@@ -31207,9 +31663,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "MPEG1"
 #~ msgstr "MPEG 1"
-
-#~ msgid "OGG"
-#~ msgstr "OGG"
 
 #, fuzzy
 #~ msgid "MOV"
@@ -31222,24 +31675,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "kbits/s"
 #~ msgstr "bit"
-
-#~ msgid "alaw"
-#~ msgstr "alaw"
-
-#~ msgid "ulaw"
-#~ msgstr "ulaw"
-
-#~ msgid "mpga"
-#~ msgstr "mpga"
-
-#~ msgid "mp3"
-#~ msgstr "mp3"
-
-#~ msgid "a52"
-#~ msgstr "a52"
-
-#~ msgid "vorb"
-#~ msgstr "vorb"
 
 #, fuzzy
 #~ msgid "bits/s"
@@ -31277,18 +31712,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Preference"
 #~ msgstr "Seçenekler"
 
-#~ msgid "Authors: the VideoLAN Team, http://www.videolan.org/team/"
-#~ msgstr "Yazarlar: VideoLAN Ekibi, http://www.videolan.org/team/"
-
-#~ msgid "(c) 1996-2004 the the VideoLAN team team"
-#~ msgstr "(c) 1996-2004 VideoLAN ekibi"
-
 #, fuzzy
 #~ msgid "QNX RTOS video and audio output"
 #~ msgstr "Dosya Ses Çıkışı"
-
-#~ msgid "Statistics about the currently playing media or stream."
-#~ msgstr "Şuanki oynatılan medya veya akış hakkında istatistikler."
 
 #, fuzzy
 #~ msgid "Corrupted"
@@ -31310,9 +31736,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Classic look"
 #~ msgstr "Klasik rock"
 
-#~ msgid "Complete look with information area"
-#~ msgstr "Bilgi alanları ile birlikte tam görünüm"
-
 #, fuzzy
 #~ msgid "Select play mode"
 #~ msgstr "Yeniden oynatma kazanç kipini seçin."
@@ -31328,9 +31751,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Save volume on exit"
 #~ msgstr "Programdan çıkarken ses düzeyini kaydet ve başlangıçta hatırla"
-
-#~ msgid "last.fm"
-#~ msgstr "last.fm"
 
 #, fuzzy
 #~ msgid "Enable last.fm submission"
@@ -31369,23 +31789,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Compiled by "
 #~ msgstr "Derleyici: "
 
-#~ msgid ""
-#~ "The VideoLAN team <videolan@videolan.org>\n"
-#~ "http://www.videolan.org/"
-#~ msgstr ""
-#~ "VideoLAN Ekibi <videolan@videolan.org>\n"
-#~ "http://www.videolan.org/"
-
 #, fuzzy
 #~ msgid "Open:"
 #~ msgstr "Aç"
-
-#~ msgid ""
-#~ "Alternatively, you can build an MRL using one of the following predefined "
-#~ "targets:"
-#~ msgstr ""
-#~ "Alternatif olarak aşağıadki ön tanımlı hedefleri kullanarak bir MRL "
-#~ "oluşturabilirsiniz:"
 
 #, fuzzy
 #~ msgid "Choose directory"
@@ -31395,22 +31801,13 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "WinCE interface"
 #~ msgstr "Temel Arayüzler"
 
-#~ msgid "WinCE dialogs provider"
-#~ msgstr "WinCE iletişim sağlayıcı"
-
 #, fuzzy
 #~ msgid "Dummy access function"
 #~ msgstr "Getir işlevi"
 
-#~ msgid "Gtk+ GUI helper"
-#~ msgstr "Gtk+ GUI yardımcısı"
-
 #, fuzzy
 #~ msgid "Old playlist export"
 #~ msgstr "M3U oynatma listesi dışa aktarımı"
-
-#~ msgid "Qt Embedded GUI helper"
-#~ msgstr "Qt Gömülü GUI yardımcısı"
 
 #, fuzzy
 #~ msgid "Mac Text renderer"
@@ -31423,12 +31820,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "SAP Announcements"
 #~ msgstr "SAP Anonsu"
-
-#~ msgid "Les Guignols"
-#~ msgstr "Les Guignols"
-
-#~ msgid "Canal +"
-#~ msgstr "Canal +"
 
 #, fuzzy
 #~ msgid "Shoutcast Radio"
@@ -31445,9 +31836,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Shoutcast TV listings"
 #~ msgstr "Shoutcast"
-
-#~ msgid "Freebox TV listing (French ISP free.fr services)"
-#~ msgstr "Freebox TV listesi (French ISP free.fr servisleri)"
 
 #, fuzzy
 #~ msgid "summary"
@@ -31489,9 +31877,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Screen for fullscreen mode."
 #~ msgstr "Tam ekran kipinde siyah ekranlar"
 
-#~ msgid "OpenGL(GLX) provider"
-#~ msgstr "OpenGL(GLX) sağlayıcısı"
-
 #, fuzzy
 #~ msgid "XVimage chroma format"
 #~ msgstr "Hayali resim renk doygunluğu biçimi"
@@ -31509,10 +31894,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr "Taramasızlık kiplerini turla."
 
 #, fuzzy
-#~ msgid "You can choose the crop style to apply."
-#~ msgstr "WinCE arayüz modülü"
-
-#, fuzzy
 #~ msgid "XVMC extension video output"
 #~ msgstr "K Video hızlandırıcı görüntü çıkışı"
 
@@ -31521,15 +31902,8 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr "OpenGL görüntü çıkışı"
 
 #, fuzzy
-#~ msgid "(Experimental) XCB video window"
-#~ msgstr "DirectX video çıktısı"
-
-#, fuzzy
 #~ msgid "GaLaktos visualization"
 #~ msgstr "Ses görselleştiricileri"
-
-#~ msgid "Number of stars to draw with random effect."
-#~ msgstr "Rastgele efektinde çizdirilecek yıldızların sayısı."
 
 #, fuzzy
 #~ msgid "Spatialization"
@@ -31591,9 +31965,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "New Node"
 #~ msgstr "New Age"
 
-#~ msgid "UDP/RTP"
-#~ msgstr "UDP/RTP"
-
 #, fuzzy
 #~ msgid "UDP/RTP Multicast"
 #~ msgstr "UDP Multicast"
@@ -31609,13 +31980,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "General interface settings"
 #~ msgstr "Temel arayüz ayarları"
-
-#~ msgid ""
-#~ "These are the settings for the input, demultiplexing and decoding parts "
-#~ "of VLC. Encoder settings can also be found here."
-#~ msgstr ""
-#~ "Bunlar VLCnin girdi, ayrıştırma ve kod çözme kısımlarına ait ayarlardır. "
-#~ "Burada Kodlayıcı ayarları da bulunabilir."
 
 #, fuzzy
 #~ msgid "Other advanced settings"
@@ -31661,15 +32025,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "British English"
 #~ msgstr "English"
 
-#~ msgid "Chinese Traditional"
-#~ msgstr "Geleneksel Çince"
-
-#~ msgid "Galician"
-#~ msgstr "Galician"
-
-#~ msgid "Occitan"
-#~ msgstr "Occitan"
-
 #, fuzzy
 #~ msgid "Punjabi"
 #~ msgstr "Macedonian"
@@ -31690,18 +32045,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "16"
 #~ msgstr "1"
 
-#~ msgid "32"
-#~ msgstr "32"
-
-#~ msgid "64"
-#~ msgstr "64"
-
 #, fuzzy
 #~ msgid "Illegal Polarization"
 #~ msgstr "Düzey normalizasyonu"
-
-#~ msgid "dv"
-#~ msgstr "dv"
 
 #, fuzzy
 #~ msgid "EyeTV access module"
@@ -31718,9 +32064,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Force use of dump module"
 #~ msgstr "Erişim çıkış modülü"
-
-#~ msgid "Maximum size of temporary file (Mb)"
-#~ msgstr "Maksimum geçici dosya büyüklüğü (Mb)"
 
 #, fuzzy
 #~ msgid "Record directory"
@@ -31750,9 +32093,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "EsounD audio output"
 #~ msgstr "Hayali ses çıkışı"
 
-#~ msgid "Esound server"
-#~ msgstr "Esound sunucusu"
-
 #, fuzzy
 #~ msgid "Cinepak video decoder"
 #~ msgstr "CDG görüntü kod çözücüsü"
@@ -31760,9 +32100,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Dirac video encoder"
 #~ msgstr "Theora görüntü kodlayıcısı"
-
-#~ msgid "%d Hz"
-#~ msgstr "%d Hz"
 
 #, fuzzy
 #~ msgid "Kate text subtitles decoder"
@@ -31775,12 +32112,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Speex comment"
 #~ msgstr "Açıklama"
-
-#~ msgid "Theora comment"
-#~ msgstr "Theora açıklama"
-
-#~ msgid "Vorbis comment"
-#~ msgstr "Vorbis açıklama"
 
 #, fuzzy
 #~ msgid "Define playlist bookmarks."
@@ -31825,12 +32156,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Quick Open File..."
 #~ msgstr "Hızlı D&osya Aç..."
-
-#~ msgid "HTTP/FTP/MMS/RTSP"
-#~ msgstr "HTTP/FTP/MMS/RTSP"
-
-#~ msgid "Allow timeshifting"
-#~ msgstr "Zaman kaymasına izin ver"
 
 #, fuzzy
 #~ msgid "Access Filter"
@@ -31892,9 +32217,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Outputs"
 #~ msgstr "Çıkış"
 
-#~ msgid "Prefer UDP over RTP"
-#~ msgstr "RTP üzerinden UDP tercih et"
-
 #, fuzzy
 #~ msgid ""
 #~ "All playlists|*.pls;*.m3u;*.asx;*.b4s;*.xspf|M3U files|*.m3u|XSPF "
@@ -31921,47 +32243,13 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Image video output"
 #~ msgstr "Hayali görüntü çıkışı"
 
-#~ msgid "Cube"
-#~ msgstr "Küp"
-
 #, fuzzy
 #~ msgid "Transparent Cube"
 #~ msgstr "Saydam"
 
-#~ msgid "Cylinder"
-#~ msgstr "Silindir"
-
-#~ msgid "Torus"
-#~ msgstr "Halka"
-
-#~ msgid "Sphere"
-#~ msgstr "Küre"
-
-#~ msgid "SQUAREXY"
-#~ msgstr "SQUAREXY"
-
-#~ msgid "SQUARER"
-#~ msgstr "SQUARER"
-
-#~ msgid "ASINXY"
-#~ msgstr "ASINXY"
-
-#~ msgid "ASINR"
-#~ msgstr "ASINR"
-
-#~ msgid "SINEXY"
-#~ msgstr "SINEXY"
-
-#, fuzzy
-#~ msgid "SINER"
-#~ msgstr "SINEXY"
-
 #, fuzzy
 #~ msgid "OpenGL sampling accuracy "
 #~ msgstr "Yeniden örnekleme kalitesi"
-
-#~ msgid "OpenGL Cylinder radius"
-#~ msgstr "OpenGL Silindir yarıçapı"
 
 #, fuzzy
 #~ msgid "Point of view x-coordinate"
@@ -31974,9 +32262,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Point of view z-coordinate"
 #~ msgstr "Çözülen X koordinatı "
-
-#~ msgid "OpenGL cube rotation speed"
-#~ msgstr "OpenGL küp döndürme hızı"
 
 #, fuzzy
 #~ msgid "Number of bands"
@@ -32006,18 +32291,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Audio CD - Track "
 #~ msgstr "Ses CDsi - İz %02i"
 
-#~ msgid "Fetch the metadata from the Internet"
-#~ msgstr "Üstverileri Internetten toparla"
-
-#~ msgid "M3U file|*.m3u|XSPF playlist|*.xspf"
-#~ msgstr "M3U dosyası|*.m3u|XSPF listesi|*.xspf"
-
 #, fuzzy
 #~ msgid "VLC - Controller"
 #~ msgstr "Denetim"
-
-#~ msgid "A to B"
-#~ msgstr "A - B"
 
 #, fuzzy
 #~ msgid "Extended settings"
@@ -32027,15 +32303,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Open a device or a VIDEO_TS directory"
 #~ msgstr "Bir aygıtı ya da VIDEO_TS klasörünü seçin"
 
-#~ msgid "&Update List"
-#~ msgstr "&Güncelleme Listesi"
-
 #, fuzzy
 #~ msgid "Choose subtitles file"
 #~ msgstr "Şu altyazı dosyasını kullan"
-
-#~ msgid "Subtitles files (*.cdg *.idx *.srt *.sub *.utf);;All files (*)"
-#~ msgstr "Altyazı dosyaları (*.cdg *.idx *.srt *.sub *.utf);;Tüm dosyalar (*)"
 
 #, fuzzy
 #~ msgid "Undock from Interface"
@@ -32060,9 +32330,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Add node"
 #~ msgstr "Gürültü Ekle"
-
-#~ msgid "%s: unrecognized option `--%s'\n"
-#~ msgstr "%s: bilinmeyen seçenek `--%s'\n"
 
 #, fuzzy
 #~ msgid "Subscreen height."
@@ -32089,10 +32356,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "close"
 #~ msgstr "&Kapat"
-
-#, fuzzy
-#~ msgid "Choose a filename to save the logs under..."
-#~ msgstr "Listede %i öge"
 
 #, fuzzy
 #~ msgid "Choose a VLM configuration file to open..."
@@ -32199,16 +32462,8 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr "Giriş değişti"
 
 #, fuzzy
-#~ msgid "Stream and Media Info"
-#~ msgstr "Akış ve medya bilgisi"
-
-#, fuzzy
 #~ msgid "Advanced information"
 #~ msgstr "Gelişmiş Ayarlar"
-
-#, fuzzy
-#~ msgid "Don't show further errors"
-#~ msgstr "Fazla hataları bastır"
 
 #, fuzzy
 #~ msgid "Playlist item info"
@@ -32245,9 +32500,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Disc type"
 #~ msgstr "Aygıt tipi"
-
-#~ msgid "HTTP/HTTPS/FTP/MMS"
-#~ msgstr "HTTP/HTTPS/FTP/MMS"
 
 #, fuzzy
 #~ msgid "RTSP"
@@ -32286,15 +32538,8 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr "Sıralama"
 
 #, fuzzy
-#~ msgid "&Reverse Sort by Title"
-#~ msgstr "Başlığa göre &Sırala"
-
-#, fuzzy
 #~ msgid "D&elete"
 #~ msgstr "Sil"
-
-#~ msgid "S&ort"
-#~ msgstr "&Sırala"
 
 #, fuzzy
 #~ msgid "&Selection"
@@ -32316,15 +32561,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "%i items in playlist"
 #~ msgstr "Oynatma Listesi aç"
 
-#~ msgid "root"
-#~ msgstr "kök"
-
 #, fuzzy
 #~ msgid "Playlist is empty"
 #~ msgstr "PLS  oynatma listesini al"
-
-#~ msgid "Can't save"
-#~ msgstr "Kaydedilemedi"
 
 #, fuzzy
 #~ msgid "New node"
@@ -32345,9 +32584,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Target:"
 #~ msgstr "Büyük"
-
-#~ msgid "MMSH"
-#~ msgstr "MMSH"
 
 #, fuzzy
 #~ msgid "Channel name"
@@ -32394,15 +32630,8 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr "Renk etkisi"
 
 #, fuzzy
-#~ msgid "Gradient effects (cartoon) on the image"
-#~ msgstr "Resmi kırpar"
-
-#, fuzzy
 #~ msgid "Image inversion"
 #~ msgstr "Resim renklerini evirme"
-
-#~ msgid "Blurring"
-#~ msgstr "Bulanık"
 
 #, fuzzy
 #~ msgid "Adds water effect to the image"
@@ -32466,12 +32695,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Open C&apture Device...\tCtrl-A"
 #~ msgstr "Yakalama Aygıtı Aç..."
 
-#~ msgid "&Wizard...\tCtrl-W"
-#~ msgstr "&Sihirbaz...\tCtrl-W"
-
-#~ msgid "E&xit\tCtrl-X"
-#~ msgstr "Çı&kış\tCtrl-X"
-
 #, fuzzy
 #~ msgid "&Playlist...\tCtrl-P"
 #~ msgstr "Oynatma Listesi..."
@@ -32481,16 +32704,8 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr "İletiler..."
 
 #, fuzzy
-#~ msgid "Stream and Media &Info...\tCtrl-I"
-#~ msgstr "Akış ve Dosya &Bilgisi...\tCtrl-I"
-
-#, fuzzy
 #~ msgid "VideoLAN's Website"
 #~ msgstr "VideoLAN Web Sitesi..."
-
-#, fuzzy
-#~ msgid "Online Help"
-#~ msgstr "Çevrimiçi Dokümantasyon"
 
 #, fuzzy
 #~ msgid "Embedded playlist"
@@ -32520,15 +32735,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Preference&s...\tCtrl-S"
 #~ msgstr "Seçenekler..."
 
-#~ msgid ""
-#~ "The VideoLAN team <videolan@videolan.org>\n"
-#~ "http://www.videolan.org/\n"
-#~ "\n"
-#~ msgstr ""
-#~ "VideoLAN Ekibi <videolan@videolan.org>\n"
-#~ "http://www.videolan.org/\n"
-#~ "\n"
-
 #, fuzzy
 #~ msgid "About %s"
 #~ msgstr "Hakkında"
@@ -32554,24 +32760,12 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr "Yer imi %i"
 
 #, fuzzy
-#~ msgid "Show bookmarks dialog at startup"
-#~ msgstr "Yer imi %i"
-
-#, fuzzy
 #~ msgid "Extended GUI"
 #~ msgstr "Genişletilmiş M3U"
 
 #, fuzzy
-#~ msgid "Taskbar"
-#~ msgstr "Tatar"
-
-#, fuzzy
 #~ msgid "Size to video"
 #~ msgstr "Ayna Görünümü"
-
-#, fuzzy
-#~ msgid "Both"
-#~ msgstr "Alt"
 
 #, fuzzy
 #~ msgid "Distortion"
@@ -32600,14 +32794,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Allow"
 #~ msgstr "Sarı"
-
-#, fuzzy
-#~ msgid "Prompt"
-#~ msgstr "Pop"
-
-#, fuzzy
-#~ msgid "Authorise meta information fetching"
-#~ msgstr "Üst-veri"
 
 #, fuzzy
 #~ msgid "Never"
@@ -32658,14 +32844,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr "Güncellemeleri &Denetle..."
 
 #, fuzzy
-#~ msgid "Distribution License"
-#~ msgstr "Bozulma"
-
-#, fuzzy
-#~ msgid "Always show video area"
-#~ msgstr "Videodan enstantane çek"
-
-#, fuzzy
 #~ msgid "Visualisation"
 #~ msgstr "Görselleştirme"
 
@@ -32678,24 +32856,12 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr "Altyazı dili"
 
 #, fuzzy
-#~ msgid "DCCP transport"
-#~ msgstr "UDP port"
-
-#, fuzzy
 #~ msgid "Codec Description"
 #~ msgstr "Açıklama"
 
 #, fuzzy
 #~ msgid "print help for the advanced options"
 #~ msgstr "Gelişmiş ayarları göster"
-
-#, fuzzy
-#~ msgid "Charset"
-#~ msgstr "Kabare"
-
-#, fuzzy
-#~ msgid "Remember wizard options"
-#~ msgstr "Kaynak en-boy oranı"
 
 #, fuzzy
 #~ msgid "Video Device Name "
@@ -32716,9 +32882,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Replay Gain type"
 #~ msgstr "Yeniden oynatma kazancı kipi"
-
-#~ msgid "Report a Bug"
-#~ msgstr "Hata Raporla"
 
 #, fuzzy
 #~ msgid "Track number/Position"
@@ -32769,10 +32932,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr "Komut UDP kapısı"
 
 #, fuzzy
-#~ msgid "Listen to IPv4 announcements on the standard address."
-#~ msgstr "SAP anons aralığı"
-
-#, fuzzy
 #~ msgid "Halve sample rate"
 #~ msgstr "Örnekleme oranı"
 
@@ -32808,9 +32967,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "CDDB Artist"
 #~ msgstr "Sanatçı"
 
-#~ msgid "CDDB Disc ID"
-#~ msgstr "CDDB Disc ID"
-
 #, fuzzy
 #~ msgid "CDDB Extended Data"
 #~ msgstr "Genişletilmiş denetimler"
@@ -32831,9 +32987,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "CD-Text Arranger"
 #~ msgstr "Metin Gösterici"
 
-#~ msgid "CD-Text Disc ID"
-#~ msgstr "CD-Metin Disc ID"
-
 #, fuzzy
 #~ msgid "CD-Text Genre"
 #~ msgstr "Metin Gösterici"
@@ -32841,9 +32994,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "CD-Text Message"
 #~ msgstr "İletiler"
-
-#~ msgid "CD-Text Songwriter"
-#~ msgstr "CD-Metin Sözyazarı"
 
 #, fuzzy
 #~ msgid "CD-Text Title"
@@ -32861,15 +33011,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "ISO-9660 Publisher"
 #~ msgstr "Yayıncı"
 
-#~ msgid "ISO-9660 Volume"
-#~ msgstr "ISO-9660 Birim"
-
 #, fuzzy
 #~ msgid "ISO-9660 Volume Set"
 #~ msgstr "Ses Ayarı"
-
-#~ msgid "All items, unsorted"
-#~ msgstr "Tüm ögeler, sırasız"
 
 #, fuzzy
 #~ msgid ""
@@ -32882,12 +33026,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Mime type"
 #~ msgstr "Aygıt tipi"
-
-#~ msgid "Open Messages Window"
-#~ msgstr "Mesaj Penceresini Aç"
-
-#~ msgid "Dismiss"
-#~ msgstr "Reddet"
 
 #, fuzzy
 #~ msgid "Do not display further errors"
@@ -32904,14 +33042,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Sorted by Artist"
 #~ msgstr "Düğümü Sanatçıya Göre Sırala"
-
-#, fuzzy
-#~ msgid "Growl"
-#~ msgstr "Grubu"
-
-#, fuzzy
-#~ msgid "MSN"
-#~ msgstr "MMS"
 
 #, fuzzy
 #~ msgid "Vertical border width"
@@ -32953,9 +33083,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Right-Bottom"
 #~ msgstr "Alt"
 
-#~ msgid "Creates a motion blurring on the image"
-#~ msgstr "Resmin üzerinde bir hareket bulanıklığı yaratır"
-
 #, fuzzy
 #~ msgid "Inverts the image colors"
 #~ msgstr "Renkleri ters çevir"
@@ -32963,14 +33090,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Control interface settings"
 #~ msgstr "Denetim Arayüzleri"
-
-#~ msgid ""
-#~ "Use the settings of the \"freetype\" module to choose the font you  want "
-#~ "VLC to use for text rendering (to display subtitles for example)."
-#~ msgstr ""
-#~ "VLC'nin metin gösteriminde (örn, altyazıların ekranda gösterilmesi) "
-#~ "kullanmasını isteğiniz yazıtipini seçmek için \"freetype\" modülünün "
-#~ "ayarlarını kullanın"
 
 #, fuzzy
 #~ msgid "Program to select"
@@ -33000,9 +33119,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Default to 4212"
 #~ msgstr "Varsayılan"
 
-#~ msgid "Telnet Interface password"
-#~ msgstr "Telnet Arayüzü parolası"
-
 #, fuzzy
 #~ msgid "Size offset"
 #~ msgstr "X kayıklığı"
@@ -33015,9 +33131,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Output Options"
 #~ msgstr "Düzenleme Seçenekleri"
 
-#~ msgid "Last skin used"
-#~ msgstr "Son kullanılan dış görünüm"
-
 #, fuzzy
 #~ msgid "&Shuffle Playlist"
 #~ msgstr "Oynatma Listesini Kaydet"
@@ -33029,9 +33142,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "Small playlist"
 #~ msgstr "Oynatma Listesini kaydet"
-
-#~ msgid "M3U file|*.m3u"
-#~ msgstr "M3U dosyası|*.m3u"
 
 #, fuzzy
 #~ msgid "Mega bass cut off (10-100Hz)"
@@ -33053,12 +33163,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Analyse mode"
 #~ msgstr "AM alıcı kipi"
 
-#~ msgid "B pyramid"
-#~ msgstr "B piramidi"
-
-#~ msgid "Sub-pixel refinement quality."
-#~ msgstr "Alt-piksel iyileştirme kalitesi"
-
 #, fuzzy
 #~ msgid "Properties"
 #~ msgstr "Yazı Tipi Özellikleri"
@@ -33076,10 +33180,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr "tür"
 
 #, fuzzy
-#~ msgid "URL : "
-#~ msgstr "URL:"
-
-#, fuzzy
 #~ msgid "file size : "
 #~ msgstr "Görüntü boyutu"
 
@@ -33090,9 +33190,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "SLP announce"
 #~ msgstr "SAP anonsu"
-
-#~ msgid "&Undock Ext. GUI"
-#~ msgstr "Geniş GUI &Parket"
 
 #, fuzzy
 #~ msgid "Jump 3 seconds backwards"
@@ -33126,9 +33223,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Jump 5 minutes forward"
 #~ msgstr "İleri Atla"
 
-#~ msgid "HTTP/HTTPS"
-#~ msgstr "HTTP/HTTPS"
-
 #, fuzzy
 #~ msgid "Segment "
 #~ msgstr "Parça"
@@ -33141,13 +33235,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Windows GDI"
 #~ msgstr "Pencere"
 
-#~ msgid "Settings related to the various access filter used by VLC.\n"
-#~ msgstr ""
-#~ "VLC tarafından kullanılan çeşitli erişim süzgeçlerine ilişkin ayarlar.\n"
-
-#~ msgid "Choose program (SID)"
-#~ msgstr "Program seçin (SID)"
-
 #, fuzzy
 #~ msgid "Choose programs"
 #~ msgstr "Programlar"
@@ -33156,16 +33243,9 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Choose subtitles track"
 #~ msgstr "Altyazı izini turla"
 
-#~ msgid "[0=stereo, 1=dual-mono, 2=joint-stereo]"
-#~ msgstr "[0=stereo, 1=çift-mono, 2=bitişik-stereo]"
-
 #, fuzzy
 #~ msgid "Current version"
 #~ msgstr "Geçerli görselleştirme"
-
-#, fuzzy
-#~ msgid "Wizard..."
-#~ msgstr "&Sihirbaz...\tCtrl-W"
 
 #, fuzzy
 #~ msgid "SLP input"
@@ -33239,9 +33319,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Select previous chapter"
 #~ msgstr "Önceki DVD bölümünü seç"
 
-#~ msgid "_Jump..."
-#~ msgstr "_Git..."
-
 #, fuzzy
 #~ msgid "_Navigation"
 #~ msgstr "Gezinti"
@@ -33249,9 +33326,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "(c) 1996-2004 the VideoLAN team"
 #~ msgstr " VideoLAN takımı tarafından.\n"
-
-#~ msgid "FEC"
-#~ msgstr "FEC"
 
 #, fuzzy
 #~ msgid "Path:"
@@ -33289,9 +33363,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "About this application"
 #~ msgstr "Uygulama"
 
-#~ msgid "Open a Satellite Card"
-#~ msgstr "Bir Uydu Kartı Aç"
-
 #, fuzzy
 #~ msgid "Play Faster"
 #~ msgstr "Daha Hızlı"
@@ -33308,28 +33379,13 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "_Play"
 #~ msgstr "Oynat"
 
-#~ msgid "the VideoLAN team <videolan@videolan.org>"
-#~ msgstr "VideoLAN Ekibi <videolan@videolan.org>"
-
 #, fuzzy
 #~ msgid "Open Target"
 #~ msgstr "Klasör Aç"
 
-#~ msgid "HTTP/FTP/MMS"
-#~ msgstr "HTTP/FTP/MMS"
-
-#~ msgid "Go To:"
-#~ msgstr "Git:"
-
 #, fuzzy
 #~ msgid "s."
 #~ msgstr "s "
-
-#~ msgid "m:"
-#~ msgstr "m:"
-
-#~ msgid "h:"
-#~ msgstr "h:"
 
 #, fuzzy
 #~ msgid "_Crop"
@@ -33371,15 +33427,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "&Slow"
 #~ msgstr "Daha Yavaş"
 
-#~ msgid "Fas&t"
-#~ msgstr "Hı&zlı"
-
-#~ msgid "Ready."
-#~ msgstr "Hazır."
-
-#~ msgid "Toggle the status bar..."
-#~ msgstr "Durum çubuğunu aç/kapat..."
-
 #, fuzzy
 #~ msgid "KDE interface"
 #~ msgstr "XEÜG arayüzü"
@@ -33415,15 +33462,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "MPEG-4 Video codec"
 #~ msgstr "Görüntü kodlayıcı/çözücü"
-
-#~ msgid "WMV (Windows Media Video) 1"
-#~ msgstr "WMV (Windows Media Video) 1"
-
-#~ msgid "WMV (Windows Media Video) 2"
-#~ msgstr "WMV (Windows Media Video) 2"
-
-#~ msgid "I263"
-#~ msgstr "I263"
 
 #, fuzzy
 #~ msgid "Stop Stream"
@@ -33462,14 +33500,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr "Köprü"
 
 #, fuzzy
-#~ msgid "margin"
-#~ msgstr "Amharic"
-
-#, fuzzy
-#~ msgid "spacing"
-#~ msgstr "Arabellek"
-
-#, fuzzy
 #~ msgid "QPushButton"
 #~ msgstr "Pushto"
 
@@ -33484,14 +33514,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #, fuzzy
 #~ msgid "enabled"
 #~ msgstr "Etkin"
-
-#, fuzzy
-#~ msgid "checkable"
-#~ msgstr "etkin"
-
-#, fuzzy
-#~ msgid "Disk"
-#~ msgstr "Disc"
 
 #, fuzzy
 #~ msgid "Audioscrobbler username"
@@ -33513,9 +33535,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgid "Telnet Interface host"
 #~ msgstr "Arayüz stili"
 
-#~ msgid "Jump"
-#~ msgstr "Atla"
-
 #, fuzzy
 #~ msgid ""
 #~ "Address of the locking callback function. This function must fill in "
@@ -33523,27 +33542,6 @@ msgstr "Ortam Yöneticisi Listesi"
 #~ msgstr ""
 #~ "Görüntü art oluşturucu geri çağırma işlevinin adresi. Bu işlev, oluşturma "
 #~ "ara bellekteyken çağrılacak."
-
-#~ msgid "filename of config file in share/dvb/dvb-s"
-#~ msgstr "share/dvb/dvb-s içindeki yapılandırma dosyasının adı"
-
-#~ msgid "Side speakers"
-#~ msgstr "Yan hoparlörler"
-
-#~ msgid "Center and subwoofer"
-#~ msgstr "Orta ve bas hoparlörler "
-
-#~ msgid "S/PDIF"
-#~ msgstr "S/PDIF"
-
-#~ msgid "Hide / Show Library"
-#~ msgstr "Kütphaneyi Göster / Gizle"
-
-#~ msgid "Hide / Show Viewer"
-#~ msgstr "Görüntüleyiciyi Göster / Gizle"
-
-#~ msgid "Okay"
-#~ msgstr "Tamam"
 
 #, fuzzy
 #~ msgid "stereo"
