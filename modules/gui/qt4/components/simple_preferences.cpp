@@ -1062,10 +1062,10 @@ void addAsso( QVLCRegistry *qvReg, const char *psz_ext )
 
 void delAsso( QVLCRegistry *qvReg, const char *psz_ext )
 {
-    char psz_VLC[] = "VLC";
+    QString s_path( "VLC"); s_path += psz_ext;
     char *psz_value = qvReg->ReadRegistryString( psz_ext, "", "" );
 
-    if( psz_value && !strcmp( strcat( psz_VLC, psz_ext ), psz_value ) )
+    if( psz_value && !strcmp( qtu(s_path), psz_value ) )
     {
         free( psz_value );
         psz_value = qvReg->ReadRegistryString( psz_ext, "VLC.backup", "" );
@@ -1076,6 +1076,7 @@ void delAsso( QVLCRegistry *qvReg, const char *psz_ext )
     }
     free( psz_value );
 }
+
 void SPrefsPanel::saveAsso()
 {
     QVLCRegistry * qvReg = NULL;
