@@ -1,26 +1,26 @@
-# Translation to traditional Chinese.
-# Copyright (C) 2005-2012 the VideoLAN team
+# Traditional Chinese translation
+# Copyright (C) 2012 VideoLAN
 # This file is distributed under the same license as the VLC package.
-# $Id$
 #
-# Thanks to Frank Chao <frank0624@gmail.com>
+# Translators:
 # Thanks to Hsi-Ching Chao
-# Thanks to Ruei-Yuan Lu <RueiYuan.Lu@gmail.com>
-#
+# Frank Chao <frank0624@gmail.com>, 2012.
+# Ruei-Yuan Lu <RueiYuan.Lu@gmail.com>, 2012.
 #: modules/gui/macosx/prefs.m:483 modules/gui/macosx/simple_prefs.m:451
 msgid ""
 msgstr ""
-"Project-Id-Version: VLC-2.0.0\n"
+"Project-Id-Version: VLC - Trans\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-07-18 21:49+0200\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Ruei-Yuan Lu <RueiYuan.Lu@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2012-09-15 05:28+0000\n"
+"Last-Translator: frank0624 <frank0624@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/vlc-"
+"trans/language/zh_TW/)\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: include/vlc_common.h:1024
 msgid ""
@@ -573,7 +573,7 @@ msgstr "隨機"
 
 #: include/vlc_intf_strings.h:85 modules/gui/macosx/CoreInteraction.m:403
 msgid "Random Off"
-msgstr ""
+msgstr "關閉隨機"
 
 #: include/vlc_intf_strings.h:87
 msgid "Add to Playlist"
@@ -888,6 +888,38 @@ msgid ""
 "  vlc://quit                     Special item to quit VLC\n"
 "\n"
 msgstr ""
+"Usage: %s [options] [stream] ...\n"
+"You can specify multiple streams on the commandline.\n"
+"They will be enqueued in the playlist.\n"
+"The first item specified will be played first.\n"
+"\n"
+"Options-styles:\n"
+"  --option  A global option that is set for the duration of the program.\n"
+"   -option  A single letter version of a global --option.\n"
+"   :option  An option that only applies to the stream directly before it\n"
+"            and that overrides previous settings.\n"
+"\n"
+"Stream MRL syntax:\n"
+"  [[access][/demux]://]URL[#[title][:chapter][-[title][:chapter]]]\n"
+"  [:option=value ...]\n"
+"\n"
+"  Many of the global --options can also be used as MRL specific :options.\n"
+"  Multiple :option=value pairs can be specified.\n"
+"\n"
+"URL syntax:\n"
+"  file:///path/file              Plain media file\n"
+"  http://host[:port]/file        HTTP URL\n"
+"  ftp://host[:port]/file         FTP URL\n"
+"  mms://host[:port]/file         MMS URL\n"
+"  screen://                      Screen capture\n"
+"  dvd://[device]                 DVD device\n"
+"  vcd://[device]                 VCD device\n"
+"  cdda://[device]                Audio CD device\n"
+"  udp://[[<source address>]@[<bind address>][:<bind port>]]\n"
+"                                 UDP stream sent by a streaming server\n"
+"  vlc://pause:<seconds>          Pause the playlist for a certain time\n"
+"  vlc://quit                     Special item to quit VLC\n"
+"\n"
 
 #: src/config/help.c:513
 msgid " (default enabled)"
@@ -900,7 +932,7 @@ msgstr " (預設停用)"
 #: src/config/help.c:679 src/config/help.c:682 src/config/help.c:690
 #: src/config/help.c:695
 msgid "Note:"
-msgstr ""
+msgstr "註記:"
 
 #: src/config/help.c:680 src/config/help.c:683
 msgid "add --advanced to your command line to see advanced options."
@@ -2431,8 +2463,8 @@ msgstr "偏好的視訊解析度"
 msgid ""
 "When several video formats are available, select one whose resolution is "
 "closest to (but not higher than) this setting, in number of lines. Use this "
-"option if you don't have enough CPU power or network bandwidth to play higher "
-"resolutions."
+"option if you don't have enough CPU power or network bandwidth to play "
+"higher resolutions."
 msgstr ""
 
 #: src/libvlc-module.c:768
@@ -3527,7 +3559,7 @@ msgstr "加快"
 
 #: src/libvlc-module.c:1363 src/libvlc-module.c:1369
 msgid "Select the hotkey to use for fast forward playback."
-msgstr ""
+msgstr "選擇快速前進熱鍵"
 
 #: src/libvlc-module.c:1364 modules/gui/macosx/MainMenu.m:272
 #: modules/gui/qt4/components/controller.hpp:115
@@ -3537,7 +3569,7 @@ msgstr "放慢"
 
 #: src/libvlc-module.c:1365 src/libvlc-module.c:1371
 msgid "Select the hotkey to use for slow motion playback."
-msgstr ""
+msgstr "選擇慢速播放熱鍵"
 
 #: src/libvlc-module.c:1366
 msgid "Normal rate"
@@ -4448,7 +4480,7 @@ msgstr ""
 
 #: src/misc/update.c:635
 msgid "File could not be verified"
-msgstr ""
+msgstr "檔案無法驗證"
 
 #: src/misc/update.c:636
 #, c-format
@@ -4515,447 +4547,447 @@ msgstr "未定義"
 
 #: src/text/iso-639_def.h:40
 msgid "Afar"
-msgstr ""
+msgstr "Afar"
 
 #: src/text/iso-639_def.h:41
 msgid "Abkhazian"
-msgstr ""
+msgstr "Abkhazian"
 
 #: src/text/iso-639_def.h:42
 msgid "Afrikaans"
-msgstr ""
+msgstr "Afrikaans"
 
 #: src/text/iso-639_def.h:43
 msgid "Albanian"
-msgstr ""
+msgstr "Albanian"
 
 #: src/text/iso-639_def.h:44
 msgid "Amharic"
-msgstr ""
+msgstr "Amharic"
 
 #: src/text/iso-639_def.h:45
 msgid "Arabic"
-msgstr ""
+msgstr "Arabic"
 
 #: src/text/iso-639_def.h:46
 msgid "Armenian"
-msgstr ""
+msgstr "Armenian"
 
 #: src/text/iso-639_def.h:47
 msgid "Assamese"
-msgstr ""
+msgstr "Assamese"
 
 #: src/text/iso-639_def.h:48
 msgid "Avestan"
-msgstr ""
+msgstr "Avestan"
 
 #: src/text/iso-639_def.h:49
 msgid "Aymara"
-msgstr ""
+msgstr "Aymara"
 
 #: src/text/iso-639_def.h:50
 msgid "Azerbaijani"
-msgstr ""
+msgstr "Azerbaijani"
 
 #: src/text/iso-639_def.h:51
 msgid "Bashkir"
-msgstr ""
+msgstr "Bashkir"
 
 #: src/text/iso-639_def.h:52
 msgid "Basque"
-msgstr ""
+msgstr "Basque"
 
 #: src/text/iso-639_def.h:53
 msgid "Belarusian"
-msgstr ""
+msgstr "Belarusian"
 
 #: src/text/iso-639_def.h:54
 msgid "Bengali"
-msgstr ""
+msgstr "Bengali"
 
 #: src/text/iso-639_def.h:55
 msgid "Bihari"
-msgstr ""
+msgstr "Bihari"
 
 #: src/text/iso-639_def.h:56
 msgid "Bislama"
-msgstr ""
+msgstr "Bislama"
 
 #: src/text/iso-639_def.h:57
 msgid "Bosnian"
-msgstr ""
+msgstr "Bosnian"
 
 #: src/text/iso-639_def.h:58
 msgid "Breton"
-msgstr ""
+msgstr "Breton"
 
 #: src/text/iso-639_def.h:59
 msgid "Bulgarian"
-msgstr ""
+msgstr "Bulgarian"
 
 #: src/text/iso-639_def.h:60
 msgid "Burmese"
-msgstr ""
+msgstr "Burmese"
 
 #: src/text/iso-639_def.h:61
 msgid "Catalan"
-msgstr ""
+msgstr "Catalan"
 
 #: src/text/iso-639_def.h:62
 msgid "Chamorro"
-msgstr ""
+msgstr "Chamorro"
 
 #: src/text/iso-639_def.h:63
 msgid "Chechen"
-msgstr ""
+msgstr "Chechen"
 
 #: src/text/iso-639_def.h:64
 msgid "Chinese"
-msgstr ""
+msgstr "中文"
 
 #: src/text/iso-639_def.h:65
 msgid "Church Slavic"
-msgstr ""
+msgstr "Church Slavic"
 
 #: src/text/iso-639_def.h:66
 msgid "Chuvash"
-msgstr ""
+msgstr "Chuvash"
 
 #: src/text/iso-639_def.h:67
 msgid "Cornish"
-msgstr ""
+msgstr "Cornish"
 
 #: src/text/iso-639_def.h:68
 msgid "Corsican"
-msgstr ""
+msgstr "Corsican"
 
 #: src/text/iso-639_def.h:69
 msgid "Czech"
-msgstr ""
+msgstr "Czech"
 
 #: src/text/iso-639_def.h:70
 msgid "Danish"
-msgstr ""
+msgstr "Danish"
 
 #: src/text/iso-639_def.h:71
 msgid "Dutch"
-msgstr ""
+msgstr "Dutch"
 
 #: src/text/iso-639_def.h:72
 msgid "Dzongkha"
-msgstr ""
+msgstr "Dzongkha"
 
 #: src/text/iso-639_def.h:73
 msgid "English"
-msgstr ""
+msgstr "English"
 
 #: src/text/iso-639_def.h:74
 msgid "Esperanto"
-msgstr ""
+msgstr "Esperanto"
 
 #: src/text/iso-639_def.h:75
 msgid "Estonian"
-msgstr ""
+msgstr "Estonian"
 
 #: src/text/iso-639_def.h:76
 msgid "Faroese"
-msgstr ""
+msgstr "Faroese"
 
 #: src/text/iso-639_def.h:77
 msgid "Fijian"
-msgstr ""
+msgstr "Fijian"
 
 #: src/text/iso-639_def.h:78
 msgid "Finnish"
-msgstr ""
+msgstr "Finnish"
 
 #: src/text/iso-639_def.h:79
 msgid "French"
-msgstr ""
+msgstr "French"
 
 #: src/text/iso-639_def.h:80
 msgid "Frisian"
-msgstr ""
+msgstr "Frisian"
 
 #: src/text/iso-639_def.h:81
 msgid "Georgian"
-msgstr ""
+msgstr "Georgian"
 
 #: src/text/iso-639_def.h:82
 msgid "German"
-msgstr ""
+msgstr "German"
 
 #: src/text/iso-639_def.h:83
 msgid "Gaelic (Scots)"
-msgstr ""
+msgstr "Gaelic (Scots)"
 
 #: src/text/iso-639_def.h:84
 msgid "Irish"
-msgstr ""
+msgstr "Irish"
 
 #: src/text/iso-639_def.h:85
 msgid "Gallegan"
-msgstr ""
+msgstr "Gallegan"
 
 #: src/text/iso-639_def.h:86
 msgid "Manx"
-msgstr ""
+msgstr "Manx"
 
 #: src/text/iso-639_def.h:87
 msgid "Greek, Modern ()"
-msgstr ""
+msgstr "Greek, Modern ()"
 
 #: src/text/iso-639_def.h:88
 msgid "Guarani"
-msgstr ""
+msgstr "Guarani"
 
 #: src/text/iso-639_def.h:89
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarati"
 
 #: src/text/iso-639_def.h:90
 msgid "Hebrew"
-msgstr ""
+msgstr "Hebrew"
 
 #: src/text/iso-639_def.h:91
 msgid "Herero"
-msgstr ""
+msgstr "Herero"
 
 #: src/text/iso-639_def.h:92
 msgid "Hindi"
-msgstr ""
+msgstr "Hindi"
 
 #: src/text/iso-639_def.h:93
 msgid "Hiri Motu"
-msgstr ""
+msgstr "Hiri Motu"
 
 #: src/text/iso-639_def.h:94
 msgid "Hungarian"
-msgstr ""
+msgstr "Hungarian"
 
 #: src/text/iso-639_def.h:95
 msgid "Icelandic"
-msgstr ""
+msgstr "Icelandic"
 
 #: src/text/iso-639_def.h:96
 msgid "Inuktitut"
-msgstr ""
+msgstr "Inuktitut"
 
 #: src/text/iso-639_def.h:97
 msgid "Interlingue"
-msgstr ""
+msgstr "Interlingue"
 
 #: src/text/iso-639_def.h:98
 msgid "Interlingua"
-msgstr ""
+msgstr "Interlingua"
 
 #: src/text/iso-639_def.h:99
 msgid "Indonesian"
-msgstr ""
+msgstr "Indonesian"
 
 #: src/text/iso-639_def.h:100
 msgid "Inupiaq"
-msgstr ""
+msgstr "Inupiaq"
 
 #: src/text/iso-639_def.h:101
 msgid "Italian"
-msgstr ""
+msgstr "Italian"
 
 #: src/text/iso-639_def.h:102
 msgid "Javanese"
-msgstr ""
+msgstr "Javanese"
 
 #: src/text/iso-639_def.h:103
 msgid "Japanese"
-msgstr ""
+msgstr "Japanese"
 
 #: src/text/iso-639_def.h:104
 msgid "Kalaallisut (Greenlandic)"
-msgstr ""
+msgstr "Kalaallisut (Greenlandic)"
 
 #: src/text/iso-639_def.h:105
 msgid "Kannada"
-msgstr ""
+msgstr "Kannada"
 
 #: src/text/iso-639_def.h:106
 msgid "Kashmiri"
-msgstr ""
+msgstr "Kashmiri"
 
 #: src/text/iso-639_def.h:107
 msgid "Kazakh"
-msgstr ""
+msgstr "Kazakh"
 
 #: src/text/iso-639_def.h:108
 msgid "Khmer"
-msgstr ""
+msgstr "Khmer"
 
 #: src/text/iso-639_def.h:109
 msgid "Kikuyu"
-msgstr ""
+msgstr "Kikuyu"
 
 #: src/text/iso-639_def.h:110
 msgid "Kinyarwanda"
-msgstr ""
+msgstr "Kinyarwanda"
 
 #: src/text/iso-639_def.h:111
 msgid "Kirghiz"
-msgstr ""
+msgstr "Kirghiz"
 
 #: src/text/iso-639_def.h:112
 msgid "Komi"
-msgstr ""
+msgstr "Komi"
 
 #: src/text/iso-639_def.h:113
 msgid "Korean"
-msgstr ""
+msgstr "Korean"
 
 #: src/text/iso-639_def.h:114
 msgid "Kuanyama"
-msgstr ""
+msgstr "Kuanyama"
 
 #: src/text/iso-639_def.h:115
 msgid "Kurdish"
-msgstr ""
+msgstr "Kurdish"
 
 #: src/text/iso-639_def.h:116
 msgid "Lao"
-msgstr ""
+msgstr "Lao"
 
 #: src/text/iso-639_def.h:117
 msgid "Latin"
-msgstr ""
+msgstr "Latin"
 
 #: src/text/iso-639_def.h:118
 msgid "Latvian"
-msgstr ""
+msgstr "Latvian"
 
 #: src/text/iso-639_def.h:119
 msgid "Lingala"
-msgstr ""
+msgstr "Lingala"
 
 #: src/text/iso-639_def.h:120
 msgid "Lithuanian"
-msgstr ""
+msgstr "Lithuanian"
 
 #: src/text/iso-639_def.h:121
 msgid "Letzeburgesch"
-msgstr ""
+msgstr "Letzeburgesch"
 
 #: src/text/iso-639_def.h:122
 msgid "Macedonian"
-msgstr ""
+msgstr "Macedonian"
 
 #: src/text/iso-639_def.h:123
 msgid "Marshall"
-msgstr ""
+msgstr "Marshall"
 
 #: src/text/iso-639_def.h:124
 msgid "Malayalam"
-msgstr ""
+msgstr "Malayalam"
 
 #: src/text/iso-639_def.h:125
 msgid "Maori"
-msgstr ""
+msgstr "Maori"
 
 #: src/text/iso-639_def.h:126
 msgid "Marathi"
-msgstr ""
+msgstr "Marathi"
 
 #: src/text/iso-639_def.h:127
 msgid "Malay"
-msgstr ""
+msgstr "Malay"
 
 #: src/text/iso-639_def.h:128
 msgid "Malagasy"
-msgstr ""
+msgstr "Malagasy"
 
 #: src/text/iso-639_def.h:129
 msgid "Maltese"
-msgstr ""
+msgstr "Maltese"
 
 #: src/text/iso-639_def.h:130
 msgid "Moldavian"
-msgstr ""
+msgstr "Moldavian"
 
 #: src/text/iso-639_def.h:131
 msgid "Mongolian"
-msgstr ""
+msgstr "Mongolian"
 
 #: src/text/iso-639_def.h:132
 msgid "Nauru"
-msgstr ""
+msgstr "Nauru"
 
 #: src/text/iso-639_def.h:133
 msgid "Navajo"
-msgstr ""
+msgstr "Navajo"
 
 #: src/text/iso-639_def.h:134
 msgid "Ndebele, South"
-msgstr ""
+msgstr "Ndebele, South"
 
 #: src/text/iso-639_def.h:135
 msgid "Ndebele, North"
-msgstr ""
+msgstr "Ndebele, North"
 
 #: src/text/iso-639_def.h:136
 msgid "Ndonga"
-msgstr ""
+msgstr "Ndonga"
 
 #: src/text/iso-639_def.h:137
 msgid "Nepali"
-msgstr ""
+msgstr "Nepali"
 
 #: src/text/iso-639_def.h:138
 msgid "Norwegian"
-msgstr ""
+msgstr "Norwegian"
 
 #: src/text/iso-639_def.h:139
 msgid "Norwegian Nynorsk"
-msgstr ""
+msgstr "Norwegian Nynorsk"
 
 #: src/text/iso-639_def.h:140
 msgid "Norwegian Bokmaal"
-msgstr ""
+msgstr "Norwegian Bokmaal"
 
 #: src/text/iso-639_def.h:141
 msgid "Chichewa; Nyanja"
-msgstr ""
+msgstr "Chichewa; Nyanja"
 
 #: src/text/iso-639_def.h:142
 msgid "Occitan (post 1500); Provencal"
-msgstr ""
+msgstr "Occitan (post 1500); Provencal"
 
 #: src/text/iso-639_def.h:143
 msgid "Oriya"
-msgstr ""
+msgstr "Oriya"
 
 #: src/text/iso-639_def.h:144
 msgid "Oromo"
-msgstr ""
+msgstr "Oromo"
 
 #: src/text/iso-639_def.h:146
 msgid "Ossetian; Ossetic"
-msgstr ""
+msgstr "Ossetian; Ossetic"
 
 #: src/text/iso-639_def.h:147
 msgid "Panjabi"
-msgstr ""
+msgstr "Panjabi"
 
 #: src/text/iso-639_def.h:148
 msgid "Persian"
-msgstr ""
+msgstr "Persian"
 
 #: src/text/iso-639_def.h:149
 msgid "Pali"
-msgstr ""
+msgstr "Pali"
 
 #: src/text/iso-639_def.h:150
 msgid "Polish"
-msgstr ""
+msgstr "Polish"
 
 #: src/text/iso-639_def.h:151
 msgid "Portuguese"
-msgstr ""
+msgstr "Portuguese"
 
 #: src/text/iso-639_def.h:152
 msgid "Pushto"
@@ -4995,183 +5027,183 @@ msgstr ""
 
 #: src/text/iso-639_def.h:161
 msgid "Serbian"
-msgstr ""
+msgstr "Serbian"
 
 #: src/text/iso-639_def.h:162
 msgid "Croatian"
-msgstr ""
+msgstr "Croatian"
 
 #: src/text/iso-639_def.h:163
 msgid "Sinhalese"
-msgstr ""
+msgstr "Sinhalese"
 
 #: src/text/iso-639_def.h:164
 msgid "Slovak"
-msgstr ""
+msgstr "Slovak"
 
 #: src/text/iso-639_def.h:165
 msgid "Slovenian"
-msgstr ""
+msgstr "Slovenian"
 
 #: src/text/iso-639_def.h:166
 msgid "Northern Sami"
-msgstr ""
+msgstr "Northern Sami"
 
 #: src/text/iso-639_def.h:167
 msgid "Samoan"
-msgstr ""
+msgstr "Samoan"
 
 #: src/text/iso-639_def.h:168
 msgid "Shona"
-msgstr ""
+msgstr "Shona"
 
 #: src/text/iso-639_def.h:169
 msgid "Sindhi"
-msgstr ""
+msgstr "Sindhi"
 
 #: src/text/iso-639_def.h:170
 msgid "Somali"
-msgstr ""
+msgstr "Somali"
 
 #: src/text/iso-639_def.h:171
 msgid "Sotho, Southern"
-msgstr ""
+msgstr "Sotho, Southern"
 
 #: src/text/iso-639_def.h:172
 msgid "Spanish"
-msgstr ""
+msgstr "Spanish"
 
 #: src/text/iso-639_def.h:173
 msgid "Sardinian"
-msgstr ""
+msgstr "Sardinian"
 
 #: src/text/iso-639_def.h:174
 msgid "Swati"
-msgstr ""
+msgstr "Swati"
 
 #: src/text/iso-639_def.h:175
 msgid "Sundanese"
-msgstr ""
+msgstr "Sundanese"
 
 #: src/text/iso-639_def.h:176
 msgid "Swahili"
-msgstr ""
+msgstr "Swahili"
 
 #: src/text/iso-639_def.h:177
 msgid "Swedish"
-msgstr ""
+msgstr "Swedish"
 
 #: src/text/iso-639_def.h:178
 msgid "Tahitian"
-msgstr ""
+msgstr "Tahitian"
 
 #: src/text/iso-639_def.h:179
 msgid "Tamil"
-msgstr ""
+msgstr "Tamil"
 
 #: src/text/iso-639_def.h:180
 msgid "Tatar"
-msgstr ""
+msgstr "Tatar"
 
 #: src/text/iso-639_def.h:181
 msgid "Telugu"
-msgstr ""
+msgstr "Telugu"
 
 #: src/text/iso-639_def.h:182
 msgid "Tajik"
-msgstr ""
+msgstr "Tajik"
 
 #: src/text/iso-639_def.h:183
 msgid "Tagalog"
-msgstr ""
+msgstr "Tagalog"
 
 #: src/text/iso-639_def.h:184
 msgid "Thai"
-msgstr ""
+msgstr "Thai"
 
 #: src/text/iso-639_def.h:185
 msgid "Tibetan"
-msgstr ""
+msgstr "Tibetan"
 
 #: src/text/iso-639_def.h:186
 msgid "Tigrinya"
-msgstr ""
+msgstr "Tigrinya"
 
 #: src/text/iso-639_def.h:187
 msgid "Tonga (Tonga Islands)"
-msgstr ""
+msgstr "Tonga (Tonga Islands)"
 
 #: src/text/iso-639_def.h:188
 msgid "Tswana"
-msgstr ""
+msgstr "Tswana"
 
 #: src/text/iso-639_def.h:189
 msgid "Tsonga"
-msgstr ""
+msgstr "Tsonga"
 
 #: src/text/iso-639_def.h:190
 msgid "Turkish"
-msgstr ""
+msgstr "Turkish"
 
 #: src/text/iso-639_def.h:191
 msgid "Turkmen"
-msgstr ""
+msgstr "Turkmen"
 
 #: src/text/iso-639_def.h:192
 msgid "Twi"
-msgstr ""
+msgstr "Twi"
 
 #: src/text/iso-639_def.h:193
 msgid "Uighur"
-msgstr ""
+msgstr "Uighur"
 
 #: src/text/iso-639_def.h:194
 msgid "Ukrainian"
-msgstr ""
+msgstr "Ukrainian"
 
 #: src/text/iso-639_def.h:195
 msgid "Urdu"
-msgstr ""
+msgstr "Urdu"
 
 #: src/text/iso-639_def.h:196
 msgid "Uzbek"
-msgstr ""
+msgstr "Uzbek"
 
 #: src/text/iso-639_def.h:197
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamese"
 
 #: src/text/iso-639_def.h:198
 msgid "Volapuk"
-msgstr ""
+msgstr "Volapuk"
 
 #: src/text/iso-639_def.h:199
 msgid "Welsh"
-msgstr ""
+msgstr "Welsh"
 
 #: src/text/iso-639_def.h:200
 msgid "Wolof"
-msgstr ""
+msgstr "Wolof"
 
 #: src/text/iso-639_def.h:201
 msgid "Xhosa"
-msgstr ""
+msgstr "Xhosa"
 
 #: src/text/iso-639_def.h:202
 msgid "Yiddish"
-msgstr ""
+msgstr "Yiddish"
 
 #: src/text/iso-639_def.h:203
 msgid "Yoruba"
-msgstr ""
+msgstr "Yoruba"
 
 #: src/text/iso-639_def.h:204
 msgid "Zhuang"
-msgstr ""
+msgstr "Zhuang"
 
 #: src/text/iso-639_def.h:205
 msgid "Zulu"
-msgstr ""
+msgstr "Zulu"
 
 #: src/video_output/postprocessing.c:87 modules/gui/macosx/MainMenu.m:328
 #: modules/gui/macosx/MainMenu.m:329 modules/video_filter/postproc.c:194
@@ -5320,11 +5352,11 @@ msgstr "ALSA 音訊擷取輸入"
 
 #: modules/access/attachment.c:44
 msgid "Attachment"
-msgstr ""
+msgstr "附件"
 
 #: modules/access/attachment.c:45
 msgid "Attachment input"
-msgstr ""
+msgstr "附件輸入"
 
 #: modules/access/avio.h:39
 msgid "FFmpeg"
@@ -5369,14 +5401,12 @@ msgid ""
 msgstr ""
 
 #: modules/access/bluray.c:234
-#, fuzzy
 msgid "BluRay Disc is corrupted."
-msgstr "藍光光碟輸入"
+msgstr ""
 
 #: modules/access/bluray.c:237
-#, fuzzy
 msgid "Missing AACS configuration file!"
-msgstr "VLM 組態檔"
+msgstr ""
 
 #: modules/access/bluray.c:240
 msgid "No valid processing key found in AACS config file."
@@ -6173,7 +6203,7 @@ msgstr ""
 
 #: modules/access/dtv/access.c:222
 msgid "Major channel"
-msgstr ""
+msgstr "主頻道"
 
 #: modules/access/dtv/access.c:223
 msgid "ATSC minor channel"
@@ -6312,7 +6342,7 @@ msgstr ""
 
 #: modules/access/eyetv.m:63
 msgid "EyeTV input"
-msgstr ""
+msgstr "EyeTV輸入"
 
 #: modules/access/file.c:182 modules/access/file.c:310
 #: modules/access/mtp.c:213 modules/access/mtp.c:302 modules/access/vdr.c:378
@@ -6979,7 +7009,7 @@ msgstr ""
 
 #: modules/access_output/livehttp.c:87
 msgid "LiveHTTP"
-msgstr ""
+msgstr "LiveHTTP"
 
 #: modules/access_output/rtmp.c:44
 msgid "Active TCP connection"
@@ -7228,7 +7258,7 @@ msgstr "音量(0~65535)"
 
 #: modules/access/pvr.c:106
 msgid "Channel"
-msgstr ""
+msgstr "頻道"
 
 #: modules/access/pvr.c:107
 msgid ""
@@ -7399,7 +7429,7 @@ msgstr ""
 
 #: modules/access/rtp/rtp.c:95 modules/stream_out/rtp.c:191
 msgid "RTP"
-msgstr ""
+msgstr "RTP"
 
 #: modules/access/rtp/rtp.c:96
 msgid "Real-Time Protocol (RTP) input"
@@ -8839,7 +8869,7 @@ msgstr "古典"
 
 #: modules/audio_filter/equalizer_presets.h:40
 msgid "Club"
-msgstr ""
+msgstr "Club"
 
 #: modules/audio_filter/equalizer_presets.h:40
 #: modules/demux/mp4/id3genres.h:31
@@ -8868,7 +8898,7 @@ msgstr "大廳"
 
 #: modules/audio_filter/equalizer_presets.h:42
 msgid "Live"
-msgstr ""
+msgstr "Live"
 
 #: modules/audio_filter/equalizer_presets.h:42
 msgid "Party"
@@ -8882,7 +8912,7 @@ msgstr "流行"
 #: modules/audio_filter/equalizer_presets.h:42
 #: modules/demux/mp4/id3genres.h:44
 msgid "Reggae"
-msgstr ""
+msgstr "Reggae"
 
 #: modules/audio_filter/equalizer_presets.h:43
 #: modules/demux/mp4/id3genres.h:45
@@ -8892,20 +8922,20 @@ msgstr "搖滾"
 #: modules/audio_filter/equalizer_presets.h:43
 #: modules/demux/mp4/id3genres.h:49
 msgid "Ska"
-msgstr ""
+msgstr "Ska"
 
 #: modules/audio_filter/equalizer_presets.h:43
 msgid "Soft"
-msgstr ""
+msgstr "Soft"
 
 #: modules/audio_filter/equalizer_presets.h:43
 msgid "Soft rock"
-msgstr ""
+msgstr "Soft rock"
 
 #: modules/audio_filter/equalizer_presets.h:43
 #: modules/demux/mp4/id3genres.h:46
 msgid "Techno"
-msgstr ""
+msgstr "Techno"
 
 #: modules/audio_filter/karaoke.c:35 modules/demux/kate_categories.c:43
 msgid "Karaoke"
@@ -11047,9 +11077,8 @@ msgid "Western European (Windows-1252)"
 msgstr "西歐(Windows-1252)"
 
 #: modules/codec/subsdec.c:107
-#, fuzzy
 msgid "Western European (IBM 00850)"
-msgstr "西歐(Latin-9)"
+msgstr ""
 
 #: modules/codec/subsdec.c:109
 msgid "Eastern European (Latin-2)"
@@ -16149,14 +16178,12 @@ msgid "Force Bold"
 msgstr "強制使用粗體"
 
 #: modules/gui/macosx/simple_prefs.m:298
-#, fuzzy
 msgid "Outline Color"
-msgstr "輪廓顏色"
+msgstr ""
 
 #: modules/gui/macosx/simple_prefs.m:299
-#, fuzzy
 msgid "Outline Thickness"
-msgstr "輪廓厚度"
+msgstr ""
 
 #: modules/gui/macosx/simple_prefs.m:302
 msgid "Black screens in Fullscreen mode"
@@ -19179,9 +19206,8 @@ msgid "Jump Bac&kward"
 msgstr "向前跳轉(&K)"
 
 #: modules/gui/qt4/menus.cpp:886
-#, fuzzy
 msgid "Ctrl+T"
-msgstr "Ctrl+L"
+msgstr ""
 
 #: modules/gui/qt4/menus.cpp:895
 msgid "&Open File..."
@@ -20300,9 +20326,8 @@ msgid "Growl Notification Plugin"
 msgstr ""
 
 #: modules/notify/growl.m:275
-#, fuzzy
 msgid "New input playing"
-msgstr "正在播放"
+msgstr ""
 
 #: modules/notify/growl.m:298
 msgid "Now playing"
@@ -26437,27 +26462,8 @@ msgstr "媒體管理員清單"
 #~ msgid "Relaunch VLC"
 #~ msgstr "重新啟動 VLC"
 
-#~ msgid "Speed of the subtitles:"
-#~ msgstr "字幕速度："
-
-#~ msgid "Video output is not supported"
-#~ msgstr "不支援的視訊輸出"
-
 #~ msgid "Use systems codecs if available, for WMV codecs"
 #~ msgstr "可以的話使用系統的 WMV 編解碼器"
-
-# Some missing messages in v4l2 controls
-#~ msgid "White Balance Temperature, Auto"
-#~ msgstr "自動白平衡色溫"
-
-#~ msgid "Power Line Frequency"
-#~ msgstr "電源線頻率"
-
-#~ msgid "White Balance Temperature"
-#~ msgstr "自動白平衡色溫"
-
-#~ msgid "Backlight Compensation"
-#~ msgstr "背光補償"
 
 #~ msgid "Exposure, Auto"
 #~ msgstr "曝光，自動"
@@ -26476,3 +26482,27 @@ msgstr "媒體管理員清單"
 
 #~ msgid "Zoom, Absolute"
 #~ msgstr "縮放，絕對值"
+
+#, fuzzy
+#~ msgid "Speed of the subtitles:"
+#~ msgstr "選擇字幕檔"
+
+#, fuzzy
+#~ msgid "Video output is not supported"
+#~ msgstr "視訊輸出模組"
+
+#, fuzzy
+#~ msgid "White Balance Temperature, Auto"
+#~ msgstr "白平衡色溫(K)"
+
+#, fuzzy
+#~ msgid "Power Line Frequency"
+#~ msgstr "電源線頻率"
+
+#, fuzzy
+#~ msgid "White Balance Temperature"
+#~ msgstr "白平衡色溫(K)"
+
+#, fuzzy
+#~ msgid "Backlight Compensation"
+#~ msgstr "背光補償"
