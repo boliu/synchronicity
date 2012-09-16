@@ -1,11 +1,12 @@
-# Hindi translations for vlc package.
-# Copyright (C) 2012 the VideoLAN team
-# This file is distributed under the same license as the vlc package.
-# Simos Xenitellis <simos74@gmx.net>, 2005.
-# L. Balasubramaniam <l.balasubramaniam at gmail dot com>
+# Hindi translation
+# Copyright (C) 2012 VideoLAN
+# This file is distributed under the same license as the VLC package.
 #
+# Simos Xenitellis <simos74@gmx.net>, 2005.
+# L. Balasubramaniam <l.balasubramaniam at gmail dot com>, 2005
 # Translators:
 # Chandan Kumar <chandankumar.093047@gmail.com>, 2012.
+# Gaurav Kumar <aavrug@gmail.com>, 2012.
 # Shashi Ranjan <rshashi906@gmail.com>, 2012.
 # Sayan Chowdhury <sayan.chowdhury2012@gmail.com>, 2012.
 #: modules/gui/macosx/prefs.m:483 modules/gui/macosx/simple_prefs.m:451
@@ -14,15 +15,15 @@ msgstr ""
 "Project-Id-Version: VLC - Trans\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-07-18 21:49+0200\n"
-"PO-Revision-Date: 2012-07-12 04:16+0000\n"
-"Last-Translator: Sayan Chowdhury <sayan.chowdhury2012@gmail.com>\n"
+"PO-Revision-Date: 2012-09-08 15:47+0000\n"
+"Last-Translator: Gaurav Kumar <aavrug@gmail.com>\n"
 "Language-Team: Hindi (http://www.transifex.com/projects/p/vlc-trans/language/"
 "hi/)\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: include/vlc_common.h:1024
 msgid ""
@@ -31,7 +32,7 @@ msgid ""
 "see the file named COPYING for details.\n"
 "Written by the VideoLAN team; see the AUTHORS file.\n"
 msgstr ""
-"यह  प्रोग्राम किसी प्रकार की वारंटी  के साथ नहीं आता है, कानून द्वारा अनुमत सीमा तक।\n"
+"यह प्रोग्राम किसी प्रकार की वारंटी  के साथ नहीं आता है, कानून द्वारा अनुमत सीमा तक।\n"
 "आप इसे GNU जनरल पब्लिक लाइसेंस की शर्तों के अंतर्गत पुनर्वितरित कर सकते हैं;\n"
 "विवरण के लिए COPYING नाम का फ़ाइल देखें।\n"
 "VideoLAN टीम द्वारा लिखित, AUTHORS फ़ाइल देखें।\n"
@@ -245,7 +246,7 @@ msgstr "जनरल इनपुट"
 
 #: include/vlc_config_cat.h:121
 msgid "General input settings. Use with care..."
-msgstr ""
+msgstr "सामान्य इनपुट सेटिंग्स. ध्यानपूर्वक  प्रयोग करें ..."
 
 #: include/vlc_config_cat.h:124 src/libvlc-module.c:2056
 msgid "Stream output"
@@ -261,6 +262,11 @@ msgid ""
 "Sout streams modules allow advanced stream processing (transcoding, "
 "duplicating...)."
 msgstr ""
+"स्ट्रीमिंग सर्वर के रूप में कार्य करने के दौरान या आवक धाराओं को सहेजने के दौरान स्ट्रीम "
+"उत्पादन सेटिंग्स का प्रयोग किया जाता हैं.\n"
+"धाराओं को पहले मुक्स किया जाता हैं और उसके बाद \"उपयोग आउटपुट\" के माध्यम से भेजा जाता हैं "
+"जो धाराओ को एक फाइल में सहेजता हैं या इसे (UDP, HTTP, RTP/RTSP) स्ट्रीम करता हैं .\n"
+"सोउट स्ट्रीम मॉड्यूल उन्नत धारा प्रसंस्करण (transcoding, अनुलिपित्र...) की अनुमति हैं."
 
 #: include/vlc_config_cat.h:134
 msgid "General stream output settings"
@@ -277,6 +283,10 @@ msgid ""
 "always force a specific muxer. You should probably not do that.\n"
 "You can also set default parameters for each muxer."
 msgstr ""
+"मक्सर्स संपुटीकरण प्रारूप बनाते हैं जो सभी तरह के प्राथमिक धाराओं (वीडियो, ऑडियो, ...) "
+"को एक साथ रखने के लिए उपयोग किया जाता हैं. यह सेटिंग हमेशा आपको एक विशिष्ट मक्सर्को "
+"बाध्य करने के लिए अनुमति देता है. आपको शायद नहीं करना चाहिए.\n"
+"आप भी प्रत्येक मक्सर् के लिए डिफ़ॉल्ट मानकों सेट कर सकते हैं."
 
 #: include/vlc_config_cat.h:144
 msgid "Access output"
@@ -289,10 +299,14 @@ msgid ""
 "should probably not do that.\n"
 "You can also set default parameters for each access output."
 msgstr ""
+"उपयोग आउटपुट मॉड्यूल muxed धाराओं के भेजने के तरीके को नियंत्रित करता हैं.यह सेटिंग हमेशा "
+"आपको एक विशिष्ट उपयोग आउटपुट विधिको बाध्य करने के लिए अनुमति देता है. आपको शायद नहीं "
+"करना चाहिए\n"
+"आप भी प्रत्येक उपयोग आउटपुट के लिए डिफ़ॉल्ट मानकों सेट कर सकते हैं."
 
 #: include/vlc_config_cat.h:151
 msgid "Packetizers"
-msgstr ""
+msgstr "Packetizers"
 
 #: include/vlc_config_cat.h:153
 msgid ""
@@ -301,10 +315,14 @@ msgid ""
 "not do that.\n"
 "You can also set default parameters for each packetizer."
 msgstr ""
+"muxing से पहले प्राथमिक धाराओं को \"प्रेप्रोसस\" करने के लिए Packetizers का उपयोग "
+"किया जाता है. यह सेटिंग हमेशा आपको एक Packetizerको बाध्य करने के लिए अनुमति देता है. "
+"आपको शायद नहीं करना चाहिए.\n"
+"आप भी प्रत्येक Packetizer के लिए डिफ़ॉल्ट मानकों सेट कर सकते हैं."
 
 #: include/vlc_config_cat.h:159
 msgid "Sout stream"
-msgstr ""
+msgstr "Sout स्ट्रीम"
 
 #: include/vlc_config_cat.h:160
 msgid ""
@@ -312,24 +330,29 @@ msgid ""
 "the Streaming Howto for more information. You can configure default options "
 "for each sout stream module here."
 msgstr ""
+"Sout धारा मॉड्यूल एक Sout प्रसंस्करण श्रृंखला का निर्माण करने की अनुमति देते हैं. कृपया अधिक "
+"जानकारी के लिए स्ट्रीमिंग कैसे करें देखें. आप प्रत्येक Sout धारा मॉड्यूल के लिए डिफ़ॉल्ट विकल्प "
+"विन्यस्त कर सकते हैं."
 
 #: include/vlc_config_cat.h:165 modules/services_discovery/sap.c:109
 msgid "SAP"
-msgstr ""
+msgstr "SAP"
 
 #: include/vlc_config_cat.h:167
 msgid ""
 "SAP is a way to publically announce streams that are being sent using "
 "multicast UDP or RTP."
 msgstr ""
+"SAP धाराओं को सार्वजनिक घोषणा करने का एक तरीका हैं जो multicast UDP या RTP  का "
+"प्रयोग करके भेजा जाता हैं."
 
 #: include/vlc_config_cat.h:170
 msgid "VOD"
-msgstr ""
+msgstr "VOD"
 
 #: include/vlc_config_cat.h:171
 msgid "VLC's implementation of Video On Demand"
-msgstr ""
+msgstr "मांग पर वीडियो का VLC का कार्यान्वयन "
 
 #: include/vlc_config_cat.h:175 src/libvlc-module.c:2173
 #: src/playlist/engine.c:230 modules/demux/playlist/playlist.c:63
@@ -340,7 +363,7 @@ msgstr ""
 #: modules/gui/qt4/dialogs/playlist.cpp:41 modules/gui/qt4/menus.cpp:1082
 #: modules/gui/qt4/ui/sprefs_interface.h:519
 msgid "Playlist"
-msgstr ""
+msgstr "गीत-सूची"
 
 #: include/vlc_config_cat.h:176
 msgid ""
@@ -350,11 +373,11 @@ msgstr ""
 
 #: include/vlc_config_cat.h:180
 msgid "General playlist behaviour"
-msgstr ""
+msgstr "सामान्य गीतसूची व्यवहार"
 
 #: include/vlc_config_cat.h:181
 msgid "Services discovery"
-msgstr ""
+msgstr "सेवाओं की खोज"
 
 #: include/vlc_config_cat.h:182
 msgid ""
@@ -365,15 +388,15 @@ msgstr ""
 #: include/vlc_config_cat.h:186 src/libvlc-module.c:1957
 #: modules/gui/qt4/ui/video_effects.h:1395
 msgid "Advanced"
-msgstr ""
+msgstr "विस्तृत"
 
 #: include/vlc_config_cat.h:187
 msgid "Advanced settings. Use with care..."
-msgstr ""
+msgstr "विस्तृत सेटिंग. ध्यानपूर्वक  प्रयोग करें ..."
 
 #: include/vlc_config_cat.h:189
 msgid "CPU features"
-msgstr ""
+msgstr "CPU सुविधाएँ"
 
 #: include/vlc_config_cat.h:190
 msgid ""
@@ -382,13 +405,13 @@ msgstr ""
 
 #: include/vlc_config_cat.h:193
 msgid "Advanced settings"
-msgstr ""
+msgstr "विस्तृत सेटिंग"
 
 #: include/vlc_config_cat.h:198 modules/gui/macosx/open.m:112
 #: modules/gui/macosx/open.m:477 modules/gui/macosx/simple_prefs.m:259
 #: modules/gui/qt4/ui/sprefs_input.h:348
 msgid "Network"
-msgstr ""
+msgstr "संजाल"
 
 #: include/vlc_config_cat.h:199
 msgid "These modules provide network functions to all other parts of VLC."
@@ -396,7 +419,7 @@ msgstr ""
 
 #: include/vlc_config_cat.h:202
 msgid "Chroma modules settings"
-msgstr ""
+msgstr "क्रोमा मॉड्यूल सेटिंग"
 
 #: include/vlc_config_cat.h:203
 msgid "These settings affect chroma transformation modules."
@@ -404,11 +427,11 @@ msgstr ""
 
 #: include/vlc_config_cat.h:205
 msgid "Packetizer modules settings"
-msgstr ""
+msgstr "Packetizer मॉड्यूल सेटिंग"
 
 #: include/vlc_config_cat.h:209
 msgid "Encoders settings"
-msgstr ""
+msgstr "एनकोडर सेटिंग"
 
 #: include/vlc_config_cat.h:211
 msgid "These are general settings for video/audio/subtitles encoding modules."
@@ -416,15 +439,15 @@ msgstr ""
 
 #: include/vlc_config_cat.h:214
 msgid "Dialog providers settings"
-msgstr ""
+msgstr "संवाद प्रदाता सेटिंग"
 
 #: include/vlc_config_cat.h:216
 msgid "Dialog providers can be configured here."
-msgstr ""
+msgstr "संवाद प्रदाताओं यहाँ कॉन्फ़िगर किया जा सकता है।"
 
 #: include/vlc_config_cat.h:218
 msgid "Subtitle demuxer settings"
-msgstr ""
+msgstr "उपशीर्षक डीमक्सर सेटिंग"
 
 #: include/vlc_config_cat.h:220
 msgid ""
@@ -434,11 +457,11 @@ msgstr ""
 
 #: include/vlc_config_cat.h:227
 msgid "No help available"
-msgstr ""
+msgstr "कोई मदद उपलब्ध नहीं हैं"
 
 #: include/vlc_config_cat.h:228
 msgid "There is no help available for these modules."
-msgstr ""
+msgstr "इस मॉड्यूल के लिए कोई मदद उपलब्ध नहीं है."
 
 #: include/vlc_interface.h:124
 msgid ""
@@ -449,7 +472,7 @@ msgstr ""
 
 #: include/vlc_intf_strings.h:46
 msgid "Quick &Open File..."
-msgstr ""
+msgstr "और जल्दी फ़ाइल खोलें ... (&O)"
 
 #: include/vlc_intf_strings.h:47
 msgid "&Advanced Open..."
@@ -461,31 +484,31 @@ msgstr ""
 
 #: include/vlc_intf_strings.h:49
 msgid "Open &Folder..."
-msgstr ""
+msgstr "फ़ोल्डर खुले... "
 
 #: include/vlc_intf_strings.h:50
 msgid "Select one or more files to open"
-msgstr ""
+msgstr "खोलने के लिए एक या एक से अधिक फ़ाइलों का चयन करें"
 
 #: include/vlc_intf_strings.h:51
 msgid "Select Directory"
-msgstr ""
+msgstr "निर्देशिका का चयन करें"
 
 #: include/vlc_intf_strings.h:51
 msgid "Select Folder"
-msgstr ""
+msgstr "फ़ोल्डर का चयन करें"
 
 #: include/vlc_intf_strings.h:55
 msgid "Media &Information"
-msgstr ""
+msgstr "मीडिया जानकारी के &"
 
 #: include/vlc_intf_strings.h:56
 msgid "&Codec Information"
-msgstr ""
+msgstr "&कोडेक जानकारी"
 
 #: include/vlc_intf_strings.h:57
 msgid "&Messages"
-msgstr ""
+msgstr "&संदेश"
 
 #: include/vlc_intf_strings.h:58
 msgid "Jump to Specific &Time"
@@ -493,15 +516,15 @@ msgstr ""
 
 #: include/vlc_intf_strings.h:59
 msgid "&Bookmarks"
-msgstr ""
+msgstr "& बुकमार्क"
 
 #: include/vlc_intf_strings.h:60
 msgid "&VLM Configuration"
-msgstr ""
+msgstr "& VLM विन्यास"
 
 #: include/vlc_intf_strings.h:62
 msgid "&About"
-msgstr ""
+msgstr "& के बारे में"
 
 #: include/vlc_intf_strings.h:65 modules/control/rc.c:72
 #: modules/gui/macosx/MainMenu.m:266 modules/gui/macosx/MainMenu.m:363
@@ -513,7 +536,7 @@ msgstr ""
 #: modules/gui/qt4/dialogs/vlm.cpp:550 modules/gui/qt4/menus.cpp:788
 #: modules/gui/qt4/ui/open.h:244
 msgid "Play"
-msgstr ""
+msgstr "प्ले"
 
 #: include/vlc_intf_strings.h:66
 msgid "Fetch Information"
@@ -521,76 +544,76 @@ msgstr ""
 
 #: include/vlc_intf_strings.h:67
 msgid "Remove Selected"
-msgstr ""
+msgstr "चयनित हटाएँ"
 
 #: include/vlc_intf_strings.h:68
 msgid "Information..."
-msgstr ""
+msgstr "जानकारी..."
 
 #: include/vlc_intf_strings.h:69
 msgid "Sort"
-msgstr ""
+msgstr "सॉर्ट करें"
 
 #: include/vlc_intf_strings.h:70
 msgid "Create Directory..."
-msgstr ""
+msgstr "निर्देशिका बनाएँ..."
 
 #: include/vlc_intf_strings.h:71
 msgid "Create Folder..."
-msgstr ""
+msgstr "फ़ोल्डर बनाएँ..."
 
 #: include/vlc_intf_strings.h:72
 msgid "Show Containing Directory..."
-msgstr ""
+msgstr "समाहित निर्देशिका दिखाएँ"
 
 #: include/vlc_intf_strings.h:73
 msgid "Show Containing Folder..."
-msgstr ""
+msgstr "समाहित फ़ोल्डर दिखाएँ..."
 
 #: include/vlc_intf_strings.h:74
 msgid "Stream..."
-msgstr ""
+msgstr "धारा..."
 
 #: include/vlc_intf_strings.h:75
 msgid "Save..."
-msgstr ""
+msgstr "सहेजें..."
 
 #: include/vlc_intf_strings.h:80 modules/gui/macosx/CoreInteraction.m:426
 #: modules/gui/macosx/MainMenu.m:280 modules/gui/macosx/MainMenu.m:1188
 msgid "Repeat All"
-msgstr ""
+msgstr "सभी को दोहराएँ"
 
 #: include/vlc_intf_strings.h:81 modules/gui/macosx/CoreInteraction.m:447
 #: modules/gui/macosx/MainMenu.m:279 modules/gui/macosx/MainMenu.m:1181
 msgid "Repeat One"
-msgstr ""
+msgstr "एक दोहराएँ"
 
 #: include/vlc_intf_strings.h:82
 msgid "No Repeat"
-msgstr ""
+msgstr "नहीं दोहराएँ"
 
 #: include/vlc_intf_strings.h:84 src/libvlc-module.c:1533
 #: modules/gui/macosx/MainMenu.m:278 modules/gui/macosx/MainMenu.m:1174
 #: modules/gui/qt4/components/controller.hpp:118
 #: modules/gui/qt4/components/controller.hpp:131
 msgid "Random"
-msgstr ""
+msgstr "यादृच्छिक"
 
 #: include/vlc_intf_strings.h:85 modules/gui/macosx/CoreInteraction.m:403
 msgid "Random Off"
-msgstr ""
+msgstr "यादृच्छिक बंद"
 
 #: include/vlc_intf_strings.h:87
 msgid "Add to Playlist"
-msgstr ""
+msgstr "प्लेलिस्ट में जोड़ें"
 
 #: include/vlc_intf_strings.h:88
 msgid "Add to Media Library"
-msgstr ""
+msgstr "मीडिया लायब्रेरी में जोड़ें"
 
 #: include/vlc_intf_strings.h:90
 msgid "Add File..."
-msgstr ""
+msgstr "फ़ाइल जोड़ें..."
 
 #: include/vlc_intf_strings.h:91
 msgid "Advanced Open..."
@@ -598,11 +621,11 @@ msgstr ""
 
 #: include/vlc_intf_strings.h:92
 msgid "Add Directory..."
-msgstr ""
+msgstr "निर्देशिका जोड़ें..."
 
 #: include/vlc_intf_strings.h:93
 msgid "Add Folder..."
-msgstr ""
+msgstr "फ़ोल्डर जोड़ें..."
 
 #: include/vlc_intf_strings.h:95
 msgid "Save Playlist to &File..."
@@ -615,15 +638,15 @@ msgstr ""
 #: include/vlc_intf_strings.h:98 modules/gui/macosx/MainWindow.m:182
 #: modules/gui/qt4/components/preferences_widgets.cpp:1320
 msgid "Search"
-msgstr ""
+msgstr "खोज"
 
 #: include/vlc_intf_strings.h:99
 msgid "Search Filter"
-msgstr ""
+msgstr "खोज फ़िल्टर करें"
 
 #: include/vlc_intf_strings.h:101
 msgid "&Services Discovery"
-msgstr ""
+msgstr "&सेवा खोज"
 
 #: include/vlc_intf_strings.h:105
 msgid ""
@@ -633,7 +656,7 @@ msgstr ""
 
 #: include/vlc_intf_strings.h:110
 msgid "Image clone"
-msgstr ""
+msgstr "छवि क्लोन"
 
 #: include/vlc_intf_strings.h:111
 msgid "Clone the image"
@@ -641,7 +664,7 @@ msgstr ""
 
 #: include/vlc_intf_strings.h:113
 msgid "Magnification"
-msgstr ""
+msgstr "आवर्धन"
 
 #: include/vlc_intf_strings.h:114
 msgid ""
@@ -652,7 +675,7 @@ msgstr ""
 #: include/vlc_intf_strings.h:117 modules/gui/macosx/VideoEffects.m:140
 #: modules/gui/qt4/ui/video_effects.h:1394
 msgid "Waves"
-msgstr ""
+msgstr "लहरें"
 
 #: include/vlc_intf_strings.h:118
 msgid "\"Waves\" video distortion effect"
@@ -723,19 +746,19 @@ msgstr ""
 #: src/video_output/postprocessing.c:98 modules/gui/macosx/MainWindow.m:2377
 #: modules/video_filter/postproc.c:228
 msgid "Disable"
-msgstr ""
+msgstr "अक्षम करें"
 
 #: src/audio_output/common.c:88 modules/visualization/visual/visual.c:119
 msgid "Spectrometer"
-msgstr ""
+msgstr "स्पेक्ट्रोमीटर"
 
 #: src/audio_output/common.c:91
 msgid "Scope"
-msgstr ""
+msgstr "गुंजाइश"
 
 #: src/audio_output/common.c:94
 msgid "Spectrum"
-msgstr ""
+msgstr "स्पेक्ट्रम"
 
 #: src/audio_output/common.c:97
 msgid "Vu meter"
@@ -744,15 +767,15 @@ msgstr ""
 #: src/audio_output/common.c:122 modules/audio_filter/equalizer.c:76
 #: modules/gui/macosx/AudioEffects.m:102
 msgid "Equalizer"
-msgstr ""
+msgstr "इक्वेलाइज़र"
 
 #: src/audio_output/common.c:141 src/libvlc-module.c:345
 msgid "Audio filters"
-msgstr ""
+msgstr "ऑडियो फिल्टर"
 
 #: src/audio_output/common.c:153
 msgid "Replay gain"
-msgstr ""
+msgstr "पुनरावृत्ति लाभ"
 
 #: src/audio_output/filters.c:142
 msgid "Audio filtering failed"
@@ -835,7 +858,7 @@ msgstr ""
 
 #: src/config/help.c:125
 msgid "To get exhaustive help, use '-H'."
-msgstr ""
+msgstr "संपूर्ण मदद पाने के लिए,  '-H' का उपयोग करें।"
 
 #: src/config/help.c:129
 #, c-format
@@ -876,7 +899,7 @@ msgstr ""
 
 #: src/config/help.c:513
 msgid " (default enabled)"
-msgstr ""
+msgstr " (डिफ़ॉल्ट सक्षम हैं)"
 
 #: src/config/help.c:514
 msgid " (default disabled)"
@@ -2375,8 +2398,8 @@ msgstr ""
 msgid ""
 "When several video formats are available, select one whose resolution is "
 "closest to (but not higher than) this setting, in number of lines. Use this "
-"option if you don't have enough CPU power or network bandwidth to play higher "
-"resolutions."
+"option if you don't have enough CPU power or network bandwidth to play "
+"higher resolutions."
 msgstr ""
 
 #: src/libvlc-module.c:768
@@ -26240,14 +26263,6 @@ msgid "Media Manager List"
 msgstr "मीडिया प्रबंधन सूची"
 
 #, fuzzy
-#~ msgid "Speed of the subtitles:"
-#~ msgstr "उपशीर्षक फ़ाइल का चयन करें"
-
-#, fuzzy
-#~ msgid "Video output is not supported"
-#~ msgstr "वीडियो आउटपुट मॉड्यूल"
-
-#, fuzzy
 #~ msgid "Use systems codecs if available, for WMV codecs"
 #~ msgstr "ऑडियो फिल्टेर"
 
@@ -26260,24 +26275,12 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "डाल्बी साउण्ड"
 
 #, fuzzy
-#~ msgid "ALSA device"
-#~ msgstr "डिस्क युक्ति"
-
-#, fuzzy
 #~ msgid "Session groupname"
 #~ msgstr "विवरण"
 
 #, fuzzy
 #~ msgid "Satellite scanning config"
 #~ msgstr "समय-सीमा"
-
-#, fuzzy
-#~ msgid "Default Volume"
-#~ msgstr "डिफ़ॉल्ट ऑप्टिकल युक्ति"
-
-#, fuzzy
-#~ msgid "Open a Media"
-#~ msgstr "इनपुट मीडिया"
 
 #, fuzzy
 #~ msgid "&Open a Media"
@@ -26298,10 +26301,6 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "फैल"
 
 #, fuzzy
-#~ msgid "Clear Menu"
-#~ msgstr "स्पष्ट सूची"
-
-#, fuzzy
 #~ msgid "Fullscreen controller width toggle"
 #~ msgstr "इंटरफ़ेस"
 
@@ -26318,10 +26317,6 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "पूरा सक्रीन"
 
 #, fuzzy
-#~ msgid "Easy Stream"
-#~ msgstr "स्टिरियो"
-
-#, fuzzy
 #~ msgid "Manage Streams"
 #~ msgstr "स्टिरियो"
 
@@ -26330,64 +26325,12 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "आवाज़ "
 
 #, fuzzy
-#~ msgid "Seek Time"
-#~ msgstr "प्रारंभ समय"
-
-#, fuzzy
-#~ msgid "Empty Playlist"
-#~ msgstr "सूची चलायें"
-
-#, fuzzy
-#~ msgid "Queue Selected"
-#~ msgstr "डिवाइस चयन"
-
-#, fuzzy
-#~ msgid "Play Selected"
-#~ msgstr "गीत-सूची"
-
-#, fuzzy
-#~ msgid "Refresh List"
-#~ msgstr "रिफ्रेश समय"
-
-#, fuzzy
-#~ msgid "Graphical Equalizer"
-#~ msgstr "नेविगेशन"
-
-#, fuzzy
-#~ msgid "Streaming Output"
-#~ msgstr "स्ट्रीम आउटपुट"
-
-#, fuzzy
 #~ msgid "Create Stream"
 #~ msgstr "स्टिरियो"
 
 #, fuzzy
-#~ msgid "Media File"
-#~ msgstr "फैल"
-
-#, fuzzy
-#~ msgid "Capture Screen"
-#~ msgstr "अधिकृत मोड"
-
-#, fuzzy
 #~ msgid "Close"
 #~ msgstr "कोडेक"
-
-#, fuzzy
-#~ msgid "Error!"
-#~ msgstr "त्रुटि:"
-
-#, fuzzy
-#~ msgid "Create Mosaic"
-#~ msgstr "मोज़ेक"
-
-#, fuzzy
-#~ msgid "Stream Input Configuration"
-#~ msgstr "projectM विन्यास फाइल"
-
-#, fuzzy
-#~ msgid "Remove Stream"
-#~ msgstr "समय-सीमा"
 
 #, fuzzy
 #~ msgid "Create New Stream"
@@ -26396,10 +26339,6 @@ msgstr "मीडिया प्रबंधन सूची"
 #, fuzzy
 #~ msgid "Delete All Streams"
 #~ msgstr "ऑडियो फिल्टेर"
-
-#, fuzzy
-#~ msgid "Refresh Streams"
-#~ msgstr "रिफ्रेश समय"
 
 #, fuzzy
 #~ msgid "Left rear"
@@ -26414,34 +26353,6 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "बांये"
 
 #, fuzzy
-#~ msgid "Quiet mode."
-#~ msgstr "वीडियो मोड"
-
-#, fuzzy
-#~ msgid "Preload Directory"
-#~ msgstr "नेटवर्क"
-
-#, fuzzy
-#~ msgid "Motion blue"
-#~ msgstr "गति धब्बा फिल्टर"
-
-#, fuzzy
-#~ msgid "Effect"
-#~ msgstr "प्रभाव सूची"
-
-#, fuzzy
-#~ msgid "Zoom playlist"
-#~ msgstr "Goom प्रदर्शन चौड़ाई"
-
-#, fuzzy
-#~ msgid "Telnet Interface"
-#~ msgstr "इंटरफ़ेस"
-
-#, fuzzy
-#~ msgid "Web Interface"
-#~ msgstr "इंटरफ़ेस"
-
-#, fuzzy
 #~ msgid "Alsa"
 #~ msgstr "हमेशा ऊपर रहें"
 
@@ -26454,160 +26365,44 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "फ्रांसीसी"
 
 #, fuzzy
-#~ msgid "Directory input"
-#~ msgstr "निर्देशिका पथ उपसर्ग"
-
-#, fuzzy
 #~ msgid "Max number of redirection"
 #~ msgstr "ऑडियो चैनल्स"
-
-#, fuzzy
-#~ msgid "RTP de-jitter buffer length (msec)"
-#~ msgstr "फ़िल्टर लंबाई (एमएस)"
-
-#, fuzzy
-#~ msgid "Audio Channel"
-#~ msgstr "ऑडियो कोडेक"
-
-#, fuzzy
-#~ msgid "Decimation"
-#~ msgstr "दिशा"
-
-#, fuzzy
-#~ msgid "Video4Linux"
-#~ msgstr "वीडियो"
 
 #, fuzzy
 #~ msgid "Balance"
 #~ msgstr "फ्रांसीसी"
 
 #, fuzzy
-#~ msgid "No Audio Device"
-#~ msgstr "ऑडियो विलंब"
-
-#, fuzzy
-#~ msgid "Reload image file"
-#~ msgstr "वीडियो फिल्टर घुमाएँ"
-
-#, fuzzy
 #~ msgid "Reload image file every n seconds."
 #~ msgstr "ऑडियो फिल्टेर"
-
-#, fuzzy
-#~ msgid "Deinterlace module to use."
-#~ msgstr "Deinterlace विधि स्ट्रीमिंग के लिए उपयोग करने के लिए."
-
-#, fuzzy
-#~ msgid "Fake video decoder"
-#~ msgstr "तरंग वीडियो फ़िल्टर"
 
 #, fuzzy
 #~ msgid "Lock function"
 #~ msgstr "स्थिति"
 
 #, fuzzy
-#~ msgid "Memory video decoder"
-#~ msgstr "दर्पण वीडियो फिल्टर"
-
-#, fuzzy
 #~ msgid "Subpage"
 #~ msgstr "फ्रांसीसी"
-
-#, fuzzy
-#~ msgid "HTTP remote control interface"
-#~ msgstr "नियंत्रण इंटरफेस"
-
-#, fuzzy
-#~ msgid "VLM remote control interface"
-#~ msgstr "नियंत्रण इंटरफेस"
-
-#, fuzzy
-#~ msgid "Subtitles (asa demuxer)"
-#~ msgstr "उपशीर्षक भाषा"
-
-#, fuzzy
-#~ msgid "Extended controls"
-#~ msgstr "विस्तारित विकल्प दिखाएँ"
-
-#, fuzzy
-#~ msgid "General editing filters"
-#~ msgstr "सामान्य ऑडियो के सेटिंग्स"
-
-#, fuzzy
-#~ msgid "Distortion filters"
-#~ msgstr "वीडियो परिवर्तन फिल्टर"
-
-#, fuzzy
-#~ msgid "Audio Filter"
-#~ msgstr "ऑडियो बिट दर"
-
-#, fuzzy
-#~ msgid "About the video filters"
-#~ msgstr "वीडियो फिल्टर घुमाएँ"
-
-#, fuzzy
-#~ msgid "Controller..."
-#~ msgstr "नियंत्रण"
 
 #, fuzzy
 #~ msgid "Extended Controls..."
 #~ msgstr "सी डि डि बी"
 
 #, fuzzy
-#~ msgid "Keep current Equalizer settings"
-#~ msgstr "सामान्य वीडियो सेटिंग्स"
-
-#, fuzzy
-#~ msgid "Screen Capture Input"
-#~ msgstr "इनपुट चुनें"
-
-#, fuzzy
-#~ msgid "Add Folder to Playlist"
-#~ msgstr "गीत-सूची"
-
-#, fuzzy
-#~ msgid "Empty Folder"
-#~ msgstr "फिल्टर"
-
-#, fuzzy
 #~ msgid "Default Server Port"
 #~ msgstr "सी डि डि बी"
-
-#, fuzzy
-#~ msgid "Interface Settings not saved"
-#~ msgstr "मुख्य इंटरफेस सेटिंग्स"
-
-#, fuzzy
-#~ msgid "Audio Settings not saved"
-#~ msgstr "ऑडियो सेटिंग्स"
 
 #, fuzzy
 #~ msgid " Help "
 #~ msgstr "मदत"
 
 #, fuzzy
-#~ msgid "[Miscellaneous]"
-#~ msgstr "प्रकीर्ण"
-
-#, fuzzy
-#~ msgid " Information "
-#~ msgstr "परिवर्तन"
-
-#, fuzzy
 #~ msgid " Logs "
 #~ msgstr "फैल"
 
 #, fuzzy
-#~ msgid " Stats "
-#~ msgstr "स्थिति"
-
-#, fuzzy
 #~ msgid "Open: %s"
 #~ msgstr "नेटवर्क"
-
-#, fuzzy
-#~ msgid "Input caching:"
-#~ msgstr "इनपुट"
 
 #, fuzzy
 #~ msgid "Privacy and Network Warning"
@@ -26616,14 +26411,6 @@ msgstr "मीडिया प्रबंधन सूची"
 #, fuzzy
 #~ msgid "&Statistics"
 #~ msgstr "ऑडियो फिल्टेर"
-
-#, fuzzy
-#~ msgid "C&lear"
-#~ msgstr "स्पष्ट सूची"
-
-#, fuzzy
-#~ msgid "Message filter"
-#~ msgstr "दृश्य फिल्टर"
 
 #, fuzzy
 #~ msgid "&Update"
@@ -26646,21 +26433,8 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "गीत-सूची"
 
 #, fuzzy
-#~ msgid "Direct3D Desktop mode"
-#~ msgstr "डेस्कटॉप मोड सक्रिय करें"
-
-#, fuzzy
 #~ msgid "Sca&le"
 #~ msgstr "स्कोप"
-
-#, fuzzy
-#~ msgid "Manage &bookmarks"
-#~ msgstr "पसंद"
-
-#, fuzzy
-#~ msgctxt "Tooltip|Clear"
-#~ msgid "Clear"
-#~ msgstr "स्पष्ट सूची"
 
 #, fuzzy
 #~ msgid "Dummy interface function"
@@ -26669,18 +26443,6 @@ msgstr "मीडिया प्रबंधन सूची"
 #, fuzzy
 #~ msgid "Dump decoder function"
 #~ msgstr "विवरण"
-
-#, fuzzy
-#~ msgid "Stats video output function"
-#~ msgstr "सांख्यिकी वीडियो उत्पादन"
-
-#, fuzzy
-#~ msgid "Font Effect"
-#~ msgstr "goom प्रभाव"
-
-#, fuzzy
-#~ msgid "Lua Interface Module"
-#~ msgstr "इंटरफ़ेस"
 
 #, fuzzy
 #~ msgid "Lua Interface Module (shortcuts)"
@@ -26695,56 +26457,12 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "फैल"
 
 #, fuzzy
-#~ msgid "OpenGL Provider"
-#~ msgstr "OpenGL का वीडियो आउटपुट"
-
-#, fuzzy
-#~ msgid "Snapshot output"
-#~ msgstr "स्ट्रीम आउटपुट"
-
-#, fuzzy
 #~ msgid "ID of the video output X window"
 #~ msgstr "ऑडियो फिल्टेर"
 
 #, fuzzy
-#~ msgid "Font size:"
-#~ msgstr "फ़ॉन्ट मेनू"
-
-#, fuzzy
-#~ msgid "Text alignment:"
-#~ msgstr "मोज़ेक संरेखण"
-
-#, fuzzy
 #~ msgid "Default port (server mode)"
 #~ msgstr "सी डि डि बी"
-
-#, fuzzy
-#~ msgid "Embed video in interface"
-#~ msgstr "इंटरफ़ेस में वीडियो को एकीकृत करें"
-
-#, fuzzy
-#~ msgid "Refresh"
-#~ msgstr "रिफ्रेश समय"
-
-#, fuzzy
-#~ msgid "Color fun"
-#~ msgstr "रंग"
-
-#, fuzzy
-#~ msgid "Video filters"
-#~ msgstr "बॉल वीडियो फिल्टर"
-
-#, fuzzy
-#~ msgid "Vout filters"
-#~ msgstr "प्रवाह फ़िल्टर्स"
-
-#, fuzzy
-#~ msgid "Advanced video filter controls"
-#~ msgstr "तरंग वीडियो फ़िल्टर"
-
-#, fuzzy
-#~ msgid "Automate picture coding mode"
-#~ msgstr "स्वत: क्रॉपिंग"
 
 #, fuzzy
 #~ msgid "SessionManager"
@@ -26763,28 +26481,8 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "आवाज़"
 
 #, fuzzy
-#~ msgid "Select the protocol for the URL."
-#~ msgstr "वीडियो में एक रंग का चयन करें"
-
-#, fuzzy
-#~ msgid "Select the port used"
-#~ msgstr "फ़ाइल का चयन करें"
-
-#, fuzzy
-#~ msgid "Advanced open..."
-#~ msgstr "उन्नत विकल्प..."
-
-#, fuzzy
 #~ msgid "Fullscreen-only"
 #~ msgstr "पूरा सक्रीन"
-
-#, fuzzy
-#~ msgid "CD reading failed"
-#~ msgstr "क्रॉपिंग विफल"
-
-#, fuzzy
-#~ msgid "Audio Compact Disc"
-#~ msgstr "ऑडियो कोडेक"
 
 #, fuzzy
 #~ msgid "Do CD-Text lookups?"
@@ -26801,10 +26499,6 @@ msgstr "मीडिया प्रबंधन सूची"
 #, fuzzy
 #~ msgid "Tarkin decoder"
 #~ msgstr "ऑडियो फिल्टेर"
-
-#, fuzzy
-#~ msgid "Deinterlace mode: %s"
-#~ msgstr "स्ट्रीमिंग deinterlace मोड"
 
 #, fuzzy
 #~ msgid "MPEG-4 video demuxer"
@@ -26831,18 +26525,6 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "स्टिरियो"
 
 #, fuzzy
-#~ msgid "Select None"
-#~ msgstr "इनपुट चुनें"
-
-#, fuzzy
-#~ msgid "Show Interface"
-#~ msgstr "इंटरफ़ेस"
-
-#, fuzzy
-#~ msgid "Correct Aspect Ratio"
-#~ msgstr "शक्ति पहलू अनुपात"
-
-#, fuzzy
 #~ msgid "Stay On Top"
 #~ msgstr "हमेशा ऊपर रहें"
 
@@ -26851,44 +26533,16 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "अन्य"
 
 #, fuzzy
-#~ msgid "Network: "
-#~ msgstr "संजाल प्रोटोकॉल"
-
-#, fuzzy
 #~ msgid "sout"
 #~ msgstr "के बारेे में..."
-
-#, fuzzy
-#~ msgid "Protocol:"
-#~ msgstr "संजाल प्रोटोकॉल"
 
 #, fuzzy
 #~ msgid "Transcode:"
 #~ msgstr "फ्रांसीसी"
 
 #, fuzzy
-#~ msgid "enable"
-#~ msgstr "सामान्य"
-
-#, fuzzy
-#~ msgid "Video:"
-#~ msgstr "वीडियो"
-
-#, fuzzy
-#~ msgid "Audio:"
-#~ msgstr "ऑडियो"
-
-#, fuzzy
-#~ msgid "Channel:"
-#~ msgstr "चैनल 3: शीर्ष"
-
-#, fuzzy
 #~ msgid "Frequency:"
 #~ msgstr "फ्रांसीसी"
-
-#, fuzzy
-#~ msgid "Decimation:"
-#~ msgstr "दिशा"
 
 #, fuzzy
 #~ msgid "mono"
@@ -26899,22 +26553,6 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "अध्याय"
 
 #, fuzzy
-#~ msgid "Video Codec:"
-#~ msgstr "वीडियो कोडेक"
-
-#, fuzzy
-#~ msgid "Bitrate Tolerance:"
-#~ msgstr "नीला स्क्रीन U सहिष्णुता"
-
-#, fuzzy
-#~ msgid "Deinterlace:"
-#~ msgstr "Deinterlacing"
-
-#, fuzzy
-#~ msgid "Access:"
-#~ msgstr "एक्सेस उत्पादन"
-
-#, fuzzy
 #~ msgid "URL:"
 #~ msgstr "यूआरएल"
 
@@ -26923,159 +26561,28 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "आवाज़"
 
 #, fuzzy
-#~ msgid " Clear "
-#~ msgstr "स्पष्ट सूची"
-
-#, fuzzy
-#~ msgid " Save "
-#~ msgstr "फैल"
-
-#, fuzzy
 #~ msgid " Cancel "
 #~ msgstr "कोडेक क नाम"
-
-#, fuzzy
-#~ msgid "Preference"
-#~ msgstr "VLC वरीयताएँ"
 
 #, fuzzy
 #~ msgid "Corrupted"
 #~ msgstr "फैल"
 
 #, fuzzy
-#~ msgid "Audio Port"
-#~ msgstr "ऑडियो कोडेक"
-
-#, fuzzy
-#~ msgid "Video Port"
-#~ msgstr "वीडियो एफपीएस"
-
-#, fuzzy
-#~ msgid "Select play mode"
-#~ msgstr "शीर्षक प्रदर्शन मोड"
-
-#, fuzzy
-#~ msgid "Alignment:"
-#~ msgstr "मोज़ेक संरेखण"
-
-#, fuzzy
-#~ msgid "Default volume"
-#~ msgstr "डिफ़ॉल्ट ऑप्टिकल युक्ति"
-
-#, fuzzy
-#~ msgid ""
-#~ "\n"
-#~ "(WinCE interface)\n"
-#~ "\n"
-#~ msgstr "मुख्य इंटरफ़ेस"
-
-#, fuzzy
-#~ msgid "Choose directory"
-#~ msgstr "बाहर िनकलो"
-
-#, fuzzy
-#~ msgid "WinCE interface"
-#~ msgstr "मुख्य इंटरफ़ेस"
-
-#, fuzzy
-#~ msgid "Old playlist export"
-#~ msgstr "गीत-सूची"
-
-#, fuzzy
-#~ msgid "Miscellaneous stress tests"
-#~ msgstr "विविध विकल्प"
-
-#, fuzzy
 #~ msgid "Canal +"
 #~ msgstr "कोडेक क नाम"
-
-#, fuzzy
-#~ msgid "bottom"
-#~ msgstr " जोन 2: नीचे"
-
-#, fuzzy
-#~ msgid "video-filter-event"
-#~ msgstr "बॉल वीडियो फिल्टर"
-
-#, fuzzy
-#~ msgid "Screen for fullscreen mode."
-#~ msgstr "पूर्ण स्क्रीन मोड में नियंत्रण दिखाएँ"
-
-#, fuzzy
-#~ msgid "(Experimental) XCB video output"
-#~ msgstr "OpenGL का वीडियो आउटपुट"
 
 #, fuzzy
 #~ msgid "(Experimental) XCB video window"
 #~ msgstr "ऑडियो फिल्टेर"
 
 #, fuzzy
-#~ msgid "GaLaktos visualization"
-#~ msgstr "ऑडियो दृश्यावलोकन"
-
-#, fuzzy
-#~ msgid "Spatialization"
-#~ msgstr "दृश्यावलोकन"
-
-#, fuzzy
-#~ msgid "Processing"
-#~ msgstr "पूर्व प्रसंस्करण गुणवत्ता"
-
-#, fuzzy
 #~ msgid "Amount of data used for transrating in ms."
 #~ msgstr "ऑडियो चैनल्स"
 
 #, fuzzy
-#~ msgid "Transrate"
-#~ msgstr "रूपांतरण के प्रकार"
-
-#, fuzzy
-#~ msgid "Video On Demand"
-#~ msgstr "वीडियो मोड"
-
-#, fuzzy
-#~ msgid "FFmpeg video filter"
-#~ msgstr "तरंग वीडियो फ़िल्टर"
-
-#, fuzzy
-#~ msgid "Autodetect"
-#~ msgstr "गति का पता लगा"
-
-#, fuzzy
-#~ msgid "Use a sub&amp;titles file"
-#~ msgstr "एक उप  और शीर्षक फ़ाइल का उपयोग करें"
-
-#, fuzzy
 #~ msgid "textFormat"
 #~ msgstr "फिल्टर"
-
-#, fuzzy
-#~ msgid "General interface settings"
-#~ msgstr "मुख्य इंटरफेस सेटिंग्स"
-
-#, fuzzy
-#~ msgid "Other advanced settings"
-#~ msgstr "मुख्य इंटरफेस सेटिंग्स"
-
-#, fuzzy
-#~ msgid "Media &Information..."
-#~ msgstr "परिवर्तन"
-
-#, fuzzy
-#~ msgid "&Messages..."
-#~ msgstr "के रूप में सहेजें ..."
-
-#, fuzzy
-#~ msgid "&Extended Settings..."
-#~ msgstr "अन्य विस्तृत सेट्टिंग."
-
-#, fuzzy
-#~ msgid "&Bookmarks..."
-#~ msgstr "पसंद"
-
-#, fuzzy
-#~ msgid "&About..."
-#~ msgstr "के बारेे में..."
 
 #, fuzzy
 #~ msgid "&Load Playlist File..."
@@ -27092,24 +26599,8 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgid "Cancelled"
 #~ msgstr "फ्रांसीसी"
 
-#, fuzzy
-#~ msgid "Audio method"
-#~ msgstr "ऑडियो कोडेक"
-
-#, fuzzy
-#~ msgid "aRts audio output"
-#~ msgstr "सांख्यिकी वीडियो उत्पादन"
-
-#, fuzzy
-#~ msgid "Cinepak video decoder"
-#~ msgstr "क्लोन वीडियो फिल्टर"
-
 #~ msgid "%d Hz"
 #~ msgstr "%d हर्त्ज"
-
-#, fuzzy
-#~ msgid "Kate text subtitles decoder"
-#~ msgstr "उपशीर्षक फ़ाइल का चयन करें"
 
 #, fuzzy
 #~ msgid "Kate comment"
@@ -27120,32 +26611,12 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "ऑडियो फिल्टेर"
 
 #, fuzzy
-#~ msgid "Raw DTS demuxer"
-#~ msgstr "डीमक्सर्स"
-
-#, fuzzy
-#~ msgid "4:3 subtitles"
-#~ msgstr "उपशीर्षक/ओएसडी"
-
-#, fuzzy
 #~ msgid "16:9 subtitles"
 #~ msgstr "फैल"
 
 #, fuzzy
 #~ msgid "2.21:1 subtitles"
 #~ msgstr "फैल"
-
-#, fuzzy
-#~ msgid "Quick Open File..."
-#~ msgstr "ऑडियो फिल्टेर"
-
-#, fuzzy
-#~ msgid "Access Filter"
-#~ msgstr "प्रवेश मॉड्यूल"
-
-#, fuzzy
-#~ msgid "Save As:"
-#~ msgstr "के रूप में सहेजें ..."
 
 #, fuzzy
 #~ msgid "Login"
@@ -27156,64 +26627,16 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "गीत-सूची"
 
 #, fuzzy
-#~ msgid "Open a VLM Configuration File"
-#~ msgstr "विन्यास फाइल"
-
-#, fuzzy
-#~ msgid "&Playlist"
-#~ msgstr "सूची चलायें"
-
-#, fuzzy
-#~ msgid "Show P&laylist"
-#~ msgstr "गीत-सूची"
-
-#, fuzzy
-#~ msgid "Play&list..."
-#~ msgstr "सूची चलायें"
-
-#, fuzzy
-#~ msgid "&Preferences..."
-#~ msgstr "VLC वरीयताएँ"
-
-#, fuzzy
-#~ msgid "Card Selection"
-#~ msgstr "डिस्क चयन"
-
-#, fuzzy
-#~ msgid "Outputs"
-#~ msgstr "आउटपुट"
-
-#, fuzzy
-#~ msgid "WinCE interface module"
-#~ msgstr "स्ट्रीमिंग deinterlace मोड"
-
-#, fuzzy
-#~ msgid "RRD output file"
-#~ msgstr "आउटपुट फ़ाइल"
-
-#, fuzzy
 #~ msgid "Sphere"
 #~ msgstr "स्टिरियो"
-
-#, fuzzy
-#~ msgid "Number of bands"
-#~ msgstr "क्लोनों की संख्या"
 
 #, fuzzy
 #~ msgid "Audio CD - Track "
 #~ msgstr "आवाज़ "
 
 #, fuzzy
-#~ msgid "Seam Carving video filter"
-#~ msgstr "वीडियो फिल्टर तीक्ष्ण करें"
-
-#, fuzzy
 #~ msgid "Seam Carving"
 #~ msgstr "स्टिरियो"
-
-#, fuzzy
-#~ msgid "VLC - Controller"
-#~ msgstr "नियंत्रण"
 
 #, fuzzy
 #~ msgid "A to B"
@@ -27224,92 +26647,20 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "तारीख़"
 
 #, fuzzy
-#~ msgid "Choose subtitles file"
-#~ msgstr "एक उप  और शीर्षक फ़ाइल का उपयोग करें"
-
-#, fuzzy
-#~ msgid "&Title"
-#~ msgstr "शीर्षक फ़ॉन्ट"
-
-#, fuzzy
-#~ msgid "Undock from Interface"
-#~ msgstr "नियंत्रण इंटरफेस"
-
-#, fuzzy
 #~ msgid "Ctrl+U"
 #~ msgstr "बीच में"
-
-#, fuzzy
-#~ msgid "Add Interfaces"
-#~ msgstr "इंटरफ़ेस"
-
-#, fuzzy
-#~ msgid "Get Stream Information"
-#~ msgstr "परिवर्तन"
 
 #, fuzzy
 #~ msgid "close"
 #~ msgstr "कोडेक"
 
 #, fuzzy
-#~ msgid "Disk Device"
-#~ msgstr "डिस्क युक्ति"
-
-#, fuzzy
 #~ msgid "Skip Frames"
 #~ msgstr "फैल"
 
 #, fuzzy
-#~ msgid "Display Device"
-#~ msgstr "युक्ति प्रदर्शित करें"
-
-#, fuzzy
-#~ msgid "Color:"
-#~ msgstr "रंग"
-
-#, fuzzy
-#~ msgid "Subtitles & OSD settings"
-#~ msgstr "उपशीर्षक/ओएसडी"
-
-#, fuzzy
-#~ msgid "Playlist item info"
-#~ msgstr "गीत-सूची"
-
-#, fuzzy
-#~ msgid "Open..."
-#~ msgstr "OpenCV"
-
-#, fuzzy
-#~ msgid "Stream/Save"
-#~ msgstr "स्ट्रीम नाम"
-
-#, fuzzy
-#~ msgid "Use an external subtitles file."
-#~ msgstr "एक उप  और शीर्षक फ़ाइल का उपयोग करें"
-
-#, fuzzy
-#~ msgid "Advanced Settings..."
-#~ msgstr "उन्नत विकल्प..."
-
-#, fuzzy
 #~ msgid "File:"
 #~ msgstr "फैल"
-
-#, fuzzy
-#~ msgid "&Simple Add File..."
-#~ msgstr "ऑडियो फिल्टेर"
-
-#, fuzzy
-#~ msgid "&Add URL..."
-#~ msgstr "ऑडियो फिल्टेर"
-
-#, fuzzy
-#~ msgid "&Save Playlist..."
-#~ msgstr "के रूप में सहेजें ..."
-
-#, fuzzy
-#~ msgid "&Selection"
-#~ msgstr "डिस्क चयन"
 
 #, fuzzy
 #~ msgid "&View items"
@@ -27320,74 +26671,16 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "तारीख़"
 
 #, fuzzy
-#~ msgid "Playlist is empty"
-#~ msgstr "सूची चलायें"
-
-#, fuzzy
 #~ msgid "Ctrl"
 #~ msgstr "बीच में"
-
-#, fuzzy
-#~ msgid "Stream output MRL"
-#~ msgstr "स्ट्रीम आउटपुट"
-
-#, fuzzy
-#~ msgid "Channel name"
-#~ msgstr "चैनल 1: बाएँ"
-
-#, fuzzy
-#~ msgid "Open file"
-#~ msgstr "दृश्य फिल्टर"
-
-#, fuzzy
-#~ msgid "VLM stream"
-#~ msgstr "स्टिरियो"
 
 #, fuzzy
 #~ msgid "Unable to find playlist"
 #~ msgstr "गीत-सूची"
 
 #, fuzzy
-#~ msgid "Save to file"
-#~ msgstr "तरंग वीडियो फ़िल्टर"
-
-#, fuzzy
-#~ msgid "Image inversion"
-#~ msgstr "रंग व्युत्क्रमण"
-
-#, fuzzy
-#~ msgid "Video Options"
-#~ msgstr "वीडियो सेटिंग"
-
-#, fuzzy
-#~ msgid ""
-#~ "Preamp\n"
-#~ "12.0dB"
-#~ msgstr "Preamp:"
-
-#, fuzzy
-#~ msgid "More Information"
-#~ msgstr "परिवर्तन"
-
-#, fuzzy
 #~ msgid "Stopped"
 #~ msgstr "रोकें"
-
-#, fuzzy
-#~ msgid "Playing"
-#~ msgstr "सूची चलायें"
-
-#, fuzzy
-#~ msgid "Quick &Open File...\tCtrl-O"
-#~ msgstr "ऑडियो फिल्टेर"
-
-#, fuzzy
-#~ msgid "Open &File...\tCtrl-F"
-#~ msgstr "ऑडियो फिल्टेर"
-
-#, fuzzy
-#~ msgid "Open Dir&ectory...\tCtrl-E"
-#~ msgstr "नेटवर्क"
 
 #, fuzzy
 #~ msgid "Open &Network Stream...\tCtrl-N"
@@ -27406,36 +26699,12 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "गीत-सूची"
 
 #, fuzzy
-#~ msgid "Play faster"
-#~ msgstr "सूची चलायें"
-
-#, fuzzy
 #~ msgid "Extended &GUI\tCtrl-G"
 #~ msgstr "सी डि डि बी"
 
 #, fuzzy
-#~ msgid "&Bookmarks...\tCtrl-B"
-#~ msgstr "पसंद"
-
-#, fuzzy
 #~ msgid "Preference&s...\tCtrl-S"
 #~ msgstr "वी एल सी पसंद नापसंद"
-
-#, fuzzy
-#~ msgid "About %s"
-#~ msgstr "के बारेे में..."
-
-#, fuzzy
-#~ msgid "Show/Hide Interface"
-#~ msgstr "इंटरफ़ेस"
-
-#, fuzzy
-#~ msgid "Media &Info..."
-#~ msgstr "नेविगेशन"
-
-#, fuzzy
-#~ msgid "Bookmarks dialog"
-#~ msgstr "पसंद"
 
 #, fuzzy
 #~ msgid "Extended GUI"
@@ -27446,28 +26715,8 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "नीचे"
 
 #, fuzzy
-#~ msgid "Distortion"
-#~ msgstr "दिशा"
-
-#, fuzzy
-#~ msgid "Video canvas width"
-#~ msgstr "वीडियो स्केलिंग फिल्टर"
-
-#, fuzzy
-#~ msgid "Video canvas height"
-#~ msgstr "वीडियो स्केलिंग फिल्टर"
-
-#, fuzzy
 #~ msgid "Prompt"
 #~ msgstr "ऊपर"
-
-#, fuzzy
-#~ msgid "Security options"
-#~ msgstr "fnordlicht विकल्प"
-
-#, fuzzy
-#~ msgid "Advanced Information"
-#~ msgstr "उन्नत विकल्प..."
 
 #, fuzzy
 #~ msgid "Find a name"
@@ -27482,20 +26731,8 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "ऑडियो फिल्टेर"
 
 #, fuzzy
-#~ msgid "Subtitles preferred language"
-#~ msgstr "उपशीर्षक भाषा"
-
-#, fuzzy
 #~ msgid "Charset"
 #~ msgstr "बीच में"
-
-#, fuzzy
-#~ msgid "Video Device Name "
-#~ msgstr "वीडियो बिट दर"
-
-#, fuzzy
-#~ msgid "Audio Device Name "
-#~ msgstr "ऑडियो बिट दर"
 
 #, fuzzy
 #~ msgid "Video Adjustments and Effects"
@@ -27506,10 +26743,6 @@ msgstr "मीडिया प्रबंधन सूची"
 #, fuzzy
 #~ msgid "no artist"
 #~ msgstr "कलाकार"
-
-#, fuzzy
-#~ msgid "General interface setttings"
-#~ msgstr "मुख्य इंटरफेस सेटिंग्स"
 
 #~ msgid "CDDB Disc ID"
 #~ msgstr "सी डि डि बी डिस्क अंक"
@@ -27539,18 +26772,6 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgid "Muxing application"
 #~ msgstr "साफ्टवेयर के बारेे में..."
 
-#, fuzzy
-#~ msgid "_Title"
-#~ msgstr "शीर्षक फ़ॉन्ट"
-
-#, fuzzy
-#~ msgid "_Audio"
-#~ msgstr "ऑडियो"
-
-#, fuzzy
-#~ msgid "_Video"
-#~ msgstr "वीडियो"
-
 #~ msgid "_File"
 #~ msgstr "फैल"
 
@@ -27564,16 +26785,8 @@ msgstr "मीडिया प्रबंधन सूची"
 #~ msgstr "मदत"
 
 #, fuzzy
-#~ msgid "About this application"
-#~ msgstr "ऑडियो दृश्यावलोकन"
-
-#, fuzzy
 #~ msgid "Choose the program"
 #~ msgstr "बाहर िनकलो"
-
-#, fuzzy
-#~ msgid "_Modules..."
-#~ msgstr "मॉड्यूल वृक्ष"
 
 #, fuzzy
 #~ msgid "Switch program"
@@ -27582,10 +26795,6 @@ msgstr "मीडिया प्रबंधन सूची"
 #, fuzzy
 #~ msgid "Quits the application"
 #~ msgstr "साफ्टवेयर के बारेे में..."
-
-#, fuzzy
-#~ msgid "Extra Audio File"
-#~ msgstr "ऑडियो फिल्टेर"
 
 #, fuzzy
 #~ msgid "Center-Center"
@@ -27622,3 +26831,817 @@ msgstr "मीडिया प्रबंधन सूची"
 #, fuzzy
 #~ msgid "Right-Bottom"
 #~ msgstr "नीचे"
+
+#, fuzzy
+#~ msgid "Speed of the subtitles:"
+#~ msgstr "उपशीर्षक फ़ाइल का चयन करें"
+
+#, fuzzy
+#~ msgid "Video output is not supported"
+#~ msgstr "वीडियो आउटपुट मॉड्यूल"
+
+#, fuzzy
+#~ msgid "ALSA device"
+#~ msgstr "डिस्क युक्ति"
+
+#, fuzzy
+#~ msgid "Default Volume"
+#~ msgstr "डिफ़ॉल्ट ऑप्टिकल युक्ति"
+
+#, fuzzy
+#~ msgid "Open a Media"
+#~ msgstr "इनपुट मीडिया"
+
+#, fuzzy
+#~ msgid "Clear Menu"
+#~ msgstr "स्पष्ट सूची"
+
+#, fuzzy
+#~ msgid "Easy Stream"
+#~ msgstr "धारा..."
+
+#, fuzzy
+#~ msgid "Seek Time"
+#~ msgstr "प्रारंभ समय"
+
+#, fuzzy
+#~ msgid "Empty Playlist"
+#~ msgstr "गीत-सूची"
+
+#, fuzzy
+#~ msgid "Queue Selected"
+#~ msgstr "चयनित हटाएँ"
+
+#, fuzzy
+#~ msgid "Play Selected"
+#~ msgstr "चयनित हटाएँ"
+
+#, fuzzy
+#~ msgid "Refresh List"
+#~ msgstr "रिफ्रेश समय"
+
+#, fuzzy
+#~ msgid "Graphical Equalizer"
+#~ msgstr "इक्वेलाइज़र"
+
+#, fuzzy
+#~ msgid "Streaming Output"
+#~ msgstr "स्ट्रीम आउटपुट"
+
+#, fuzzy
+#~ msgid "Media File"
+#~ msgstr "खोज फ़िल्टर करें"
+
+#, fuzzy
+#~ msgid "Capture Screen"
+#~ msgstr "अधिकृत मोड"
+
+#, fuzzy
+#~ msgid "Error!"
+#~ msgstr "त्रुटि:"
+
+#, fuzzy
+#~ msgid "Create Mosaic"
+#~ msgstr "मोज़ेक"
+
+#, fuzzy
+#~ msgid "Stream Input Configuration"
+#~ msgstr "& VLM विन्यास"
+
+#, fuzzy
+#~ msgid "Remove Stream"
+#~ msgstr "चयनित हटाएँ"
+
+#, fuzzy
+#~ msgid "Refresh Streams"
+#~ msgstr "रिफ्रेश समय"
+
+#, fuzzy
+#~ msgid "Quiet mode."
+#~ msgstr "वीडियो मोड"
+
+#, fuzzy
+#~ msgid "Preload Directory"
+#~ msgstr "निर्देशिका का चयन करें"
+
+#, fuzzy
+#~ msgid "Motion blue"
+#~ msgstr "गति धब्बा फिल्टर"
+
+#, fuzzy
+#~ msgid "Effect"
+#~ msgstr "प्रभाव सूची"
+
+#, fuzzy
+#~ msgid "Zoom playlist"
+#~ msgstr "गीत-सूची"
+
+#, fuzzy
+#~ msgid "Telnet Interface"
+#~ msgstr "इंटरफ़ेस"
+
+#, fuzzy
+#~ msgid "Web Interface"
+#~ msgstr "इंटरफ़ेस"
+
+#, fuzzy
+#~ msgid "Directory input"
+#~ msgstr "निर्देशिका पथ उपसर्ग"
+
+#, fuzzy
+#~ msgid "RTP de-jitter buffer length (msec)"
+#~ msgstr "फ़िल्टर लंबाई (एमएस)"
+
+#, fuzzy
+#~ msgid "Audio Channel"
+#~ msgstr "ऑडियो कोडेक"
+
+#, fuzzy
+#~ msgid "Decimation"
+#~ msgstr "दिशा"
+
+#, fuzzy
+#~ msgid "Video4Linux"
+#~ msgstr "वीडियो"
+
+#, fuzzy
+#~ msgid "No Audio Device"
+#~ msgstr "ऑडियो विलंब"
+
+#, fuzzy
+#~ msgid "Reload image file"
+#~ msgstr "वीडियो फिल्टर घुमाएँ"
+
+#, fuzzy
+#~ msgid "Deinterlace module to use."
+#~ msgstr "Deinterlace विधि स्ट्रीमिंग के लिए उपयोग करने के लिए."
+
+#, fuzzy
+#~ msgid "Fake video decoder"
+#~ msgstr "तरंग वीडियो फ़िल्टर"
+
+#, fuzzy
+#~ msgid "Memory video decoder"
+#~ msgstr "दर्पण वीडियो फिल्टर"
+
+#, fuzzy
+#~ msgid "HTTP remote control interface"
+#~ msgstr "नियंत्रण इंटरफेस"
+
+#, fuzzy
+#~ msgid "VLM remote control interface"
+#~ msgstr "नियंत्रण इंटरफेस"
+
+#, fuzzy
+#~ msgid "Subtitles (asa demuxer)"
+#~ msgstr "उपशीर्षक डीमक्सर सेटिंग"
+
+#, fuzzy
+#~ msgid "Extended controls"
+#~ msgstr "विस्तारित विकल्प दिखाएँ"
+
+#, fuzzy
+#~ msgid "General editing filters"
+#~ msgstr "सामान्य ऑडियो के सेटिंग्स"
+
+#, fuzzy
+#~ msgid "Distortion filters"
+#~ msgstr "वीडियो परिवर्तन फिल्टर"
+
+#, fuzzy
+#~ msgid "Audio Filter"
+#~ msgstr "ऑडियो फिल्टर"
+
+#, fuzzy
+#~ msgid "About the video filters"
+#~ msgstr "वीडियो फिल्टर घुमाएँ"
+
+#, fuzzy
+#~ msgid "Controller..."
+#~ msgstr "नियंत्रण"
+
+#, fuzzy
+#~ msgid "Keep current Equalizer settings"
+#~ msgstr "सामान्य वीडियो सेटिंग्स"
+
+#, fuzzy
+#~ msgid "Screen Capture Input"
+#~ msgstr "इनपुट चुनें"
+
+#, fuzzy
+#~ msgid "Add Folder to Playlist"
+#~ msgstr "प्लेलिस्ट में जोड़ें"
+
+#, fuzzy
+#~ msgid "Empty Folder"
+#~ msgstr "फ़ोल्डर का चयन करें"
+
+#, fuzzy
+#~ msgid "Interface Settings not saved"
+#~ msgstr "मुख्य इंटरफेस सेटिंग्स"
+
+#, fuzzy
+#~ msgid "Audio Settings not saved"
+#~ msgstr "ऑडियो सेटिंग्स"
+
+#, fuzzy
+#~ msgid "[Miscellaneous]"
+#~ msgstr "प्रकीर्ण"
+
+#, fuzzy
+#~ msgid " Information "
+#~ msgstr "जानकारी..."
+
+#, fuzzy
+#~ msgid " Stats "
+#~ msgstr "स्थिति"
+
+#, fuzzy
+#~ msgid "Input caching:"
+#~ msgstr "इनपुट"
+
+#, fuzzy
+#~ msgid "C&lear"
+#~ msgstr "स्पष्ट सूची"
+
+#, fuzzy
+#~ msgid "Message filter"
+#~ msgstr "दृश्य फिल्टर"
+
+#, fuzzy
+#~ msgid "Direct3D Desktop mode"
+#~ msgstr "डेस्कटॉप मोड सक्रिय करें"
+
+#, fuzzy
+#~ msgid "Manage &bookmarks"
+#~ msgstr "& बुकमार्क"
+
+#, fuzzy
+#~ msgctxt "Tooltip|Clear"
+#~ msgid "Clear"
+#~ msgstr "स्पष्ट सूची"
+
+#, fuzzy
+#~ msgid "Stats video output function"
+#~ msgstr "सांख्यिकी वीडियो उत्पादन"
+
+#, fuzzy
+#~ msgid "Font Effect"
+#~ msgstr "goom प्रभाव"
+
+#, fuzzy
+#~ msgid "Lua Interface Module"
+#~ msgstr "इंटरफ़ेस"
+
+#, fuzzy
+#~ msgid "OpenGL Provider"
+#~ msgstr "OpenGL का वीडियो आउटपुट"
+
+#, fuzzy
+#~ msgid "Snapshot output"
+#~ msgstr "स्ट्रीम आउटपुट"
+
+#, fuzzy
+#~ msgid "Font size:"
+#~ msgstr "फ़ॉन्ट मेनू"
+
+#, fuzzy
+#~ msgid "Text alignment:"
+#~ msgstr "मोज़ेक संरेखण"
+
+#, fuzzy
+#~ msgid "Embed video in interface"
+#~ msgstr "इंटरफ़ेस में वीडियो को एकीकृत करें"
+
+#, fuzzy
+#~ msgid "Refresh"
+#~ msgstr "रिफ्रेश समय"
+
+#, fuzzy
+#~ msgid "Color fun"
+#~ msgstr "रंग"
+
+#, fuzzy
+#~ msgid "Video filters"
+#~ msgstr "ऑडियो फिल्टर"
+
+#, fuzzy
+#~ msgid "Vout filters"
+#~ msgstr "ऑडियो फिल्टर"
+
+#, fuzzy
+#~ msgid "Advanced video filter controls"
+#~ msgstr "तरंग वीडियो फ़िल्टर"
+
+#, fuzzy
+#~ msgid "Automate picture coding mode"
+#~ msgstr "स्वत: क्रॉपिंग"
+
+#, fuzzy
+#~ msgid "Select the protocol for the URL."
+#~ msgstr "वीडियो में एक रंग का चयन करें"
+
+#, fuzzy
+#~ msgid "Select the port used"
+#~ msgstr "फ़ाइल का चयन करें"
+
+#, fuzzy
+#~ msgid "Advanced open..."
+#~ msgstr "उन्नत विकल्प..."
+
+#, fuzzy
+#~ msgid "CD reading failed"
+#~ msgstr "क्रॉपिंग विफल"
+
+#, fuzzy
+#~ msgid "Audio Compact Disc"
+#~ msgstr "ऑडियो कोडेक"
+
+#, fuzzy
+#~ msgid "Deinterlace mode: %s"
+#~ msgstr "स्ट्रीमिंग deinterlace मोड"
+
+#, fuzzy
+#~ msgid "Select None"
+#~ msgstr "फ़ोल्डर का चयन करें"
+
+#, fuzzy
+#~ msgid "Show Interface"
+#~ msgstr "इंटरफ़ेस"
+
+#, fuzzy
+#~ msgid "Correct Aspect Ratio"
+#~ msgstr "शक्ति पहलू अनुपात"
+
+#, fuzzy
+#~ msgid "Network: "
+#~ msgstr "संजाल"
+
+#, fuzzy
+#~ msgid "Protocol:"
+#~ msgstr "संजाल प्रोटोकॉल"
+
+#, fuzzy
+#~ msgid "enable"
+#~ msgstr "अक्षम करें"
+
+#, fuzzy
+#~ msgid "Video:"
+#~ msgstr "वीडियो"
+
+#, fuzzy
+#~ msgid "Audio:"
+#~ msgstr "ऑडियो"
+
+#, fuzzy
+#~ msgid "Channel:"
+#~ msgstr "चैनल 3: शीर्ष"
+
+#, fuzzy
+#~ msgid "Decimation:"
+#~ msgstr "दिशा"
+
+#, fuzzy
+#~ msgid "Video Codec:"
+#~ msgstr "वीडियो कोडेक"
+
+#, fuzzy
+#~ msgid "Bitrate Tolerance:"
+#~ msgstr "नीला स्क्रीन U सहिष्णुता"
+
+#, fuzzy
+#~ msgid "Deinterlace:"
+#~ msgstr "Deinterlacing"
+
+#, fuzzy
+#~ msgid "Access:"
+#~ msgstr "एक्सेस उत्पादन"
+
+#, fuzzy
+#~ msgid " Clear "
+#~ msgstr "स्पष्ट सूची"
+
+#, fuzzy
+#~ msgid " Save "
+#~ msgstr "सहेजें..."
+
+#, fuzzy
+#~ msgid "Preference"
+#~ msgstr "VLC वरीयताएँ"
+
+#, fuzzy
+#~ msgid "Audio Port"
+#~ msgstr "ऑडियो कोडेक"
+
+#, fuzzy
+#~ msgid "Video Port"
+#~ msgstr "वीडियो एफपीएस"
+
+#, fuzzy
+#~ msgid "Select play mode"
+#~ msgstr "शीर्षक प्रदर्शन मोड"
+
+#, fuzzy
+#~ msgid "Alignment:"
+#~ msgstr "मोज़ेक संरेखण"
+
+#, fuzzy
+#~ msgid "Default volume"
+#~ msgstr "डिफ़ॉल्ट ऑप्टिकल युक्ति"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "(WinCE interface)\n"
+#~ "\n"
+#~ msgstr "मुख्य इंटरफ़ेस"
+
+#, fuzzy
+#~ msgid "Choose directory"
+#~ msgstr "निर्देशिका बनाएँ..."
+
+#, fuzzy
+#~ msgid "WinCE interface"
+#~ msgstr "मुख्य इंटरफ़ेस"
+
+#, fuzzy
+#~ msgid "Old playlist export"
+#~ msgstr "सामान्य गीतसूची व्यवहार"
+
+#, fuzzy
+#~ msgid "Miscellaneous stress tests"
+#~ msgstr "विविध विकल्प"
+
+#, fuzzy
+#~ msgid "bottom"
+#~ msgstr " जोन 2: नीचे"
+
+#, fuzzy
+#~ msgid "video-filter-event"
+#~ msgstr "बॉल वीडियो फिल्टर"
+
+#, fuzzy
+#~ msgid "Screen for fullscreen mode."
+#~ msgstr "पूर्ण स्क्रीन मोड में नियंत्रण दिखाएँ"
+
+#, fuzzy
+#~ msgid "(Experimental) XCB video output"
+#~ msgstr "OpenGL का वीडियो आउटपुट"
+
+#, fuzzy
+#~ msgid "GaLaktos visualization"
+#~ msgstr "ऑडियो दृश्यावलोकन"
+
+#, fuzzy
+#~ msgid "Spatialization"
+#~ msgstr "दृश्यावलोकन"
+
+#, fuzzy
+#~ msgid "Processing"
+#~ msgstr "पूर्व प्रसंस्करण गुणवत्ता"
+
+#, fuzzy
+#~ msgid "Transrate"
+#~ msgstr "रूपांतरण के प्रकार"
+
+#, fuzzy
+#~ msgid "Video On Demand"
+#~ msgstr "वीडियो मोड"
+
+#, fuzzy
+#~ msgid "FFmpeg video filter"
+#~ msgstr "तरंग वीडियो फ़िल्टर"
+
+#, fuzzy
+#~ msgid "Autodetect"
+#~ msgstr "गति का पता लगा"
+
+#, fuzzy
+#~ msgid "Use a sub&amp;titles file"
+#~ msgstr "एक उप  और शीर्षक फ़ाइल का उपयोग करें"
+
+#, fuzzy
+#~ msgid "General interface settings"
+#~ msgstr "मुख्य इंटरफेस सेटिंग्स"
+
+#, fuzzy
+#~ msgid "Other advanced settings"
+#~ msgstr "विस्तृत सेटिंग"
+
+#, fuzzy
+#~ msgid "Media &Information..."
+#~ msgstr "मीडिया जानकारी के &"
+
+#, fuzzy
+#~ msgid "&Messages..."
+#~ msgstr "&संदेश"
+
+#, fuzzy
+#~ msgid "&Extended Settings..."
+#~ msgstr "एनकोडर सेटिंग"
+
+#, fuzzy
+#~ msgid "&Bookmarks..."
+#~ msgstr "& बुकमार्क"
+
+#, fuzzy
+#~ msgid "&About..."
+#~ msgstr "& के बारे में"
+
+#, fuzzy
+#~ msgid "Audio method"
+#~ msgstr "ऑडियो कोडेक"
+
+#, fuzzy
+#~ msgid "aRts audio output"
+#~ msgstr "सांख्यिकी वीडियो उत्पादन"
+
+#, fuzzy
+#~ msgid "Cinepak video decoder"
+#~ msgstr "क्लोन वीडियो फिल्टर"
+
+#, fuzzy
+#~ msgid "Kate text subtitles decoder"
+#~ msgstr "उपशीर्षक फ़ाइल का चयन करें"
+
+#, fuzzy
+#~ msgid "Raw DTS demuxer"
+#~ msgstr "डीमक्सर्स"
+
+#, fuzzy
+#~ msgid "4:3 subtitles"
+#~ msgstr "उपशीर्षक/ओएसडी"
+
+#, fuzzy
+#~ msgid "Quick Open File..."
+#~ msgstr "और जल्दी फ़ाइल खोलें ... (&O)"
+
+#, fuzzy
+#~ msgid "Access Filter"
+#~ msgstr "प्रवेश मॉड्यूल"
+
+#, fuzzy
+#~ msgid "Save As:"
+#~ msgstr "के रूप में सहेजें ..."
+
+#, fuzzy
+#~ msgid "Open a VLM Configuration File"
+#~ msgstr "& VLM विन्यास"
+
+#, fuzzy
+#~ msgid "&Playlist"
+#~ msgstr "गीत-सूची"
+
+#, fuzzy
+#~ msgid "Show P&laylist"
+#~ msgstr "गीत-सूची"
+
+#, fuzzy
+#~ msgid "Play&list..."
+#~ msgstr "गीत-सूची"
+
+#, fuzzy
+#~ msgid "&Preferences..."
+#~ msgstr "VLC वरीयताएँ"
+
+#, fuzzy
+#~ msgid "Card Selection"
+#~ msgstr "डिस्क चयन"
+
+#, fuzzy
+#~ msgid "Outputs"
+#~ msgstr "आउटपुट"
+
+#, fuzzy
+#~ msgid "WinCE interface module"
+#~ msgstr "स्ट्रीमिंग deinterlace मोड"
+
+#, fuzzy
+#~ msgid "RRD output file"
+#~ msgstr "आउटपुट फ़ाइल"
+
+#, fuzzy
+#~ msgid "Number of bands"
+#~ msgstr "क्लोनों की संख्या"
+
+#, fuzzy
+#~ msgid "Seam Carving video filter"
+#~ msgstr "वीडियो फिल्टर तीक्ष्ण करें"
+
+#, fuzzy
+#~ msgid "VLC - Controller"
+#~ msgstr "नियंत्रण"
+
+#, fuzzy
+#~ msgid "Choose subtitles file"
+#~ msgstr "एक उप  और शीर्षक फ़ाइल का उपयोग करें"
+
+#, fuzzy
+#~ msgid "&Title"
+#~ msgstr "शीर्षक फ़ॉन्ट"
+
+#, fuzzy
+#~ msgid "Undock from Interface"
+#~ msgstr "नियंत्रण इंटरफेस"
+
+#, fuzzy
+#~ msgid "Add Interfaces"
+#~ msgstr "इंटरफ़ेस"
+
+#, fuzzy
+#~ msgid "Get Stream Information"
+#~ msgstr "मीडिया जानकारी के &"
+
+#, fuzzy
+#~ msgid "Disk Device"
+#~ msgstr "डिस्क युक्ति"
+
+#, fuzzy
+#~ msgid "Display Device"
+#~ msgstr "युक्ति प्रदर्शित करें"
+
+#, fuzzy
+#~ msgid "Color:"
+#~ msgstr "रंग"
+
+#, fuzzy
+#~ msgid "Subtitles & OSD settings"
+#~ msgstr "उपशीर्षक डीमक्सर सेटिंग"
+
+#, fuzzy
+#~ msgid "Playlist item info"
+#~ msgstr "गीत-सूची"
+
+#, fuzzy
+#~ msgid "Open..."
+#~ msgstr "फ़ोल्डर खुले... "
+
+#, fuzzy
+#~ msgid "Stream/Save"
+#~ msgstr "स्ट्रीम नाम"
+
+#, fuzzy
+#~ msgid "Use an external subtitles file."
+#~ msgstr "एक उप  और शीर्षक फ़ाइल का उपयोग करें"
+
+#, fuzzy
+#~ msgid "Advanced Settings..."
+#~ msgstr "विस्तृत सेटिंग"
+
+#, fuzzy
+#~ msgid "&Simple Add File..."
+#~ msgstr "फ़ाइल जोड़ें..."
+
+#, fuzzy
+#~ msgid "&Add URL..."
+#~ msgstr "फ़ाइल जोड़ें..."
+
+#, fuzzy
+#~ msgid "&Save Playlist..."
+#~ msgstr "के रूप में सहेजें ..."
+
+#, fuzzy
+#~ msgid "&Selection"
+#~ msgstr "डिस्क चयन"
+
+#, fuzzy
+#~ msgid "Playlist is empty"
+#~ msgstr "गीत-सूची"
+
+#, fuzzy
+#~ msgid "Stream output MRL"
+#~ msgstr "स्ट्रीम आउटपुट"
+
+#, fuzzy
+#~ msgid "Channel name"
+#~ msgstr "चैनल 1: बाएँ"
+
+#, fuzzy
+#~ msgid "Open file"
+#~ msgstr "दृश्य फिल्टर"
+
+#, fuzzy
+#~ msgid "VLM stream"
+#~ msgstr "Sout स्ट्रीम"
+
+#, fuzzy
+#~ msgid "Save to file"
+#~ msgstr "तरंग वीडियो फ़िल्टर"
+
+#, fuzzy
+#~ msgid "Image inversion"
+#~ msgstr "रंग व्युत्क्रमण"
+
+#, fuzzy
+#~ msgid "Video Options"
+#~ msgstr "वीडियो सेटिंग"
+
+#, fuzzy
+#~ msgid ""
+#~ "Preamp\n"
+#~ "12.0dB"
+#~ msgstr "Preamp:"
+
+#, fuzzy
+#~ msgid "More Information"
+#~ msgstr "&कोडेक जानकारी"
+
+#, fuzzy
+#~ msgid "Playing"
+#~ msgstr "प्ले"
+
+#, fuzzy
+#~ msgid "Quick &Open File...\tCtrl-O"
+#~ msgstr "और जल्दी फ़ाइल खोलें ... (&O)"
+
+#, fuzzy
+#~ msgid "Open &File...\tCtrl-F"
+#~ msgstr "फ़ोल्डर खुले... "
+
+#, fuzzy
+#~ msgid "Open Dir&ectory...\tCtrl-E"
+#~ msgstr "निर्देशिका बनाएँ..."
+
+#, fuzzy
+#~ msgid "Play faster"
+#~ msgstr "सूची चलायें"
+
+#, fuzzy
+#~ msgid "&Bookmarks...\tCtrl-B"
+#~ msgstr "& बुकमार्क"
+
+#, fuzzy
+#~ msgid "About %s"
+#~ msgstr "& के बारे में"
+
+#, fuzzy
+#~ msgid "Show/Hide Interface"
+#~ msgstr "इंटरफ़ेस"
+
+#, fuzzy
+#~ msgid "Media &Info..."
+#~ msgstr "मीडिया जानकारी के &"
+
+#, fuzzy
+#~ msgid "Bookmarks dialog"
+#~ msgstr "& बुकमार्क"
+
+#, fuzzy
+#~ msgid "Distortion"
+#~ msgstr "दिशा"
+
+#, fuzzy
+#~ msgid "Video canvas width"
+#~ msgstr "वीडियो स्केलिंग फिल्टर"
+
+#, fuzzy
+#~ msgid "Video canvas height"
+#~ msgstr "वीडियो स्केलिंग फिल्टर"
+
+#, fuzzy
+#~ msgid "Security options"
+#~ msgstr "fnordlicht विकल्प"
+
+#, fuzzy
+#~ msgid "Advanced Information"
+#~ msgstr "&कोडेक जानकारी"
+
+#, fuzzy
+#~ msgid "Subtitles preferred language"
+#~ msgstr "उपशीर्षक भाषा"
+
+#, fuzzy
+#~ msgid "Video Device Name "
+#~ msgstr "वीडियो बिट दर"
+
+#, fuzzy
+#~ msgid "Audio Device Name "
+#~ msgstr "ऑडियो बिट दर"
+
+#, fuzzy
+#~ msgid "General interface setttings"
+#~ msgstr "मुख्य इंटरफेस सेटिंग्स"
+
+#, fuzzy
+#~ msgid "_Title"
+#~ msgstr "शीर्षक फ़ॉन्ट"
+
+#, fuzzy
+#~ msgid "_Audio"
+#~ msgstr "ऑडियो"
+
+#, fuzzy
+#~ msgid "_Video"
+#~ msgstr "वीडियो"
+
+#, fuzzy
+#~ msgid "About this application"
+#~ msgstr "ऑडियो दृश्यावलोकन"
+
+#, fuzzy
+#~ msgid "_Modules..."
+#~ msgstr "मॉड्यूल वृक्ष"
+
+#, fuzzy
+#~ msgid "Extra Audio File"
+#~ msgstr "ऑडियो फिल्टर"
