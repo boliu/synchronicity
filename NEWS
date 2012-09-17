@@ -13,11 +13,13 @@ Access:
 
 Codecs:
  * Support for Opus decoding via libopus, including multi-channel files
+ * Support MSS1 and MSS2 decoding through DMO libraries
+ * Fix Hebrew and Greek subtitles encoding
 
 Demuxers:
  * Fix issues in Ogg with zero length packets
  * Fix file duration of Ogg/Theora and Ogg/Vorbis files
- * Fix vimeo lua parser
+ * Fix vimeo and youtube lua parser
 
 Windows:
  * Fix Wallpaper mode on Windows 7/8
@@ -26,6 +28,8 @@ Qt:
  * Fix media info dialog update
  * Fix random/repeat preferences saving
  * Fix crashes when opening audio effects dialog, with skins and playlist
+ * Fix crash on association dialog on Windows XP
+ * Fix album art display at start
 
 Mac OS X:
  * Fix audio output behavior when the output device is plugged or unplugged
@@ -45,6 +49,12 @@ Miscellaneous:
  * Fix issues on selection of playlist items for WebUI
  * Codec and other 3rd party library updates
  * Fix swscale and canvas behaviour with Aspect Ratio
+
+Translations:
+ * Updates of Norwegian Bokmål, Korean, Slovak, Serbian, Russian, Traditional Chinese,
+   Simplified Chinese, Portuguese, Walloon, Turkish, Thai, Polish, Dutch, Khmer, Hindi,
+   Japanese, Galician, Hebrew, German, Breton, Scottish Gaelic, Czech translations
+ * Initial translations for Bengali, Fulah, Gujarati and Bosnian
 
 
 Changes between 2.0.2 and 2.0.3:
