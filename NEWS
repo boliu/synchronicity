@@ -6,6 +6,8 @@ Audio Output:
  * Fix ALSA digital pass-through ("S/PDIF").
  * Fix live audio device selection on Mac OS X
  * Fix detection of some 5.1 and 7.1 kits on Windows.
+ * Fix audio output behavior when the output device is plugged or unplugged
+   during playback on Mac OS X
 
 Access:
  * Fix numerous DVD (dvdnav) crashes
@@ -32,12 +34,13 @@ Qt:
  * Fix album art display at start
 
 Mac OS X:
- * Fix audio output behavior when the output device is plugged or unplugged
-   during playback
- * Fix command-line options for the interface
+ * Fix command-line options to control the interface behaviour
  * Deactivate CoreAnimation effects on Leopard
  * Fix menus display and behaviour
- * Fix various crashes and small issues
+ * Fix various crashes and small issues including bookmarks, playlist, buttons,
+   streaming wizard, video size and sleep function
+ * Fix font selection for Unicode subtitles
+ * Fix code signing of Delete Preferences application
  * Improve system sleep behavior when playing audio-only media. The screen is
    allowed to sleep while the system is kept awake for the play time.
    Requires OS X 10.6 or later and a 64bit-capable Mac.
@@ -49,6 +52,7 @@ Miscellaneous:
  * Fix issues on selection of playlist items for WebUI
  * Codec and other 3rd party library updates
  * Fix swscale and canvas behaviour with Aspect Ratio
+ * Fix mimetype when streaming Webm over HTTP
 
 Translations:
  * Updates of Norwegian Bokmål, Korean, Slovak, Serbian, Russian, Traditional Chinese,
