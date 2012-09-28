@@ -41,9 +41,7 @@
 #import "misc.h"
 #import "MainWindow.h"
 
-#ifdef __x86_64__
 #import <IOKit/pwr_mgt/IOPMLib.h>           /* for sleep prevention */
-#endif
 
 /*****************************************************************************
  * Local prototypes.
@@ -151,10 +149,8 @@ struct intf_sys_t
 
     NSArray *o_usedHotkeys;
 
-#ifdef __x86_64__
     /* sleep management */
     IOPMAssertionID systemSleepAssertionID;
-#endif
 }
 
 + (VLCMain *)sharedInstance;

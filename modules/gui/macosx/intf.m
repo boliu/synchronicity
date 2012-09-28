@@ -1553,17 +1553,6 @@ unsigned int CocoaKeyToVLC( unichar i_key )
 - (void)updatePlaybackPosition
 {
     [o_mainwindow updateTimeSlider];
-
-#ifndef __x86_64__
-    input_thread_t * p_input;
-    p_input = pl_CurrentInput( p_intf );
-    if( p_input )
-    {
-        if( var_GetInteger( p_input, "state" ) == PLAYING_S && [self activeVideoPlayback] )
-            UpdateSystemActivity( UsrActivity );
-        vlc_object_release( p_input );
-    }
-#endif
 }
 
 - (void)updateVolume
@@ -1599,21 +1588,17 @@ unsigned int CocoaKeyToVLC( unichar i_key )
         int state = var_GetInteger( p_input, "state" );
         if( state == PLAYING_S )
         {
-#ifdef __x86_64__
-            /* prevent the system from sleeping */
+            /* prevent the system from sleeping using the 10.5 API to be as compatible as possible */
             IOReturn success;
-            CFStringRef reasonForActivity= CFStringCreateWithCString( kCFAllocatorDefault, _("VLC media playback"), kCFStringEncodingUTF8 );
             if ( [self activeVideoPlayback] )
-                success = IOPMAssertionCreateWithName(kIOPMAssertionTypeNoDisplaySleep, kIOPMAssertionLevelOn, reasonForActivity, &systemSleepAssertionID);
+                success = IOPMAssertionCreate(kIOPMAssertionTypeNoDisplaySleep, kIOPMAssertionLevelOn, &systemSleepAssertionID);
             else
-                success = IOPMAssertionCreateWithName(kIOPMAssertionTypeNoIdleSleep, kIOPMAssertionLevelOn, reasonForActivity, &systemSleepAssertionID);
-            CFRelease( reasonForActivity );
+                success = IOPMAssertionCreate(kIOPMAssertionTypeNoIdleSleep, kIOPMAssertionLevelOn, &systemSleepAssertionID);
 
             if (success == kIOReturnSuccess)
                 msg_Dbg( VLCIntf, "prevented sleep through IOKit (%i)", systemSleepAssertionID);
             else
                 msg_Warn( VLCIntf, "failed to prevent system sleep through IOKit");
-#endif
 
             [[self mainMenu] setPause];
             [o_mainwindow setPause];
@@ -1625,11 +1610,9 @@ unsigned int CocoaKeyToVLC( unichar i_key )
             [[self mainMenu] setPlay];
             [o_mainwindow setPlay];
 
-#ifdef __x86_64__
             /* allow the system to sleep again */
             msg_Dbg( VLCIntf, "releasing sleep blocker (%i)" , systemSleepAssertionID );
             IOPMAssertionRelease( systemSleepAssertionID );
-#endif
         }
         vlc_object_release( p_input );
     }
