@@ -11,17 +11,21 @@ Audio Output:
 
 Access:
  * Fix numerous DVD (dvdnav) crashes
- * Fix HTTP playback through proxy
+ * Fix HTTP playback through proxy and advertise gzip correctly
+ * Fix TLS busy-loop during client-side handshake
 
 Codecs:
  * Support for Opus decoding via libopus, including multi-channel files
  * Support MSS1 and MSS2 decoding through DMO libraries
  * Fix Hebrew and Greek subtitles encoding
+ * Fix crashes on malformed subtitles and malformed png files
+ * Fix crashes when using hardware decoding
 
 Demuxers:
  * Fix issues in Ogg with zero length packets
  * Fix file duration of Ogg/Theora and Ogg/Vorbis files
- * Fix vimeo and youtube lua parsers
+ * Fix vimeo, koreus and youtube lua parsers
+ * Support Youtube live streams
 
 Windows:
  * Fix Wallpaper mode on Windows 7/8
@@ -48,17 +52,19 @@ Mac OS X:
 Miscellaneous:
  * Fix Notify (D-Bus) plugin deadlock.
  * Fix buffer corruption in freetype and subtitles modules
- * Improve Blu-Ray support
+ * Improve Blu-Ray and HLS support
  * Fix issues on selection of playlist items for WebUI
  * Codec and other 3rd party library updates
  * Fix swscale and canvas behavior with Aspect Ratio
  * Fix mime-type when streaming Webm over HTTP
+ * Fix recording behaviour in Windows network environments
+ * Codecs and 3rd party libary updates
 
 Translations:
  * Updates of Norwegian Bokmål, Korean, Slovak, Serbian, Russian, Traditional
    Chinese, Simplified Chinese, Portuguese, Walloon, Turkish, Thai, Polish,
    Dutch, Khmer, Hindi, Japanese, Galician, Hebrew, German, Breton, Scottish
-   Gaelic, Czech translations
+   Gaelic, Czech, Estonian translations
  * Initial translations for Bengali, Fula, Gujarati and Bosnian
 
 
