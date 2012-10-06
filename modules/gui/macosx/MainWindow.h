@@ -135,6 +135,8 @@
     NSTimer *t_hide_mouse_timer;
 
     VLCColorView * o_color_backdrop;
+    VLCColorView * o_detached_color_backdrop;
+
     NSInteger i_originalLevel;
     NSRect previousSavedFrame;
 }

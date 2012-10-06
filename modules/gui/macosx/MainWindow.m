@@ -147,7 +147,10 @@ static VLCMainWindow *_o_sharedInstance = nil;
 - (void)dealloc
 {
     if (b_dark_interface)
+    {
         [o_color_backdrop release];
+        [o_detached_color_backdrop release];
+    }
 
     [[NSNotificationCenter defaultCenter] removeObserver: self];
     [o_sidebaritems release];
@@ -565,6 +568,15 @@ static VLCMainWindow *_o_sharedInstance = nil;
         o_color_backdrop = [[VLCColorView alloc] initWithFrame: [o_split_view frame]];
         [[self contentView] addSubview: o_color_backdrop positioned: NSWindowBelow relativeTo: o_split_view];
         [o_color_backdrop setAutoresizingMask:NSViewHeightSizable | NSViewWidthSizable];
+
+        NSRect backdropFrame = [[o_detached_video_window contentView] bounds];
+        backdropFrame.origin.y = [o_detached_bottombar_view frame].size.height;
+        backdropFrame.size.height -= [o_detached_bottombar_view frame].size.height;
+        backdropFrame.size.height -= [o_detached_titlebar_view frame].size.height;
+
+        o_detached_color_backdrop = [[VLCColorView alloc] initWithFrame: backdropFrame];
+        [[o_detached_video_window contentView] addSubview: o_detached_color_backdrop positioned: NSWindowBelow relativeTo: nil];
+        [o_detached_color_backdrop setAutoresizingMask:NSViewHeightSizable | NSViewWidthSizable];
     }
     else
     {
@@ -2685,6 +2697,10 @@ static VLCMainWindow *_o_sharedInstance = nil;
         [self display];
         [self setHasShadow:NO];
         [self setHasShadow:YES];
+    }
+    else
+    {
+        [self setBackgroundColor: [NSColor blackColor]];
     }
 }
 
