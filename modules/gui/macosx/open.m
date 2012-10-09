@@ -323,10 +323,10 @@ static VLCOpen *_o_sharedMainInstance = nil;
 
     if( p_item )
     {
-        for (int i = 0; i < p_item->list_count; i++) {
-            [o_file_sub_encoding_pop addItemWithTitle: _NS(p_item->list_text[i])];
-            [[o_file_sub_encoding_pop lastItem] setRepresentedObject:[NSString stringWithFormat:@"%s", p_item->list.psz[i]]];
-            if (p_item->value.psz && !strcmp(p_item->value.psz, p_item->list.psz[i]))
+        for (int i = 0; i < p_item->i_list; i++) {
+            [o_file_sub_encoding_pop addItemWithTitle: _NS(p_item->ppsz_list_text[i])];
+            [[o_file_sub_encoding_pop lastItem] setRepresentedObject:[NSString stringWithFormat:@"%s", p_item->ppsz_list[i]]];
+            if (p_item->value.psz && !strcmp(p_item->value.psz, p_item->ppsz_list[i]))
                 [o_file_sub_encoding_pop selectItem: [o_file_sub_encoding_pop lastItem]];
         }
 
