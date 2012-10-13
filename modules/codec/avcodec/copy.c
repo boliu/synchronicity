@@ -70,12 +70,13 @@ void CopyCleanCache(copy_cache_t *cache)
         store " %%xmm2,   16(%[dst])\n" \
         store " %%xmm3,   32(%[dst])\n" \
         store " %%xmm4,   48(%[dst])\n" \
-        : : [dst]"r"(dstp), [src]"r"(srcp) : "memory")
+        : : [dst]"r"(dstp), [src]"r"(srcp) : "memory", "xmm1", "xmm2", "xmm3", "xmm4")
 
 /* Optimized copy from "Uncacheable Speculative Write Combining" memory
  * as used by some video surface.
  * XXX It is really efficient only when SSE4.1 is available.
  */
+VLC_SSE
 static void CopyFromUswc(uint8_t *dst, size_t dst_pitch,
                          const uint8_t *src, size_t src_pitch,
                          unsigned width, unsigned height,
@@ -121,6 +122,7 @@ static void CopyFromUswc(uint8_t *dst, size_t dst_pitch,
     }
 }
 
+VLC_SSE
 static void Copy2d(uint8_t *dst, size_t dst_pitch,
                    const uint8_t *src, size_t src_pitch,
                    unsigned width, unsigned height)
@@ -149,6 +151,7 @@ static void Copy2d(uint8_t *dst, size_t dst_pitch,
     }
 }
 
+VLC_SSE
 static void SSE_SplitUV(uint8_t *dstu, size_t dstu_pitch,
                         uint8_t *dstv, size_t dstv_pitch,
                         const uint8_t *src, size_t src_pitch,
@@ -193,7 +196,7 @@ static void SSE_SplitUV(uint8_t *dstu, size_t dstu_pitch,
                     "pshufb  %%xmm7, %%xmm2\n"
                     "pshufb  %%xmm7, %%xmm3\n"
                     STORE2X32
-                    : : [dst1]"r"(&dstu[x]), [dst2]"r"(&dstv[x]), [src]"r"(&src[2*x]), [shuffle]"r"(shuffle) : "memory");
+                    : : [dst1]"r"(&dstu[x]), [dst2]"r"(&dstv[x]), [src]"r"(&src[2*x]), [shuffle]"r"(shuffle) : "memory", "xmm0", "xmm1", "xmm2", "xmm3", "xmm7");
             }
         } else
 #endif
@@ -218,7 +221,7 @@ static void SSE_SplitUV(uint8_t *dstu, size_t dstu_pitch,
                     "packuswb %%xmm6, %%xmm2\n"
                     "packuswb %%xmm7, %%xmm3\n"
                     STORE2X32
-                    : : [dst2]"r"(&dstu[x]), [dst1]"r"(&dstv[x]), [src]"r"(&src[2*x]), [mask]"r"(mask) : "memory");
+                    : : [dst2]"r"(&dstu[x]), [dst1]"r"(&dstv[x]), [src]"r"(&src[2*x]), [mask]"r"(mask) : "memory", "xmm0", "xmm1", "xmm2", "xmm3", "xmm4", "xmm5", "xmm6", "xmm7");
             }
         }
 #undef STORE2X32
