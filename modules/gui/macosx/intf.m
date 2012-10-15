@@ -1598,8 +1598,9 @@ unsigned int CocoaKeyToVLC( unichar i_key )
                     systemSleepAssertionID = 0;
             }
 
+            #ifdef __x86_64__
             /* prevent the system from sleeping using the 10.5 API to be as compatible as possible */
-            /* work-around a bug in 10.7.4 and 10.7.5, so check for 10.7.x < 10.7.4, 10.8 and 10.6 */
+            /* work-around a bug in 10.7.4 and 10.7.5, so check for 10.7.x < 10.7.4 and 10.8 */
             if ((NSAppKitVersionNumber >= 1115.2 && NSAppKitVersionNumber < 1138.45) || OSX_MOUNTAIN_LION) {
                 CFStringRef reasonForActivity= CFStringCreateWithCString(kCFAllocatorDefault, "VLC media playback", kCFStringEncodingUTF8);
                 if ([self activeVideoPlayback]) {
@@ -1611,12 +1612,15 @@ unsigned int CocoaKeyToVLC( unichar i_key )
                     }
                 CFRelease(reasonForActivity);
             } else {
-                /* fall-back on the 10.5 mode, which also works on 10.7.4 and 10.7.5 */
+            #endif
+                /* fall-back on the 10.5 mode, which also works on 10.6, 10.7.4 and 10.7.5 */
                 if ([self activeVideoPlayback])
                     success = IOPMAssertionCreate(kIOPMAssertionTypeNoDisplaySleep, kIOPMAssertionLevelOn, &systemSleepAssertionID);
                 else
                     success = IOPMAssertionCreate(kIOPMAssertionTypeNoIdleSleep, kIOPMAssertionLevelOn, &systemSleepAssertionID);
+            #ifdef __x86_64__
             }
+            #endif
 
             if (success == kIOReturnSuccess)
                 msg_Dbg( VLCIntf, "prevented sleep through IOKit (%i)", systemSleepAssertionID);

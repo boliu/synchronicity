@@ -80,13 +80,6 @@ extern OSErr UpdateSystemActivity(UInt8 activity);
 - (NSArray *)pathComponents;
 @end
 
-IOReturn IOPMAssertionCreateWithName( CFStringRef AssertionType,
-                                      IOPMAssertionLevel AssertionLevel,
-                                      CFStringRef AssertionName,
-                                      IOPMAssertionID *AssertionID );
-#define kIOPMAssertionTypePreventUserIdleDisplaySleep    CFSTR("PreventUserIdleDisplaySleep");
-#define kIOPMAssertionTypePreventUserIdleSystemSleep    CFSTR("PreventUserIdleSystemSleep");
-
 #endif
 
 #pragma mark -
@@ -115,5 +108,8 @@ enum {
 @interface NSEvent (IntroducedInLion)
 - (BOOL)isDirectionInvertedFromDevice;
 @end
+
+#define kIOPMAssertionTypePreventUserIdleDisplaySleep    CFSTR("PreventUserIdleDisplaySleep")
+#define kIOPMAssertionTypePreventUserIdleSystemSleep    CFSTR("PreventUserIdleSystemSleep")
 
 #endif
