@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: VLC - Trans\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
-"POT-Creation-Date: 2012-10-15 01:04+0200\n"
+"POT-Creation-Date: 2012-10-15 17:10+0200\n"
 "PO-Revision-Date: 2012-10-12 12:00+0000\n"
 "Last-Translator: Tomáš Chvátal <tomas.chvatal@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/projects/p/vlc-trans/language/"
@@ -12342,7 +12342,7 @@ msgstr "Ovládání hlasitosti"
 msgid "Position Control"
 msgstr "Ovládání pozice"
 
-#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:2007
+#: modules/control/hotkeys.c:97 modules/gui/macosx/intf.m:2041
 msgid "Ignore"
 msgstr "Ignorovat"
 
@@ -15000,32 +15000,32 @@ msgid ""
 "information."
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1966
+#: modules/gui/macosx/intf.m:2000
 msgid "No CrashLog found"
 msgstr ""
 
-#: modules/gui/macosx/intf.m:1966 modules/gui/macosx/prefs.m:230
+#: modules/gui/macosx/intf.m:2000 modules/gui/macosx/prefs.m:230
 #: modules/gui/macosx/simple_prefs.m:758
 msgid "Continue"
 msgstr "Pokračovat"
 
-#: modules/gui/macosx/intf.m:1966
+#: modules/gui/macosx/intf.m:2000
 msgid "Couldn't find any trace of a previous crash."
 msgstr "Nelze najít žádné stopy po předchozí havárii."
 
-#: modules/gui/macosx/intf.m:2005
+#: modules/gui/macosx/intf.m:2039
 msgid "Remove old preferences?"
 msgstr "Odstranit stará nastavení?"
 
-#: modules/gui/macosx/intf.m:2006
+#: modules/gui/macosx/intf.m:2040
 msgid "We just found an older version of VLC's preferences files."
 msgstr "Byla nalezena starší verze souboru s nastavením pro VLC."
 
-#: modules/gui/macosx/intf.m:2007
+#: modules/gui/macosx/intf.m:2041
 msgid "Move To Trash and Relaunch VLC"
 msgstr "Přesunout do koše a znovu spustit přehrávač VLC"
 
-#: modules/gui/macosx/intf.m:2122
+#: modules/gui/macosx/intf.m:2156
 #, c-format
 msgid "VLC Debug Log (%s).rtfd"
 msgstr ""
@@ -25666,8 +25666,9 @@ msgid "Preset"
 msgstr "Přednastavení"
 
 #: modules/gui/qt4/ui/messages_panel.h:142
+#, fuzzy
 msgid "Verbosity:"
-msgstr ""
+msgstr "Podrobnost (0,1,2)"
 
 #: modules/gui/qt4/ui/messages_panel.h:145
 msgid "&Save as..."
@@ -25986,20 +25987,23 @@ msgid "Miscellaneous Options"
 msgstr "Různá nastavení"
 
 #: modules/gui/qt4/ui/sout.h:341
+#, fuzzy
 msgid "Stream all elementary streams"
-msgstr ""
+msgstr "Snímkovací frekvence videa základního proudu"
 
 #: modules/gui/qt4/ui/sout.h:343
 msgid "Group name"
 msgstr "Název skupiny"
 
 #: modules/gui/qt4/ui/sout.h:345
+#, fuzzy
 msgid "Generated stream output string"
-msgstr ""
+msgstr "Obecná nastavení proudového výstupu"
 
 #: modules/gui/qt4/ui/sout.h:347
+#, fuzzy
 msgid "Option Setup"
-msgstr ""
+msgstr "Nastavení cíle"
 
 #: modules/gui/qt4/ui/sprefs_audio.h:434
 msgid " %"
@@ -26018,8 +26022,9 @@ msgid "Enable Time-Stretching audio"
 msgstr "Povolit Time-Stretching zvuku"
 
 #: modules/gui/qt4/ui/sprefs_audio.h:443
+#, fuzzy
 msgid "Dolby Surround:"
-msgstr ""
+msgstr "Dolby Surround"
 
 #: modules/gui/qt4/ui/sprefs_audio.h:444
 msgid "Replay gain mode:"
@@ -26094,8 +26099,9 @@ msgid "HTTP (default)"
 msgstr "HTTP (výchozí)"
 
 #: modules/gui/qt4/ui/sprefs_input.h:351
+#, fuzzy
 msgid "RTP over RTSP (TCP)"
-msgstr ""
+msgstr "Používat RTP přes RTSP (TCP)"
 
 #: modules/gui/qt4/ui/sprefs_input.h:352
 msgid "Live555 stream transport"
@@ -26306,12 +26312,14 @@ msgid "Run manually"
 msgstr "Spustit ručně"
 
 #: modules/gui/qt4/ui/streampanel.h:177
+#, fuzzy
 msgid "Setup schedule"
-msgstr ""
+msgstr "Plán"
 
 #: modules/gui/qt4/ui/streampanel.h:178
+#, fuzzy
 msgid "Run on schedule"
-msgstr ""
+msgstr "Plán"
 
 #: modules/gui/qt4/ui/streampanel.h:179
 msgid "Status"
@@ -26404,8 +26412,9 @@ msgid "Edge weightning"
 msgstr ""
 
 #: modules/gui/qt4/ui/video_effects.h:1374
+#, fuzzy
 msgid "Output Color Filtermode"
-msgstr ""
+msgstr "Výstupní soubor"
 
 #: modules/gui/qt4/ui/video_effects.h:1375
 msgid "Brightness (%)"
@@ -26452,8 +26461,9 @@ msgid "VLM configurator"
 msgstr "Konfigurátor VLM"
 
 #: modules/gui/qt4/ui/vlm.h:288
+#, fuzzy
 msgid "Media Manager Edition"
-msgstr ""
+msgstr "Informace o médiu"
 
 #: modules/gui/qt4/ui/vlm.h:289
 msgid "Name:"
@@ -26476,8 +26486,9 @@ msgid "Select Output"
 msgstr "Vybrat výstup"
 
 #: modules/gui/qt4/ui/vlm.h:295
+#, fuzzy
 msgid "Time Control"
-msgstr ""
+msgstr "Ovládání hlasitosti"
 
 #: modules/gui/qt4/ui/vlm.h:296
 msgid "Mux Control"
