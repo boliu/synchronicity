@@ -79,6 +79,14 @@ extern OSErr UpdateSystemActivity(UInt8 activity);
 @interface NSURL (IntroducedInSnowLeopard)
 - (NSArray *)pathComponents;
 @end
+
+IOReturn IOPMAssertionCreateWithName( CFStringRef AssertionType,
+                                      IOPMAssertionLevel AssertionLevel,
+                                      CFStringRef AssertionName,
+                                      IOPMAssertionID *AssertionID );
+#define kIOPMAssertionTypePreventUserIdleDisplaySleep    CFSTR("PreventUserIdleDisplaySleep");
+#define kIOPMAssertionTypePreventUserIdleSystemSleep    CFSTR("PreventUserIdleSystemSleep");
+
 #endif
 
 #pragma mark -
