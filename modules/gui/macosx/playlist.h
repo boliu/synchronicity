@@ -127,7 +127,6 @@
 
 - (BOOL)isSelectionEmpty;
 
-- (IBAction)servicesChange:(id)sender;
 - (IBAction)playItem:(id)sender;
 - (IBAction)revealItemInFinder:(id)sender;
 - (IBAction)preparseItem:(id)sender;

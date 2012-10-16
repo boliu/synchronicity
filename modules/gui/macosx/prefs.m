@@ -193,8 +193,9 @@ static VLCPrefs *_o_sharedMainInstance = nil;
     [o_title setStringValue: o_title_name];
 }
 
-- (void)showPrefs
+- (void)showPrefsWithLevel:(NSInteger)i_window_level
 {
+    [o_prefs_window setLevel: i_window_level];
     [o_prefs_window center];
     [o_prefs_window makeKeyAndOrderFront:self];
     [_rootTreeItem resetView];
@@ -237,8 +238,14 @@ static VLCPrefs *_o_sharedMainInstance = nil;
 {
     if( i_return == NSAlertAlternateReturn )
     {
+        /* reset VLC's config */
         config_ResetAll( p_intf );
         [_rootTreeItem resetView];
+        config_SaveConfigFile( p_intf );
+
+        /* reset OS X defaults */
+        [NSUserDefaults resetStandardUserDefaults];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
 

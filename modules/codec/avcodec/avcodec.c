@@ -37,6 +37,7 @@
 
 /* ffmpeg header */
 #define HAVE_MMX 1
+#include <libavutil/mem.h>
 #ifdef HAVE_LIBAVCODEC_AVCODEC_H
 #   include <libavcodec/avcodec.h>
 #else
@@ -131,7 +132,7 @@ vlc_module_begin ()
     add_bool( "ffmpeg-hw", false, HW_TEXT, HW_LONGTEXT, false )
 #endif
 #if defined(FF_THREAD_FRAME)
-    add_integer( "ffmpeg-threads", 0, THREADS_TEXT, THREADS_LONGTEXT, true );
+    add_integer( "ffmpeg-threads", 1, THREADS_TEXT, THREADS_LONGTEXT, true );
 #endif
 
 
@@ -162,7 +163,7 @@ vlc_module_begin ()
                  ENC_VT_LONGTEXT, true )
     add_bool( ENC_CFG_PREFIX "pre-me", false, ENC_PRE_ME_TEXT,
               ENC_PRE_ME_LONGTEXT, true )
-    add_integer( ENC_CFG_PREFIX "rc-buffer-size", 224*1024*8,
+    add_integer( ENC_CFG_PREFIX "rc-buffer-size", 0,
                  ENC_RC_BUF_TEXT, ENC_RC_BUF_LONGTEXT, true )
     add_float( ENC_CFG_PREFIX "rc-buffer-aggressivity", 1.0,
                ENC_RC_BUF_AGGR_TEXT, ENC_RC_BUF_AGGR_LONGTEXT, true )

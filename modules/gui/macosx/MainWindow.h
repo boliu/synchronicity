@@ -135,6 +135,8 @@
     NSTimer *t_hide_mouse_timer;
 
     VLCColorView * o_color_backdrop;
+    VLCColorView * o_detached_color_backdrop;
+
     NSInteger i_originalLevel;
     NSRect previousSavedFrame;
 }
@@ -175,7 +177,7 @@
 - (void)drawFancyGradientEffectForTimeSlider;
 
 - (id)videoView;
-- (id)setupVideoView;
+- (void)setupVideoView;
 - (void)setVideoplayEnabled;
 - (void)resizeWindow;
 - (void)setNativeVideoSize:(NSSize)size;
@@ -209,7 +211,6 @@
     NSRect previousSavedFrame;
 }
 
-- (BOOL)isFullscreen;
 - (void)customZoom:(id)sender;
 
 @end

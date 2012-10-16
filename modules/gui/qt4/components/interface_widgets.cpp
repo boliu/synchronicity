@@ -519,7 +519,13 @@ CoverArtLabel::CoverArtLabel( QWidget *parent, intf_thread_t *_p_i )
     CONNECT( action, triggered(), this, askForUpdate() );
     addAction( action );
 
-    showArtUpdate( "" );
+    input_item_t *p_item = THEMIM->currentInputItem();
+    if( p_item )
+    {
+        showArtUpdate( THEMIM->getIM()->decodeArtURL( p_item ) );
+    }
+    else
+        showArtUpdate( "" );
 }
 
 CoverArtLabel::~CoverArtLabel()

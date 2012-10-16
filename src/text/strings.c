@@ -528,7 +528,7 @@ size_t vlc_b64_decode_binary_to_buffer( uint8_t *p_dst, size_t i_dst, const char
     {
         const int c = b64[(unsigned int)*p];
         if( c == -1 )
-            continue;
+            break;
 
         switch( i_level )
         {
@@ -903,17 +903,17 @@ char *str_format_meta( vlc_object_t *p_object, const char *string )
                     if( p_item )
                     {
                         char *psz_now_playing = input_item_GetNowPlaying( p_item );
-                        if ( psz_now_playing == NULL )
+                        if( EMPTY_STR( psz_now_playing ) )
                         {
                             char *psz_temp = input_item_GetTitleFbName( p_item );
                             char *psz_artist = input_item_GetArtist( p_item );
-                            if( !EMPTY_STR( psz_temp ) )
+                            if( !EMPTY_STR( psz_artist ) )
                             {
-                                INSERT_STRING( psz_temp );
-                                if ( !EMPTY_STR( psz_artist ) )
+                                INSERT_STRING( psz_artist );
+                                if ( !EMPTY_STR( psz_temp ) )
                                     INSERT_STRING_NO_FREE( " - " );
                             }
-                            INSERT_STRING( psz_artist );
+                            INSERT_STRING( psz_temp );
                         }
                         else
                             INSERT_STRING( psz_now_playing );

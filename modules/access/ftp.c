@@ -639,8 +639,10 @@ static int ftp_SendCommand( vlc_object_t *p_access, access_sys_t *p_sys,
     if( net_Printf( p_access, p_sys->fd_cmd, NULL, "%s\r\n", psz_cmd ) < 0 )
     {
         msg_Err( p_access, "failed to send command" );
+        free( psz_cmd );
         return VLC_EGENERIC;
     }
+    free( psz_cmd );
     return VLC_SUCCESS;
 }
 
