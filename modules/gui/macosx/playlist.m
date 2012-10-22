@@ -826,16 +826,18 @@
         if(! p_item || !p_item->p_input )
             continue;
 
-        o_mrl = [[NSMutableString alloc] initWithFormat: @"%s", decode_URI( input_item_GetURI( p_item->p_input ))];
+        char * psz_url = decode_URI(input_item_GetURI(p_item->p_input));
+        o_mrl = [[NSMutableString alloc] initWithString: [NSString stringWithUTF8String: psz_url ? psz_url : ""]];
+        if (psz_url != NULL)
+            free( psz_url );
 
         /* perform some checks whether it is a file and if it is local at all... */
-        if ([o_mrl length] > 0)
-        {
+        if ([o_mrl length] > 0) {
             NSRange prefix_range = [o_mrl rangeOfString: @"file:"];
-            if( prefix_range.location != NSNotFound )
+            if (prefix_range.location != NSNotFound)
                 [o_mrl deleteCharactersInRange: prefix_range];
 
-            if( [o_mrl characterAtIndex:0] == '/' )
+            if ([o_mrl characterAtIndex:0] == '/')
                 [[NSWorkspace sharedWorkspace] selectFile: o_mrl inFileViewerRootedAtPath: o_mrl];
         }
 
