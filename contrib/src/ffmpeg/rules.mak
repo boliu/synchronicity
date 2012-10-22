@@ -1,6 +1,6 @@
 # FFmpeg
 
-FFMPEG_SNAPURL := http://git.videolan.org/?p=ffmpeg.git;a=snapshot;h=1a8c6917f68;sf=tgz
+FFMPEG_SNAPURL := http://git.videolan.org/?p=ffmpeg.git;a=snapshot;h=82db8ee;sf=tgz
 #FFMPEG_SNAPURL := http://git.libav.org/?p=libav.git;a=snapshot;h=1a8c6917f68;sf=tgz
 
 FFMPEGCONF = \
