@@ -241,15 +241,16 @@ int OpenDemux( vlc_object_t *p_this )
     error = av_open_input_stream(&p_sys->ic, &p_sys->io, psz_url, p_sys->fmt, NULL);
 #endif
 
-    free( psz_url );
     if( error < 0 )
     {
         errno = AVUNERROR(error);
         msg_Err( p_demux, "Could not open %s: %m", psz_url );
         p_sys->ic = NULL;
+        free( psz_url );
         CloseDemux( p_this );
         return VLC_EGENERIC;
     }
+    free( psz_url );
 
     vlc_avcodec_lock(); /* avformat calls avcodec behind our back!!! */
 #if LIBAVFORMAT_VERSION_INT >= ((53<<16)+(26<<8)+0)
