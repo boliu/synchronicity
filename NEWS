@@ -4,6 +4,10 @@ Changes between 2.0.4 and 2.0.5:
 Mac OS X:
  * Fix Reveal-in-Finder for files with non-Western file names
 
+libVLC:
+ * Fix audio and video track selection:
+   The constant track identifier is now always used. Some functions previously
+   incorrectly used the (moving) index of the track in the table of tracks.
 
 Changes between 2.0.3 and 2.0.4:
 --------------------------------
