@@ -25,6 +25,7 @@
 #endif
 
 #include <vlc_common.h>
+#include <vlc_fs.h>
 
 #include <errno.h>
 #include <assert.h>
@@ -173,7 +174,7 @@ static int dvb_open_adapter (uint8_t adapter)
     char dir[20];
 
     snprintf (dir, sizeof (dir), "/dev/dvb/adapter%"PRIu8, adapter);
-    return open (dir, O_SEARCH|O_DIRECTORY|O_CLOEXEC);
+    return vlc_open (dir, O_SEARCH|O_DIRECTORY);
 }
 
 /** Opens the DVB device node of the specified type */
@@ -183,7 +184,7 @@ static int dvb_open_node (dvb_device_t *d, const char *type, int flags)
     char path[strlen (type) + 4];
 
     snprintf (path, sizeof (path), "%s%u", type, d->device);
-    fd = openat (d->dir, path, flags|O_CLOEXEC);
+    fd = vlc_openat (d->dir, path, flags);
     if (fd != -1)
         fcntl (fd, F_SETFL, fcntl (fd, F_GETFL) | O_NONBLOCK);
     return fd;
