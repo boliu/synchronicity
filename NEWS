@@ -1,6 +1,18 @@
 Changes between 2.0.4 and 2.0.5:
 --------------------------------
 
+Access:
+ * Fix DVB-S delivery system detection
+
+Audio Output:
+ * Fix playback initial synchronization with PulseAudio
+   (however similar bugs in PulseAudio version 2.0 and later still exist)
+ * Fix file output bug affecting floating point on big endian systems
+
+Demuxers:
+ * Fix crash with some embedded subtitle fonts
+ * Fix buffer overflow in HTML subtitles parser
+
 Mac OS X:
  * Fix Reveal-in-Finder for files with non-Western file names
 
@@ -13,7 +25,6 @@ Changes between 2.0.3 and 2.0.4:
 --------------------------------
 
 Audio Output:
- * Improve playback synchronization with PulseAudio.
  * Fix ALSA digital pass-through ("S/PDIF").
  * Fix live audio device selection on Mac OS X
  * Fix detection of some 5.1 and 7.1 kits on Windows.
