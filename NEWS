@@ -12,14 +12,20 @@ Audio Output:
 Demuxers:
  * Fix crash with some embedded subtitle fonts
  * Fix buffer overflow in HTML subtitles parser
+ * Fix koreus lua parser
+ * Improve reliability for RTSP streams sent by some IP cameras
 
 Mac OS X:
  * Fix Reveal-in-Finder for files with non-Western file names
+ * Fix crash with local statistics disabled
 
 libVLC:
  * Fix audio and video track selection:
    The constant track identifier is now always used. Some functions previously
    incorrectly used the (moving) index of the track in the table of tracks.
+
+Translations:
+ * Update of French translation
 
 Changes between 2.0.3 and 2.0.4:
 --------------------------------
