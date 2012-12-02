@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: VLC - Trans\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-12-01 19:21+0100\n"
-"PO-Revision-Date: 2012-09-15 04:00+0000\n"
+"PO-Revision-Date: 2012-12-02 09:38+0000\n"
 "Last-Translator: Dean Lee <xslidian@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/vlc-"
 "trans/language/zh_CN/)\n"
@@ -6413,32 +6413,31 @@ msgstr "DV"
 
 #: modules/access/dvb/access.c:64
 msgid "Probe DVB card for capabilities"
-msgstr "探测 DVB 卡获取其处理能力"
+msgstr "探测 DVB 卡的功能特性"
 
 #: modules/access/dvb/access.c:65
 msgid ""
 "Some DVB cards do not like to be probed for their capabilities, you can "
 "disable this feature if you experience some trouble."
 msgstr ""
-"某些 DVB 卡无法进行处理能力检测，如果您遇到了某些问题您可以关闭此功能。"
+"部分 DVB 卡不乐意被外部程序探测其功能特性，若您遇到此类麻烦，可以尝试禁用本功"
+"能。"
 
 #: modules/access/dvb/access.c:68
-#, fuzzy
 msgid "Satellite scanning config"
-msgstr "卫星范围代码"
+msgstr "卫星扫描配置"
 
 #: modules/access/dvb/access.c:69
 msgid "filename of config file in share/dvb/dvb-s"
 msgstr "share/dvb/dvb-s 中配置文件的文件名"
 
 #: modules/access/dvb/access.c:72
-#, fuzzy
 msgid "DVB"
-msgstr "DV"
+msgstr "DVB"
 
 #: modules/access/dvb/access.c:73
 msgid "DVB input with v4l2 support"
-msgstr "带 v4l2 支持的 DVB 输入"
+msgstr "DVB 输入，支持 v4l2"
 
 #: modules/access/dvdnav.c:71 modules/access/dvdread.c:62
 msgid "DVD angle"
@@ -8631,9 +8630,8 @@ msgid "ARM NEON video chroma conversions"
 msgstr "ARM NEON 视频色度转换"
 
 #: modules/arm_neon/yuv_rgb.c:35
-#, fuzzy
 msgid "ARM NEON video chroma YUV->RGBA"
-msgstr "ARM NEON 视频色度转换"
+msgstr "ARM NEON 视频色度 YUV->RGBA"
 
 #: modules/audio_filter/audiobargraph_a.c:40
 msgid "TCP address to use (default localhost)"
@@ -10905,13 +10903,12 @@ msgid "Video encoder (using OpenMAX IL)"
 msgstr "视频编码器 (使用 OpenMAX IL)"
 
 #: modules/codec/opus.c:62
-#, fuzzy
 msgid "Opus audio decoder"
-msgstr "Speex 音频解码器"
+msgstr "Opus 音频解码器"
 
 #: modules/codec/opus.c:64
 msgid "Opus"
-msgstr ""
+msgstr "Opus"
 
 #: modules/codec/png.c:58
 msgid "PNG video decoder"
@@ -17487,9 +17484,8 @@ msgid "no"
 msgstr "否"
 
 #: modules/gui/macosx/wizard.m:1375
-#, fuzzy
 msgid "yes: from %@ to %@"
-msgstr "是: 从 %@ 到 %@ 秒"
+msgstr "是: 从 %@ 到 %@"
 
 #: modules/gui/macosx/wizard.m:1385 modules/gui/macosx/wizard.m:1403
 msgid "yes: %@ @ %@ kb/s"
@@ -27158,9 +27154,6 @@ msgstr "媒体管理器列表"
 #~ msgid "Error when sending the Crash Report"
 #~ msgstr "在发送崩溃报告时发生错误"
 
-#~ msgid "Video Filters..."
-#~ msgstr "视频滤镜..."
-
 #~ msgid "Card %<PRIu32>"
 #~ msgstr "卡 %<PRIu32>"
 
@@ -28931,6 +28924,10 @@ msgstr "媒体管理器列表"
 #~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 #~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:"
 #~ "#838383;\">http://www.yourtube.com/watch?v=gg64x</span></p></body></html>"
+
+#, fuzzy
+#~ msgid "Video Filters..."
+#~ msgstr "视频文件"
 
 #, fuzzy
 #~ msgid "Relaunch required"
