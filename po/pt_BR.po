@@ -10,13 +10,14 @@ msgstr ""
 "Project-Id-Version: vlc\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-12-01 19:21+0100\n"
-"PO-Revision-Date: 2012-02-17 03:58-0300\n"
+"PO-Revision-Date: 2012-12-02 08:43-0300\n"
 "Last-Translator: Sidney Doria <ssdoria@gmail.com>\n"
 "Language-Team: Brazilian Portuguese\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: include/vlc_common.h:1024
 msgid ""
@@ -5771,11 +5772,11 @@ msgstr "Entrada de Disco Blu-Ray"
 
 #: modules/access/bluray.c:51
 msgid "Bluray menus"
-msgstr ""
+msgstr "Menus de Blu-ray"
 
 #: modules/access/bluray.c:52
 msgid "Use bluray menus. If disabled, the movie will start directly"
-msgstr ""
+msgstr "Usa menus em Blu-rays. Se desabilitado, o filme iniciará de imediato."
 
 #: modules/access/bluray.c:60 modules/gui/qt4/ui/open_disk.h:300
 msgid "BluRay"
@@ -5794,30 +5795,32 @@ msgstr ""
 "sistema não a possui."
 
 #: modules/access/bluray.c:234
-#, fuzzy
 msgid "BluRay Disc is corrupted."
-msgstr "Entrada de Disco Blu-Ray"
+msgstr "O disco Blu-Ray está corrompido."
 
 #: modules/access/bluray.c:237
-#, fuzzy
 msgid "Missing AACS configuration file!"
-msgstr "Arquivo de configuração do VLM"
+msgstr "Arquivo de configuração AACS ausente!"
 
 #: modules/access/bluray.c:240
 msgid "No valid processing key found in AACS config file."
 msgstr ""
+"Não foi encontrada uma chave válida de processamento no arquivo de "
+"configuração AACS."
 
 #: modules/access/bluray.c:243
 msgid "No valid host certificate found in AACS config file."
 msgstr ""
+"Não foi encontrado um certificado de máquina válido no arquivo de "
+"configuração AACS."
 
 #: modules/access/bluray.c:246
 msgid "AACS Host certificate revoked."
-msgstr ""
+msgstr "Certificado de máquina AACS revogado."
 
 #: modules/access/bluray.c:249
 msgid "AACS MMC failed."
-msgstr ""
+msgstr "O MMC do AACS falhou."
 
 #: modules/access/bluray.c:255
 msgid "Your system AACS decoding library does not work. Missing keys?"
@@ -6305,18 +6308,16 @@ msgstr ""
 "deve ser selecionado. A numeração inicia do zero."
 
 #: modules/access/dtv/access.c:41
-#, fuzzy
 msgid "DVB device"
-msgstr "Leitor de DVD"
+msgstr "Dispositivo DVB"
 
 #: modules/access/dtv/access.c:43
-#, fuzzy
 msgid ""
 "If the adapter provides multiple independent tuner devices, the device "
 "number must be selected. Numbering starts from zero."
 msgstr ""
-"Se houver mais de um adaptador de difusão digital, o número do adaptador "
-"deve ser selecionado. A numeração inicia do zero."
+"Se o adaptador provê vários dispositivos sintonizadores independentes, o "
+"número do dispositivo deve ser selecionado. A numeração inicia de zero."
 
 #: modules/access/dtv/access.c:45
 msgid "Do not demultiplex"
@@ -9048,9 +9049,8 @@ msgid "ARM NEON video chroma conversions"
 msgstr "Conversões de formato cromático de vídeo ARM NEON"
 
 #: modules/arm_neon/yuv_rgb.c:35
-#, fuzzy
 msgid "ARM NEON video chroma YUV->RGBA"
-msgstr "Conversões de formato cromático de vídeo ARM NEON"
+msgstr "Formato cromático de vídeo ARM NEON YUV->RGBA"
 
 #: modules/audio_filter/audiobargraph_a.c:40
 msgid "TCP address to use (default localhost)"
@@ -9845,18 +9845,16 @@ msgid "Dummy audio output"
 msgstr "Saída de áudio simplificada"
 
 #: modules/audio_output/alsa.c:56
-#, fuzzy
 msgid "Audio output device"
-msgstr "Conector de saída de áudio"
+msgstr "Dispositivo de saída de áudio"
 
 #: modules/audio_output/alsa.c:57
 msgid "Audio output device (using ALSA syntax)."
-msgstr ""
+msgstr "Dispositivo de saída de áudio (usando sintaxe ALSA)."
 
 #: modules/audio_output/alsa.c:65
-#, fuzzy
 msgid "Audio output channels"
-msgstr "Modo dos canais de saída de áudio"
+msgstr "Canais de saída de áudio"
 
 #: modules/audio_output/alsa.c:66
 msgid ""
@@ -9864,6 +9862,9 @@ msgid ""
 "output, it will be down-mixed.This parameter is ignored when digital pass-"
 "through is active."
 msgstr ""
+"Canais disponíveis para saída de áudio. Se a entrada tiver mais canais que a "
+"saída, ocorrerá uma consolidação. Este parâmetro é ignorado quando a saída "
+"direta digital (pass-through) está habilitada."
 
 #: modules/audio_output/alsa.c:74
 msgid "Surround 4.0"
@@ -10594,12 +10595,11 @@ msgid "Strict standard compliance"
 msgstr "Aderência rigorosa aos padrões"
 
 #: modules/codec/avcodec/avcodec.h:228
-#, fuzzy
 msgid ""
 "Force a strict standard compliance when encoding (accepted values: -2 to 2)."
 msgstr ""
 "Impõe adesão rigorosa aos padrões, durante uma codificação (valores aceitos: "
-"-1, 0, 1)."
+"-2 a 2)."
 
 #: modules/codec/avcodec/avcodec.h:231
 msgid "Luminance masking"
@@ -11077,13 +11077,15 @@ msgstr ""
 
 #: modules/codec/fluidsynth.c:60
 msgid "Synthesis gain"
-msgstr ""
+msgstr "Ganho do sintetizador"
 
 #: modules/codec/fluidsynth.c:61
 msgid ""
 "This gain is applied to synthesis output. High values may cause saturation "
 "when many notes are played at a time."
 msgstr ""
+"Este ganho é aplicado à saída do sintetizador. Valores altos podem causar "
+"saturação quando muitas notas são reproduzidas ao mesmo tempo."
 
 #: modules/codec/fluidsynth.c:69
 msgid "FluidSynth MIDI synthesizer"
@@ -11442,13 +11444,12 @@ msgid "Video encoder (using OpenMAX IL)"
 msgstr "Codificador de vídeo (usando OpenMAX IL)"
 
 #: modules/codec/opus.c:62
-#, fuzzy
 msgid "Opus audio decoder"
-msgstr "Decodificador de áudio Speex"
+msgstr "Decodificador de áudio Opus"
 
 #: modules/codec/opus.c:64
 msgid "Opus"
-msgstr ""
+msgstr "Opus"
 
 #: modules/codec/png.c:58
 msgid "PNG video decoder"
@@ -11926,9 +11927,8 @@ msgid "Western European (Windows-1252)"
 msgstr "Oeste Europeu (Windows-1252)"
 
 #: modules/codec/subsdec.c:109
-#, fuzzy
 msgid "Western European (IBM 00850)"
-msgstr "Oeste Europeu (Latin-9)"
+msgstr "Oeste Europeu (IBM 00850)"
 
 #: modules/codec/subsdec.c:111
 msgid "Eastern European (Latin-2)"
@@ -12339,7 +12339,7 @@ msgstr ""
 #: modules/codec/x264.c:78
 msgid "use open GOP, for bluray compatibility use also bluray-compat option"
 msgstr ""
-"Usa GOPs abertos. Para compatibilidade com bluray use também a opção bluray-"
+"Usa GOPs abertos. Para compatibilidade com Blu-ray use também a opção bluray-"
 "compat"
 
 #: modules/codec/x264.c:81
@@ -14145,14 +14145,12 @@ msgid "Force use of a specific avformat muxer."
 msgstr "Impõe o uso de um combinador avformat específico."
 
 #: modules/demux/avformat/avformat.h:37
-#, fuzzy
 msgid "Format name"
-msgstr "Formato"
+msgstr "Nome do formato"
 
 #: modules/demux/avformat/avformat.h:38
-#, fuzzy
 msgid "Internal libavcodec format name"
-msgstr "Nome interno do codificador libavcodec"
+msgstr "Nome interno do formato libavcodec"
 
 #: modules/demux/avi/avi.c:51
 msgid "Force interleaved method"
@@ -16241,15 +16239,13 @@ msgid "Use the native fullscreen mode on OS X Lion"
 msgstr "Usar o modo de Tela Inteira nativo no OS X Lion"
 
 #: modules/gui/macosx/macosx.m:91
-#, fuzzy
 msgid ""
 "By default, VLC uses the fullscreen mode known from previous Mac OS X "
 "releases. It can also use the native fullscreen mode on Mac OS X 10.7 and "
 "later."
 msgstr ""
-"Por padrão o VLC usa o modo tela inteira nativo do Mac OS X 10.7 e "
-"posterior. Pode também usar o modo personalizado das versões anteriores de "
-"Mac OS X."
+"Por padrão o VLC usa o modo tela inteira das versões anteriores de Mac OS X. "
+"Pode também usar o modo nativo do Mac OS X 10.7 e posterior."
 
 #: modules/gui/macosx/macosx.m:93 modules/gui/qt4/qt4.cpp:128
 msgid "Automatically save the volume on exit"
@@ -16613,7 +16609,6 @@ msgid "No device is selected"
 msgstr "Nenhum dispositivo selecionado"
 
 #: modules/gui/macosx/open.m:56
-#, fuzzy
 msgid ""
 "No device is selected.\n"
 "\n"
@@ -16621,8 +16616,7 @@ msgid ""
 msgstr ""
 "Nenhum dispositivo está selecionado.\n"
 "\n"
-"Escolha um dispositivo disponível no menu suspenso abaixo\n"
-"."
+"Escolha um dispositivo disponível no menu suspenso abaixo.\n"
 
 #: modules/gui/macosx/open.m:104
 msgid "Open Source"
@@ -17372,12 +17366,10 @@ msgid "Force Bold"
 msgstr "Impor Negrito"
 
 #: modules/gui/macosx/simple_prefs.m:298
-#, fuzzy
 msgid "Outline Color"
-msgstr "Cor do esboço"
+msgstr "Cor da Linha"
 
 #: modules/gui/macosx/simple_prefs.m:299
-#, fuzzy
 msgid "Outline Thickness"
 msgstr "Espessura da linha"
 
@@ -18313,9 +18305,8 @@ msgid "no"
 msgstr "Não"
 
 #: modules/gui/macosx/wizard.m:1375
-#, fuzzy
 msgid "yes: from %@ to %@"
-msgstr "sim: de %@ a %@ segundos"
+msgstr "sim: de %@ a %@"
 
 #: modules/gui/macosx/wizard.m:1385 modules/gui/macosx/wizard.m:1403
 msgid "yes: %@ @ %@ kb/s"
@@ -18913,9 +18904,8 @@ msgid "Stop the A to B loop"
 msgstr "Parar a repetição de A para B"
 
 #: modules/gui/qt4/components/controller_widget.cpp:281
-#, fuzzy
 msgid "Aspect Ratio"
-msgstr "Proporção entre &Altura e Largura"
+msgstr "Proporção entre Altura e Largura"
 
 #: modules/gui/qt4/components/extended_panels.cpp:418
 #: modules/video_filter/logo.c:48
@@ -19942,9 +19932,8 @@ msgid "&Search:"
 msgstr "&Pesquisar:"
 
 #: modules/gui/qt4/dialogs/plugins.cpp:196
-#, fuzzy
 msgid "Get more extensions from"
-msgstr "Extensões ignoradas"
+msgstr "Obtenha mais extensões de"
 
 #: modules/gui/qt4/dialogs/plugins.cpp:228
 msgid "More information..."
@@ -20548,9 +20537,8 @@ msgid "Jump Bac&kward"
 msgstr "Rec&uar"
 
 #: modules/gui/qt4/menus.cpp:886
-#, fuzzy
 msgid "Ctrl+T"
-msgstr "Ctrl+L"
+msgstr "Ctrl+T"
 
 #: modules/gui/qt4/menus.cpp:895
 msgid "&Open File..."
@@ -21777,9 +21765,8 @@ msgid "Growl Notification Plugin"
 msgstr "Complemento de notificação do Growl"
 
 #: modules/notify/growl.m:275
-#, fuzzy
 msgid "New input playing"
-msgstr "Reproduzindo agora"
+msgstr "Reprodução de nova entrada"
 
 #: modules/notify/growl.m:298
 msgid "Now playing"
@@ -22590,17 +22577,15 @@ msgid ""
 msgstr "Nome da sessão que será anunciada no SDP (Descritor de Sessão)."
 
 #: modules/stream_out/rtp.c:96
-#, fuzzy
 msgid "Session category"
-msgstr "Nome da sessão"
+msgstr "Categoria da sessão"
 
 #: modules/stream_out/rtp.c:98
-#, fuzzy
 msgid ""
 "This allows you to specify a category for the session, that will be "
 "announced if you choose to use SAP."
 msgstr ""
-"Permite especificar um grupo para a sessão que será anunciada se for "
+"Permite especificar uma categoria para a sessão que será anunciada se for "
 "escolhido usar o SAP."
 
 #: modules/stream_out/rtp.c:100 modules/stream_out/standard.c:62
@@ -26696,7 +26681,7 @@ msgstr "WarpOverlay!"
 
 #: modules/video_output/kva.c:62
 msgid "VMAN"
-msgstr ""
+msgstr "VMAN"
 
 #: modules/video_output/kva.c:62
 msgid "DIVE"
@@ -26712,17 +26697,17 @@ msgstr "Saída de vídeo OpenGL do Mac OS X (requer drawable-nsobject)"
 
 #: modules/video_output/macosx.m:138
 msgid "OpenGL acceleration is not supported on your Mac"
-msgstr ""
+msgstr "Não há suporte para aceleração OpenGL no seu Mac"
 
 #: modules/video_output/macosx.m:138
-#, fuzzy
 msgid ""
 "Your Mac lacks Quartz Extreme acceleration, which is required for video "
 "output. It will still work, but much slower and with possibly unexpected "
 "results."
 msgstr ""
 "Seu Mac não possui aceleração Quartz Extreme, que é requerida para a saída "
-"de vídeo."
+"de vídeo. Ainda assim funcionará, mas com lentidão e possivelmente com "
+"resultados inesperados."
 
 #: modules/video_output/msw/direct2d.c:56
 msgid "Video output for Windows 7/Windows Vista with Platform update"
