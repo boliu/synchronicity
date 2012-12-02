@@ -1,20 +1,24 @@
-# Copyright (C) 2006-2010 the VideoLAN team
+# Slovak translation
+# Copyright (C) 2012 VideoLAN
 # This file is distributed under the same license as the VLC package.
-# FIRST AUTHOR <WWW.MOJEPREKLADY.NET>, 2006-2012.
 #
+# Translators:
+# Marian Hikanik <mhikanik@users.sourceforge.net>, 2012.
 #: modules/gui/macosx/prefs.m:490 modules/gui/macosx/simple_prefs.m:451
 msgid ""
 msgstr ""
-"Project-Id-Version: vlc\n"
+"Project-Id-Version: VLC - Trans\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-12-01 19:21+0100\n"
-"PO-Revision-Date: 2012-07-22 13:18+0100\n"
-"Last-Translator: Marian Hikanik <mhikanik@users.sourceforge.net>\n"
-"Language-Team: Marián Hikaník\n"
+"PO-Revision-Date: 2012-12-02 19:13+0000\n"
+"Last-Translator: mhikanik <mhikanik@users.sourceforge.net>\n"
+"Language-Team: Slovak (http://www.transifex.com/projects/p/vlc-trans/"
+"language/sk/)\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: include/vlc_common.h:1024
 msgid ""
@@ -2694,17 +2698,16 @@ msgid "Preferred video resolution"
 msgstr "Preferované rozlíšenie videa"
 
 #: src/libvlc-module.c:764
-#, fuzzy
 msgid ""
 "When several video formats are available, select one whose resolution is "
 "closest to (but not higher than) this setting, in number of lines. Use this "
 "option if you don't have enough CPU power or network bandwidth to play "
 "higher resolutions."
 msgstr ""
-"Ak je dostupných viacero formátov videa, vyberte to rozlíšenie, ktoré je "
+"Ak je dostupných viacero formátov videa, vyberte také rozlíšenie, ktoré je "
 "najbližšie (ale nie vyššie) k tomuto nastaveniu, čo sa týka počtu riadkov. "
 "Túto voľbu použite v prípade, že nemáte dostatok výkonu CPU alebo dostatočnú "
-"šírku pásma na to, aby bolo možné prehrávať vo vyššom rozlíšení."
+"šírku pásma na to, aby bolo možné prehrávať vo vyšších rozlíšeniach."
 
 #: src/libvlc-module.c:770
 msgid "Best available"
@@ -6841,31 +6844,31 @@ msgstr "DV"
 
 #: modules/access/dvb/access.c:64
 msgid "Probe DVB card for capabilities"
-msgstr ""
+msgstr "Preveriť schopnosti karty DVB"
 
 #: modules/access/dvb/access.c:65
 msgid ""
 "Some DVB cards do not like to be probed for their capabilities, you can "
 "disable this feature if you experience some trouble."
 msgstr ""
+"Niektoré karty DVB nepodporujú kontrolu svojich schopností. Ak máte s touto "
+"funkciou nejaký problém, môžete ju zablokovať."
 
 #: modules/access/dvb/access.c:68
-#, fuzzy
 msgid "Satellite scanning config"
-msgstr "Kód dosahu satelitu"
+msgstr "Konfigurácia skenovania satelitov"
 
 #: modules/access/dvb/access.c:69
 msgid "filename of config file in share/dvb/dvb-s"
-msgstr ""
+msgstr "názov konfiguračného súboru v zložke share/dvb/dvb-s"
 
 #: modules/access/dvb/access.c:72
-#, fuzzy
 msgid "DVB"
-msgstr "DV"
+msgstr "DVB"
 
 #: modules/access/dvb/access.c:73
 msgid "DVB input with v4l2 support"
-msgstr ""
+msgstr "Vstup DVB s podporou v4l2"
 
 #: modules/access/dvdnav.c:71 modules/access/dvdread.c:62
 msgid "DVD angle"
@@ -9141,9 +9144,8 @@ msgid "ARM NEON video chroma conversions"
 msgstr "Konverzie farebnej sýtosti videa ARM NEON"
 
 #: modules/arm_neon/yuv_rgb.c:35
-#, fuzzy
 msgid "ARM NEON video chroma YUV->RGBA"
-msgstr "Konverzie farebnej sýtosti videa ARM NEON"
+msgstr "ARM NEON video chroma YUV->RGBA"
 
 #: modules/audio_filter/audiobargraph_a.c:40
 msgid "TCP address to use (default localhost)"
@@ -11549,13 +11551,12 @@ msgid "Video encoder (using OpenMAX IL)"
 msgstr "Kodér videa (s použitím OpenMAX IL)"
 
 #: modules/codec/opus.c:62
-#, fuzzy
 msgid "Opus audio decoder"
-msgstr "Dekodér zvuku Speex"
+msgstr "Dekodér zvuku Opus"
 
 #: modules/codec/opus.c:64
 msgid "Opus"
-msgstr ""
+msgstr "Opus"
 
 #: modules/codec/png.c:58
 msgid "PNG video decoder"
@@ -18455,9 +18456,8 @@ msgid "no"
 msgstr "nie"
 
 #: modules/gui/macosx/wizard.m:1375
-#, fuzzy
 msgid "yes: from %@ to %@"
-msgstr "áno: od %@ do %@ sekúnd"
+msgstr "áno: od %@ do %@"
 
 #: modules/gui/macosx/wizard.m:1385 modules/gui/macosx/wizard.m:1403
 msgid "yes: %@ @ %@ kb/s"
@@ -28632,8 +28632,9 @@ msgstr "Zoznam správcov médií"
 #~ msgid "Error when sending the Crash Report"
 #~ msgstr "Chyba pri odosielaní e-mailu s popisom chyby."
 
-#~ msgid "Video Filters..."
-#~ msgstr "Filtre videa..."
-
 #~ msgid "Card %<PRIu32>"
 #~ msgstr "Karta %<PRIu32>"
+
+#, fuzzy
+#~ msgid "Video Filters..."
+#~ msgstr "Súbory s videom"
