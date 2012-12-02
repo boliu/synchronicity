@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the VLC package.
 #
 # Translators:
-# Christoph Miebach <christoph.miebach@web.de>, 2011, 2012.
+# Christoph Miebach <christoph.miebach@web.de>, 2011-2012.
 # Felix Kühne <fkuehne at users.sf.net>, 2003-2012, 2012.
 # Jens Seidel <jensseidel _at_ users.sf.net>, 2005.
 # Kai Hermann <kai.uwe.hermann@gmail.com>, 2009.
 # Mario Siegmann <mario_siegmann@web.de>, 2011-2012.
 # Mathias C. Berens | welcome-soft <berens at welcome-soft.de>, 2006.
-# Michał Trzebiatowski <hippie_1968@hotmail.com>, 2010, 2012.
+# Michał Trzebiatowski <hippie_1968@hotmail.com>, 2010,2012.
 # Philipp Weissenbacher <philippweissenbacher _at_ aon.at>, 2004.
 # Thomas Graf <tgr at reeler.org>, 2002.
 #: modules/gui/macosx/prefs.m:490 modules/gui/macosx/simple_prefs.m:451
@@ -18,8 +18,8 @@ msgstr ""
 "Project-Id-Version: VLC - Trans\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-12-01 19:21+0100\n"
-"PO-Revision-Date: 2012-09-07 16:09+0000\n"
-"Last-Translator: Mario Siegmann <mario_siegmann@web.de>\n"
+"PO-Revision-Date: 2012-12-02 15:21+0000\n"
+"Last-Translator: Christoph Miebach <christoph.miebach@web.de>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/vlc-trans/"
 "language/de/)\n"
 "Language: de\n"
@@ -6813,33 +6813,31 @@ msgstr "DV"
 
 #: modules/access/dvb/access.c:64
 msgid "Probe DVB card for capabilities"
-msgstr "DVB-Karte auf ihren Funktionsumfang prüfen"
+msgstr "Funktionen der DVB-Karte testen"
 
 #: modules/access/dvb/access.c:65
 msgid ""
 "Some DVB cards do not like to be probed for their capabilities, you can "
 "disable this feature if you experience some trouble."
 msgstr ""
-"Einige DVB-Karte lassen sich nicht auf ihren Funktionsumfang prüfen, die "
-"Prüfung lässt sich bei auftretenden Problemen abschalten."
+"Einige DVB-Karten vertragen das Testen ihrer Fähigkeiten nicht. Diese "
+"Funktionen deaktivieren, falls Probleme auftreten."
 
 #: modules/access/dvb/access.c:68
-#, fuzzy
 msgid "Satellite scanning config"
-msgstr "Satelliten-Bereich Kennzeichen"
+msgstr "Konfiguration zur Satelliten-Suche"
 
 #: modules/access/dvb/access.c:69
 msgid "filename of config file in share/dvb/dvb-s"
-msgstr ""
+msgstr "Dateiname der Konfigurationsdatei unter share/dvb/dvb-s"
 
 #: modules/access/dvb/access.c:72
-#, fuzzy
 msgid "DVB"
-msgstr "DV"
+msgstr "DVB"
 
 #: modules/access/dvb/access.c:73
 msgid "DVB input with v4l2 support"
-msgstr "DVB-Input mit v4l2-Unterstützung"
+msgstr "DVB-Eingang mit v4l2 Unterstützung"
 
 #: modules/access/dvdnav.c:71 modules/access/dvdread.c:62
 msgid "DVD angle"
@@ -9119,9 +9117,8 @@ msgid "ARM NEON video chroma conversions"
 msgstr "ARM NEON Video-Farbsättiguns-Konvertierungen"
 
 #: modules/arm_neon/yuv_rgb.c:35
-#, fuzzy
 msgid "ARM NEON video chroma YUV->RGBA"
-msgstr "ARM NEON Video-Farbsättiguns-Konvertierungen"
+msgstr "ARM NEON Video-Farbsättigung YUV->RGBA"
 
 #: modules/audio_filter/audiobargraph_a.c:40
 msgid "TCP address to use (default localhost)"
@@ -11521,13 +11518,12 @@ msgid "Video encoder (using OpenMAX IL)"
 msgstr "Video-Encoder (benutzt OpenMAX IL)"
 
 #: modules/codec/opus.c:62
-#, fuzzy
 msgid "Opus audio decoder"
-msgstr "Speex-Audiodecoder"
+msgstr "Opus Audio-Decoder"
 
 #: modules/codec/opus.c:64
 msgid "Opus"
-msgstr ""
+msgstr "Opus"
 
 #: modules/codec/png.c:58
 msgid "PNG video decoder"
@@ -18388,9 +18384,8 @@ msgid "no"
 msgstr "nein"
 
 #: modules/gui/macosx/wizard.m:1375
-#, fuzzy
 msgid "yes: from %@ to %@"
-msgstr "ja: von %@ bis %@ Sek."
+msgstr "ja: von %@ bis %@"
 
 #: modules/gui/macosx/wizard.m:1385 modules/gui/macosx/wizard.m:1403
 msgid "yes: %@ @ %@ kb/s"
@@ -28578,9 +28573,6 @@ msgstr "Media Manager-Liste"
 #~ msgid "Error when sending the Crash Report"
 #~ msgstr "Fehler beim Senden des Absturzprotokolls"
 
-#~ msgid "Video Filters..."
-#~ msgstr "Videofilter..."
-
 #~ msgid "Card %<PRIu32>"
 #~ msgstr "Karte %<PRIu32>"
 
@@ -29567,6 +29559,10 @@ msgstr "Media Manager-Liste"
 #, fuzzy
 #~ msgid "&Update"
 #~ msgstr "Modulbaum aktualisieren"
+
+#, fuzzy
+#~ msgid "Video Filters..."
+#~ msgstr "Videodateien"
 
 #, fuzzy
 #~ msgid "Relaunch required"
