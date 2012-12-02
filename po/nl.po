@@ -4,7 +4,7 @@
 #
 # Translators:
 # Alexander Henket <ahenket at xs4all dot nl>, 2009.
-# Derk-Jan Hartman <hartman at videolan dot org>, 2004-2005, 2005.
+# Derk-Jan Hartman <hartman at videolan dot org>, 2004-2005.
 # Myckel Habets <myckel at sdf dot lonestar dot org>, 2007-2010.
 # Thomas De Rocker <thomasderocker.at.h0tmail.d0t.c0m>, 2008-2012.
 #: modules/gui/macosx/prefs.m:490 modules/gui/macosx/simple_prefs.m:451
@@ -13,16 +13,14 @@ msgstr ""
 "Project-Id-Version: VLC - Trans\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-12-01 19:21+0100\n"
-"PO-Revision-Date: 2012-09-07 14:28+0000\n"
-"Last-Translator: Thomas De Rocker <thomasderocker@hotmail.com>\n"
+"PO-Revision-Date: 2012-12-02 09:34+0000\n"
+"Last-Translator: Thomas De Rocker <thomasderocker.at.h0tmail.d0t.c0m>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/vlc-trans/language/"
 "nl/)\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Dutch\n"
-"X-Poedit-Country: BELGIUM\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: include/vlc_common.h:1024
@@ -6755,33 +6753,31 @@ msgstr "DV"
 
 #: modules/access/dvb/access.c:64
 msgid "Probe DVB card for capabilities"
-msgstr "Onderzoek functies DVB-kaart"
+msgstr "DVB-kaart onderzoeken op mogelijkheden"
 
 #: modules/access/dvb/access.c:65
 msgid ""
 "Some DVB cards do not like to be probed for their capabilities, you can "
 "disable this feature if you experience some trouble."
 msgstr ""
-"Sommige DVB kaarten houden er niet van als er gekeken wordt wat ze kunnen, u "
-"kunt deze optie uitzetten als u problemen hiermee ervaart."
+"Sommige DVB-kaarten worden niet graag onderzocht op hun mogelijkheden. U "
+"kunt deze functie uitschakelen als u problemen ervaart."
 
 #: modules/access/dvb/access.c:68
-#, fuzzy
 msgid "Satellite scanning config"
-msgstr "Satelliet-bereikcode"
+msgstr "Instellingen voor scannen van satellieten"
 
 #: modules/access/dvb/access.c:69
 msgid "filename of config file in share/dvb/dvb-s"
-msgstr "bestandsnaam van configuratiebestand in share/dvb/dvb-s"
+msgstr "bestandsnaam van instellingenbestand in share/dvb/dvb-s"
 
 #: modules/access/dvb/access.c:72
-#, fuzzy
 msgid "DVB"
-msgstr "DV"
+msgstr "DVB"
 
 #: modules/access/dvb/access.c:73
 msgid "DVB input with v4l2 support"
-msgstr "DVB-invoer met v4l2 ondersteuning"
+msgstr "DVB-invoer met v4l2-ondersteuning"
 
 #: modules/access/dvdnav.c:71 modules/access/dvdread.c:62
 msgid "DVD angle"
@@ -9053,9 +9049,8 @@ msgid "ARM NEON video chroma conversions"
 msgstr "ARMNEON videochromaconversies"
 
 #: modules/arm_neon/yuv_rgb.c:35
-#, fuzzy
 msgid "ARM NEON video chroma YUV->RGBA"
-msgstr "ARMNEON videochromaconversies"
+msgstr "ARM NEON videochroma YUV->RGBA"
 
 #: modules/audio_filter/audiobargraph_a.c:40
 msgid "TCP address to use (default localhost)"
@@ -11446,13 +11441,12 @@ msgid "Video encoder (using OpenMAX IL)"
 msgstr "Video-encoder (gebruikt OpenMAX IL)"
 
 #: modules/codec/opus.c:62
-#, fuzzy
 msgid "Opus audio decoder"
-msgstr "Speex audiodecoder"
+msgstr "Opus-audiodecoder"
 
 #: modules/codec/opus.c:64
 msgid "Opus"
-msgstr ""
+msgstr "Opus"
 
 #: modules/codec/png.c:58
 msgid "PNG video decoder"
@@ -18302,9 +18296,8 @@ msgid "no"
 msgstr "nee"
 
 #: modules/gui/macosx/wizard.m:1375
-#, fuzzy
 msgid "yes: from %@ to %@"
-msgstr "ja: van %@ tot %@ seconden"
+msgstr "ja: van %@ tot %@"
 
 #: modules/gui/macosx/wizard.m:1385 modules/gui/macosx/wizard.m:1403
 msgid "yes: %@ @ %@ kb/s"
@@ -19740,7 +19733,7 @@ msgid ""
 "This version of VLC was compiled by:\n"
 " "
 msgstr ""
-"Deze versie van VLC was gecompileerd door:\n"
+"Deze versie van VLC werd gecompileerd door:\n"
 " "
 
 #: modules/gui/qt4/dialogs/help.cpp:116
@@ -28414,9 +28407,6 @@ msgstr "Mediabeheerlijst"
 #~ msgid "Error when sending the Crash Report"
 #~ msgstr "Fout tijdens het aanmaken van een crash-rapport"
 
-#~ msgid "Video Filters..."
-#~ msgstr "Videofilters..."
-
 #~ msgid "Card %<PRIu32>"
 #~ msgstr "Kaart %<PRIu32>"
 
@@ -30337,6 +30327,10 @@ msgstr "Mediabeheerlijst"
 
 #~ msgid "Number of bands used by the spectrometer, from 20 to 80."
 #~ msgstr "Aantal banden gebruikt door de spectrometer, van 20 tot 80."
+
+#, fuzzy
+#~ msgid "Video Filters..."
+#~ msgstr "Videobestanden"
 
 #, fuzzy
 #~ msgid "Relaunch required"
@@ -32448,7 +32442,7 @@ msgstr "Mediabeheerlijst"
 #, fuzzy
 #~ msgid "This version of VLC is outdated."
 #~ msgstr ""
-#~ "Deze versie van VLC was gecompileerd door:\n"
+#~ "Deze versie van VLC werd gecompileerd door:\n"
 #~ " "
 
 #, fuzzy
