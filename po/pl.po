@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: VLC - Trans\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-12-01 19:21+0100\n"
-"PO-Revision-Date: 2012-09-12 10:41+0000\n"
+"PO-Revision-Date: 2012-12-03 00:14+0000\n"
 "Last-Translator: Michał Trzebiatowski <hippie_1968@hotmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/vlc-trans/"
 "language/pl/)\n"
@@ -6713,33 +6713,31 @@ msgstr "DV"
 
 #: modules/access/dvb/access.c:64
 msgid "Probe DVB card for capabilities"
-msgstr "Sprawdzaj możliwości kart DVB"
+msgstr "Zbadanie możliwości karty DVB"
 
 #: modules/access/dvb/access.c:65
 msgid ""
 "Some DVB cards do not like to be probed for their capabilities, you can "
 "disable this feature if you experience some trouble."
 msgstr ""
-"Niektóre karty DVB nie lubią jak się testuje ich możliwości, możesz wyłączyć "
-"tą opcję jeśli wystąpi jakiś problem."
+"Niektóre karty DVB nie obsługują zbadania ich możliwości, możesz wyłączyć tę "
+"funkcję, jeśli wystąpią jakieś problemy."
 
 #: modules/access/dvb/access.c:68
-#, fuzzy
 msgid "Satellite scanning config"
-msgstr "Kod zakresu satelity"
+msgstr "Konfiguracja skanowania satelity"
 
 #: modules/access/dvb/access.c:69
 msgid "filename of config file in share/dvb/dvb-s"
-msgstr "nazwa pliku konfiguracyjnego w share/dvb/dvb-s"
+msgstr "nazwa pliku konfiguracyjnego w folderze share/dvb/dvb-s"
 
 #: modules/access/dvb/access.c:72
-#, fuzzy
 msgid "DVB"
-msgstr "DV"
+msgstr "DVB"
 
 #: modules/access/dvb/access.c:73
 msgid "DVB input with v4l2 support"
-msgstr "Wejście DVB z wsparciem v4l2"
+msgstr "Wejście DVB z obsługą v4l2"
 
 #: modules/access/dvdnav.c:71 modules/access/dvdread.c:62
 msgid "DVD angle"
@@ -9002,9 +9000,8 @@ msgid "ARM NEON video chroma conversions"
 msgstr "Konwersje chromy obrazu ARM NEON"
 
 #: modules/arm_neon/yuv_rgb.c:35
-#, fuzzy
 msgid "ARM NEON video chroma YUV->RGBA"
-msgstr "Konwersje chromy obrazu ARM NEON"
+msgstr "Chroma obrazu ARM NEON YUV-> RGBA"
 
 #: modules/audio_filter/audiobargraph_a.c:40
 msgid "TCP address to use (default localhost)"
@@ -11380,13 +11377,12 @@ msgid "Video encoder (using OpenMAX IL)"
 msgstr "Koder wideo (używa OpenMAX IL)"
 
 #: modules/codec/opus.c:62
-#, fuzzy
 msgid "Opus audio decoder"
-msgstr "Dekoder dźwięku Speex"
+msgstr "Dekoder dźwięku Opus"
 
 #: modules/codec/opus.c:64
 msgid "Opus"
-msgstr ""
+msgstr "Opus"
 
 #: modules/codec/png.c:58
 msgid "PNG video decoder"
@@ -18216,9 +18212,8 @@ msgid "no"
 msgstr "nie"
 
 #: modules/gui/macosx/wizard.m:1375
-#, fuzzy
 msgid "yes: from %@ to %@"
-msgstr "tak: od %@ do %@ sek."
+msgstr "tak: od %@ do %@"
 
 #: modules/gui/macosx/wizard.m:1385 modules/gui/macosx/wizard.m:1403
 msgid "yes: %@ @ %@ kb/s"
@@ -28288,9 +28283,6 @@ msgstr "Lista menedżera mediów"
 #~ msgid "Error when sending the Crash Report"
 #~ msgstr "Błąd podczas wysyłania raportu błędu"
 
-#~ msgid "Video Filters..."
-#~ msgstr "Filtry obrazu..."
-
 #~ msgid "Card %<PRIu32>"
 #~ msgstr "Karta %<PRIu32>"
 
@@ -30010,6 +30002,10 @@ msgstr "Lista menedżera mediów"
 
 #~ msgid "Okay"
 #~ msgstr "Okay"
+
+#, fuzzy
+#~ msgid "Video Filters..."
+#~ msgstr "Pliki wideo"
 
 #, fuzzy
 #~ msgid "Relaunch required"
