@@ -126,6 +126,7 @@ ffmpeg: ffmpeg-$(FFMPEG_VERSION).tar.gz .sum-ffmpeg
 ifdef HAVE_WIN32
 	sed -i "s/std=c99/std=gnu99/" $@-$(FFMPEG_VERSION)/configure
 endif
+	$(APPLY) $(SRC)/ffmpeg/libav.git-a25d912.patch
 	$(MOVE)
 
 .ffmpeg: ffmpeg
