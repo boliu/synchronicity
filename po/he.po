@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: VLC - Trans\n"
 "Report-Msgid-Bugs-To: vlc-devel@videolan.org\n"
 "POT-Creation-Date: 2012-12-01 19:21+0100\n"
-"PO-Revision-Date: 2012-09-11 08:57+0000\n"
+"PO-Revision-Date: 2012-12-02 08:48+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew (http://www.transifex.com/projects/p/vlc-trans/"
 "language/he/)\n"
@@ -1552,6 +1552,8 @@ msgid ""
 "This is the audio output method used by VLC. The default behavior is to "
 "automatically select the best method available."
 msgstr ""
+"זוהי שיטת פלט השמע שמשמשת את VLC. התנהגות בררת המחדל היא לבחור אוטומטית את "
+"השיטה הזמינה הטובה ביותר."
 
 #: src/libvlc-module.c:285 modules/stream_out/display.c:40
 #: modules/gui/qt4/ui/sprefs_audio.h:430
@@ -1563,6 +1565,8 @@ msgid ""
 "You can completely disable the audio output. The audio decoding stage will "
 "not take place, thus saving some processing power."
 msgstr ""
+"ניתן לנטרל לחלוטין את פלט השמע. שלב קידוד השמע לא יתבצע ולפיכך יחסוך בעצמת "
+"עיבוד."
 
 #: src/libvlc-module.c:291
 msgid "Force mono audio"
@@ -1601,6 +1605,8 @@ msgid ""
 "You can force the audio output frequency here. Common values are 0 "
 "(undefined), 48000, 44100, 32000, 22050, 16000, 11025, 8000."
 msgstr ""
+"ניתן לקבע את תדירות פלט השמע דרך כאן. הערכים הנפוצים הם  0 (ללא הגדרה), "
+"48000, 44100, 32000, 22050, 16000, 11025, 8000."
 
 #: src/libvlc-module.c:312
 msgid "High quality audio resampling"
@@ -1622,6 +1628,8 @@ msgid ""
 "This delays the audio output. The delay must be given in milliseconds. This "
 "can be handy if you notice a lag between the video and the audio."
 msgstr ""
+"אפשרות זו משהה את פלט השמע. משך ההשהייה חייב להיות במילישניות. אפשרות זו "
+"יכולה להועיל במקרה שיש הפרש בין הווידאו והשמע."
 
 #: src/libvlc-module.c:324
 msgid "Audio output channels mode"
@@ -1754,6 +1762,8 @@ msgid ""
 "This is the the video output method used by VLC. The default behavior is to "
 "automatically select the best method available."
 msgstr ""
+"זוהי שיטת פלט הווידאו שמשמשת את VLC. התנהגות בררת המחדל היא לבחור אוטומטית "
+"את השיטה הזמינה הטובה ביותר."
 
 #: src/libvlc-module.c:404 modules/stream_out/display.c:42
 #: modules/gui/qt4/ui/sprefs_video.h:335
@@ -1765,6 +1775,8 @@ msgid ""
 "You can completely disable the video output. The video decoding stage will "
 "not take place, thus saving some processing power."
 msgstr ""
+"ניתן לנטרל לחלוטין את פלט השמע. שלב קידוד השמע לא יתבצע ולפיכך יחסוך בעצמת "
+"עיבוד."
 
 #: src/libvlc-module.c:409 modules/stream_out/mosaic_bridge.c:109
 #: modules/stream_out/transcode/transcode.c:66
@@ -1923,6 +1935,8 @@ msgid ""
 "Output video in grayscale. As the color information aren't decoded, this can "
 "save some processing power."
 msgstr ""
+"הסבת פלט הווידאו לגבי אפור. כיוון שפרטי הצבע אינם מקודדים, אפשרות זו עשויה "
+"לחסוך במעט בכוח העיבוד."
 
 #: src/libvlc-module.c:453
 msgid "Embedded video"
@@ -1993,7 +2007,7 @@ msgstr "מיקום כותרת הסרטון"
 
 #: src/libvlc-module.c:485
 msgid "Place on video where to display the title (default bottom center)."
-msgstr ""
+msgstr "המקום בווידאו שבו תוצג הכותרת (בררת המחדל: למטה במרכז)."
 
 #: src/libvlc-module.c:487
 msgid "Hide cursor and fullscreen controller after x milliseconds"
@@ -2021,7 +2035,7 @@ msgstr "מצב יישור פסים"
 
 #: src/libvlc-module.c:505
 msgid "Deinterlace method to use for video processing."
-msgstr ""
+msgstr "שיטת יישור הפסים שתשמש לעיבוד הווידאו."
 
 #: src/libvlc-module.c:512 modules/video_filter/deinterlace/deinterlace.h:57
 msgid "Discard"
@@ -2034,15 +2048,15 @@ msgstr "ערבול"
 
 #: src/libvlc-module.c:512 modules/video_filter/deinterlace/deinterlace.h:57
 msgid "Mean"
-msgstr ""
+msgstr "ממוצעת"
 
 #: src/libvlc-module.c:512 modules/video_filter/deinterlace/deinterlace.h:57
 msgid "Bob"
-msgstr ""
+msgstr "בוב"
 
 #: src/libvlc-module.c:513 modules/video_filter/deinterlace/deinterlace.h:57
 msgid "Linear"
-msgstr ""
+msgstr "קווית"
 
 #: src/libvlc-module.c:513 modules/video_filter/deinterlace/deinterlace.h:58
 msgid "Phosphor"
@@ -2102,6 +2116,8 @@ msgid ""
 "This adds post-processing filters to enhance the picture quality, for "
 "instance deinterlacing, or distort the video."
 msgstr ""
+"אפשרות זו מוסיפה מסננים שלאחר העיבוד כדי לשפר את איכות התמונה, למשל: יישור "
+"פסים או עיוות הווידאו."
 
 #: src/libvlc-module.c:544
 msgid "Video snapshot directory (or filename)"
@@ -2207,23 +2223,25 @@ msgstr ""
 
 #: src/libvlc-module.c:600
 msgid "Custom crop ratios list"
-msgstr ""
+msgstr "רשימת יחסי חיתוך בהתאמה אישית"
 
 #: src/libvlc-module.c:602
 msgid ""
 "Comma separated list of crop ratios which will be added in the interface's "
 "crop ratios list."
 msgstr ""
+"רשימה מופרדת בפסיקים של יחסי חיתוך שיתווספו לרשימת יחסי החיתוך של המנשק."
 
 #: src/libvlc-module.c:605
 msgid "Custom aspect ratios list"
-msgstr ""
+msgstr "רשימת יחסי תצוגה בהתאמה אישית"
 
 #: src/libvlc-module.c:607
 msgid ""
 "Comma separated list of aspect ratios which will be added in the interface's "
 "aspect ratio list."
 msgstr ""
+"רשימה מופרדת בפסיקים של יחסי תצוגה שיתווספו לרשימת יחסי החיתוך של המנשק."
 
 #: src/libvlc-module.c:610
 msgid "Fix HDTV height"
@@ -2271,13 +2289,15 @@ msgstr ""
 
 #: src/libvlc-module.c:633
 msgid "Quiet synchro"
-msgstr ""
+msgstr "סנכרון שקט"
 
 #: src/libvlc-module.c:635
 msgid ""
 "This avoids flooding the message log with debug output from the video output "
 "synchronization mechanism."
 msgstr ""
+"אפשרות זו מונעת את הצפת יומן ההודעות עם פלט ניפוי שגיאות ממנגנון סנגרון פלט "
+"הווידאו."
 
 #: src/libvlc-module.c:638
 msgid "Key press events"
@@ -2294,7 +2314,7 @@ msgstr "אירועי עכבר"
 
 #: src/libvlc-module.c:644
 msgid "This enables handling of mouse clicks on the video."
-msgstr ""
+msgstr "אפשרות זו מטפלת בלחיצות עכבר על הווידאו."
 
 #: src/libvlc-module.c:652
 msgid ""
@@ -2302,6 +2322,8 @@ msgid ""
 "as the DVD or VCD device, the network interface settings or the subtitle "
 "channel."
 msgstr ""
+"אפשרויות אלה מאפשרות לך לשנות את ההתנהגות של תת־מערכת הקלט, כגון התקני ה־DVD "
+"או ה־VCD, הגדרות מנשק הרשת או ערוץ הכתוביות."
 
 #: src/libvlc-module.c:656
 msgid "File caching (ms)"
@@ -2344,6 +2366,7 @@ msgid ""
 "When using the PVR input (or a very irregular source), you should set this "
 "to 10000."
 msgstr ""
+"בעת שימוש בקלט ה־PVR (או במקור מאוד מוזר), יש להגדיר את הערך הזה ל־10000."
 
 #: src/libvlc-module.c:677
 msgid "Clock synchronisation"
@@ -2376,6 +2399,8 @@ msgid ""
 "This allows you to remotely synchronise clocks for server and client. The "
 "detailed settings are available in Advanced / Network Sync."
 msgstr ""
+"אפשרות זו מאפשרת לך לסנכרן מרחוק את השעונים בין השרת ללקוח. ההגדרות המפורטות "
+"זמינות תחת מתקדם / סנכרון רשת."
 
 #: src/libvlc-module.c:695 src/video_output/vout_intf.c:94
 #: src/video_output/vout_intf.c:112 modules/access/dshow/dshow.cpp:91
@@ -2541,7 +2566,7 @@ msgstr ""
 
 #: src/libvlc-module.c:777
 msgid "Number of time the same input will be repeated"
-msgstr ""
+msgstr "מספר הפעמים שאותו הקלט יחזור על עצמו"
 
 #: src/libvlc-module.c:779
 msgid "Start time"
@@ -2549,7 +2574,7 @@ msgstr "זמן ההתחלה"
 
 #: src/libvlc-module.c:781
 msgid "The stream will start at this position (in seconds)."
-msgstr ""
+msgstr "התזרים יתחיל במיקום זה (בשניות)."
 
 #: src/libvlc-module.c:783
 msgid "Stop time"
@@ -2573,7 +2598,7 @@ msgstr ""
 
 #: src/libvlc-module.c:793
 msgid "Favor speed over precision while seeking"
-msgstr ""
+msgstr "העדפת מהירות על פני דיוק בעת דילוג בסרט"
 
 #: src/libvlc-module.c:795 modules/gui/qt4/dialogs/toolbar.cpp:455
 msgid "Playback speed"
@@ -2581,7 +2606,7 @@ msgstr "מהירות הנגינה"
 
 #: src/libvlc-module.c:797
 msgid "This defines the playback speed (nominal speed is 1.0)."
-msgstr ""
+msgstr "אפשרות זו מגדירה את מהירות הנגינה (המהירות הנקובה היא 1.0)."
 
 #: src/libvlc-module.c:799
 msgid "Input list"
@@ -2604,6 +2629,8 @@ msgid ""
 "is experimental, not all formats are supported. Use a '#' separated list of "
 "inputs."
 msgstr ""
+"אפשרות זו מאפשרת לך לנגן ממספר ערוצי קלט בו זמנית. תכונה זו הנה נסיונית, לא "
+"כל התבניות נתמכות. יש להשתמש ברשימת ערוצי קלט המופרדת ב־'#'."
 
 #: src/libvlc-module.c:810
 msgid "Bookmarks list for a stream"
@@ -2655,7 +2682,7 @@ msgstr ""
 
 #: src/libvlc-module.c:834
 msgid "Change title according to current media"
-msgstr ""
+msgstr "החלפת הכותרת בהתאם למדיה הנוכחית המתנגנת."
 
 #: src/libvlc-module.c:835
 msgid ""
@@ -2717,6 +2744,8 @@ msgid ""
 "VLC normally uses Freetype for rendering, but this allows you to use svg for "
 "instance."
 msgstr ""
+"VLC על פי רוב עושה שימוש ב־Freetype לצורך עיבוד התמונה, אך אפשרות זו מאפשרת "
+"להשתמש ב־svg למשל."
 
 #: src/libvlc-module.c:866
 msgid "Subpictures source module"
@@ -2772,6 +2801,8 @@ msgid ""
 "Look for a subtitle file in those paths too, if your subtitle file was not "
 "found in the current directory."
 msgstr ""
+"חיפוש אחר כתוביות בנתיבים אלה גם כן, אם קובץ הכתוביות שלך לא נמצא בתיקייה "
+"הנוכחית."
 
 #: src/libvlc-module.c:896
 msgid "Use subtitle file"
@@ -2782,6 +2813,8 @@ msgid ""
 "Load this subtitle file. To be used when autodetect cannot detect your "
 "subtitle file."
 msgstr ""
+"טעינת קובץ כתוביות זה. לשימוש כאשר האיתור האוטומטי לא הצליח לאתר את קובץ "
+"הכתוביות שלך."
 
 #: src/libvlc-module.c:902
 msgid "DVD device"
@@ -2800,6 +2833,8 @@ msgid ""
 "This is the default DVD drive (or file) to use. Don't forget the colon after "
 "the drive letter (e.g. D:)"
 msgstr ""
+"זהו כונן (או קובץ)  ה־DVD כבררת המחדל בו ייעשה שימוש. נא לא לשכוח את "
+"הנקודתיים לאחר אות הכונן (למשל D:‎)"
 
 #: src/libvlc-module.c:911
 msgid ""
@@ -2898,11 +2933,11 @@ msgstr ""
 
 #: src/libvlc-module.c:978
 msgid "HTTP/TLS server certificate"
-msgstr ""
+msgstr "אישור HTTP/TLS לשרת"
 
 #: src/libvlc-module.c:980
 msgid "This X.509 certicate file (PEM format) is used for server-side TLS."
-msgstr ""
+msgstr "קובץ אישור X.509 זה (מבנה קובץ PRM) משמש ל־TLS מצד השרת."
 
 #: src/libvlc-module.c:982
 msgid "HTTP/TLS server private key"
@@ -2910,27 +2945,31 @@ msgstr "מדיניות פרטיות וגישה לרשת"
 
 #: src/libvlc-module.c:984
 msgid "This private key file (PEM format) is used for server-side TLS."
-msgstr ""
+msgstr "קובץ מפתח פרטי זה (מבנה קובץ PEM) משמש ל־TLS מצד השרת."
 
 #: src/libvlc-module.c:986
 msgid "HTTP/TLS Certificate Authority"
-msgstr ""
+msgstr "רשות אישורים ל־HTTP/TLS"
 
 #: src/libvlc-module.c:988
 msgid ""
 "This X.509 certificate file (PEM format) can optionally be used to "
 "authenticate remote clients in TLS sessions."
 msgstr ""
+"קובץ אישור X.509 זה (מבנה קובץ PEM) יכול לשמש כדי לאמת לקוחות מרוחקים "
+"בהפעלות TLS."
 
 #: src/libvlc-module.c:991
 msgid "HTTP/TLS Certificate Revocation List"
-msgstr ""
+msgstr "רשימת שלילת אישורי HTTP/TLS"
 
 #: src/libvlc-module.c:993
 msgid ""
 "This file countains an optional CRL to prevent remove clients from using "
 "revoked certificates in TLS sessions."
 msgstr ""
+"קובץ זה מכיל רשימת אישורים שנשללו כדי למנוע מהלקוחות להשתמש באישורים שנשללו "
+"בהפעלות TLS."
 
 #: src/libvlc-module.c:996
 msgid "SOCKS server"
@@ -2941,6 +2980,8 @@ msgid ""
 "SOCKS proxy server to use. This must be of the form address:port. It will be "
 "used for all TCP connections"
 msgstr ""
+"שרת SOCKS לשימוש. שדה זה חייב להיות בצורה כתובת:פתחה. בשרת זה ייעשה שימוש "
+"לכל חיבורי ה־TCP"
 
 #: src/libvlc-module.c:1001
 msgid "SOCKS user name"
@@ -3031,7 +3072,7 @@ msgstr ""
 
 #: src/libvlc-module.c:1047
 msgid "Preferred decoders list"
-msgstr ""
+msgstr "רשימת מקודדים מועדפת"
 
 #: src/libvlc-module.c:1049
 msgid ""
@@ -3080,11 +3121,11 @@ msgstr ""
 
 #: src/libvlc-module.c:1080
 msgid "Play locally the stream while streaming it."
-msgstr ""
+msgstr "לנגן את התזרים מקומית בעת הזרמתו."
 
 #: src/libvlc-module.c:1082
 msgid "Enable video stream output"
-msgstr ""
+msgstr "הפעלת פלט תזרים הווידאו"
 
 #: src/libvlc-module.c:1084
 msgid ""
@@ -3114,7 +3155,7 @@ msgstr ""
 
 #: src/libvlc-module.c:1097
 msgid "Keep stream output open"
-msgstr ""
+msgstr "השארת פלט התזרים פתוח"
 
 #: src/libvlc-module.c:1099
 msgid ""
@@ -3144,11 +3185,11 @@ msgstr ""
 
 #: src/libvlc-module.c:1113
 msgid "Mux module"
-msgstr ""
+msgstr "מודול ריבוב"
 
 #: src/libvlc-module.c:1115
 msgid "This is a legacy entry to let you configure mux modules"
-msgstr ""
+msgstr "זוהי רשומה ישנה שמאפשרת לך להגדיר מודולי ריבוב"
 
 #: src/libvlc-module.c:1117
 msgid "Access output module"
@@ -3221,7 +3262,7 @@ msgstr ""
 
 #: src/libvlc-module.c:1161
 msgid "Demux module"
-msgstr ""
+msgstr "מודול פילוג"
 
 #: src/libvlc-module.c:1163
 msgid ""
@@ -3233,17 +3274,19 @@ msgstr ""
 
 #: src/libvlc-module.c:1168
 msgid "VoD server module"
-msgstr ""
+msgstr "מודול שרת VoD"
 
 #: src/libvlc-module.c:1170
 msgid ""
 "You can select which VoD server module you want to use. Set this to "
 "`vod_rtsp' to switch back to the old, legacy module."
 msgstr ""
+"באפשרותך לבחור באיזה מודול שרת VoD ברצונך להשתמש. יש להגדיר זאת ל־„vod_rtsp“ "
+"כדי להחליף למודול הישן."
 
 #: src/libvlc-module.c:1173
 msgid "Allow real-time priority"
-msgstr ""
+msgstr "מתן האפשרות לעדיפות זמן אמת"
 
 #: src/libvlc-module.c:1175
 msgid ""
@@ -3252,6 +3295,9 @@ msgid ""
 "however lock up your whole machine, or make it very very slow. You should "
 "only activate this if you know what you're doing."
 msgstr ""
+"הפעלת VLC בעדיפות זמן אמת מאפשרת תזמון מדויק יותר ותוצאות טובות יותר, במיוחד "
+"בעת הזרמת תוכן. עם זאת יתכן שהמערכת שלך תקפא לחלוטין, או שתהפוך לאטית מאוד. "
+"כדאי להפעיל אפשרות זו רק אם ברור לך מה מעשיך."
 
 #: src/libvlc-module.c:1181
 msgid "Adjust VLC priority"
@@ -3375,11 +3421,11 @@ msgstr ""
 
 #: src/libvlc-module.c:1248
 msgid "VLC is started from file association"
-msgstr ""
+msgstr "VLC מופעל דרך קובץ משויך"
 
 #: src/libvlc-module.c:1250
 msgid "Tell VLC that it is being launched due to a file association in the OS"
-msgstr ""
+msgstr "לספר ל־VLC מתי הוא מופעל בעקבות קובץ משויך במערכת ההפעלה"
 
 #: src/libvlc-module.c:1253
 msgid "One instance when started from file"
@@ -3688,11 +3734,11 @@ msgstr "נא לבחור את מקש הקיצור להצגת המיקום."
 
 #: src/libvlc-module.c:1383
 msgid "Very short backwards jump"
-msgstr ""
+msgstr "קפיצה קצרה מאוד אחורה"
 
 #: src/libvlc-module.c:1385
 msgid "Select the hotkey to make a very short backwards jump."
-msgstr ""
+msgstr "נא לבחור את מקש הקיצור לביצוע קפיצה קצרה מאוד אחורה."
 
 #: src/libvlc-module.c:1386
 msgid "Short backwards jump"
@@ -3712,27 +3758,27 @@ msgstr "נא לבחור את מקש הקיצור שיבצע קפיצה בינו�
 
 #: src/libvlc-module.c:1392
 msgid "Long backwards jump"
-msgstr ""
+msgstr "קפיצה ארוכה קדימה"
 
 #: src/libvlc-module.c:1394
 msgid "Select the hotkey to make a long backwards jump."
-msgstr ""
+msgstr "נא לבחור את מקש הקיצור לביצוע קפיצה ארוכה קדימה."
 
 #: src/libvlc-module.c:1396
 msgid "Very short forward jump"
-msgstr ""
+msgstr "קפיצה קצרה מאוד קדימה"
 
 #: src/libvlc-module.c:1398
 msgid "Select the hotkey to make a very short forward jump."
-msgstr ""
+msgstr "נא לבחור את מקש הקיצור לביצוע קפיצה קצרה מאוד קדימה."
 
 #: src/libvlc-module.c:1399
 msgid "Short forward jump"
-msgstr ""
+msgstr "קפיצה קצרה קדימה"
 
 #: src/libvlc-module.c:1401
 msgid "Select the hotkey to make a short forward jump."
-msgstr ""
+msgstr "נא לבחור את מקש הקיצור לביצוע קפיצה קצרה קדימה."
 
 #: src/libvlc-module.c:1402
 msgid "Medium forward jump"
@@ -3744,11 +3790,11 @@ msgstr "נא לבחור את מקש הקיצור שיבצע קפיצה בינו�
 
 #: src/libvlc-module.c:1405
 msgid "Long forward jump"
-msgstr ""
+msgstr "קפיצה ארוכה קדימה"
 
 #: src/libvlc-module.c:1407
 msgid "Select the hotkey to make a long forward jump."
-msgstr ""
+msgstr "נא לבחור את מקש הקיצור לביצוע קפיצה ארוכה קדימה."
 
 #: src/libvlc-module.c:1408 modules/control/hotkeys.c:704
 msgid "Next frame"
@@ -3760,19 +3806,19 @@ msgstr "יש לבחור את מקש הקיצור כדי לעבור לשקופי�
 
 #: src/libvlc-module.c:1412
 msgid "Very short jump length"
-msgstr ""
+msgstr "משך קפיצה קצרה מאוד"
 
 #: src/libvlc-module.c:1413
 msgid "Very short jump length, in seconds."
-msgstr ""
+msgstr "משך קפיצה קצרה מאוד, בשניות."
 
 #: src/libvlc-module.c:1414
 msgid "Short jump length"
-msgstr ""
+msgstr "משך קפיצה קצרה"
 
 #: src/libvlc-module.c:1415
 msgid "Short jump length, in seconds."
-msgstr ""
+msgstr "משך קפיצה קצרה, בשניות."
 
 #: src/libvlc-module.c:1416
 msgid "Medium jump length"
@@ -3784,11 +3830,11 @@ msgstr "משך הקפיצה הבינונית, בשניות."
 
 #: src/libvlc-module.c:1418
 msgid "Long jump length"
-msgstr ""
+msgstr "משך קפיצה ארוכה"
 
 #: src/libvlc-module.c:1419
 msgid "Long jump length, in seconds."
-msgstr ""
+msgstr "משך קפיצה ארוכה, בשניות."
 
 #: src/libvlc-module.c:1421 modules/control/hotkeys.c:183
 #: modules/gui/qt4/components/controller.hpp:118
@@ -3807,7 +3853,7 @@ msgstr "ניווט למעלה"
 
 #: src/libvlc-module.c:1424
 msgid "Select the key to move the selector up in DVD menus."
-msgstr ""
+msgstr "נא לבחור את המקש כדי להעביר את בורר הבחירה כלפי מעלה בתפריטי DVD."
 
 #: src/libvlc-module.c:1425
 msgid "Navigate down"
@@ -3942,7 +3988,7 @@ msgstr "נא לבחור את המקש להנמכת הכתוביות."
 
 #: src/libvlc-module.c:1457
 msgid "Audio delay up"
-msgstr ""
+msgstr "הגדלת השהיית השמע"
 
 #: src/libvlc-module.c:1458
 msgid "Select the key to increase the audio delay."
@@ -3950,7 +3996,7 @@ msgstr "נא לבחור במקש להגדלת הפרש השמע."
 
 #: src/libvlc-module.c:1459
 msgid "Audio delay down"
-msgstr ""
+msgstr "הקטנת השהיית השמע"
 
 #: src/libvlc-module.c:1460
 msgid "Select the key to decrease the audio delay."
@@ -4098,19 +4144,19 @@ msgstr "מעבר בין רצועות השמע הזמינות (שפות)."
 
 #: src/libvlc-module.c:1505
 msgid "Cycle subtitle track"
-msgstr ""
+msgstr "החלפה בין רצועות כתוביות"
 
 #: src/libvlc-module.c:1506
 msgid "Cycle through the available subtitle tracks."
-msgstr ""
+msgstr "החלפה בין רצועות הכתוביות הזמינות."
 
 #: src/libvlc-module.c:1507
 msgid "Cycle source aspect ratio"
-msgstr ""
+msgstr "החלפה בין יחסי התצוגה של המקור"
 
 #: src/libvlc-module.c:1508
 msgid "Cycle through a predefined list of source aspect ratios."
-msgstr ""
+msgstr "החלפה בין רשימה מוגדרת מראש של יחסי תצוגה למקור."
 
 #: src/libvlc-module.c:1509
 msgid "Cycle video crop"
@@ -4701,7 +4747,7 @@ msgstr "סלאבונית כנסייתית"
 
 #: src/text/iso-639_def.h:66
 msgid "Chuvash"
-msgstr ""
+msgstr "צ׳ובאש"
 
 #: src/text/iso-639_def.h:67
 msgid "Cornish"
@@ -5109,7 +5155,7 @@ msgstr ""
 
 #: src/text/iso-639_def.h:169
 msgid "Sindhi"
-msgstr ""
+msgstr "סינדהי"
 
 #: src/text/iso-639_def.h:170
 msgid "Somali"
@@ -5189,7 +5235,7 @@ msgstr ""
 
 #: src/text/iso-639_def.h:189
 msgid "Tsonga"
-msgstr ""
+msgstr "טסונגה"
 
 #: src/text/iso-639_def.h:190
 msgid "Turkish"
@@ -5225,7 +5271,7 @@ msgstr "וייטנאמית"
 
 #: src/text/iso-639_def.h:198
 msgid "Volapuk"
-msgstr ""
+msgstr "וולאפיק"
 
 #: src/text/iso-639_def.h:199
 msgid "Welsh"
@@ -5233,7 +5279,7 @@ msgstr "וולשית"
 
 #: src/text/iso-639_def.h:200
 msgid "Wolof"
-msgstr ""
+msgstr "וולוף"
 
 #: src/text/iso-639_def.h:201
 msgid "Xhosa"
@@ -5245,11 +5291,11 @@ msgstr "יידיש"
 
 #: src/text/iso-639_def.h:203
 msgid "Yoruba"
-msgstr ""
+msgstr "יורובה"
 
 #: src/text/iso-639_def.h:204
 msgid "Zhuang"
-msgstr ""
+msgstr "צ׳ואנג"
 
 #: src/text/iso-639_def.h:205
 msgid "Zulu"
@@ -5324,7 +5370,7 @@ msgstr "PCM S8"
 
 #: modules/access/alsa.c:95
 msgid "GSM Audio"
-msgstr ""
+msgstr "שמע GSM"
 
 #: modules/access/alsa.c:96
 msgid "PCM U16 LE"
@@ -6331,18 +6377,16 @@ msgid ""
 msgstr ""
 
 #: modules/access/dvb/access.c:68
-#, fuzzy
 msgid "Satellite scanning config"
-msgstr "קוד טווח הלוויין"
+msgstr ""
 
 #: modules/access/dvb/access.c:69
 msgid "filename of config file in share/dvb/dvb-s"
 msgstr ""
 
 #: modules/access/dvb/access.c:72
-#, fuzzy
 msgid "DVB"
-msgstr "DVD"
+msgstr ""
 
 #: modules/access/dvb/access.c:73
 msgid "DVB input with v4l2 support"
@@ -10674,9 +10718,8 @@ msgid "Video encoder (using OpenMAX IL)"
 msgstr ""
 
 #: modules/codec/opus.c:62
-#, fuzzy
 msgid "Opus audio decoder"
-msgstr "מפענח שמע Speex"
+msgstr ""
 
 #: modules/codec/opus.c:64
 msgid "Opus"
@@ -11105,7 +11148,7 @@ msgstr ""
 #. languages using the Latin alphabet.
 #: modules/codec/subsdec.c:97
 msgid "Default (Windows-1252)"
-msgstr "בררת מחדל (Windows-1255)"
+msgstr ""
 
 #: modules/codec/subsdec.c:98
 msgid "System codeset"
@@ -11323,7 +11366,7 @@ msgstr "מפענח כתוביות טקסט"
 #: modules/codec/subsdec.c:294 modules/demux/avi/avi.c:96
 msgctxt "GetACP"
 msgid "CP1252"
-msgstr "CP1255"
+msgstr ""
 
 #: modules/codec/subsusf.c:46
 msgid "USFSubs"
@@ -25753,14 +25796,12 @@ msgid "SVCD/VCD"
 msgstr "SVCD/VCD"
 
 #: modules/gui/qt4/ui/open_disk.h:304
-#, fuzzy
 msgid "Disable Disc Menus"
-msgstr "נטרול שומר המסך"
+msgstr ""
 
 #: modules/gui/qt4/ui/open_disk.h:306
-#, fuzzy
 msgid "No disc menus"
-msgstr "תפריטי ה־DVD"
+msgstr ""
 
 #: modules/gui/qt4/ui/open_disk.h:307
 msgid "Disc device"
@@ -25921,18 +25962,16 @@ msgid "00000; "
 msgstr "00000; "
 
 #: modules/gui/qt4/ui/profiles.h:492
-#, fuzzy
 msgid "Keep original video track"
-msgstr "שמור על הגודל המקורי"
+msgstr ""
 
 #: modules/gui/qt4/ui/profiles.h:493
 msgid "Video codec"
 msgstr "מפענח וידאו"
 
 #: modules/gui/qt4/ui/profiles.h:495
-#, fuzzy
 msgid "Keep original audio track"
-msgstr "שמור על הגודל המקורי"
+msgstr ""
 
 #: modules/gui/qt4/ui/profiles.h:500
 msgid "Sample Rate"
@@ -25943,9 +25982,8 @@ msgid "Audio codec"
 msgstr "מקודד שמע"
 
 #: modules/gui/qt4/ui/profiles.h:503
-#, fuzzy
 msgid "Overlay subtitles on the video"
-msgstr "הוספת כתוביות לווידאו המותמר"
+msgstr ""
 
 #: modules/gui/qt4/ui/sout.h:329
 msgid "Destinations"
@@ -25970,32 +26008,28 @@ msgid "Activate Transcoding"
 msgstr "הפעלת התמרה"
 
 #: modules/gui/qt4/ui/sout.h:339
-#, fuzzy
 msgid "Destination Setup"
-msgstr "יעד"
+msgstr ""
 
 #: modules/gui/qt4/ui/sout.h:340
 msgid "Miscellaneous Options"
 msgstr "אפשרויות שונות"
 
 #: modules/gui/qt4/ui/sout.h:341
-#, fuzzy
 msgid "Stream all elementary streams"
-msgstr "הגדרת הקטגוריה של הזרם הבסיסי"
+msgstr ""
 
 #: modules/gui/qt4/ui/sout.h:343
 msgid "Group name"
 msgstr "שם קבוצה"
 
 #: modules/gui/qt4/ui/sout.h:345
-#, fuzzy
 msgid "Generated stream output string"
-msgstr "הגדרות כלליות של שדרים זורמים"
+msgstr ""
 
 #: modules/gui/qt4/ui/sout.h:347
-#, fuzzy
 msgid "Option Setup"
-msgstr "אפשרויות"
+msgstr ""
 
 #: modules/gui/qt4/ui/sprefs_audio.h:434
 msgid " %"
@@ -26010,18 +26044,16 @@ msgid "Visualization:"
 msgstr "אפקט חזותי:"
 
 #: modules/gui/qt4/ui/sprefs_audio.h:442
-#, fuzzy
 msgid "Enable Time-Stretching audio"
-msgstr "אפשר שמע"
+msgstr ""
 
 #: modules/gui/qt4/ui/sprefs_audio.h:443
 msgid "Dolby Surround:"
 msgstr "Dolby Surround:"
 
 #: modules/gui/qt4/ui/sprefs_audio.h:444
-#, fuzzy
 msgid "Replay gain mode:"
-msgstr "איזון עצמת השמע"
+msgstr ""
 
 #: modules/gui/qt4/ui/sprefs_audio.h:445
 msgid "Headphone surround effect"
@@ -26268,9 +26300,8 @@ msgid "Display device"
 msgstr "התקן תצוגה"
 
 #: modules/gui/qt4/ui/sprefs_video.h:345
-#, fuzzy
 msgid "KVA"
-msgstr "MKV"
+msgstr ""
 
 #: modules/gui/qt4/ui/sprefs_video.h:349
 msgid "Deinterlacing"
@@ -26305,23 +26336,20 @@ msgid "Run manually"
 msgstr "הפעלה ידנית"
 
 #: modules/gui/qt4/ui/streampanel.h:177
-#, fuzzy
 msgid "Setup schedule"
-msgstr "תזמון"
+msgstr ""
 
 #: modules/gui/qt4/ui/streampanel.h:178
-#, fuzzy
 msgid "Run on schedule"
-msgstr "תזמון"
+msgstr ""
 
 #: modules/gui/qt4/ui/streampanel.h:179
 msgid "Status"
 msgstr "מצב"
 
 #: modules/gui/qt4/ui/streampanel.h:180
-#, fuzzy
 msgid "P/P"
-msgstr "UDP/RTP"
+msgstr ""
 
 #: modules/gui/qt4/ui/streampanel.h:183
 msgid "Prev"
@@ -26381,9 +26409,8 @@ msgid "Angle"
 msgstr "זווית"
 
 #: modules/gui/qt4/ui/video_effects.h:1349
-#, fuzzy
 msgid "Black slot"
-msgstr "שחור"
+msgstr ""
 
 #: modules/gui/qt4/ui/video_effects.h:1353
 #: modules/gui/qt4/ui/video_effects.h:1370
@@ -26395,9 +26422,8 @@ msgid "full"
 msgstr ""
 
 #: modules/gui/qt4/ui/video_effects.h:1364
-#, fuzzy
 msgid "Logo erase"
-msgstr "שמות קובצי הלוגואים"
+msgstr ""
 
 #: modules/gui/qt4/ui/video_effects.h:1369
 msgid "Mask"
@@ -26408,9 +26434,8 @@ msgid "Edge weightning"
 msgstr ""
 
 #: modules/gui/qt4/ui/video_effects.h:1374
-#, fuzzy
 msgid "Output Color Filtermode"
-msgstr "קובץ פלט"
+msgstr ""
 
 #: modules/gui/qt4/ui/video_effects.h:1375
 msgid "Brightness (%)"
@@ -26425,9 +26450,8 @@ msgid "Mark analyzed Pixels"
 msgstr ""
 
 #: modules/gui/qt4/ui/video_effects.h:1379
-#, fuzzy
 msgid "Filter threshold (%)"
-msgstr "סף הסינון"
+msgstr ""
 
 #: modules/gui/qt4/ui/video_effects.h:1380
 msgid "Filter smoothness (%)"
@@ -26442,19 +26466,16 @@ msgid "Anti-Flickering"
 msgstr ""
 
 #: modules/gui/qt4/ui/video_effects.h:1387
-#, fuzzy
 msgid "Soften"
-msgstr "רך"
+msgstr ""
 
 #: modules/gui/qt4/ui/video_effects.h:1391
-#, fuzzy
 msgid "Spatial blur"
-msgstr "שגיאה:"
+msgstr ""
 
 #: modules/gui/qt4/ui/video_effects.h:1393
-#, fuzzy
 msgid "Mirror"
-msgstr "שגיאה"
+msgstr ""
 
 #: modules/gui/qt4/ui/vlm.h:287
 msgid "VLM configurator"
@@ -27280,20 +27301,6 @@ msgstr "רשימת מנהל המדיה"
 #~ msgstr "RSS"
 
 #~ msgid ""
-#~ "This option allows you to delay the audio output. You must give a number "
-#~ "of milliseconds. This can be handy if you notice a lag between the video "
-#~ "and the audio."
-#~ msgstr ""
-#~ "כאן ניתן לעכב את פלט השמע. יש להגדיר מספר אלפיות שניה. אפשרות זו שימושית "
-#~ "במקרה של חוסר תיאום בין השמע לוידאו."
-
-#~ msgid ""
-#~ "When enabled, the color information from the video won't be decoded (this "
-#~ "can also allow you to save some processing power)."
-#~ msgstr ""
-#~ "אפשרות זו מבטלת את פיענוח הצבע מקובץ הוידאו (כך ניתן לחסוך מפעולת המעבד)"
-
-#~ msgid ""
 #~ "Automatically detect a subtitle file, if no subtitle filename is "
 #~ "specified."
 #~ msgstr "מזהה את קובץ הכתוביות באופן אוטומטי אם לא הוזן שם קובץ."
@@ -27365,6 +27372,23 @@ msgstr "רשימת מנהל המדיה"
 #~ "\", \"s16_be\", \"fixed32\", \"float32\" או \"spdif\""
 
 #, fuzzy
+#~ msgid ""
+#~ "This option allows you to delay the audio output. You must give a number "
+#~ "of milliseconds. This can be handy if you notice a lag between the video "
+#~ "and the audio."
+#~ msgstr ""
+#~ "אפשרות זו משהה את פלט השמע. משך ההשהייה חייב להיות במילישניות. אפשרות זו "
+#~ "יכולה להועיל במקרה שיש הפרש בין הווידאו והשמע."
+
+#, fuzzy
+#~ msgid ""
+#~ "When enabled, the color information from the video won't be decoded (this "
+#~ "can also allow you to save some processing power)."
+#~ msgstr ""
+#~ "הסבת פלט הווידאו לגבי אפור. כיוון שפרטי הצבע אינם מקודדים, אפשרות זו "
+#~ "עשויה לחסוך במעט בכוח העיבוד."
+
+#, fuzzy
 #~ msgid "Speed of the subtitles:"
 #~ msgstr "בחירת קובץ כתוביות:"
 
@@ -27430,7 +27454,7 @@ msgstr "רשימת מנהל המדיה"
 
 #, fuzzy
 #~ msgid "CDDB server timeout"
-#~ msgstr "שרת CDDB"
+#~ msgstr "מודול שרת VoD"
 
 #, fuzzy
 #~ msgid ""
@@ -28016,7 +28040,7 @@ msgstr "רשימת מנהל המדיה"
 
 #, fuzzy
 #~ msgid "Default port (server mode)"
-#~ msgstr "תזרים בררת מחדל"
+#~ msgstr "מודול שרת VoD"
 
 #, fuzzy
 #~ msgid "Embed video in interface"
@@ -29423,7 +29447,7 @@ msgstr "רשימת מנהל המדיה"
 
 #, fuzzy
 #~ msgid "Choose subtitles track"
-#~ msgstr "רצועת כתוביות"
+#~ msgstr "החלפה בין רצועות כתוביות"
 
 #, fuzzy
 #~ msgid "Current version"
@@ -29482,16 +29506,16 @@ msgstr "רשימת מנהל המדיה"
 #~ "This option allows you to select the audio output method used by VLC. The "
 #~ "default behavior is to automatically select the best method available."
 #~ msgstr ""
-#~ "זהו מנשק המשתמש הראשי בו נעשה שימוש ע״י VLC. ההתנהגות הטבעית היא לבחור "
-#~ "באופן אוטומטי את המודול הטוב ביותר הזמין."
+#~ "זוהי שיטת פלט השמע שמשמשת את VLC. התנהגות בררת המחדל היא לבחור אוטומטית "
+#~ "את השיטה הזמינה הטובה ביותר."
 
 #, fuzzy
 #~ msgid ""
 #~ "This option allows you to select the video output method used by VLC. The "
 #~ "default behavior is to automatically select the best method available."
 #~ msgstr ""
-#~ "זהו מנשק המשתמש הראשי בו נעשה שימוש ע״י VLC. ההתנהגות הטבעית היא לבחור "
-#~ "באופן אוטומטי את המודול הטוב ביותר הזמין."
+#~ "זוהי שיטת פלט הווידאו שמשמשת את VLC. התנהגות בררת המחדל היא לבחור "
+#~ "אוטומטית את השיטה הזמינה הטובה ביותר."
 
 #, fuzzy
 #~ msgid "Network interface address"
@@ -29503,11 +29527,11 @@ msgstr "רשימת מנהל המדיה"
 
 #, fuzzy
 #~ msgid "Select the hotkey to jump 3 seconds backwards."
-#~ msgstr "יש לבחור את צירוף המקשים שיקפיץ אחורה את המדיה המתנגנת במועד קצר."
+#~ msgstr "נא לבחור את מקש הקיצור לביצוע קפיצה ארוכה קדימה."
 
 #, fuzzy
 #~ msgid "Select the hotkey to jump 10 seconds backwards."
-#~ msgstr "יש לבחור את צירוף המקשים שיקפיץ אחורה את המדיה המתנגנת במועד קצר."
+#~ msgstr "נא לבחור את מקש הקיצור לביצוע קפיצה ארוכה קדימה."
 
 #, fuzzy
 #~ msgid "Select the hotkey to jump 1 minute backwards."
@@ -29519,11 +29543,11 @@ msgstr "רשימת מנהל המדיה"
 
 #, fuzzy
 #~ msgid "Select the hotkey to jump 3 seconds forward."
-#~ msgstr "נא לבחור את מקש הקיצור שיבצע קפיצה בינונית אחורה."
+#~ msgstr "נא לבחור את מקש הקיצור לביצוע קפיצה ארוכה קדימה."
 
 #, fuzzy
 #~ msgid "Select the hotkey to jump 10 seconds forward."
-#~ msgstr "נא לבחור את מקש הקיצור שיבצע קפיצה בינונית אחורה."
+#~ msgstr "נא לבחור את מקש הקיצור לביצוע קפיצה ארוכה קדימה."
 
 #, fuzzy
 #~ msgid "Select the hotkey to jump 1 minute forward."
