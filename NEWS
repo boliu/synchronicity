@@ -15,10 +15,23 @@ Demuxers:
  * Fix koreus lua parser
  * Improve reliability for RTSP streams sent by some IP cameras
  * Fix division by 0 in AIFF demuxer
+ * Fix some MKV crashes when ordered editions have empty or broken links
+ * Fix SWF potential crash on malformed files.
+
+Video filters:
+ * Fix crash in Freetype with embedded fonts
+ * Fix wrong aspect ratio in some cases
+
+Encoders:
+ * Fix Mpeg-2 audio and video encoders initialization
 
 Mac OS X:
  * Fix Reveal-in-Finder for files with non-Western file names
  * Fix crash with local statistics disabled
+ * Fix Time counter UI look
+
+Win32:
+ * Fix https streaming
 
 libVLC:
  * Fix audio and video track selection:
